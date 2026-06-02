@@ -12,7 +12,7 @@ Most CVEs never make it to the top of anyone's queue. A few do — because someo
 
 We publish that shortlist every day: what moved, what to look at first. One JSON file for your tools, one Markdown summary if you just want to read it.
 
-Same feed that runs on [cvelogic.com](https://www.cvelogic.com/threat-intelligence). Open, dated, and free to plug into whatever you already use.
+Same feed that runs on [cvelogic.com/threat-intelligence](https://www.cvelogic.com/threat-intelligence). Open, dated, and free to plug into whatever you already use.
 
 ---
 
