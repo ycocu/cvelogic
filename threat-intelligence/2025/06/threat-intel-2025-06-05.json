@@ -1,0 +1,2381 @@
+{
+  "schema_version": "2.2",
+  "generated_at": "2026-06-02T07:32:50Z",
+  "day": "2025-06-05",
+  "window": {
+    "utc_start": "2025-06-05",
+    "utc_end": "2025-06-05",
+    "days": 1
+  },
+  "summary": {
+    "brief": "Google Chromium V8 added to CISA KEV — confirmed in-the-wild exploitation. · Vishalmathur Cloudclassroom-php Project: public exploit or PoC linked (SQL Injection) · 8 new critical disclosures — review patch status on exposed services.",
+    "bullets": [
+      "Google Chromium V8 added to CISA KEV — confirmed in-the-wild exploitation.",
+      "Vishalmathur Cloudclassroom-php Project: public exploit or PoC linked (SQL Injection)",
+      "8 new critical disclosures — review patch status on exposed services."
+    ],
+    "counts": {
+      "cves": 14,
+      "kev": 1,
+      "exploit": 5,
+      "epss": 0,
+      "cvss": 8,
+      "patch": 0
+    }
+  },
+  "cves": [
+    {
+      "cve_id": "CVE-2025-5419",
+      "signal_types": [
+        "KEV"
+      ],
+      "signals": {
+        "kev": {
+          "date_added": "2025-06-05"
+        },
+        "exploit": null,
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-06-03",
+        "description": "Out of bounds read and write in V8 in Google Chrome prior to 137.0.7151.68 allowed a remote attacker to potentially exploit heap corruption via a crafted HTML page. (Chromium security severity: High)",
+        "title": "Google Chromium V8 Out-of-Bounds Read and Write Vulnerability",
+        "vendor": "google",
+        "product": "chrome",
+        "attack_type": "Out-of-Bounds Write",
+        "cvss_max": 8.8
+      },
+      "cve": {
+        "id": "CVE-2025-5419",
+        "sourceIdentifier": "chrome-cve-admin@google.com",
+        "published": "2025-06-03T00:15:21.043",
+        "lastModified": "2025-10-24T14:06:46.073",
+        "vulnStatus": "Analyzed",
+        "cisaExploitAdd": "2025-06-05",
+        "cisaActionDue": "2025-06-26",
+        "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+        "cisaVulnerabilityName": "Google Chromium V8 Out-of-Bounds Read and Write Vulnerability",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Out of bounds read and write in V8 in Google Chrome prior to 137.0.7151.68 allowed a remote attacker to potentially exploit heap corruption via a crafted HTML page. (Chromium security severity: High)"
+          },
+          {
+            "lang": "es",
+            "value": "La lectura y escritura fuera de los límites en la versión 8 de Google Chrome anterior a la versión 137.0.7151.68 permitía a un atacante remoto explotar la corrupción del montón mediante una página HTML manipulada. (Severidad de seguridad de Chromium: Alta)"
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+                "baseScore": 8.8,
+                "baseSeverity": "HIGH"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-125"
+              },
+              {
+                "lang": "en",
+                "value": "CWE-787"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:google:chrome:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "31E19D83-F49F-4B1B-8E53-D790037695D3",
+                    "versionEndExcluding": "137.0.7151.68"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:microsoft:edge_chromium:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "BD0BF58F-60EE-4A88-AFE6-9DE5B8741E6A",
+                    "versionEndExcluding": "137.0.3296.62"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://chromereleases.googleblog.com/2025/06/stable-channel-update-for-desktop.html",
+            "source": "chrome-cve-admin@google.com",
+            "tags": [
+              "Release Notes"
+            ]
+          },
+          {
+            "url": "https://issues.chromium.org/issues/420636529",
+            "source": "chrome-cve-admin@google.com",
+            "tags": [
+              "Permissions Required"
+            ]
+          },
+          {
+            "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-5419",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2025-5419",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "US Government Resource"
+            ]
+          }
+        ]
+      },
+      "risk_score": 88,
+      "rank": 1
+    },
+    {
+      "cve_id": "CVE-2025-24085",
+      "signal_types": [
+        "EXP"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": {
+          "ref_published": "2025-06-05"
+        },
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-01-27",
+        "description": "A use after free issue was addressed with improved memory management. This issue is fixed in iOS 18.3 and iPadOS 18.3, iPadOS 17.7.6, macOS Sequoia 15.3, macOS Sonoma 14.7.5, macOS Ventura 13.7.5, tvOS 18.3, visionOS 2.3, watchOS 11.3. A malicious application may be able to elevate privileges. Apple is aware of a report that this issue may have been actively exploited against versions of iOS before iOS 17.2.",
+        "title": "Apple Multiple Products Use-After-Free Vulnerability",
+        "vendor": "apple",
+        "product": "ipados",
+        "attack_type": "Use-After-Free",
+        "cvss_max": 10.0
+      },
+      "cve": {
+        "id": "CVE-2025-24085",
+        "sourceIdentifier": "product-security@apple.com",
+        "published": "2025-01-27T22:15:14.990",
+        "lastModified": "2026-04-03T11:44:05.880",
+        "vulnStatus": "Analyzed",
+        "cisaExploitAdd": "2025-01-29",
+        "cisaActionDue": "2025-02-19",
+        "cisaRequiredAction": "Apply mitigations per vendor instructions or discontinue use of the product if mitigations are unavailable.",
+        "cisaVulnerabilityName": "Apple Multiple Products Use-After-Free Vulnerability",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A use after free issue was addressed with improved memory management. This issue is fixed in iOS 18.3 and iPadOS 18.3, iPadOS 17.7.6, macOS Sequoia 15.3, macOS Sonoma 14.7.5, macOS Ventura 13.7.5, tvOS 18.3, visionOS 2.3, watchOS 11.3. A malicious application may be able to elevate privileges. Apple is aware of a report that this issue may have been actively exploited against versions of iOS before iOS 17.2."
+          },
+          {
+            "lang": "es",
+            "value": "Se solucionó un problema de use after free con una mejor gestión de la memoria. Este problema se solucionó en visionOS 2.3, iOS 18.3 y iPadOS 18.3, macOS Sequoia 15.3, watchOS 11.3 y tvOS 18.3. Una aplicación maliciosa podría elevar privilegios. Apple tiene conocimiento de un informe que indica que este problema puede haberse explotado activamente contra versiones de iOS anteriores a iOS 17.2."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+                "baseScore": 10.0,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 6.0
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+                "baseScore": 10.0,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 6.0
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-416"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:ipados:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "687E67E4-136D-4154-BA6F-5ACA16254023",
+                    "versionEndExcluding": "17.7.6"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:ipados:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "AD29C5E9-9427-4C41-873F-C29493B892E4",
+                    "versionStartIncluding": "18.0",
+                    "versionEndExcluding": "18.3"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:iphone_os:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "71A94ACA-8143-475F-8A89-8020B86CE80B",
+                    "versionEndExcluding": "18.3"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:macos:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "FAFA86AE-8EE9-414C-9FD2-C8551FF2A5CC",
+                    "versionStartIncluding": "13.0",
+                    "versionEndExcluding": "13.7.5"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:macos:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "D05DCA25-A1A0-4AEA-9F31-952803114EE2",
+                    "versionStartIncluding": "14.0",
+                    "versionEndExcluding": "14.7.5"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:macos:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "33FE4A81-3E35-4934-ABBB-4531E8E249AF",
+                    "versionStartIncluding": "15.0",
+                    "versionEndExcluding": "15.3"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:tvos:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "60C0BA29-0969-4181-B6F1-4606986B18E4",
+                    "versionEndExcluding": "18.3"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:visionos:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "F91BF3D5-D8E5-437C-8301-C9F22AAFB8BD",
+                    "versionEndExcluding": "2.3"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:watchos:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "7A128237-004C-49D7-A559-5BBC38362361",
+                    "versionEndExcluding": "11.3"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://support.apple.com/en-us/122066",
+            "source": "product-security@apple.com",
+            "tags": [
+              "Release Notes",
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://support.apple.com/en-us/122068",
+            "source": "product-security@apple.com",
+            "tags": [
+              "Release Notes",
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://support.apple.com/en-us/122071",
+            "source": "product-security@apple.com",
+            "tags": [
+              "Release Notes",
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://support.apple.com/en-us/122072",
+            "source": "product-security@apple.com",
+            "tags": [
+              "Release Notes",
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://support.apple.com/en-us/122073",
+            "source": "product-security@apple.com",
+            "tags": [
+              "Release Notes",
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://support.apple.com/en-us/122372",
+            "source": "product-security@apple.com",
+            "tags": [
+              "Release Notes",
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://support.apple.com/en-us/122374",
+            "source": "product-security@apple.com",
+            "tags": [
+              "Release Notes",
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://support.apple.com/en-us/122375",
+            "source": "product-security@apple.com",
+            "tags": [
+              "Release Notes",
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "http://seclists.org/fulldisclosure/2025/Apr/10",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Mailing List",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "http://seclists.org/fulldisclosure/2025/Apr/5",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Mailing List",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "http://seclists.org/fulldisclosure/2025/Apr/9",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Mailing List",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "http://seclists.org/fulldisclosure/2025/Jan/12",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Mailing List",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "http://seclists.org/fulldisclosure/2025/Jan/13",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Mailing List",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "http://seclists.org/fulldisclosure/2025/Jan/15",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Mailing List",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "http://seclists.org/fulldisclosure/2025/Jan/19",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Mailing List",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "http://seclists.org/fulldisclosure/2025/Jun/19",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Mailing List",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "http://seclists.org/fulldisclosure/2025/Oct/1",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Mailing List",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "http://seclists.org/fulldisclosure/2025/Oct/23",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Mailing List",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "http://seclists.org/fulldisclosure/2025/Oct/30",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Mailing List",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "http://seclists.org/fulldisclosure/2025/Oct/31",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Mailing List",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/JGoyd/Glass-Cage-iOS18-CVE-2025-24085-CVE-2025-24201",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/cisagov/vulnrichment/issues/194",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Issue Tracking"
+            ]
+          },
+          {
+            "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2025-24085",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "US Government Resource"
+            ]
+          }
+        ]
+      },
+      "risk_score": 78,
+      "rank": 2
+    },
+    {
+      "cve_id": "CVE-2025-1793",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-06-05",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-06-05",
+        "description": "Multiple vector store integrations in run-llama/llama_index version v0.12.21 have SQL injection vulnerabilities. These vulnerabilities allow an attacker to read and write data using SQL, potentially leading to unauthorized access to data of other users depending on the usage of the llama-index library in a web application.",
+        "title": "llamaindex llamaindex SQL Injection",
+        "vendor": "llamaindex",
+        "product": "llamaindex",
+        "attack_type": "SQL Injection",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-1793",
+        "sourceIdentifier": "security@huntr.dev",
+        "published": "2025-06-05T05:15:23.690",
+        "lastModified": "2025-07-30T21:29:25.527",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Multiple vector store integrations in run-llama/llama_index version v0.12.21 have SQL injection vulnerabilities. These vulnerabilities allow an attacker to read and write data using SQL, potentially leading to unauthorized access to data of other users depending on the usage of the llama-index library in a web application."
+          },
+          {
+            "lang": "es",
+            "value": "Varias integraciones de almacén vectorial en run-llama/llama_index (versión v0.12.21) presentan vulnerabilidades de inyección SQL. Estas vulnerabilidades permiten a un atacante leer y escribir datos mediante SQL, lo que podría provocar el acceso no autorizado a los datos de otros usuarios, dependiendo del uso de la librería llama-index en una aplicación web."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV30": [
+            {
+              "cvssData": {
+                "version": "3.0",
+                "vectorString": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security@huntr.dev",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-89"
+              }
+            ],
+            "source": "security@huntr.dev"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:llamaindex:llamaindex:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "6D45F701-A6AA-428C-BFA6-CA30394A0C28",
+                    "versionStartIncluding": "0.12.21",
+                    "versionEndExcluding": "0.12.28"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/run-llama/llama_index/commit/0008041e8dde8e519621388e5d6f558bde6ef42e",
+            "source": "security@huntr.dev",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://huntr.com/bounties/8cb1555a-9655-4122-b0d6-60059e79183c",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 3
+    },
+    {
+      "cve_id": "CVE-2022-2025",
+      "signal_types": [
+        "EXP"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": {
+          "ref_published": "2025-06-05"
+        },
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2022-09-23",
+        "description": "an attacker with knowledge of user/pass of Grandstream GSD3710 in its 1.0.11.13 version, could overflow the stack since it doesn't check the param length before use the strcopy instruction. The explotation of this vulnerability may lead an attacker to execute a shell with full access.",
+        "title": "grandstream gds3710_firmware",
+        "vendor": "grandstream",
+        "product": "gds3710_firmware",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2022-2025",
+        "sourceIdentifier": "cve-coordination@incibe.es",
+        "published": "2022-09-23T16:15:10.597",
+        "lastModified": "2024-11-21T07:00:11.640",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "an attacker with knowledge of user/pass of Grandstream GSD3710 in its 1.0.11.13 version, could overflow the stack since it doesn't check the param length before use the strcopy instruction. The explotation of this vulnerability may lead an attacker to execute a shell with full access."
+          },
+          {
+            "lang": "es",
+            "value": "un atacante con conocimiento del usuario/pass de Grandstream GSD3710 en versión 1.0.11.13, podría desbordar la pila ya que no comprueba la longitud del parámetro antes de usar la instrucción strcopy. La explotación de esta vulnerabilidad puede conllevar a que un atacante ejecute un shell con acceso total."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "cve-coordination@incibe.es",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-121"
+              }
+            ],
+            "source": "cve-coordination@incibe.es"
+          },
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-787"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:grandstream:gds3710_firmware:1.0.11.13:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "DB284370-1D95-46FE-B745-E8277B04C08D"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:grandstream:gds3710:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "222663C8-CD2A-41DC-BD34-4EDBDE59A932"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://www.incibe-cert.es/en/early-warning/security-advisories/buffer-overflow-vulnerabilities-grandstream-gsd3710",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 78,
+      "rank": 4
+    },
+    {
+      "cve_id": "CVE-2025-30397",
+      "signal_types": [
+        "EXP"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": {
+          "ref_published": "2025-06-05"
+        },
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-05-13",
+        "description": "Access of resource using incompatible type ('type confusion') in Microsoft Scripting Engine allows an unauthorized attacker to execute code over a network.",
+        "title": "Microsoft Windows Scripting Engine Type Confusion Vulnerability",
+        "vendor": "microsoft",
+        "product": "windows_10_1507",
+        "cvss_max": 7.5
+      },
+      "cve": {
+        "id": "CVE-2025-30397",
+        "sourceIdentifier": "secure@microsoft.com",
+        "published": "2025-05-13T17:16:02.370",
+        "lastModified": "2025-10-27T17:13:37.647",
+        "vulnStatus": "Analyzed",
+        "cisaExploitAdd": "2025-05-13",
+        "cisaActionDue": "2025-06-03",
+        "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+        "cisaVulnerabilityName": "Microsoft Windows Scripting Engine Type Confusion Vulnerability",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Access of resource using incompatible type ('type confusion') in Microsoft Scripting Engine allows an unauthorized attacker to execute code over a network."
+          },
+          {
+            "lang": "es",
+            "value": "El acceso a un recurso mediante un tipo incompatible ('confusión de tipos') en Microsoft Scripting Engine permite que un atacante no autorizado ejecute código a través de una red."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H",
+                "baseScore": 7.5,
+                "baseSeverity": "HIGH"
+              },
+              "source": "secure@microsoft.com",
+              "type": "Secondary",
+              "exploitabilityScore": 1.6,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-843"
+              }
+            ],
+            "source": "secure@microsoft.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_10_1507:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "59596E66-63AB-4895-A385-57111ED18743",
+                    "versionEndExcluding": "10.0.10240.21014"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_10_1607:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "286B3A60-FF95-4391-8AF0-D46D5AAB6234",
+                    "versionEndExcluding": "10.0.14393.8066"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_10_1809:*:*:*:*:*:*:x64:*",
+                    "matchCriteriaId": "63199B82-79B6-461A-AC6D-CD1EE5EBCC80",
+                    "versionEndExcluding": "10.0.17763.7314"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_10_1809:*:*:*:*:*:*:x86:*",
+                    "matchCriteriaId": "C7D99F6B-B97B-4010-AA5C-84E9FE50D860",
+                    "versionEndExcluding": "10.0.17763.7314"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_10_21h2:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "87D3BE2A-EF7B-4653-AE64-9F8FE0E12223",
+                    "versionEndExcluding": "10.0.19044.5854"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_10_22h2:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "6F95690D-5720-4ACD-A378-BC3040E42AF2",
+                    "versionEndExcluding": "10.0.19045.5854"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_11_22h2:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "9929270C-5F72-40B8-B36B-073E6D1B00B6",
+                    "versionEndExcluding": "10.0.22621.5335"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_11_23h2:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "894FA410-3F24-45CB-B347-3F839CBA8DD8",
+                    "versionEndExcluding": "10.0.22631.5335"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_11_24h2:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "DC3BBF09-46EB-4B45-857A-705C45143AE8",
+                    "versionEndExcluding": "10.0.26100.3981"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_server_2008:-:sp2:*:*:*:*:*:*",
+                    "matchCriteriaId": "5F422A8C-2C4E-42C8-B420-E0728037E15C"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_server_2008:r2:sp1:*:*:*:*:x64:*",
+                    "matchCriteriaId": "AF07A81D-12E5-4B1D-BFF9-C8D08C32FF4F"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_server_2012:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "A7DF96F8-BA6A-4780-9CA3-F719B3F81074"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_server_2012:r2:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "DB18C4CE-5917-401E-ACF7-2747084FD36E"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_server_2016:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "91433700-DB90-4524-8FAE-FF3895C2A45F",
+                    "versionEndExcluding": "10.0.14393.8066"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_server_2019:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "1B47EE2B-4081-4D43-8AF7-C8EB11852312",
+                    "versionEndExcluding": "10.0.17763.7314"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_server_2022:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "76679D4E-C4EF-4EED-BCDE-79F5AF859576",
+                    "versionEndExcluding": "10.0.20348.3692"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_server_2022_23h2:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "2B9B2720-3733-4C50-85F7-156D781D15B8",
+                    "versionEndExcluding": "10.0.25398.1611"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_server_2025:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "56235620-A112-4BAB-A379-DF0FA479D5B4",
+                    "versionEndExcluding": "10.0.26100.3981"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-30397",
+            "source": "secure@microsoft.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://www.vicarius.io/vsociety/posts/cve-2025-30397-type-confusion-vulnerability-in-microsoft-scripting-engine-detection-script",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.vicarius.io/vsociety/posts/cve-2025-30397-type-confusion-vulnerability-in-microsoft-scripting-engine-mitigation-script",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Mitigation",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2025-30397",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "US Government Resource"
+            ]
+          }
+        ]
+      },
+      "risk_score": 78,
+      "rank": 5
+    },
+    {
+      "cve_id": "CVE-2025-31650",
+      "signal_types": [
+        "EXP"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": {
+          "ref_published": "2025-06-05"
+        },
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-04-28",
+        "description": "Improper Input Validation vulnerability in Apache Tomcat. Incorrect error handling for some invalid HTTP priority headers resulted in incomplete clean-up of the failed request which created a memory leak. A large number of such requests could trigger an OutOfMemoryException resulting in a denial of service.\n\nThis issue affects Apache Tomcat: from 9.0.76 through 9.0.102, from 10.1.10 through 10.1.39, from 11.0.0-M2 through 11.0.5.\nThe following versions were EOL at the time the CVE was created but are \nknown to be affected: 8.5.90 though 8.5.100.\n\n\nUsers are recommended to upgrade to version 9.0.104, 10.1.40 or 11.0.6 which fix the issue.",
+        "title": "apache tomcat DoS",
+        "vendor": "apache",
+        "product": "tomcat",
+        "attack_type": "DoS",
+        "cvss_max": 7.5
+      },
+      "cve": {
+        "id": "CVE-2025-31650",
+        "sourceIdentifier": "security@apache.org",
+        "published": "2025-04-28T20:15:20.653",
+        "lastModified": "2025-11-03T20:18:25.740",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Improper Input Validation vulnerability in Apache Tomcat. Incorrect error handling for some invalid HTTP priority headers resulted in incomplete clean-up of the failed request which created a memory leak. A large number of such requests could trigger an OutOfMemoryException resulting in a denial of service.\n\nThis issue affects Apache Tomcat: from 9.0.76 through 9.0.102, from 10.1.10 through 10.1.39, from 11.0.0-M2 through 11.0.5.\nThe following versions were EOL at the time the CVE was created but are \nknown to be affected: 8.5.90 though 8.5.100.\n\n\nUsers are recommended to upgrade to version 9.0.104, 10.1.40 or 11.0.6 which fix the issue."
+          },
+          {
+            "lang": "es",
+            "value": "Vulnerabilidad de validación de entrada incorrecta en Apache Tomcat. La gestión incorrecta de errores en algunos encabezados de prioridad HTTP no válidos provocó una limpieza incompleta de la solicitud fallida, lo que generó una fuga de memoria. Un gran número de solicitudes de este tipo podría generar una excepción OutOfMemoryException, lo que resulta en una denegación de servicio. Este problema afecta a Apache Tomcat: de la 9.0.76 a la 9.0.102, de la 10.1.10 a la 10.1.39 y de la 11.0.0-M2 a la 11.0.5. Se recomienda actualizar a las versiones 9.0.104, 10.1.40 o 11.0.6, que solucionan el problema."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                "baseScore": 7.5,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 3.6
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                "baseScore": 7.5,
+                "baseSeverity": "HIGH"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 3.6
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-459"
+              }
+            ],
+            "source": "security@apache.org"
+          },
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-459"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:apache:tomcat:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "6F4F87EB-0046-4BAA-91C8-C60C60425186",
+                    "versionStartIncluding": "9.0.76",
+                    "versionEndExcluding": "9.0.104"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:apache:tomcat:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "7EC8AA6F-0BB4-4075-8F2B-DE39FD9A2BD8",
+                    "versionStartIncluding": "10.1.10",
+                    "versionEndExcluding": "10.1.40"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:apache:tomcat:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "45AB4386-DB38-4808-924A-617CECE9F939",
+                    "versionStartIncluding": "11.0.1",
+                    "versionEndExcluding": "11.0.6"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:apache:tomcat:11.0.0:milestone10:*:*:*:*:*:*",
+                    "matchCriteriaId": "57088BDD-A136-45EF-A8A1-2EBF79CEC2CE"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:apache:tomcat:11.0.0:milestone11:*:*:*:*:*:*",
+                    "matchCriteriaId": "B32D1D7A-A04F-444E-8F45-BB9A9E4B0199"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:apache:tomcat:11.0.0:milestone12:*:*:*:*:*:*",
+                    "matchCriteriaId": "0092FB35-3B00-484F-A24D-7828396A4FF6"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:apache:tomcat:11.0.0:milestone13:*:*:*:*:*:*",
+                    "matchCriteriaId": "CB557E88-FA9D-4B69-AA6F-EAEE7F9B01AC"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:apache:tomcat:11.0.0:milestone14:*:*:*:*:*:*",
+                    "matchCriteriaId": "72D3C6F1-84FA-4F82-96C1-9A8DA1C1F30F"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:apache:tomcat:11.0.0:milestone15:*:*:*:*:*:*",
+                    "matchCriteriaId": "3521C81B-37D9-48FC-9540-D0D333B9A4A4"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:apache:tomcat:11.0.0:milestone16:*:*:*:*:*:*",
+                    "matchCriteriaId": "02A84634-A8F2-4BA9-B9F3-BEF36AEC5480"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:apache:tomcat:11.0.0:milestone17:*:*:*:*:*:*",
+                    "matchCriteriaId": "ECBBC1F1-C86B-40AF-B740-A99F6B27682A"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:apache:tomcat:11.0.0:milestone18:*:*:*:*:*:*",
+                    "matchCriteriaId": "9D2206B2-F3FF-43F2-B3E2-3CAAC64C691D"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:apache:tomcat:11.0.0:milestone19:*:*:*:*:*:*",
+                    "matchCriteriaId": "0495A538-4102-40D0-A35C-0179CFD52A9D"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:apache:tomcat:11.0.0:milestone2:*:*:*:*:*:*",
+                    "matchCriteriaId": "2AAD52CE-94F5-4F98-A027-9A7E68818CB6"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:apache:tomcat:11.0.0:milestone20:*:*:*:*:*:*",
+                    "matchCriteriaId": "77BA6600-0890-4BA1-B447-EC1746BAB4FD"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:apache:tomcat:11.0.0:milestone21:*:*:*:*:*:*",
+                    "matchCriteriaId": "7914D26B-CBD6-4846-9BD3-403708D69319"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:apache:tomcat:11.0.0:milestone22:*:*:*:*:*:*",
+                    "matchCriteriaId": "123C6285-03BE-49FC-B821-8BDB25D02863"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:apache:tomcat:11.0.0:milestone23:*:*:*:*:*:*",
+                    "matchCriteriaId": "8A28C2E2-B7BC-46CE-94E4-AE3EF172AA47"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:apache:tomcat:11.0.0:milestone24:*:*:*:*:*:*",
+                    "matchCriteriaId": "069B0D8E-8223-4C4E-A834-C6235D6C3450"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:apache:tomcat:11.0.0:milestone25:*:*:*:*:*:*",
+                    "matchCriteriaId": "E6282085-5716-4874-B0B0-180ECDEE128F"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:apache:tomcat:11.0.0:milestone3:*:*:*:*:*:*",
+                    "matchCriteriaId": "F1F981F5-035A-4EDD-8A9F-481EE8BC7FF7"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:apache:tomcat:11.0.0:milestone4:*:*:*:*:*:*",
+                    "matchCriteriaId": "03A171AF-2EC8-4422-912C-547CDB58CAAA"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:apache:tomcat:11.0.0:milestone5:*:*:*:*:*:*",
+                    "matchCriteriaId": "538E68C4-0BA4-495F-AEF8-4EF6EE7963CF"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:apache:tomcat:11.0.0:milestone6:*:*:*:*:*:*",
+                    "matchCriteriaId": "49350A6E-5E1D-45B2-A874-3B8601B3ADCC"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:apache:tomcat:11.0.0:milestone7:*:*:*:*:*:*",
+                    "matchCriteriaId": "5F50942F-DF54-46C0-8371-9A476DD3EEA3"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:apache:tomcat:11.0.0:milestone8:*:*:*:*:*:*",
+                    "matchCriteriaId": "D12C2C95-B79F-4AA4-8CE3-99A3EE7991AB"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:apache:tomcat:11.0.0:milestone9:*:*:*:*:*:*",
+                    "matchCriteriaId": "98792138-DD56-42DF-9612-3BDC65EEC117"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://lists.apache.org/thread/j6zzk0y3yym9pzfzkq5vcyxzz0yzh826",
+            "source": "security@apache.org",
+            "tags": [
+              "Mailing List",
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "http://www.openwall.com/lists/oss-security/2025/04/28/2",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Mailing List",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://lists.debian.org/debian-lts-announce/2025/07/msg00009.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          }
+        ]
+      },
+      "risk_score": 78,
+      "rank": 6
+    },
+    {
+      "cve_id": "CVE-2025-45542",
+      "signal_types": [
+        "EXP"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": {
+          "ref_published": "2025-06-05"
+        },
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-06-02",
+        "description": "SQL injection vulnerability in the registrationform endpoint of CloudClassroom-PHP-Project v1.0. The pass parameter is vulnerable due to improper input validation, allowing attackers to inject SQL queries.",
+        "title": "vishalmathur cloudclassroom-php_project SQL Injection",
+        "vendor": "vishalmathur",
+        "product": "cloudclassroom-php_project",
+        "attack_type": "SQL Injection",
+        "cvss_max": 7.3
+      },
+      "cve": {
+        "id": "CVE-2025-45542",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2025-06-02T16:15:29.707",
+        "lastModified": "2025-06-13T17:45:40.463",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "SQL injection vulnerability in the registrationform endpoint of CloudClassroom-PHP-Project v1.0. The pass parameter is vulnerable due to improper input validation, allowing attackers to inject SQL queries."
+          },
+          {
+            "lang": "es",
+            "value": "Vulnerabilidad de inyección SQL en el endpoint del formulario de registro de CloudClassroom-PHP-Project v1.0. El parámetro pass es vulnerable debido a una validación de entrada incorrecta, lo que permite a los atacantes inyectar consultas SQL."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+                "baseScore": 7.3,
+                "baseSeverity": "HIGH"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 3.4
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-89"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vishalmathur:cloudclassroom-php_project:1.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "4C9EE693-395C-473A-95BD-57C656C61AB3"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/mathurvishal/CloudClassroom-PHP-Project",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Product"
+            ]
+          },
+          {
+            "url": "https://medium.com/@sanjay70023/cve-2025-45542-time-based-blind-sql-injection-in-cloudclassroom-php-project-v1-0-1fa0efc8a94a",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "http://seclists.org/fulldisclosure/2025/Jun/12",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Mailing List",
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 78,
+      "rank": 7
+    },
+    {
+      "cve_id": "CVE-2025-4568",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-06-05",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-06-05",
+        "description": "Improper neutralization of input provided by an unauthorized user into changes__reference_id parameter in URL allows for boolean-based Blind SQL Injection attacks.",
+        "title": "Improper neutralization of input provided by an unauthorized user into changes__reference_id parameter in URL allows for boolean-based Bl...",
+        "attack_type": "SQL Injection",
+        "cvss_max": 9.3
+      },
+      "cve": {
+        "id": "CVE-2025-4568",
+        "sourceIdentifier": "cvd@cert.pl",
+        "published": "2025-06-05T10:15:21.730",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Improper neutralization of input provided by an unauthorized user into changes__reference_id parameter in URL allows for boolean-based Blind SQL Injection attacks."
+          },
+          {
+            "lang": "es",
+            "value": "La neutralización incorrecta de la entrada proporcionada por un usuario no autorizado en el parámetro changes__reference_id en la URL permite ataques de inyección SQL ciega basados en valores booleanos."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "cvd@cert.pl",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-89"
+              }
+            ],
+            "source": "cvd@cert.pl"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://2clickportal.pl/",
+            "source": "cvd@cert.pl"
+          },
+          {
+            "url": "https://cert.pl/en/posts/2025/06/CVE-2025-4568",
+            "source": "cvd@cert.pl"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 8
+    },
+    {
+      "cve_id": "CVE-2025-47966",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-06-05",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-06-05",
+        "description": "Exposure of sensitive information to an unauthorized actor in Power Automate allows an unauthorized attacker to elevate privileges over a network.",
+        "title": "microsoft power_automate_for_desktop privilege escalation",
+        "vendor": "microsoft",
+        "product": "power_automate_for_desktop",
+        "attack_type": "privilege escalation",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-47966",
+        "sourceIdentifier": "secure@microsoft.com",
+        "published": "2025-06-05T21:15:22.127",
+        "lastModified": "2025-07-08T16:26:34.813",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Exposure of sensitive information to an unauthorized actor in Power Automate allows an unauthorized attacker to elevate privileges over a network."
+          },
+          {
+            "lang": "es",
+            "value": "La exposición de información confidencial a un actor no autorizado en Power Automate permite que un atacante no autorizado eleve privilegios en una red."
+          }
+        ],
+        "cveTags": [
+          {
+            "sourceIdentifier": "secure@microsoft.com",
+            "tags": [
+              "exclusively-hosted-service"
+            ]
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "secure@microsoft.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-200"
+              }
+            ],
+            "source": "secure@microsoft.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:microsoft:power_automate_for_desktop:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "C1B231AB-37F6-4226-A774-952FCE9AB2AE"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-47966",
+            "source": "secure@microsoft.com",
+            "tags": [
+              "Broken Link"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 9
+    },
+    {
+      "cve_id": "CVE-2025-49008",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-06-05",
+          "previous_max": null,
+          "current_max": 9.4
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-06-05",
+        "description": "Atheos is a self-hosted browser-based cloud integrated development environment. Prior to version 6.0.4, improper use of `escapeshellcmd()` in `/components/codegit/traits/execute.php` allows argument injection, leading to arbitrary command execution. Atheos administrators and users of vulnerable versions are at risk of data breaches or server compromise. Version 6.0.4 introduces a `Common::safe_execute` function that sanitizes all arguments using `escapeshellarg()` prior to execution and migrated all components potentially vulnerable to similar exploits to use this new templated execution system.",
+        "title": "Atheos is a self-hosted browser-based cloud integrated development environment.",
+        "cvss_max": 9.4
+      },
+      "cve": {
+        "id": "CVE-2025-49008",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2025-06-05T01:15:21.120",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Atheos is a self-hosted browser-based cloud integrated development environment. Prior to version 6.0.4, improper use of `escapeshellcmd()` in `/components/codegit/traits/execute.php` allows argument injection, leading to arbitrary command execution. Atheos administrators and users of vulnerable versions are at risk of data breaches or server compromise. Version 6.0.4 introduces a `Common::safe_execute` function that sanitizes all arguments using `escapeshellarg()` prior to execution and migrated all components potentially vulnerable to similar exploits to use this new templated execution system."
+          },
+          {
+            "lang": "es",
+            "value": "Atheos es un entorno de desarrollo integrado en la nube, autoalojado y basado en navegador. Antes de la versión 6.0.4, el uso indebido de `escapeshellcmd()` en `/components/codegit/traits/execute.php` permitía la inyección de argumentos, lo que provocaba la ejecución de comandos arbitrarios. Los administradores de Atheos y los usuarios de versiones vulnerables corren el riesgo de sufrir filtraciones de datos o la vulneración del servidor. La versión 6.0.4 introduce la función `Common::safe_execute` que depura todos los argumentos mediante `escapeshellarg()` antes de la ejecución y migró todos los componentes potencialmente vulnerables a exploits similares para utilizar este nuevo sistema de ejecución basado en plantillas."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.4,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-78"
+              },
+              {
+                "lang": "en",
+                "value": "CWE-88"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/Atheos/Atheos/commit/7e6c0eb45fa6d04d786a0037389540f2638fe792",
+            "source": "security-advisories@github.com"
+          },
+          {
+            "url": "https://github.com/Atheos/Atheos/security/advisories/GHSA-rwc2-4q8c-xj48",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 10
+    },
+    {
+      "cve_id": "CVE-2025-5622",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-06-05",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-06-05",
+        "description": "A vulnerability was found in D-Link DIR-816 1.10CNB05 and classified as critical. Affected by this issue is the function wirelessApcli_5g of the file /goform/wirelessApcli_5g. The manipulation of the argument apcli_mode_5g/apcli_enc_5g/apcli_default_key_5g leads to stack-based buffer overflow. The attack may be launched remotely. The exploit has been disclosed to the public and may be used. This vulnerability only affects products that are no longer supported by the maintainer.",
+        "title": "dlink dir-816_firmware Buffer Overflow",
+        "vendor": "dlink",
+        "product": "dir-816_firmware",
+        "attack_type": "Buffer Overflow",
+        "cvss_max": 10.0
+      },
+      "cve": {
+        "id": "CVE-2025-5622",
+        "sourceIdentifier": "cna@vuldb.com",
+        "published": "2025-06-05T00:15:23.947",
+        "lastModified": "2025-06-06T15:42:38.880",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A vulnerability was found in D-Link DIR-816 1.10CNB05 and classified as critical. Affected by this issue is the function wirelessApcli_5g of the file /goform/wirelessApcli_5g. The manipulation of the argument apcli_mode_5g/apcli_enc_5g/apcli_default_key_5g leads to stack-based buffer overflow. The attack may be launched remotely. The exploit has been disclosed to the public and may be used. This vulnerability only affects products that are no longer supported by the maintainer."
+          },
+          {
+            "lang": "es",
+            "value": "Se encontró una vulnerabilidad en D-Link DIR-816 1.10CNB05, clasificada como crítica. Este problema afecta a la función wirelessApcli_5g del archivo /goform/wirelessApcli_5g. La manipulación del argumento apcli_mode_5g/apcli_enc_5g/apcli_default_key_5g provoca un desbordamiento del búfer basado en la pila. El ataque puede ejecutarse en remoto. Se ha hecho público el exploit y puede que sea utilizado. Esta vulnerabilidad solo afecta a los productos que ya no reciben soporte del fabricante."
+          }
+        ],
+        "cveTags": [
+          {
+            "sourceIdentifier": "cna@vuldb.com",
+            "tags": [
+              "unsupported-when-assigned"
+            ]
+          }
+        ],
+        "metrics": {
+          "cvssMetricV2": [
+            {
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+                "baseScore": 10.0,
+                "baseSeverity": "HIGH"
+              },
+              "source": "cna@vuldb.com",
+              "type": "Secondary",
+              "baseSeverity": "HIGH",
+              "exploitabilityScore": 10.0,
+              "impactScore": 10.0
+            }
+          ],
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "cna@vuldb.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "cna@vuldb.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-119"
+              },
+              {
+                "lang": "en",
+                "value": "CWE-121"
+              }
+            ],
+            "source": "cna@vuldb.com"
+          },
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-787"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:dlink:dir-816_firmware:1.10cnb05:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "6A221E99-E2B0-4C57-9263-9A86EFF8746E"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:dlink:dir-816:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "B54058C1-B58F-434A-ABF0-A6B314A1AB14"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/wudipjq/my_vuln/blob/main/D-Link5/vuln_50/50.md",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/?ctiid.311108",
+            "source": "cna@vuldb.com",
+            "tags": [
+              "Permissions Required"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/?id.311108",
+            "source": "cna@vuldb.com",
+            "tags": [
+              "Third Party Advisory",
+              "VDB Entry"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/?submit.589222",
+            "source": "cna@vuldb.com",
+            "tags": [
+              "Third Party Advisory",
+              "VDB Entry"
+            ]
+          },
+          {
+            "url": "https://www.dlink.com/",
+            "source": "cna@vuldb.com",
+            "tags": [
+              "Product"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 11
+    },
+    {
+      "cve_id": "CVE-2025-5623",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-06-05",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-06-05",
+        "description": "A vulnerability was found in D-Link DIR-816 1.10CNB05. It has been classified as critical. This affects the function qosClassifier of the file /goform/qosClassifier. The manipulation of the argument dip_address/sip_address leads to stack-based buffer overflow. It is possible to initiate the attack remotely. The exploit has been disclosed to the public and may be used. This vulnerability only affects products that are no longer supported by the maintainer.",
+        "title": "dlink dir-816_firmware Buffer Overflow",
+        "vendor": "dlink",
+        "product": "dir-816_firmware",
+        "attack_type": "Buffer Overflow",
+        "cvss_max": 10.0
+      },
+      "cve": {
+        "id": "CVE-2025-5623",
+        "sourceIdentifier": "cna@vuldb.com",
+        "published": "2025-06-05T00:15:24.133",
+        "lastModified": "2025-06-06T15:42:32.547",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A vulnerability was found in D-Link DIR-816 1.10CNB05. It has been classified as critical. This affects the function qosClassifier of the file /goform/qosClassifier. The manipulation of the argument dip_address/sip_address leads to stack-based buffer overflow. It is possible to initiate the attack remotely. The exploit has been disclosed to the public and may be used. This vulnerability only affects products that are no longer supported by the maintainer."
+          },
+          {
+            "lang": "es",
+            "value": "Se encontró una vulnerabilidad en D-Link DIR-816 1.10CNB05. Se ha clasificado como crítica. Afecta a la función qosClassifier del archivo /goform/qosClassifier. La manipulación del argumento dip_address/sip_address provoca un desbordamiento del búfer en la pila. Es posible iniciar el ataque de forma remota. Se ha hecho público el exploit y puede que sea utilizado. Esta vulnerabilidad solo afecta a los productos que ya no reciben soporte del fabricante."
+          }
+        ],
+        "cveTags": [
+          {
+            "sourceIdentifier": "cna@vuldb.com",
+            "tags": [
+              "unsupported-when-assigned"
+            ]
+          }
+        ],
+        "metrics": {
+          "cvssMetricV2": [
+            {
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+                "baseScore": 10.0,
+                "baseSeverity": "HIGH"
+              },
+              "source": "cna@vuldb.com",
+              "type": "Secondary",
+              "baseSeverity": "HIGH",
+              "exploitabilityScore": 10.0,
+              "impactScore": 10.0
+            }
+          ],
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "cna@vuldb.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "cna@vuldb.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-119"
+              },
+              {
+                "lang": "en",
+                "value": "CWE-121"
+              }
+            ],
+            "source": "cna@vuldb.com"
+          },
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-787"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:dlink:dir-816_firmware:1.10cnb05:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "6A221E99-E2B0-4C57-9263-9A86EFF8746E"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:dlink:dir-816:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "B54058C1-B58F-434A-ABF0-A6B314A1AB14"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/wudipjq/my_vuln/blob/main/D-Link5/vuln_51/51.md",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/?ctiid.311109",
+            "source": "cna@vuldb.com",
+            "tags": [
+              "Permissions Required"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/?id.311109",
+            "source": "cna@vuldb.com",
+            "tags": [
+              "Third Party Advisory",
+              "VDB Entry"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/?submit.589224",
+            "source": "cna@vuldb.com",
+            "tags": [
+              "Third Party Advisory",
+              "VDB Entry"
+            ]
+          },
+          {
+            "url": "https://www.dlink.com/",
+            "source": "cna@vuldb.com",
+            "tags": [
+              "Product"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 12
+    },
+    {
+      "cve_id": "CVE-2025-5624",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-06-05",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-06-05",
+        "description": "A vulnerability was found in D-Link DIR-816 1.10CNB05. It has been declared as critical. This vulnerability affects the function QoSPortSetup of the file /goform/QoSPortSetup. The manipulation of the argument port0_group/port0_remarker/ssid0_group/ssid0_remarker leads to stack-based buffer overflow. The attack can be initiated remotely. The exploit has been disclosed to the public and may be used. This vulnerability only affects products that are no longer supported by the maintainer.",
+        "title": "dlink dir-816_firmware Buffer Overflow",
+        "vendor": "dlink",
+        "product": "dir-816_firmware",
+        "attack_type": "Buffer Overflow",
+        "cvss_max": 10.0
+      },
+      "cve": {
+        "id": "CVE-2025-5624",
+        "sourceIdentifier": "cna@vuldb.com",
+        "published": "2025-06-05T01:15:21.293",
+        "lastModified": "2025-06-06T15:42:51.960",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A vulnerability was found in D-Link DIR-816 1.10CNB05. It has been declared as critical. This vulnerability affects the function QoSPortSetup of the file /goform/QoSPortSetup. The manipulation of the argument port0_group/port0_remarker/ssid0_group/ssid0_remarker leads to stack-based buffer overflow. The attack can be initiated remotely. The exploit has been disclosed to the public and may be used. This vulnerability only affects products that are no longer supported by the maintainer."
+          },
+          {
+            "lang": "es",
+            "value": "Se encontró una vulnerabilidad en D-Link DIR-816 1.10CNB05. Se ha declarado crítica. Esta vulnerabilidad afecta a la función QoSPortSetup del archivo /goform/QoSPortSetup. La manipulación del argumento port0_group/port0_remarker/ssid0_group/ssid0_remarker provoca un desbordamiento del búfer basado en la pila. El ataque puede ejecutarse en remoto. Se ha hecho público el exploit y puede que sea utilizado. Esta vulnerabilidad solo afecta a los productos que ya no reciben soporte del fabricante."
+          }
+        ],
+        "cveTags": [
+          {
+            "sourceIdentifier": "cna@vuldb.com",
+            "tags": [
+              "unsupported-when-assigned"
+            ]
+          }
+        ],
+        "metrics": {
+          "cvssMetricV2": [
+            {
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+                "baseScore": 10.0,
+                "baseSeverity": "HIGH"
+              },
+              "source": "cna@vuldb.com",
+              "type": "Secondary",
+              "baseSeverity": "HIGH",
+              "exploitabilityScore": 10.0,
+              "impactScore": 10.0
+            }
+          ],
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "cna@vuldb.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "cna@vuldb.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-119"
+              },
+              {
+                "lang": "en",
+                "value": "CWE-121"
+              }
+            ],
+            "source": "cna@vuldb.com"
+          },
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-787"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:dlink:dir-816_firmware:1.10cnb05:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "6A221E99-E2B0-4C57-9263-9A86EFF8746E"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:dlink:dir-816:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "B54058C1-B58F-434A-ABF0-A6B314A1AB14"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/wudipjq/my_vuln/blob/main/D-Link5/vuln_53/53.md",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/?ctiid.311110",
+            "source": "cna@vuldb.com",
+            "tags": [
+              "Permissions Required"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/?id.311110",
+            "source": "cna@vuldb.com",
+            "tags": [
+              "Third Party Advisory",
+              "VDB Entry"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/?submit.589226",
+            "source": "cna@vuldb.com",
+            "tags": [
+              "Third Party Advisory",
+              "VDB Entry"
+            ]
+          },
+          {
+            "url": "https://www.dlink.com/",
+            "source": "cna@vuldb.com",
+            "tags": [
+              "Product"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 13
+    },
+    {
+      "cve_id": "CVE-2025-5630",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-06-05",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-06-05",
+        "description": "A vulnerability has been found in D-Link DIR-816 1.10CNB05 and classified as critical. This vulnerability affects unknown code of the file /goform/form2lansetup.cgi. The manipulation of the argument ip leads to stack-based buffer overflow. The attack can be initiated remotely. The exploit has been disclosed to the public and may be used. This vulnerability only affects products that are no longer supported by the maintainer.",
+        "title": "dlink dir-816_firmware Buffer Overflow",
+        "vendor": "dlink",
+        "product": "dir-816_firmware",
+        "attack_type": "Buffer Overflow",
+        "cvss_max": 10.0
+      },
+      "cve": {
+        "id": "CVE-2025-5630",
+        "sourceIdentifier": "cna@vuldb.com",
+        "published": "2025-06-05T03:15:27.170",
+        "lastModified": "2025-06-06T15:15:04.173",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A vulnerability has been found in D-Link DIR-816 1.10CNB05 and classified as critical. This vulnerability affects unknown code of the file /goform/form2lansetup.cgi. The manipulation of the argument ip leads to stack-based buffer overflow. The attack can be initiated remotely. The exploit has been disclosed to the public and may be used. This vulnerability only affects products that are no longer supported by the maintainer."
+          },
+          {
+            "lang": "es",
+            "value": "Se ha detectado una vulnerabilidad en D-Link DIR-816 1.10CNB05, clasificada como crítica. Esta vulnerabilidad afecta al código desconocido del archivo /goform/form2lansetup.cgi. La manipulación del argumento ip provoca un desbordamiento del búfer en la pila. El ataque puede ejecutarse en remoto. Se ha hecho público el exploit y puede que sea utilizado. Esta vulnerabilidad solo afecta a los productos que ya no reciben soporte del fabricante."
+          }
+        ],
+        "cveTags": [
+          {
+            "sourceIdentifier": "cna@vuldb.com",
+            "tags": [
+              "unsupported-when-assigned"
+            ]
+          }
+        ],
+        "metrics": {
+          "cvssMetricV2": [
+            {
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+                "baseScore": 10.0,
+                "baseSeverity": "HIGH"
+              },
+              "source": "cna@vuldb.com",
+              "type": "Secondary",
+              "baseSeverity": "HIGH",
+              "exploitabilityScore": 10.0,
+              "impactScore": 10.0
+            }
+          ],
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "cna@vuldb.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "cna@vuldb.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-119"
+              },
+              {
+                "lang": "en",
+                "value": "CWE-121"
+              }
+            ],
+            "source": "cna@vuldb.com"
+          },
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-787"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:dlink:dir-816_firmware:1.10cnb05:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "6A221E99-E2B0-4C57-9263-9A86EFF8746E"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:dlink:dir-816:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "B54058C1-B58F-434A-ABF0-A6B314A1AB14"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/wudipjq/my_vuln/blob/main/D-Link5/vuln_54/54.md",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/?ctiid.311116",
+            "source": "cna@vuldb.com",
+            "tags": [
+              "Permissions Required"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/?id.311116",
+            "source": "cna@vuldb.com",
+            "tags": [
+              "Third Party Advisory",
+              "VDB Entry"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/?submit.589779",
+            "source": "cna@vuldb.com",
+            "tags": [
+              "Third Party Advisory",
+              "VDB Entry"
+            ]
+          },
+          {
+            "url": "https://www.dlink.com/",
+            "source": "cna@vuldb.com",
+            "tags": [
+              "Product"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 14
+    }
+  ],
+  "source": "https://www.cvelogic.com/threat-intelligence/2025-06-05"
+}

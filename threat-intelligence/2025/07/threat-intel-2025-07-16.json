@@ -1,0 +1,2252 @@
+{
+  "schema_version": "2.2",
+  "generated_at": "2026-06-02T07:33:04Z",
+  "day": "2025-07-16",
+  "window": {
+    "utc_start": "2025-07-16",
+    "utc_end": "2025-07-16",
+    "days": 1
+  },
+  "summary": {
+    "brief": "Pivotx: public exploit or PoC linked (cross-site scripting) · 10 new critical disclosures — review patch status on exposed services.",
+    "bullets": [
+      "Pivotx: public exploit or PoC linked (cross-site scripting)",
+      "10 new critical disclosures — review patch status on exposed services."
+    ],
+    "counts": {
+      "cves": 21,
+      "kev": 0,
+      "exploit": 11,
+      "epss": 0,
+      "cvss": 10,
+      "patch": 0
+    }
+  },
+  "cves": [
+    {
+      "cve_id": "CVE-2024-11605",
+      "signal_types": [
+        "EXP"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": {
+          "ref_published": "2025-07-16"
+        },
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2024-12-27",
+        "description": "The wp-publications WordPress plugin through 1.2 does not escape filenames before outputting them back in the page, which could allow high privilege users such as admin to perform Stored Cross-Site Scripting attacks even when the unfiltered_html capability is disallowed (for example in multisite setup).",
+        "title": "wp-publications_project wp-publications XSS",
+        "vendor": "wp-publications_project",
+        "product": "wp-publications",
+        "attack_type": "XSS",
+        "cvss_max": 4.8
+      },
+      "cve": {
+        "id": "CVE-2024-11605",
+        "sourceIdentifier": "contact@wpscan.com",
+        "published": "2024-12-27T06:15:22.820",
+        "lastModified": "2025-06-12T17:03:14.057",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The wp-publications WordPress plugin through 1.2 does not escape filenames before outputting them back in the page, which could allow high privilege users such as admin to perform Stored Cross-Site Scripting attacks even when the unfiltered_html capability is disallowed (for example in multisite setup)."
+          },
+          {
+            "lang": "es",
+            "value": "El complemento wp-publications WordPress hasta la versión 1.2 no escapa los nombres de archivo antes de mostrarlos nuevamente en la página, lo que podría permitir que usuarios con altos privilegios como el administrador realicen ataques de cross site scripting almacenado incluso cuando la capacidad unfiltered_html no está permitida (por ejemplo, en una configuración de varios sitios)."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:C/C:L/I:L/A:N",
+                "baseScore": 4.8,
+                "baseSeverity": "MEDIUM"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 1.7,
+              "impactScore": 2.7
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-79"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:wp-publications_project:wp-publications:*:*:*:*:*:wordpress:*:*",
+                    "matchCriteriaId": "96DBFEE5-89CC-436A-BBE5-4B688CBBAEF4",
+                    "versionEndIncluding": "1.2"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://wpscan.com/vulnerability/91c5ee70-2ff5-46cd-a0f5-54987fc2e060/",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 78,
+      "rank": 1
+    },
+    {
+      "cve_id": "CVE-2025-1550",
+      "signal_types": [
+        "EXP"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": {
+          "ref_published": "2025-07-16"
+        },
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-03-11",
+        "description": "The Keras Model.load_model function permits arbitrary code execution, even with safe_mode=True, through a manually constructed, malicious .keras archive. By altering the config.json file within the archive, an attacker can specify arbitrary Python modules and functions, along with their arguments, to be loaded and executed during model loading.",
+        "title": "keras keras RCE",
+        "vendor": "keras",
+        "product": "keras",
+        "attack_type": "RCE",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-1550",
+        "sourceIdentifier": "cve-coordination@google.com",
+        "published": "2025-03-11T09:15:25.217",
+        "lastModified": "2025-07-31T16:55:39.920",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The Keras Model.load_model function permits arbitrary code execution, even with safe_mode=True, through a manually constructed, malicious .keras archive. By altering the config.json file within the archive, an attacker can specify arbitrary Python modules and functions, along with their arguments, to be loaded and executed during model loading."
+          },
+          {
+            "lang": "es",
+            "value": "La función Keras Model.load_model permite la ejecución de código arbitrario, incluso con safe_mode=True, a través de un archivo .keras malicioso creado manualmente. Al alterar el archivo config.json dentro del archivo, un atacante puede especificar módulos y funciones Python arbitrarios, junto con sus argumentos, para que se carguen y ejecuten durante la carga del modelo."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:L/AC:L/AT:P/PR:L/UI:A/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 7.3,
+                "baseSeverity": "HIGH"
+              },
+              "source": "cve-coordination@google.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-94"
+              }
+            ],
+            "source": "cve-coordination@google.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:keras:keras:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "A252DA83-7788-4277-A8B0-52F597A654A9",
+                    "versionStartIncluding": "3.0.0",
+                    "versionEndExcluding": "3.8.0"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/keras-team/keras/pull/20751",
+            "source": "cve-coordination@google.com",
+            "tags": [
+              "Issue Tracking",
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://towerofhanoi.it/writeups/cve-2025-1550/",
+            "source": "cve-coordination@google.com",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 78,
+      "rank": 2
+    },
+    {
+      "cve_id": "CVE-2025-20337",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-07-16",
+          "previous_max": null,
+          "current_max": 10.0
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-07-16",
+        "description": "A vulnerability in a specific API of Cisco ISE and Cisco ISE-PIC could allow an unauthenticated, remote attacker to execute arbitrary code on the underlying operating system as root. The attacker does not require any valid credentials to exploit this vulnerability.\r\n\r\nThis vulnerability is due to insufficient validation of user-supplied input. An attacker could exploit this vulnerability by submitting a crafted API request. A successful exploit could allow the attacker to obtain root privileges on an affected device.",
+        "title": "Cisco Identity Services Engine Injection Vulnerability",
+        "vendor": "cisco",
+        "product": "identity_services_engine",
+        "cvss_max": 10.0
+      },
+      "cve": {
+        "id": "CVE-2025-20337",
+        "sourceIdentifier": "psirt@cisco.com",
+        "published": "2025-07-16T17:15:30.573",
+        "lastModified": "2025-10-28T13:58:55.447",
+        "vulnStatus": "Analyzed",
+        "cisaExploitAdd": "2025-07-28",
+        "cisaActionDue": "2025-08-18",
+        "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+        "cisaVulnerabilityName": "Cisco Identity Services Engine Injection Vulnerability",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A vulnerability in a specific API of Cisco ISE and Cisco ISE-PIC could allow an unauthenticated, remote attacker to execute arbitrary code on the underlying operating system as root. The attacker does not require any valid credentials to exploit this vulnerability.\r\n\r\nThis vulnerability is due to insufficient validation of user-supplied input. An attacker could exploit this vulnerability by submitting a crafted API request. A successful exploit could allow the attacker to obtain root privileges on an affected device."
+          },
+          {
+            "lang": "es",
+            "value": "Una vulnerabilidad en una API específica de Cisco ISE y Cisco ISE-PIC podría permitir que un atacante remoto no autenticado ejecute código arbitrario en el sistema operativo subyacente como root. El atacante no necesita credenciales válidas para explotar esta vulnerabilidad. Esta vulnerabilidad se debe a una validación insuficiente de la información proporcionada por el usuario. Un atacante podría explotar esta vulnerabilidad enviando una solicitud de API manipulada. Una explotación exitosa podría permitirle obtener privilegios de root en un dispositivo afectado."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+                "baseScore": 10.0,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "psirt@cisco.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 6.0
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-74"
+              }
+            ],
+            "source": "psirt@cisco.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:identity_services_engine:3.3.0:-:*:*:*:*:*:*",
+                    "matchCriteriaId": "F1B9C2C1-59A4-49A0-9B74-83CCB063E55D"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:identity_services_engine:3.3.0:patch1:*:*:*:*:*:*",
+                    "matchCriteriaId": "DFD29A0B-0D75-4EAB-BCE0-79450EC75DD0"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:identity_services_engine:3.3.0:patch2:*:*:*:*:*:*",
+                    "matchCriteriaId": "E6C94CC4-CC08-4DAF-A606-FDAFC92720A9"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:identity_services_engine:3.3.0:patch3:*:*:*:*:*:*",
+                    "matchCriteriaId": "BB069EA3-7B8C-42B5-8035-2EE5ED3F56E4"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:identity_services_engine:3.3.0:patch4:*:*:*:*:*:*",
+                    "matchCriteriaId": "FF8B81A6-BF44-4E5F-B167-39F61DDCA026"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:identity_services_engine:3.3.0:patch5:*:*:*:*:*:*",
+                    "matchCriteriaId": "56E0F0EC-3E66-4866-89F5-89B331F3F517"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:identity_services_engine:3.3.0:patch6:*:*:*:*:*:*",
+                    "matchCriteriaId": "2E3E8937-2859-4A2A-91C0-05F674EF0466"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:identity_services_engine:3.4.0:-:*:*:*:*:*:*",
+                    "matchCriteriaId": "D23905E0-E525-49B1-8E5F-4EB42D186768"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:identity_services_engine:3.4.0:patch1:*:*:*:*:*:*",
+                    "matchCriteriaId": "74509498-38EF-4345-9583-CEF5C26CA1D8"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:identity_services_engine_passive_identity_connector:3.3.0:-:*:*:*:*:*:*",
+                    "matchCriteriaId": "3CA3315D-8A45-43F4-A0F0-094D325F285B"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:identity_services_engine_passive_identity_connector:3.3.0:patch1:*:*:*:*:*:*",
+                    "matchCriteriaId": "B3736136-9FD8-4B12-B119-EA15201224D9"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:identity_services_engine_passive_identity_connector:3.3.0:patch2:*:*:*:*:*:*",
+                    "matchCriteriaId": "654ED77E-22D3-4E76-9E6D-B1581F5982F0"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:identity_services_engine_passive_identity_connector:3.3.0:patch3:*:*:*:*:*:*",
+                    "matchCriteriaId": "A0648EE9-F042-479F-9AAB-C6B5DBC46511"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:identity_services_engine_passive_identity_connector:3.3.0:patch4:*:*:*:*:*:*",
+                    "matchCriteriaId": "83F3BA58-4F38-41C8-956F-38A2F44EECE4"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:identity_services_engine_passive_identity_connector:3.3.0:patch5:*:*:*:*:*:*",
+                    "matchCriteriaId": "6C30FA1D-91E2-48C5-B181-A88FDF668278"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:identity_services_engine_passive_identity_connector:3.3.0:patch6:*:*:*:*:*:*",
+                    "matchCriteriaId": "768215B1-80B7-40FF-8772-BA4C0B3913F5"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:identity_services_engine_passive_identity_connector:3.4.0:-:*:*:*:*:*:*",
+                    "matchCriteriaId": "CC0525FD-C4D7-4B48-BF35-1791391AB148"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:identity_services_engine_passive_identity_connector:3.4.0:patch1:*:*:*:*:*:*",
+                    "matchCriteriaId": "68C96F6B-51EE-4D03-9598-CBFD16DA22EF"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ise-unauth-rce-ZAd2GnJ6",
+            "source": "psirt@cisco.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2025-20337",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "US Government Resource"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 3
+    },
+    {
+      "cve_id": "CVE-2024-58258",
+      "signal_types": [
+        "EXP"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": {
+          "ref_published": "2025-07-16"
+        },
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-07-13",
+        "description": "SugarCRM before 13.0.4 and 14.x before 14.0.1 allows SSRF in the API module because a limited type of code injection can occur.",
+        "title": "SugarCRM before 13.0.4 and 14.x before 14.0.1 allows SSRF in the API module because a limited type of code injection can occur.",
+        "attack_type": "SSRF",
+        "cvss_max": 7.2
+      },
+      "cve": {
+        "id": "CVE-2024-58258",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2025-07-13T22:15:23.090",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "SugarCRM before 13.0.4 and 14.x before 14.0.1 allows SSRF in the API module because a limited type of code injection can occur."
+          },
+          {
+            "lang": "es",
+            "value": "SugarCRM anterior a 13.0.4 y 14.x anterior a 14.0.1 permite SSRF en el módulo API porque puede ocurrir un tipo limitado de inyección de código."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N",
+                "baseScore": 7.2,
+                "baseSeverity": "HIGH"
+              },
+              "source": "cve@mitre.org",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 2.7
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-94"
+              }
+            ],
+            "source": "cve@mitre.org"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://support.sugarcrm.com/resources/security/sugarcrm-sa-2024-059/",
+            "source": "cve@mitre.org"
+          },
+          {
+            "url": "http://seclists.org/fulldisclosure/2025/Jul/21",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          }
+        ]
+      },
+      "risk_score": 78,
+      "rank": 4
+    },
+    {
+      "cve_id": "CVE-2025-27210",
+      "signal_types": [
+        "EXP"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": {
+          "ref_published": "2025-07-16"
+        },
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-07-18",
+        "description": "An incomplete fix has been identified for CVE-2025-23084 in Node.js, specifically affecting Windows device names like CON, PRN, and AUX. \r\n\r\nThis vulnerability affects Windows users of `path.join` API.",
+        "title": "An incomplete fix has been identified for CVE-2025-23084 in Node.js, specifically affecting Windows device names like CON, PRN, and AUX.",
+        "cvss_max": 7.5
+      },
+      "cve": {
+        "id": "CVE-2025-27210",
+        "sourceIdentifier": "support@hackerone.com",
+        "published": "2025-07-18T23:15:23.343",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "An incomplete fix has been identified for CVE-2025-23084 in Node.js, specifically affecting Windows device names like CON, PRN, and AUX. \r\n\r\nThis vulnerability affects Windows users of `path.join` API."
+          },
+          {
+            "lang": "es",
+            "value": "Se ha identificado una solución incompleta para CVE-2025-23084 en Node.js, que afecta específicamente a nombres de dispositivos Windows como CON, PRN y AUX. Esta vulnerabilidad afecta a los usuarios de Windows de la API `path.join`."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV30": [
+            {
+              "cvssData": {
+                "version": "3.0",
+                "vectorString": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+                "baseScore": 7.5,
+                "baseSeverity": "HIGH"
+              },
+              "source": "support@hackerone.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 3.6
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-22"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://nodejs.org/en/blog/vulnerability/july-2025-security-releases",
+            "source": "support@hackerone.com"
+          },
+          {
+            "url": "http://www.openwall.com/lists/oss-security/2025/07/22/2",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          }
+        ]
+      },
+      "risk_score": 78,
+      "rank": 5
+    },
+    {
+      "cve_id": "CVE-2025-3248",
+      "signal_types": [
+        "EXP"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": {
+          "ref_published": "2025-07-16"
+        },
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-04-07",
+        "description": "Langflow versions prior to 1.3.0 are susceptible to code injection in \nthe /api/v1/validate/code endpoint. A remote and unauthenticated attacker can send crafted HTTP requests to execute arbitrary\ncode.",
+        "title": "Langflow Missing Authentication Vulnerability",
+        "vendor": "langflow",
+        "product": "langflow",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-3248",
+        "sourceIdentifier": "disclosure@vulncheck.com",
+        "published": "2025-04-07T15:15:44.897",
+        "lastModified": "2025-11-06T13:57:48.910",
+        "vulnStatus": "Analyzed",
+        "cisaExploitAdd": "2025-05-05",
+        "cisaActionDue": "2025-05-26",
+        "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+        "cisaVulnerabilityName": "Langflow Missing Authentication Vulnerability",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Langflow versions prior to 1.3.0 are susceptible to code injection in \nthe /api/v1/validate/code endpoint. A remote and unauthenticated attacker can send crafted HTTP requests to execute arbitrary\ncode."
+          },
+          {
+            "lang": "es",
+            "value": "Las versiones de Langflow anteriores a la 1.3.0 son susceptibles a la inyección de código en el endpoint /api/v1/validate/code. Un atacante remoto no autenticado puede enviar solicitudes HTTP manipuladas para ejecutar código arbitrario."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-306"
+              }
+            ],
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-94"
+              },
+              {
+                "lang": "en",
+                "value": "CWE-306"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:langflow:langflow:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "464AFA20-81A9-41A6-B9F1-CD38B64C40C7",
+                    "versionEndExcluding": "1.3.0"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/langflow-ai/langflow/pull/6911",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://github.com/langflow-ai/langflow/releases/tag/1.3.0",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Release Notes"
+            ]
+          },
+          {
+            "url": "https://www.horizon3.ai/attack-research/disclosures/unsafe-at-any-speed-abusing-python-exec-for-unauth-rce-in-langflow-ai/",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.vulncheck.com/advisories/langflow-unauthenticated-rce",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2025-3248",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "US Government Resource"
+            ]
+          }
+        ]
+      },
+      "risk_score": 78,
+      "rank": 6
+    },
+    {
+      "cve_id": "CVE-2025-34117",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-07-16",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-07-16",
+        "description": "A remote code execution vulnerability exists in multiple Netcore and Netis routers models with firmware released prior to August 2014 due to the presence of an undocumented backdoor listener on UDP port 53413. Exact version boundaries remain undocumented. An unauthenticated remote attacker can send specially crafted UDP packets to execute arbitrary commands on the affected device. This backdoor uses a hardcoded authentication mechanism and accepts shell commands post-authentication. Some device models include a non-standard implementation of the `echo` command, which may affect exploitability.",
+        "title": "A remote code execution vulnerability exists in multiple Netcore and Netis routers models with firmware released prior to August 2014 due...",
+        "attack_type": "RCE",
+        "cvss_max": 9.3
+      },
+      "cve": {
+        "id": "CVE-2025-34117",
+        "sourceIdentifier": "disclosure@vulncheck.com",
+        "published": "2025-07-16T21:15:26.550",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A remote code execution vulnerability exists in multiple Netcore and Netis routers models with firmware released prior to August 2014 due to the presence of an undocumented backdoor listener on UDP port 53413. Exact version boundaries remain undocumented. An unauthenticated remote attacker can send specially crafted UDP packets to execute arbitrary commands on the affected device. This backdoor uses a hardcoded authentication mechanism and accepts shell commands post-authentication. Some device models include a non-standard implementation of the `echo` command, which may affect exploitability."
+          },
+          {
+            "lang": "es",
+            "value": "Existe una vulnerabilidad de ejecución remota de código en varios modelos de routers Netcore y Netis con firmware publicado antes de agosto de 2014 debido a la presencia de un detector de puerta trasera no documentado en el puerto UDP 53413. Los límites exactos de la versión aún no se han documentado. Un atacante remoto no autenticado puede enviar paquetes UDP especialmente manipulados para ejecutar comandos arbitrarios en el dispositivo afectado. Esta puerta trasera utiliza un mecanismo de autenticación codificado y acepta comandos de shell tras la autenticación. Algunos modelos de dispositivos incluyen una implementación no estándar del comando `echo`, lo que podría afectar su explotabilidad."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-78"
+              },
+              {
+                "lang": "en",
+                "value": "CWE-306"
+              },
+              {
+                "lang": "en",
+                "value": "CWE-912"
+              }
+            ],
+            "source": "disclosure@vulncheck.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://raw.githubusercontent.com/rapid7/metasploit-framework/master/modules/exploits/linux/misc/netcore_udp_53413_backdoor.rb",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://vulners.com/metasploit/MSF:EXPLOIT-LINUX-MISC-NETCORE_UDP_53413_BACKDOOR-",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://web.archive.org/web/20140828114943/http://blog.trendmicro.com/trendlabs-security-intelligence/netis-routers-leave-wide-open-backdoor/",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://www.exploit-db.com/exploits/43387",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://www.seebug.org/vuldb/ssvid-90227",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://www.shadowserver.org/what-we-do/network-reporting/netcore-netis-router-vulnerability-scan-report/",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://www.vulncheck.com/advisories/netcore-netis-routers-backdoor-rce",
+            "source": "disclosure@vulncheck.com"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 7
+    },
+    {
+      "cve_id": "CVE-2025-34121",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-07-16",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-07-16",
+        "description": "An unauthenticated arbitrary file upload vulnerability exists in Idera Up.Time Monitoring Station versions up to and including 7.2. The `wizards/post2file.php` script accepts arbitrary POST parameters, allowing attackers to upload crafted PHP files to the webroot. Successful exploitation results in remote code execution as the web server user. NOTE: The bypass for this vulnerability is tracked as CVE-2015-9263.",
+        "title": "An unauthenticated arbitrary file upload vulnerability exists in Idera Up.Time Monitoring Station versions up to and including 7.2.",
+        "attack_type": "RCE",
+        "cvss_max": 9.3
+      },
+      "cve": {
+        "id": "CVE-2025-34121",
+        "sourceIdentifier": "disclosure@vulncheck.com",
+        "published": "2025-07-16T21:15:27.100",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "An unauthenticated arbitrary file upload vulnerability exists in Idera Up.Time Monitoring Station versions up to and including 7.2. The `wizards/post2file.php` script accepts arbitrary POST parameters, allowing attackers to upload crafted PHP files to the webroot. Successful exploitation results in remote code execution as the web server user. NOTE: The bypass for this vulnerability is tracked as CVE-2015-9263."
+          },
+          {
+            "lang": "es",
+            "value": "Existe una vulnerabilidad de carga arbitraria de archivos no autenticados en las versiones de Idera Up.Time Monitoring Station hasta la 7.2 (incluida). El script `wizards/post2file.php` acepta parámetros POST arbitrarios, lo que permite a los atacantes cargar archivos PHP manipulados en la raíz web. Una explotación exitosa resulta en la ejecución remota de código como usuario del servidor web. NOTA: La omisión de esta vulnerabilidad se conoce como CVE-2015-9263."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-306"
+              },
+              {
+                "lang": "en",
+                "value": "CWE-434"
+              }
+            ],
+            "source": "disclosure@vulncheck.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://raw.githubusercontent.com/rapid7/metasploit-framework/master/modules/exploits/multi/http/uptime_file_upload_1.rb",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://web.archive.org/web/20150210113937/http://www.security-assessment.com/files/documents/advisory/Up.Time%207.2%20-%20Arbitrary%20File%20Upload.pdf",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://www.exploit-db.com/exploits/38732",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://www.vulncheck.com/advisories/idera-uptime-arbitrary-file-upload-rce",
+            "source": "disclosure@vulncheck.com"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 8
+    },
+    {
+      "cve_id": "CVE-2025-34125",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-07-16",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-07-16",
+        "description": "An unauthenticated command injection vulnerability exists in the cookie handling process of the lighttpd web server on D-Link DSP-W110A1 firmware version 1.05B01. This occurs when specially crafted cookie values are processed, allowing remote attackers to execute arbitrary commands on the underlying Linux operating system. Successful exploitation enables full system compromise.",
+        "title": "An unauthenticated command injection vulnerability exists in the cookie handling process of the lighttpd web server on D-Link DSP-W110A1...",
+        "attack_type": "Command Injection",
+        "cvss_max": 9.3
+      },
+      "cve": {
+        "id": "CVE-2025-34125",
+        "sourceIdentifier": "disclosure@vulncheck.com",
+        "published": "2025-07-16T22:15:24.003",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "An unauthenticated command injection vulnerability exists in the cookie handling process of the lighttpd web server on D-Link DSP-W110A1 firmware version 1.05B01. This occurs when specially crafted cookie values are processed, allowing remote attackers to execute arbitrary commands on the underlying Linux operating system. Successful exploitation enables full system compromise."
+          },
+          {
+            "lang": "es",
+            "value": "Existe una vulnerabilidad de inyección de comandos no autenticados en el proceso de gestión de cookies del servidor web lighttpd en el D-Link DSP-W110A1, versión de firmware 1.05B01. Esto ocurre cuando se procesan valores de cookies especialmente manipulados, lo que permite a atacantes remotos ejecutar comandos arbitrarios en el sistema operativo Linux subyacente. Su explotación exitosa permite la vulneración total del sistema."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-78"
+              }
+            ],
+            "source": "disclosure@vulncheck.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://raw.githubusercontent.com/rapid7/metasploit-framework/master/modules/exploits/linux/http/dlink_dspw110_cookie_noauth_exec.rb",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://web.archive.org/web/20160125171424/https://github.com/darkarnium/secpub/tree/master/D-Link/DSP-W110",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://www.exploit-db.com/exploits/37628",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://www.vulncheck.com/advisories/dlink-dspw110a1-cookie-command-injection",
+            "source": "disclosure@vulncheck.com"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 9
+    },
+    {
+      "cve_id": "CVE-2025-34127",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-07-16",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-07-16",
+        "description": "A stack-based buffer overflow exists in Achat v0.150 in its default configuration. By sending a specially crafted message to the UDP port 9256, an attacker can overwrite the structured exception handler (SEH) due to insufficient bounds checking on user-supplied input leading to remote code execution.",
+        "title": "A stack-based buffer overflow exists in Achat v0.150 in its default configuration.",
+        "attack_type": "RCE",
+        "cvss_max": 9.3
+      },
+      "cve": {
+        "id": "CVE-2025-34127",
+        "sourceIdentifier": "disclosure@vulncheck.com",
+        "published": "2025-07-16T22:15:24.280",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A stack-based buffer overflow exists in Achat v0.150 in its default configuration. By sending a specially crafted message to the UDP port 9256, an attacker can overwrite the structured exception handler (SEH) due to insufficient bounds checking on user-supplied input leading to remote code execution."
+          },
+          {
+            "lang": "es",
+            "value": "Existe un desbordamiento de búfer basado en pila en Achat v0.150 en su configuración predeterminada. Al enviar un mensaje especialmente manipulado al puerto UDP 9256, un atacante puede sobrescribir el manejador de excepciones estructurado (SEH) debido a una comprobación insuficiente de los límites de la entrada proporcionada por el usuario, lo que provoca la ejecución remota de código."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-94"
+              },
+              {
+                "lang": "en",
+                "value": "CWE-121"
+              }
+            ],
+            "source": "disclosure@vulncheck.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://raw.githubusercontent.com/rapid7/metasploit-framework/master/modules/exploits/windows/misc/achat_bof.rb",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://www.exploit-db.com/exploits/36056",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://www.vulncheck.com/advisories/achat-seh-buffer-overflow",
+            "source": "disclosure@vulncheck.com"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 10
+    },
+    {
+      "cve_id": "CVE-2025-34132",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-07-16",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-07-16",
+        "description": "A command injection vulnerability exists in LILIN Digital Video Recorder (DVR) devices prior to firmware version 2.0b60_20200207 via the Server field in the NTPUpdate configuration. The web service at /z/zbin/dvr_box fails to properly sanitize input, allowing remote attackers to inject and execute arbitrary commands as root by supplying specially crafted XML data to the DVRPOST interface.",
+        "title": "A command injection vulnerability exists in LILIN Digital Video Recorder (DVR) devices prior to firmware version 2.0b60_20200207 via the...",
+        "attack_type": "Command Injection",
+        "cvss_max": 9.3
+      },
+      "cve": {
+        "id": "CVE-2025-34132",
+        "sourceIdentifier": "disclosure@vulncheck.com",
+        "published": "2025-07-16T22:15:24.823",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A command injection vulnerability exists in LILIN Digital Video Recorder (DVR) devices prior to firmware version 2.0b60_20200207 via the Server field in the NTPUpdate configuration. The web service at /z/zbin/dvr_box fails to properly sanitize input, allowing remote attackers to inject and execute arbitrary commands as root by supplying specially crafted XML data to the DVRPOST interface."
+          },
+          {
+            "lang": "es",
+            "value": "Existe una vulnerabilidad de inyección de comandos en los dispositivos LILIN Digital Video Recorder (DVR) anteriores a la versión de firmware 2.0b60_20200207 a través del campo Servidor en la configuración de NTPUpdate. El servicio web en /z/zbin/dvr_box no depura correctamente la entrada, lo que permite a atacantes remotos inyectar y ejecutar comandos arbitrarios como root mediante el suministro de datos XML especialmente manipulados a la interfaz DVRPOST. 777"
+          }
+        ],
+        "metrics": {
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-20"
+              },
+              {
+                "lang": "en",
+                "value": "CWE-78"
+              }
+            ],
+            "source": "disclosure@vulncheck.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://blog.netlab.360.com/multiple-botnets-are-spreading-using-lilin-dvr-0-day/",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://ducklingstudio.blog.fc2.com/blog-entry-400.html",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://www.meritlilin.com/assets/uploads/support/file/M00158-TW.pdf",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://www.vulncheck.com/advisories/lilin-dvr-multiple-vulnerabilities",
+            "source": "disclosure@vulncheck.com"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 11
+    },
+    {
+      "cve_id": "CVE-2025-34300",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-07-16",
+          "previous_max": null,
+          "current_max": 10.0
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-07-16",
+        "description": "A template injection vulnerability exists in Sawtooth Software’s Lighthouse Studio versions prior to 9.16.14 via the  ciwweb.pl http://ciwweb.pl/  Perl web application. Exploitation allows an unauthenticated attacker can execute arbitrary commands.",
+        "title": "A template injection vulnerability exists in Sawtooth Software’s Lighthouse Studio versions prior to 9.16.14 via the ciwweb.pl http://ciw...",
+        "cvss_max": 10.0
+      },
+      "cve": {
+        "id": "CVE-2025-34300",
+        "sourceIdentifier": "disclosure@vulncheck.com",
+        "published": "2025-07-16T13:15:23.823",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A template injection vulnerability exists in Sawtooth Software’s Lighthouse Studio versions prior to 9.16.14 via the  ciwweb.pl http://ciwweb.pl/  Perl web application. Exploitation allows an unauthenticated attacker can execute arbitrary commands."
+          },
+          {
+            "lang": "es",
+            "value": "Existe una vulnerabilidad de inyección de plantillas en las versiones de Lighthouse Studio de Sawtooth Software anteriores a la 9.16.14 a través de la aplicación web Perl ciwweb.pl (http://ciwweb.pl/). Su explotación permite que un atacante no autenticado ejecute comandos arbitrarios."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 10.0,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-20"
+              },
+              {
+                "lang": "en",
+                "value": "CWE-1336"
+              }
+            ],
+            "source": "disclosure@vulncheck.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://sawtoothsoftware.com/resources/software-downloads/lighthouse-studio/version-history",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://slcyber.io/assetnote-security-research-center/rce-in-the-most-popular-survey-software-youve-never-heard-of/",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          },
+          {
+            "url": "https://www.vulncheck.com/advisories/sawtooth-software-lighthouse-studio-preauthentication-rce",
+            "source": "disclosure@vulncheck.com"
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 12
+    },
+    {
+      "cve_id": "CVE-2025-44177",
+      "signal_types": [
+        "EXP"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": {
+          "ref_published": "2025-07-16"
+        },
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-07-09",
+        "description": "A directory traversal vulnerability was discovered in White Star Software Protop version 4.4.2-2024-11-27, specifically in the /pt3upd/ endpoint. An unauthenticated attacker can remotely read arbitrary files on the underlying OS using encoded traversal sequences.",
+        "title": "wss protop Directory Traversal",
+        "vendor": "wss",
+        "product": "protop",
+        "attack_type": "Directory Traversal",
+        "cvss_max": 8.2
+      },
+      "cve": {
+        "id": "CVE-2025-44177",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2025-07-09T16:15:23.427",
+        "lastModified": "2025-07-18T18:55:26.647",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A directory traversal vulnerability was discovered in White Star Software Protop version 4.4.2-2024-11-27, specifically in the /pt3upd/ endpoint. An unauthenticated attacker can remotely read arbitrary files on the underlying OS using encoded traversal sequences."
+          },
+          {
+            "lang": "es",
+            "value": "Se descubrió una vulnerabilidad de directory traversal en White Star Software Protop versión 4.4.2-2024-11-27, específicamente en el endpoint /pt3upd/. Un atacante no autenticado puede leer remotamente archivos arbitrarios en el sistema operativo subyacente mediante secuencias de navegación codificadas."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:H/A:N",
+                "baseScore": 8.2,
+                "baseSeverity": "HIGH"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 4.2
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-22"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:wss:protop:4.4.2-2024-11-27:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "58F819BA-F98F-44B2-ACFE-ABAA3311088B"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://gist.github.com/stSLAYER/4a2ecfbab1215a0be0dde59c4ac0122d",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://protop.com",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Product"
+            ]
+          }
+        ]
+      },
+      "risk_score": 78,
+      "rank": 13
+    },
+    {
+      "cve_id": "CVE-2025-49677",
+      "signal_types": [
+        "EXP"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": {
+          "ref_published": "2025-07-16"
+        },
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-07-08",
+        "description": "Use after free in Microsoft Brokering File System allows an authorized attacker to elevate privileges locally.",
+        "title": "microsoft windows_11_22h2 privilege escalation",
+        "vendor": "microsoft",
+        "product": "windows_11_22h2",
+        "attack_type": "privilege escalation",
+        "cvss_max": 7.0
+      },
+      "cve": {
+        "id": "CVE-2025-49677",
+        "sourceIdentifier": "secure@microsoft.com",
+        "published": "2025-07-08T17:15:52.257",
+        "lastModified": "2025-07-15T17:16:51.970",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Use after free in Microsoft Brokering File System allows an authorized attacker to elevate privileges locally."
+          },
+          {
+            "lang": "es",
+            "value": "Use after free en Microsoft Brokering File System permite que un atacante autorizado eleve privilegios localmente."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 7.0,
+                "baseSeverity": "HIGH"
+              },
+              "source": "secure@microsoft.com",
+              "type": "Secondary",
+              "exploitabilityScore": 1.0,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-416"
+              }
+            ],
+            "source": "secure@microsoft.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_11_22h2:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "76FEE1E8-EB22-4E01-86D7-13B35F9D2876",
+                    "versionEndExcluding": "10.0.22621.5624"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-49677",
+            "source": "secure@microsoft.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 78,
+      "rank": 14
+    },
+    {
+      "cve_id": "CVE-2025-49744",
+      "signal_types": [
+        "EXP"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": {
+          "ref_published": "2025-07-16"
+        },
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-07-08",
+        "description": "Heap-based buffer overflow in Microsoft Graphics Component allows an authorized attacker to elevate privileges locally.",
+        "title": "microsoft windows_10_1507 Buffer Overflow",
+        "vendor": "microsoft",
+        "product": "windows_10_1507",
+        "attack_type": "Buffer Overflow",
+        "cvss_max": 7.0
+      },
+      "cve": {
+        "id": "CVE-2025-49744",
+        "sourceIdentifier": "secure@microsoft.com",
+        "published": "2025-07-08T17:16:03.630",
+        "lastModified": "2025-07-17T21:59:50.070",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Heap-based buffer overflow in Microsoft Graphics Component allows an authorized attacker to elevate privileges locally."
+          },
+          {
+            "lang": "es",
+            "value": "El desbordamiento del búfer basado en montón en Microsoft Graphics Component permite que un atacante autorizado eleve privilegios localmente."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 7.0,
+                "baseSeverity": "HIGH"
+              },
+              "source": "secure@microsoft.com",
+              "type": "Secondary",
+              "exploitabilityScore": 1.0,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-122"
+              },
+              {
+                "lang": "en",
+                "value": "CWE-191"
+              },
+              {
+                "lang": "en",
+                "value": "CWE-362"
+              }
+            ],
+            "source": "secure@microsoft.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_10_1507:*:*:*:*:*:*:x64:*",
+                    "matchCriteriaId": "9D58CEDA-0611-4E21-87AF-C368F45BB685",
+                    "versionEndExcluding": "10.0.10240.21073"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_10_1507:*:*:*:*:*:*:x86:*",
+                    "matchCriteriaId": "1EEA1F09-0FA7-4946-8005-F0CF177B1103",
+                    "versionEndExcluding": "10.0.10240.21073"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_10_1607:*:*:*:*:*:*:x64:*",
+                    "matchCriteriaId": "3CEAC32A-5246-4F6B-8DD5-E49F3BA621DA",
+                    "versionEndExcluding": "10.0.14393.8246"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_10_1607:*:*:*:*:*:*:x86:*",
+                    "matchCriteriaId": "E0A0243D-52B4-49AE-B1AE-263640C492B0",
+                    "versionEndExcluding": "10.0.14393.8246"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_10_1809:*:*:*:*:*:*:x64:*",
+                    "matchCriteriaId": "2062C268-282B-4E52-9F8C-876A2D483EAD",
+                    "versionEndExcluding": "10.0.17763.7558"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_10_1809:*:*:*:*:*:*:x86:*",
+                    "matchCriteriaId": "00FCA704-C6E0-4DE4-86F0-80552527AE53",
+                    "versionEndExcluding": "10.0.17763.7558"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_10_21h2:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "50848190-CF61-47F6-90B8-DB0C120749F5",
+                    "versionEndExcluding": "10.0.19044.6093"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_10_22h2:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "01E62E99-5EDA-487C-A941-E2DA348B501F",
+                    "versionEndExcluding": "10.0.19045.6093"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_11_22h2:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "76FEE1E8-EB22-4E01-86D7-13B35F9D2876",
+                    "versionEndExcluding": "10.0.22621.5624"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_11_23h2:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "19D0DAB7-4BFF-4BB7-9E0E-B020CF8573C9",
+                    "versionEndExcluding": "10.0.22631.5624"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_11_24h2:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "8E866DB2-9CA7-4BCC-8591-9BC94300B779",
+                    "versionEndExcluding": "10.0.26100.4652"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_server_2016:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "F6FA4941-0641-4EA0-99A8-97121F625380",
+                    "versionEndExcluding": "10.0.14393.8246"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_server_2019:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "DCFD9FA0-D149-422A-975C-582C9BC9024D",
+                    "versionEndExcluding": "10.0.17763.7558"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_server_2022:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "AE46D39E-7048-4A31-9753-39F6E5F97D1D",
+                    "versionEndExcluding": "10.0.20348.3932"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_server_2022_23h2:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "613302B8-D5C2-4908-9FC9-0EC1650D4517",
+                    "versionEndExcluding": "10.0.25398.1732"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_server_2025:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "10E640FB-32AB-45B6-BC42-56CC587C0A35",
+                    "versionEndExcluding": "10.0.26100.4652"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-49744",
+            "source": "secure@microsoft.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 78,
+      "rank": 15
+    },
+    {
+      "cve_id": "CVE-2025-52089",
+      "signal_types": [
+        "EXP"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": {
+          "ref_published": "2025-07-16"
+        },
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-07-11",
+        "description": "A hidden remote support feature protected by a static secret in TOTOLINK N300RB firmware version 8.54 allows an authenticated attacker to execute arbitrary OS commands with root privileges.",
+        "title": "totolink n300rb_firmware privilege escalation",
+        "vendor": "totolink",
+        "product": "n300rb_firmware",
+        "attack_type": "privilege escalation",
+        "cvss_max": 8.8
+      },
+      "cve": {
+        "id": "CVE-2025-52089",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2025-07-11T15:15:24.677",
+        "lastModified": "2025-07-19T03:15:22.727",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A hidden remote support feature protected by a static secret in TOTOLINK N300RB firmware version 8.54 allows an authenticated attacker to execute arbitrary OS commands with root privileges."
+          },
+          {
+            "lang": "es",
+            "value": "Una función de soporte remoto oculta protegida por un secreto estático en la versión 8.54 del firmware TOTOLINK N300RB permite que un atacante autenticado ejecute comandos arbitrarios del sistema operativo con privilegios de root."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 8.8,
+                "baseSeverity": "HIGH"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-306"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:totolink:n300rb_firmware:8.54:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "CAA4470F-B2BC-4E27-8D30-68F3CA3F5ABA"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:totolink:n300rb:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "F5F9AA3E-143F-4A4E-8CDF-6DEB4F1C9620"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://0x09.dev/posts/toto_decouvre_une_interface_de_debug/",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 78,
+      "rank": 16
+    },
+    {
+      "cve_id": "CVE-2025-52367",
+      "signal_types": [
+        "EXP"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": {
+          "ref_published": "2025-07-16"
+        },
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-09-22",
+        "description": "Cross Site Scripting vulnerability in PivotX CMS v.3.0.0 RC 3 allows a remote attacker to execute arbitrary code via the subtitle field.",
+        "title": "pivotx pivotx cross-site scripting",
+        "vendor": "pivotx",
+        "product": "pivotx",
+        "attack_type": "cross-site scripting",
+        "cvss_max": 5.4
+      },
+      "cve": {
+        "id": "CVE-2025-52367",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2025-09-22T19:15:40.857",
+        "lastModified": "2025-10-24T14:45:27.667",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Cross Site Scripting vulnerability in PivotX CMS v.3.0.0 RC 3 allows a remote attacker to execute arbitrary code via the subtitle field."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N",
+                "baseScore": 5.4,
+                "baseSeverity": "MEDIUM"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 2.3,
+              "impactScore": 2.7
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-79"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:pivotx:pivotx:3.0.0:rc3:*:*:*:*:*:*",
+                    "matchCriteriaId": "D89FF03D-4F05-4285-9D2F-8AD4AEF753A5"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "http://pivotx.com",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Broken Link"
+            ]
+          },
+          {
+            "url": "https://medium.com/@hayton1088/cve-2025-52367-stored-xss-to-rce-via-privilege-escalation-in-pivotx-cms-v3-0-0-rc-3-a1b870bcb7b3",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 78,
+      "rank": 17
+    },
+    {
+      "cve_id": "CVE-2025-52714",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-07-16",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-07-16",
+        "description": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in shinetheme Traveler traveler allows SQL Injection.This issue affects Traveler: from n/a through < 3.2.2.",
+        "title": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in shinetheme Traveler traveler allows...",
+        "attack_type": "SQL Injection",
+        "cvss_max": 9.3
+      },
+      "cve": {
+        "id": "CVE-2025-52714",
+        "sourceIdentifier": "audit@patchstack.com",
+        "published": "2025-07-16T12:15:28.650",
+        "lastModified": "2026-04-23T15:32:04.213",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in shinetheme Traveler traveler allows SQL Injection.This issue affects Traveler: from n/a through < 3.2.2."
+          },
+          {
+            "lang": "es",
+            "value": "La vulnerabilidad de neutralización incorrecta de elementos especiales utilizados en un comando SQL ('Inyección SQL') en shinetheme Traveler permite la inyección SQL. Este problema afecta a Traveler: desde n/d hasta n/d."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:L",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "audit@patchstack.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 4.7
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-89"
+              }
+            ],
+            "source": "audit@patchstack.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://patchstack.com/database/Wordpress/Theme/traveler/vulnerability/wordpress-traveler-3-2-2-sql-injection-vulnerability?_s_id=cve",
+            "source": "audit@patchstack.com"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 18
+    },
+    {
+      "cve_id": "CVE-2025-52836",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-07-16",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-07-16",
+        "description": "Incorrect Privilege Assignment vulnerability in Unity Business Technology Pty Ltd The E-Commerce ERP profitori allows Privilege Escalation.This issue affects The E-Commerce ERP: from n/a through <= 2.1.1.3.",
+        "title": "Incorrect Privilege Assignment vulnerability in Unity Business Technology Pty Ltd The E-Commerce ERP profitori allows Privilege Escalatio...",
+        "attack_type": "Privilege Escalation",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-52836",
+        "sourceIdentifier": "audit@patchstack.com",
+        "published": "2025-07-16T12:15:29.793",
+        "lastModified": "2026-04-23T15:32:15.950",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Incorrect Privilege Assignment vulnerability in Unity Business Technology Pty Ltd The E-Commerce ERP profitori allows Privilege Escalation.This issue affects The E-Commerce ERP: from n/a through <= 2.1.1.3."
+          },
+          {
+            "lang": "es",
+            "value": "Vulnerabilidad de asignación incorrecta de privilegios en Unity Business Technology Pty Ltd The E-Commerce ERP permite la escalada de privilegios. Este problema afecta al ERP de comercio electrónico desde n/d hasta la versión 2.1.1.3."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "audit@patchstack.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-266"
+              }
+            ],
+            "source": "audit@patchstack.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://patchstack.com/database/Wordpress/Plugin/profitori/vulnerability/wordpress-the-e-commerce-erp-2-1-1-3-privilege-escalation-vulnerability?_s_id=cve",
+            "source": "audit@patchstack.com"
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 19
+    },
+    {
+      "cve_id": "CVE-2025-53937",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-07-16",
+          "previous_max": null,
+          "current_max": 9.4
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-07-16",
+        "description": "WeGIA is an open source web manager with a focus on the Portuguese language and charitable institutions. A SQL Injection vulnerability was identified in the `/controle/control.php` endpoint, specifically in the `cargo` parameter, of WeGIA prior to version 3.4.5. This vulnerability allows attackers to execute arbitrary SQL commands, compromising the confidentiality, integrity, and availability of the database. Version 3.4.5 fixes the issue.",
+        "title": "wegia wegia SQL Injection",
+        "vendor": "wegia",
+        "product": "wegia",
+        "attack_type": "SQL Injection",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-53937",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2025-07-16T16:15:29.127",
+        "lastModified": "2025-07-25T16:37:26.063",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "WeGIA is an open source web manager with a focus on the Portuguese language and charitable institutions. A SQL Injection vulnerability was identified in the `/controle/control.php` endpoint, specifically in the `cargo` parameter, of WeGIA prior to version 3.4.5. This vulnerability allows attackers to execute arbitrary SQL commands, compromising the confidentiality, integrity, and availability of the database. Version 3.4.5 fixes the issue."
+          },
+          {
+            "lang": "es",
+            "value": "WeGIA es un gestor web de código abierto centrado en el idioma portugués y las instituciones benéficas. Se identificó una vulnerabilidad de inyección SQL en el endpoint `/controle/control.php`, concretamente en el parámetro `cargo`, de WeGIA antes de la versión 3.4.5. Esta vulnerabilidad permite a los atacantes ejecutar comandos SQL arbitrarios, comprometiendo la confidencialidad, integridad y disponibilidad de la base de datos. La versión 3.4.5 corrige el problema."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.4,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-89"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:wegia:wegia:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "88671AF4-0D87-412C-BEF8-98C5736F8B52",
+                    "versionEndExcluding": "3.4.5"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/LabRedesCefetRJ/WeGIA/security/advisories/GHSA-j3qv-v3m7-73pj",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Exploit",
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 20
+    },
+    {
+      "cve_id": "CVE-2025-6563",
+      "signal_types": [
+        "EXP"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": {
+          "ref_published": "2025-07-16"
+        },
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-07-03",
+        "description": "A cross-site scripting vulnerability is present in the hotspot of MikroTik's RouterOS on versions below 7.19.2. An attacker can inject the `javascript` protocol in the `dst` parameter. When the victim browses to the malicious URL and logs in, the XSS executes. The POST request used to login, can also be converted to a GET request, allowing an attacker to send a specifically crafted URL that automatically logs in the victim (into the attacker's account) and triggers the payload.",
+        "title": "A cross-site scripting vulnerability is present in the hotspot of MikroTik's RouterOS on versions below 7.19.2.",
+        "attack_type": "XSS",
+        "cvss_max": 4.8
+      },
+      "cve": {
+        "id": "CVE-2025-6563",
+        "sourceIdentifier": "1c6b5737-9389-4011-8117-89fa251edfb2",
+        "published": "2025-07-03T12:15:25.077",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A cross-site scripting vulnerability is present in the hotspot of MikroTik's RouterOS on versions below 7.19.2. An attacker can inject the `javascript` protocol in the `dst` parameter. When the victim browses to the malicious URL and logs in, the XSS executes. The POST request used to login, can also be converted to a GET request, allowing an attacker to send a specifically crafted URL that automatically logs in the victim (into the attacker's account) and triggers the payload."
+          },
+          {
+            "lang": "es",
+            "value": "Existe una vulnerabilidad de cross-site scripting en el punto de acceso de RouterOS de MikroTik en versiones anteriores a la 7.19.2. Un atacante puede inyectar el protocolo `javascript` en el parámetro `dst`. Cuando la víctima accede a la URL maliciosa e inicia sesión, se ejecuta el XSS. La solicitud POST utilizada para iniciar sesión también puede convertirse en una solicitud GET, lo que permite a un atacante enviar una URL manipulada específicamente que inicia sesión automáticamente en la cuenta de la víctima y activa el payload."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:A/AC:L/AT:N/PR:N/UI:A/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 4.8,
+                "baseSeverity": "MEDIUM"
+              },
+              "source": "1c6b5737-9389-4011-8117-89fa251edfb2",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-20"
+              }
+            ],
+            "source": "1c6b5737-9389-4011-8117-89fa251edfb2"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://www.toreon.com/how-a-ski-trip-led-to-a-cve-in-a-wi-fi-hotspot/",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ]
+      },
+      "risk_score": 78,
+      "rank": 21
+    }
+  ],
+  "source": "https://www.cvelogic.com/threat-intelligence/2025-07-16"
+}

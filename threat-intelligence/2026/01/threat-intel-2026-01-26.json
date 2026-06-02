@@ -1,0 +1,3106 @@
+{
+  "schema_version": "2.2",
+  "generated_at": "2026-06-02T07:34:17Z",
+  "day": "2026-01-26",
+  "window": {
+    "utc_start": "2026-01-26",
+    "utc_end": "2026-01-26",
+    "days": 1
+  },
+  "summary": {
+    "brief": "SmarterTools SmarterMail: 2 CVEs added to CISA KEV today. · Xorux Lpar2rrd — exploitation likelihood rose sharply (EPSS 3.4% → 23% · rising (+19%)). · 10 new critical disclosures — review patch status on exposed services.",
+    "bullets": [
+      "SmarterTools SmarterMail: 2 CVEs added to CISA KEV today.",
+      "Xorux Lpar2rrd — exploitation likelihood rose sharply (EPSS 3.4% → 23% · rising (+19%)).",
+      "10 new critical disclosures — review patch status on exposed services."
+    ],
+    "counts": {
+      "cves": 18,
+      "kev": 5,
+      "exploit": 0,
+      "epss": 3,
+      "cvss": 10,
+      "patch": 0
+    }
+  },
+  "cves": [
+    {
+      "cve_id": "CVE-2018-14634",
+      "signal_types": [
+        "KEV"
+      ],
+      "signals": {
+        "kev": {
+          "date_added": "2026-01-26"
+        },
+        "exploit": null,
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2018-09-25",
+        "description": "An integer overflow flaw was found in the Linux kernel's create_elf_tables() function. An unprivileged local user with access to SUID (or otherwise privileged) binary could use this flaw to escalate their privileges on the system. Kernel versions 2.6.x, 3.10.x and 4.14.x are believed to be vulnerable.",
+        "title": "Linux Kernel Integer Overflow Vulnerability",
+        "vendor": "paloaltonetworks",
+        "product": "pan-os",
+        "attack_type": "privilege escalation",
+        "cvss_max": 7.8
+      },
+      "cve": {
+        "id": "CVE-2018-14634",
+        "sourceIdentifier": "secalert@redhat.com",
+        "published": "2018-09-25T21:29:00.390",
+        "lastModified": "2026-01-27T15:55:15.890",
+        "vulnStatus": "Analyzed",
+        "cisaExploitAdd": "2026-01-26",
+        "cisaActionDue": "2026-02-16",
+        "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+        "cisaVulnerabilityName": "Linux Kernel Integer Overflow Vulnerability",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "An integer overflow flaw was found in the Linux kernel's create_elf_tables() function. An unprivileged local user with access to SUID (or otherwise privileged) binary could use this flaw to escalate their privileges on the system. Kernel versions 2.6.x, 3.10.x and 4.14.x are believed to be vulnerable."
+          },
+          {
+            "lang": "es",
+            "value": "Se ha encontrado un error de desbordamiento de enteros en la función create_elf_tables() del kernel de Linux. Un usuario local sin privilegios con acceso al binario SUID (o a otro privilegiado) podría emplear este error para escalar sus privilegios en el sistema. Se cree que las versiones 2.6.x, 3.10.x y 4.14.x del kernel se han visto afectadas."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV2": [
+            {
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+                "baseScore": 7.2,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "baseSeverity": "HIGH",
+              "exploitabilityScore": 3.9,
+              "impactScore": 10.0
+            }
+          ],
+          "cvssMetricV30": [
+            {
+              "cvssData": {
+                "version": "3.0",
+                "vectorString": "CVSS:3.0/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 7.8,
+                "baseSeverity": "HIGH"
+              },
+              "source": "secalert@redhat.com",
+              "type": "Secondary",
+              "exploitabilityScore": 1.8,
+              "impactScore": 5.9
+            },
+            {
+              "cvssData": {
+                "version": "3.0",
+                "vectorString": "CVSS:3.0/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 7.8,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 1.8,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-190"
+              }
+            ],
+            "source": "secalert@redhat.com"
+          },
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-190"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:paloaltonetworks:pan-os:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "BCA5D4F4-7143-45BB-A50C-D7EAB3A61A8B",
+                    "versionStartIncluding": "7.1.0",
+                    "versionEndExcluding": "7.1.23"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:paloaltonetworks:pan-os:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "F0487F22-F22C-41E0-AA5F-5216DBC8AA45",
+                    "versionStartIncluding": "8.0.0",
+                    "versionEndExcluding": "8.0.16"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:paloaltonetworks:pan-os:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "938FADDD-983B-43BB-B225-E227998B3673",
+                    "versionStartIncluding": "8.1.0",
+                    "versionEndExcluding": "8.1.7"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:f5:big-ip_access_policy_manager:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "4EDD1CA4-FEC9-445E-9E2C-516D84F5BF2D",
+                    "versionStartIncluding": "11.2.1",
+                    "versionEndExcluding": "11.6.4"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:f5:big-ip_access_policy_manager:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "9264B296-3445-4B9F-927D-7865BF3D8AF6",
+                    "versionStartIncluding": "12.1.0",
+                    "versionEndExcluding": "12.1.5"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:f5:big-ip_access_policy_manager:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "9C22F2CB-FA25-4326-9542-FED6F97262DD",
+                    "versionStartIncluding": "13.0.0",
+                    "versionEndExcluding": "13.1.1.5"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:f5:big-ip_access_policy_manager:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "58C8E163-2A45-4C64-A7C2-5686C1EB3C78",
+                    "versionStartIncluding": "14.0.0",
+                    "versionEndExcluding": "14.0.1.1"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:f5:big-ip_access_policy_manager:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "4066249F-3DD9-44D3-9371-34A79D2FF55C",
+                    "versionStartIncluding": "14.1.0",
+                    "versionEndExcluding": "14.1.0.6"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:f5:big-ip_advanced_firewall_manager:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "E6FCE7FF-EA98-439E-BDAA-D8D1FF9C3C19",
+                    "versionStartIncluding": "11.2.1",
+                    "versionEndExcluding": "11.6.4"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:f5:big-ip_advanced_firewall_manager:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "7FE43D60-C369-4806-B10A-97B02D715DFD",
+                    "versionStartIncluding": "12.1.0",
+                    "versionEndExcluding": "12.1.5"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:f5:big-ip_advanced_firewall_manager:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "7F602F8C-9548-47C4-A15E-FE52FDC37BFA",
+                    "versionStartIncluding": "13.0.0",
+                    "versionEndExcluding": "13.1.1.5"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:f5:big-ip_advanced_firewall_manager:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "E17D443D-9E5D-4F41-A539-6D7842B21E25",
+                    "versionStartIncluding": "14.0.0",
+                    "versionEndExcluding": "14.0.1.1"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:f5:big-ip_advanced_firewall_manager:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "7F17BEFE-DE6D-4DE1-A209-EEDA683A2594",
+                    "versionStartIncluding": "14.1.0",
+                    "versionEndExcluding": "14.1.0.6"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:f5:big-ip_analytics:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "1F02CE9B-9674-45E6-9D54-DF23997A3E9B",
+                    "versionStartIncluding": "11.2.1",
+                    "versionEndExcluding": "11.6.4"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:f5:big-ip_analytics:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "6925A921-F946-4746-AE60-18919E44DAE2",
+                    "versionStartIncluding": "12.1.0",
+                    "versionEndExcluding": "12.1.5"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:f5:big-ip_analytics:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "19CF4C32-368F-42B3-B1EE-C59CC12EF745",
+                    "versionStartIncluding": "13.0.0",
+                    "versionEndExcluding": "13.1.1.5"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:f5:big-ip_analytics:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "0FA8C03D-3661-446D-B502-BEB52B7B6305",
+                    "versionStartIncluding": "14.0.0",
+                    "versionEndExcluding": "14.0.1.1"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:f5:big-ip_analytics:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "BE2E1785-E6F2-4ED9-9FE7-28CF56A916FA",
+                    "versionStartIncluding": "14.1.0",
+                    "versionEndExcluding": "14.1.0.6"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:f5:big-ip_application_acceleration_manager:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "878952E5-4FCA-48F7-B679-95ACBFC5CE28",
+                    "versionStartIncluding": "11.2.1",
+                    "versionEndExcluding": "11.6.4"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:f5:big-ip_application_acceleration_manager:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "B4F65BFF-8F85-487E-850A-DFF8DA9D8F59",
+                    "versionStartIncluding": "12.1.0",
+                    "versionEndExcluding": "12.1.5"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:f5:big-ip_application_acceleration_manager:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "B5275F08-E0D0-402D-812C-C72AE26D95BC",
+                    "versionStartIncluding": "13.0.0",
+                    "versionEndExcluding": "13.1.1.5"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:f5:big-ip_application_acceleration_manager:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "1503B2F8-3549-4E52-87E9-6F0FD91F1428",
+                    "versionStartIncluding": "14.0.0",
+                    "versionEndExcluding": "14.0.1.1"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:f5:big-ip_application_acceleration_manager:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "B8A1A0D6-B9FC-47C2-B4E1-74AA5E887E01",
+                    "versionStartIncluding": "14.1.0",
+                    "versionEndExcluding": "14.1.0.6"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:f5:big-ip_application_security_manager:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "4D08822A-2EC6-42F3-A4BC-34D62F9012C3",
+                    "versionStartIncluding": "11.2.1",
+                    "versionEndExcluding": "11.6.4"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:f5:big-ip_application_security_manager:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "F3FFD367-E47B-4491-9364-1BA3FA481964",
+                    "versionStartIncluding": "12.1.0",
+                    "versionEndExcluding": "12.1.5"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:f5:big-ip_application_security_manager:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "D1209416-7A72-4B4E-B493-DCB1A04A39E1",
+                    "versionStartIncluding": "13.0.0",
+                    "versionEndExcluding": "13.1.1.5"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:f5:big-ip_application_security_manager:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "B8BA9BE0-1646-41EF-BCE2-7BD4021196C5",
+                    "versionStartIncluding": "14.0.0",
+                    "versionEndExcluding": "14.0.1.1"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:f5:big-ip_application_security_manager:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "6E65DCA8-A17D-4E31-B8FC-6180C3CC9807",
+                    "versionStartIncluding": "14.1.0",
+                    "versionEndExcluding": "14.1.0.6"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:f5:big-ip_domain_name_system:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "162B99B1-4310-4FE7-83B2-6EFF8BC6737E",
+                    "versionStartIncluding": "11.2.1",
+                    "versionEndExcluding": "11.6.4"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:f5:big-ip_domain_name_system:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "CB505ABB-7752-4590-9E8A-C5EAC190B349",
+                    "versionStartIncluding": "12.1.0",
+                    "versionEndExcluding": "12.1.5"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:f5:big-ip_domain_name_system:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "117DFD13-51F9-46E8-B000-3364B7ED8364",
+                    "versionStartIncluding": "13.0.0",
+                    "versionEndExcluding": "13.1.1.5"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:f5:big-ip_domain_name_system:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "A7B34FC0-168E-4CA8-B1F4-BDC0D2213280",
+                    "versionStartIncluding": "14.0.0",
+                    "versionEndExcluding": "14.0.1.1"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:f5:big-ip_domain_name_system:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "5786AFF3-C4B0-4E43-B897-6C86EF4AC1E7",
+                    "versionStartIncluding": "14.1.0",
+                    "versionEndExcluding": "14.1.0.6"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:f5:big-ip_edge_gateway:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "AFEB5A55-0EB5-4E50-ABD1-6563CB5BE845",
+                    "versionStartIncluding": "11.2.1",
+                    "versionEndExcluding": "11.6.4"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:f5:big-ip_edge_gateway:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "F13E6EC1-5BC4-4A17-928A-667DA7A93EBD",
+                    "versionStartIncluding": "12.1.0",
+                    "versionEndExcluding": "12.1.5"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:f5:big-ip_edge_gateway:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "3B310516-87E6-453A-82E7-CDDB9F9D5E57",
+                    "versionStartIncluding": "13.0.0",
+                    "versionEndExcluding": "13.1.1.5"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:f5:big-ip_edge_gateway:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "678B7FC3-6796-4159-BF2B-8FAD49E0F566",
+                    "versionStartIncluding": "14.0.0",
+                    "versionEndExcluding": "14.0.1.1"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:f5:big-ip_edge_gateway:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "B7542139-8D26-4AC4-A4AB-FA2BDBDA350E",
+                    "versionStartIncluding": "14.1.0",
+                    "versionEndExcluding": "14.1.0.6"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:f5:big-ip_fraud_protection_service:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "DF8DE4F4-2378-4F3D-98B7-6B06B842DE82",
+                    "versionStartIncluding": "11.2.1",
+                    "versionEndExcluding": "11.6.4"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:f5:big-ip_fraud_protection_service:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "670C542A-63F1-4FC2-B215-ADE94FCF3512",
+                    "versionStartIncluding": "12.1.0",
+                    "versionEndExcluding": "12.1.5"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:f5:big-ip_fraud_protection_service:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "2CCC67AD-46E4-40C5-AEED-C4691C731978",
+                    "versionStartIncluding": "13.0.0",
+                    "versionEndExcluding": "13.1.1.5"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:f5:big-ip_fraud_protection_service:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "A0E47FF6-A851-4588-9F39-B292D4147AE6",
+                    "versionStartIncluding": "14.0.0",
+                    "versionEndExcluding": "14.0.1.1"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:f5:big-ip_fraud_protection_service:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "947C6655-ED96-43F4-B69B-5DE60BE12DC7",
+                    "versionStartIncluding": "14.1.0",
+                    "versionEndExcluding": "14.1.0.6"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:f5:big-ip_global_traffic_manager:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "DB245202-5473-4AC4-9451-F683F432A0C0",
+                    "versionStartIncluding": "11.2.1",
+                    "versionEndExcluding": "11.6.4"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:f5:big-ip_global_traffic_manager:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "BBDBCC20-D7F8-4125-862F-E5596302DC90",
+                    "versionStartIncluding": "12.1.0",
+                    "versionEndExcluding": "12.1.5"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:f5:big-ip_global_traffic_manager:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "DF10D9A8-AC97-4864-B7E9-8209983B2489",
+                    "versionStartIncluding": "13.0.0",
+                    "versionEndExcluding": "13.1.1.5"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:f5:big-ip_global_traffic_manager:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "D960933D-9476-4473-A3FB-0032C051BE50",
+                    "versionStartIncluding": "14.0.0",
+                    "versionEndExcluding": "14.0.1.1"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:f5:big-ip_global_traffic_manager:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "9C21900C-948E-43CC-A1D6-7D7CA3E5DA25",
+                    "versionStartIncluding": "14.1.0",
+                    "versionEndExcluding": "14.1.0.6"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:f5:big-ip_link_controller:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "7D321483-F644-41FB-8923-8D92E0B4002E",
+                    "versionStartIncluding": "11.2.1",
+                    "versionEndExcluding": "11.6.4"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:f5:big-ip_link_controller:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "29D81E70-82D9-4FE8-B0D0-214149C30CF0",
+                    "versionStartIncluding": "12.1.0",
+                    "versionEndExcluding": "12.1.5"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:f5:big-ip_link_controller:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "DF225E1D-75DB-4E67-93A8-727E3A6F1896",
+                    "versionStartIncluding": "13.0.0",
+                    "versionEndExcluding": "13.1.1.5"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:f5:big-ip_link_controller:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "44D33B41-F19D-4B46-9F9E-FC03051EBB0C",
+                    "versionStartIncluding": "14.0.0",
+                    "versionEndExcluding": "14.0.1.1"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:f5:big-ip_link_controller:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "63A4E7B3-AF6E-4F54-AF3E-DA30130F33A9",
+                    "versionStartIncluding": "14.1.0",
+                    "versionEndExcluding": "14.1.0.6"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:f5:big-ip_local_traffic_manager:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "1268BAFF-B33C-4ADC-A4C9-B4E9A69ADBE6",
+                    "versionStartIncluding": "11.2.1",
+                    "versionEndExcluding": "11.6.4"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:f5:big-ip_local_traffic_manager:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "4BB3A6AE-0CE4-4A5D-AFA6-6AC0AE49B616",
+                    "versionStartIncluding": "12.1.0",
+                    "versionEndExcluding": "12.1.5"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:f5:big-ip_local_traffic_manager:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "0915E0EA-4DBF-4D42-B533-7CB8674C5D97",
+                    "versionStartIncluding": "13.0.0",
+                    "versionEndExcluding": "13.1.1.5"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:f5:big-ip_local_traffic_manager:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "63529AEA-8B74-4CA1-BADF-14514D243DC5",
+                    "versionStartIncluding": "14.0.0",
+                    "versionEndExcluding": "14.0.1.1"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:f5:big-ip_local_traffic_manager:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "84D27D77-9E58-49F2-9888-E80963967CFF",
+                    "versionStartIncluding": "14.1.0",
+                    "versionEndExcluding": "14.1.0.6"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:f5:big-ip_policy_enforcement_manager:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "17CE291F-E0E0-4E48-B025-DFB849B0B12F",
+                    "versionStartIncluding": "11.2.1",
+                    "versionEndExcluding": "11.6.4"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:f5:big-ip_policy_enforcement_manager:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "D7BBC3D4-9B4E-4185-B327-8902DDFD4234",
+                    "versionStartIncluding": "12.1.0",
+                    "versionEndExcluding": "12.1.5"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:f5:big-ip_policy_enforcement_manager:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "E9A5F789-854D-4C17-98FE-85EAD8000C09",
+                    "versionStartIncluding": "13.0.0",
+                    "versionEndExcluding": "13.1.1.5"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:f5:big-ip_policy_enforcement_manager:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "DE65180C-47C8-41CF-B6C7-181259605B2C",
+                    "versionStartIncluding": "14.0.0",
+                    "versionEndExcluding": "14.0.1.1"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:f5:big-ip_policy_enforcement_manager:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "1DBD526B-6D3F-46AF-8229-86D793588A83",
+                    "versionStartIncluding": "14.1.0",
+                    "versionEndExcluding": "14.1.0.6"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:f5:big-ip_webaccelerator:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "7C250AF9-BB24-4541-A58F-F43BC6DC67AC",
+                    "versionStartIncluding": "11.2.1",
+                    "versionEndExcluding": "11.6.4"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:f5:big-ip_webaccelerator:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "D518DD68-B336-43A8-883C-1CE7B9BB5B0F",
+                    "versionStartIncluding": "12.1.0",
+                    "versionEndExcluding": "12.1.5"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:f5:big-ip_webaccelerator:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "F8AC313F-4776-482C-B8E4-E3993820DA94",
+                    "versionStartIncluding": "13.0.0",
+                    "versionEndExcluding": "13.1.1.5"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:f5:big-ip_webaccelerator:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "54E703A5-F9F1-4DDA-8B70-D3C6F51038B6",
+                    "versionStartIncluding": "14.0.0",
+                    "versionEndExcluding": "14.0.1.1"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:f5:big-ip_webaccelerator:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "40D9C71D-997E-4014-BB89-6F3E8CD17069",
+                    "versionStartIncluding": "14.1.0",
+                    "versionEndExcluding": "14.1.0.6"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:f5:big-iq_centralized_management:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "559900D6-7E43-4D2F-9167-BDB04DD5D0DB",
+                    "versionStartIncluding": "5.0.0",
+                    "versionEndIncluding": "5.4.0"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:f5:big-iq_centralized_management:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "0AC93C0F-AA5B-4A2B-B205-26F65BCA6780",
+                    "versionStartIncluding": "6.0.0",
+                    "versionEndIncluding": "6.0.1"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:f5:big-iq_centralized_management:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "C88B0206-093A-4A18-8322-A1CD1D4ACF2A",
+                    "versionStartIncluding": "7.0.0",
+                    "versionEndIncluding": "7.1.0"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:f5:big-iq_centralized_management:4.6.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "24AEF0B2-7C8C-432C-A840-C2441A70343F"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:f5:big-iq_cloud_and_orchestration:1.0.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "E21D6206-4716-47FE-A733-F18343656E94"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:f5:enterprise_manager:3.1.1:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "D5F5FEE7-059A-4A9B-BCCD-18F0AA435040"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:f5:iworkflow:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "7737DAAB-6064-45A8-BCED-D1FBE05589B5",
+                    "versionStartIncluding": "2.2.0",
+                    "versionEndIncluding": "2.3.0"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:f5:traffix_signaling_delivery_controller:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "4E52F91D-3F39-4D89-8069-EC422FB1F700",
+                    "versionStartIncluding": "5.0.0",
+                    "versionEndIncluding": "5.1.0"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:f5:traffix_signaling_delivery_controller:4.4.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "3D71A781-FBD8-4084-8D9C-00D7B6ECB9A1"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "C737E90F-5DD9-493E-9318-6A97012B6103",
+                    "versionStartIncluding": "2.6.0",
+                    "versionEndIncluding": "2.6.39.4"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "43BD1E87-BD7F-4E00-86C7-9DD94457E778",
+                    "versionStartIncluding": "3.10",
+                    "versionEndIncluding": "3.10.102"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "B837AB5C-2F92-4D95-A3F5-84448F7B4F11",
+                    "versionStartIncluding": "4.14",
+                    "versionEndIncluding": "4.14.54"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:redhat:enterprise_linux_desktop:6.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "EE249E1B-A1FD-4E08-AA71-A0E1F10FFE97"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:redhat:enterprise_linux_desktop:7.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "33C068A4-3780-4EAB-A937-6082DF847564"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:redhat:enterprise_linux_server:6.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "9BBCD86A-E6C7-4444-9D74-F861084090F0"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:redhat:enterprise_linux_server:7.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "51EF4996-72F4-4FA4-814F-F5991E7A8318"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:redhat:enterprise_linux_server_aus:6.5:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "1F3BEFDB-5156-4E1C-80BB-8BE9FEAA7623"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:redhat:enterprise_linux_server_aus:6.6:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "16E6D998-B41D-4B49-9E00-8336D2E40A4A"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:redhat:enterprise_linux_server_aus:7.6:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "B353CE99-D57C-465B-AAB0-73EF581127D1"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:redhat:enterprise_linux_server_eus:6.7:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "6C81647C-9A53-481D-A54C-36770A093F90"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:redhat:enterprise_linux_server_eus:7.5:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "A4E9DD8A-A68B-4A69-8B01-BFF92A2020A8"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:redhat:enterprise_linux_server_eus:7.6:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "BF77CDCF-B9C9-427D-B2BF-36650FB2148C"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:redhat:enterprise_linux_server_tus:6.6:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "13E02156-E748-4820-B76F-7074793837E1"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:redhat:enterprise_linux_server_tus:7.6:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "B76AA310-FEC7-497F-AF04-C3EC1E76C4CC"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:redhat:enterprise_linux_workstation:6.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "E5ED5807-55B7-47C5-97A6-03233F4FBC3A"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:redhat:enterprise_linux_workstation:7.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "825ECE2D-E232-46E0-A047-074B34DB1E97"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:canonical:ubuntu_linux:12.04:*:*:*:esm:*:*:*",
+                    "matchCriteriaId": "8D305F7A-D159-4716-AB26-5E38BB5CD991"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:canonical:ubuntu_linux:14.04:*:*:*:lts:*:*:*",
+                    "matchCriteriaId": "B5A6F2F3-4894-4392-8296-3B8DD2679084"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:netapp:snapprotect:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "F74F467A-0C81-40D9-BA06-40FB8EF02C04"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "http://www.openwall.com/lists/oss-security/2021/07/20/2",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Mailing List",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "http://www.securityfocus.com/bid/105407",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory",
+              "VDB Entry",
+              "Broken Link"
+            ]
+          },
+          {
+            "url": "https://access.redhat.com/errata/RHSA-2018:2748",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://access.redhat.com/errata/RHSA-2018:2763",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://access.redhat.com/errata/RHSA-2018:2846",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://access.redhat.com/errata/RHSA-2018:2924",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://access.redhat.com/errata/RHSA-2018:2925",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://access.redhat.com/errata/RHSA-2018:2933",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://access.redhat.com/errata/RHSA-2018:3540",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://access.redhat.com/errata/RHSA-2018:3586",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://access.redhat.com/errata/RHSA-2018:3590",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://access.redhat.com/errata/RHSA-2018:3591",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://access.redhat.com/errata/RHSA-2018:3643",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://bugzilla.redhat.com/show_bug.cgi?id=CVE-2018-14634",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Issue Tracking",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://security.netapp.com/advisory/ntap-20190204-0002/",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Patch",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://security.paloaltonetworks.com/CVE-2018-14634",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://support.f5.com/csp/article/K20934447?utm_source=f5support&amp%3Butm_medium=RSS",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://usn.ubuntu.com/3775-1/",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://usn.ubuntu.com/3775-2/",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://usn.ubuntu.com/3779-1/",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.exploit-db.com/exploits/45516/",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory",
+              "VDB Entry"
+            ]
+          },
+          {
+            "url": "https://www.openwall.com/lists/oss-security/2018/09/25/4",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit",
+              "Mailing List",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2018-14634",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "US Government Resource"
+            ]
+          }
+        ]
+      },
+      "risk_score": 88,
+      "rank": 1
+    },
+    {
+      "cve_id": "CVE-2014-4982",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 0.03445,
+            "score_date": "2025-05-17"
+          },
+          "current": {
+            "score": 0.22775,
+            "score_date": "2026-01-26"
+          },
+          "delta": 0.1933
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2020-01-10",
+        "description": "LPAR2RRD ≤ 4.53 and ≤ 3.5 has arbitrary command injection on the application server.",
+        "title": "xorux lpar2rrd Command Injection",
+        "vendor": "xorux",
+        "product": "lpar2rrd",
+        "attack_type": "Command Injection",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2014-4982",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2020-01-10T13:15:12.877",
+        "lastModified": "2024-11-21T02:11:13.223",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "LPAR2RRD ≤ 4.53 and ≤ 3.5 has arbitrary command injection on the application server."
+          },
+          {
+            "lang": "es",
+            "value": "LPAR2RRD ? 4.53 y ? 3.5 tienen inyección de comandos arbitrarios en el servidor de aplicaciones"
+          }
+        ],
+        "metrics": {
+          "cvssMetricV2": [
+            {
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+                "baseScore": 7.5,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "baseSeverity": "HIGH",
+              "exploitabilityScore": 10.0,
+              "impactScore": 6.4
+            }
+          ],
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-77"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:xorux:lpar2rrd:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "B9EC3D0F-295C-47D0-86F9-9A0B8812BDA8",
+                    "versionEndIncluding": "3.50"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:xorux:lpar2rrd:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "21088F3F-1608-44CE-A938-EFCA6C3AF722",
+                    "versionStartIncluding": "4.00",
+                    "versionEndIncluding": "4.53"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "http://packetstormsecurity.com/files/127593/LPAR2RRD-3.5-4.53-Command-Injection.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory",
+              "VDB Entry"
+            ]
+          },
+          {
+            "url": "http://www.openwall.com/lists/oss-security/2014/07/23/6",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Mailing List",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "http://www.securityfocus.com/bid/68850",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory",
+              "VDB Entry"
+            ]
+          },
+          {
+            "url": "https://exchange.xforce.ibmcloud.com/vulnerabilities/94785",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory",
+              "VDB Entry"
+            ]
+          }
+        ]
+      },
+      "risk_score": 86,
+      "rank": 2
+    },
+    {
+      "cve_id": "CVE-2016-15057",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-01-26",
+          "previous_max": null,
+          "current_max": 9.9
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-01-26",
+        "description": "** UNSUPPORTED WHEN ASSIGNED ** Improper Neutralization of Special Elements used in a Command ('Command Injection') vulnerability in Apache Continuum.\n\nThis issue affects Apache Continuum: all versions.\n\nAttackers with access to the installations REST API can use this to invoke arbitrary commands on the server.\n\nAs this project is retired, we do not plan to release a version that fixes this issue. Users are recommended to find an alternative or restrict access to the instance to trusted users.\n\nNOTE: This vulnerability only affects products that are no longer supported by the maintainer.",
+        "title": "apache continuum Command Injection",
+        "vendor": "apache",
+        "product": "continuum",
+        "attack_type": "Command Injection",
+        "cvss_max": 9.9
+      },
+      "cve": {
+        "id": "CVE-2016-15057",
+        "sourceIdentifier": "security@apache.org",
+        "published": "2026-01-26T12:15:46.353",
+        "lastModified": "2026-01-27T20:29:50.263",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "** UNSUPPORTED WHEN ASSIGNED ** Improper Neutralization of Special Elements used in a Command ('Command Injection') vulnerability in Apache Continuum.\n\nThis issue affects Apache Continuum: all versions.\n\nAttackers with access to the installations REST API can use this to invoke arbitrary commands on the server.\n\nAs this project is retired, we do not plan to release a version that fixes this issue. Users are recommended to find an alternative or restrict access to the instance to trusted users.\n\nNOTE: This vulnerability only affects products that are no longer supported by the maintainer."
+          },
+          {
+            "lang": "es",
+            "value": "NO COMPATIBLE CUANDO ASIGNADO  Neutralización Inadecuada de Elementos Especiales utilizados en un Comando ('inyección de comandos') vulnerabilidad en Apache Continuum.\n\nEste problema afecta a Apache Continuum: todas las versiones.\n\nAtacantes con acceso a la API REST de las instalaciones pueden usar esto para invocar comandos arbitrarios en el servidor.\n\nDado que este proyecto está retirado, no planeamos lanzar una versión que solucione este problema. Se recomienda a los usuarios que encuentren una alternativa o restrinjan el acceso a la instancia a usuarios de confianza.\n\nNOTA: Esta vulnerabilidad solo afecta a productos que ya no son compatibles por el mantenedor."
+          }
+        ],
+        "cveTags": [
+          {
+            "sourceIdentifier": "security@apache.org",
+            "tags": [
+              "unsupported-when-assigned"
+            ]
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+                "baseScore": 9.9,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.1,
+              "impactScore": 6.0
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-77"
+              }
+            ],
+            "source": "security@apache.org"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:apache:continuum:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "55131A7E-DBFB-4AA0-96EE-1176C1227A75"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://lists.apache.org/thread/hbvf1ztqw2kv51khvzm5nk3mml3nm4z1",
+            "source": "security@apache.org",
+            "tags": [
+              "Mailing List"
+            ]
+          },
+          {
+            "url": "http://www.openwall.com/lists/oss-security/2026/01/26/1",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Mailing List",
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 3
+    },
+    {
+      "cve_id": "CVE-2022-29775",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 0.5275,
+            "score_date": "2025-11-21"
+          },
+          "current": {
+            "score": 0.63894,
+            "score_date": "2026-01-26"
+          },
+          "delta": 0.11144
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2022-06-21",
+        "description": "iSpyConnect iSpy v7.2.2.0 allows attackers to bypass authentication via a crafted URL.",
+        "title": "ispyconnect ispy",
+        "vendor": "ispyconnect",
+        "product": "ispy",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2022-29775",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2022-06-21T14:15:08.197",
+        "lastModified": "2024-11-21T06:59:40.123",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "iSpyConnect iSpy v7.2.2.0 allows attackers to bypass authentication via a crafted URL."
+          },
+          {
+            "lang": "es",
+            "value": "iSpyConnect iSpy versión v7.2.2.0, permite a atacantes omitir la autenticación por medio de una URL diseñada"
+          }
+        ],
+        "metrics": {
+          "cvssMetricV2": [
+            {
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+                "baseScore": 7.5,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "baseSeverity": "HIGH",
+              "exploitabilityScore": 10.0,
+              "impactScore": 6.4
+            }
+          ],
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-287"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:ispyconnect:ispy:7.2.2.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "4B2BB32D-580A-409E-B5E9-821F63EC72A5"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://gist.github.com/securylight/79f673aa3a453c80c0e78f356a8f650b",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/securylight/CVES_write_ups",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 84,
+      "rank": 4
+    },
+    {
+      "cve_id": "CVE-2022-35741",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 0.1942,
+            "score_date": "2025-11-21"
+          },
+          "current": {
+            "score": 0.34432,
+            "score_date": "2026-01-26"
+          },
+          "delta": 0.15012
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2022-07-18",
+        "description": "Apache CloudStack version 4.5.0 and later has a SAML 2.0 authentication Service Provider plugin which is found to be vulnerable to XML external entity (XXE) injection. This plugin is not enabled by default and the attacker would require that this plugin be enabled to exploit the vulnerability. When the SAML 2.0 plugin is enabled in affected versions of Apache CloudStack could potentially allow the exploitation of XXE vulnerabilities. The SAML 2.0 messages constructed during the authentication flow in Apache CloudStack are XML-based and the XML data is parsed by various standard libraries that are now understood to be vulnerable to XXE injection attacks such as arbitrary file reading, possible denial of service, server-side request forgery (SSRF) on the CloudStack management server.",
+        "title": "apache cloudstack XXE",
+        "vendor": "apache",
+        "product": "cloudstack",
+        "attack_type": "XXE",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2022-35741",
+        "sourceIdentifier": "security@apache.org",
+        "published": "2022-07-18T15:15:08.837",
+        "lastModified": "2024-11-21T07:11:34.990",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Apache CloudStack version 4.5.0 and later has a SAML 2.0 authentication Service Provider plugin which is found to be vulnerable to XML external entity (XXE) injection. This plugin is not enabled by default and the attacker would require that this plugin be enabled to exploit the vulnerability. When the SAML 2.0 plugin is enabled in affected versions of Apache CloudStack could potentially allow the exploitation of XXE vulnerabilities. The SAML 2.0 messages constructed during the authentication flow in Apache CloudStack are XML-based and the XML data is parsed by various standard libraries that are now understood to be vulnerable to XXE injection attacks such as arbitrary file reading, possible denial of service, server-side request forgery (SSRF) on the CloudStack management server."
+          },
+          {
+            "lang": "es",
+            "value": "Apache CloudStack versiones 4.5.0 y posteriores, presentan un plugin de proveedor de servicios de autenticación SAML versión 2.0 que es encontrado vulnerable a una inyección de entidad externa XML (XXE). Este plugin no está habilitado por defecto y el atacante necesitaría que este plugin estuviera habilitado para explotar la vulnerabilidad. Cuando el plugin SAML versión 2.0 está habilitado en las versiones afectadas de Apache CloudStack podría permitir potencialmente una explotación de las vulnerabilidades de tipo XXE. Los mensajes SAML versión 2.0 construidos durante el flujo de autenticación en Apache CloudStack están basados en XML y los datos XML son analizados por varias bibliotecas estándar que ahora es entendido que son vulnerables a ataques de inyección XXE como una lectura arbitraria de archivos, una posible denegación de servicio, un ataque de tipo server-side request forgery (SSRF) en el servidor de administración de CloudStack"
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-611"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:apache:cloudstack:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "CF22EB78-D382-40AF-ABF4-8747790EB168",
+                    "versionStartIncluding": "4.5.0",
+                    "versionEndExcluding": "4.16.1.1"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:apache:cloudstack:4.17.0.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "D14096B0-3C8C-4418-BB45-4F80E49338B2"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "http://www.openwall.com/lists/oss-security/2022/07/18/2",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Mailing List",
+              "Mitigation",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "http://www.openwall.com/lists/oss-security/2022/07/20/1",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Mailing List",
+              "Mitigation",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://lists.apache.org/thread/hwhxvtwp1d5dsm156bsf1cnyvtmrfv3f",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Issue Tracking",
+              "Mailing List",
+              "Mitigation",
+              "Patch",
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 86,
+      "rank": 5
+    },
+    {
+      "cve_id": "CVE-2025-52691",
+      "signal_types": [
+        "KEV"
+      ],
+      "signals": {
+        "kev": {
+          "date_added": "2026-01-26"
+        },
+        "exploit": null,
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-12-29",
+        "description": "Successful exploitation of the vulnerability could allow an unauthenticated attacker to upload arbitrary files to any location on the mail server, potentially enabling remote code execution.",
+        "title": "SmarterTools SmarterMail Unrestricted Upload of File with Dangerous Type Vulnerability",
+        "vendor": "smartertools",
+        "product": "smartermail",
+        "attack_type": "RCE",
+        "cvss_max": 10.0
+      },
+      "cve": {
+        "id": "CVE-2025-52691",
+        "sourceIdentifier": "5f57b9bf-260d-4433-bf07-b6a79e9bb7d4",
+        "published": "2025-12-29T03:15:42.837",
+        "lastModified": "2026-01-27T15:28:07.247",
+        "vulnStatus": "Analyzed",
+        "cisaExploitAdd": "2026-01-26",
+        "cisaActionDue": "2026-02-16",
+        "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+        "cisaVulnerabilityName": "SmarterTools SmarterMail Unrestricted Upload of File with Dangerous Type Vulnerability",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Successful exploitation of the vulnerability could allow an unauthenticated attacker to upload arbitrary files to any location on the mail server, potentially enabling remote code execution."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+                "baseScore": 10.0,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "5f57b9bf-260d-4433-bf07-b6a79e9bb7d4",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 6.0
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-434"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:smartertools:smartermail:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "A9F4301A-C277-47F6-841D-386EDD24EE67",
+                    "versionEndExcluding": "100.0.9413"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://www.csa.gov.sg/alerts-and-advisories/alerts/al-2025-124/",
+            "source": "5f57b9bf-260d-4433-bf07-b6a79e9bb7d4",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/watchtowrlabs/watchTowr-vs-SmarterMail-CVE-2025-52691?ref=labs.watchtowr.com",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2025-52691",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "US Government Resource"
+            ]
+          }
+        ]
+      },
+      "risk_score": 88,
+      "rank": 6
+    },
+    {
+      "cve_id": "CVE-2025-59091",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-01-26",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-01-26",
+        "description": "Multiple hardcoded credentials have been identified, which are allowed to sign-in to the exos 9300 datapoint server running on port 1004 and 1005. This server is used for relaying status information from and to the Access Managers. This information, among other things, is used to graphically visualize open doors and alerts. However, controlling the Access Managers via this interface is also possible.\n\nTo send and receive status information, authentication is necessary. The Kaba exos 9300 application contains hard-coded credentials for four different users, which are allowed to login to the datapoint server and receive as well as send information, including commands to open arbitrary doors.",
+        "title": "Multiple hardcoded credentials have been identified, which are allowed to sign-in to the exos 9300 datapoint server running on port 1004...",
+        "cvss_max": 9.3
+      },
+      "cve": {
+        "id": "CVE-2025-59091",
+        "sourceIdentifier": "551230f0-3615-47bd-b7cc-93e92e730bbf",
+        "published": "2026-01-26T10:16:06.450",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Multiple hardcoded credentials have been identified, which are allowed to sign-in to the exos 9300 datapoint server running on port 1004 and 1005. This server is used for relaying status information from and to the Access Managers. This information, among other things, is used to graphically visualize open doors and alerts. However, controlling the Access Managers via this interface is also possible.\n\nTo send and receive status information, authentication is necessary. The Kaba exos 9300 application contains hard-coded credentials for four different users, which are allowed to login to the datapoint server and receive as well as send information, including commands to open arbitrary doors."
+          },
+          {
+            "lang": "es",
+            "value": "Múltiples credenciales codificadas han sido identificadas, a las que se les permite iniciar sesión en el servidor de puntos de datos exos 9300 que se ejecuta en el puerto 1004 y 1005. Este servidor se utiliza para retransmitir información de estado desde y hacia los Gestores de Acceso. Esta información, entre otras cosas, se utiliza para visualizar gráficamente puertas abiertas y alertas. Sin embargo, controlar los Gestores de Acceso a través de esta interfaz también es posible.\n\nPara enviar y recibir información de estado, la autenticación es necesaria. La aplicación Kaba exos 9300 contiene credenciales codificadas para cuatro usuarios diferentes, a los que se les permite iniciar sesión en el servidor de puntos de datos y recibir, así como enviar, información, incluyendo comandos para abrir puertas arbitrarias."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "551230f0-3615-47bd-b7cc-93e92e730bbf",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-798"
+              }
+            ],
+            "source": "551230f0-3615-47bd-b7cc-93e92e730bbf"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://r.sec-consult.com/dkexos",
+            "source": "551230f0-3615-47bd-b7cc-93e92e730bbf"
+          },
+          {
+            "url": "https://r.sec-consult.com/dormakaba",
+            "source": "551230f0-3615-47bd-b7cc-93e92e730bbf"
+          },
+          {
+            "url": "https://www.dormakabagroup.com/en/security-advisories",
+            "source": "551230f0-3615-47bd-b7cc-93e92e730bbf"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 7
+    },
+    {
+      "cve_id": "CVE-2025-59097",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-01-26",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-01-26",
+        "description": "The exos 9300 application can be used to configure Access Managers (e.g. 92xx, 9230 and 9290). The configuration is done in a graphical user interface on the dormakaba exos server. As soon as the save button is clicked in exos 9300, the whole configuration is sent to the selected Access Manager via SOAP. The SOAP request is sent without any prior authentication or authorization by default. Though authentication and authorization can be configured using IPsec for 92xx-K5 devices and mTLS for 92xx-K7 devices, it is not enabled by default and must therefore be activated with additional steps.\n\nThis insecure default allows an attacker with network level access to completely control the whole environment. An attacker is for example easily able to conduct the following tasks without prior authentication:\n- Re-configure Access Managers (e.g. remove alarming system requirements)\n- Freely re-configure the inputs and outputs\n- Open all connected doors permanently\n- Open all doors for a defined time interval\n- Change the admin password\n- and many more\n\nNetwork level access can be gained due to an insufficient network segmentation as well as missing LAN firewalls. Devices with an insecure configuration have been identified to be directly exposed to the internet.",
+        "title": "The exos 9300 application can be used to configure Access Managers (e.g.",
+        "attack_type": "privilege escalation",
+        "cvss_max": 9.3
+      },
+      "cve": {
+        "id": "CVE-2025-59097",
+        "sourceIdentifier": "551230f0-3615-47bd-b7cc-93e92e730bbf",
+        "published": "2026-01-26T10:16:07.293",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The exos 9300 application can be used to configure Access Managers (e.g. 92xx, 9230 and 9290). The configuration is done in a graphical user interface on the dormakaba exos server. As soon as the save button is clicked in exos 9300, the whole configuration is sent to the selected Access Manager via SOAP. The SOAP request is sent without any prior authentication or authorization by default. Though authentication and authorization can be configured using IPsec for 92xx-K5 devices and mTLS for 92xx-K7 devices, it is not enabled by default and must therefore be activated with additional steps.\n\nThis insecure default allows an attacker with network level access to completely control the whole environment. An attacker is for example easily able to conduct the following tasks without prior authentication:\n- Re-configure Access Managers (e.g. remove alarming system requirements)\n- Freely re-configure the inputs and outputs\n- Open all connected doors permanently\n- Open all doors for a defined time interval\n- Change the admin password\n- and many more\n\nNetwork level access can be gained due to an insufficient network segmentation as well as missing LAN firewalls. Devices with an insecure configuration have been identified to be directly exposed to the internet."
+          },
+          {
+            "lang": "es",
+            "value": "La aplicación exos 9300 puede utilizarse para configurar Access Managers (p. ej. 92xx, 9230 y 9290). La configuración se realiza en una interfaz gráfica de usuario en el servidor dormakaba exos. Tan pronto como se hace clic en el botón de guardar en exos 9300, toda la configuración se envía al Access Manager seleccionado a través de SOAP. La solicitud SOAP se envía sin autenticación o autorización previa alguna por defecto. Aunque la autenticación y la autorización pueden configurarse utilizando IPsec para dispositivos 92xx-K5 y mTLS para dispositivos 92xx-K7, no está habilitado por defecto y, por lo tanto, debe activarse con pasos adicionales.\n\nEste valor predeterminado inseguro permite a un atacante con acceso a nivel de red controlar completamente todo el entorno. Un atacante, por ejemplo, puede realizar fácilmente las siguientes tareas sin autenticación previa:\n- Reconfigurar Access Managers (p. ej., eliminar requisitos de sistemas de alarma)\n- Reconfigurar libremente las entradas y salidas\n- Abrir todas las puertas conectadas permanentemente\n- Abrir todas las puertas por un intervalo de tiempo definido\n- Cambiar la contraseña de administrador\n- y muchos más\n\nEl acceso a nivel de red puede obtenerse debido a una segmentación de red insuficiente, así como a la falta de firewalls de LAN. Se ha identificado que los dispositivos con una configuración insegura están directamente expuestos a internet."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "551230f0-3615-47bd-b7cc-93e92e730bbf",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-306"
+              },
+              {
+                "lang": "en",
+                "value": "CWE-1188"
+              }
+            ],
+            "source": "551230f0-3615-47bd-b7cc-93e92e730bbf"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://r.sec-consult.com/dkaccess",
+            "source": "551230f0-3615-47bd-b7cc-93e92e730bbf"
+          },
+          {
+            "url": "https://r.sec-consult.com/dormakaba",
+            "source": "551230f0-3615-47bd-b7cc-93e92e730bbf"
+          },
+          {
+            "url": "https://www.dormakabagroup.com/en/security-advisories",
+            "source": "551230f0-3615-47bd-b7cc-93e92e730bbf"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 8
+    },
+    {
+      "cve_id": "CVE-2025-59103",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-01-26",
+          "previous_max": null,
+          "current_max": 9.2
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-01-26",
+        "description": "The Access Manager 92xx in hardware revision K7 is based on Linux instead of Windows CE embedded in older hardware revisions. In this new hardware revision it was noticed that an SSH service is exposed on port 22. By analyzing the firmware of the devices, it was noticed that there are two users with hardcoded and weak passwords that can be used to access the devices via SSH. The passwords can be also guessed very easily. The password of at least one user is set to a random value after the first deployment, with the restriction that the password is only randomized if the configured date is prior to 2022. Therefore, under certain circumstances, the passwords are not randomized. For example, if the clock is never set on the device, the battery of the clock module has been changed, the Access Manager has been factory reset and has not received a time yet.",
+        "title": "The Access Manager 92xx in hardware revision K7 is based on Linux instead of Windows CE embedded in older hardware revisions.",
+        "cvss_max": 9.2
+      },
+      "cve": {
+        "id": "CVE-2025-59103",
+        "sourceIdentifier": "551230f0-3615-47bd-b7cc-93e92e730bbf",
+        "published": "2026-01-26T10:16:08.117",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The Access Manager 92xx in hardware revision K7 is based on Linux instead of Windows CE embedded in older hardware revisions. In this new hardware revision it was noticed that an SSH service is exposed on port 22. By analyzing the firmware of the devices, it was noticed that there are two users with hardcoded and weak passwords that can be used to access the devices via SSH. The passwords can be also guessed very easily. The password of at least one user is set to a random value after the first deployment, with the restriction that the password is only randomized if the configured date is prior to 2022. Therefore, under certain circumstances, the passwords are not randomized. For example, if the clock is never set on the device, the battery of the clock module has been changed, the Access Manager has been factory reset and has not received a time yet."
+          },
+          {
+            "lang": "es",
+            "value": "El Access Manager 92xx en la revisión de hardware K7 está basado en Linux en lugar de Windows CE incrustado en revisiones de hardware anteriores. En esta nueva revisión de hardware se observó que un servicio SSH está expuesto en el puerto 22. Al analizar el firmware de los dispositivos, se observó que hay dos usuarios con contraseñas codificadas y débiles que pueden usarse para acceder a los dispositivos vía SSH. Las contraseñas también pueden adivinarse muy fácilmente. La contraseña de al menos un usuario se establece a un valor aleatorio después del primer despliegue, con la restricción de que la contraseña solo se aleatoriza si la fecha configurada es anterior a 2022. Por lo tanto, bajo ciertas circunstancias, las contraseñas no se aleatorizan. Por ejemplo, si el reloj nunca se configura en el dispositivo, la batería del módulo del reloj ha sido cambiada, el Access Manager ha sido restablecido de fábrica y aún no ha recibido una hora."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.2,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "551230f0-3615-47bd-b7cc-93e92e730bbf",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-1391"
+              }
+            ],
+            "source": "551230f0-3615-47bd-b7cc-93e92e730bbf"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://r.sec-consult.com/dkaccess",
+            "source": "551230f0-3615-47bd-b7cc-93e92e730bbf"
+          },
+          {
+            "url": "https://r.sec-consult.com/dormakaba",
+            "source": "551230f0-3615-47bd-b7cc-93e92e730bbf"
+          },
+          {
+            "url": "https://www.dormakabagroup.com/en/security-advisories",
+            "source": "551230f0-3615-47bd-b7cc-93e92e730bbf"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 9
+    },
+    {
+      "cve_id": "CVE-2025-59108",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-01-26",
+          "previous_max": null,
+          "current_max": 9.2
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-01-26",
+        "description": "By default, the password for the Access Manager's web interface, is set to 'admin'. In the tested version changing the password was not enforced.",
+        "title": "By default, the password for the Access Manager's web interface, is set to 'admin'.",
+        "cvss_max": 9.2
+      },
+      "cve": {
+        "id": "CVE-2025-59108",
+        "sourceIdentifier": "551230f0-3615-47bd-b7cc-93e92e730bbf",
+        "published": "2026-01-26T10:16:08.763",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "By default, the password for the Access Manager's web interface, is set to 'admin'. In the tested version changing the password was not enforced."
+          },
+          {
+            "lang": "es",
+            "value": "Por defecto, la contraseña para la interfaz web del Access Manager, está establecida como 'admin'. En la versión probada, el cambio de la contraseña no era obligatorio."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.2,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "551230f0-3615-47bd-b7cc-93e92e730bbf",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-1392"
+              }
+            ],
+            "source": "551230f0-3615-47bd-b7cc-93e92e730bbf"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://r.sec-consult.com/dkaccess",
+            "source": "551230f0-3615-47bd-b7cc-93e92e730bbf"
+          },
+          {
+            "url": "https://r.sec-consult.com/dormakaba",
+            "source": "551230f0-3615-47bd-b7cc-93e92e730bbf"
+          },
+          {
+            "url": "https://www.dormakabagroup.com/en/security-advisories",
+            "source": "551230f0-3615-47bd-b7cc-93e92e730bbf"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 10
+    },
+    {
+      "cve_id": "CVE-2025-70982",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-01-26",
+          "previous_max": null,
+          "current_max": 9.9
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-01-26",
+        "description": "Incorrect access control in the importUser function of SpringBlade v4.5.0 allows attackers with low-level privileges to arbitrarily import sensitive user data.",
+        "title": "bladex springblade privilege escalation",
+        "vendor": "bladex",
+        "product": "springblade",
+        "attack_type": "privilege escalation",
+        "cvss_max": 9.9
+      },
+      "cve": {
+        "id": "CVE-2025-70982",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2026-01-26T17:16:11.943",
+        "lastModified": "2026-02-12T15:43:24.207",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Incorrect access control in the importUser function of SpringBlade v4.5.0 allows attackers with low-level privileges to arbitrarily import sensitive user data."
+          },
+          {
+            "lang": "es",
+            "value": "Control de acceso incorrecto en la función importUser de SpringBlade v4.5.0 permite a los atacantes con privilegios de bajo nivel importar arbitrariamente datos de usuario sensibles."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+                "baseScore": 9.9,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.1,
+              "impactScore": 6.0
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-284"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:bladex:springblade:4.5.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "082F465A-1312-42EF-87DC-588DD6D7C6DE"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://gist.github.com/old6ma/ea60151aa40ddc1cfb51fbaa0c173117",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/chillzhuang/SpringBlade",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Product"
+            ]
+          },
+          {
+            "url": "https://github.com/chillzhuang/SpringBlade/issues/34",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Exploit",
+              "Issue Tracking"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 11
+    },
+    {
+      "cve_id": "CVE-2026-21509",
+      "signal_types": [
+        "KEV"
+      ],
+      "signals": {
+        "kev": {
+          "date_added": "2026-01-26"
+        },
+        "exploit": null,
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-01-26",
+        "description": "Reliance on untrusted inputs in a security decision in Microsoft Office allows an unauthorized attacker to bypass a security feature locally.",
+        "title": "Microsoft Office Security Feature Bypass Vulnerability",
+        "vendor": "microsoft",
+        "product": "365_apps",
+        "cvss_max": 7.8
+      },
+      "cve": {
+        "id": "CVE-2026-21509",
+        "sourceIdentifier": "secure@microsoft.com",
+        "published": "2026-01-26T18:16:38.540",
+        "lastModified": "2026-02-11T15:40:33.473",
+        "vulnStatus": "Analyzed",
+        "cisaExploitAdd": "2026-01-26",
+        "cisaActionDue": "2026-02-16",
+        "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+        "cisaVulnerabilityName": "Microsoft Office Security Feature Bypass Vulnerability",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Reliance on untrusted inputs in a security decision in Microsoft Office allows an unauthorized attacker to bypass a security feature locally."
+          },
+          {
+            "lang": "es",
+            "value": "Dependencia de entradas no confiables en una decisión de seguridad en Microsoft Office permite a un atacante no autorizado eludir una característica de seguridad localmente."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+                "baseScore": 7.8,
+                "baseSeverity": "HIGH"
+              },
+              "source": "secure@microsoft.com",
+              "type": "Secondary",
+              "exploitabilityScore": 1.8,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-807"
+              }
+            ],
+            "source": "secure@microsoft.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:microsoft:365_apps:-:*:*:*:enterprise:*:x64:*",
+                    "matchCriteriaId": "3259EBFE-AE2D-48B8-BE9A-E22BBDB31378"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:microsoft:365_apps:-:*:*:*:enterprise:*:x86:*",
+                    "matchCriteriaId": "CD25F492-9272-4836-832C-8439EBE64CCF"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:microsoft:office:2016:*:*:*:*:*:x64:*",
+                    "matchCriteriaId": "72324216-4EB3-4243-A007-FEF3133C7DF9"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:microsoft:office:2016:*:*:*:*:*:x86:*",
+                    "matchCriteriaId": "0FBB0E61-7997-4F26-9C07-54912D3F1C10"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:microsoft:office:2019:*:*:*:*:*:x64:*",
+                    "matchCriteriaId": "CF5DDD09-902E-4881-98D0-CB896333B4AA"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:microsoft:office:2019:*:*:*:*:*:x86:*",
+                    "matchCriteriaId": "26A3B226-5D7C-4556-9350-5222DC8EFC2C"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:microsoft:office_long_term_servicing_channel:2021:*:*:*:*:-:x64:*",
+                    "matchCriteriaId": "851BAC4E-9965-4F40-9A6C-B73D9004F4C1"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:microsoft:office_long_term_servicing_channel:2021:*:*:*:*:-:x86:*",
+                    "matchCriteriaId": "23B2FA23-76F4-4D83-A718-B8D04D7EA37B"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:microsoft:office_long_term_servicing_channel:2024:*:*:*:*:-:x64:*",
+                    "matchCriteriaId": "D31E509A-0B2E-4B41-88C4-0099E800AFE6"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:microsoft:office_long_term_servicing_channel:2024:*:*:*:*:-:x86:*",
+                    "matchCriteriaId": "017A7041-BEF1-4E4E-AC8A-EFC6AFEB01FE"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-21509",
+            "source": "secure@microsoft.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://www.vicarius.io/vsociety/posts/cve-2026-21509-detection-script-microsoft-office-security-feature-bypass-vulnerability",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.vicarius.io/vsociety/posts/cve-2026-21509-mitigation-script-microsoft-office-security-feature-bypass-vulnerability",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Mitigation",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-21509",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "US Government Resource"
+            ]
+          }
+        ]
+      },
+      "risk_score": 88,
+      "rank": 12
+    },
+    {
+      "cve_id": "CVE-2026-22696",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-01-26",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-01-26",
+        "description": "dcap-qvl implements the quote verification logic for DCAP (Data Center Attestation Primitives). A vulnerability present in versions prior to 0.3.9 involves a critical gap in the cryptographic verification process within the dcap-qvl. The library fetches QE Identity collateral (including qe_identity, qe_identity_signature, and qe_identity_issuer_chain) from the PCCS. However, it skips to verify the QE Identity signature against its certificate chain and does not enforce policy constraints on the QE Report. An attacker can forge the QE Identity data to whitelist a malicious or non-Intel Quoting Enclave. This allows the attacker to forge the QE and sign untrusted quotes that the verifier will accept as valid. Effectively, this bypasses the entire remote attestation security model, as the verifier can no longer trust the entity responsible for signing the quotes. All deployments utilizing the dcap-qvl library for SGX or TDX quote verification are affected. The vulnerability has been patched in dcap-qvl version 0.3.9. The fix implements the missing cryptographic verification for the QE Identity signature and enforces the required checks for MRSIGNER, ISVPRODID, and ISVSVN against the QE Report. Users of the `@phala/dcap-qvl-node` and `@phala/dcap-qvl-web` packages should switch to the pure JavaScript implementation, `@phala/dcap-qvl`. There are no known workarounds for this vulnerability. Users must upgrade to the patched version to ensure that QE Identity collateral is properly verified.",
+        "title": "dcap-qvl implements the quote verification logic for DCAP (Data Center Attestation Primitives).",
+        "cvss_max": 9.3
+      },
+      "cve": {
+        "id": "CVE-2026-22696",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2026-01-26T22:15:55.733",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "dcap-qvl implements the quote verification logic for DCAP (Data Center Attestation Primitives). A vulnerability present in versions prior to 0.3.9 involves a critical gap in the cryptographic verification process within the dcap-qvl. The library fetches QE Identity collateral (including qe_identity, qe_identity_signature, and qe_identity_issuer_chain) from the PCCS. However, it skips to verify the QE Identity signature against its certificate chain and does not enforce policy constraints on the QE Report. An attacker can forge the QE Identity data to whitelist a malicious or non-Intel Quoting Enclave. This allows the attacker to forge the QE and sign untrusted quotes that the verifier will accept as valid. Effectively, this bypasses the entire remote attestation security model, as the verifier can no longer trust the entity responsible for signing the quotes. All deployments utilizing the dcap-qvl library for SGX or TDX quote verification are affected. The vulnerability has been patched in dcap-qvl version 0.3.9. The fix implements the missing cryptographic verification for the QE Identity signature and enforces the required checks for MRSIGNER, ISVPRODID, and ISVSVN against the QE Report. Users of the `@phala/dcap-qvl-node` and `@phala/dcap-qvl-web` packages should switch to the pure JavaScript implementation, `@phala/dcap-qvl`. There are no known workarounds for this vulnerability. Users must upgrade to the patched version to ensure that QE Identity collateral is properly verified."
+          },
+          {
+            "lang": "es",
+            "value": "dcap-qvl implementa la lógica de verificación de citas para DCAP (Data Center Attestation Primitives). Una vulnerabilidad presente en versiones anteriores a la 0.3.9 implica una brecha crítica en el proceso de verificación criptográfica dentro de dcap-qvl. La librería obtiene el colateral de Identidad QE (incluyendo qe_identity, qe_identity_signature y qe_identity_issuer_chain) del PCCS. Sin embargo, omite verificar la firma de Identidad QE contra su cadena de certificados y no aplica restricciones de política en el Informe QE. Un atacante puede falsificar los datos de Identidad QE para incluir en la lista blanca un Enclave de Citas malicioso o no Intel. Esto permite al atacante falsificar el QE y firmar citas no confiables que el verificador aceptará como válidas. Efectivamente, esto elude todo el modelo de seguridad de atestación remota, ya que el verificador ya no puede confiar en la entidad responsable de firmar las citas. Todas las implementaciones que utilizan la librería dcap-qvl para la verificación de citas SGX o TDX están afectadas. La vulnerabilidad ha sido parcheada en la versión 0.3.9 de dcap-qvl. La solución implementa la verificación criptográfica faltante para la firma de Identidad QE y aplica las comprobaciones requeridas para MRSIGNER, ISVPRODID e ISVSVN contra el Informe QE. Los usuarios de los paquetes '@phala/dcap-qvl-node' y '@phala/dcap-qvl-web' deberían cambiar a la implementación pura de JavaScript, '@phala/dcap-qvl'. No existen soluciones alternativas conocidas para esta vulnerabilidad. Los usuarios deben actualizar a la versión parcheada para asegurar que el colateral de Identidad QE sea verificado correctamente."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-295"
+              },
+              {
+                "lang": "en",
+                "value": "CWE-347"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/Phala-Network/dcap-qvl/security/advisories/GHSA-796p-j2gh-9m2q",
+            "source": "security-advisories@github.com"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 13
+    },
+    {
+      "cve_id": "CVE-2026-22709",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-01-26",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-01-26",
+        "description": "vm2 is an open source vm/sandbox for Node.js. In vm2 prior to version 3.10.2, `Promise.prototype.then` `Promise.prototype.catch` callback sanitization can be bypassed. This allows attackers to escape the sandbox and run arbitrary code. In lib/setup-sandbox.js, the callback function of `localPromise.prototype.then` is sanitized, but `globalPromise.prototype.then` is not sanitized. The return value of async functions is `globalPromise` object. Version 3.10.2 fixes the issue.",
+        "title": "vm2_project vm2",
+        "vendor": "vm2_project",
+        "product": "vm2",
+        "cvss_max": 10.0
+      },
+      "cve": {
+        "id": "CVE-2026-22709",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2026-01-26T22:15:55.890",
+        "lastModified": "2026-02-17T20:59:29.590",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "vm2 is an open source vm/sandbox for Node.js. In vm2 prior to version 3.10.2, `Promise.prototype.then` `Promise.prototype.catch` callback sanitization can be bypassed. This allows attackers to escape the sandbox and run arbitrary code. In lib/setup-sandbox.js, the callback function of `localPromise.prototype.then` is sanitized, but `globalPromise.prototype.then` is not sanitized. The return value of async functions is `globalPromise` object. Version 3.10.2 fixes the issue."
+          },
+          {
+            "lang": "es",
+            "value": "vm2 es una vm/sandbox de código abierto para Node.js. En vm2, en versiones anteriores a la 3.10.2, la sanitización de las devoluciones de llamada de `Promise.prototype.then` `Promise.prototype.catch` puede ser eludida. Esto permite a los atacantes escapar de la sandbox y ejecutar código arbitrario. En lib/setup-sandbox.js, la función de devolución de llamada de `localPromise.prototype.then` es sanitizada, pero `globalPromise.prototype.then` no es sanitizada. El valor de retorno de las funciones asíncronas es un objeto `globalPromise`. La versión 3.10.2 corrige el problema."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+                "baseScore": 10.0,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 6.0
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-94"
+              },
+              {
+                "lang": "en",
+                "value": "CWE-693"
+              },
+              {
+                "lang": "en",
+                "value": "CWE-913"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vm2_project:vm2:*:*:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "CD4F9978-8CFB-4C45-8C2A-469413D81852",
+                    "versionEndExcluding": "3.10.2"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/patriksimek/vm2/commit/4b009c2d4b1131c01810c1205e641d614c322a29",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://github.com/patriksimek/vm2/releases/tag/v3.10.2",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Product",
+              "Release Notes"
+            ]
+          },
+          {
+            "url": "https://github.com/patriksimek/vm2/security/advisories/GHSA-99p7-6v5w-7xg8",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Exploit",
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 14
+    },
+    {
+      "cve_id": "CVE-2026-23760",
+      "signal_types": [
+        "KEV"
+      ],
+      "signals": {
+        "kev": {
+          "date_added": "2026-01-26"
+        },
+        "exploit": null,
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-01-22",
+        "description": "SmarterTools SmarterMail versions prior to build 9511 contain an authentication bypass vulnerability in the password reset API. The force-reset-password endpoint permits anonymous requests and fails to verify the existing password or a reset token when resetting system administrator accounts. An unauthenticated attacker can supply a target administrator username and a new password to reset the account, resulting in full administrative compromise of the SmarterMail instance. NOTE: SmarterMail system administrator privileges grant the ability to execute operating system commands via built-in management functionality, effectively providing administrative (SYSTEM or root) access on the underlying host.",
+        "title": "SmarterTools SmarterMail Authentication Bypass Using an Alternate Path or Channel Vulnerability",
+        "vendor": "smartertools",
+        "product": "smartermail",
+        "attack_type": "Auth Bypass",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2026-23760",
+        "sourceIdentifier": "disclosure@vulncheck.com",
+        "published": "2026-01-22T15:16:55.120",
+        "lastModified": "2026-01-27T16:16:55.327",
+        "vulnStatus": "Analyzed",
+        "cisaExploitAdd": "2026-01-26",
+        "cisaActionDue": "2026-02-16",
+        "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+        "cisaVulnerabilityName": "SmarterTools SmarterMail Authentication Bypass Using an Alternate Path or Channel Vulnerability",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "SmarterTools SmarterMail versions prior to build 9511 contain an authentication bypass vulnerability in the password reset API. The force-reset-password endpoint permits anonymous requests and fails to verify the existing password or a reset token when resetting system administrator accounts. An unauthenticated attacker can supply a target administrator username and a new password to reset the account, resulting in full administrative compromise of the SmarterMail instance. NOTE: SmarterMail system administrator privileges grant the ability to execute operating system commands via built-in management functionality, effectively providing administrative (SYSTEM or root) access on the underlying host."
+          },
+          {
+            "lang": "es",
+            "value": "Las versiones de SmarterTools SmarterMail anteriores a la compilación 9511 contienen una vulnerabilidad de omisión de autenticación en la API de restablecimiento de contraseña. El endpoint force-reset-password permite solicitudes anónimas y no verifica la contraseña existente o un token de restablecimiento al restablecer cuentas de administrador del sistema. Un atacante no autenticado puede proporcionar un nombre de usuario de administrador objetivo y una nueva contraseña para restablecer la cuenta, lo que resulta en un compromiso de administración total de la instancia de SmarterMail. NOTA: Los privilegios de administrador del sistema de SmarterMail otorgan la capacidad de ejecutar comandos del sistema operativo a través de la funcionalidad de gestión incorporada, proporcionando efectivamente acceso de administrador (SYSTEM o root) en el host subyacente."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-288"
+              }
+            ],
+            "source": "disclosure@vulncheck.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:smartertools:smartermail:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "D508C7EA-385D-428C-ACD3-9E2F93F0FB31",
+                    "versionEndExcluding": "100.0.9511"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://code-white.com/public-vulnerability-list/#authenticationserviceforceresetpassword-missing-authentication-in-smartermail",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://labs.watchtowr.com/attackers-with-decompilers-strike-again-smartertools-smartermail-wt-2026-0001-auth-bypass/",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.smartertools.com/smartermail/release-notes/current",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Release Notes"
+            ]
+          },
+          {
+            "url": "https://www.vulncheck.com/advisories/smartertools-smartermail-authentication-bypass-via-password-reset-api",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-23760",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "US Government Resource"
+            ]
+          },
+          {
+            "url": "https://www.huntress.com/blog/smartermail-account-takeover-leading-to-rce",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 88,
+      "rank": 15
+    },
+    {
+      "cve_id": "CVE-2026-24061",
+      "signal_types": [
+        "KEV"
+      ],
+      "signals": {
+        "kev": {
+          "date_added": "2026-01-26"
+        },
+        "exploit": null,
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-01-21",
+        "description": "telnetd in GNU Inetutils through 2.7 allows remote authentication bypass via a \"-f root\" value for the USER environment variable.",
+        "title": "GNU InetUtils Argument Injection Vulnerability",
+        "vendor": "gnu",
+        "product": "inetutils",
+        "attack_type": "Auth Bypass",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2026-24061",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2026-01-21T07:16:01.597",
+        "lastModified": "2026-02-11T15:40:42.937",
+        "vulnStatus": "Analyzed",
+        "cisaExploitAdd": "2026-01-26",
+        "cisaActionDue": "2026-02-16",
+        "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+        "cisaVulnerabilityName": "GNU InetUtils Argument Injection Vulnerability",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "telnetd in GNU Inetutils through 2.7 allows remote authentication bypass via a \"-f root\" value for the USER environment variable."
+          },
+          {
+            "lang": "es",
+            "value": "telnetd en GNU Inetutils a través de 2.7 permite la omisión de autenticación remota a través de un valor '-f root' para la variable de entorno USER."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "cve@mitre.org",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-88"
+              }
+            ],
+            "source": "cve@mitre.org"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:gnu:inetutils:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "1A15FADC-AD86-4C11-B182-C1AC2D73A3BE",
+                    "versionStartIncluding": "1.9.3",
+                    "versionEndIncluding": "2.7"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:debian:debian_linux:11.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "FA6FEEC2-9F11-4643-8827-749718254FED"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://codeberg.org/inetutils/inetutils/commit/ccba9f748aa8d50a38d7748e2e60362edd6a32cc",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://codeberg.org/inetutils/inetutils/commit/fd702c02497b2f398e739e3119bed0b23dd7aa7b",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://lists.gnu.org/archive/html/bug-inetutils/2026-01/msg00004.html",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Mitigation",
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://www.gnu.org/software/inetutils/",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Product"
+            ]
+          },
+          {
+            "url": "https://www.openwall.com/lists/oss-security/2026/01/20/2",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Mailing List"
+            ]
+          },
+          {
+            "url": "https://www.openwall.com/lists/oss-security/2026/01/20/8",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Mailing List"
+            ]
+          },
+          {
+            "url": "https://www.vicarius.io/vsociety/posts/cve-2026-24061-detection-script-remote-authentication-bypass-in-gnu-inetutils-package",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.vicarius.io/vsociety/posts/cve-2026-24061-mitigation-script-remote-authentication-bypass-in-gnu-inetutils-package",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Mitigation",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "http://www.openwall.com/lists/oss-security/2026/01/22/1",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Mailing List"
+            ]
+          },
+          {
+            "url": "https://lists.debian.org/debian-lts-announce/2026/01/msg00025.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Mailing List",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-24061",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "US Government Resource"
+            ]
+          },
+          {
+            "url": "https://www.labs.greynoise.io/grimoire/2026-01-22-f-around-and-find-out-18-hours-of-unsolicited-houseguests/index.html",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.openwall.com/lists/oss-security/2026/01/20/2#:~:text=root@...a%3A~%20USER='",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Mailing List",
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 88,
+      "rank": 16
+    },
+    {
+      "cve_id": "CVE-2026-24429",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-01-26",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-01-26",
+        "description": "Shenzhen Tenda W30E V2 firmware versions up to and including V16.01.0.19(5037) ship with a predefined default password for a built-in authentication account that is not required to be changed during initial configuration. An attacker can leverage these default credentials to gain authenticated access to the management interface.",
+        "title": "tenda w30e_firmware",
+        "vendor": "tenda",
+        "product": "w30e_firmware",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2026-24429",
+        "sourceIdentifier": "disclosure@vulncheck.com",
+        "published": "2026-01-26T18:16:40.267",
+        "lastModified": "2026-01-29T13:01:22.300",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Shenzhen Tenda W30E V2 firmware versions up to and including V16.01.0.19(5037) ship with a predefined default password for a built-in authentication account that is not required to be changed during initial configuration. An attacker can leverage these default credentials to gain authenticated access to the management interface."
+          },
+          {
+            "lang": "es",
+            "value": "Las versiones de firmware de Shenzhen Tenda W30E V2 hasta e incluyendo la V16.01.0.19(5037) se envían con una contraseña predefinida por defecto para una cuenta de autenticación integrada que no es necesario cambiar durante la configuración inicial. Un atacante puede aprovechar estas credenciales por defecto para obtener acceso autenticado a la interfaz de gestión."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-1393"
+              }
+            ],
+            "source": "disclosure@vulncheck.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:tenda:w30e_firmware:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "4DB07B19-71FC-4936-98BD-36A8B3B7CBF0",
+                    "versionEndIncluding": "16.01.0.19\\(5037\\)"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:tenda:w30e:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "02FBE634-0D3F-4439-B4A6-F427C82967C7"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://www.tendacn.com/product/W30E",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Product"
+            ]
+          },
+          {
+            "url": "https://www.vulncheck.com/advisories/tenda-w30e-v2-hardcoded-default-password-for-built-in-account",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 17
+    },
+    {
+      "cve_id": "CVE-2026-24436",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-01-26",
+          "previous_max": null,
+          "current_max": 9.2
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-01-26",
+        "description": "Shenzhen Tenda W30E V2 firmware versions up to and including V16.01.0.19(5037) do not enforce rate limiting or account lockout mechanisms on authentication endpoints. This allows attackers to perform unrestricted brute-force attempts against administrative credentials.",
+        "title": "tenda w30e_firmware",
+        "vendor": "tenda",
+        "product": "w30e_firmware",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2026-24436",
+        "sourceIdentifier": "disclosure@vulncheck.com",
+        "published": "2026-01-26T18:16:41.167",
+        "lastModified": "2026-01-28T19:57:17.200",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Shenzhen Tenda W30E V2 firmware versions up to and including V16.01.0.19(5037) do not enforce rate limiting or account lockout mechanisms on authentication endpoints. This allows attackers to perform unrestricted brute-force attempts against administrative credentials."
+          },
+          {
+            "lang": "es",
+            "value": "Las versiones de firmware de Shenzhen Tenda W30E V2 hasta e incluyendo V16.01.0.19(5037) no imponen mecanismos de limitación de tasa o de bloqueo de cuenta en los puntos finales de autenticación. Esto permite a los atacantes realizar intentos de fuerza bruta sin restricciones contra las credenciales administrativas."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.2,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-307"
+              }
+            ],
+            "source": "disclosure@vulncheck.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:tenda:w30e_firmware:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "4DB07B19-71FC-4936-98BD-36A8B3B7CBF0",
+                    "versionEndIncluding": "16.01.0.19\\(5037\\)"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:tenda:w30e:2.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "56B9C2BB-D36E-40F8-83FF-FC919337F6BD"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://www.tendacn.com/product/W30E",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Product"
+            ]
+          },
+          {
+            "url": "https://www.vulncheck.com/advisories/tenda-w30e-v2-lacks-rate-limiting-on-authentication",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 18
+    }
+  ],
+  "source": "https://www.cvelogic.com/threat-intelligence/2026-01-26"
+}

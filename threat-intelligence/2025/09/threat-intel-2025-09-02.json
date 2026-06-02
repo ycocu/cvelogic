@@ -1,0 +1,1516 @@
+{
+  "schema_version": "2.2",
+  "generated_at": "2026-06-02T07:33:20Z",
+  "day": "2025-09-02",
+  "window": {
+    "utc_start": "2025-09-02",
+    "utc_end": "2025-09-02",
+    "days": 1
+  },
+  "summary": {
+    "brief": "Meta Platforms WhatsApp added to CISA KEV — confirmed in-the-wild exploitation. · Joshua Muheim Phpmywebmin — exploitation likelihood rose sharply (EPSS 13% → 25% · rising (+12%)). · 10 new critical disclosures — review patch status on exposed services.",
+    "bullets": [
+      "Meta Platforms WhatsApp added to CISA KEV — confirmed in-the-wild exploitation.",
+      "Joshua Muheim Phpmywebmin — exploitation likelihood rose sharply (EPSS 13% → 25% · rising (+12%)).",
+      "10 new critical disclosures — review patch status on exposed services."
+    ],
+    "counts": {
+      "cves": 13,
+      "kev": 2,
+      "exploit": 0,
+      "epss": 1,
+      "cvss": 10,
+      "patch": 0
+    }
+  },
+  "cves": [
+    {
+      "cve_id": "CVE-2025-55177",
+      "signal_types": [
+        "KEV"
+      ],
+      "signals": {
+        "kev": {
+          "date_added": "2025-09-02"
+        },
+        "exploit": null,
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-08-29",
+        "description": "Incomplete authorization of linked device synchronization messages in WhatsApp for iOS prior to v2.25.21.73, WhatsApp Business for iOS v2.25.21.78, and WhatsApp for Mac v2.25.21.78 could have allowed an unrelated user to trigger processing of content from an arbitrary URL on a target’s device. We assess that this vulnerability, in combination with an OS-level vulnerability on Apple platforms (CVE-2025-43300), may have been exploited in a sophisticated attack against specific targeted users.",
+        "title": "Meta Platforms WhatsApp Incorrect Authorization Vulnerability",
+        "vendor": "whatsapp",
+        "product": "whatsapp",
+        "attack_type": "privilege escalation",
+        "cvss_max": 5.4
+      },
+      "cve": {
+        "id": "CVE-2025-55177",
+        "sourceIdentifier": "cve-assign@fb.com",
+        "published": "2025-08-29T16:15:36.723",
+        "lastModified": "2025-10-24T14:14:08.077",
+        "vulnStatus": "Analyzed",
+        "cisaExploitAdd": "2025-09-02",
+        "cisaActionDue": "2025-09-23",
+        "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+        "cisaVulnerabilityName": "Meta Platforms WhatsApp Incorrect Authorization Vulnerability",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Incomplete authorization of linked device synchronization messages in WhatsApp for iOS prior to v2.25.21.73, WhatsApp Business for iOS v2.25.21.78, and WhatsApp for Mac v2.25.21.78 could have allowed an unrelated user to trigger processing of content from an arbitrary URL on a target’s device. We assess that this vulnerability, in combination with an OS-level vulnerability on Apple platforms (CVE-2025-43300), may have been exploited in a sophisticated attack against specific targeted users."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:N",
+                "baseScore": 5.4,
+                "baseSeverity": "MEDIUM"
+              },
+              "source": "cve-assign@fb.com",
+              "type": "Secondary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 2.5
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-863"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:whatsapp:whatsapp:*:*:*:*:*:iphone_os:*:*",
+                    "matchCriteriaId": "AD89DE9C-CE23-499F-8436-3DA8B2A2ECF4",
+                    "versionStartIncluding": "2.22.25.2",
+                    "versionEndExcluding": "2.25.21.73"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:whatsapp:whatsapp:*:*:*:*:*:macos:*:*",
+                    "matchCriteriaId": "CA1A1B3A-90A5-4EA1-AC4B-715127CE9DE7",
+                    "versionStartIncluding": "2.22.25.2",
+                    "versionEndExcluding": "2.25.21.78"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:whatsapp:whatsapp_business:*:*:*:*:*:iphone_os:*:*",
+                    "matchCriteriaId": "5DE9273B-2DA9-4BCE-8840-CB0B63163646",
+                    "versionStartIncluding": "2.22.25.2",
+                    "versionEndExcluding": "2.25.21.78"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://www.facebook.com/security/advisories/cve-2025-55177",
+            "source": "cve-assign@fb.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://www.whatsapp.com/security/advisories/2025/",
+            "source": "cve-assign@fb.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2025-55177",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "US Government Resource"
+            ]
+          }
+        ]
+      },
+      "risk_score": 88,
+      "rank": 1
+    },
+    {
+      "cve_id": "CVE-2006-5125",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 0.12785,
+            "score_date": "2025-07-13"
+          },
+          "current": {
+            "score": 0.25021,
+            "score_date": "2025-09-02"
+          },
+          "delta": 0.12236
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2006-10-03",
+        "description": "Directory traversal vulnerability in window.php, possibly used by home.php, in Joshua Muheim phpMyWebmin 1.0 allows remote attackers to obtain sensitive information via a directory name in the target parameter, which triggers a directory listing through the opendir function.",
+        "title": "joshua_muheim phpmywebmin Directory Traversal",
+        "vendor": "joshua_muheim",
+        "product": "phpmywebmin",
+        "attack_type": "Directory Traversal",
+        "cvss_max": 5.0
+      },
+      "cve": {
+        "id": "CVE-2006-5125",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2006-10-03T04:03:00.000",
+        "lastModified": "2026-04-23T00:35:47.467",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Directory traversal vulnerability in window.php, possibly used by home.php, in Joshua Muheim phpMyWebmin 1.0 allows remote attackers to obtain sensitive information via a directory name in the target parameter, which triggers a directory listing through the opendir function."
+          },
+          {
+            "lang": "es",
+            "value": "Vulnerabilida de atravesamiento de directorios en window.php, posiblemente usado con home.php, en Joshua Muheim phpMyWebmin 1.0 permite a un atacante remoto obtener información sensible a través del nombre de directorio en el parámetro target, lo cual dispara un listado de directorio a través de la función opendir."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV2": [
+            {
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:L/Au:N/C:P/I:N/A:N",
+                "baseScore": 5.0,
+                "baseSeverity": "MEDIUM"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "baseSeverity": "MEDIUM",
+              "exploitabilityScore": 10.0,
+              "impactScore": 2.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "NVD-CWE-Other"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:joshua_muheim:phpmywebmin:1.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "B6CCDB69-509C-4F14-8821-E09CF9F66EC6"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "http://kernel-32.blogspot.com/2006/09/php-mywebmin-10-remote-file-include.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit"
+            ]
+          },
+          {
+            "url": "http://secunia.com/advisories/22178",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "http://www.securityfocus.com/bid/20264",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit"
+            ]
+          },
+          {
+            "url": "http://www.vupen.com/english/advisories/2006/3846",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "https://exchange.xforce.ibmcloud.com/vulnerabilities/29259",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "https://www.exploit-db.com/exploits/2451",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          }
+        ]
+      },
+      "risk_score": 78,
+      "rank": 2
+    },
+    {
+      "cve_id": "CVE-2025-22429",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-09-02",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-09-02",
+        "description": "In multiple locations, there is a possible way to execute arbitrary code due to a logic error in the code. This could lead to local escalation of privilege with no additional execution privileges needed. User interaction is not needed for exploitation.",
+        "title": "google android privilege escalation",
+        "vendor": "google",
+        "product": "android",
+        "attack_type": "privilege escalation",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-22429",
+        "sourceIdentifier": "security@android.com",
+        "published": "2025-09-02T23:15:34.180",
+        "lastModified": "2025-09-04T16:39:18.600",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "In multiple locations, there is a possible way to execute arbitrary code due to a logic error in the code. This could lead to local escalation of privilege with no additional execution privileges needed. User interaction is not needed for exploitation."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-693"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:google:android:13.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "879FFD0C-9B38-4CAA-B057-1086D794D469"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:google:android:14.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "2700BCC5-634D-4EC6-AB67-5B678D5F951D"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:google:android:15.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "8538774C-906D-4B03-A3E7-FA7A55E0DA9E"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://android.googlesource.com/platform/frameworks/base/+/ece83fb425b1e912a036e9985b710910e2e3ca37",
+            "source": "security@android.com",
+            "tags": [
+              "Product"
+            ]
+          },
+          {
+            "url": "https://source.android.com/security/bulletin/2025-04-01",
+            "source": "security@android.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 3
+    },
+    {
+      "cve_id": "CVE-2020-24363",
+      "signal_types": [
+        "KEV"
+      ],
+      "signals": {
+        "kev": {
+          "date_added": "2025-09-02"
+        },
+        "exploit": null,
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2020-08-31",
+        "description": "TP-Link TL-WA855RE V5 20200415-rel37464 devices allow an unauthenticated attacker (on the same network) to submit a TDDP_RESET POST request for a factory reset and reboot. The attacker can then obtain incorrect access control by setting a new administrative password.",
+        "title": "TP-link TL-WA855RE Missing Authentication for Critical Function Vulnerability",
+        "vendor": "tp-link",
+        "product": "tl-wa855re_firmware",
+        "cvss_max": 8.8
+      },
+      "cve": {
+        "id": "CVE-2020-24363",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2020-08-31T16:15:15.380",
+        "lastModified": "2025-11-07T22:02:12.810",
+        "vulnStatus": "Analyzed",
+        "cisaExploitAdd": "2025-09-02",
+        "cisaActionDue": "2025-09-23",
+        "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+        "cisaVulnerabilityName": "TP-link TL-WA855RE Missing Authentication for Critical Function Vulnerability",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "TP-Link TL-WA855RE V5 20200415-rel37464 devices allow an unauthenticated attacker (on the same network) to submit a TDDP_RESET POST request for a factory reset and reboot. The attacker can then obtain incorrect access control by setting a new administrative password."
+          },
+          {
+            "lang": "es",
+            "value": "Los dispositivos TP-Link TL-WA855RE versión V5 20200415-rel37464, permiten a un atacante no autenticado (en la misma red) enviar una petición POST TDDP_RESET para un restablecimiento de fábrica y reinicio. El atacante puede entonces obtener un control de acceso incorrecto al establecer una nueva contraseña administrativa"
+          }
+        ],
+        "metrics": {
+          "cvssMetricV2": [
+            {
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:A/AC:L/Au:N/C:C/I:C/A:C",
+                "baseScore": 8.3,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "baseSeverity": "HIGH",
+              "exploitabilityScore": 6.5,
+              "impactScore": 10.0
+            }
+          ],
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 8.8,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 5.9
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 8.8,
+                "baseSeverity": "HIGH"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-306"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          },
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-306"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:tp-link:tl-wa855re_firmware:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "86507650-088D-4963-A99D-93FE0ABEABD1",
+                    "versionEndExcluding": "200731"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:tp-link:tl-wa855re:v5:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "1B07916A-8E49-4DB0-8100-6CD07BAFBE06"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "http://malwrforensics.com/en/2020/08/31/cve-2020-24363-tl-wa855re-v5-advisory/",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://pastebin.com/VjHM4UiA",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.tp-link.com/us/support/download/tl-wa855re/#Firmware",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Product"
+            ]
+          },
+          {
+            "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2020-24363",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "US Government Resource"
+            ]
+          }
+        ]
+      },
+      "risk_score": 88,
+      "rank": 4
+    },
+    {
+      "cve_id": "CVE-2025-22435",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-09-02",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-09-02",
+        "description": "In avdt_msg_ind of avdt_msg.cc, there is a possible memory corruption due to type confusion. This could lead to paired device escalation of privilege with no additional execution privileges needed. User interaction is not needed for exploitation.",
+        "title": "google android Memory Corruption",
+        "vendor": "google",
+        "product": "android",
+        "attack_type": "Memory Corruption",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-22435",
+        "sourceIdentifier": "security@android.com",
+        "published": "2025-09-02T23:15:34.827",
+        "lastModified": "2025-09-04T16:38:05.697",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "In avdt_msg_ind of avdt_msg.cc, there is a possible memory corruption due to type confusion. This could lead to paired device escalation of privilege with no additional execution privileges needed. User interaction is not needed for exploitation."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-843"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:google:android:13.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "879FFD0C-9B38-4CAA-B057-1086D794D469"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:google:android:14.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "2700BCC5-634D-4EC6-AB67-5B678D5F951D"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:google:android:15.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "8538774C-906D-4B03-A3E7-FA7A55E0DA9E"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://android.googlesource.com/platform/packages/modules/Bluetooth/+/efa5f4ef386a8947f4777840c5cefff389740e86",
+            "source": "security@android.com",
+            "tags": [
+              "Product"
+            ]
+          },
+          {
+            "url": "https://source.android.com/security/bulletin/2025-04-01",
+            "source": "security@android.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 5
+    },
+    {
+      "cve_id": "CVE-2025-26416",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-09-02",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-09-02",
+        "description": "In initializeSwizzler of SkBmpStandardCodec.cpp, there is a possible out of bounds write due to a heap buffer overflow. This could lead to remote escalation of privilege with no additional execution privileges needed. User interaction is not needed for exploitation.",
+        "title": "google android Buffer Overflow",
+        "vendor": "google",
+        "product": "android",
+        "attack_type": "Buffer Overflow",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-26416",
+        "sourceIdentifier": "security@android.com",
+        "published": "2025-09-02T23:15:35.463",
+        "lastModified": "2025-09-04T16:37:27.790",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "In initializeSwizzler of SkBmpStandardCodec.cpp, there is a possible out of bounds write due to a heap buffer overflow. This could lead to remote escalation of privilege with no additional execution privileges needed. User interaction is not needed for exploitation."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-122"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:google:android:13.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "879FFD0C-9B38-4CAA-B057-1086D794D469"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:google:android:14.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "2700BCC5-634D-4EC6-AB67-5B678D5F951D"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:google:android:15.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "8538774C-906D-4B03-A3E7-FA7A55E0DA9E"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://android.googlesource.com/platform/external/skia/+/fc2ebb312c5898486776df981a51c2bb90e3756d",
+            "source": "security@android.com",
+            "tags": [
+              "Product"
+            ]
+          },
+          {
+            "url": "https://source.android.com/security/bulletin/2025-04-01",
+            "source": "security@android.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 6
+    },
+    {
+      "cve_id": "CVE-2025-52549",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-09-02",
+          "previous_max": null,
+          "current_max": 9.2
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-09-02",
+        "description": "E3 Site Supervisor Control (firmware version < 2.31F01) generates the root linux password on each boot. An attacker can generate the root linux password for a vulnerable device based on known or easy to fetch parameters.",
+        "title": "copeland e3_supervisory_controller_firmware",
+        "vendor": "copeland",
+        "product": "e3_supervisory_controller_firmware",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-52549",
+        "sourceIdentifier": "dd59f033-460c-4b88-a075-d4d3fedb6191",
+        "published": "2025-09-02T12:15:37.563",
+        "lastModified": "2025-10-01T18:23:48.017",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "E3 Site Supervisor Control (firmware version < 2.31F01) generates the root linux password on each boot. An attacker can generate the root linux password for a vulnerable device based on known or easy to fetch parameters."
+          },
+          {
+            "lang": "es",
+            "value": "E3 Site Supervisor Control (versión de firmware &lt; 2.31F01) genera la contraseña de root de Linux en cada arranque. Un atacante puede generar la contraseña de root de Linux para un dispositivo vulnerable basándose en parámetros conocidos o fáciles de obtener."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:L/SA:L/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.2,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "dd59f033-460c-4b88-a075-d4d3fedb6191",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-522"
+              }
+            ],
+            "source": "dd59f033-460c-4b88-a075-d4d3fedb6191"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:copeland:e3_supervisory_controller_firmware:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "791AC7BF-A584-446A-A5FB-CB282430567A",
+                    "versionEndExcluding": "2.31f01"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:copeland:site_supervisor_bx_860-1240:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "62991432-9156-4152-B940-4428A06ABBDA"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:copeland:site_supervisor_bxe_860-1245:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "7281C06F-83DC-4A57-9076-B666C643B1A0"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:copeland:site_supervisor_cx_860-1260:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "FC339BFF-3123-4BE2-8092-3AD6FBB0AEFF"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:copeland:site_supervisor_cxe_860-1265:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "C42AA549-5959-4E4D-81AD-9E04218EC157"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:copeland:site_supervisor_rx_860-1220:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "3F77BC1C-9709-40CB-AF4D-6A118D8F41E2"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:copeland:site_supervisor_rxe_860-1225:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "3F10BB44-439E-4823-8ECF-1700355C78E3"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:copeland:site_supervisor_sf_860-1200:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "B4909D80-1F06-437F-8D66-E39535B5E60D"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://www.armis.com/research/frostbyte10/",
+            "source": "dd59f033-460c-4b88-a075-d4d3fedb6191",
+            "tags": [
+              "Mitigation",
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 7
+    },
+    {
+      "cve_id": "CVE-2025-52551",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-09-02",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-09-02",
+        "description": "E2 Facility Management Systems use a proprietary protocol that allows for unauthenticated file operations on any file in the file system.",
+        "title": "E2 Facility Management Systems use a proprietary protocol that allows for unauthenticated file operations on any file in the file system.",
+        "cvss_max": 9.3
+      },
+      "cve": {
+        "id": "CVE-2025-52551",
+        "sourceIdentifier": "dd59f033-460c-4b88-a075-d4d3fedb6191",
+        "published": "2025-09-02T12:15:37.927",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "E2 Facility Management Systems use a proprietary protocol that allows for unauthenticated file operations on any file in the file system."
+          },
+          {
+            "lang": "es",
+            "value": "Los Sistemas de Gestión de Instalaciones E2 utilizan un protocolo propietario que permite operaciones de archivo no autenticadas en cualquier archivo del sistema de archivos."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:L/SA:L/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "dd59f033-460c-4b88-a075-d4d3fedb6191",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-306"
+              }
+            ],
+            "source": "dd59f033-460c-4b88-a075-d4d3fedb6191"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://www.armis.com/research/frostbyte10/",
+            "source": "dd59f033-460c-4b88-a075-d4d3fedb6191"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 8
+    },
+    {
+      "cve_id": "CVE-2025-5662",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-09-02",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-09-02",
+        "description": "A deserialization vulnerability exists in the H2O-3 REST API (POST /99/ImportSQLTable) that affects all versions up to 3.46.0.7. This vulnerability allows remote code execution (RCE) due to improper validation of JDBC connection parameters when using a Key-Value format. The vulnerability is present in the MySQL JDBC Driver version 8.0.19 and JDK version 8u112. The issue is resolved in version 3.46.0.8.",
+        "title": "A deserialization vulnerability exists in the H2O-3 REST API (POST /99/ImportSQLTable) that affects all versions up to 3.46.0.7.",
+        "attack_type": "RCE",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-5662",
+        "sourceIdentifier": "security@huntr.dev",
+        "published": "2025-09-02T12:15:38.420",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A deserialization vulnerability exists in the H2O-3 REST API (POST /99/ImportSQLTable) that affects all versions up to 3.46.0.7. This vulnerability allows remote code execution (RCE) due to improper validation of JDBC connection parameters when using a Key-Value format. The vulnerability is present in the MySQL JDBC Driver version 8.0.19 and JDK version 8u112. The issue is resolved in version 3.46.0.8."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV30": [
+            {
+              "cvssData": {
+                "version": "3.0",
+                "vectorString": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security@huntr.dev",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-502"
+              }
+            ],
+            "source": "security@huntr.dev"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/h2oai/h2o-3/commit/f714edd6b8429c7a7211b779b6ec108a95b7382d",
+            "source": "security@huntr.dev"
+          },
+          {
+            "url": "https://huntr.com/bounties/057a743b-b2ec-4312-8262-ce0ff8bc161c",
+            "source": "security@huntr.dev"
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 9
+    },
+    {
+      "cve_id": "CVE-2025-57140",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-09-02",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-09-02",
+        "description": "rsbi-pom 4.7 is vulnerable to SQL Injection in the /bi/service/model/DatasetService path.",
+        "title": "ruisitech ruisibi SQL Injection",
+        "vendor": "ruisitech",
+        "product": "ruisibi",
+        "attack_type": "SQL Injection",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-57140",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2025-09-02T12:15:38.273",
+        "lastModified": "2025-09-04T17:46:32.590",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "rsbi-pom 4.7 is vulnerable to SQL Injection in the /bi/service/model/DatasetService path."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-89"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:ruisitech:ruisibi:4.7:*:*:*:open_source:*:*:*",
+                    "matchCriteriaId": "AC35E925-81B5-42CE-9194-28916ACCDEB7"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/line2222/vuln/issues/5",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Exploit",
+              "Issue Tracking",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/ruisibi/rsbi-pom",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Product"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 10
+    },
+    {
+      "cve_id": "CVE-2025-6519",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-09-02",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-09-02",
+        "description": "E3 Site Supervisor (firmware version < 2.31F01) has a default admin user \"ONEDAY\" with a daily generated password. An attacker can predictably generate the password for ONEDAY. The oneday user cannot be deleted or modified by any user.",
+        "title": "copeland e3_supervisory_controller_firmware",
+        "vendor": "copeland",
+        "product": "e3_supervisory_controller_firmware",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-6519",
+        "sourceIdentifier": "dd59f033-460c-4b88-a075-d4d3fedb6191",
+        "published": "2025-09-02T12:15:38.607",
+        "lastModified": "2025-10-10T14:18:29.190",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "E3 Site Supervisor (firmware version < 2.31F01) has a default admin user \"ONEDAY\" with a daily generated password. An attacker can predictably generate the password for ONEDAY. The oneday user cannot be deleted or modified by any user."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:L/SA:L/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "dd59f033-460c-4b88-a075-d4d3fedb6191",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-522"
+              }
+            ],
+            "source": "dd59f033-460c-4b88-a075-d4d3fedb6191"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:copeland:e3_supervisory_controller_firmware:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "791AC7BF-A584-446A-A5FB-CB282430567A",
+                    "versionEndExcluding": "2.31f01"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:copeland:site_supervisor_bx_860-1240:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "62991432-9156-4152-B940-4428A06ABBDA"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:copeland:site_supervisor_bxe_860-1245:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "7281C06F-83DC-4A57-9076-B666C643B1A0"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:copeland:site_supervisor_cx_860-1260:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "FC339BFF-3123-4BE2-8092-3AD6FBB0AEFF"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:copeland:site_supervisor_cxe_860-1265:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "C42AA549-5959-4E4D-81AD-9E04218EC157"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:copeland:site_supervisor_rx_860-1220:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "3F77BC1C-9709-40CB-AF4D-6A118D8F41E2"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:copeland:site_supervisor_rxe_860-1225:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "3F10BB44-439E-4823-8ECF-1700355C78E3"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:copeland:site_supervisor_sf_860-1200:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "B4909D80-1F06-437F-8D66-E39535B5E60D"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://www.armis.com/research/frostbyte10/",
+            "source": "dd59f033-460c-4b88-a075-d4d3fedb6191",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 11
+    },
+    {
+      "cve_id": "CVE-2025-9276",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-09-02",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-09-02",
+        "description": "Cockroach Labs cockroach-k8s-request-cert Empty Root Password Authentication Bypass Vulnerability. This vulnerability could allow remote attackers to bypass authentication on systems that use the affected version of the Cockroach Labs cockroach-k8s-request-cert container image.\n\nThe specific flaw exists within the configuration of the system shadow file. The issue results from a blank password setting for the root user. An attacker can leverage this vulnerability to bypass authentication on the system. Was ZDI-CAN-22195.",
+        "title": "cockroachlabs cockroach-k8s-request-cert Auth Bypass",
+        "vendor": "cockroachlabs",
+        "product": "cockroach-k8s-request-cert",
+        "attack_type": "Auth Bypass",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-9276",
+        "sourceIdentifier": "zdi-disclosures@trendmicro.com",
+        "published": "2025-09-02T20:15:40.407",
+        "lastModified": "2026-01-30T20:27:48.443",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Cockroach Labs cockroach-k8s-request-cert Empty Root Password Authentication Bypass Vulnerability. This vulnerability could allow remote attackers to bypass authentication on systems that use the affected version of the Cockroach Labs cockroach-k8s-request-cert container image.\n\nThe specific flaw exists within the configuration of the system shadow file. The issue results from a blank password setting for the root user. An attacker can leverage this vulnerability to bypass authentication on the system. Was ZDI-CAN-22195."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV30": [
+            {
+              "cvssData": {
+                "version": "3.0",
+                "vectorString": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "zdi-disclosures@trendmicro.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-258"
+              }
+            ],
+            "source": "zdi-disclosures@trendmicro.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cockroachlabs:cockroach-k8s-request-cert:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "CBB30F23-8C96-4747-B2BC-7508F7A96D45"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://www.zerodayinitiative.com/advisories/ZDI-25-855/",
+            "source": "zdi-disclosures@trendmicro.com",
+            "tags": [
+              "Mitigation",
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 12
+    },
+    {
+      "cve_id": "CVE-2025-9696",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-09-02",
+          "previous_max": null,
+          "current_max": 9.4
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-09-02",
+        "description": "The SunPower PVS6's BluetoothLE interface is vulnerable due to its use of hardcoded encryption parameters and publicly accessible protocol details. An attacker within Bluetooth range could exploit this vulnerability to gain full access to the device's servicing interface. This access allows the attacker to perform actions such as firmware replacement, disabling power production, modifying grid settings, creating SSH tunnels, altering firewall settings, and manipulating connected devices.",
+        "title": "The SunPower PVS6's BluetoothLE interface is vulnerable due to its use of hardcoded encryption parameters and publicly accessible protoco...",
+        "cvss_max": 9.4
+      },
+      "cve": {
+        "id": "CVE-2025-9696",
+        "sourceIdentifier": "ics-cert@hq.dhs.gov",
+        "published": "2025-09-02T17:15:36.403",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The SunPower PVS6's BluetoothLE interface is vulnerable due to its use of hardcoded encryption parameters and publicly accessible protocol details. An attacker within Bluetooth range could exploit this vulnerability to gain full access to the device's servicing interface. This access allows the attacker to perform actions such as firmware replacement, disabling power production, modifying grid settings, creating SSH tunnels, altering firewall settings, and manipulating connected devices."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:A/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.4,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "ics-cert@hq.dhs.gov",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-798"
+              }
+            ],
+            "source": "ics-cert@hq.dhs.gov"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-25-245-03",
+            "source": "ics-cert@hq.dhs.gov"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 13
+    }
+  ],
+  "source": "https://www.cvelogic.com/threat-intelligence/2025-09-02"
+}

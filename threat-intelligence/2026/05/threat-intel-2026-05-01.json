@@ -1,0 +1,3475 @@
+{
+  "schema_version": "2.2",
+  "generated_at": "2026-06-02T07:03:54Z",
+  "day": "2026-05-01",
+  "window": {
+    "utc_start": "2026-05-01",
+    "utc_end": "2026-05-01",
+    "days": 1
+  },
+  "summary": {
+    "brief": "Linux Kernel added to CISA KEV — confirmed in-the-wild exploitation. · Exploitation likelihood rose sharply (EPSS 0.0% → 33% · rising (+33%)). · 10 new critical disclosures — review patch status on exposed services.",
+    "bullets": [
+      "Linux Kernel added to CISA KEV — confirmed in-the-wild exploitation.",
+      "Exploitation likelihood rose sharply (EPSS 0.0% → 33% · rising (+33%)).",
+      "10 new critical disclosures — review patch status on exposed services."
+    ],
+    "counts": {
+      "cves": 15,
+      "kev": 1,
+      "exploit": 0,
+      "epss": 4,
+      "cvss": 10,
+      "patch": 0
+    }
+  },
+  "cves": [
+    {
+      "cve_id": "CVE-2026-31431",
+      "signal_types": [
+        "KEV"
+      ],
+      "signals": {
+        "kev": {
+          "date_added": "2026-05-01"
+        },
+        "exploit": null,
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-04-22",
+        "description": "In the Linux kernel, the following vulnerability has been resolved:\n\ncrypto: algif_aead - Revert to operating out-of-place\n\nThis mostly reverts commit 72548b093ee3 except for the copying of\nthe associated data.\n\nThere is no benefit in operating in-place in algif_aead since the\nsource and destination come from different mappings.  Get rid of\nall the complexity added for in-place operation and just copy the\nAD directly.",
+        "title": "Linux Kernel Incorrect Resource Transfer Between Spheres Vulnerability",
+        "vendor": "linux",
+        "product": "linux_kernel",
+        "cvss_max": 7.8
+      },
+      "cve": {
+        "id": "CVE-2026-31431",
+        "sourceIdentifier": "416baaa9-dc9f-4396-8d5f-8c081fb06d67",
+        "published": "2026-04-22T09:16:21.270",
+        "lastModified": "2026-05-21T19:52:35.217",
+        "vulnStatus": "Analyzed",
+        "cisaExploitAdd": "2026-05-01",
+        "cisaActionDue": "2026-05-15",
+        "cisaRequiredAction": "\"Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+        "cisaVulnerabilityName": "Linux Kernel Incorrect Resource Transfer Between Spheres Vulnerability",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "In the Linux kernel, the following vulnerability has been resolved:\n\ncrypto: algif_aead - Revert to operating out-of-place\n\nThis mostly reverts commit 72548b093ee3 except for the copying of\nthe associated data.\n\nThere is no benefit in operating in-place in algif_aead since the\nsource and destination come from different mappings.  Get rid of\nall the complexity added for in-place operation and just copy the\nAD directly."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 7.8,
+                "baseSeverity": "HIGH"
+              },
+              "source": "416baaa9-dc9f-4396-8d5f-8c081fb06d67",
+              "type": "Secondary",
+              "exploitabilityScore": 1.8,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-669"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "24B62F9A-357D-465D-97EB-2819B1CD663C",
+                    "versionStartIncluding": "4.14",
+                    "versionEndExcluding": "5.10.254"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "FA800016-0012-4E3F-A528-2A7F378A0A4A",
+                    "versionStartIncluding": "5.11",
+                    "versionEndExcluding": "5.15.204"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "E6653854-B188-42DD-B8C5-0143F1956AB1",
+                    "versionStartIncluding": "5.16",
+                    "versionEndExcluding": "6.1.170"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "3CA3EF52-168A-4348-8F5F-356C9EB69261",
+                    "versionStartIncluding": "6.2",
+                    "versionEndExcluding": "6.6.137"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "F17D292D-A9B5-4DC7-8002-51AB95335606",
+                    "versionStartIncluding": "6.7",
+                    "versionEndExcluding": "6.12.85"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "C9DF8BCE-36D3-475D-9D21-19E4F02F9029",
+                    "versionStartIncluding": "6.13",
+                    "versionEndExcluding": "6.18.22"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "0A2B9540-02D5-41B4-B16A-82AF66FD4F36",
+                    "versionStartIncluding": "6.19",
+                    "versionEndExcluding": "6.19.12"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:7.0:rc1:*:*:*:*:*:*",
+                    "matchCriteriaId": "F253B622-8837-4245-BCE5-A7BF8FC76A16"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:7.0:rc2:*:*:*:*:*:*",
+                    "matchCriteriaId": "4AE85AD8-4641-4E7C-A2F4-305E2CD9EE64"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:7.0:rc3:*:*:*:*:*:*",
+                    "matchCriteriaId": "F666C8D8-6538-46D4-B318-87610DE64C34"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:7.0:rc4:*:*:*:*:*:*",
+                    "matchCriteriaId": "02259FDA-961B-47BC-AE7F-93D7EC6E90C2"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:7.0:rc5:*:*:*:*:*:*",
+                    "matchCriteriaId": "58A9FEFF-C040-420D-8F0A-BFDAAA1DF258"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:7.0:rc6:*:*:*:*:*:*",
+                    "matchCriteriaId": "1D2315C0-D46F-4F85-9754-F9E5E11374A6"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:redhat:openshift_container_platform:4.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "932D137F-528B-4526-9A89-CD59FA1AB0FE"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:redhat:enterprise_linux:8.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "F4CFF558-3C47-480D-A2F0-BABF26042943"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:redhat:enterprise_linux:9.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "7F6FB57C-2BC7-487C-96DD-132683AEB35D"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:redhat:enterprise_linux:10.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "D65C2163-CFC2-4ABB-8F4E-CB09CEBD006C"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:redhat:enterprise_linux:10.1:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "4A751E0D-F417-4230-9C1F-A9AA43F6D8ED"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:amazon:amazon_linux:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "C8699C74-BF90-4CF8-9285-32576DB1FE2B"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:canonical:ubuntu_linux:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "019A2188-0877-45DE-8512-F0BF70DD179C"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:debian:debian_linux:11.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "FA6FEEC2-9F11-4643-8827-749718254FED"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:debian:debian_linux:12.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "46D69DCC-AE4D-4EA5-861C-D60951444C6C"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:debian:debian_linux:13.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "204FC6CC-9DAC-45FB-8A9F-C9C8EDD29D54"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:opensuse:leap:15.3:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "090F0D1A-6BF8-4810-8942-3FFE4FBF7FE0"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:opensuse:leap:15.4:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "BE80EB04-7F9D-4C0B-85DB-4A13DEACB5E4"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:opensuse:leap:15.5:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "E79D3E16-E284-40C6-916E-2EE78102BF4A"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:opensuse:leap:15.6:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "78B4F1C7-A301-4C94-A41C-A51182B83677"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:suse:caas_platform:4.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "5AB27A2D-549C-450E-A09E-B3316895F052"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:suse:enterprise_storage:6.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "3B20D44D-F87E-4692-8E04-695683F1ECE6"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:suse:enterprise_storage:7.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "F7305944-AC9C-47A3-AADF-71A8B24830D1"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:suse:enterprise_storage:7.1:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "D9A626D2-FF84-40BB-B5A2-053D64992FE5"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:suse:manager_proxy:4.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "71A42960-17FA-4F96-8CF4-BADAB702EBA4"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:suse:manager_proxy:4.1:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "9910C73A-3BCD-4F56-8C7D-79CB289640A2"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:suse:manager_proxy:4.2:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "B0156BFA-9E83-43E6-9C73-9711AD054B5A"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:suse:manager_proxy:4.3:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "CAC2D0A4-56F8-4ED6-91E2-78434A016C5F"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:suse:manager_retail_branch_server:4.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "A4F81939-C109-4643-951E-42F8F20F4672"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:suse:manager_retail_branch_server:4.1:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "450A3B3F-F26D-4EAB-BF5D-4C906C4A99DD"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:suse:manager_retail_branch_server:4.2:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "BD5BDD59-5008-4DDC-B805-BB6B7DE8E1A6"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:suse:manager_retail_branch_server:4.3:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "A69D3CCD-6590-46EF-9D3F-E903AB78E3BA"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:suse:manager_server:4.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "51136B38-5715-49B3-BD8D-91F90632247D"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:suse:manager_server:4.1:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "B5810E98-7BF5-42E2-9DE9-661049ABE367"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:suse:manager_server:4.2:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "0E46DEFD-659D-4D8F-BCD8-6B8A022F8FB0"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:suse:manager_server:4.3:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "A1532304-0EA2-4816-B481-C87C7386DC88"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:suse:openstack_cloud:9.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "83F8A7D8-FD3E-4C36-AB2A-A61449BF38C5"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:suse:openstack_cloud_crowbar:9.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "B631400C-0A5A-45A3-9DFA-B419E83D324E"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:suse:basesystem_module:15:sp1:*:*:*:suse_linux_enterprise:*:*",
+                    "matchCriteriaId": "357F7687-7710-4F51-A655-E02F3A3603FF"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:suse:basesystem_module:15:sp2:*:*:*:suse_linux_enterprise:*:*",
+                    "matchCriteriaId": "9199A62B-B38B-482D-9557-7E43A6E13774"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:suse:basesystem_module:15:sp3:*:*:*:suse_linux_enterprise:*:*",
+                    "matchCriteriaId": "02D86BE4-C975-4F28-861D-3313E144BAC3"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:suse:basesystem_module:15:sp4:*:*:*:suse_linux_enterprise:*:*",
+                    "matchCriteriaId": "2268D43F-6457-4708-AB00-F111B5945016"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:suse:basesystem_module:15:sp5:*:*:*:suse_linux_enterprise:*:*",
+                    "matchCriteriaId": "990A2271-69DA-4FC9-BD7B-2D1A22BF26E0"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:suse:basesystem_module:15:sp6:*:*:*:suse_linux_enterprise:*:*",
+                    "matchCriteriaId": "31785EF5-12E3-44EB-9391-B34C9476A075"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:suse:basesystem_module:15:sp7:*:*:*:suse_linux_enterprise:*:*",
+                    "matchCriteriaId": "2E177376-B887-4D00-BD07-60C1B862901F"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:suse:development_tools_module:15:sp1:*:*:*:suse_linux_enterprise:*:*",
+                    "matchCriteriaId": "58DEE083-487A-4C64-A269-CD5C63D4A273"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:suse:development_tools_module:15:sp2:*:*:*:suse_linux_enterprise:*:*",
+                    "matchCriteriaId": "0E65BF75-2DE8-46D3-8A34-BC5EDB9B66D2"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:suse:development_tools_module:15:sp3:*:*:*:suse_linux_enterprise:*:*",
+                    "matchCriteriaId": "D15DC0F1-2C7A-45F3-BC08-82A4B925B2B2"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:suse:development_tools_module:15:sp4:*:*:*:suse_linux_enterprise:*:*",
+                    "matchCriteriaId": "E7DF4886-9D35-4415-A727-A08FEBF7128C"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:suse:development_tools_module:15:sp5:*:*:*:suse_linux_enterprise:*:*",
+                    "matchCriteriaId": "6997F266-74C0-41A2-B157-F3E09A3A9C5A"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:suse:development_tools_module:15:sp6:*:*:*:suse_linux_enterprise:*:*",
+                    "matchCriteriaId": "AA273F5C-BE4E-410B-9192-0DD9473E9822"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:suse:development_tools_module:15:sp7:*:*:*:suse_linux_enterprise:*:*",
+                    "matchCriteriaId": "0A9B8201-C85C-46A9-B597-57711971F402"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:suse:legacy_module:15:sp7:*:*:*:suse_linux_enterprise:*:*",
+                    "matchCriteriaId": "F60DD081-8FD5-4C2B-96BB-18CED178031F"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:suse:linux_enterprise_desktop:11:sp4:*:*:*:*:*:*",
+                    "matchCriteriaId": "17D4B6F2-514D-4BC2-B2C5-4E2FCCAC594C"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:suse:linux_enterprise_desktop:12:sp4:*:*:*:*:*:*",
+                    "matchCriteriaId": "55242557-663C-4870-A439-4C8FEEB69E7F"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:suse:linux_enterprise_desktop:15:sp1:*:*:*:*:*:*",
+                    "matchCriteriaId": "7BBB0C06-3CCE-40B2-8CEA-F4303D861C9C"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:suse:linux_enterprise_desktop:15:sp2:*:*:*:*:*:*",
+                    "matchCriteriaId": "8C4F62C0-4188-433A-8292-559025CA23C0"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:suse:linux_enterprise_desktop:15:sp3:*:*:*:*:*:*",
+                    "matchCriteriaId": "ACB76FF0-B939-42E9-842B-171E929F317D"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:suse:linux_enterprise_desktop:15:sp4:*:*:*:*:*:*",
+                    "matchCriteriaId": "F648F64B-C3F2-4B14-906D-E48345303F0E"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:suse:linux_enterprise_desktop:15:sp5:*:*:*:*:*:*",
+                    "matchCriteriaId": "3298F3F6-F8A1-41CC-AD83-C584CA103757"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:suse:linux_enterprise_desktop:15:sp6:*:*:*:*:*:*",
+                    "matchCriteriaId": "B83183BD-A440-4697-8DD8-8A478C428984"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:suse:linux_enterprise_desktop:15:sp7:*:*:*:*:*:*",
+                    "matchCriteriaId": "B4388826-A383-4FBA-819A-363EAF6183DE"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:suse:linux_enterprise_high_availability_extension:15:sp4:*:*:*:*:*:*",
+                    "matchCriteriaId": "F1FCE4D2-1DEA-47B8-B8E2-28BF9F6B4427"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:suse:linux_enterprise_high_availability_extension:15:sp6:*:*:*:*:*:*",
+                    "matchCriteriaId": "CD0E86ED-467D-4904-A264-EA4A3DC43FAE"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:suse:linux_enterprise_high_availability_extension:15:sp7:*:*:*:*:*:*",
+                    "matchCriteriaId": "6D4A57E9-3F8E-487B-BAC8-0F85DC776C01"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:suse:linux_enterprise_high_availability_extension:16.0:-:*:*:*:*:*:*",
+                    "matchCriteriaId": "E00590A7-67FA-419C-8B98-3B7F7EBA3DC1"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:suse:linux_enterprise_high_performance_computing:15.0:sp1:*:*:-:*:*:*",
+                    "matchCriteriaId": "5EB65449-AE21-4EE9-B0A1-6E7F984BA33F"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:suse:linux_enterprise_high_performance_computing:15.0:sp1:*:*:espos:*:*:*",
+                    "matchCriteriaId": "89C89474-3F7A-499E-8E7C-25952584A68C"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:suse:linux_enterprise_high_performance_computing:15.0:sp1:*:*:ltss:*:*:*",
+                    "matchCriteriaId": "CA2E84A0-A9ED-411B-9963-647D8A95D3D5"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:suse:linux_enterprise_high_performance_computing:15.0:sp2:*:*:-:*:*:*",
+                    "matchCriteriaId": "6426BD94-DEE9-4833-B266-747DAD834366"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:suse:linux_enterprise_high_performance_computing:15.0:sp2:*:*:espos:*:*:*",
+                    "matchCriteriaId": "455B5F70-FDA0-4AE3-9C62-F0BC8E6C3D85"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:suse:linux_enterprise_high_performance_computing:15.0:sp2:*:*:ltss:*:*:*",
+                    "matchCriteriaId": "A0E17861-F7C2-479B-B687-42419ADED014"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:suse:linux_enterprise_high_performance_computing:15.0:sp3:*:*:-:*:*:*",
+                    "matchCriteriaId": "75A0B727-33A9-416B-9E83-5103ABE856B4"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:suse:linux_enterprise_high_performance_computing:15.0:sp3:*:*:espos:*:*:*",
+                    "matchCriteriaId": "C46EFE88-003E-45C7-9BB3-CCC6B4E5E012"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:suse:linux_enterprise_high_performance_computing:15.0:sp3:*:*:ltss:*:*:*",
+                    "matchCriteriaId": "4B6D6786-D47A-49D3-A368-775417B47AE3"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:suse:linux_enterprise_high_performance_computing:15.0:sp4:*:*:-:*:*:*",
+                    "matchCriteriaId": "D0E679A3-3EAC-4603-BD89-E04EE26845B2"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:suse:linux_enterprise_high_performance_computing:15.0:sp4:*:*:espos:*:*:*",
+                    "matchCriteriaId": "3A766D20-F8F6-47D7-BB8A-298E6D4A557B"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:suse:linux_enterprise_high_performance_computing:15.0:sp4:*:*:ltss:*:*:*",
+                    "matchCriteriaId": "E7C37E18-03E4-4618-A5DF-3B4C307AE262"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:suse:linux_enterprise_high_performance_computing:15.0:sp5:*:*:-:*:*:*",
+                    "matchCriteriaId": "26F5E65A-CC1E-43D7-8181-53ACF3D04D01"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:suse:linux_enterprise_high_performance_computing:15.0:sp5:*:*:espos:*:*:*",
+                    "matchCriteriaId": "AFECB8BB-9BFE-4725-BEF0-D05DC7858E76"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:suse:linux_enterprise_high_performance_computing:15.0:sp5:*:*:ltss:*:*:*",
+                    "matchCriteriaId": "4E3D5431-943A-47E6-9702-BD9FC39FF18E"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:suse:linux_enterprise_high_performance_computing:15.0:sp6:*:*:-:*:*:*",
+                    "matchCriteriaId": "E3F9185F-365B-4DA9-A406-B474792C45A4"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:suse:linux_enterprise_high_performance_computing:15.0:sp7:*:*:-:*:*:*",
+                    "matchCriteriaId": "D1570F75-DBEA-4B52-B499-06E7D100E270"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:suse:linux_enterprise_live_patching:12:sp5:*:*:*:*:*:*",
+                    "matchCriteriaId": "1D26195B-07AA-4320-A0C9-D322266DEC68"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:suse:linux_enterprise_live_patching:15:sp4:*:*:*:*:*:*",
+                    "matchCriteriaId": "CADD34DE-2694-4F53-9CEE-765A981565DB"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:suse:linux_enterprise_live_patching:15:sp5:*:*:*:*:*:*",
+                    "matchCriteriaId": "0F229A3A-A13F-46E7-9A29-3FA43EE44D79"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:suse:linux_enterprise_live_patching:15:sp6:*:*:*:*:*:*",
+                    "matchCriteriaId": "B717A471-D104-4D66-9EDB-BF65C96E0A15"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:suse:linux_enterprise_live_patching:15:sp7:*:*:*:*:*:*",
+                    "matchCriteriaId": "B59781EB-6D62-4619-AC92-F858BDF0D430"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:suse:linux_enterprise_micro:5.0:*:*:*:*:-:*:*",
+                    "matchCriteriaId": "620CB473-D500-49B1-ABD5-A2C6DB641DD9"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:suse:linux_enterprise_micro:5.1:*:*:*:*:-:*:*",
+                    "matchCriteriaId": "FE7DC148-F244-4AEA-8803-17ADF8DC4AC7"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:suse:linux_enterprise_micro:5.2:*:*:*:*:-:*:*",
+                    "matchCriteriaId": "EACDFD9B-C423-4FD1-B9AA-0D6D7D93CB36"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:suse:linux_enterprise_micro:5.2:*:*:*:*:rancher:*:*",
+                    "matchCriteriaId": "825D86FE-87DA-4389-8097-D7CF34718CB2"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:suse:linux_enterprise_micro:5.3:*:*:*:*:-:*:*",
+                    "matchCriteriaId": "E037079A-283D-460C-A76D-E436C575352B"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:suse:linux_enterprise_micro:5.3:*:*:*:*:rancher:*:*",
+                    "matchCriteriaId": "E1BB6675-DF28-4494-A956-06915DE98A09"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:suse:linux_enterprise_micro:5.4:*:*:*:*:-:*:*",
+                    "matchCriteriaId": "0D7CF925-609A-41DD-A76A-4D8F6C05729A"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:suse:linux_enterprise_micro:5.4:*:*:*:*:rancher:*:*",
+                    "matchCriteriaId": "E9138B27-95CD-4064-AB74-CD1364DA3D3F"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:suse:linux_enterprise_micro:5.5:*:*:*:*:-:*:*",
+                    "matchCriteriaId": "6683D4D9-9647-4C06-A729-8CE2DFE195E8"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:suse:linux_enterprise_real_time:15.0:sp2:*:*:*:*:*:*",
+                    "matchCriteriaId": "4B0AC584-5E26-4ACE-BC19-9E69A302F238"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:suse:linux_enterprise_real_time:15.0:sp3:*:*:*:*:*:*",
+                    "matchCriteriaId": "17377C9F-F429-47B2-AC4D-17CE243ED949"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:suse:linux_enterprise_real_time:15.0:sp4:*:*:*:*:*:*",
+                    "matchCriteriaId": "62DC1612-368F-4D67-AA5E-E4719279DE4A"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:suse:linux_enterprise_real_time:15.0:sp5:*:*:*:*:*:*",
+                    "matchCriteriaId": "71E87389-289F-4FF6-928B-9A8E77387F65"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:suse:linux_enterprise_real_time:15.0:sp6:*:*:*:*:*:*",
+                    "matchCriteriaId": "E8772290-7B8F-4FF3-8114-0535E84E10F5"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:suse:linux_enterprise_real_time:15.0:sp7:*:*:*:*:*:*",
+                    "matchCriteriaId": "BF782A24-9E6B-4897-9402-37DBCA7A7332"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:suse:linux_enterprise_server:11:sp4:*:*:-:-:*:*",
+                    "matchCriteriaId": "A25FBA6E-EB0B-4FD3-A0CE-33CA9EB0CD62"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:suse:linux_enterprise_server:11:sp4:*:*:ltss:-:*:*",
+                    "matchCriteriaId": "0E13E83D-4249-45C1-8025-491EECA6F9F3"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:suse:linux_enterprise_server:11:sp4:*:*:ltss_extreme_core:-:*:*",
+                    "matchCriteriaId": "6BBDE786-4B07-4FD1-817F-948A19F97EE0"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:suse:linux_enterprise_server:12:sp4:*:*:-:-:*:*",
+                    "matchCriteriaId": "38373877-18C5-4CEB-A2F1-A6BCF63C1D79"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:suse:linux_enterprise_server:12:sp4:*:*:-:sap:*:*",
+                    "matchCriteriaId": "E279968E-C62B-4888-899A-2BF57E8F8692"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:suse:linux_enterprise_server:12:sp4:*:*:espos:-:*:*",
+                    "matchCriteriaId": "26CAA62D-796C-45E2-8797-64833C237D27"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:suse:linux_enterprise_server:12:sp4:*:*:ltss:-:*:*",
+                    "matchCriteriaId": "191B0B2D-5A5A-4206-B061-106C22C03C88"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:suse:linux_enterprise_server:12:sp5:*:*:-:-:*:*",
+                    "matchCriteriaId": "36E71D0E-6256-45D5-A0B8-518B3DB59718"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:suse:linux_enterprise_server:12:sp5:*:*:ltss:-:*:*",
+                    "matchCriteriaId": "FE4A9969-7684-44E0-AF88-437B6F5B2CAA"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:suse:linux_enterprise_server:12:sp5:*:*:ltss_extended_security:-:*:*",
+                    "matchCriteriaId": "1202065D-DE5A-4E7F-B01A-4D3915C5112A"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:suse:linux_enterprise_server:15:sp1:*:*:-:-:*:*",
+                    "matchCriteriaId": "60EF8A73-A078-49A9-8FDE-4B7F74B2E17B"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:suse:linux_enterprise_server:15:sp1:*:*:-:sap:*:*",
+                    "matchCriteriaId": "82A16781-8A1D-4FE4-84E8-19B6B8D5E6D0"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:suse:linux_enterprise_server:15:sp1:*:*:business_critical_linux:-:*:*",
+                    "matchCriteriaId": "26FDBC27-D993-4A93-BC70-753FA21F4C11"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:suse:linux_enterprise_server:15:sp1:*:*:ltss:-:*:*",
+                    "matchCriteriaId": "5BC409DF-47A5-4EAF-9DCA-9BA35BB1B2C5"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:suse:linux_enterprise_server:15:sp2:*:*:-:-:*:*",
+                    "matchCriteriaId": "2FAAE2BD-4063-4C24-B8C8-9638171A19B9"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:suse:linux_enterprise_server:15:sp2:*:*:-:sap:*:*",
+                    "matchCriteriaId": "1615874B-E07C-4DAB-9F48-34DA42915314"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:suse:linux_enterprise_server:15:sp2:*:*:business_critical_linux:-:*:*",
+                    "matchCriteriaId": "A256B5D1-49D2-4363-AAD6-30FD32F0D132"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:suse:linux_enterprise_server:15:sp2:*:*:ltss:-:*:*",
+                    "matchCriteriaId": "2AEA8A74-9D7D-410A-983E-7E69443DEA6B"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:suse:linux_enterprise_server:15:sp3:*:*:-:-:*:*",
+                    "matchCriteriaId": "F9771ADC-0560-4146-9CC2-690D3C3CE81F"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:suse:linux_enterprise_server:15:sp3:*:*:-:sap:*:*",
+                    "matchCriteriaId": "76840252-04F1-43C4-9A59-676B179650E0"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:suse:linux_enterprise_server:15:sp3:*:*:business_critical_linux:-:*:*",
+                    "matchCriteriaId": "7456711B-C403-48FC-AD77-92D5177D3175"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:suse:linux_enterprise_server:15:sp3:*:*:ltss:-:*:*",
+                    "matchCriteriaId": "3BE8B253-3C09-48C8-BAE8-3E953AAFA49F"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:suse:linux_enterprise_server:15:sp4:*:*:-:-:*:*",
+                    "matchCriteriaId": "9122256C-13F2-4322-95F1-9D83C9051A45"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:suse:linux_enterprise_server:15:sp4:*:*:-:sap:*:*",
+                    "matchCriteriaId": "CC23D242-B960-40D3-A395-174A1F270D4D"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:suse:linux_enterprise_server:15:sp4:*:*:ltss:-:*:*",
+                    "matchCriteriaId": "7053AA23-E12B-4B91-A641-724887F6A4DF"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:suse:linux_enterprise_server:15:sp5:*:*:-:-:*:*",
+                    "matchCriteriaId": "9E823F48-8554-4590-BC30-CA17ECAE9ED4"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:suse:linux_enterprise_server:15:sp5:*:*:-:sap:*:*",
+                    "matchCriteriaId": "0B02BB2D-5DB9-48DC-AB4F-B006D18234FA"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:suse:linux_enterprise_server:15:sp5:*:*:ltss:-:*:*",
+                    "matchCriteriaId": "8DFA6058-A5C9-4E87-9F34-B083E55A7EA3"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:suse:linux_enterprise_server:15:sp6:*:*:-:-:*:*",
+                    "matchCriteriaId": "BB84120C-48BB-4147-AAD3-39DEF003B57E"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:suse:linux_enterprise_server:15:sp6:*:*:-:sap:*:*",
+                    "matchCriteriaId": "8F9012DD-FFF8-4CED-AEA3-C22CB44C237F"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:suse:linux_enterprise_server:15:sp6:*:*:ltss:-:*:*",
+                    "matchCriteriaId": "B05BFB51-DBF6-4F71-83F8-C32BFB396404"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:suse:linux_enterprise_server:15:sp7:*:*:-:-:*:*",
+                    "matchCriteriaId": "CCE4946A-773A-443D-B5E3-839E637C3360"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:suse:linux_enterprise_server:15:sp7:*:*:-:sap:*:*",
+                    "matchCriteriaId": "C2F7F7D2-6E82-4FB4-8C44-3C7DEF123173"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:suse:linux_enterprise_server:16.0:-:*:*:-:-:*:*",
+                    "matchCriteriaId": "0F61E05F-DD0A-48AB-B7B2-8D84A5517FF2"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:suse:linux_enterprise_server:16.0:-:*:*:-:sap:*:*",
+                    "matchCriteriaId": "7DC085B3-7D3D-4FEB-B778-79FBDD87264A"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:suse:linux_enterprise_server:16.1:-:*:*:-:-:*:*",
+                    "matchCriteriaId": "09803492-7525-4B24-B34E-64BB9FF6FDBD"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:suse:linux_enterprise_server:16.1:-:*:*:-:sap:*:*",
+                    "matchCriteriaId": "56519853-7A3E-412C-A4F6-6921A1742033"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:suse:linux_enterprise_workstation_extension:15:sp7:*:*:*:*:*:*",
+                    "matchCriteriaId": "12E15CF5-8517-4AE1-9130-4CFA65C2F7C2"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:suse:linux_micro:6.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "5A4E809C-2AAD-4E86-A5F4-AB41CA669F40"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:suse:linux_micro:6.1:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "9DC86A69-74D3-4745-BC7C-BBAF80B2BCBE"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:suse:linux_micro:6.2:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "E9594AD7-3671-42D1-B07E-D8FE8782EDD7"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:suse:public_cloud_module:15:sp6:*:*:*:suse_linux_enterprise:*:*",
+                    "matchCriteriaId": "CEB648DC-0111-443B-A728-2D9B01EBC179"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:suse:public_cloud_module:15:sp7:*:*:*:suse_linux_enterprise:*:*",
+                    "matchCriteriaId": "6C09FB49-F594-4ECD-9686-4EDBC8BD1C1A"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:suse:realtime_module:15:sp3:*:*:*:suse_linux_enterprise:*:*",
+                    "matchCriteriaId": "9C713704-CEB4-4F44-BD93-77F0586DC518"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:suse:realtime_module:15:sp4:*:*:*:suse_linux_enterprise:*:*",
+                    "matchCriteriaId": "D7E2A9ED-6E69-46D7-85AC-2DB710AB7A84"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:suse:realtime_module:15:sp5:*:*:*:suse_linux_enterprise:*:*",
+                    "matchCriteriaId": "6C4BB4DD-2022-479F-8805-70B37E2B224C"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:suse:realtime_module:15:sp6:*:*:*:suse_linux_enterprise:*:*",
+                    "matchCriteriaId": "ACB1A9AF-E037-4FC1-8A35-E1D128005FA9"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:suse:realtime_module:15:sp7:*:*:*:suse_linux_enterprise:*:*",
+                    "matchCriteriaId": "DD298056-E8C4-4F7E-8CD5-784C201633D1"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:nixos:nixos:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "A1DAD7C2-EBFB-4DF5-A727-0A84F8F31619",
+                    "versionEndExcluding": "25.11"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:arista:cloudvision_agni:*:*:*:*:*:-:*:*",
+                    "matchCriteriaId": "A4C875E3-0FFA-4806-BA6C-EB2F8EBF76AF",
+                    "versionStartIncluding": "2024.4.0",
+                    "versionEndIncluding": "2025.2.2"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:arista:cloudvision_portal:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "0ADB58FD-7F44-4BA1-9A55-21E220B4FFDF",
+                    "versionStartIncluding": "2024.2.0",
+                    "versionEndIncluding": "2026.1.0"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:arista:velocloud_edge:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "1A9C5C40-C542-4320-9777-29A0F2D70220",
+                    "versionStartIncluding": "4.5.0",
+                    "versionEndIncluding": "6.4.1"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:arista:velocloud_gateway:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "88F2CE3D-1529-4A87-BD14-173BF206D7A9"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vmware:velocloud_orchestrator:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "1CE92745-C5FC-4FDD-B3FB-B712078C1348"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:arista:netvisor_os:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "A3349C40-C473-4744-AF72-AB6B0EBDB92F",
+                    "versionEndExcluding": "7.1.0"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:arista:netvisor_os:7.1.0:-:*:*:*:*:*:*",
+                    "matchCriteriaId": "447BB72F-95B9-4F2E-8CDD-74664AD045ED"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:arista:netvisor_os:7.1.0:hotfix7:*:*:*:*:*:*",
+                    "matchCriteriaId": "82A2BB74-B148-44F1-904E-325E89720073"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:siemens:simatic_s7-1500_cpu_1518-4_pn\\/dp_mfp_firmware:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "99E36624-A573-47D9-B158-B18A8A822FBA",
+                    "versionStartIncluding": "3.1.5"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:siemens:simatic_s7-1500_cpu_1518-4_pn\\/dp_mfp:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "3BC4FA01-8DDB-41E4-B759-7B504F78AEBC"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:siemens:simatic_s7-1500_cpu_1518f-4_pn\\/dp_mfp_firmware:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "2A7548B8-3DF7-46D9-8A4F-87C38969D900",
+                    "versionStartIncluding": "3.1.5"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:siemens:simatic_s7-1500_cpu_1518f-4_pn\\/dp_mfp:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "5B1EE93D-BAD2-4B86-910C-8784FCC9F398"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:siemens:siplus_s7-1500_cpu_1518-4_pn\\/dp_mfp_firmware:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "19F1C257-0EE6-47DE-B4BE-169F801FFDD8",
+                    "versionStartIncluding": "3.1.5"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:siemens:siplus_s7-1500_cpu_1518-4_pn\\/dp_mfp:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "E2F63E0A-126D-4A93-8159-45EB5E606F81"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:siemens:simatic_s7-1500_tm_mfp_firmware:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "3A84FD25-22C7-47F3-ABC2-413D03AB4648",
+                    "versionEndExcluding": "1.1"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:siemens:simatic_s7-1500_tm_mfp:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "754051AB-27D3-41CA-B2C8-79BAD48C8750"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:canonical:ubuntu_linux:14.04:*:*:*:lts:*:*:*",
+                    "matchCriteriaId": "B5A6F2F3-4894-4392-8296-3B8DD2679084"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:canonical:ubuntu_linux:16.04:*:*:*:lts:*:*:*",
+                    "matchCriteriaId": "F7016A2A-8365-4F1A-89A2-7A19F2BCAE5B"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:canonical:ubuntu_linux:18.04:*:*:*:lts:*:*:*",
+                    "matchCriteriaId": "23A7C53F-B80F-4E6A-AFA9-58EEA84BE11D"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:canonical:ubuntu_linux:20.04:*:*:*:lts:*:*:*",
+                    "matchCriteriaId": "902B8056-9E37-443B-8905-8AA93E2447FB"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:canonical:ubuntu_linux:22.04:*:*:*:lts:*:*:*",
+                    "matchCriteriaId": "359012F1-2C63-415A-88B8-6726A87830DE"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:canonical:ubuntu_linux:24.04:*:*:*:lts:*:*:*",
+                    "matchCriteriaId": "BF90B5A4-6E55-4369-B9D4-E7A061E797D2"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:canonical:ubuntu_linux:25.10:*:*:*:-:*:*:*",
+                    "matchCriteriaId": "8998BFFF-82EF-4D9E-8DE5-0072064512BC"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://git.kernel.org/stable/c/19d43105a97be0810edbda875f2cd03f30dc130c",
+            "source": "416baaa9-dc9f-4396-8d5f-8c081fb06d67",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://git.kernel.org/stable/c/3115af9644c342b356f3f07a4dd1c8905cd9a6fc",
+            "source": "416baaa9-dc9f-4396-8d5f-8c081fb06d67",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://git.kernel.org/stable/c/893d22e0135fa394db81df88697fba6032747667",
+            "source": "416baaa9-dc9f-4396-8d5f-8c081fb06d67",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://git.kernel.org/stable/c/8b88d99341f139e23bdeb1027a2a3ae10d341d82",
+            "source": "416baaa9-dc9f-4396-8d5f-8c081fb06d67",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://git.kernel.org/stable/c/961cfa271a918ad4ae452420e7c303149002875b",
+            "source": "416baaa9-dc9f-4396-8d5f-8c081fb06d67",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://git.kernel.org/stable/c/a664bf3d603dc3bdcf9ae47cc21e0daec706d7a5",
+            "source": "416baaa9-dc9f-4396-8d5f-8c081fb06d67",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://git.kernel.org/stable/c/ce42ee423e58dffa5ec03524054c9d8bfd4f6237",
+            "source": "416baaa9-dc9f-4396-8d5f-8c081fb06d67",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://git.kernel.org/stable/c/fafe0fa2995a0f7073c1c358d7d3145bcc9aedd8",
+            "source": "416baaa9-dc9f-4396-8d5f-8c081fb06d67",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "http://www.openwall.com/lists/oss-security/2026/04/29/23",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit",
+              "Mailing List",
+              "Patch"
+            ]
+          },
+          {
+            "url": "http://www.openwall.com/lists/oss-security/2026/04/29/25",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Mailing List",
+              "Patch"
+            ]
+          },
+          {
+            "url": "http://www.openwall.com/lists/oss-security/2026/04/29/26",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit",
+              "Mailing List",
+              "Patch"
+            ]
+          },
+          {
+            "url": "http://www.openwall.com/lists/oss-security/2026/04/30/10",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Mailing List",
+              "Patch"
+            ]
+          },
+          {
+            "url": "http://www.openwall.com/lists/oss-security/2026/04/30/11",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Mailing List",
+              "Patch"
+            ]
+          },
+          {
+            "url": "http://www.openwall.com/lists/oss-security/2026/04/30/12",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Mailing List",
+              "Patch"
+            ]
+          },
+          {
+            "url": "http://www.openwall.com/lists/oss-security/2026/04/30/14",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Mailing List",
+              "Patch"
+            ]
+          },
+          {
+            "url": "http://www.openwall.com/lists/oss-security/2026/04/30/15",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Mailing List",
+              "Patch"
+            ]
+          },
+          {
+            "url": "http://www.openwall.com/lists/oss-security/2026/04/30/16",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Mailing List",
+              "Patch"
+            ]
+          },
+          {
+            "url": "http://www.openwall.com/lists/oss-security/2026/04/30/17",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Mailing List"
+            ]
+          },
+          {
+            "url": "http://www.openwall.com/lists/oss-security/2026/04/30/18",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit",
+              "Mailing List"
+            ]
+          },
+          {
+            "url": "http://www.openwall.com/lists/oss-security/2026/04/30/2",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Mailing List"
+            ]
+          },
+          {
+            "url": "http://www.openwall.com/lists/oss-security/2026/04/30/20",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Mailing List"
+            ]
+          },
+          {
+            "url": "http://www.openwall.com/lists/oss-security/2026/04/30/5",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit",
+              "Mailing List",
+              "Patch"
+            ]
+          },
+          {
+            "url": "http://www.openwall.com/lists/oss-security/2026/04/30/6",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Mailing List"
+            ]
+          },
+          {
+            "url": "http://www.openwall.com/lists/oss-security/2026/05/01/10",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Mailing List"
+            ]
+          },
+          {
+            "url": "http://www.openwall.com/lists/oss-security/2026/05/01/12",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Mailing List"
+            ]
+          },
+          {
+            "url": "http://www.openwall.com/lists/oss-security/2026/05/01/15",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Mailing List"
+            ]
+          },
+          {
+            "url": "http://www.openwall.com/lists/oss-security/2026/05/01/16",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Mailing List"
+            ]
+          },
+          {
+            "url": "http://www.openwall.com/lists/oss-security/2026/05/01/17",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Mailing List"
+            ]
+          },
+          {
+            "url": "http://www.openwall.com/lists/oss-security/2026/05/01/18",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Mailing List"
+            ]
+          },
+          {
+            "url": "http://www.openwall.com/lists/oss-security/2026/05/01/2",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Mailing List"
+            ]
+          },
+          {
+            "url": "http://www.openwall.com/lists/oss-security/2026/05/01/22",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Mailing List"
+            ]
+          },
+          {
+            "url": "http://www.openwall.com/lists/oss-security/2026/05/01/23",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Mailing List"
+            ]
+          },
+          {
+            "url": "http://www.openwall.com/lists/oss-security/2026/05/01/24",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Mailing List"
+            ]
+          },
+          {
+            "url": "http://www.openwall.com/lists/oss-security/2026/05/01/3",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Mailing List"
+            ]
+          },
+          {
+            "url": "http://www.openwall.com/lists/oss-security/2026/05/02/14",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Mailing List"
+            ]
+          },
+          {
+            "url": "http://www.openwall.com/lists/oss-security/2026/05/02/15",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Mailing List"
+            ]
+          },
+          {
+            "url": "http://www.openwall.com/lists/oss-security/2026/05/02/16",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Mailing List"
+            ]
+          },
+          {
+            "url": "http://www.openwall.com/lists/oss-security/2026/05/02/17",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Mailing List"
+            ]
+          },
+          {
+            "url": "http://www.openwall.com/lists/oss-security/2026/05/02/18",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Mailing List"
+            ]
+          },
+          {
+            "url": "http://www.openwall.com/lists/oss-security/2026/05/02/19",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Mailing List"
+            ]
+          },
+          {
+            "url": "http://www.openwall.com/lists/oss-security/2026/05/02/20",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Mailing List"
+            ]
+          },
+          {
+            "url": "http://www.openwall.com/lists/oss-security/2026/05/02/21",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Mailing List"
+            ]
+          },
+          {
+            "url": "http://www.openwall.com/lists/oss-security/2026/05/02/23",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Mailing List"
+            ]
+          },
+          {
+            "url": "http://www.openwall.com/lists/oss-security/2026/05/02/24",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Mailing List"
+            ]
+          },
+          {
+            "url": "http://www.openwall.com/lists/oss-security/2026/05/02/25",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Mailing List"
+            ]
+          },
+          {
+            "url": "http://www.openwall.com/lists/oss-security/2026/05/02/4",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Mailing List"
+            ]
+          },
+          {
+            "url": "http://www.openwall.com/lists/oss-security/2026/05/02/5",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Mailing List"
+            ]
+          },
+          {
+            "url": "http://www.openwall.com/lists/oss-security/2026/05/02/6",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Mailing List"
+            ]
+          },
+          {
+            "url": "http://www.openwall.com/lists/oss-security/2026/05/02/7",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Mailing List"
+            ]
+          },
+          {
+            "url": "http://www.openwall.com/lists/oss-security/2026/05/02/8",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Mailing List"
+            ]
+          }
+        ]
+      },
+      "risk_score": 88,
+      "rank": 1
+    },
+    {
+      "cve_id": "CVE-2026-1368",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 7e-05,
+            "score_date": "2026-02-18"
+          },
+          "current": {
+            "score": 0.32922,
+            "score_date": "2026-05-01"
+          },
+          "delta": 0.32915
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-02-18",
+        "description": "The Video Conferencing with Zoom WordPress plugin before 4.6.6 contains an AJAX handler that has its nonce verification commented out, allowing unauthenticated attackers to generate valid Zoom SDK signatures for any meeting ID and retrieve the site's Zoom SDK key.",
+        "title": "EPSS dynamics",
+        "cvss_max": 7.5
+      },
+      "cve": {
+        "id": "CVE-2026-1368",
+        "sourceIdentifier": "contact@wpscan.com",
+        "published": "2026-02-18T06:16:34.327",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The Video Conferencing with Zoom WordPress plugin before 4.6.6 contains an AJAX handler that has its nonce verification commented out, allowing unauthenticated attackers to generate valid Zoom SDK signatures for any meeting ID and retrieve the site's Zoom SDK key."
+          },
+          {
+            "lang": "es",
+            "value": "El plugin de WordPress Video Conferencing con Zoom anterior a la versión 4.6.6 contiene un manejador AJAX que tiene su verificación de nonce comentada, lo que permite a atacantes no autenticados generar firmas válidas del SDK de Zoom para cualquier ID de reunión y recuperar la clave del SDK de Zoom del sitio."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+                "baseScore": 7.5,
+                "baseSeverity": "HIGH"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 3.6
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-287"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://wpscan.com/vulnerability/218e6655-c5aa-4bce-86b2-cad3bb20020c/",
+            "source": "contact@wpscan.com"
+          }
+        ]
+      },
+      "risk_score": 82,
+      "rank": 2
+    },
+    {
+      "cve_id": "CVE-2026-37541",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-05-01",
+          "previous_max": null,
+          "current_max": 10.0
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-05-01",
+        "description": "Buffer overflow vulnerability in Open Vehicle Monitoring System 3 (OVMS3) 3.3.005. In canformat_gvret.cpp, the length field in GVRET binary data is not properly validated, allowing remote attackers to cause a denial of service or possibly execute arbitrary code via crafted GVRET frames.",
+        "title": "openvehicles open_vehicle_monitoring_system_firmware Buffer Overflow",
+        "vendor": "openvehicles",
+        "product": "open_vehicle_monitoring_system_firmware",
+        "attack_type": "Buffer Overflow",
+        "cvss_max": 10.0
+      },
+      "cve": {
+        "id": "CVE-2026-37541",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2026-05-01T17:16:24.083",
+        "lastModified": "2026-05-20T15:20:03.423",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Buffer overflow vulnerability in Open Vehicle Monitoring System 3 (OVMS3) 3.3.005. In canformat_gvret.cpp, the length field in GVRET binary data is not properly validated, allowing remote attackers to cause a denial of service or possibly execute arbitrary code via crafted GVRET frames."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+                "baseScore": 10.0,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "cve@mitre.org",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 6.0
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-121"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:openvehicles:open_vehicle_monitoring_system_firmware:3.3.005:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "85BD9467-2887-419D-96B2-6E0418829A9A"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:openvehicles:open_vehicle_monitoring_system:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "9C5E4E8C-8378-4B51-B19D-862DBB3859BC"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://gist.github.com/sgInnora/f4ac66faeefe07a653ceeb3f58cdc381",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/openvehicles/Open-Vehicle-Monitoring-System-3",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Product"
+            ]
+          },
+          {
+            "url": "https://github.com/openvehicles/Open-Vehicle-Monitoring-System-3/issues/1393",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Issue Tracking"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 3
+    },
+    {
+      "cve_id": "CVE-2020-28351",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 0.09311,
+            "score_date": "2026-03-04"
+          },
+          "current": {
+            "score": 0.25711,
+            "score_date": "2026-05-01"
+          },
+          "delta": 0.164
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2020-11-09",
+        "description": "The conferencing component on Mitel ShoreTel 19.46.1802.0 devices could allow an unauthenticated attacker to conduct a reflected cross-site scripting (XSS) attack (via the PATH_INFO to index.php) due to insufficient validation for the time_zone object in the HOME_MEETING& page.",
+        "title": "mitel shoretel_firmware XSS",
+        "vendor": "mitel",
+        "product": "shoretel_firmware",
+        "attack_type": "XSS",
+        "cvss_max": 6.1
+      },
+      "cve": {
+        "id": "CVE-2020-28351",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2020-11-09T04:15:12.207",
+        "lastModified": "2024-11-21T05:22:39.317",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The conferencing component on Mitel ShoreTel 19.46.1802.0 devices could allow an unauthenticated attacker to conduct a reflected cross-site scripting (XSS) attack (via the PATH_INFO to index.php) due to insufficient validation for the time_zone object in the HOME_MEETING& page."
+          },
+          {
+            "lang": "es",
+            "value": "El componente conferencing en los dispositivos Mitel ShoreTel versión 19.46.1802.0, podría permitir a un atacante no autenticado conducir un ataque de tipo cross-site scripting (XSS) reflejado (por medio del parámetro PATH_INFO en el archivo index.php) debido a una comprobación insuficiente para el objeto time_zone en la página HOME_MEETING&amp;"
+          }
+        ],
+        "metrics": {
+          "cvssMetricV2": [
+            {
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:M/Au:N/C:N/I:P/A:N",
+                "baseScore": 4.3,
+                "baseSeverity": "MEDIUM"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "baseSeverity": "MEDIUM",
+              "exploitabilityScore": 8.6,
+              "impactScore": 2.9
+            }
+          ],
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+                "baseScore": 6.1,
+                "baseSeverity": "MEDIUM"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 2.7
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-79"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:mitel:shoretel_firmware:19.46.1802.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "99228794-9F81-4BAD-8877-BAAC7FAEA233"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:mitel:shoretel:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "12AEEC72-E90B-4F7B-B332-E771944488F4"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "http://packetstormsecurity.com/files/159987/ShoreTel-Conferencing-19.46.1802.0-Cross-Site-Scripting.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/dievus/cve-2020-28351",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.mitel.com/articles/what-happened-shoretel-products",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 80,
+      "rank": 4
+    },
+    {
+      "cve_id": "CVE-2020-28976",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 0.2575,
+            "score_date": "2025-11-21"
+          },
+          "current": {
+            "score": 0.42185,
+            "score_date": "2026-05-01"
+          },
+          "delta": 0.16435
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2020-11-30",
+        "description": "The Canto plugin 1.3.0 for WordPress contains a blind SSRF vulnerability. It allows an unauthenticated attacker can make a request to any internal and external server via /includes/lib/detail.php?subdomain=SSRF.",
+        "title": "canto canto SSRF",
+        "vendor": "canto",
+        "product": "canto",
+        "attack_type": "SSRF",
+        "cvss_max": 5.3
+      },
+      "cve": {
+        "id": "CVE-2020-28976",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2020-11-30T14:15:11.160",
+        "lastModified": "2024-11-21T05:23:25.890",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The Canto plugin 1.3.0 for WordPress contains a blind SSRF vulnerability. It allows an unauthenticated attacker can make a request to any internal and external server via /includes/lib/detail.php?subdomain=SSRF."
+          },
+          {
+            "lang": "es",
+            "value": "El plugin Canto versión 1.3.0 para WordPress, contiene una vulnerabilidad de tipo SSRF ciega.&#xa0;Permite a un atacante no autenticado poder realizar una petición a cualquier servidor interno y externo por medio de /includes/lib/detail.php?subdomain=SSRF"
+          }
+        ],
+        "metrics": {
+          "cvssMetricV2": [
+            {
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:L/Au:N/C:P/I:N/A:N",
+                "baseScore": 5.0,
+                "baseSeverity": "MEDIUM"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "baseSeverity": "MEDIUM",
+              "exploitabilityScore": 10.0,
+              "impactScore": 2.9
+            }
+          ],
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+                "baseScore": 5.3,
+                "baseSeverity": "MEDIUM"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 1.4
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-918"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:canto:canto:1.3.0:*:*:*:*:wordpress:*:*",
+                    "matchCriteriaId": "1A750D76-57D6-4F55-9743-2CCA80A99A9E"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "http://packetstormsecurity.com/files/160358/WordPress-Canto-1.3.0-Server-Side-Request-Forgery.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory",
+              "VDB Entry"
+            ]
+          },
+          {
+            "url": "https://gist.github.com/p4nk4jv/87aebd999ce4b28063943480e95fd9e0",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/CantoDAM/Canto-Wordpress-Plugin",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Product"
+            ]
+          },
+          {
+            "url": "https://wordpress.org/plugins/canto/#developers",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Release Notes"
+            ]
+          },
+          {
+            "url": "https://www.canto.com/integrations/wordpress/",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Product"
+            ]
+          }
+        ]
+      },
+      "risk_score": 79,
+      "rank": 5
+    },
+    {
+      "cve_id": "CVE-2023-29209",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 0.08508,
+            "score_date": "2026-04-26"
+          },
+          "current": {
+            "score": 0.18932,
+            "score_date": "2026-05-01"
+          },
+          "delta": 0.10424
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2023-04-15",
+        "description": "XWiki Commons are technical libraries common to several other top level XWiki projects. Any user with view rights on commonly accessible documents including the legacy notification activity macro can execute arbitrary Groovy, Python or Velocity code in XWiki leading to full access to the XWiki installation. The root cause is improper escaping of the macro parameters of the legacy notification activity macro. This macro is installed by default in XWiki. The vulnerability can be exploited via every wiki page that is editable including the user's profile, but also with just view rights using the HTMLConverter that is part of the CKEditor integration which is bundled with XWiki. The vulnerability has been patched in XWiki 13.10.11, 14.4.7 and 14.10.",
+        "title": "xwiki xwiki",
+        "vendor": "xwiki",
+        "product": "xwiki",
+        "cvss_max": 9.9
+      },
+      "cve": {
+        "id": "CVE-2023-29209",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2023-04-15T17:15:07.043",
+        "lastModified": "2024-11-21T07:56:43.173",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "XWiki Commons are technical libraries common to several other top level XWiki projects. Any user with view rights on commonly accessible documents including the legacy notification activity macro can execute arbitrary Groovy, Python or Velocity code in XWiki leading to full access to the XWiki installation. The root cause is improper escaping of the macro parameters of the legacy notification activity macro. This macro is installed by default in XWiki. The vulnerability can be exploited via every wiki page that is editable including the user's profile, but also with just view rights using the HTMLConverter that is part of the CKEditor integration which is bundled with XWiki. The vulnerability has been patched in XWiki 13.10.11, 14.4.7 and 14.10."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+                "baseScore": 9.9,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.1,
+              "impactScore": 6.0
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 8.8,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-95"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          },
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-94"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:xwiki:xwiki:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "B4BEEE23-0521-4EBD-AFC9-6354F89B16FB",
+                    "versionStartIncluding": "10.9",
+                    "versionEndExcluding": "13.10.11"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:xwiki:xwiki:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "FC782E27-0FE5-48CE-B1E6-896F47ACB5BD",
+                    "versionStartIncluding": "14.4.0",
+                    "versionEndExcluding": "14.4.7"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:xwiki:xwiki:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "1149088C-CDCC-4CE3-BA92-56B038B6839A",
+                    "versionStartIncluding": "14.8",
+                    "versionEndExcluding": "14.10"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/xwiki/xwiki-platform/commit/94392490884635c028199275db059a4f471e57bc",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://github.com/xwiki/xwiki-platform/security/advisories/GHSA-9pc2-x9qf-7j2q",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit",
+              "Patch",
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://jira.xwiki.org/browse/XWIKI-20258",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit",
+              "Issue Tracking"
+            ]
+          }
+        ]
+      },
+      "risk_score": 83,
+      "rank": 6
+    },
+    {
+      "cve_id": "CVE-2026-37531",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-05-01",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-05-01",
+        "description": "AGL app-framework-main thru 17.1.12 contains a Zip Slip path traversal vulnerability (CWE-22) combined with a TOCTOU race condition (CWE-367) in the widget installation flow. The is_valid_filename function in wgtpkg-zip.c validates ZIP entry names but does not check for dot notation directory traversal sequences it only blocks absolute paths. The zread extraction function uses openat(workdirfd, filename, O_CREAT) which resolves dot notation values relative to the work directory, allowing files to be written anywhere on the filesystem. Critically, in function install_widget in file wgtpkg-install.c, extraction via zread occurs BEFORE signature verification via check_all_signatures. Even if signature verification fails, the error cleanup (remove_workdir) only deletes the temporary work directory files written outside via path traversal persist permanently.",
+        "title": "linuxfoundation automotive_grade_linux Directory Traversal",
+        "vendor": "linuxfoundation",
+        "product": "automotive_grade_linux",
+        "attack_type": "Directory Traversal",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2026-37531",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2026-05-01T17:16:22.720",
+        "lastModified": "2026-05-18T17:12:36.573",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "AGL app-framework-main thru 17.1.12 contains a Zip Slip path traversal vulnerability (CWE-22) combined with a TOCTOU race condition (CWE-367) in the widget installation flow. The is_valid_filename function in wgtpkg-zip.c validates ZIP entry names but does not check for dot notation directory traversal sequences it only blocks absolute paths. The zread extraction function uses openat(workdirfd, filename, O_CREAT) which resolves dot notation values relative to the work directory, allowing files to be written anywhere on the filesystem. Critically, in function install_widget in file wgtpkg-install.c, extraction via zread occurs BEFORE signature verification via check_all_signatures. Even if signature verification fails, the error cleanup (remove_workdir) only deletes the temporary work directory files written outside via path traversal persist permanently."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "cve@mitre.org",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-22"
+              },
+              {
+                "lang": "en",
+                "value": "CWE-367"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linuxfoundation:automotive_grade_linux:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "F565A1E5-42E5-4115-830F-2A328C92F35B",
+                    "versionEndIncluding": "17.1.12"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://gerrit.automotivelinux.org/gerrit/src/app-framework-main",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Broken Link"
+            ]
+          },
+          {
+            "url": "https://gist.github.com/sgInnora/8526eedcfd826d05ef1fc45d8f405643",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 7
+    },
+    {
+      "cve_id": "CVE-2026-37534",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-05-01",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-05-01",
+        "description": "Integer underflow vulnerability in Open-SAE-J1939 thru commit b6caf884df46435e539b1ecbf92b6c29b345bdfe (2025-11-30) in SAE_J1939_Read_Transport_Protocol_Data_Transfer,allows attackers to write to arbitrary memory via crafted sequence number from the CAN frame.",
+        "title": "Integer underflow vulnerability in Open-SAE-J1939 thru commit b6caf884df46435e539b1ecbf92b6c29b345bdfe (2025-11-30) in SAE_J1939_Read_Tra...",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2026-37534",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2026-05-01T17:16:23.073",
+        "lastModified": "2026-05-07T15:15:06.770",
+        "vulnStatus": "Awaiting Analysis",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Integer underflow vulnerability in Open-SAE-J1939 thru commit b6caf884df46435e539b1ecbf92b6c29b345bdfe (2025-11-30) in SAE_J1939_Read_Transport_Protocol_Data_Transfer,allows attackers to write to arbitrary memory via crafted sequence number from the CAN frame."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-191"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://gist.github.com/sgInnora/f4ac66faeefe07a653ceeb3f58cdc381",
+            "source": "cve@mitre.org"
+          },
+          {
+            "url": "https://github.com/DanielMartensson/Open-SAE-J1939",
+            "source": "cve@mitre.org"
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 8
+    },
+    {
+      "cve_id": "CVE-2026-37539",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-05-01",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-05-01",
+        "description": "Buffer overflow vulnerability in cannelloni v2.0.0 in CAN frame parsing in parser.cpp in function parseCANFrame, and decoder.cpp in function decodeFrame allowing remote attackers to cause a denial of service (crash) or possibly execute arbitrary code via crafted CAN FD frames.",
+        "title": "Buffer overflow vulnerability in cannelloni v2.0.0 in CAN frame parsing in parser.cpp in function parseCANFrame, and decoder.cpp in funct...",
+        "attack_type": "Buffer Overflow",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2026-37539",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2026-05-01T17:16:23.803",
+        "lastModified": "2026-05-05T20:24:04.853",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Buffer overflow vulnerability in cannelloni v2.0.0 in CAN frame parsing in parser.cpp in function parseCANFrame, and decoder.cpp in function decodeFrame allowing remote attackers to cause a denial of service (crash) or possibly execute arbitrary code via crafted CAN FD frames."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "cve@mitre.org",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-121"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://gist.github.com/sgInnora/f4ac66faeefe07a653ceeb3f58cdc381",
+            "source": "cve@mitre.org"
+          },
+          {
+            "url": "https://github.com/mguentner/cannelloni",
+            "source": "cve@mitre.org"
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 9
+    },
+    {
+      "cve_id": "CVE-2026-42472",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-05-01",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-05-01",
+        "description": "Unsafe deserialization vulnerability in MixPHP Framework 2.x thru 2.2.17. The session and cache handlers use unserialize() on data from Redis in the RedisHandler object.",
+        "title": "Unsafe deserialization vulnerability in MixPHP Framework 2.x thru 2.2.17.",
+        "attack_type": "Deserialization",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2026-42472",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2026-05-01T16:16:31.587",
+        "lastModified": "2026-05-05T19:39:58.510",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Unsafe deserialization vulnerability in MixPHP Framework 2.x thru 2.2.17. The session and cache handlers use unserialize() on data from Redis in the RedisHandler object."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-502"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://gist.github.com/sgInnora/fa46386840fe978a30d7e53c458f2975",
+            "source": "cve@mitre.org"
+          },
+          {
+            "url": "https://github.com/mix-php/mix",
+            "source": "cve@mitre.org"
+          },
+          {
+            "url": "https://github.com/mix-php/mix/blob/v2.2.17/src/sync-invoke/src/Server.php",
+            "source": "cve@mitre.org"
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 10
+    },
+    {
+      "cve_id": "CVE-2026-42473",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-05-01",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-05-01",
+        "description": "Unsafe deserialization vulnerability in MixPHP Framework 2.x thru 2.2.17. The session and cache handlers use unserialize() on data from the filesystem in the FileHandler object.",
+        "title": "Unsafe deserialization vulnerability in MixPHP Framework 2.x thru 2.2.17.",
+        "attack_type": "Deserialization",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2026-42473",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2026-05-01T16:16:31.703",
+        "lastModified": "2026-05-05T19:39:58.510",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Unsafe deserialization vulnerability in MixPHP Framework 2.x thru 2.2.17. The session and cache handlers use unserialize() on data from the filesystem in the FileHandler object."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-502"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://gist.github.com/sgInnora/fa46386840fe978a30d7e53c458f2975",
+            "source": "cve@mitre.org"
+          },
+          {
+            "url": "https://github.com/mix-php/mix",
+            "source": "cve@mitre.org"
+          },
+          {
+            "url": "https://github.com/mix-php/mix/blob/v2.2.17/src/sync-invoke/src/Server.php",
+            "source": "cve@mitre.org"
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 11
+    },
+    {
+      "cve_id": "CVE-2026-43011",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-05-01",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-05-01",
+        "description": "In the Linux kernel, the following vulnerability has been resolved:\n\nnet/x25: Fix potential double free of skb\n\nWhen alloc_skb fails in x25_queue_rx_frame it calls kfree_skb(skb) at\nline 48 and returns 1 (error).\nThis error propagates back through the call chain:\n\nx25_queue_rx_frame returns 1\n    |\n    v\nx25_state3_machine receives the return value 1 and takes the else\nbranch at line 278, setting queued=0 and returning 0\n    |\n    v\nx25_process_rx_frame returns queued=0\n    |\n    v\nx25_backlog_rcv at line 452 sees queued=0 and calls kfree_skb(skb)\nagain\n\nThis would free the same skb twice. Looking at x25_backlog_rcv:\n\nnet/x25/x25_in.c:x25_backlog_rcv() {\n    ...\n    queued = x25_process_rx_frame(sk, skb);\n    ...\n    if (!queued)\n        kfree_skb(skb);\n}",
+        "title": "linux linux_kernel",
+        "vendor": "linux",
+        "product": "linux_kernel",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2026-43011",
+        "sourceIdentifier": "416baaa9-dc9f-4396-8d5f-8c081fb06d67",
+        "published": "2026-05-01T15:16:44.993",
+        "lastModified": "2026-05-07T20:26:58.903",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "In the Linux kernel, the following vulnerability has been resolved:\n\nnet/x25: Fix potential double free of skb\n\nWhen alloc_skb fails in x25_queue_rx_frame it calls kfree_skb(skb) at\nline 48 and returns 1 (error).\nThis error propagates back through the call chain:\n\nx25_queue_rx_frame returns 1\n    |\n    v\nx25_state3_machine receives the return value 1 and takes the else\nbranch at line 278, setting queued=0 and returning 0\n    |\n    v\nx25_process_rx_frame returns queued=0\n    |\n    v\nx25_backlog_rcv at line 452 sees queued=0 and calls kfree_skb(skb)\nagain\n\nThis would free the same skb twice. Looking at x25_backlog_rcv:\n\nnet/x25/x25_in.c:x25_backlog_rcv() {\n    ...\n    queued = x25_process_rx_frame(sk, skb);\n    ...\n    if (!queued)\n        kfree_skb(skb);\n}"
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "416baaa9-dc9f-4396-8d5f-8c081fb06d67",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-415"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "5F0E43E1-33E5-4828-9B4A-F710AF2E7217",
+                    "versionStartIncluding": "2.6.12.1",
+                    "versionEndExcluding": "5.10.253"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "20DDB3E9-AABF-4107-ADB0-5362AA067045",
+                    "versionStartIncluding": "5.11",
+                    "versionEndExcluding": "5.15.203"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "E2DDDCA1-6DAB-4018-B920-8F045DDD8D3B",
+                    "versionStartIncluding": "5.16",
+                    "versionEndExcluding": "6.1.168"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "F56F925B-BAF8-4F4B-B62F-1496AF19A307",
+                    "versionStartIncluding": "6.2",
+                    "versionEndExcluding": "6.6.134"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "6EF80433-B33B-43C5-8E64-0FA7B8DCE1BC",
+                    "versionStartIncluding": "6.7",
+                    "versionEndExcluding": "6.12.81"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "C9DF8BCE-36D3-475D-9D21-19E4F02F9029",
+                    "versionStartIncluding": "6.13",
+                    "versionEndExcluding": "6.18.22"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "0A2B9540-02D5-41B4-B16A-82AF66FD4F36",
+                    "versionStartIncluding": "6.19",
+                    "versionEndExcluding": "6.19.12"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:2.6.12:-:*:*:*:*:*:*",
+                    "matchCriteriaId": "6F62EECE-8FB1-4D57-85D8-CB9E23CF313C"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:2.6.12:rc2:*:*:*:*:*:*",
+                    "matchCriteriaId": "4F76C298-81DC-43E4-8FC9-DC005A2116EF"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:2.6.12:rc3:*:*:*:*:*:*",
+                    "matchCriteriaId": "0AB349B2-3F78-4197-882B-90ADB3BF645A"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:2.6.12:rc4:*:*:*:*:*:*",
+                    "matchCriteriaId": "6AC88830-A9BC-4607-B572-A4B502FC9FD0"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:2.6.12:rc5:*:*:*:*:*:*",
+                    "matchCriteriaId": "476CB3A5-D022-4F13-AAEF-CB6A5785516A"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:7.0:rc1:*:*:*:*:*:*",
+                    "matchCriteriaId": "F253B622-8837-4245-BCE5-A7BF8FC76A16"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:7.0:rc2:*:*:*:*:*:*",
+                    "matchCriteriaId": "4AE85AD8-4641-4E7C-A2F4-305E2CD9EE64"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:7.0:rc3:*:*:*:*:*:*",
+                    "matchCriteriaId": "F666C8D8-6538-46D4-B318-87610DE64C34"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:7.0:rc4:*:*:*:*:*:*",
+                    "matchCriteriaId": "02259FDA-961B-47BC-AE7F-93D7EC6E90C2"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:7.0:rc5:*:*:*:*:*:*",
+                    "matchCriteriaId": "58A9FEFF-C040-420D-8F0A-BFDAAA1DF258"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:7.0:rc6:*:*:*:*:*:*",
+                    "matchCriteriaId": "1D2315C0-D46F-4F85-9754-F9E5E11374A6"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://git.kernel.org/stable/c/143d4fa68ae9efb83b0c55b12cc7f0d03732a2b1",
+            "source": "416baaa9-dc9f-4396-8d5f-8c081fb06d67",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://git.kernel.org/stable/c/3f5e3005984645bf5bd129c6b13149879580b1fb",
+            "source": "416baaa9-dc9f-4396-8d5f-8c081fb06d67",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://git.kernel.org/stable/c/524371398d8463ea7e101fce2cbf3915645d1730",
+            "source": "416baaa9-dc9f-4396-8d5f-8c081fb06d67",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://git.kernel.org/stable/c/5d0aa038a90b30c9bedde0c41c1fdcd98ecb16e9",
+            "source": "416baaa9-dc9f-4396-8d5f-8c081fb06d67",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://git.kernel.org/stable/c/c87dd137c0dad07cc55f98181ff380b0c23d2878",
+            "source": "416baaa9-dc9f-4396-8d5f-8c081fb06d67",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://git.kernel.org/stable/c/d10a26aa4d072320530e6968ef945c8c575edf61",
+            "source": "416baaa9-dc9f-4396-8d5f-8c081fb06d67",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://git.kernel.org/stable/c/f782dd382203b2a8c4552a628431b7de65a19a7b",
+            "source": "416baaa9-dc9f-4396-8d5f-8c081fb06d67",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://git.kernel.org/stable/c/fa1dbc93530b34fab0da9862426fe9c918c74dc0",
+            "source": "416baaa9-dc9f-4396-8d5f-8c081fb06d67",
+            "tags": [
+              "Patch"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 12
+    },
+    {
+      "cve_id": "CVE-2026-43037",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-05-01",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-05-01",
+        "description": "In the Linux kernel, the following vulnerability has been resolved:\n\nip6_tunnel: clear skb2->cb[] in ip4ip6_err()\n\nOskar Kjos reported the following problem.\n\nip4ip6_err() calls icmp_send() on a cloned skb whose cb[] was written\nby the IPv6 receive path as struct inet6_skb_parm. icmp_send() passes\nIPCB(skb2) to __ip_options_echo(), which interprets that cb[] region\nas struct inet_skb_parm (IPv4). The layouts differ: inet6_skb_parm.nhoff\nat offset 14 overlaps inet_skb_parm.opt.rr, producing a non-zero rr\nvalue. __ip_options_echo() then reads optlen from attacker-controlled\npacket data at sptr[rr+1] and copies that many bytes into dopt->__data,\na fixed 40-byte stack buffer (IP_OPTIONS_DATA_FIXED_SIZE).\n\nTo fix this we clear skb2->cb[], as suggested by Oskar Kjos.\n\nAlso add minimal IPv4 header validation (version == 4, ihl >= 5).",
+        "title": "linux linux_kernel",
+        "vendor": "linux",
+        "product": "linux_kernel",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2026-43037",
+        "sourceIdentifier": "416baaa9-dc9f-4396-8d5f-8c081fb06d67",
+        "published": "2026-05-01T15:16:48.383",
+        "lastModified": "2026-05-04T18:26:53.743",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "In the Linux kernel, the following vulnerability has been resolved:\n\nip6_tunnel: clear skb2->cb[] in ip4ip6_err()\n\nOskar Kjos reported the following problem.\n\nip4ip6_err() calls icmp_send() on a cloned skb whose cb[] was written\nby the IPv6 receive path as struct inet6_skb_parm. icmp_send() passes\nIPCB(skb2) to __ip_options_echo(), which interprets that cb[] region\nas struct inet_skb_parm (IPv4). The layouts differ: inet6_skb_parm.nhoff\nat offset 14 overlaps inet_skb_parm.opt.rr, producing a non-zero rr\nvalue. __ip_options_echo() then reads optlen from attacker-controlled\npacket data at sptr[rr+1] and copies that many bytes into dopt->__data,\na fixed 40-byte stack buffer (IP_OPTIONS_DATA_FIXED_SIZE).\n\nTo fix this we clear skb2->cb[], as suggested by Oskar Kjos.\n\nAlso add minimal IPv4 header validation (version == 4, ihl >= 5)."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "416baaa9-dc9f-4396-8d5f-8c081fb06d67",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-787"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "2FAF7ECB-85CC-455A-BD37-B1C507BDF01A",
+                    "versionStartIncluding": "2.6.22",
+                    "versionEndExcluding": "5.10.253"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "20DDB3E9-AABF-4107-ADB0-5362AA067045",
+                    "versionStartIncluding": "5.11",
+                    "versionEndExcluding": "5.15.203"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "E2DDDCA1-6DAB-4018-B920-8F045DDD8D3B",
+                    "versionStartIncluding": "5.16",
+                    "versionEndExcluding": "6.1.168"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "F56F925B-BAF8-4F4B-B62F-1496AF19A307",
+                    "versionStartIncluding": "6.2",
+                    "versionEndExcluding": "6.6.134"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "6EF80433-B33B-43C5-8E64-0FA7B8DCE1BC",
+                    "versionStartIncluding": "6.7",
+                    "versionEndExcluding": "6.12.81"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "C9DF8BCE-36D3-475D-9D21-19E4F02F9029",
+                    "versionStartIncluding": "6.13",
+                    "versionEndExcluding": "6.18.22"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "0A2B9540-02D5-41B4-B16A-82AF66FD4F36",
+                    "versionStartIncluding": "6.19",
+                    "versionEndExcluding": "6.19.12"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:7.0:rc1:*:*:*:*:*:*",
+                    "matchCriteriaId": "F253B622-8837-4245-BCE5-A7BF8FC76A16"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:7.0:rc2:*:*:*:*:*:*",
+                    "matchCriteriaId": "4AE85AD8-4641-4E7C-A2F4-305E2CD9EE64"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:7.0:rc3:*:*:*:*:*:*",
+                    "matchCriteriaId": "F666C8D8-6538-46D4-B318-87610DE64C34"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:7.0:rc4:*:*:*:*:*:*",
+                    "matchCriteriaId": "02259FDA-961B-47BC-AE7F-93D7EC6E90C2"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:7.0:rc5:*:*:*:*:*:*",
+                    "matchCriteriaId": "58A9FEFF-C040-420D-8F0A-BFDAAA1DF258"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:7.0:rc6:*:*:*:*:*:*",
+                    "matchCriteriaId": "1D2315C0-D46F-4F85-9754-F9E5E11374A6"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://git.kernel.org/stable/c/1063515ce15ff31065c4e7f8265f4c2fd3c54876",
+            "source": "416baaa9-dc9f-4396-8d5f-8c081fb06d67",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://git.kernel.org/stable/c/2cc6e3b0fe0f0242d1f530a93a4924f48ab85ba5",
+            "source": "416baaa9-dc9f-4396-8d5f-8c081fb06d67",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://git.kernel.org/stable/c/2edfa31769a4add828a7e604b21cb82aaaa05925",
+            "source": "416baaa9-dc9f-4396-8d5f-8c081fb06d67",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://git.kernel.org/stable/c/4a622658f384b03560834cbe8ffcfe69a278f7c8",
+            "source": "416baaa9-dc9f-4396-8d5f-8c081fb06d67",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://git.kernel.org/stable/c/590f622669b97eaf7b57a1de7b0a6e68c5d8b2c3",
+            "source": "416baaa9-dc9f-4396-8d5f-8c081fb06d67",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://git.kernel.org/stable/c/a0c4ce9900a108eaf55d0f3b399cb55999647d39",
+            "source": "416baaa9-dc9f-4396-8d5f-8c081fb06d67",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://git.kernel.org/stable/c/d6621f60192fe10c047a4487be42a6f4c150707f",
+            "source": "416baaa9-dc9f-4396-8d5f-8c081fb06d67",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://git.kernel.org/stable/c/ea9f65b27c8404e164848ebff1443310fd187629",
+            "source": "416baaa9-dc9f-4396-8d5f-8c081fb06d67",
+            "tags": [
+              "Patch"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 13
+    },
+    {
+      "cve_id": "CVE-2026-43038",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-05-01",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-05-01",
+        "description": "In the Linux kernel, the following vulnerability has been resolved:\n\nipv6: icmp: clear skb2->cb[] in ip6_err_gen_icmpv6_unreach()\n\nSashiko AI-review observed:\n\n  In ip6_err_gen_icmpv6_unreach(), the skb is an outer IPv4 ICMP error packet\n  where its cb contains an IPv4 inet_skb_parm. When skb is cloned into skb2\n  and passed to icmp6_send(), it uses IP6CB(skb2).\n\n  IP6CB interprets the IPv4 inet_skb_parm as an inet6_skb_parm. The cipso\n  offset in inet_skb_parm.opt directly overlaps with dsthao in inet6_skb_parm\n  at offset 18.\n\n  If an attacker sends a forged ICMPv4 error with a CIPSO IP option, dsthao\n  would be a non-zero offset. Inside icmp6_send(), mip6_addr_swap() is called\n  and uses ipv6_find_tlv(skb, opt->dsthao, IPV6_TLV_HAO).\n\n  This would scan the inner, attacker-controlled IPv6 packet starting at that\n  offset, potentially returning a fake TLV without checking if the remaining\n  packet length can hold the full 18-byte struct ipv6_destopt_hao.\n\n  Could mip6_addr_swap() then perform a 16-byte swap that extends past the end\n  of the packet data into skb_shared_info?\n\n  Should the cb array also be cleared in ip6_err_gen_icmpv6_unreach() and\n  ip6ip6_err() to prevent this?\n\nThis patch implements the first suggestion.\n\nI am not sure if ip6ip6_err() needs to be changed.\nA separate patch would be better anyway.",
+        "title": "linux linux_kernel",
+        "vendor": "linux",
+        "product": "linux_kernel",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2026-43038",
+        "sourceIdentifier": "416baaa9-dc9f-4396-8d5f-8c081fb06d67",
+        "published": "2026-05-01T15:16:48.533",
+        "lastModified": "2026-05-08T18:47:20.317",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "In the Linux kernel, the following vulnerability has been resolved:\n\nipv6: icmp: clear skb2->cb[] in ip6_err_gen_icmpv6_unreach()\n\nSashiko AI-review observed:\n\n  In ip6_err_gen_icmpv6_unreach(), the skb is an outer IPv4 ICMP error packet\n  where its cb contains an IPv4 inet_skb_parm. When skb is cloned into skb2\n  and passed to icmp6_send(), it uses IP6CB(skb2).\n\n  IP6CB interprets the IPv4 inet_skb_parm as an inet6_skb_parm. The cipso\n  offset in inet_skb_parm.opt directly overlaps with dsthao in inet6_skb_parm\n  at offset 18.\n\n  If an attacker sends a forged ICMPv4 error with a CIPSO IP option, dsthao\n  would be a non-zero offset. Inside icmp6_send(), mip6_addr_swap() is called\n  and uses ipv6_find_tlv(skb, opt->dsthao, IPV6_TLV_HAO).\n\n  This would scan the inner, attacker-controlled IPv6 packet starting at that\n  offset, potentially returning a fake TLV without checking if the remaining\n  packet length can hold the full 18-byte struct ipv6_destopt_hao.\n\n  Could mip6_addr_swap() then perform a 16-byte swap that extends past the end\n  of the packet data into skb_shared_info?\n\n  Should the cb array also be cleared in ip6_err_gen_icmpv6_unreach() and\n  ip6ip6_err() to prevent this?\n\nThis patch implements the first suggestion.\n\nI am not sure if ip6ip6_err() needs to be changed.\nA separate patch would be better anyway."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "416baaa9-dc9f-4396-8d5f-8c081fb06d67",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "NVD-CWE-noinfo"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "8D3EF93D-D199-4C6C-89F8-AA7C61FD525D",
+                    "versionStartExcluding": "3.13",
+                    "versionEndExcluding": "5.10.253"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "20DDB3E9-AABF-4107-ADB0-5362AA067045",
+                    "versionStartIncluding": "5.11",
+                    "versionEndExcluding": "5.15.203"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "E2DDDCA1-6DAB-4018-B920-8F045DDD8D3B",
+                    "versionStartIncluding": "5.16",
+                    "versionEndExcluding": "6.1.168"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "F56F925B-BAF8-4F4B-B62F-1496AF19A307",
+                    "versionStartIncluding": "6.2",
+                    "versionEndExcluding": "6.6.134"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "6EF80433-B33B-43C5-8E64-0FA7B8DCE1BC",
+                    "versionStartIncluding": "6.7",
+                    "versionEndExcluding": "6.12.81"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "C9DF8BCE-36D3-475D-9D21-19E4F02F9029",
+                    "versionStartIncluding": "6.13",
+                    "versionEndExcluding": "6.18.22"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "0A2B9540-02D5-41B4-B16A-82AF66FD4F36",
+                    "versionStartIncluding": "6.19",
+                    "versionEndExcluding": "6.19.12"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:3.13:-:*:*:*:*:*:*",
+                    "matchCriteriaId": "0F72A71E-B6B2-40F2-A21D-BF7CE1514976"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:3.13:rc3:*:*:*:*:*:*",
+                    "matchCriteriaId": "A5F72FE2-8F1D-4C65-889F-38FAB8A28B6D"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:3.13:rc4:*:*:*:*:*:*",
+                    "matchCriteriaId": "C54506BE-8F4B-4411-AEEE-B2C25674B59B"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:3.13:rc5:*:*:*:*:*:*",
+                    "matchCriteriaId": "A4739BC5-112B-4DDA-8921-16A6BFE6AAA7"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:3.13:rc6:*:*:*:*:*:*",
+                    "matchCriteriaId": "5782C96D-D8F7-42C1-A3A0-34B1DEF1FC93"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:3.13:rc7:*:*:*:*:*:*",
+                    "matchCriteriaId": "51B2DAD1-BF87-4AEF-A41D-81B7D042B22A"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:3.13:rc8:*:*:*:*:*:*",
+                    "matchCriteriaId": "C8E94C86-A5D8-4C34-8494-5B471DAEB27A"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:7.0:rc1:*:*:*:*:*:*",
+                    "matchCriteriaId": "F253B622-8837-4245-BCE5-A7BF8FC76A16"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:7.0:rc2:*:*:*:*:*:*",
+                    "matchCriteriaId": "4AE85AD8-4641-4E7C-A2F4-305E2CD9EE64"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:7.0:rc3:*:*:*:*:*:*",
+                    "matchCriteriaId": "F666C8D8-6538-46D4-B318-87610DE64C34"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:7.0:rc4:*:*:*:*:*:*",
+                    "matchCriteriaId": "02259FDA-961B-47BC-AE7F-93D7EC6E90C2"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:7.0:rc5:*:*:*:*:*:*",
+                    "matchCriteriaId": "58A9FEFF-C040-420D-8F0A-BFDAAA1DF258"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:7.0:rc6:*:*:*:*:*:*",
+                    "matchCriteriaId": "1D2315C0-D46F-4F85-9754-F9E5E11374A6"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://git.kernel.org/stable/c/0452b6526b2f54b2413b9cb4ff1ea2ac542c99c7",
+            "source": "416baaa9-dc9f-4396-8d5f-8c081fb06d67",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://git.kernel.org/stable/c/1ceeebd5bd6d855b17a5df625109bfe29129d7cf",
+            "source": "416baaa9-dc9f-4396-8d5f-8c081fb06d67",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://git.kernel.org/stable/c/3d5127d998de617b130aae96b138dba22ac6a8a7",
+            "source": "416baaa9-dc9f-4396-8d5f-8c081fb06d67",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://git.kernel.org/stable/c/86ab3e55673a7a49a841838776f1ab18d23a67b5",
+            "source": "416baaa9-dc9f-4396-8d5f-8c081fb06d67",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://git.kernel.org/stable/c/a2edbb6393972a02114b6003953a5cef3104fada",
+            "source": "416baaa9-dc9f-4396-8d5f-8c081fb06d67",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://git.kernel.org/stable/c/a4437faf135da293d16fcc4cc607316742bd0ebb",
+            "source": "416baaa9-dc9f-4396-8d5f-8c081fb06d67",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://git.kernel.org/stable/c/c438ba010171b70bad22fc18b1d5bdc3627476e8",
+            "source": "416baaa9-dc9f-4396-8d5f-8c081fb06d67",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://git.kernel.org/stable/c/e41953e7d118e2702bcb217879c173d9d1d3cd4e",
+            "source": "416baaa9-dc9f-4396-8d5f-8c081fb06d67",
+            "tags": [
+              "Patch"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 14
+    },
+    {
+      "cve_id": "CVE-2026-43039",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-05-01",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-05-01",
+        "description": "In the Linux kernel, the following vulnerability has been resolved:\n\nnet: ti: icssg-prueth: fix missing data copy and wrong recycle in ZC RX dispatch\n\nemac_dispatch_skb_zc() allocates a new skb via napi_alloc_skb() but\nnever copies the packet data from the XDP buffer into it. The skb is\npassed up the stack containing uninitialized heap memory instead of\nthe actual received packet, leaking kernel heap contents to userspace.\n\nCopy the received packet data from the XDP buffer into the skb using\nskb_copy_to_linear_data().\n\nAdditionally, remove the skb_mark_for_recycle() call since the skb is\nbacked by the NAPI page frag allocator, not page_pool. Marking a\nnon-page_pool skb for recycle causes the free path to return pages to\na page_pool that does not own them, corrupting page_pool state.\n\nThe non-ZC path (emac_rx_packet) does not have these issues because it\nuses napi_build_skb() to wrap the existing page_pool page directly,\nrequiring no copy, and correctly marks for recycle since the page comes\nfrom page_pool_dev_alloc_pages().",
+        "title": "linux linux_kernel",
+        "vendor": "linux",
+        "product": "linux_kernel",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2026-43039",
+        "sourceIdentifier": "416baaa9-dc9f-4396-8d5f-8c081fb06d67",
+        "published": "2026-05-01T15:16:50.000",
+        "lastModified": "2026-05-08T18:48:10.430",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "In the Linux kernel, the following vulnerability has been resolved:\n\nnet: ti: icssg-prueth: fix missing data copy and wrong recycle in ZC RX dispatch\n\nemac_dispatch_skb_zc() allocates a new skb via napi_alloc_skb() but\nnever copies the packet data from the XDP buffer into it. The skb is\npassed up the stack containing uninitialized heap memory instead of\nthe actual received packet, leaking kernel heap contents to userspace.\n\nCopy the received packet data from the XDP buffer into the skb using\nskb_copy_to_linear_data().\n\nAdditionally, remove the skb_mark_for_recycle() call since the skb is\nbacked by the NAPI page frag allocator, not page_pool. Marking a\nnon-page_pool skb for recycle causes the free path to return pages to\na page_pool that does not own them, corrupting page_pool state.\n\nThe non-ZC path (emac_rx_packet) does not have these issues because it\nuses napi_build_skb() to wrap the existing page_pool page directly,\nrequiring no copy, and correctly marks for recycle since the page comes\nfrom page_pool_dev_alloc_pages()."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "416baaa9-dc9f-4396-8d5f-8c081fb06d67",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "NVD-CWE-noinfo"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "0A2B9540-02D5-41B4-B16A-82AF66FD4F36",
+                    "versionStartIncluding": "6.19",
+                    "versionEndExcluding": "6.19.12"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:7.0:rc1:*:*:*:*:*:*",
+                    "matchCriteriaId": "F253B622-8837-4245-BCE5-A7BF8FC76A16"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:7.0:rc2:*:*:*:*:*:*",
+                    "matchCriteriaId": "4AE85AD8-4641-4E7C-A2F4-305E2CD9EE64"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:7.0:rc3:*:*:*:*:*:*",
+                    "matchCriteriaId": "F666C8D8-6538-46D4-B318-87610DE64C34"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:7.0:rc4:*:*:*:*:*:*",
+                    "matchCriteriaId": "02259FDA-961B-47BC-AE7F-93D7EC6E90C2"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:7.0:rc5:*:*:*:*:*:*",
+                    "matchCriteriaId": "58A9FEFF-C040-420D-8F0A-BFDAAA1DF258"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:7.0:rc6:*:*:*:*:*:*",
+                    "matchCriteriaId": "1D2315C0-D46F-4F85-9754-F9E5E11374A6"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://git.kernel.org/stable/c/5597dd284ff8c556c0b00f6a34473677426e3f81",
+            "source": "416baaa9-dc9f-4396-8d5f-8c081fb06d67",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://git.kernel.org/stable/c/a968438d4fc17ee1dcdc3cfa490dcb5e7709cf76",
+            "source": "416baaa9-dc9f-4396-8d5f-8c081fb06d67",
+            "tags": [
+              "Patch"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 15
+    }
+  ],
+  "source": "https://www.cvelogic.com/threat-intelligence/2026-05-01"
+}

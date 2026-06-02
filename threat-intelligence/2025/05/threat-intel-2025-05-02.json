@@ -1,0 +1,1678 @@
+{
+  "schema_version": "2.2",
+  "generated_at": "2026-06-02T07:32:39Z",
+  "day": "2025-05-02",
+  "window": {
+    "utc_start": "2025-05-02",
+    "utc_end": "2025-05-02",
+    "days": 1
+  },
+  "summary": {
+    "brief": "Commvault Command Center added to CISA KEV — confirmed in-the-wild exploitation. · Siemens Simatic S7-300 Cpu — exploitation likelihood rose sharply (EPSS 33% → 51% · rising (+17%)). · 10 new critical disclosures — review patch status on exposed services.",
+    "bullets": [
+      "Commvault Command Center added to CISA KEV — confirmed in-the-wild exploitation.",
+      "Siemens Simatic S7-300 Cpu — exploitation likelihood rose sharply (EPSS 33% → 51% · rising (+17%)).",
+      "10 new critical disclosures — review patch status on exposed services."
+    ],
+    "counts": {
+      "cves": 13,
+      "kev": 2,
+      "exploit": 0,
+      "epss": 1,
+      "cvss": 10,
+      "patch": 0
+    }
+  },
+  "cves": [
+    {
+      "cve_id": "CVE-2025-34028",
+      "signal_types": [
+        "KEV"
+      ],
+      "signals": {
+        "kev": {
+          "date_added": "2025-05-02"
+        },
+        "exploit": null,
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-04-22",
+        "description": "The Commvault Command Center Innovation Release allows an unauthenticated actor to upload ZIP files that represent install packages that, when expanded by the target server, are vulnerable to path traversal vulnerability that can result in Remote Code Execution via malicious JSP.\n\n\n\n\n\nThis issue affects Command Center Innovation Release: 11.38.0 to 11.38.20. The vulnerability is fixed in 11.38.20 with SP38-CU20-433 and SP38-CU20-436 and also fixed in 11.38.25 with SP38-CU25-434 and SP38-CU25-438.",
+        "title": "Commvault Command Center Path Traversal Vulnerability",
+        "vendor": "commvault",
+        "product": "commvault",
+        "attack_type": "RCE",
+        "cvss_max": 10.0
+      },
+      "cve": {
+        "id": "CVE-2025-34028",
+        "sourceIdentifier": "disclosure@vulncheck.com",
+        "published": "2025-04-22T17:16:48.027",
+        "lastModified": "2025-11-06T13:57:56.350",
+        "vulnStatus": "Analyzed",
+        "cisaExploitAdd": "2025-05-02",
+        "cisaActionDue": "2025-05-23",
+        "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+        "cisaVulnerabilityName": "Commvault Command Center Path Traversal Vulnerability",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The Commvault Command Center Innovation Release allows an unauthenticated actor to upload ZIP files that represent install packages that, when expanded by the target server, are vulnerable to path traversal vulnerability that can result in Remote Code Execution via malicious JSP.\n\n\n\n\n\nThis issue affects Command Center Innovation Release: 11.38.0 to 11.38.20. The vulnerability is fixed in 11.38.20 with SP38-CU20-433 and SP38-CU20-436 and also fixed in 11.38.25 with SP38-CU25-434 and SP38-CU25-438."
+          },
+          {
+            "lang": "es",
+            "value": "Una vulnerabilidad de path traversal en Commvault Command Center Innovation Release permite que un agente no autenticado cargue archivos ZIP que, al ser expandidos por el servidor objetivo, provocan la ejecución remota de código. Este problema afecta a Command Center Innovation Release: 11.38."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+                "baseScore": 10.0,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 6.0
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:H/VA:H/SC:L/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-22"
+              },
+              {
+                "lang": "en",
+                "value": "CWE-306"
+              }
+            ],
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-22"
+              },
+              {
+                "lang": "en",
+                "value": "CWE-306"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:commvault:commvault:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "96CFFC87-3142-4B6B-AF45-8EC6B23E9B97",
+                    "versionStartIncluding": "11.38.0",
+                    "versionEndExcluding": "11.38.20"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "703AF700-7A70-47E2-BC3A-7FD03B3CA9C1"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "A2572D17-1DE6-457B-99CC-64AFD54487EA"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://documentation.commvault.com/securityadvisories/CV_2025_04_1.html",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/watchtowrlabs/watchTowr-vs-Commvault-PreAuth-RCE-CVE-2025-34028",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Exploit"
+            ]
+          },
+          {
+            "url": "https://labs.watchtowr.com/fire-in-the-hole-were-breaching-the-vault-commvault-remote-code-execution-cve-2025-34028/",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.vulncheck.com/advisories/commvault-command-center-innovation-release-unauthenticated-install-package-path-traversal",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2025-34028",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "US Government Resource"
+            ]
+          }
+        ]
+      },
+      "risk_score": 88,
+      "rank": 1
+    },
+    {
+      "cve_id": "CVE-2015-2177",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 0.33204,
+            "score_date": "2025-04-28"
+          },
+          "current": {
+            "score": 0.50636,
+            "score_date": "2025-05-02"
+          },
+          "delta": 0.17432
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2015-03-07",
+        "description": "Siemens SIMATIC S7-300 CPU devices allow remote attackers to cause a denial of service (defect-mode transition) via crafted packets on (1) TCP port 102 or (2) Profibus.",
+        "title": "siemens simatic_s7-300_cpu DoS",
+        "vendor": "siemens",
+        "product": "simatic_s7-300_cpu_firmware",
+        "attack_type": "DoS",
+        "cvss_max": 7.8
+      },
+      "cve": {
+        "id": "CVE-2015-2177",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2015-03-07T02:59:09.160",
+        "lastModified": "2026-05-06T22:30:45.220",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Siemens SIMATIC S7-300 CPU devices allow remote attackers to cause a denial of service (defect-mode transition) via crafted packets on (1) TCP port 102 or (2) Profibus."
+          },
+          {
+            "lang": "es",
+            "value": "Los dispositivos Siemens SIMATIC S7-300 CPU permiten a atacantes remotos causar una denegación de servicio (transición a modo de defecto) a través de paquetes manipulados en (1) puerto TCP 102 o (2) Profibus."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV2": [
+            {
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:L/Au:N/C:N/I:N/A:C",
+                "baseScore": 7.8,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "baseSeverity": "HIGH",
+              "exploitabilityScore": 10.0,
+              "impactScore": 6.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-20"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:siemens:simatic_s7-300_cpu_firmware:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "E4872DF2-8C81-45BA-A606-99D0A75464AC"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:siemens:simatic_s7-300_cpu:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "602FB384-0DB2-488C-B3CC-96E3A2882976"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "http://www.securityfocus.com/bid/72973",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://www.securitytracker.com/id/1032040",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory",
+              "VDB Entry"
+            ]
+          },
+          {
+            "url": "http://www.siemens.com/innovation/pool/de/forschungsfelder/siemens_security_advisory_ssa-987029.pdf",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-987029.pdf",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "https://ics-cert.us-cert.gov/advisories/ICSA-15-064-04",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "https://www.exploit-db.com/exploits/44802/",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          }
+        ]
+      },
+      "risk_score": 83,
+      "rank": 2
+    },
+    {
+      "cve_id": "CVE-2025-2605",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-05-02",
+          "previous_max": null,
+          "current_max": 9.9
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-05-02",
+        "description": "Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection') vulnerability in Honeywell MB-Secure allows Privilege Abuse. This issue affects MB-Secure: from V11.04 before V12.53 and MB-Secure PRO from V01.06 before V03.09.Honeywell also recommends updating to the most recent version of this product.",
+        "title": "honeywell mb-secure_firmware Command Injection",
+        "vendor": "honeywell",
+        "product": "mb-secure_firmware",
+        "attack_type": "Command Injection",
+        "cvss_max": 9.9
+      },
+      "cve": {
+        "id": "CVE-2025-2605",
+        "sourceIdentifier": "psirt@honeywell.com",
+        "published": "2025-05-02T13:15:46.440",
+        "lastModified": "2025-05-17T06:15:18.303",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection') vulnerability in Honeywell MB-Secure allows Privilege Abuse. This issue affects MB-Secure: from V11.04 before V12.53 and MB-Secure PRO from V01.06 before V03.09.Honeywell also recommends updating to the most recent version of this product."
+          },
+          {
+            "lang": "es",
+            "value": "La vulnerabilidad de neutralización incorrecta de elementos especiales utilizados en un comando del sistema operativo ('Inyección de comandos del sistema operativo') en Honeywell MB-Secure permite el abuso de privilegios. Este problema afecta a MB-Secure desde la versión 11.04 hasta la 12.53 y a MB-Secure PRO desde la versión 01.06 hasta la 03.09. Honeywell también recomienda actualizar a la versión más reciente de este producto."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+                "baseScore": 9.9,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "psirt@honeywell.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.1,
+              "impactScore": 6.0
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 8.8,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-78"
+              }
+            ],
+            "source": "psirt@honeywell.com"
+          },
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-78"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:honeywell:mb-secure_firmware:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "9A3948BD-0AA0-4F44-87DE-6F93FE58A3CC",
+                    "versionStartIncluding": "11.04",
+                    "versionEndExcluding": "12.53"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:honeywell:mb-secure:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "068F05DB-54F1-4F6B-8A1B-501E7841469B"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:honeywell:mb-secure_pro_firmware:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "D6782306-FD38-4001-9F99-9B1A9EC820F9",
+                    "versionStartIncluding": "01.06",
+                    "versionEndExcluding": "03.09"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:honeywell:mb-secure_pro:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "F8F28351-A605-4F24-B62B-408D77C661E7"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://www.honeywell.com/us/en/product-security#security-notices",
+            "source": "psirt@honeywell.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "http://seclists.org/fulldisclosure/2025/May/19",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 3
+    },
+    {
+      "cve_id": "CVE-2024-58136",
+      "signal_types": [
+        "KEV"
+      ],
+      "signals": {
+        "kev": {
+          "date_added": "2025-05-02"
+        },
+        "exploit": null,
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-04-10",
+        "description": "Yii 2 before 2.0.52 mishandles the attaching of behavior that is defined by an __class array key, a CVE-2024-4990 regression, as exploited in the wild in February through April 2025.",
+        "title": "Yiiframework Yii Improper Protection of Alternate Path Vulnerability",
+        "vendor": "yiiframework",
+        "product": "yii",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2024-58136",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2025-04-10T03:15:17.767",
+        "lastModified": "2025-11-05T19:28:54.540",
+        "vulnStatus": "Analyzed",
+        "cisaExploitAdd": "2025-05-02",
+        "cisaActionDue": "2025-05-23",
+        "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+        "cisaVulnerabilityName": "Yiiframework Yii Improper Protection of Alternate Path Vulnerability",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Yii 2 before 2.0.52 mishandles the attaching of behavior that is defined by an __class array key, a CVE-2024-4990 regression, as exploited in the wild in February through April 2025."
+          },
+          {
+            "lang": "es",
+            "value": "Yii 2 anterior a 2.0.52 gestiona mal la asociación de comportamiento definido por una clave de matriz __class, una regresión CVE-2024-4990, tal como se explotó en la naturaleza entre febrero y abril de 2025."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:H/A:H",
+                "baseScore": 9.0,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "cve@mitre.org",
+              "type": "Secondary",
+              "exploitabilityScore": 2.2,
+              "impactScore": 6.0
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-424"
+              }
+            ],
+            "source": "cve@mitre.org"
+          },
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "NVD-CWE-Other"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:yiiframework:yii:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "E119EC3D-E5D1-4F38-B7C7-76C81798B4F7",
+                    "versionEndExcluding": "2.0.52"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/yiisoft/yii2/commit/40fe496eda529fd1d933b56a1022ec32d3cd0b12",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://github.com/yiisoft/yii2/compare/2.0.51...2.0.52",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Issue Tracking"
+            ]
+          },
+          {
+            "url": "https://github.com/yiisoft/yii2/pull/20232",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://github.com/yiisoft/yii2/pull/20232#issuecomment-2252459709",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Issue Tracking"
+            ]
+          },
+          {
+            "url": "https://www.yiiframework.com/news/709/please-upgrade-to-yii-2-0-52",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://sensepost.com/blog/2025/investigating-an-in-the-wild-campaign-using-rce-in-craftcms/",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2024-58136",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "US Government Resource"
+            ]
+          }
+        ]
+      },
+      "risk_score": 88,
+      "rank": 4
+    },
+    {
+      "cve_id": "CVE-2025-2421",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-05-02",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-05-02",
+        "description": "Improper Control of Generation of Code ('Code Injection') vulnerability in Profelis Informatics SambaBox allows Code Injection.This issue affects SambaBox: before 5.1.",
+        "title": "felisify sambabox",
+        "vendor": "felisify",
+        "product": "sambabox",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-2421",
+        "sourceIdentifier": "iletisim@usom.gov.tr",
+        "published": "2025-05-02T12:15:15.803",
+        "lastModified": "2025-09-12T08:15:45.057",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Improper Control of Generation of Code ('Code Injection') vulnerability in Profelis Informatics SambaBox allows Code Injection.This issue affects SambaBox: before 5.1."
+          },
+          {
+            "lang": "es",
+            "value": "La vulnerabilidad de control inadecuado de generación de código ('Inyección de código') en Profelis Informatics SambaBox permite la inyección de código. Este problema afecta a SambaBox: antes de 5.1."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "iletisim@usom.gov.tr",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-94"
+              }
+            ],
+            "source": "iletisim@usom.gov.tr"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:felisify:sambabox:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "65B7CC6B-E1B3-45BC-ABC2-E6C03A3271A5",
+                    "versionEndExcluding": "5.1"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://sambabox.io/2025/04/14/version-5-1/",
+            "source": "iletisim@usom.gov.tr",
+            "tags": [
+              "Product",
+              "Release Notes"
+            ]
+          },
+          {
+            "url": "https://www.usom.gov.tr/bildirim/tr-25-0101",
+            "source": "iletisim@usom.gov.tr",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 5
+    },
+    {
+      "cve_id": "CVE-2025-2812",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-05-02",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-05-02",
+        "description": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in Mydata Informatics Ticket Sales Automation allows Blind SQL Injection.This issue affects Ticket Sales Automation: before 03.04.2025 (DD.MM.YYYY).",
+        "title": "mydata ticket_sales_automation SQL Injection",
+        "vendor": "mydata",
+        "product": "ticket_sales_automation",
+        "attack_type": "SQL Injection",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-2812",
+        "sourceIdentifier": "iletisim@usom.gov.tr",
+        "published": "2025-05-02T09:15:20.210",
+        "lastModified": "2025-05-28T15:15:24.520",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in Mydata Informatics Ticket Sales Automation allows Blind SQL Injection.This issue affects Ticket Sales Automation: before 03.04.2025 (DD.MM.YYYY)."
+          },
+          {
+            "lang": "es",
+            "value": "La vulnerabilidad de neutralización incorrecta de elementos especiales utilizados en un comando SQL ('Inyección SQL') en Mydata Informatics Ticket Sales Automation permite la inyección SQL ciega. Este problema afecta a Ticket Sales Automation: antes del 03.04.2025 (DD.MM.AAAA)."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "iletisim@usom.gov.tr",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-89"
+              }
+            ],
+            "source": "iletisim@usom.gov.tr"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:mydata:ticket_sales_automation:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "59DA9598-B0F9-4024-A1FF-093248E468A8",
+                    "versionEndExcluding": "2025-04-03"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/sahici/CVE-2025-2812/",
+            "source": "iletisim@usom.gov.tr"
+          },
+          {
+            "url": "https://www.usom.gov.tr/bildirim/tr-25-0099",
+            "source": "iletisim@usom.gov.tr",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 6
+    },
+    {
+      "cve_id": "CVE-2025-3708",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-05-02",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-05-02",
+        "description": "Le-show medical practice management system from Le-yan has a SQL Injection vulnerability, allowing unauthenticated remote attackers to inject arbitrary SQL commands to read, modify, and delete database contents.",
+        "title": "le-show le-yan SQL Injection",
+        "vendor": "le-show",
+        "product": "le-yan",
+        "attack_type": "SQL Injection",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-3708",
+        "sourceIdentifier": "twcert@cert.org.tw",
+        "published": "2025-05-02T04:15:55.507",
+        "lastModified": "2025-05-07T16:50:44.930",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Le-show medical practice management system from Le-yan has a SQL Injection vulnerability, allowing unauthenticated remote attackers to inject arbitrary SQL commands to read, modify, and delete database contents."
+          },
+          {
+            "lang": "es",
+            "value": "Le-show medical practice management system de Le-yan tiene una vulnerabilidad de inyección SQL, lo que permite a atacantes remotos no autenticados inyectar comandos SQL arbitrarios para leer, modificar y eliminar contenidos de la base de datos."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "twcert@cert.org.tw",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-89"
+              }
+            ],
+            "source": "twcert@cert.org.tw"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:le-show:le-yan:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "66B41131-9FB2-4BCB-85BC-123280E0FAC7",
+                    "versionEndIncluding": "3.2.25"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://www.twcert.org.tw/en/cp-139-10086-dbfd0-2.html",
+            "source": "twcert@cert.org.tw",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.twcert.org.tw/tw/cp-132-10085-69e16-1.html",
+            "source": "twcert@cert.org.tw",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 7
+    },
+    {
+      "cve_id": "CVE-2025-3709",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-05-02",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-05-02",
+        "description": "Agentflow from Flowring Technology has an Account Lockout Bypass vulnerability, allowing unauthenticated remote attackers to exploit this vulnerability to perform password brute force attack.",
+        "title": "flowring agentflow",
+        "vendor": "flowring",
+        "product": "agentflow",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-3709",
+        "sourceIdentifier": "twcert@cert.org.tw",
+        "published": "2025-05-02T04:15:55.707",
+        "lastModified": "2025-05-07T16:50:52.680",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Agentflow from Flowring Technology has an Account Lockout Bypass vulnerability, allowing unauthenticated remote attackers to exploit this vulnerability to perform password brute force attack."
+          },
+          {
+            "lang": "es",
+            "value": "Agentflow de Flowring Technology tiene una vulnerabilidad de omisión de bloqueo de cuenta, lo que permite a atacantes remotos no autenticados explotar esta vulnerabilidad para realizar ataques de fuerza bruta de contraseñas."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "twcert@cert.org.tw",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-307"
+              }
+            ],
+            "source": "twcert@cert.org.tw"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:flowring:agentflow:4.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "5571A718-F5EB-4188-91B0-FA3B8D49521D"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://www.twcert.org.tw/en/cp-139-10090-112f7-2.html",
+            "source": "twcert@cert.org.tw",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.twcert.org.tw/tw/cp-132-10091-12462-1.html",
+            "source": "twcert@cert.org.tw",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 8
+    },
+    {
+      "cve_id": "CVE-2025-3927",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-05-02",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-05-02",
+        "description": "Digigram's PYKO-OUT audio-over-IP (AoIP) web-server does not require a password by default, allowing any attacker with the target IP address to connect and compromise the device, potentially pivoting to connected network or hardware devices.",
+        "title": "digigram pyko-out",
+        "vendor": "digigram",
+        "product": "pyko-out",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-3927",
+        "sourceIdentifier": "cret@cert.org",
+        "published": "2025-05-02T15:15:49.017",
+        "lastModified": "2025-06-17T14:18:20.087",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Digigram's PYKO-OUT audio-over-IP (AoIP) web-server does not require a password by default, allowing any attacker with the target IP address to connect and compromise the device, potentially pivoting to connected network or hardware devices."
+          },
+          {
+            "lang": "es",
+            "value": "El servidor web de audio sobre IP (AoIP) PYKO-OUT de Digigram no requiere una contraseña de manera predeterminada, lo que permite que cualquier atacante con la dirección IP de destino se conecte y comprometa el dispositivo, recurriendo potencialmente a dispositivos de hardware o de red conectados."
+          }
+        ],
+        "cveTags": [
+          {
+            "sourceIdentifier": "cret@cert.org",
+            "tags": [
+              "unsupported-when-assigned"
+            ]
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-862"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:digigram:pyko-out:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "0DE1AE15-833F-4E8C-9A8D-621552D371B7"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://www.digigram.com/download/pyko-out-user-manual-en-jan-2019/",
+            "source": "cret@cert.org",
+            "tags": [
+              "Product"
+            ]
+          },
+          {
+            "url": "https://www.kb.cert.org/vuls/id/360686",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 9
+    },
+    {
+      "cve_id": "CVE-2025-44868",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-05-02",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-05-02",
+        "description": "Wavlink WL-WN530H4 20220801 was found to contain a command injection vulnerability in the ping_test function of the adm.cgi via the pingIp parameter. This vulnerability allows attackers to execute arbitrary commands via a crafted request.",
+        "title": "wavlink wl-wn530h4_firmware Command Injection",
+        "vendor": "wavlink",
+        "product": "wl-wn530h4_firmware",
+        "attack_type": "Command Injection",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-44868",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2025-05-02T15:15:49.123",
+        "lastModified": "2025-06-13T13:04:52.783",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Wavlink WL-WN530H4 20220801 was found to contain a command injection vulnerability in the ping_test function of the adm.cgi via the pingIp parameter. This vulnerability allows attackers to execute arbitrary commands via a crafted request."
+          },
+          {
+            "lang": "es",
+            "value": "Se descubrió que Wavlink WL-WN530H4 20220801 contenía una vulnerabilidad de inyección de comandos en la función ping_test de adm.cgi mediante el parámetro pingIp. Esta vulnerabilidad permite a los atacantes ejecutar comandos arbitrarios mediante una solicitud manipulada."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-77"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:wavlink:wl-wn530h4_firmware:20220801:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "9C65E5BF-2523-4A70-81BD-AD36E4C70890"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:wavlink:wl-wn530h4:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "D3428605-3620-4A46-A0ED-C81482A0177F"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/Summermu/VulnForIoT/tree/main/Wavlink_WL-WN530H4/ping_test/readme.md",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/Summermu/VulnForIoT/blob/main/Wavlink_WL-WN530H4/ping_test/readme.md",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 10
+    },
+    {
+      "cve_id": "CVE-2025-44872",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-05-02",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-05-02",
+        "description": "Tenda AC9 V15.03.06.42_multi was found to contain a command injection vulnerability in the formsetUsbUnload function via the deviceName parameter. This vulnerability allows attackers to execute arbitrary commands via a crafted request.",
+        "title": "tenda ac9_firmware Command Injection",
+        "vendor": "tenda",
+        "product": "ac9_firmware",
+        "attack_type": "Command Injection",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-44872",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2025-05-02T15:15:49.227",
+        "lastModified": "2025-05-27T14:21:40.517",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Tenda AC9 V15.03.06.42_multi was found to contain a command injection vulnerability in the formsetUsbUnload function via the deviceName parameter. This vulnerability allows attackers to execute arbitrary commands via a crafted request."
+          },
+          {
+            "lang": "es",
+            "value": "Se detectó que Tenda AC9 V15.03.06.42_multi contiene una vulnerabilidad de inyección de comandos en la función formsetUsbUnload mediante el parámetro deviceName. Esta vulnerabilidad permite a los atacantes ejecutar comandos arbitrarios mediante una solicitud manipulada."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-77"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:tenda:ac9_firmware:15.03.06.42_multi:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "7AE11228-D2BB-48CF-BFDA-E2AA73E73C3C"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:tenda:ac9:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "2FD1430E-DC2E-4042-9389-1FD90ECDBE4D"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/Summermu/VulnForIoT/tree/main/Tenda_AC/AC9_formsetUsbUnload",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 11
+    },
+    {
+      "cve_id": "CVE-2025-44877",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-05-02",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-05-02",
+        "description": "Tenda AC9 V15.03.06.42_multi was found to contain a command injection vulnerability in the formSetSambaConf function via the usbname parameter. This vulnerability allows attackers to execute arbitrary commands via a crafted request.",
+        "title": "tenda ac9_firmware Command Injection",
+        "vendor": "tenda",
+        "product": "ac9_firmware",
+        "attack_type": "Command Injection",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-44877",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2025-05-02T15:15:49.323",
+        "lastModified": "2025-05-27T14:21:50.710",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Tenda AC9 V15.03.06.42_multi was found to contain a command injection vulnerability in the formSetSambaConf function via the usbname parameter. This vulnerability allows attackers to execute arbitrary commands via a crafted request."
+          },
+          {
+            "lang": "es",
+            "value": "Se detectó que Tenda AC9 V15.03.06.42_multi contenía una vulnerabilidad de inyección de comandos en la función formSetSambaConf mediante el parámetro usbname. Esta vulnerabilidad permite a los atacantes ejecutar comandos arbitrarios mediante una solicitud manipulada."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-77"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:tenda:ac9_firmware:15.03.06.42_multi:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "7AE11228-D2BB-48CF-BFDA-E2AA73E73C3C"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:tenda:ac9:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "2FD1430E-DC2E-4042-9389-1FD90ECDBE4D"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/Summermu/VulnForIoT/tree/main/Tenda_AC/AC9_formSetSambaConf",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 12
+    },
+    {
+      "cve_id": "CVE-2025-45800",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-05-02",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-05-02",
+        "description": "TOTOLINK A950RG V4.1.2cu.5204_B20210112 contains a command execution vulnerability in the setDeviceName interface of the /lib/cste_modules/global.so library, specifically in the processing of the deviceMac parameter.",
+        "title": "totolink a950rg_firmware",
+        "vendor": "totolink",
+        "product": "a950rg_firmware",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-45800",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2025-05-02T17:15:52.423",
+        "lastModified": "2025-06-04T17:26:02.743",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "TOTOLINK A950RG V4.1.2cu.5204_B20210112 contains a command execution vulnerability in the setDeviceName interface of the /lib/cste_modules/global.so library, specifically in the processing of the deviceMac parameter."
+          },
+          {
+            "lang": "es",
+            "value": "TOTOLINK A950RG V4.1.2cu.5204_B20210112 contiene una vulnerabilidad de ejecución de comandos en la interfaz setDeviceName de la librería /lib/cste_modules/global.so, específicamente en el procesamiento del parámetro deviceMac."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-77"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:totolink:a950rg_firmware:4.1.2cu.5204_b20210112:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "730932A4-0583-43BA-995A-EFCE271B9BA6"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:totolink:a950rg:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "2F20C691-11F3-4882-89C7-500C097C0938"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/SunnyYANGyaya/cuicuishark-sheep-fishIOT/blob/main/ToTolink/A950RG/5024-setDeviceName-deviceMac-command.md",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 13
+    }
+  ],
+  "source": "https://www.cvelogic.com/threat-intelligence/2025-05-02"
+}

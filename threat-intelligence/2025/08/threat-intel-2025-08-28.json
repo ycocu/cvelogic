@@ -1,0 +1,916 @@
+{
+  "schema_version": "2.2",
+  "generated_at": "2026-06-02T07:33:19Z",
+  "day": "2025-08-28",
+  "window": {
+    "utc_start": "2025-08-28",
+    "utc_end": "2025-08-28",
+    "days": 1
+  },
+  "summary": {
+    "brief": "10 new critical disclosures — review patch status on exposed services.",
+    "bullets": [
+      "10 new critical disclosures — review patch status on exposed services."
+    ],
+    "counts": {
+      "cves": 10,
+      "kev": 0,
+      "exploit": 0,
+      "epss": 0,
+      "cvss": 10,
+      "patch": 0
+    }
+  },
+  "cves": [
+    {
+      "cve_id": "CVE-2025-57819",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-08-28",
+          "previous_max": null,
+          "current_max": 10.0
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-08-28",
+        "description": "FreePBX is an open-source web-based graphical user interface. FreePBX 15, 16, and 17 endpoints are vulnerable due to insufficiently sanitized user-supplied data allowing unauthenticated access to FreePBX Administrator leading to arbitrary database manipulation and remote code execution. This issue has been patched in endpoint versions 15.0.66, 16.0.89, and 17.0.3.",
+        "title": "Sangoma FreePBX Authentication Bypass Vulnerability",
+        "vendor": "sangoma",
+        "product": "freepbx",
+        "attack_type": "RCE",
+        "cvss_max": 10.0
+      },
+      "cve": {
+        "id": "CVE-2025-57819",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2025-08-28T17:15:36.790",
+        "lastModified": "2025-10-24T13:58:40.963",
+        "vulnStatus": "Analyzed",
+        "cisaExploitAdd": "2025-08-29",
+        "cisaActionDue": "2025-09-19",
+        "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+        "cisaVulnerabilityName": "Sangoma FreePBX Authentication Bypass Vulnerability",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "FreePBX is an open-source web-based graphical user interface. FreePBX 15, 16, and 17 endpoints are vulnerable due to insufficiently sanitized user-supplied data allowing unauthenticated access to FreePBX Administrator leading to arbitrary database manipulation and remote code execution. This issue has been patched in endpoint versions 15.0.66, 16.0.89, and 17.0.3."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 10.0,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-89"
+              },
+              {
+                "lang": "en",
+                "value": "CWE-288"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:sangoma:freepbx:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "F9143871-4B1B-4E24-BEC2-BFD90A93D22E",
+                    "versionStartIncluding": "15.0",
+                    "versionEndExcluding": "15.0.66"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:sangoma:freepbx:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "CA0527BD-AE80-4126-A72A-008EEC486381",
+                    "versionStartIncluding": "16.0",
+                    "versionEndExcluding": "16.0.89"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:sangoma:freepbx:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "89857E91-C727-4043-8BCE-A2A089D6F720",
+                    "versionStartIncluding": "17.0",
+                    "versionEndExcluding": "17.0.3"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://community.freepbx.org/t/security-advisory-please-lock-down-your-administrator-access/107203",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Issue Tracking",
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/FreePBX/security-reporting/security/advisories/GHSA-m42g-xg4c-5f3h",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Mitigation",
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/watchtowrlabs/watchTowr-vs-FreePBX-CVE-2025-57819",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2025-57819",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "US Government Resource"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 1
+    },
+    {
+      "cve_id": "CVE-2025-49387",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-08-28",
+          "previous_max": null,
+          "current_max": 10.0
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-08-28",
+        "description": "Unrestricted Upload of File with Dangerous Type vulnerability in add-ons.org Drag and Drop File Upload for Elementor Forms drag-and-drop-file-upload-for-elementor-forms allows Upload a Web Shell to a Web Server.This issue affects Drag and Drop File Upload for Elementor Forms: from n/a through <= 1.5.3.",
+        "title": "Unrestricted Upload of File with Dangerous Type vulnerability in add-ons.org Drag and Drop File Upload for Elementor Forms drag-and-drop-...",
+        "cvss_max": 10.0
+      },
+      "cve": {
+        "id": "CVE-2025-49387",
+        "sourceIdentifier": "audit@patchstack.com",
+        "published": "2025-08-28T13:15:59.230",
+        "lastModified": "2026-04-23T15:31:34.733",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Unrestricted Upload of File with Dangerous Type vulnerability in add-ons.org Drag and Drop File Upload for Elementor Forms drag-and-drop-file-upload-for-elementor-forms allows Upload a Web Shell to a Web Server.This issue affects Drag and Drop File Upload for Elementor Forms: from n/a through <= 1.5.3."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+                "baseScore": 10.0,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "audit@patchstack.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 6.0
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-434"
+              }
+            ],
+            "source": "audit@patchstack.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://patchstack.com/database/Wordpress/Plugin/drag-and-drop-file-upload-for-elementor-forms/vulnerability/wordpress-drag-and-drop-file-upload-for-elementor-forms-plugin-1-5-3-arbitrary-file-upload-vulnerability?_s_id=cve",
+            "source": "audit@patchstack.com"
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 2
+    },
+    {
+      "cve_id": "CVE-2025-58048",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-08-28",
+          "previous_max": null,
+          "current_max": 9.9
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-08-28",
+        "description": "Paymenter is a free and open-source webshop solution for hostings. Prior to version 1.2.11, the ticket attachments functionality in Paymenter allows a malicious authenticated user to upload arbitrary files. This could result in sensitive data extraction from the database, credentials being read from configuration files, and arbitrary system commands being run under the web server user context. This vulnerability was patched by commit 87c3db4 and was released under the version 1.2.11 tag without any other code modifications compared to version 1.2.10. If upgrading is not immediately possible, administrators can mitigate this vulnerability with one or more of the following measures: updating nginx config to download attachments instead of executing them or disallowing access to /storage/ fully using a WAF such as Cloudflare.",
+        "title": "Paymenter is a free and open-source webshop solution for hostings.",
+        "cvss_max": 9.9
+      },
+      "cve": {
+        "id": "CVE-2025-58048",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2025-08-28T18:15:33.473",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Paymenter is a free and open-source webshop solution for hostings. Prior to version 1.2.11, the ticket attachments functionality in Paymenter allows a malicious authenticated user to upload arbitrary files. This could result in sensitive data extraction from the database, credentials being read from configuration files, and arbitrary system commands being run under the web server user context. This vulnerability was patched by commit 87c3db4 and was released under the version 1.2.11 tag without any other code modifications compared to version 1.2.10. If upgrading is not immediately possible, administrators can mitigate this vulnerability with one or more of the following measures: updating nginx config to download attachments instead of executing them or disallowing access to /storage/ fully using a WAF such as Cloudflare."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+                "baseScore": 9.9,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.1,
+              "impactScore": 6.0
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-434"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/Paymenter/Paymenter/commit/87c3db42282ada1e3cda54b9a01f846926c0669b",
+            "source": "security-advisories@github.com"
+          },
+          {
+            "url": "https://github.com/Paymenter/Paymenter/releases/tag/v1.2.11",
+            "source": "security-advisories@github.com"
+          },
+          {
+            "url": "https://github.com/Paymenter/Paymenter/security/advisories/GHSA-5pm9-r2m8-rcmj",
+            "source": "security-advisories@github.com"
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 3
+    },
+    {
+      "cve_id": "CVE-2025-49388",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-08-28",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-08-28",
+        "description": "Incorrect Privilege Assignment vulnerability in kamleshyadav Miraculous Core Plugin miraculouscore allows Privilege Escalation.This issue affects Miraculous Core Plugin: from n/a through <= 2.0.7.",
+        "title": "Incorrect Privilege Assignment vulnerability in kamleshyadav Miraculous Core Plugin miraculouscore allows Privilege Escalation.This issue...",
+        "attack_type": "Privilege Escalation",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-49388",
+        "sourceIdentifier": "audit@patchstack.com",
+        "published": "2025-08-28T13:15:59.430",
+        "lastModified": "2026-04-23T15:31:34.847",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Incorrect Privilege Assignment vulnerability in kamleshyadav Miraculous Core Plugin miraculouscore allows Privilege Escalation.This issue affects Miraculous Core Plugin: from n/a through <= 2.0.7."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "audit@patchstack.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-266"
+              }
+            ],
+            "source": "audit@patchstack.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://patchstack.com/database/Wordpress/Plugin/miraculouscore/vulnerability/wordpress-miraculous-core-plugin-plugin-2-0-7-privilege-escalation-vulnerability?_s_id=cve",
+            "source": "audit@patchstack.com"
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 4
+    },
+    {
+      "cve_id": "CVE-2025-52761",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-08-28",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-08-28",
+        "description": "Deserialization of Untrusted Data vulnerability in manfcarlo WP Funnel Manager wp-funnel-manager allows Object Injection.This issue affects WP Funnel Manager: from n/a through <= 1.4.0.",
+        "title": "Deserialization of Untrusted Data vulnerability in manfcarlo WP Funnel Manager wp-funnel-manager allows Object Injection.This issue affec...",
+        "attack_type": "Deserialization",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-52761",
+        "sourceIdentifier": "audit@patchstack.com",
+        "published": "2025-08-28T13:16:00.483",
+        "lastModified": "2026-04-23T15:32:07.780",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Deserialization of Untrusted Data vulnerability in manfcarlo WP Funnel Manager wp-funnel-manager allows Object Injection.This issue affects WP Funnel Manager: from n/a through <= 1.4.0."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "audit@patchstack.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-502"
+              }
+            ],
+            "source": "audit@patchstack.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://patchstack.com/database/Wordpress/Plugin/wp-funnel-manager/vulnerability/wordpress-wp-funnel-manager-plugin-1-4-0-php-object-injection-vulnerability?_s_id=cve",
+            "source": "audit@patchstack.com"
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 5
+    },
+    {
+      "cve_id": "CVE-2025-54720",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-08-28",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-08-28",
+        "description": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in SteelThemes Nest Addons nest-addons allows SQL Injection.This issue affects Nest Addons: from n/a through <= 1.6.3.",
+        "title": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in SteelThemes Nest Addons nest-addons...",
+        "attack_type": "SQL Injection",
+        "cvss_max": 9.3
+      },
+      "cve": {
+        "id": "CVE-2025-54720",
+        "sourceIdentifier": "audit@patchstack.com",
+        "published": "2025-08-28T13:16:08.050",
+        "lastModified": "2026-04-23T15:32:53.083",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in SteelThemes Nest Addons nest-addons allows SQL Injection.This issue affects Nest Addons: from n/a through <= 1.6.3."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:L",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "audit@patchstack.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 4.7
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-89"
+              }
+            ],
+            "source": "audit@patchstack.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://patchstack.com/database/Wordpress/Plugin/nest-addons/vulnerability/wordpress-nest-addons-plugin-1-6-3-sql-injection-vulnerability?_s_id=cve",
+            "source": "audit@patchstack.com"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 6
+    },
+    {
+      "cve_id": "CVE-2025-54725",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-08-28",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-08-28",
+        "description": "Authentication Bypass Using an Alternate Path or Channel vulnerability in uxper Golo golo allows Authentication Abuse.This issue affects Golo: from n/a through <= 1.7.0.",
+        "title": "Authentication Bypass Using an Alternate Path or Channel vulnerability in uxper Golo golo allows Authentication Abuse.This issue affects...",
+        "attack_type": "Auth Bypass",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-54725",
+        "sourceIdentifier": "audit@patchstack.com",
+        "published": "2025-08-28T13:16:08.470",
+        "lastModified": "2026-04-23T15:32:53.460",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Authentication Bypass Using an Alternate Path or Channel vulnerability in uxper Golo golo allows Authentication Abuse.This issue affects Golo: from n/a through <= 1.7.0."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "audit@patchstack.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-288"
+              }
+            ],
+            "source": "audit@patchstack.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://patchstack.com/database/Wordpress/Theme/golo/vulnerability/wordpress-golo-theme-1-7-0-broken-authentication-vulnerability?_s_id=cve",
+            "source": "audit@patchstack.com"
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 7
+    },
+    {
+      "cve_id": "CVE-2025-54738",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-08-28",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-08-28",
+        "description": "Authentication Bypass Using an Alternate Path or Channel vulnerability in NooTheme Jobmonster noo-jobmonster allows Authentication Abuse.This issue affects Jobmonster: from n/a through <= 4.7.9.",
+        "title": "Authentication Bypass Using an Alternate Path or Channel vulnerability in NooTheme Jobmonster noo-jobmonster allows Authentication Abuse....",
+        "attack_type": "Auth Bypass",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-54738",
+        "sourceIdentifier": "audit@patchstack.com",
+        "published": "2025-08-28T13:16:09.317",
+        "lastModified": "2026-04-23T15:32:54.880",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Authentication Bypass Using an Alternate Path or Channel vulnerability in NooTheme Jobmonster noo-jobmonster allows Authentication Abuse.This issue affects Jobmonster: from n/a through <= 4.7.9."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "audit@patchstack.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-288"
+              }
+            ],
+            "source": "audit@patchstack.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://patchstack.com/database/Wordpress/Theme/noo-jobmonster/vulnerability/wordpress-jobmonster-theme-4-7-9-broken-authentication-vulnerability?_s_id=cve",
+            "source": "audit@patchstack.com"
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 8
+    },
+    {
+      "cve_id": "CVE-2025-55583",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-08-28",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-08-28",
+        "description": "D-Link DIR-868L B1 router firmware version FW2.05WWB02 contains an unauthenticated OS command injection vulnerability in the fileaccess.cgi component. The endpoint /dws/api/UploadFile accepts a pre_api_arg parameter that is passed directly to system-level shell execution functions without sanitization or authentication. Remote attackers can exploit this to execute arbitrary commands as root via crafted HTTP requests.",
+        "title": "dlink dir-868l_firmware Command Injection",
+        "vendor": "dlink",
+        "product": "dir-868l_firmware",
+        "attack_type": "Command Injection",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-55583",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2025-08-28T15:16:02.700",
+        "lastModified": "2025-09-09T18:41:54.723",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "D-Link DIR-868L B1 router firmware version FW2.05WWB02 contains an unauthenticated OS command injection vulnerability in the fileaccess.cgi component. The endpoint /dws/api/UploadFile accepts a pre_api_arg parameter that is passed directly to system-level shell execution functions without sanitization or authentication. Remote attackers can exploit this to execute arbitrary commands as root via crafted HTTP requests."
+          },
+          {
+            "lang": "es",
+            "value": "La versión FW2.05WWB02 del firmware del router D-Link DIR-868L B1 contiene una vulnerabilidad de inyección de comandos del sistema operativo no autenticada en el componente fileaccess.cgi. El endpoint /dws/API/UploadFile acepta un parámetro pre_api_arg que se pasa directamente a funciones de ejecución de shell a nivel de sistema sin sanitización ni autenticación. Atacantes remotos pueden explotar esto para ejecutar comandos arbitrarios como root a través de solicitudes HTTP manipuladas."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-78"
+              },
+              {
+                "lang": "en",
+                "value": "CWE-306"
+              },
+              {
+                "lang": "en",
+                "value": "CWE-668"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:dlink:dir-868l_firmware:2.05b02:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "4F896BBA-BAF1-4B39-B2C4-7AC33022CAA0"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:dlink:dir-868l:b1:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "A88E4C44-995A-4E95-A57F-52E9C3153B99"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://cybermaya.in/posts/Post-44/",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://supportannouncement.us.dlink.com/security/publication.aspx?name=SAP10397",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Product"
+            ]
+          },
+          {
+            "url": "https://www.dlink.com/en/security-bulletin/",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Not Applicable"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 9
+    },
+    {
+      "cve_id": "CVE-2025-58059",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-08-28",
+          "previous_max": null,
+          "current_max": 9.1
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-08-28",
+        "description": "Valtimo is a platform for Business Process Automation. In versions before 12.16.0.RELEASE, and from 13.0.0.RELEASE to before 13.1.2.RELEASE, any admin that can create or modify and execute process-definitions could gain access to sensitive data or resources. This includes but is not limited to: running executables on the application host, inspecting and extracting data from the host environment or application properties, spring beans (application context, database pooling). The following conditions have to be met in order to perform this attack: the user must be logged in, have the admin role, and must have some knowledge about running scripts via a the Camunda/Operator engine. Version 12.16.0 and 13.1.2 have been patched. It is strongly advised to upgrade. If no scripting is needed in any of the processes, it could be possible to disable it altogether via the ProcessEngineConfiguration. However, this workaround could lead to unexpected side-effects.",
+        "title": "Valtimo is a platform for Business Process Automation.",
+        "cvss_max": 9.1
+      },
+      "cve": {
+        "id": "CVE-2025-58059",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2025-08-28T18:15:33.850",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Valtimo is a platform for Business Process Automation. In versions before 12.16.0.RELEASE, and from 13.0.0.RELEASE to before 13.1.2.RELEASE, any admin that can create or modify and execute process-definitions could gain access to sensitive data or resources. This includes but is not limited to: running executables on the application host, inspecting and extracting data from the host environment or application properties, spring beans (application context, database pooling). The following conditions have to be met in order to perform this attack: the user must be logged in, have the admin role, and must have some knowledge about running scripts via a the Camunda/Operator engine. Version 12.16.0 and 13.1.2 have been patched. It is strongly advised to upgrade. If no scripting is needed in any of the processes, it could be possible to disable it altogether via the ProcessEngineConfiguration. However, this workaround could lead to unexpected side-effects."
+          },
+          {
+            "lang": "es",
+            "value": "Valtimo es una plataforma para la Automatización de Procesos de Negocio. En versiones anteriores a la 12.16.0.RELEASE, y desde la 13.0.0.RELEASE hasta la 13.1.2.RELEASE, cualquier administrador que pueda crear o modificar y ejecutar definiciones de procesos podría obtener acceso a datos o recursos sensibles. Esto incluye, entre otros: ejecutar archivos ejecutables en el host de la aplicación, inspeccionar y extraer datos del entorno del host o de las propiedades de la aplicación, beans de Spring (contexto de la aplicación, pooling de la base de datos). Las siguientes condiciones deben cumplirse para realizar este ataque: el usuario debe haber iniciado sesión, tener el rol de administrador, y debe tener algún conocimiento sobre la ejecución de scripts a través del motor Camunda/Operator. La versión 12.16.0 y la 13.1.2 han sido parcheadas. Se recomienda encarecidamente actualizar. Si no se necesita scripting en ninguno de los procesos, podría ser posible deshabilitarlo por completo a través de la ProcessEngineConfiguration. Sin embargo, esta solución alternativa podría provocar efectos secundarios inesperados."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
+                "baseScore": 9.1,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary",
+              "exploitabilityScore": 2.3,
+              "impactScore": 6.0
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-78"
+              },
+              {
+                "lang": "en",
+                "value": "CWE-200"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/valtimo-platform/valtimo-backend-libraries/commit/45eb60b0b2df5964fb9917295d0dceb1fff8dd85",
+            "source": "security-advisories@github.com"
+          },
+          {
+            "url": "https://github.com/valtimo-platform/valtimo-backend-libraries/security/advisories/GHSA-w48j-pp7j-fj55",
+            "source": "security-advisories@github.com"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 10
+    }
+  ],
+  "source": "https://www.cvelogic.com/threat-intelligence/2025-08-28"
+}

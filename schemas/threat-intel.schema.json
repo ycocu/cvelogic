@@ -1,0 +1,93 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://cvelogic.com/schemas/threat-intel.schema.json",
+  "title": "DailyThreatIntelligence",
+  "description": "Daily digest = NVD API 2.0 cve object + cvelogic signals. Official cve: schemas/nvd-cve-api-2.0.schema.json",
+  "type": "object",
+  "required": ["schema_version", "generated_at", "day", "window", "summary", "cves", "source"],
+  "properties": {
+    "schema_version": { "type": "string" },
+    "generated_at": { "type": "string" },
+    "day": { "type": "string" },
+    "source": { "type": "string" },
+    "window": {
+      "type": "object",
+      "required": ["utc_start", "utc_end", "days"],
+      "properties": {
+        "utc_start": { "type": "string" },
+        "utc_end": { "type": "string" },
+        "days": { "type": "integer" }
+      }
+    },
+    "summary": {
+      "type": "object",
+      "required": ["brief", "bullets", "counts"],
+      "properties": {
+        "brief": { "type": "string" },
+        "bullets": { "type": "array", "items": { "type": "string" } },
+        "counts": {
+          "type": "object",
+          "properties": {
+            "cves": { "type": "integer" },
+            "kev": { "type": "integer" },
+            "exploit": { "type": "integer" },
+            "epss": { "type": "integer" },
+            "cvss": { "type": "integer" },
+            "patch": { "type": "integer" }
+          }
+        }
+      }
+    },
+    "cves": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/cveEntry" }
+    }
+  },
+  "$defs": {
+    "cveEntry": {
+      "type": "object",
+      "required": ["cve_id", "rank", "signal_types", "signals", "cve"],
+      "properties": {
+        "cve_id": { "type": "string" },
+        "rank": { "type": "integer" },
+        "risk_score": { "type": "integer" },
+        "signal_types": {
+          "type": "array",
+          "items": { "type": "string", "enum": ["KEV", "EXP", "EPSS", "CVSS", "PATCH"] }
+        },
+        "digest": {
+          "type": "object",
+          "description": "cvelogic display helpers (not in NVD schema)",
+          "properties": {
+            "title": { "type": "string" },
+            "vendor": { "type": "string" },
+            "product": { "type": "string" },
+            "description": { "type": "string" },
+            "attack_type": { "type": "string" },
+            "cvss_max": { "type": "number" },
+            "published": { "type": "string" }
+          }
+        },
+        "signals": { "$ref": "#/$defs/digestSignals" },
+        "cve": {
+          "description": "Official NVD API 2.0 cve object (same as vulnerabilities[].cve)",
+          "$ref": "nvd-cve-api-2.0.schema.json#/$defs/nvdCveRecord"
+        }
+      }
+    },
+    "digestSignals": {
+      "type": "object",
+      "required": ["kev", "exploit", "epss", "cvss", "patch"],
+      "properties": {
+        "kev": { "type": ["object", "null"], "properties": { "date_added": { "type": "string" } } },
+        "exploit": {
+          "type": ["object", "null"],
+          "properties": { "ref_published": { "type": "string" } }
+        },
+        "epss": { "type": ["object", "null"] },
+        "cvss": { "type": ["object", "null"] },
+        "patch": { "type": ["object", "null"] }
+      }
+    }
+  }
+}

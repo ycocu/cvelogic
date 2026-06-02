@@ -1,0 +1,802 @@
+{
+  "schema_version": "2.2",
+  "generated_at": "2026-06-02T07:33:46Z",
+  "day": "2025-11-13",
+  "window": {
+    "utc_start": "2025-11-13",
+    "utc_end": "2025-11-13",
+    "days": 1
+  },
+  "summary": {
+    "brief": "6 new critical disclosures — review patch status on exposed services.",
+    "bullets": [
+      "6 new critical disclosures — review patch status on exposed services."
+    ],
+    "counts": {
+      "cves": 6,
+      "kev": 0,
+      "exploit": 0,
+      "epss": 0,
+      "cvss": 6,
+      "patch": 0
+    }
+  },
+  "cves": [
+    {
+      "cve_id": "CVE-2025-36250",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-11-13",
+          "previous_max": null,
+          "current_max": 10.0
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-11-13",
+        "description": "IBM AIX 7.2, and 7.3 and IBM VIOS 3.1, and 4.1 NIM server (formerly known as NIM master) service (nimesis) could allow a remote attacker to execute arbitrary commands due to improper process controls.  This addresses additional attack vectors for a vulnerability that was previously addressed in CVE-2024-56346.",
+        "title": "ibm aix",
+        "vendor": "ibm",
+        "product": "vios",
+        "cvss_max": 10.0
+      },
+      "cve": {
+        "id": "CVE-2025-36250",
+        "sourceIdentifier": "psirt@us.ibm.com",
+        "published": "2025-11-13T22:15:50.887",
+        "lastModified": "2025-11-19T22:08:58.157",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "IBM AIX 7.2, and 7.3 and IBM VIOS 3.1, and 4.1 NIM server (formerly known as NIM master) service (nimesis) could allow a remote attacker to execute arbitrary commands due to improper process controls.  This addresses additional attack vectors for a vulnerability that was previously addressed in CVE-2024-56346."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+                "baseScore": 10.0,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "psirt@us.ibm.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 6.0
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-114"
+              }
+            ],
+            "source": "psirt@us.ibm.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:ibm:vios:3.1.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "3939ADB4-5177-45C2-9C29-932E81D27F9E"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:ibm:vios:4.1.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "AB8BDD68-E15D-460F-855E-72DF774D6A1F"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:ibm:aix:7.2:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "6791504A-A48A-4ED0-94AF-4C8A3B91516F"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:ibm:aix:7.3:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "35DF3DE0-1AE4-4B25-843F-BC08DBBFDF78"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://www.ibm.com/support/pages/node/7251173",
+            "source": "psirt@us.ibm.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 1
+    },
+    {
+      "cve_id": "CVE-2025-64709",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-11-13",
+          "previous_max": null,
+          "current_max": 9.6
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-11-13",
+        "description": "Typebot is an open-source chatbot builder. In versions prior to 3.13.1, a Server-Side Request Forgery (SSRF) vulnerability in the Typebot webhook block (HTTP Request component) functionality allows authenticated users to make arbitrary HTTP requests from the server, including access to AWS Instance Metadata Service (IMDS). By bypassing IMDSv2 protection through custom header injection, attackers can extract temporary AWS IAM credentials for the EKS node role, leading to complete compromise of the Kubernetes cluster and associated AWS infrastructure. Version 3.13.1 fixes the issue.",
+        "title": "typebot typebot SSRF",
+        "vendor": "typebot",
+        "product": "typebot",
+        "attack_type": "SSRF",
+        "cvss_max": 9.9
+      },
+      "cve": {
+        "id": "CVE-2025-64709",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2025-11-13T20:15:53.053",
+        "lastModified": "2026-01-30T14:23:42.560",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Typebot is an open-source chatbot builder. In versions prior to 3.13.1, a Server-Side Request Forgery (SSRF) vulnerability in the Typebot webhook block (HTTP Request component) functionality allows authenticated users to make arbitrary HTTP requests from the server, including access to AWS Instance Metadata Service (IMDS). By bypassing IMDSv2 protection through custom header injection, attackers can extract temporary AWS IAM credentials for the EKS node role, leading to complete compromise of the Kubernetes cluster and associated AWS infrastructure. Version 3.13.1 fixes the issue."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:N",
+                "baseScore": 9.6,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.1,
+              "impactScore": 5.8
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+                "baseScore": 9.9,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.1,
+              "impactScore": 6.0
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-918"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:typebot:typebot:*:*:*:*:*:-:*:*",
+                    "matchCriteriaId": "C3C6D327-65E0-402A-AA2C-7879B7C472E4",
+                    "versionEndExcluding": "3.13.1"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/baptisteArno/typebot.io/security/advisories/GHSA-8gq9-rw7v-3jpr",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Exploit",
+              "Mitigation",
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 2
+    },
+    {
+      "cve_id": "CVE-2025-36251",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-11-13",
+          "previous_max": null,
+          "current_max": 9.6
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-11-13",
+        "description": "IBM AIX 7.2, and 7.3 and IBM VIOS 3.1, and 4.1 nimsh service SSL/TLS implementations could allow a remote attacker to execute arbitrary commands due to improper process controls. This addresses additional attack vectors for a vulnerability that was previously addressed in CVE-2024-56347.",
+        "title": "ibm aix",
+        "vendor": "ibm",
+        "product": "vios",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-36251",
+        "sourceIdentifier": "psirt@us.ibm.com",
+        "published": "2025-11-13T22:15:51.053",
+        "lastModified": "2025-11-19T22:08:07.717",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "IBM AIX 7.2, and 7.3 and IBM VIOS 3.1, and 4.1 nimsh service SSL/TLS implementations could allow a remote attacker to execute arbitrary commands due to improper process controls. This addresses additional attack vectors for a vulnerability that was previously addressed in CVE-2024-56347."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:L",
+                "baseScore": 9.6,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "psirt@us.ibm.com",
+              "type": "Secondary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 6.0
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-114"
+              }
+            ],
+            "source": "psirt@us.ibm.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:ibm:vios:3.1.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "3939ADB4-5177-45C2-9C29-932E81D27F9E"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:ibm:vios:4.1.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "AB8BDD68-E15D-460F-855E-72DF774D6A1F"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:ibm:aix:7.2:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "6791504A-A48A-4ED0-94AF-4C8A3B91516F"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:ibm:aix:7.3:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "35DF3DE0-1AE4-4B25-843F-BC08DBBFDF78"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://www.ibm.com/support/pages/node/7251173",
+            "source": "psirt@us.ibm.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 3
+    },
+    {
+      "cve_id": "CVE-2025-12762",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-11-13",
+          "previous_max": null,
+          "current_max": 9.1
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-11-13",
+        "description": "pgAdmin versions up to 9.9 are affected by a Remote Code Execution (RCE) vulnerability that occurs when running in server mode and performing restores from PLAIN-format dump files. This issue allows attackers to inject and execute arbitrary commands on the server hosting pgAdmin, posing a critical risk to the integrity and security of the database management system and underlying data.",
+        "title": "pgadmin pgadmin_4 RCE",
+        "vendor": "pgadmin",
+        "product": "pgadmin_4",
+        "attack_type": "RCE",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-12762",
+        "sourceIdentifier": "f86ef6dc-4d3a-42ad-8f28-e6d5547a5007",
+        "published": "2025-11-13T13:15:44.620",
+        "lastModified": "2025-12-01T20:15:49.347",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "pgAdmin versions up to 9.9 are affected by a Remote Code Execution (RCE) vulnerability that occurs when running in server mode and performing restores from PLAIN-format dump files. This issue allows attackers to inject and execute arbitrary commands on the server hosting pgAdmin, posing a critical risk to the integrity and security of the database management system and underlying data."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:L/A:L",
+                "baseScore": 9.1,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "f86ef6dc-4d3a-42ad-8f28-e6d5547a5007",
+              "type": "Secondary",
+              "exploitabilityScore": 3.1,
+              "impactScore": 5.3
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "NVD-CWE-noinfo"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          },
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-94"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:pgadmin:pgadmin_4:*:*:*:*:*:postgresql:*:*",
+                    "matchCriteriaId": "869DC8C4-E456-4D31-964B-96D4B9B8F4A2",
+                    "versionEndExcluding": "9.10"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/pgadmin-org/pgadmin4/issues/9320",
+            "source": "f86ef6dc-4d3a-42ad-8f28-e6d5547a5007",
+            "tags": [
+              "Issue Tracking",
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 4
+    },
+    {
+      "cve_id": "CVE-2025-36096",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-11-13",
+          "previous_max": null,
+          "current_max": 9.0
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-11-13",
+        "description": "IBM AIX 7.2, and 7.3 and IBM VIOS 3.1, and 4.1 stores NIM private keys used in NIM environments in an insecure way which is susceptible to unauthorized access by an attacker using man in the middle techniques.",
+        "title": "ibm aix",
+        "vendor": "ibm",
+        "product": "vios",
+        "cvss_max": 9.0
+      },
+      "cve": {
+        "id": "CVE-2025-36096",
+        "sourceIdentifier": "psirt@us.ibm.com",
+        "published": "2025-11-13T22:15:50.500",
+        "lastModified": "2025-11-19T22:11:50.723",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "IBM AIX 7.2, and 7.3 and IBM VIOS 3.1, and 4.1 stores NIM private keys used in NIM environments in an insecure way which is susceptible to unauthorized access by an attacker using man in the middle techniques."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:H/A:H",
+                "baseScore": 9.0,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "psirt@us.ibm.com",
+              "type": "Secondary",
+              "exploitabilityScore": 2.2,
+              "impactScore": 6.0
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 8.1,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 2.2,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-522"
+              }
+            ],
+            "source": "psirt@us.ibm.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:ibm:vios:3.1.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "3939ADB4-5177-45C2-9C29-932E81D27F9E"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:ibm:vios:4.1.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "AB8BDD68-E15D-460F-855E-72DF774D6A1F"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:ibm:aix:7.2:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "6791504A-A48A-4ED0-94AF-4C8A3B91516F"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:ibm:aix:7.3:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "35DF3DE0-1AE4-4B25-843F-BC08DBBFDF78"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://www.ibm.com/support/pages/node/7251173",
+            "source": "psirt@us.ibm.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 5
+    },
+    {
+      "cve_id": "CVE-2025-59367",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-11-13",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-11-13",
+        "description": "An authentication bypass vulnerability has been identified in certain DSL series routers, may allow remote attackers to gain unauthorized access into the affected system. Refer to the 'Security Update for DSL Series Router' section on the ASUS Security Advisory for more information.",
+        "title": "asus dsl-ac51_firmware Auth Bypass",
+        "vendor": "asus",
+        "product": "dsl-ac51_firmware",
+        "attack_type": "Auth Bypass",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-59367",
+        "sourceIdentifier": "54bf65a7-a193-42d2-b1ba-8e150d3c35e1",
+        "published": "2025-11-13T03:16:26.327",
+        "lastModified": "2026-02-06T14:47:50.350",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "An authentication bypass vulnerability has been identified in certain DSL series routers, may allow remote attackers to gain unauthorized access into the affected system. Refer to the 'Security Update for DSL Series Router' section on the ASUS Security Advisory for more information."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "54bf65a7-a193-42d2-b1ba-8e150d3c35e1",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-288"
+              }
+            ],
+            "source": "54bf65a7-a193-42d2-b1ba-8e150d3c35e1"
+          },
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-306"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:asus:dsl-ac51_firmware:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "09D3E242-53F7-4BE5-9D02-56512FD95835",
+                    "versionEndExcluding": "1.1.2.3_1010"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:asus:dsl-ac51:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "EAC348F1-6C46-4637-A27F-D69DD1AC77F5"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:asus:dsl-n16_firmware:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "A363206E-339B-4515-ABAA-D558187D3308",
+                    "versionEndExcluding": "1.1.2.3_1010"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:asus:dsl-n16:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "FDF90D44-4CD7-4166-A139-9F4A8D14F483"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:asus:dsl-ac750_firmware:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "69C7FF0F-A0B6-4AFA-9CCD-6D96678D7E71",
+                    "versionEndExcluding": "1.1.2.3_1010"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:asus:dsl-ac750:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "E54AD746-EEEE-4987-B343-36328D638398"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://www.asus.com/security-advisory",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 6
+    }
+  ],
+  "source": "https://www.cvelogic.com/threat-intelligence/2025-11-13"
+}

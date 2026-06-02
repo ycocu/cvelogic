@@ -1,0 +1,2161 @@
+{
+  "schema_version": "2.2",
+  "generated_at": "2026-06-02T07:33:42Z",
+  "day": "2025-10-30",
+  "window": {
+    "utc_start": "2025-10-30",
+    "utc_end": "2025-10-30",
+    "days": 1
+  },
+  "summary": {
+    "brief": "Broadcom VMware Aria Operations And VMware Tools added to CISA KEV — confirmed in-the-wild exploitation. · 10 new critical disclosures — review patch status on exposed services.",
+    "bullets": [
+      "Broadcom VMware Aria Operations And VMware Tools added to CISA KEV — confirmed in-the-wild exploitation.",
+      "10 new critical disclosures — review patch status on exposed services."
+    ],
+    "counts": {
+      "cves": 12,
+      "kev": 2,
+      "exploit": 0,
+      "epss": 0,
+      "cvss": 10,
+      "patch": 0
+    }
+  },
+  "cves": [
+    {
+      "cve_id": "CVE-2025-24893",
+      "signal_types": [
+        "KEV"
+      ],
+      "signals": {
+        "kev": {
+          "date_added": "2025-10-30"
+        },
+        "exploit": null,
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-02-20",
+        "description": "XWiki Platform is a generic wiki platform offering runtime services for applications built on top of it. Any guest can perform arbitrary remote code execution through a request to `SolrSearch`. This impacts the confidentiality, integrity and availability of the whole XWiki installation. To reproduce on an instance, without being logged in, go to `<host>/xwiki/bin/get/Main/SolrSearch?media=rss&text=%7D%7D%7D%7B%7Basync%20async%3Dfalse%7D%7D%7B%7Bgroovy%7D%7Dprintln%28\"Hello%20from\"%20%2B%20\"%20search%20text%3A\"%20%2B%20%2823%20%2B%2019%29%29%7B%7B%2Fgroovy%7D%7D%7B%7B%2Fasync%7D%7D%20`. If there is an output, and the title of the RSS feed contains `Hello from search text:42`, then the instance is vulnerable. This vulnerability has been patched in XWiki 15.10.11, 16.4.1 and 16.5.0RC1. Users are advised to upgrade. Users unable to upgrade may edit `Main.SolrSearchMacros` in `SolrSearchMacros.xml` on line 955 to match the `rawResponse` macro in `macros.vm#L2824` with a content type of `application/xml`, instead of simply outputting the content of the feed.",
+        "title": "XWiki Platform Eval Injection Vulnerability",
+        "vendor": "xwiki",
+        "product": "xwiki",
+        "attack_type": "RCE",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-24893",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2025-02-20T20:15:46.697",
+        "lastModified": "2025-10-31T13:17:09.460",
+        "vulnStatus": "Analyzed",
+        "cisaExploitAdd": "2025-10-30",
+        "cisaActionDue": "2025-11-20",
+        "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+        "cisaVulnerabilityName": "XWiki Platform Eval Injection Vulnerability",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "XWiki Platform is a generic wiki platform offering runtime services for applications built on top of it. Any guest can perform arbitrary remote code execution through a request to `SolrSearch`. This impacts the confidentiality, integrity and availability of the whole XWiki installation. To reproduce on an instance, without being logged in, go to `<host>/xwiki/bin/get/Main/SolrSearch?media=rss&text=%7D%7D%7D%7B%7Basync%20async%3Dfalse%7D%7D%7B%7Bgroovy%7D%7Dprintln%28\"Hello%20from\"%20%2B%20\"%20search%20text%3A\"%20%2B%20%2823%20%2B%2019%29%29%7B%7B%2Fgroovy%7D%7D%7B%7B%2Fasync%7D%7D%20`. If there is an output, and the title of the RSS feed contains `Hello from search text:42`, then the instance is vulnerable. This vulnerability has been patched in XWiki 15.10.11, 16.4.1 and 16.5.0RC1. Users are advised to upgrade. Users unable to upgrade may edit `Main.SolrSearchMacros` in `SolrSearchMacros.xml` on line 955 to match the `rawResponse` macro in `macros.vm#L2824` with a content type of `application/xml`, instead of simply outputting the content of the feed."
+          },
+          {
+            "lang": "es",
+            "value": "XWiki Platform es una plataforma wiki genérica que ofrece servicios de ejecución para aplicaciones creadas sobre ella. Cualquier invitado puede ejecutar código remoto arbitrario mediante una solicitud a `SolrSearch`. Esto afecta la confidencialidad, integridad y disponibilidad de toda la instalación de XWiki. Para reproducir en una instancia sin iniciar sesión, vaya a `/xwiki/bin/get/Main/SolrSearch?media=rss&amp;text=%7D%7D%7D%7B%7Basync%20async%3Dfalse%7D%7D%7B%7Bgroovy%7D%7Dprintln%28\"Hello%20from\"%20%2B%20\"%20search%20text%3A\"%20%2B%20%2823%20%2B%2019%29%29%7B%7B%2Fgroovy%7D%7D%7B%7B%2Fasync%7D%7D%20`. Si hay una salida y el título de la fuente RSS contiene `Hello from search text:42`, entonces la instancia es vulnerable. Esta vulnerabilidad ha sido corregida en XWiki 15.10.11, 16.4.1 y 16.5.0RC1. Se recomienda a los usuarios que actualicen. Los usuarios que no puedan actualizar pueden editar `Main.SolrSearchMacros` en `SolrSearchMacros.xml` en la línea 955 para que coincida con la macro `rawResponse` en `macros.vm#L2824` con un tipo de contenido de `application/xml`, en lugar de simplemente mostrar el contenido de la fuente."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-95"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          },
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-94"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:xwiki:xwiki:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "A9F2AD2E-CF5D-46D1-AFB8-2E9529C8E8D4",
+                    "versionStartIncluding": "5.4",
+                    "versionEndExcluding": "15.10.11"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:xwiki:xwiki:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "5921C493-2A56-49BC-8763-7D12518C0DC2",
+                    "versionStartIncluding": "16.0.0",
+                    "versionEndExcluding": "16.4.1"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:xwiki:xwiki:5.3:-:*:*:*:*:*:*",
+                    "matchCriteriaId": "F5CC1FB7-2BAD-4413-9955-02E06BA27305"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:xwiki:xwiki:5.3:milestone2:*:*:*:*:*:*",
+                    "matchCriteriaId": "067AAD11-1AB2-4688-8D81-F2464CD2FA14"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:xwiki:xwiki:5.3:rc1:*:*:*:*:*:*",
+                    "matchCriteriaId": "F2FCE7B4-E701-4C07-B4A9-31EC6C25F882"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/xwiki/xwiki-platform/blob/568447cad5172d97d6bbcfda9f6183689c2cf086/xwiki-platform-core/xwiki-platform-search/xwiki-platform-search-solr/xwiki-platform-search-solr-ui/src/main/resources/Main/SolrSearchMacros.xml#L955",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Product"
+            ]
+          },
+          {
+            "url": "https://github.com/xwiki/xwiki-platform/blob/67021db9b8ed26c2236a653269302a86bf01ef40/xwiki-platform-core/xwiki-platform-web/xwiki-platform-web-templates/src/main/resources/templates/macros.vm#L2824",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Product"
+            ]
+          },
+          {
+            "url": "https://github.com/xwiki/xwiki-platform/commit/67021db9b8ed26c2236a653269302a86bf01ef40",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://github.com/xwiki/xwiki-platform/security/advisories/GHSA-rr6p-3pfg-562j",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://jira.xwiki.org/browse/XWIKI-22149",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Exploit",
+              "Issue Tracking",
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2025-24893",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "US Government Resource"
+            ]
+          }
+        ]
+      },
+      "risk_score": 88,
+      "rank": 1
+    },
+    {
+      "cve_id": "CVE-2024-14003",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-10-30",
+          "previous_max": null,
+          "current_max": 9.4
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-10-30",
+        "description": "Nagios XI versions prior to 2024R1.2 are vulnerable to remote code execution (RCE) through its NRDP (Nagios Remote Data Processor) server plugins. Insufficient validation of inbound NRDP request parameters allows crafted input to reach command execution paths, enabling attackers to execute arbitrary commands on the underlying host in the context of the web/Nagios service.",
+        "title": "nagios nagios_xi RCE",
+        "vendor": "nagios",
+        "product": "nagios_xi",
+        "attack_type": "RCE",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2024-14003",
+        "sourceIdentifier": "disclosure@vulncheck.com",
+        "published": "2025-10-30T22:15:45.737",
+        "lastModified": "2025-11-06T16:09:37.150",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Nagios XI versions prior to 2024R1.2 are vulnerable to remote code execution (RCE) through its NRDP (Nagios Remote Data Processor) server plugins. Insufficient validation of inbound NRDP request parameters allows crafted input to reach command execution paths, enabling attackers to execute arbitrary commands on the underlying host in the context of the web/Nagios service."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.4,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-78"
+              }
+            ],
+            "source": "disclosure@vulncheck.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nagios:nagios_xi:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "62CF7BF4-6AAA-443E-93B4-B2F080091C13",
+                    "versionEndExcluding": "2024"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nagios:nagios_xi:2024:r1:*:*:*:*:*:*",
+                    "matchCriteriaId": "85F1764D-1DD8-44B0-BF5A-2420CB519A3C"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nagios:nagios_xi:2024:r1.0.1:*:*:*:*:*:*",
+                    "matchCriteriaId": "C1FE1A0B-78D1-4626-A4CD-21B843DA596E"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nagios:nagios_xi:2024:r1.0.2:*:*:*:*:*:*",
+                    "matchCriteriaId": "CCAB888E-F030-4640-9A18-9E423E553308"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nagios:nagios_xi:2024:r1.1:*:*:*:*:*:*",
+                    "matchCriteriaId": "C648B0A4-053C-4884-8A37-4AF03053ED1C"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nagios:nagios_xi:2024:r1.1.1:*:*:*:*:*:*",
+                    "matchCriteriaId": "893EEA99-0096-4C9F-BA8A-246A3E3F6C15"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nagios:nagios_xi:2024:r1.1.2:*:*:*:*:*:*",
+                    "matchCriteriaId": "A1FDA3F3-DF79-4807-9451-F04B2DB9A2B6"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nagios:nagios_xi:2024:r1.1.3:*:*:*:*:*:*",
+                    "matchCriteriaId": "9E055065-35A7-458A-A2DB-26634B97EE7C"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nagios:nagios_xi:2024:r1.1.4:*:*:*:*:*:*",
+                    "matchCriteriaId": "76946B2D-093C-4981-8465-5ADBB98C0676"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nagios:nagios_xi:2024:r1.1.5:*:*:*:*:*:*",
+                    "matchCriteriaId": "E9112876-7C61-4A72-8F91-023378E82E6D"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://www.nagios.com/changelog/nagios-xi/",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Release Notes"
+            ]
+          },
+          {
+            "url": "https://www.nagios.com/products/security/#nagios-xi",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://www.vulncheck.com/advisories/nagios-xi-rce-via-nrdp-server-plugins",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 2
+    },
+    {
+      "cve_id": "CVE-2024-14005",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-10-30",
+          "previous_max": null,
+          "current_max": 9.4
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-10-30",
+        "description": "Nagios XI versions prior to 2024R1.2 contain a command injection vulnerability in the Docker Wizard. Insufficient validation of user-supplied input in the wizard allows an authenticated administrator to inject shell metacharacters that are incorporated into backend command invocations. Successful exploitation enables arbitrary command execution with the privileges of the Nagios XI web application user.",
+        "title": "nagios nagios_xi Command Injection",
+        "vendor": "nagios",
+        "product": "nagios_xi",
+        "attack_type": "Command Injection",
+        "cvss_max": 9.4
+      },
+      "cve": {
+        "id": "CVE-2024-14005",
+        "sourceIdentifier": "disclosure@vulncheck.com",
+        "published": "2025-10-30T22:15:46.013",
+        "lastModified": "2025-11-06T16:36:47.133",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Nagios XI versions prior to 2024R1.2 contain a command injection vulnerability in the Docker Wizard. Insufficient validation of user-supplied input in the wizard allows an authenticated administrator to inject shell metacharacters that are incorporated into backend command invocations. Successful exploitation enables arbitrary command execution with the privileges of the Nagios XI web application user."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 8.8,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.4,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-78"
+              }
+            ],
+            "source": "disclosure@vulncheck.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nagios:nagios_xi:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "62CF7BF4-6AAA-443E-93B4-B2F080091C13",
+                    "versionEndExcluding": "2024"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nagios:nagios_xi:2024:r1:*:*:*:*:*:*",
+                    "matchCriteriaId": "85F1764D-1DD8-44B0-BF5A-2420CB519A3C"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nagios:nagios_xi:2024:r1.0.1:*:*:*:*:*:*",
+                    "matchCriteriaId": "C1FE1A0B-78D1-4626-A4CD-21B843DA596E"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nagios:nagios_xi:2024:r1.0.2:*:*:*:*:*:*",
+                    "matchCriteriaId": "CCAB888E-F030-4640-9A18-9E423E553308"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nagios:nagios_xi:2024:r1.1:*:*:*:*:*:*",
+                    "matchCriteriaId": "C648B0A4-053C-4884-8A37-4AF03053ED1C"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nagios:nagios_xi:2024:r1.1.1:*:*:*:*:*:*",
+                    "matchCriteriaId": "893EEA99-0096-4C9F-BA8A-246A3E3F6C15"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nagios:nagios_xi:2024:r1.1.2:*:*:*:*:*:*",
+                    "matchCriteriaId": "A1FDA3F3-DF79-4807-9451-F04B2DB9A2B6"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nagios:nagios_xi:2024:r1.1.3:*:*:*:*:*:*",
+                    "matchCriteriaId": "9E055065-35A7-458A-A2DB-26634B97EE7C"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nagios:nagios_xi:2024:r1.1.4:*:*:*:*:*:*",
+                    "matchCriteriaId": "76946B2D-093C-4981-8465-5ADBB98C0676"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nagios:nagios_xi:2024:r1.1.5:*:*:*:*:*:*",
+                    "matchCriteriaId": "E9112876-7C61-4A72-8F91-023378E82E6D"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://www.nagios.com/changelog/nagios-xi/",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Release Notes"
+            ]
+          },
+          {
+            "url": "https://www.nagios.com/products/security/#nagios-xi",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://www.vulncheck.com/advisories/nagios-xi-command-injection-via-docker-wizard",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 3
+    },
+    {
+      "cve_id": "CVE-2024-13996",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-10-30",
+          "previous_max": null,
+          "current_max": 9.2
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-10-30",
+        "description": "Nagios XI versions prior to 2024R1.1.3 did not invalidate all other active sessions for a user when that user's password was changed. As a result, any pre-existing sessions (including those potentially controlled by an attacker) remained valid after a credential update. This insufficient session expiration could allow continued unauthorized access to user data and actions even after a password change.",
+        "title": "nagios nagios_xi",
+        "vendor": "nagios",
+        "product": "nagios_xi",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2024-13996",
+        "sourceIdentifier": "disclosure@vulncheck.com",
+        "published": "2025-10-30T22:15:45.043",
+        "lastModified": "2025-11-06T16:17:23.587",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Nagios XI versions prior to 2024R1.1.3 did not invalidate all other active sessions for a user when that user's password was changed. As a result, any pre-existing sessions (including those potentially controlled by an attacker) remained valid after a credential update. This insufficient session expiration could allow continued unauthorized access to user data and actions even after a password change."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.2,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-613"
+              }
+            ],
+            "source": "disclosure@vulncheck.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nagios:nagios_xi:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "62CF7BF4-6AAA-443E-93B4-B2F080091C13",
+                    "versionEndExcluding": "2024"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nagios:nagios_xi:2024:r1:*:*:*:*:*:*",
+                    "matchCriteriaId": "85F1764D-1DD8-44B0-BF5A-2420CB519A3C"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nagios:nagios_xi:2024:r1.0.1:*:*:*:*:*:*",
+                    "matchCriteriaId": "C1FE1A0B-78D1-4626-A4CD-21B843DA596E"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nagios:nagios_xi:2024:r1.0.2:*:*:*:*:*:*",
+                    "matchCriteriaId": "CCAB888E-F030-4640-9A18-9E423E553308"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nagios:nagios_xi:2024:r1.1:*:*:*:*:*:*",
+                    "matchCriteriaId": "C648B0A4-053C-4884-8A37-4AF03053ED1C"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nagios:nagios_xi:2024:r1.1.1:*:*:*:*:*:*",
+                    "matchCriteriaId": "893EEA99-0096-4C9F-BA8A-246A3E3F6C15"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nagios:nagios_xi:2024:r1.1.2:*:*:*:*:*:*",
+                    "matchCriteriaId": "A1FDA3F3-DF79-4807-9451-F04B2DB9A2B6"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://www.nagios.com/changelog/nagios-xi/",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Release Notes"
+            ]
+          },
+          {
+            "url": "https://www.nagios.com/products/security/#nagios-xi",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://www.vulncheck.com/advisories/nagios-xi-session-not-invalidated-after-password-change",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 4
+    },
+    {
+      "cve_id": "CVE-2024-14008",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-10-30",
+          "previous_max": null,
+          "current_max": 9.4
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-10-30",
+        "description": "Nagios XI versions prior to 2024R1.3.2 contain a remote command execution vulnerability in the WinRM Configuration Wizard. Insufficient validation of user-supplied input allows an authenticated administrator to inject shell metacharacters that are incorporated into backend command invocations. Successful exploitation enables arbitrary command execution with the privileges of the Nagios XI web application user.",
+        "title": "nagios nagios_xi privilege escalation",
+        "vendor": "nagios",
+        "product": "nagios_xi",
+        "attack_type": "privilege escalation",
+        "cvss_max": 9.4
+      },
+      "cve": {
+        "id": "CVE-2024-14008",
+        "sourceIdentifier": "disclosure@vulncheck.com",
+        "published": "2025-10-30T22:15:46.297",
+        "lastModified": "2025-11-06T18:17:48.463",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Nagios XI versions prior to 2024R1.3.2 contain a remote command execution vulnerability in the WinRM Configuration Wizard. Insufficient validation of user-supplied input allows an authenticated administrator to inject shell metacharacters that are incorporated into backend command invocations. Successful exploitation enables arbitrary command execution with the privileges of the Nagios XI web application user."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 7.2,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 1.2,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.4,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-78"
+              }
+            ],
+            "source": "disclosure@vulncheck.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nagios:nagios_xi:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "62CF7BF4-6AAA-443E-93B4-B2F080091C13",
+                    "versionEndExcluding": "2024"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nagios:nagios_xi:2024:r1:*:*:*:*:*:*",
+                    "matchCriteriaId": "85F1764D-1DD8-44B0-BF5A-2420CB519A3C"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nagios:nagios_xi:2024:r1.0.1:*:*:*:*:*:*",
+                    "matchCriteriaId": "C1FE1A0B-78D1-4626-A4CD-21B843DA596E"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nagios:nagios_xi:2024:r1.0.2:*:*:*:*:*:*",
+                    "matchCriteriaId": "CCAB888E-F030-4640-9A18-9E423E553308"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nagios:nagios_xi:2024:r1.1:*:*:*:*:*:*",
+                    "matchCriteriaId": "C648B0A4-053C-4884-8A37-4AF03053ED1C"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nagios:nagios_xi:2024:r1.1.1:*:*:*:*:*:*",
+                    "matchCriteriaId": "893EEA99-0096-4C9F-BA8A-246A3E3F6C15"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nagios:nagios_xi:2024:r1.1.2:*:*:*:*:*:*",
+                    "matchCriteriaId": "A1FDA3F3-DF79-4807-9451-F04B2DB9A2B6"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nagios:nagios_xi:2024:r1.1.3:*:*:*:*:*:*",
+                    "matchCriteriaId": "9E055065-35A7-458A-A2DB-26634B97EE7C"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nagios:nagios_xi:2024:r1.1.4:*:*:*:*:*:*",
+                    "matchCriteriaId": "76946B2D-093C-4981-8465-5ADBB98C0676"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nagios:nagios_xi:2024:r1.1.5:*:*:*:*:*:*",
+                    "matchCriteriaId": "E9112876-7C61-4A72-8F91-023378E82E6D"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nagios:nagios_xi:2024:r1.2:*:*:*:*:*:*",
+                    "matchCriteriaId": "1443759F-EBD7-4366-A5D3-9FB15CE15B40"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nagios:nagios_xi:2024:r1.2.1:*:*:*:*:*:*",
+                    "matchCriteriaId": "F85D8CA4-F1AC-4538-925C-1AD00FF7B9C1"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nagios:nagios_xi:2024:r1.2.2:*:*:*:*:*:*",
+                    "matchCriteriaId": "7FFC081E-728A-4643-A8DF-5CC8E94E7D78"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nagios:nagios_xi:2024:r1.3:*:*:*:*:*:*",
+                    "matchCriteriaId": "C3D8A858-2F40-4568-BCA0-59CF6033A7FE"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nagios:nagios_xi:2024:r1.3.1:*:*:*:*:*:*",
+                    "matchCriteriaId": "2D1C8647-F0EB-443F-B18B-338335CE54B7"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://www.nagios.com/changelog/nagios-xi/",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Release Notes"
+            ]
+          },
+          {
+            "url": "https://www.nagios.com/products/security/#nagios-xi",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://www.vulncheck.com/advisories/nagios-xi-rce-via-winrm-configuration-wizard",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 5
+    },
+    {
+      "cve_id": "CVE-2024-14009",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-10-30",
+          "previous_max": null,
+          "current_max": 9.4
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-10-30",
+        "description": "Nagios XI versions prior to 2024R1.0.1 contain a privilege escalation vulnerability in the System Profile component. The System Profile feature is an administrative diagnostic/configuration capability. Due to improper access controls and unsafe handling of exported/imported profile data and operations, an authenticated administrator could exploit this vulnerability to execute actions on the underlying XI host outside the application's security scope. Successful exploitation may allow an administrator to obtain root privileges on the XI server.",
+        "title": "nagios nagios_xi Privilege Escalation",
+        "vendor": "nagios",
+        "product": "nagios_xi",
+        "attack_type": "Privilege Escalation",
+        "cvss_max": 9.4
+      },
+      "cve": {
+        "id": "CVE-2024-14009",
+        "sourceIdentifier": "disclosure@vulncheck.com",
+        "published": "2025-10-30T22:15:46.447",
+        "lastModified": "2025-11-06T18:17:08.733",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Nagios XI versions prior to 2024R1.0.1 contain a privilege escalation vulnerability in the System Profile component. The System Profile feature is an administrative diagnostic/configuration capability. Due to improper access controls and unsafe handling of exported/imported profile data and operations, an authenticated administrator could exploit this vulnerability to execute actions on the underlying XI host outside the application's security scope. Successful exploitation may allow an administrator to obtain root privileges on the XI server."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 7.2,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 1.2,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.4,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-269"
+              }
+            ],
+            "source": "disclosure@vulncheck.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nagios:nagios_xi:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "62CF7BF4-6AAA-443E-93B4-B2F080091C13",
+                    "versionEndExcluding": "2024"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nagios:nagios_xi:2024:r1:*:*:*:*:*:*",
+                    "matchCriteriaId": "85F1764D-1DD8-44B0-BF5A-2420CB519A3C"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://www.nagios.com/changelog/nagios-xi/",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Release Notes"
+            ]
+          },
+          {
+            "url": "https://www.nagios.com/products/security/#nagios-xi",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://www.vulncheck.com/advisories/nagios-xi-privilege-escalation-via-system-profile",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 6
+    },
+    {
+      "cve_id": "CVE-2025-34134",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-10-30",
+          "previous_max": null,
+          "current_max": 9.4
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-10-30",
+        "description": "Nagios XI versions prior to 2024R1.4.2 contain a remote code execution vulnerability in the Business Process Intelligence (BPI) component. Insufficient validation and sanitization of administrator-controlled BPI configuration parameters (notably bpi_logfile and bpi_configfile) allow an authenticated administrative user to cause the product to create or overwrite files within the webroot and subsequently edit them via the BPI configuration editor. When such files carry executable extensions and are served by the web application, arbitrary code may be executed in the context of the web application user. Successful exploitation results in arbitrary command execution with the privileges of the Nagios XI web application user and can be leveraged to gain further control of the underlying host operating system.",
+        "title": "nagios nagios_xi RCE",
+        "vendor": "nagios",
+        "product": "nagios_xi",
+        "attack_type": "RCE",
+        "cvss_max": 9.4
+      },
+      "cve": {
+        "id": "CVE-2025-34134",
+        "sourceIdentifier": "disclosure@vulncheck.com",
+        "published": "2025-10-30T22:15:46.983",
+        "lastModified": "2025-11-06T18:17:25.503",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Nagios XI versions prior to 2024R1.4.2 contain a remote code execution vulnerability in the Business Process Intelligence (BPI) component. Insufficient validation and sanitization of administrator-controlled BPI configuration parameters (notably bpi_logfile and bpi_configfile) allow an authenticated administrative user to cause the product to create or overwrite files within the webroot and subsequently edit them via the BPI configuration editor. When such files carry executable extensions and are served by the web application, arbitrary code may be executed in the context of the web application user. Successful exploitation results in arbitrary command execution with the privileges of the Nagios XI web application user and can be leveraged to gain further control of the underlying host operating system."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 7.2,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 1.2,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.4,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-78"
+              }
+            ],
+            "source": "disclosure@vulncheck.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nagios:nagios_xi:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "62CF7BF4-6AAA-443E-93B4-B2F080091C13",
+                    "versionEndExcluding": "2024"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nagios:nagios_xi:2024:r1:*:*:*:*:*:*",
+                    "matchCriteriaId": "85F1764D-1DD8-44B0-BF5A-2420CB519A3C"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nagios:nagios_xi:2024:r1.0.1:*:*:*:*:*:*",
+                    "matchCriteriaId": "C1FE1A0B-78D1-4626-A4CD-21B843DA596E"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nagios:nagios_xi:2024:r1.0.2:*:*:*:*:*:*",
+                    "matchCriteriaId": "CCAB888E-F030-4640-9A18-9E423E553308"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nagios:nagios_xi:2024:r1.1:*:*:*:*:*:*",
+                    "matchCriteriaId": "C648B0A4-053C-4884-8A37-4AF03053ED1C"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nagios:nagios_xi:2024:r1.1.1:*:*:*:*:*:*",
+                    "matchCriteriaId": "893EEA99-0096-4C9F-BA8A-246A3E3F6C15"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nagios:nagios_xi:2024:r1.1.2:*:*:*:*:*:*",
+                    "matchCriteriaId": "A1FDA3F3-DF79-4807-9451-F04B2DB9A2B6"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nagios:nagios_xi:2024:r1.1.3:*:*:*:*:*:*",
+                    "matchCriteriaId": "9E055065-35A7-458A-A2DB-26634B97EE7C"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nagios:nagios_xi:2024:r1.1.4:*:*:*:*:*:*",
+                    "matchCriteriaId": "76946B2D-093C-4981-8465-5ADBB98C0676"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nagios:nagios_xi:2024:r1.1.5:*:*:*:*:*:*",
+                    "matchCriteriaId": "E9112876-7C61-4A72-8F91-023378E82E6D"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nagios:nagios_xi:2024:r1.2:*:*:*:*:*:*",
+                    "matchCriteriaId": "1443759F-EBD7-4366-A5D3-9FB15CE15B40"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nagios:nagios_xi:2024:r1.2.1:*:*:*:*:*:*",
+                    "matchCriteriaId": "F85D8CA4-F1AC-4538-925C-1AD00FF7B9C1"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nagios:nagios_xi:2024:r1.2.2:*:*:*:*:*:*",
+                    "matchCriteriaId": "7FFC081E-728A-4643-A8DF-5CC8E94E7D78"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nagios:nagios_xi:2024:r1.3:*:*:*:*:*:*",
+                    "matchCriteriaId": "C3D8A858-2F40-4568-BCA0-59CF6033A7FE"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nagios:nagios_xi:2024:r1.3.1:*:*:*:*:*:*",
+                    "matchCriteriaId": "2D1C8647-F0EB-443F-B18B-338335CE54B7"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nagios:nagios_xi:2024:r1.3.2:*:*:*:*:*:*",
+                    "matchCriteriaId": "9A695A21-8F5A-4588-91E9-F7AF101B77AD"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nagios:nagios_xi:2024:r1.3.3:*:*:*:*:*:*",
+                    "matchCriteriaId": "AA587E9E-86DA-41A4-BF3B-56B1488B326A"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nagios:nagios_xi:2024:r1.3.4:*:*:*:*:*:*",
+                    "matchCriteriaId": "BBCC6B6F-E627-49D4-9FA6-72283B07973A"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nagios:nagios_xi:2024:r1.4:*:*:*:*:*:*",
+                    "matchCriteriaId": "450E4C8D-FC6B-42E6-A574-61F89AEB1800"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nagios:nagios_xi:2024:r1.4.1:*:*:*:*:*:*",
+                    "matchCriteriaId": "838E2FEE-8707-4CA9-B877-EE69D32615E2"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://www.nagios.com/changelog/nagios-xi/",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Release Notes"
+            ]
+          },
+          {
+            "url": "https://www.nagios.com/products/security/#nagios-xi",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://www.vulncheck.com/advisories/nagios-xi-rce-via-business-process-intelligence-bpi",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 7
+    },
+    {
+      "cve_id": "CVE-2025-34274",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-10-30",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-10-30",
+        "description": "Nagios Log Server versions prior to 2024R2.0.3 contain an execution with unnecessary privileges vulnerability as it runs its embedded Logstash process as the root user. If an attacker is able to compromise the Logstash process - for example by exploiting an insecure plugin, pipeline configuration injection, or a vulnerability in input parsing - the attacker could execute code with root privileges, resulting in full system compromise. The Logstash service has been altered to run as the lower-privileged 'nagios' user to reduce this risk associated with a network-facing service that can accept untrusted input or load third-party components.",
+        "title": "nagios log_server privilege escalation",
+        "vendor": "nagios",
+        "product": "log_server",
+        "attack_type": "privilege escalation",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-34274",
+        "sourceIdentifier": "disclosure@vulncheck.com",
+        "published": "2025-10-30T22:15:48.090",
+        "lastModified": "2025-11-06T16:27:58.503",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Nagios Log Server versions prior to 2024R2.0.3 contain an execution with unnecessary privileges vulnerability as it runs its embedded Logstash process as the root user. If an attacker is able to compromise the Logstash process - for example by exploiting an insecure plugin, pipeline configuration injection, or a vulnerability in input parsing - the attacker could execute code with root privileges, resulting in full system compromise. The Logstash service has been altered to run as the lower-privileged 'nagios' user to reduce this risk associated with a network-facing service that can accept untrusted input or load third-party components."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-250"
+              }
+            ],
+            "source": "disclosure@vulncheck.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nagios:log_server:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "87E74637-713C-4DD7-B97E-2F247B7B12B1",
+                    "versionEndExcluding": "2024"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nagios:log_server:2024:r1:*:*:*:*:*:*",
+                    "matchCriteriaId": "B93D415C-B2C0-42CE-B9B3-29C29A3DCC16"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nagios:log_server:2024:r1.0.1:*:*:*:*:*:*",
+                    "matchCriteriaId": "997B64B5-A3F2-4D0E-B05E-CCA76D598C18"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nagios:log_server:2024:r1.0.2:*:*:*:*:*:*",
+                    "matchCriteriaId": "D20F6746-83DD-49AE-8C3D-AF2FFB47A89E"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nagios:log_server:2024:r1.1:*:*:*:*:*:*",
+                    "matchCriteriaId": "5EF32AF5-19EA-495A-AB28-F78F33DDEC3F"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nagios:log_server:2024:r1.2:*:*:*:*:*:*",
+                    "matchCriteriaId": "4C26DE7A-37AA-4570-81C1-2E0C1A9026F7"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nagios:log_server:2024:r1.3:*:*:*:*:*:*",
+                    "matchCriteriaId": "52C22468-A773-49C8-81AD-9B76C26BFFD1"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nagios:log_server:2024:r1.3.1:*:*:*:*:*:*",
+                    "matchCriteriaId": "7CEC223A-A3EE-4C51-8B71-E19C73B9215C"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nagios:log_server:2024:r1.3.2:*:*:*:*:*:*",
+                    "matchCriteriaId": "DB7A3A2A-DF36-4495-A5FE-826085120997"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nagios:log_server:2024:r1.3.3:*:*:*:*:*:*",
+                    "matchCriteriaId": "0AC10FEF-5606-4949-9E5E-E44FE1CE418D"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nagios:log_server:2024:r1.3.4:*:*:*:*:*:*",
+                    "matchCriteriaId": "EC2BBD0F-12FE-4A8F-894E-ABAEEE081E10"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nagios:log_server:2024:r1.3.5:*:*:*:*:*:*",
+                    "matchCriteriaId": "16861134-A375-4918-8171-77C14A3351EB"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nagios:log_server:2024:r2:*:*:*:*:*:*",
+                    "matchCriteriaId": "6AAEC3D7-AD80-4647-9130-F42CE4785906"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nagios:log_server:2024:r2.0.1:*:*:*:*:*:*",
+                    "matchCriteriaId": "DB3DFA03-0D49-4E43-9041-D7C30615B3D5"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nagios:log_server:2024:r2.0.2:*:*:*:*:*:*",
+                    "matchCriteriaId": "2333DBDE-6F1F-4286-B58C-74ABE18B9469"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://www.nagios.com/changelog/#log-server",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Release Notes"
+            ]
+          },
+          {
+            "url": "https://www.nagios.com/products/security/#log-server-2024R2",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://www.vulncheck.com/advisories/nagios-log-server-logstash-process-root-privileges",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 8
+    },
+    {
+      "cve_id": "CVE-2025-34277",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-10-30",
+          "previous_max": null,
+          "current_max": 9.4
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-10-30",
+        "description": "Nagios Log Server versions prior to 2024R1.3.1 contain a code injection vulnerability where malformed dashboard ID values are not properly validated before being forwarded to an internal API. An attacker able to supply crafted dashboard ID values can cause the system to execute attacker-controlled data, leading to arbitrary code execution in the context of the Log Server process.",
+        "title": "nagios log_server RCE",
+        "vendor": "nagios",
+        "product": "log_server",
+        "attack_type": "RCE",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-34277",
+        "sourceIdentifier": "disclosure@vulncheck.com",
+        "published": "2025-10-30T22:15:48.227",
+        "lastModified": "2025-11-06T16:27:31.010",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Nagios Log Server versions prior to 2024R1.3.1 contain a code injection vulnerability where malformed dashboard ID values are not properly validated before being forwarded to an internal API. An attacker able to supply crafted dashboard ID values can cause the system to execute attacker-controlled data, leading to arbitrary code execution in the context of the Log Server process."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.4,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-94"
+              }
+            ],
+            "source": "disclosure@vulncheck.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nagios:log_server:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "87E74637-713C-4DD7-B97E-2F247B7B12B1",
+                    "versionEndExcluding": "2024"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nagios:log_server:2024:r1:*:*:*:*:*:*",
+                    "matchCriteriaId": "B93D415C-B2C0-42CE-B9B3-29C29A3DCC16"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nagios:log_server:2024:r1.0.1:*:*:*:*:*:*",
+                    "matchCriteriaId": "997B64B5-A3F2-4D0E-B05E-CCA76D598C18"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nagios:log_server:2024:r1.0.2:*:*:*:*:*:*",
+                    "matchCriteriaId": "D20F6746-83DD-49AE-8C3D-AF2FFB47A89E"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nagios:log_server:2024:r1.1:*:*:*:*:*:*",
+                    "matchCriteriaId": "5EF32AF5-19EA-495A-AB28-F78F33DDEC3F"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nagios:log_server:2024:r1.2:*:*:*:*:*:*",
+                    "matchCriteriaId": "4C26DE7A-37AA-4570-81C1-2E0C1A9026F7"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nagios:log_server:2024:r1.3:*:*:*:*:*:*",
+                    "matchCriteriaId": "52C22468-A773-49C8-81AD-9B76C26BFFD1"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://www.nagios.com/changelog/#log-server-2024R1",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Release Notes"
+            ]
+          },
+          {
+            "url": "https://www.nagios.com/products/security/#log-server",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Product"
+            ]
+          },
+          {
+            "url": "https://www.vulncheck.com/advisories/nagios-log-server-rce-via-malformed-dashboard-id",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 9
+    },
+    {
+      "cve_id": "CVE-2025-34284",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-10-30",
+          "previous_max": null,
+          "current_max": 9.4
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-10-30",
+        "description": "Nagios XI versions prior to 2024R2 contain a command injection vulnerability in the WinRM plugin. Insufficient validation of user-supplied parameters allows an authenticated administrator to inject shell metacharacters that are incorporated into backend command invocations. Successful exploitation enables arbitrary command execution with the privileges of the Nagios XI web application user and can be leveraged to modify configuration, exfiltrate data, disrupt monitoring operations, or execute commands on the underlying host operating system.",
+        "title": "nagios nagios_xi Command Injection",
+        "vendor": "nagios",
+        "product": "nagios_xi",
+        "attack_type": "Command Injection",
+        "cvss_max": 9.4
+      },
+      "cve": {
+        "id": "CVE-2025-34284",
+        "sourceIdentifier": "disclosure@vulncheck.com",
+        "published": "2025-10-30T22:15:48.773",
+        "lastModified": "2025-11-06T18:14:12.050",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Nagios XI versions prior to 2024R2 contain a command injection vulnerability in the WinRM plugin. Insufficient validation of user-supplied parameters allows an authenticated administrator to inject shell metacharacters that are incorporated into backend command invocations. Successful exploitation enables arbitrary command execution with the privileges of the Nagios XI web application user and can be leveraged to modify configuration, exfiltrate data, disrupt monitoring operations, or execute commands on the underlying host operating system."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 8.8,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.4,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-78"
+              }
+            ],
+            "source": "disclosure@vulncheck.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nagios:nagios_xi:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "62CF7BF4-6AAA-443E-93B4-B2F080091C13",
+                    "versionEndExcluding": "2024"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nagios:nagios_xi:2024:r1:*:*:*:*:*:*",
+                    "matchCriteriaId": "85F1764D-1DD8-44B0-BF5A-2420CB519A3C"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nagios:nagios_xi:2024:r1.0.1:*:*:*:*:*:*",
+                    "matchCriteriaId": "C1FE1A0B-78D1-4626-A4CD-21B843DA596E"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nagios:nagios_xi:2024:r1.0.2:*:*:*:*:*:*",
+                    "matchCriteriaId": "CCAB888E-F030-4640-9A18-9E423E553308"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nagios:nagios_xi:2024:r1.1:*:*:*:*:*:*",
+                    "matchCriteriaId": "C648B0A4-053C-4884-8A37-4AF03053ED1C"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nagios:nagios_xi:2024:r1.1.1:*:*:*:*:*:*",
+                    "matchCriteriaId": "893EEA99-0096-4C9F-BA8A-246A3E3F6C15"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nagios:nagios_xi:2024:r1.1.2:*:*:*:*:*:*",
+                    "matchCriteriaId": "A1FDA3F3-DF79-4807-9451-F04B2DB9A2B6"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nagios:nagios_xi:2024:r1.1.3:*:*:*:*:*:*",
+                    "matchCriteriaId": "9E055065-35A7-458A-A2DB-26634B97EE7C"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nagios:nagios_xi:2024:r1.1.4:*:*:*:*:*:*",
+                    "matchCriteriaId": "76946B2D-093C-4981-8465-5ADBB98C0676"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nagios:nagios_xi:2024:r1.1.5:*:*:*:*:*:*",
+                    "matchCriteriaId": "E9112876-7C61-4A72-8F91-023378E82E6D"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nagios:nagios_xi:2024:r1.2:*:*:*:*:*:*",
+                    "matchCriteriaId": "1443759F-EBD7-4366-A5D3-9FB15CE15B40"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nagios:nagios_xi:2024:r1.2.1:*:*:*:*:*:*",
+                    "matchCriteriaId": "F85D8CA4-F1AC-4538-925C-1AD00FF7B9C1"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nagios:nagios_xi:2024:r1.2.2:*:*:*:*:*:*",
+                    "matchCriteriaId": "7FFC081E-728A-4643-A8DF-5CC8E94E7D78"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nagios:nagios_xi:2024:r1.3:*:*:*:*:*:*",
+                    "matchCriteriaId": "C3D8A858-2F40-4568-BCA0-59CF6033A7FE"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nagios:nagios_xi:2024:r1.3.1:*:*:*:*:*:*",
+                    "matchCriteriaId": "2D1C8647-F0EB-443F-B18B-338335CE54B7"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nagios:nagios_xi:2024:r1.3.2:*:*:*:*:*:*",
+                    "matchCriteriaId": "9A695A21-8F5A-4588-91E9-F7AF101B77AD"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nagios:nagios_xi:2024:r1.3.3:*:*:*:*:*:*",
+                    "matchCriteriaId": "AA587E9E-86DA-41A4-BF3B-56B1488B326A"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nagios:nagios_xi:2024:r1.3.4:*:*:*:*:*:*",
+                    "matchCriteriaId": "BBCC6B6F-E627-49D4-9FA6-72283B07973A"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nagios:nagios_xi:2024:r1.4:*:*:*:*:*:*",
+                    "matchCriteriaId": "450E4C8D-FC6B-42E6-A574-61F89AEB1800"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nagios:nagios_xi:2024:r1.4.1:*:*:*:*:*:*",
+                    "matchCriteriaId": "838E2FEE-8707-4CA9-B877-EE69D32615E2"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nagios:nagios_xi:2024:r1.4.2:*:*:*:*:*:*",
+                    "matchCriteriaId": "F82CD561-A42C-447C-8869-1136170674E6"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nagios:nagios_xi:2024:r1.4.3:*:*:*:*:*:*",
+                    "matchCriteriaId": "6AC31313-7C30-4D67-A437-EAA7EDA71AF6"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nagios:nagios_xi:2024:r1.4.4:*:*:*:*:*:*",
+                    "matchCriteriaId": "3FCC4C68-A056-41F5-B4BF-677FF2B6F245"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://www.nagios.com/changelog/nagios-xi/",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Release Notes"
+            ]
+          },
+          {
+            "url": "https://www.nagios.com/products/security/#nagios-xi",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://www.vulncheck.com/advisories/nagios-xi-authenticated-command-injection-via-winrm-plugin",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 10
+    },
+    {
+      "cve_id": "CVE-2025-34286",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-10-30",
+          "previous_max": null,
+          "current_max": 9.4
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-10-30",
+        "description": "Nagios XI versions prior to 2026R1  contain a remote code execution vulnerability in the Core Config Manager (CCM) Run Check command. Insufficient validation/escaping of parameters used to build backend command lines allows an authenticated administrator to inject shell metacharacters that are executed on the server. Successful exploitation results in arbitrary command execution with the privileges of the Nagios XI web application user and can be leveraged to gain control of the underlying host operating system.",
+        "title": "nagios nagios_xi RCE",
+        "vendor": "nagios",
+        "product": "nagios_xi",
+        "attack_type": "RCE",
+        "cvss_max": 9.4
+      },
+      "cve": {
+        "id": "CVE-2025-34286",
+        "sourceIdentifier": "disclosure@vulncheck.com",
+        "published": "2025-10-30T22:15:48.920",
+        "lastModified": "2025-11-06T18:13:04.890",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Nagios XI versions prior to 2026R1  contain a remote code execution vulnerability in the Core Config Manager (CCM) Run Check command. Insufficient validation/escaping of parameters used to build backend command lines allows an authenticated administrator to inject shell metacharacters that are executed on the server. Successful exploitation results in arbitrary command execution with the privileges of the Nagios XI web application user and can be leveraged to gain control of the underlying host operating system."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 7.2,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 1.2,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.4,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-78"
+              }
+            ],
+            "source": "disclosure@vulncheck.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nagios:nagios_xi:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "B63A9E29-F4DC-4BB6-95BE-707CD1562719",
+                    "versionEndExcluding": "2026"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://www.nagios.com/changelog/nagios-xi/",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Release Notes"
+            ]
+          },
+          {
+            "url": "https://www.nagios.com/products/security/#nagios-xi",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://www.vulncheck.com/advisories/nagios-xi-rce-via-run-check-command-in-ccm",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 11
+    },
+    {
+      "cve_id": "CVE-2025-41244",
+      "signal_types": [
+        "KEV"
+      ],
+      "signals": {
+        "kev": {
+          "date_added": "2025-10-30"
+        },
+        "exploit": null,
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-09-29",
+        "description": "VMware Aria Operations and VMware Tools contain a local privilege escalation vulnerability. A malicious local actor with non-administrative privileges having access to a VM with VMware Tools installed and managed by Aria Operations with SDMP enabled may exploit this vulnerability to escalate privileges to root on the same VM.",
+        "title": "Broadcom VMware Aria Operations and VMware Tools Privilege Defined with Unsafe Actions Vulnerability",
+        "vendor": "vmware",
+        "product": "aria_operations",
+        "attack_type": "Privilege Escalation",
+        "cvss_max": 7.8
+      },
+      "cve": {
+        "id": "CVE-2025-41244",
+        "sourceIdentifier": "security@vmware.com",
+        "published": "2025-09-29T17:15:30.843",
+        "lastModified": "2025-11-06T13:58:13.620",
+        "vulnStatus": "Analyzed",
+        "cisaExploitAdd": "2025-10-30",
+        "cisaActionDue": "2025-11-20",
+        "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+        "cisaVulnerabilityName": "Broadcom VMware Aria Operations and VMware Tools Privilege Defined with Unsafe Actions Vulnerability",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "VMware Aria Operations and VMware Tools contain a local privilege escalation vulnerability. A malicious local actor with non-administrative privileges having access to a VM with VMware Tools installed and managed by Aria Operations with SDMP enabled may exploit this vulnerability to escalate privileges to root on the same VM."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 7.8,
+                "baseSeverity": "HIGH"
+              },
+              "source": "security@vmware.com",
+              "type": "Secondary",
+              "exploitabilityScore": 1.8,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-267"
+              }
+            ],
+            "source": "security@vmware.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vmware:aria_operations:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "B78BDDD1-DE10-4839-9754-3A0D00F47986",
+                    "versionStartIncluding": "8.0",
+                    "versionEndExcluding": "8.18.5"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vmware:cloud_foundation:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "D1B12C7E-0819-472E-8E79-477B47D603DD",
+                    "versionStartIncluding": "4.0",
+                    "versionEndIncluding": "5.2.2"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vmware:cloud_foundation_operations:9.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "1A8C1A33-352A-4F7E-A284-F966F21EB0B3"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vmware:open_vm_tools:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "3A809AD4-BFBA-4618-84A2-E638C13DC01F",
+                    "versionStartIncluding": "11.2.0",
+                    "versionEndExcluding": "12.5.4"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vmware:open_vm_tools:13.0.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "7F8B48DE-44C4-4581-A52F-5631B0EB33E6"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vmware:telco_cloud_infrastructure:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "904AA81A-D1C3-4DAF-BB2C-C51FEDF5B3F6",
+                    "versionStartIncluding": "2.2",
+                    "versionEndIncluding": "3.0"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vmware:telco_cloud_platform:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "A9C444F9-5647-451F-B239-252841E440C7",
+                    "versionStartIncluding": "4.0",
+                    "versionEndExcluding": "5.0.1"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:debian:debian_linux:11.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "FA6FEEC2-9F11-4643-8827-749718254FED"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vmware:tools:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "15832760-0347-4BB8-9B78-DE47CBE21957",
+                    "versionStartIncluding": "12.5.0",
+                    "versionEndExcluding": "12.5.4"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vmware:tools:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "60F4C0D6-B650-4BE4-9E8F-DBFCFF7D8390",
+                    "versionStartIncluding": "13.0.0.0",
+                    "versionEndExcluding": "13.0.5.0"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "703AF700-7A70-47E2-BC3A-7FD03B3CA9C1"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "A2572D17-1DE6-457B-99CC-64AFD54487EA"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "http://support.broadcom.com/group/ecx/support-content-view/-/support-content/Security%20Advisories/VMSA-2025-0015--VMware-Aria-Operations-and-VMware-Tools-updates-address-multiple-vulnerabilities--CVE-2025-41244-CVE-2025-41245--CVE-2025-41246-/36149",
+            "source": "security@vmware.com",
+            "tags": [
+              "Permissions Required"
+            ]
+          },
+          {
+            "url": "http://www.openwall.com/lists/oss-security/2025/09/29/10",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Mailing List",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://lists.debian.org/debian-lts-announce/2025/10/msg00000.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Mailing List",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://blog.nviso.eu/2025/09/29/you-name-it-vmware-elevates-it-cve-2025-41244/",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/0/36149",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2025-41244",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "US Government Resource"
+            ]
+          }
+        ]
+      },
+      "risk_score": 88,
+      "rank": 12
+    }
+  ],
+  "source": "https://www.cvelogic.com/threat-intelligence/2025-10-30"
+}

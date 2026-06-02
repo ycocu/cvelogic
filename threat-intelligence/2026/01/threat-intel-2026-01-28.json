@@ -1,0 +1,1805 @@
+{
+  "schema_version": "2.2",
+  "generated_at": "2026-06-02T07:34:18Z",
+  "day": "2026-01-28",
+  "window": {
+    "utc_start": "2026-01-28",
+    "utc_end": "2026-01-28",
+    "days": 1
+  },
+  "summary": {
+    "brief": "Adobe Enterprise Linux — exploitation likelihood rose sharply (EPSS 35% → 68% · rising (+33%)). · 10 new critical disclosures — review patch status on exposed services.",
+    "bullets": [
+      "Adobe Enterprise Linux — exploitation likelihood rose sharply (EPSS 35% → 68% · rising (+33%)).",
+      "10 new critical disclosures — review patch status on exposed services."
+    ],
+    "counts": {
+      "cves": 13,
+      "kev": 0,
+      "exploit": 0,
+      "epss": 3,
+      "cvss": 10,
+      "patch": 0
+    }
+  },
+  "cves": [
+    {
+      "cve_id": "CVE-2017-3068",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 0.35099,
+            "score_date": "2025-09-22"
+          },
+          "current": {
+            "score": 0.68456,
+            "score_date": "2026-01-28"
+          },
+          "delta": 0.33357
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2017-05-09",
+        "description": "Adobe Flash Player versions 25.0.0.148 and earlier have an exploitable memory corruption vulnerability in the Advanced Video Coding engine. Successful exploitation could lead to arbitrary code execution.",
+        "title": "adobe enterprise_linux RCE",
+        "vendor": "adobe",
+        "product": "flash_player_desktop_runtime",
+        "attack_type": "RCE",
+        "cvss_max": 9.3
+      },
+      "cve": {
+        "id": "CVE-2017-3068",
+        "sourceIdentifier": "psirt@adobe.com",
+        "published": "2017-05-09T16:29:00.200",
+        "lastModified": "2026-05-13T00:24:29.033",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Adobe Flash Player versions 25.0.0.148 and earlier have an exploitable memory corruption vulnerability in the Advanced Video Coding engine. Successful exploitation could lead to arbitrary code execution."
+          },
+          {
+            "lang": "es",
+            "value": "Flash Player versiones 25.0.0.148 y anteriores de Adobe, presenta una vulnerabilidad de corrupción de memoria explotable en el motor de Codificación de Vídeo Avanzada. La explotación con éxito podría conllevar a la ejecución de código arbitraria."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV2": [
+            {
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:M/Au:N/C:C/I:C/A:C",
+                "baseScore": 9.3,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "baseSeverity": "HIGH",
+              "exploitabilityScore": 8.6,
+              "impactScore": 10.0
+            }
+          ],
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+                "baseScore": 8.8,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-787"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:flash_player_desktop_runtime:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "468D7461-525B-4955-86D3-634AD5F67D8B",
+                    "versionEndIncluding": "25.0.0.163"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:mac_os_x:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "4781BF1E-8A4E-4AFF-9540-23D523EE30DD"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:flash_player:*:*:*:*:*:edge:*:*",
+                    "matchCriteriaId": "F993D3FB-20C2-45F9-B12A-C3B43626BE87",
+                    "versionEndIncluding": "25.0.0.148"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:flash_player:*:*:*:*:*:internet_explorer:*:*",
+                    "matchCriteriaId": "E1797469-2189-46B4-B989-65C723FB94DE",
+                    "versionEndIncluding": "25.0.0.148"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_10:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "21540673-614A-4D40-8BD7-3F07723803B0"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_8.1:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "E93068DB-549B-45AB-8E5C-00EB5D8B5CF8"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:flash_player:*:*:*:*:*:chrome:*:*",
+                    "matchCriteriaId": "5911F9A3-8BF4-41EC-A676-0B82E2BB955D",
+                    "versionEndIncluding": "25.0.0.148"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:mac_os_x:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "4781BF1E-8A4E-4AFF-9540-23D523EE30DD"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:google:chrome_os:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "D32ACF6F-5FF7-4815-8EAD-4719F5FC9B79"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "703AF700-7A70-47E2-BC3A-7FD03B3CA9C1"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "A2572D17-1DE6-457B-99CC-64AFD54487EA"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:flash_player_desktop_runtime:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "388C1F56-BCBB-486E-8782-322283207C1F",
+                    "versionEndIncluding": "25.0.0.148"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "703AF700-7A70-47E2-BC3A-7FD03B3CA9C1"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "A2572D17-1DE6-457B-99CC-64AFD54487EA"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:redhat:enterprise_linux:6.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "2F6AB192-9D7D-4A9A-8995-E53A9DE9EAFC"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:redhat:enterprise_linux_desktop:6.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "EE249E1B-A1FD-4E08-AA71-A0E1F10FFE97"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:redhat:enterprise_linux_workstation:6.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "E5ED5807-55B7-47C5-97A6-03233F4FBC3A"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "http://www.securityfocus.com/bid/98349",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Broken Link",
+              "Third Party Advisory",
+              "VDB Entry"
+            ]
+          },
+          {
+            "url": "http://www.securitytracker.com/id/1038427",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Broken Link",
+              "Third Party Advisory",
+              "VDB Entry"
+            ]
+          },
+          {
+            "url": "https://access.redhat.com/errata/RHSA-2017:1219",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://helpx.adobe.com/security/products/flash-player/apsb17-15.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Patch",
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://security.gentoo.org/glsa/201705-12",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.exploit-db.com/exploits/42017/",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory",
+              "VDB Entry"
+            ]
+          }
+        ]
+      },
+      "risk_score": 84,
+      "rank": 1
+    },
+    {
+      "cve_id": "CVE-2014-10031",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 0.09874,
+            "score_date": "2025-11-28"
+          },
+          "current": {
+            "score": 0.39351,
+            "score_date": "2026-01-28"
+          },
+          "delta": 0.29477
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2015-01-13",
+        "description": "Buffer overflow in the IMAPd service in Qualcomm Eudora WorldMail 9.0.333.0 allows remote attackers to execute arbitrary code via a long string in a UID command.",
+        "title": "qualcomm eudora_worldmail Buffer Overflow",
+        "vendor": "qualcomm",
+        "product": "eudora_worldmail",
+        "attack_type": "Buffer Overflow",
+        "cvss_max": 7.5
+      },
+      "cve": {
+        "id": "CVE-2014-10031",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2015-01-13T15:59:40.633",
+        "lastModified": "2026-05-06T22:30:45.220",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Buffer overflow in the IMAPd service in Qualcomm Eudora WorldMail 9.0.333.0 allows remote attackers to execute arbitrary code via a long string in a UID command."
+          },
+          {
+            "lang": "es",
+            "value": "Desdbordamiento de buffer en el servicio IMAPd en Qualcomm Eudora WorldMail 9.0.333.0 permite a atacantes remotos ejecutar código arbitrario a través de una cadena larga en un comando UID."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV2": [
+            {
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+                "baseScore": 7.5,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "baseSeverity": "HIGH",
+              "exploitabilityScore": 10.0,
+              "impactScore": 6.4
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-119"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:qualcomm:eudora_worldmail:9.0.333.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "97077414-F92B-474A-8205-2B4A81AD94F5"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "http://osvdb.org/show/osvdb/104071",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://www.exploit-db.com/exploits/31694",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit"
+            ]
+          },
+          {
+            "url": "https://exchange.xforce.ibmcloud.com/vulnerabilities/91833",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          }
+        ]
+      },
+      "risk_score": 82,
+      "rank": 2
+    },
+    {
+      "cve_id": "CVE-2025-57792",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-01-28",
+          "previous_max": null,
+          "current_max": 10.0
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-01-28",
+        "description": "Explorance Blue versions prior to 8.14.9 contain a SQL injection vulnerability caused by insufficient validation of user input in a web application endpoint. An attacker can supply crafted input that is executed as part of backend database queries. The issue is exploitable without authentication, significantly raising the risk.",
+        "title": "explorance blue SQL Injection",
+        "vendor": "explorance",
+        "product": "blue",
+        "attack_type": "SQL Injection",
+        "cvss_max": 10.0
+      },
+      "cve": {
+        "id": "CVE-2025-57792",
+        "sourceIdentifier": "mandiant-cve@google.com",
+        "published": "2026-01-28T18:16:49.463",
+        "lastModified": "2026-02-05T17:01:13.710",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Explorance Blue versions prior to 8.14.9 contain a SQL injection vulnerability caused by insufficient validation of user input in a web application endpoint. An attacker can supply crafted input that is executed as part of backend database queries. The issue is exploitable without authentication, significantly raising the risk."
+          },
+          {
+            "lang": "es",
+            "value": "Versiones de Explorance Blue anteriores a la 8.14.9 contienen una vulnerabilidad de inyección SQL causada por la validación insuficiente de la entrada del usuario en un endpoint de aplicación web. Un atacante puede proporcionar una entrada manipulada que se ejecuta como parte de las consultas de base de datos de backend. El problema es explotable sin autenticación, lo que aumenta significativamente el riesgo."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+                "baseScore": 10.0,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 6.0
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-89"
+              }
+            ],
+            "source": "mandiant-cve@google.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:explorance:blue:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "D2AB6583-0303-48FA-B066-9CF5941EFE28",
+                    "versionEndExcluding": "8.14.9"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/mandiant/Vulnerability-Disclosures/blob/master/2026/MNDT-2026-0001.md",
+            "source": "mandiant-cve@google.com",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://online-help.explorance.com/blue/articles/security-advisories-(january-2026)",
+            "source": "mandiant-cve@google.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://online-help.explorance.com/blue/articles/security-advisory:-cve-2025-57792",
+            "source": "mandiant-cve@google.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://www.explorance.com/products/blue",
+            "source": "mandiant-cve@google.com",
+            "tags": [
+              "Product"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 3
+    },
+    {
+      "cve_id": "CVE-2022-35711",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 0.03003,
+            "score_date": "2026-01-13"
+          },
+          "current": {
+            "score": 0.21226,
+            "score_date": "2026-01-28"
+          },
+          "delta": 0.18223
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2022-10-14",
+        "description": "Adobe ColdFusion versions Update 14 (and earlier) and Update 4 (and earlier) are affected by a Heap-based Buffer Overflow vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue does not require user interaction, the vulnerability is triggered when a crafted network packet is sent to the server.",
+        "title": "adobe coldfusion RCE",
+        "vendor": "adobe",
+        "product": "coldfusion",
+        "attack_type": "RCE",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2022-35711",
+        "sourceIdentifier": "psirt@adobe.com",
+        "published": "2022-10-14T20:15:12.203",
+        "lastModified": "2024-11-21T07:11:32.000",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Adobe ColdFusion versions Update 14 (and earlier) and Update 4 (and earlier) are affected by a Heap-based Buffer Overflow vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue does not require user interaction, the vulnerability is triggered when a crafted network packet is sent to the server."
+          },
+          {
+            "lang": "es",
+            "value": "Adobe ColdFusion versiones Update 14 (y anteriores) y Update 4 (y anteriores) están afectadas por una vulnerabilidad de desbordamiento del búfer en la región Heap de la memoria que podría resultar en una ejecución de código arbitrario en el contexto del usuario actual. No es requerida una interacción del usuario para la explotación de este problema, la vulnerabilidad es desencadenada cuando es enviado un paquete de red diseñado al servidor"
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "psirt@adobe.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-122"
+              }
+            ],
+            "source": "psirt@adobe.com"
+          },
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-787"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:coldfusion:2018:-:*:*:*:*:*:*",
+                    "matchCriteriaId": "3B54B2B0-B1E1-4B4E-A529-D0BD3B5DEEF3"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:coldfusion:2018:update1:*:*:*:*:*:*",
+                    "matchCriteriaId": "EDB126BF-E09D-4E58-A39F-1190407D1CAB"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:coldfusion:2018:update10:*:*:*:*:*:*",
+                    "matchCriteriaId": "8DDD85DF-69A0-476F-8365-CD67C75CF0CE"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:coldfusion:2018:update11:*:*:*:*:*:*",
+                    "matchCriteriaId": "23F63675-7817-4AF0-A7DB-5E35EDABF04E"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:coldfusion:2018:update12:*:*:*:*:*:*",
+                    "matchCriteriaId": "3E3BF53E-2C0D-4F79-8B62-4C2A50CB5F52"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:coldfusion:2018:update13:*:*:*:*:*:*",
+                    "matchCriteriaId": "C26BF72C-E991-4170-B68B-09B20B6C0679"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:coldfusion:2018:update14:*:*:*:*:*:*",
+                    "matchCriteriaId": "25B4B4F2-318F-4046-ADE5-E9DD64F83FD9"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:coldfusion:2018:update2:*:*:*:*:*:*",
+                    "matchCriteriaId": "59649177-81EE-43C3-BFA5-E56E65B486DF"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:coldfusion:2018:update3:*:*:*:*:*:*",
+                    "matchCriteriaId": "453B96ED-738A-4642-B461-C5216CF45CA3"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:coldfusion:2018:update4:*:*:*:*:*:*",
+                    "matchCriteriaId": "58D32489-627B-4E49-9329-8A3B8F8E4903"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:coldfusion:2018:update5:*:*:*:*:*:*",
+                    "matchCriteriaId": "6D5860E1-D293-48FE-9796-058B78B2D571"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:coldfusion:2018:update6:*:*:*:*:*:*",
+                    "matchCriteriaId": "9F9336CC-E38F-4BCB-83CD-805EC7FEF806"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:coldfusion:2018:update7:*:*:*:*:*:*",
+                    "matchCriteriaId": "97964507-047A-4CC8-8D2B-0EA0C7F9BD50"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:coldfusion:2018:update8:*:*:*:*:*:*",
+                    "matchCriteriaId": "82208628-F32A-4380-9B0F-DC8507E7701D"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:coldfusion:2018:update9:*:*:*:*:*:*",
+                    "matchCriteriaId": "1563CE5E-A4F7-40A4-A050-BB96E332D8DD"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:coldfusion:2021:-:*:*:*:*:*:*",
+                    "matchCriteriaId": "7A94B406-C011-4673-8C2B-0DD94D46CC4C"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:coldfusion:2021:update1:*:*:*:*:*:*",
+                    "matchCriteriaId": "AFD05E3A-10F9-4C75-9710-BA46B66FF6E6"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:coldfusion:2021:update2:*:*:*:*:*:*",
+                    "matchCriteriaId": "D57C8681-AC68-47DF-A61E-B5C4B4A47663"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:coldfusion:2021:update3:*:*:*:*:*:*",
+                    "matchCriteriaId": "75608383-B727-48D6-8FFA-D552A338A562"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:coldfusion:2021:update4:*:*:*:*:*:*",
+                    "matchCriteriaId": "7773DB68-414A-4BA9-960F-52471A784379"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://helpx.adobe.com/security/products/coldfusion/apsb22-44.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Patch",
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 86,
+      "rank": 4
+    },
+    {
+      "cve_id": "CVE-2025-40553",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-01-28",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-01-28",
+        "description": "SolarWinds Web Help Desk was found to be susceptible to an untrusted data deserialization vulnerability that could lead to remote code execution, which would allow an attacker to run commands on the host machine. This could be exploited without authentication.",
+        "title": "solarwinds web_help_desk RCE",
+        "vendor": "solarwinds",
+        "product": "web_help_desk",
+        "attack_type": "RCE",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-40553",
+        "sourceIdentifier": "psirt@solarwinds.com",
+        "published": "2026-01-28T08:16:02.583",
+        "lastModified": "2026-02-26T19:30:48.297",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "SolarWinds Web Help Desk was found to be susceptible to an untrusted data deserialization vulnerability that could lead to remote code execution, which would allow an attacker to run commands on the host machine. This could be exploited without authentication."
+          },
+          {
+            "lang": "es",
+            "value": "SolarWinds Web Help Desk fue encontrado susceptible a una vulnerabilidad de deserialización de datos no confiables que podría conducir a la ejecución remota de código, lo que permitiría a un atacante ejecutar comandos en la máquina anfitriona. Esto podría ser explotado sin autenticación."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "psirt@solarwinds.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-502"
+              }
+            ],
+            "source": "psirt@solarwinds.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:solarwinds:web_help_desk:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "F7CADB33-214C-441A-BB62-64811EBBEB29",
+                    "versionEndExcluding": "2026.1"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://documentation.solarwinds.com/en/success_center/whd/content/release_notes/whd_2026-1_release_notes.htm",
+            "source": "psirt@solarwinds.com",
+            "tags": [
+              "Release Notes"
+            ]
+          },
+          {
+            "url": "https://www.solarwinds.com/trust-center/security-advisories/CVE-2025-40553",
+            "source": "psirt@solarwinds.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/watchtowrlabs/watchTowr-vs-SolarWinds-WebHelpDesk-CVE-2025-40552-CVE-2025-40553/blob/main/watchTowr-vs-SolarWinds-WebHelpDesk-CVE-2025-40552-CVE-2025-40553.py",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 5
+    },
+    {
+      "cve_id": "CVE-2025-40554",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-01-28",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-01-28",
+        "description": "SolarWinds Web Help Desk was found to be susceptible to an authentication bypass vulnerability that, if exploited, could allow an attacker to invoke specific actions within Web Help Desk.",
+        "title": "solarwinds web_help_desk Auth Bypass",
+        "vendor": "solarwinds",
+        "product": "web_help_desk",
+        "attack_type": "Auth Bypass",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-40554",
+        "sourceIdentifier": "psirt@solarwinds.com",
+        "published": "2026-01-28T08:16:02.737",
+        "lastModified": "2026-02-03T21:08:32.487",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "SolarWinds Web Help Desk was found to be susceptible to an authentication bypass vulnerability that, if exploited, could allow an attacker to invoke specific actions within Web Help Desk."
+          },
+          {
+            "lang": "es",
+            "value": "SolarWinds Web Help Desk se encontró que era susceptible a una vulnerabilidad de omisión de autenticación que, si se explotaba, podría permitir a un atacante invocar acciones específicas dentro de Web Help Desk."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "psirt@solarwinds.com",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-1390"
+              }
+            ],
+            "source": "psirt@solarwinds.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:solarwinds:web_help_desk:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "F7CADB33-214C-441A-BB62-64811EBBEB29",
+                    "versionEndExcluding": "2026.1"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://documentation.solarwinds.com/en/success_center/whd/content/release_notes/whd_2026-1_release_notes.htm",
+            "source": "psirt@solarwinds.com",
+            "tags": [
+              "Release Notes"
+            ]
+          },
+          {
+            "url": "https://www.solarwinds.com/trust-center/security-advisories/CVE-2025-40554",
+            "source": "psirt@solarwinds.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 6
+    },
+    {
+      "cve_id": "CVE-2025-57794",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-01-28",
+          "previous_max": null,
+          "current_max": 9.1
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-01-28",
+        "description": "Explorance Blue versions prior to 8.14.9 contain an authenticated unrestricted file upload vulnerability in the administrative interface. The application does not adequately restrict uploaded file types, allowing malicious files to be uploaded and executed by the server. This condition enables remote code execution under default configurations.",
+        "title": "explorance blue RCE",
+        "vendor": "explorance",
+        "product": "blue",
+        "attack_type": "RCE",
+        "cvss_max": 9.1
+      },
+      "cve": {
+        "id": "CVE-2025-57794",
+        "sourceIdentifier": "mandiant-cve@google.com",
+        "published": "2026-01-28T18:16:49.707",
+        "lastModified": "2026-02-05T16:59:21.133",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Explorance Blue versions prior to 8.14.9 contain an authenticated unrestricted file upload vulnerability in the administrative interface. The application does not adequately restrict uploaded file types, allowing malicious files to be uploaded and executed by the server. This condition enables remote code execution under default configurations."
+          },
+          {
+            "lang": "es",
+            "value": "Versiones de Explorance Blue anteriores a la 8.14.9 contienen una vulnerabilidad de carga de archivos sin restricciones autenticada en la interfaz de administración. La aplicación no restringe adecuadamente los tipos de archivos cargados, permitiendo que se carguen archivos maliciosos y los ejecute el servidor. Esta condición permite la ejecución remota de código bajo configuraciones predeterminadas."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
+                "baseScore": 9.1,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 2.3,
+              "impactScore": 6.0
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-434"
+              }
+            ],
+            "source": "mandiant-cve@google.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:explorance:blue:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "D2AB6583-0303-48FA-B066-9CF5941EFE28",
+                    "versionEndExcluding": "8.14.9"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/mandiant/Vulnerability-Disclosures/blob/master/2026/MNDT-2026-0003.md",
+            "source": "mandiant-cve@google.com",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://online-help.explorance.com/blue/articles/security-advisories-(january-2026)",
+            "source": "mandiant-cve@google.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://online-help.explorance.com/blue/articles/security-advisory:-cve-2025-57794",
+            "source": "mandiant-cve@google.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://www.explorance.com/products/blue",
+            "source": "mandiant-cve@google.com",
+            "tags": [
+              "Product"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 7
+    },
+    {
+      "cve_id": "CVE-2025-57795",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-01-28",
+          "previous_max": null,
+          "current_max": 9.9
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-01-28",
+        "description": "Explorance Blue versions prior to 8.14.13 contain an authenticated remote file download vulnerability in a web service component. In default configurations, this flaw can be leveraged to achieve remote code execution.",
+        "title": "explorance blue RCE",
+        "vendor": "explorance",
+        "product": "blue",
+        "attack_type": "RCE",
+        "cvss_max": 9.9
+      },
+      "cve": {
+        "id": "CVE-2025-57795",
+        "sourceIdentifier": "mandiant-cve@google.com",
+        "published": "2026-01-28T18:16:49.827",
+        "lastModified": "2026-02-05T16:58:25.813",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Explorance Blue versions prior to 8.14.13 contain an authenticated remote file download vulnerability in a web service component. In default configurations, this flaw can be leveraged to achieve remote code execution."
+          },
+          {
+            "lang": "es",
+            "value": "Las versiones de Explorance Blue anteriores a la 8.14.13 contienen una vulnerabilidad de descarga remota de archivos autenticada en un componente de servicio web. En configuraciones predeterminadas, esta falla puede ser aprovechada para lograr la ejecución remota de código."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+                "baseScore": 9.9,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.1,
+              "impactScore": 6.0
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-434"
+              }
+            ],
+            "source": "mandiant-cve@google.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:explorance:blue:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "444B6275-0716-4801-BA30-2619C43F8DF1",
+                    "versionEndExcluding": "8.14.13"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/mandiant/Vulnerability-Disclosures/blob/master/2026/MNDT-2026-0004.md",
+            "source": "mandiant-cve@google.com",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://online-help.explorance.com/blue/articles/security-advisories-(january-2026)",
+            "source": "mandiant-cve@google.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://online-help.explorance.com/blue/articles/security-advisory:-cve-2025-57795",
+            "source": "mandiant-cve@google.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://www.explorance.com/products/blue",
+            "source": "mandiant-cve@google.com",
+            "tags": [
+              "Product"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 8
+    },
+    {
+      "cve_id": "CVE-2025-61140",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-01-28",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-01-28",
+        "description": "The value function in jsonpath 1.1.1 lib/index.js is vulnerable to Prototype Pollution.",
+        "title": "dchester jsonpath",
+        "vendor": "dchester",
+        "product": "jsonpath",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-61140",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2026-01-28T16:16:13.547",
+        "lastModified": "2026-02-09T19:06:19.203",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The value function in jsonpath 1.1.1 lib/index.js is vulnerable to Prototype Pollution."
+          },
+          {
+            "lang": "es",
+            "value": "La función value en jsonpath 1.1.1 lib/index.js es vulnerable a Contaminación de Prototipos."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-1321"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:dchester:jsonpath:1.1.1:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "D5AD03C5-77EE-43F4-8F1E-1AB0757FE7C1"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://gist.github.com/Dremig/8105c189774217222a8ebea3ed4d341d",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/dchester/jsonpath",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Product"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 9
+    },
+    {
+      "cve_id": "CVE-2025-69602",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-01-28",
+          "previous_max": null,
+          "current_max": 9.1
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-01-28",
+        "description": "A session fixation vulnerability exists in 66biolinks v62.0.0 by AltumCode, where the application does not regenerate the session identifier after successful authentication. As a result, the same session cookie value is reused for users logging in from the same browser, allowing an attacker who can set or predict a session ID to potentially hijack an authenticated session.",
+        "title": "altumcode 66biolinks",
+        "vendor": "altumcode",
+        "product": "66biolinks",
+        "cvss_max": 9.1
+      },
+      "cve": {
+        "id": "CVE-2025-69602",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2026-01-28T19:16:24.017",
+        "lastModified": "2026-02-09T17:24:55.173",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A session fixation vulnerability exists in 66biolinks v62.0.0 by AltumCode, where the application does not regenerate the session identifier after successful authentication. As a result, the same session cookie value is reused for users logging in from the same browser, allowing an attacker who can set or predict a session ID to potentially hijack an authenticated session."
+          },
+          {
+            "lang": "es",
+            "value": "Una vulnerabilidad de fijación de sesión existe en 66biolinks v62.0.0 de AltumCode, donde la aplicación no regenera el identificador de sesión después de una autenticación exitosa. Como resultado, el mismo valor de cookie de sesión se reutiliza para los usuarios que inician sesión desde el mismo navegador, permitiendo a un atacante que puede establecer o predecir un ID de sesión potencialmente secuestrar una sesión autenticada."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+                "baseScore": 9.1,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.2
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-384"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:altumcode:66biolinks:62.0.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "8DE8E70F-E370-40E7-972E-461E17C2F91C"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://gist.github.com/Waqar-Arain/c8117308325a91b8f3b7829646915275",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 10
+    },
+    {
+      "cve_id": "CVE-2026-1056",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-01-28",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-01-28",
+        "description": "The Snow Monkey Forms plugin for WordPress is vulnerable to arbitrary file deletion due to insufficient file path validation in the 'generate_user_dirpath' function in all versions up to, and including, 12.0.3. This makes it possible for unauthenticated attackers to delete arbitrary files on the server, which can easily lead to remote code execution when the right file is deleted (such as wp-config.php).",
+        "title": "The Snow Monkey Forms plugin for WordPress is vulnerable to arbitrary file deletion due to insufficient file path validation in the 'gene...",
+        "attack_type": "RCE",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2026-1056",
+        "sourceIdentifier": "security@wordfence.com",
+        "published": "2026-01-28T13:15:53.480",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The Snow Monkey Forms plugin for WordPress is vulnerable to arbitrary file deletion due to insufficient file path validation in the 'generate_user_dirpath' function in all versions up to, and including, 12.0.3. This makes it possible for unauthenticated attackers to delete arbitrary files on the server, which can easily lead to remote code execution when the right file is deleted (such as wp-config.php)."
+          },
+          {
+            "lang": "es",
+            "value": "El plugin Snow Monkey Forms para WordPress es vulnerable a la eliminación arbitraria de archivos debido a una validación insuficiente de la ruta de archivo en la función 'generate_user_dirpath' en todas las versiones hasta la 12.0.3, inclusive. Esto permite que atacantes no autenticados eliminen archivos arbitrarios en el servidor, lo que puede conducir fácilmente a la ejecución remota de código cuando se elimina el archivo correcto (como wp-config.php)."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security@wordfence.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-22"
+              }
+            ],
+            "source": "security@wordfence.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/snow-monkey-forms/tags/12.0.3/App/Model/Directory.php#L58",
+            "source": "security@wordfence.com"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/snow-monkey-forms/tags/12.0.3/App/Rest/Route/View.php#L189",
+            "source": "security@wordfence.com"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/snow-monkey-forms/tags/12.0.3/snow-monkey-forms.php#L186",
+            "source": "security@wordfence.com"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/changeset/3448278/",
+            "source": "security@wordfence.com"
+          },
+          {
+            "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/37a8642d-07f5-4b1b-8419-e30589089162?source=cve",
+            "source": "security@wordfence.com"
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 11
+    },
+    {
+      "cve_id": "CVE-2026-24685",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-01-28",
+          "previous_max": null,
+          "current_max": 9.4
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-01-28",
+        "description": "OpenProject is an open-source, web-based project management software. Versions prior to 16.6.6 and 17.0.2 have an arbitrary file write vulnerability in OpenProject’s repository diff download endpoint (`/projects/:project_id/repository/diff.diff`) when rendering a single revision via git show. By supplying a specially crafted rev value (for example, `rev=--output=/tmp/poc.txt)`, an attacker can inject git show command-line options. When OpenProject executes the SCM command, Git interprets the attacker-controlled rev as an option and writes the output to an attacker-chosen path. As a result, any user with the `:browse_repository` permission on the project can create or overwrite arbitrary files that the OpenProject process user is permitted to write. The written contents consist of git show output (commit metadata and patch), but overwriting application or configuration files still leads to data loss and denial of service, impacting integrity and availability. The issue has been fixed in OpenProject 17.0.2 and 16.6.6.",
+        "title": "openproject openproject",
+        "vendor": "openproject",
+        "product": "openproject",
+        "cvss_max": 9.4
+      },
+      "cve": {
+        "id": "CVE-2026-24685",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2026-01-28T17:16:16.147",
+        "lastModified": "2026-02-09T18:24:51.600",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "OpenProject is an open-source, web-based project management software. Versions prior to 16.6.6 and 17.0.2 have an arbitrary file write vulnerability in OpenProject’s repository diff download endpoint (`/projects/:project_id/repository/diff.diff`) when rendering a single revision via git show. By supplying a specially crafted rev value (for example, `rev=--output=/tmp/poc.txt)`, an attacker can inject git show command-line options. When OpenProject executes the SCM command, Git interprets the attacker-controlled rev as an option and writes the output to an attacker-chosen path. As a result, any user with the `:browse_repository` permission on the project can create or overwrite arbitrary files that the OpenProject process user is permitted to write. The written contents consist of git show output (commit metadata and patch), but overwriting application or configuration files still leads to data loss and denial of service, impacting integrity and availability. The issue has been fixed in OpenProject 17.0.2 and 16.6.6."
+          },
+          {
+            "lang": "es",
+            "value": "OpenProject es un software de gestión de proyectos de código abierto y basado en la web. Las versiones anteriores a la 16.6.6 y 17.0.2 tienen una vulnerabilidad de escritura de archivos arbitraria en el endpoint de descarga de diferencias del repositorio de OpenProject (`/projects/:project_id/repository/diff.diff`) al renderizar una única revisión a través de git show. Al proporcionar un valor de rev especialmente diseñado (por ejemplo, `rev=--output=/tmp/poc.txt)`), un atacante puede inyectar opciones de línea de comandos de git show. Cuando OpenProject ejecuta el comando SCM, Git interpreta el rev controlado por el atacante como una opción y escribe la salida en una ruta elegida por el atacante. Como resultado, cualquier usuario con el permiso :browse_repository en el proyecto puede crear o sobrescribir archivos arbitrarios que el usuario del proceso de OpenProject tiene permiso para escribir. El contenido escrito consiste en la salida de git show (metadatos de commit y parche), pero sobrescribir archivos de aplicación o configuración aún conduce a la pérdida de datos y a la denegación de servicio, afectando la integridad y la disponibilidad. El problema ha sido solucionado en OpenProject 17.0.2 y 16.6.6."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 8.8,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.4,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-77"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:openproject:openproject:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "E81C004B-7B0F-4ED7-ACBB-DCC3D055B6EA",
+                    "versionEndExcluding": "16.6.6"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:openproject:openproject:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "A4530571-3A78-40BB-9B33-880974D8C7CF",
+                    "versionStartIncluding": "17.0.0",
+                    "versionEndExcluding": "17.0.2"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/opf/openproject/security/advisories/GHSA-74p5-9pr3-r6pw",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 12
+    },
+    {
+      "cve_id": "CVE-2026-24897",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-01-28",
+          "previous_max": null,
+          "current_max": 10.0
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-01-28",
+        "description": "Erugo is a self-hosted file-sharing platform. In versions up to and including 0.2.14, an authenticated low-privileged user can upload arbitrary files to any specified location due to insufficient validation of user‑supplied paths when creating shares.\nBy specifying a writable path within the public web root, an attacker can upload and execute arbitrary code on the server, resulting in remote code execution (RCE). This vulnerability allows a low-privileged user to fully compromise the affected Erugo instance. Version 0.2.15 fixes the issue.",
+        "title": "erugo erugo privilege escalation",
+        "vendor": "erugo",
+        "product": "erugo",
+        "attack_type": "privilege escalation",
+        "cvss_max": 10.0
+      },
+      "cve": {
+        "id": "CVE-2026-24897",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2026-01-28T23:15:51.270",
+        "lastModified": "2026-02-09T15:32:42.827",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Erugo is a self-hosted file-sharing platform. In versions up to and including 0.2.14, an authenticated low-privileged user can upload arbitrary files to any specified location due to insufficient validation of user‑supplied paths when creating shares.\nBy specifying a writable path within the public web root, an attacker can upload and execute arbitrary code on the server, resulting in remote code execution (RCE). This vulnerability allows a low-privileged user to fully compromise the affected Erugo instance. Version 0.2.15 fixes the issue."
+          },
+          {
+            "lang": "es",
+            "value": "Erugo es una plataforma de intercambio de archivos autoalojada. En versiones hasta la 0.2.14 inclusive, un usuario autenticado con bajos privilegios puede cargar archivos arbitrarios a cualquier ubicación especificada debido a una validación insuficiente de las rutas proporcionadas por el usuario al crear comparticiones.\nAl especificar una ruta escribible dentro de la raíz web pública, un atacante puede cargar y ejecutar código arbitrario en el servidor, lo que resulta en ejecución remota de código (RCE). Esta vulnerabilidad permite a un usuario con bajos privilegios comprometer completamente la instancia de Erugo afectada. La versión 0.2.15 corrige el problema."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+                "baseScore": 10.0,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 6.0
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 8.8,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-22"
+              },
+              {
+                "lang": "en",
+                "value": "CWE-94"
+              },
+              {
+                "lang": "en",
+                "value": "CWE-434"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          },
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-434"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:erugo:erugo:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "C29B289E-C12B-4F99-9844-9DF9CAB57CAD",
+                    "versionEndIncluding": "0.2.14"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/ErugoOSS/Erugo/commit/256bc63831a0b5e9a94cb024a0724e0cd5fa5e38",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://github.com/ErugoOSS/Erugo/releases/tag/v0.2.15",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Release Notes"
+            ]
+          },
+          {
+            "url": "https://github.com/ErugoOSS/Erugo/security/advisories/GHSA-336w-hgpq-6369",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Exploit",
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 13
+    }
+  ],
+  "source": "https://www.cvelogic.com/threat-intelligence/2026-01-28"
+}

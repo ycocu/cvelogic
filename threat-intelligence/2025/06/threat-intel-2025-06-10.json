@@ -1,0 +1,1662 @@
+{
+  "schema_version": "2.2",
+  "generated_at": "2026-06-02T07:32:51Z",
+  "day": "2025-06-10",
+  "window": {
+    "utc_start": "2025-06-10",
+    "utc_end": "2025-06-10",
+    "days": 1
+  },
+  "summary": {
+    "brief": "Microsoft Windows added to CISA KEV — confirmed in-the-wild exploitation. · Zohocorp Manageengine Applications Manager — exploitation likelihood rose sharply (EPSS 5.2% → 27% · rising (+22%)). · 10 new critical disclosures — review patch status on exposed services.",
+    "bullets": [
+      "Microsoft Windows added to CISA KEV — confirmed in-the-wild exploitation.",
+      "Zohocorp Manageengine Applications Manager — exploitation likelihood rose sharply (EPSS 5.2% → 27% · rising (+22%)).",
+      "10 new critical disclosures — review patch status on exposed services."
+    ],
+    "counts": {
+      "cves": 13,
+      "kev": 2,
+      "exploit": 0,
+      "epss": 1,
+      "cvss": 10,
+      "patch": 0
+    }
+  },
+  "cves": [
+    {
+      "cve_id": "CVE-2025-24016",
+      "signal_types": [
+        "KEV"
+      ],
+      "signals": {
+        "kev": {
+          "date_added": "2025-06-10"
+        },
+        "exploit": null,
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-02-10",
+        "description": "Wazuh is a free and open source platform used for threat prevention, detection, and response. Starting in version 4.4.0 and prior to version 4.9.1, an unsafe deserialization vulnerability allows for remote code execution on Wazuh servers. DistributedAPI parameters are a serialized as JSON and deserialized using `as_wazuh_object` (in `framework/wazuh/core/cluster/common.py`). If an attacker manages to inject an unsanitized dictionary in DAPI request/response, they can forge an unhandled exception (`__unhandled_exc__`) to evaluate arbitrary python code. The vulnerability can be triggered by anybody with API access (compromised dashboard or Wazuh servers in the cluster) or, in certain configurations, even by a compromised agent. Version 4.9.1 contains a fix.",
+        "title": "Wazuh Server Deserialization of Untrusted Data Vulnerability",
+        "vendor": "wazuh",
+        "product": "wazuh",
+        "attack_type": "RCE",
+        "cvss_max": 9.9
+      },
+      "cve": {
+        "id": "CVE-2025-24016",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2025-02-10T20:15:42.540",
+        "lastModified": "2025-10-24T13:59:44.790",
+        "vulnStatus": "Analyzed",
+        "cisaExploitAdd": "2025-06-10",
+        "cisaActionDue": "2025-07-01",
+        "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+        "cisaVulnerabilityName": "Wazuh Server Deserialization of Untrusted Data Vulnerability",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Wazuh is a free and open source platform used for threat prevention, detection, and response. Starting in version 4.4.0 and prior to version 4.9.1, an unsafe deserialization vulnerability allows for remote code execution on Wazuh servers. DistributedAPI parameters are a serialized as JSON and deserialized using `as_wazuh_object` (in `framework/wazuh/core/cluster/common.py`). If an attacker manages to inject an unsanitized dictionary in DAPI request/response, they can forge an unhandled exception (`__unhandled_exc__`) to evaluate arbitrary python code. The vulnerability can be triggered by anybody with API access (compromised dashboard or Wazuh servers in the cluster) or, in certain configurations, even by a compromised agent. Version 4.9.1 contains a fix."
+          },
+          {
+            "lang": "es",
+            "value": "Wazuh es una plataforma gratuita y de código abierto que se utiliza para la prevención, detección y respuesta ante amenazas. A partir de la versión 4.4.0 y antes de la versión 4.9.1, una vulnerabilidad de deserialización insegura permite la ejecución remota de código en servidores Wazuh. Los parámetros de DistributedAPI se serializan como JSON y se deserializan utilizando `as_wazuh_object` (en `framework/wazuh/core/cluster/common.py`). Si un atacante logra inyectar un diccionario no depurado en una solicitud/respuesta DAPI, puede falsificar una excepción no controlada (`__unhandled_exc__`) para evaluar código Python arbitrario. La vulnerabilidad puede ser activada por cualquier persona con acceso a la API (panel de control comprometido o servidores Wazuh en el clúster) o, en ciertas configuraciones, incluso por un agente comprometido. La versión 4.9.1 contiene una corrección."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:H/A:H",
+                "baseScore": 9.9,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.1,
+              "impactScore": 6.0
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-502"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:wazuh:wazuh:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "EB8004AB-265E-4432-AC10-8361DCFC1F56",
+                    "versionStartIncluding": "4.4.0",
+                    "versionEndExcluding": "4.9.1"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/wazuh/wazuh/security/advisories/GHSA-hcrc-79hj-m3qh",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Exploit",
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2025-24016",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "US Government Resource"
+            ]
+          }
+        ]
+      },
+      "risk_score": 88,
+      "rank": 1
+    },
+    {
+      "cve_id": "CVE-2022-23050",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 0.05179,
+            "score_date": "2025-06-09"
+          },
+          "current": {
+            "score": 0.27373,
+            "score_date": "2025-06-10"
+          },
+          "delta": 0.22194
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2022-05-24",
+        "description": "ManageEngine AppManager15 (Build No:15510) allows an authenticated admin user to upload a DLL file to perform a DLL hijack attack inside the 'working' folder through the 'Upload Files / Binaries' functionality.",
+        "title": "zohocorp manageengine_applications_manager",
+        "vendor": "zohocorp",
+        "product": "manageengine_applications_manager",
+        "cvss_max": 7.2
+      },
+      "cve": {
+        "id": "CVE-2022-23050",
+        "sourceIdentifier": "help@fluidattacks.com",
+        "published": "2022-05-24T19:15:09.567",
+        "lastModified": "2024-11-21T06:47:53.210",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "ManageEngine AppManager15 (Build No:15510) allows an authenticated admin user to upload a DLL file to perform a DLL hijack attack inside the 'working' folder through the 'Upload Files / Binaries' functionality."
+          },
+          {
+            "lang": "es",
+            "value": "ManageEngine AppManager15 (Build No:15510) permite a un usuario administrador autenticado subir un archivo DLL para llevar a cabo un ataque de secuestro de DLL dentro de la carpeta \"working\" mediante la funcionalidad \"Upload Files / Binaries\""
+          }
+        ],
+        "metrics": {
+          "cvssMetricV2": [
+            {
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:L/Au:S/C:P/I:P/A:P",
+                "baseScore": 6.5,
+                "baseSeverity": "MEDIUM"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "baseSeverity": "MEDIUM",
+              "exploitabilityScore": 8.0,
+              "impactScore": 6.4
+            }
+          ],
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 7.2,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 1.2,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-427"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:zohocorp:manageengine_applications_manager:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "7A06C5EC-9980-4CBB-9BF9-D2B9934495B7",
+                    "versionStartIncluding": "15.0",
+                    "versionEndExcluding": "15.5"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:zohocorp:manageengine_applications_manager:15.5:-:*:*:*:*:*:*",
+                    "matchCriteriaId": "5FF2D7BB-4150-4B3E-967B-0BC77A179576"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:zohocorp:manageengine_applications_manager:15.5:build15500:*:*:*:*:*:*",
+                    "matchCriteriaId": "C174DC8E-E0AD-492B-AE5D-6D17D062314E"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:zohocorp:manageengine_applications_manager:15.5:build15510:*:*:*:*:*:*",
+                    "matchCriteriaId": "DB5FBF55-196C-4A92-A6E9-10078929D5DC"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://fluidattacks.com/advisories/cerati/",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.manageengine.com/products/applications_manager/security-updates/security-updates-cve-2022-23050.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 82,
+      "rank": 2
+    },
+    {
+      "cve_id": "CVE-2025-30220",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-06-10",
+          "previous_max": null,
+          "current_max": 9.9
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-06-10",
+        "description": "GeoServer is an open source server that allows users to share and edit geospatial data. GeoTools Schema class use of Eclipse XSD library to represent schema data structure is vulnerable to XML External Entity (XXE) exploit. This impacts whoever exposes XML processing with gt-xsd-core involved in parsing, when the documents carry a reference to an external XML schema. The gt-xsd-core Schemas class is not using the EntityResolver provided by the ParserHandler (if any was configured). This also impacts users of gt-wfs-ng DataStore where the ENTITY_RESOLVER connection parameter was not being used as intended. This vulnerability is fixed in GeoTools 33.1, 32.3, 31.7, and 28.6.1, GeoServer 2.27.1, 2.26.3, and 2.25.7, and GeoNetwork 4.4.8 and 4.2.13.",
+        "title": "geotools geonetwork XXE",
+        "vendor": "geotools",
+        "product": "geotools",
+        "attack_type": "XXE",
+        "cvss_max": 9.9
+      },
+      "cve": {
+        "id": "CVE-2025-30220",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2025-06-10T16:15:37.387",
+        "lastModified": "2025-08-26T16:10:11.830",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "GeoServer is an open source server that allows users to share and edit geospatial data. GeoTools Schema class use of Eclipse XSD library to represent schema data structure is vulnerable to XML External Entity (XXE) exploit. This impacts whoever exposes XML processing with gt-xsd-core involved in parsing, when the documents carry a reference to an external XML schema. The gt-xsd-core Schemas class is not using the EntityResolver provided by the ParserHandler (if any was configured). This also impacts users of gt-wfs-ng DataStore where the ENTITY_RESOLVER connection parameter was not being used as intended. This vulnerability is fixed in GeoTools 33.1, 32.3, 31.7, and 28.6.1, GeoServer 2.27.1, 2.26.3, and 2.25.7, and GeoNetwork 4.4.8 and 4.2.13."
+          },
+          {
+            "lang": "es",
+            "value": "GeoServer es un servidor de código abierto que permite a los usuarios compartir y editar datos geoespaciales. El uso de la librería XSD de Eclipse por parte de la clase Esquema de GeoTools para representar la estructura de datos del esquema es vulnerable a la vulnerabilidad de Entidad Externa XML (XXE). Esto afecta a quien exponga el procesamiento XML con gt-xsd-core involucrado en el análisis, cuando los documentos contienen una referencia a un esquema XML externo. La clase Esquemas de gt-xsd-core no utiliza el EntityResolver proporcionado por ParserHandler (si se configuró alguno). Esto también afecta a los usuarios del almacén de datos gt-wfs-ng donde el parámetro de conexión ENTITY_RESOLVER no se utilizaba correctamente. Esta vulnerabilidad está corregida en GeoTools 33.1, 32.3, 31.7 y 28.6.1, GeoServer 2.27.1, 2.26.3 y 2.25.7, y GeoNetwork 4.4.8 y 4.2.13."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:L/A:L",
+                "baseScore": 9.9,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.3
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:H",
+                "baseScore": 9.1,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.2
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-611"
+              },
+              {
+                "lang": "en",
+                "value": "CWE-918"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:geotools:geotools:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "319F63C7-7B2E-43CB-A91D-536D0D5D66BE",
+                    "versionEndExcluding": "28.6.1"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:geotools:geotools:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "26F4D869-28DC-4F07-A122-B93D948EBBCF",
+                    "versionStartIncluding": "29.0",
+                    "versionEndExcluding": "31.7"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:geotools:geotools:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "9C145224-639E-45FB-8413-C1570B9F23B6",
+                    "versionStartIncluding": "32.0",
+                    "versionEndExcluding": "32.3"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:geotools:geotools:33.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "D95F0CB7-D8DF-44D3-9967-34A73AF85BAE"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:osgeo:geonetwork:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "3595E000-B460-4BA9-AC3E-A8678FBD9899",
+                    "versionStartIncluding": "4.2.0",
+                    "versionEndExcluding": "4.2.13"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:osgeo:geonetwork:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "A5B335EE-0493-44DE-A385-141AA2E777E7",
+                    "versionStartIncluding": "4.4.0",
+                    "versionEndExcluding": "4.4.8"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:osgeo:geoserver:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "2F0B3A06-FC80-4BDD-8E00-1AE8D51A5930",
+                    "versionEndExcluding": "2.25.7"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:osgeo:geoserver:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "657234C4-41D0-4CD9-B1DD-BBF565C608C6",
+                    "versionStartIncluding": "2.26.0",
+                    "versionEndExcluding": "2.26.3"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:osgeo:geoserver:2.27.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "6F80D593-ADBB-46EC-B1DC-F154B6385E22"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://docs.geoserver.org/latest/en/user/production/config.html#production-config-external-entities",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Product"
+            ]
+          },
+          {
+            "url": "https://github.com/geonetwork/core-geonetwork/pull/8757",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://github.com/geonetwork/core-geonetwork/pull/8803",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://github.com/geonetwork/core-geonetwork/pull/8812",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://github.com/geonetwork/core-geonetwork/security/advisories/GHSA-2p76-gc46-5fvc",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Patch",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/geoserver/geoserver/security/advisories/GHSA-jj54-8f66-c5pc",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Exploit",
+              "Patch",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/geotools/geotools/security/advisories/GHSA-826p-4gcg-35vw",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 3
+    },
+    {
+      "cve_id": "CVE-2024-34711",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-06-10",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-06-10",
+        "description": "GeoServer is an open source server that allows users to share and edit geospatial data. An improper URI validation vulnerability exists that enables an unauthorized attacker to perform XML External Entities (XEE) attack, then send GET request to any HTTP server. By default, GeoServer use PreventLocalEntityResolver class from GeoTools to filter out malicious URIs in XML entities before resolving them. The URI must match the regex (?i)(jar:file|http|vfs)[^?#;]*\\\\.xsd. But the regex leaves a chance for attackers to request to any HTTP server or limited file. Attacker can abuse this to scan internal networks and gain information about them then exploit further. GeoServer 2.25.0 and greater default to the use of ENTITY_RESOLUTION_ALLOWLIST and does not require you to provide a system property.",
+        "title": "osgeo geoserver",
+        "vendor": "osgeo",
+        "product": "geoserver",
+        "cvss_max": 9.3
+      },
+      "cve": {
+        "id": "CVE-2024-34711",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2025-06-10T15:15:22.710",
+        "lastModified": "2025-08-26T16:24:18.393",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "GeoServer is an open source server that allows users to share and edit geospatial data. An improper URI validation vulnerability exists that enables an unauthorized attacker to perform XML External Entities (XEE) attack, then send GET request to any HTTP server. By default, GeoServer use PreventLocalEntityResolver class from GeoTools to filter out malicious URIs in XML entities before resolving them. The URI must match the regex (?i)(jar:file|http|vfs)[^?#;]*\\\\.xsd. But the regex leaves a chance for attackers to request to any HTTP server or limited file. Attacker can abuse this to scan internal networks and gain information about them then exploit further. GeoServer 2.25.0 and greater default to the use of ENTITY_RESOLUTION_ALLOWLIST and does not require you to provide a system property."
+          },
+          {
+            "lang": "es",
+            "value": "GeoServer es un servidor de código abierto que permite a los usuarios compartir y editar datos geoespaciales. Existe una vulnerabilidad de validación de URI incorrecta que permite a un atacante no autorizado realizar un ataque de Entidades Externas XML (XEE) y enviar una solicitud GET a cualquier servidor HTTP. De forma predeterminada, GeoServer utiliza la clase PreventLocalEntityResolver de GeoTools para filtrar URI maliciosos en entidades XML antes de resolverlos. El URI debe coincidir con la expresión regular (?i)(jar:file|http|vfs)[^?#;]*\\\\.xsd. Sin embargo, la expresión regular permite a los atacantes realizar solicitudes a cualquier servidor HTTP o archivo limitado. Un atacante puede aprovechar esto para escanear redes internas, obtener información sobre ellas y luego explotarla. GeoServer 2.25.0 y versiones posteriores utilizan ENTITY_RESOLUTION_ALLOWLIST de forma predeterminada y no requieren que se proporcione una propiedad del sistema."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:L/A:N",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 4.7
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:N",
+                "baseScore": 8.2,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 4.2
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-200"
+              },
+              {
+                "lang": "en",
+                "value": "CWE-611"
+              },
+              {
+                "lang": "en",
+                "value": "CWE-918"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:osgeo:geoserver:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "6112339F-79B4-4735-B2BE-345BE4F81FD4",
+                    "versionEndExcluding": "2.25.0"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://docs.geoserver.org/latest/en/user/production/config.html#production-config-external-entities",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Product"
+            ]
+          },
+          {
+            "url": "https://github.com/geoserver/geoserver/security/advisories/GHSA-mc43-4fqr-c965",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Mitigation",
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 4
+    },
+    {
+      "cve_id": "CVE-2024-57190",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-06-10",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-06-10",
+        "description": "Erxes <1.6.1 is vulnerable to Incorrect Access Control. An attacker can bypass authentication by providing a \"User\" HTTP header that contains any user, allowing them to talk to any GraphQL endpoint.",
+        "title": "erxes erxes",
+        "vendor": "erxes",
+        "product": "erxes",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2024-57190",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2025-06-10T17:20:38.540",
+        "lastModified": "2025-06-20T13:07:32.170",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Erxes <1.6.1 is vulnerable to Incorrect Access Control. An attacker can bypass authentication by providing a \"User\" HTTP header that contains any user, allowing them to talk to any GraphQL endpoint."
+          },
+          {
+            "lang": "es",
+            "value": "Erxes &lt;1.6.1 es vulnerable a un control de acceso incorrecto. Un atacante puede eludir la autenticación proporcionando un encabezado HTTP \"Usuario\" que contenga cualquier usuario, lo que le permite comunicarse con cualquier endpoint GraphQL."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-284"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:erxes:erxes:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "416456BB-CF9E-472E-AFD4-5C59D3DEED94",
+                    "versionEndExcluding": "1.6.1"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/erxes/erxes/commit/4ed2ca797241d2ba0c9083feeadd9755c1310ce8",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://www.sonarsource.com/blog/micro-services-major-headaches-detecting-vulnerabilities-in-erxes-microservices/",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 5
+    },
+    {
+      "cve_id": "CVE-2025-2474",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-06-10",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-06-10",
+        "description": "Out-of-bounds write in the PCX image codec in QNX SDP versions 8.0, 7.1 and 7.0 could allow an unauthenticated attacker to cause a denial-of-service condition or execute code in the context of the process using the image codec.",
+        "title": "blackberry qnx_software_development_platform Out-of-Bounds Write",
+        "vendor": "blackberry",
+        "product": "qnx_software_development_platform",
+        "attack_type": "Out-of-Bounds Write",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-2474",
+        "sourceIdentifier": "secure@blackberry.com",
+        "published": "2025-06-10T18:15:30.477",
+        "lastModified": "2025-12-01T18:05:04.720",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Out-of-bounds write in the PCX image codec in QNX SDP versions 8.0, 7.1 and 7.0 could allow an unauthenticated attacker to cause a denial-of-service condition or execute code in the context of the process using the image codec."
+          },
+          {
+            "lang": "es",
+            "value": "La escritura fuera de los límites en el códec de imagen PCX en las versiones 8.0, 7.1 y 7.0 de QNX SDP podría permitir que un atacante no autenticado provoque una condición de denegación de servicio o ejecute código en el contexto del proceso que utiliza el códec de imagen."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "secure@blackberry.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-787"
+              }
+            ],
+            "source": "secure@blackberry.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:blackberry:qnx_software_development_platform:7.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "058D8A14-E99C-4AA9-BE27-794B8D8B9E49"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:blackberry:qnx_software_development_platform:7.1:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "E0E19A3D-96D9-4DF2-8E56-E2D917B1A9EA"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:blackberry:qnx_software_development_platform:8.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "7CD7E9BB-7B9E-4022-BE18-EA9642F54064"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://support.blackberry.com/pkb/s/article/140646",
+            "source": "secure@blackberry.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 6
+    },
+    {
+      "cve_id": "CVE-2025-33053",
+      "signal_types": [
+        "KEV"
+      ],
+      "signals": {
+        "kev": {
+          "date_added": "2025-06-10"
+        },
+        "exploit": null,
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-06-10",
+        "description": "External control of file name or path in Internet Shortcut Files allows an unauthorized attacker to execute code over a network.",
+        "title": "Microsoft Windows External Control of File Name or Path Vulnerability",
+        "vendor": "microsoft",
+        "product": "windows_10_1507",
+        "cvss_max": 8.8
+      },
+      "cve": {
+        "id": "CVE-2025-33053",
+        "sourceIdentifier": "secure@microsoft.com",
+        "published": "2025-06-10T17:22:18.853",
+        "lastModified": "2025-10-27T17:12:46.430",
+        "vulnStatus": "Analyzed",
+        "cisaExploitAdd": "2025-06-10",
+        "cisaActionDue": "2025-07-01",
+        "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+        "cisaVulnerabilityName": "Microsoft Windows External Control of File Name or Path Vulnerability",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "External control of file name or path in Internet Shortcut Files allows an unauthorized attacker to execute code over a network."
+          },
+          {
+            "lang": "es",
+            "value": "El control externo del nombre o ruta del archivo en WebDAV permite que un atacante no autorizado ejecute código a través de una red."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+                "baseScore": 8.8,
+                "baseSeverity": "HIGH"
+              },
+              "source": "secure@microsoft.com",
+              "type": "Secondary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-73"
+              }
+            ],
+            "source": "secure@microsoft.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_10_1507:*:*:*:*:*:*:x64:*",
+                    "matchCriteriaId": "FCC2974E-F0F4-4F33-9CCE-2CEA45A3AD86",
+                    "versionEndExcluding": "10.0.10240.21034"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_10_1507:*:*:*:*:*:*:x86:*",
+                    "matchCriteriaId": "A94EDBE2-AAFF-4E9A-A9E5-9B02ADB94471",
+                    "versionEndExcluding": "10.0.10240.21034"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_10_1607:*:*:*:*:*:*:x64:*",
+                    "matchCriteriaId": "21CF85F1-CE6E-4AA2-B686-20766DB23D46",
+                    "versionEndExcluding": "10.0.14393.8148"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_10_1607:*:*:*:*:*:*:x86:*",
+                    "matchCriteriaId": "10F0F3D2-00CD-4F52-B31E-DEA656DBD8B3",
+                    "versionEndExcluding": "10.0.14393.8148"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_10_1809:*:*:*:*:*:*:x64:*",
+                    "matchCriteriaId": "F081F99C-6E6A-4AB2-8DE8-6457582D80D6",
+                    "versionEndExcluding": "10.0.17763.7434"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_10_1809:*:*:*:*:*:*:x86:*",
+                    "matchCriteriaId": "7D9FCD92-0CED-43D3-87E0-630B80AC1A89",
+                    "versionEndExcluding": "10.0.17763.7434"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_10_21h2:*:*:*:*:*:*:arm64:*",
+                    "matchCriteriaId": "5FA5B611-90EC-4193-A474-96EDB55A96A4",
+                    "versionEndExcluding": "10.0.19044.5965"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_10_21h2:*:*:*:*:*:*:x64:*",
+                    "matchCriteriaId": "7701107A-E092-4A9B-B9C6-EAB80E361FA7",
+                    "versionEndExcluding": "10.0.19044.5965"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_10_21h2:*:*:*:*:*:*:x86:*",
+                    "matchCriteriaId": "B85A61A0-B9ED-4011-9606-66C506076E4E",
+                    "versionEndExcluding": "10.0.19044.5965"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_10_22h2:*:*:*:*:*:*:arm64:*",
+                    "matchCriteriaId": "02C5B4FB-7681-435F-A93F-B9D822165CB5",
+                    "versionEndExcluding": "10.0.19045.5965"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_10_22h2:*:*:*:*:*:*:x64:*",
+                    "matchCriteriaId": "7DD81C00-6C67-4D4A-9A3B-9BCD9AD4157F",
+                    "versionEndExcluding": "10.0.19045.5965"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_10_22h2:*:*:*:*:*:*:x86:*",
+                    "matchCriteriaId": "FA4ADE3C-2E1D-4CD9-8FC1-D2D061D4CDE2",
+                    "versionEndExcluding": "10.0.19045.5965"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_11_22h2:*:*:*:*:*:*:arm64:*",
+                    "matchCriteriaId": "80E9DC0B-FA82-4A9A-8F40-193AB9527A89",
+                    "versionEndExcluding": "10.0.22621.5472"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_11_22h2:*:*:*:*:*:*:x64:*",
+                    "matchCriteriaId": "B8108CE7-3EF2-4A2C-9A88-672615563A92",
+                    "versionEndExcluding": "10.0.22621.5472"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_11_23h2:*:*:*:*:*:*:arm64:*",
+                    "matchCriteriaId": "A12EA244-1390-49C8-B384-039D86779F44",
+                    "versionEndExcluding": "10.0.22631.5472"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_11_23h2:*:*:*:*:*:*:x64:*",
+                    "matchCriteriaId": "99251B3D-CB95-462F-8D92-31FCC1869565",
+                    "versionEndExcluding": "10.0.22631.5472"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_11_24h2:*:*:*:*:*:*:arm64:*",
+                    "matchCriteriaId": "0BB6CD97-C2A3-4674-89A4-65E347F65F98",
+                    "versionEndExcluding": "10.0.26100.4270"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_11_24h2:*:*:*:*:*:*:x64:*",
+                    "matchCriteriaId": "DF4274C0-729A-4843-818E-1F80C7CFE16B",
+                    "versionEndExcluding": "10.0.26100.4270"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_server_2008:-:sp2:*:*:*:*:x64:*",
+                    "matchCriteriaId": "2127D10C-B6F3-4C1D-B9AA-5D78513CC996"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_server_2008:-:sp2:*:*:*:*:x86:*",
+                    "matchCriteriaId": "AB425562-C0A0-452E-AABE-F70522F15E1A"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_server_2008:r2:sp1:*:*:*:*:x64:*",
+                    "matchCriteriaId": "AF07A81D-12E5-4B1D-BFF9-C8D08C32FF4F"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_server_2012:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "A7DF96F8-BA6A-4780-9CA3-F719B3F81074"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_server_2012:r2:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "DB18C4CE-5917-401E-ACF7-2747084FD36E"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_server_2016:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "A9B7111D-5C1D-415B-8ED4-F891B4832B18",
+                    "versionEndExcluding": "10.0.14393.8148"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_server_2019:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "4E77CCA1-2FF6-429B-85A6-81E2B7C6B08F",
+                    "versionEndExcluding": "10.0.17763.7434"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_server_2022:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "889A792E-8809-4A78-AABC-0567D025927A",
+                    "versionEndExcluding": "10.0.20348.3745"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_server_2022_23h2:*:*:*:*:*:*:x64:*",
+                    "matchCriteriaId": "665E7816-E1F2-479C-9E02-82B7FF389D8E",
+                    "versionEndExcluding": "10.0.25398.1665"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_server_2025:*:*:*:*:*:*:x64:*",
+                    "matchCriteriaId": "E1246A72-1125-4A4E-8B2C-737A51229AC4",
+                    "versionEndExcluding": "10.0.26100.4270"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-33053",
+            "source": "secure@microsoft.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://research.checkpoint.com/2025/stealth-falcon-zero-day/",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit",
+              "Technical Description"
+            ]
+          },
+          {
+            "url": "https://therecord.media/microsoft-cisa-zero-day-turkish-defense-org",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Press/Media Coverage"
+            ]
+          },
+          {
+            "url": "https://www.bleepingcomputer.com/news/security/stealth-falcon-hackers-exploited-windows-webdav-zero-day-to-drop-malware/",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Press/Media Coverage"
+            ]
+          },
+          {
+            "url": "https://www.darkreading.com/vulnerabilities-threats/stealth-falcon-apt-exploits-microsoft-rce-zero-day-mideast",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Press/Media Coverage"
+            ]
+          },
+          {
+            "url": "https://www.theregister.com/2025/06/10/microsoft_patch_tuesday_june/",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Press/Media Coverage"
+            ]
+          },
+          {
+            "url": "https://www.vicarius.io/vsociety/posts/cve-2025-33053-detection-script-remote-code-execution-vulnerability-in-microsoft-webdav",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.vicarius.io/vsociety/posts/cve-2025-33053-mitigation-script-remote-code-execution-vulnerability-in-microsoft-webdav",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit",
+              "Mitigation",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2025-33053",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "US Government Resource"
+            ]
+          }
+        ]
+      },
+      "risk_score": 88,
+      "rank": 7
+    },
+    {
+      "cve_id": "CVE-2025-36852",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-06-10",
+          "previous_max": null,
+          "current_max": 9.4
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-06-10",
+        "description": "A critical security vulnerability exists in remote cache extensions for common build systems utilizing bucket-based remote cache (such as those using Amazon S3, Google Cloud Storage, or similar object storage) that allows any contributor with pull request privileges to inject compromised artifacts from an untrusted environment into trusted production environments without detection. \n\n\n\n\nThe vulnerability exploits a fundamental design flaw in the \"first-to-cache wins\" principle, where artifacts built in untrusted environments (feature branches, pull requests) can poison the cache used by trusted environments (protected branches, production deployments). \n\n\n\n\nThis attack bypasses all traditional security measures including encryption, access controls, and checksum validation because the poisoning occurs during the artifact construction phase, before any security measures are applied.",
+        "title": "A critical security vulnerability exists in remote cache extensions for common build systems utilizing bucket-based remote cache (such as...",
+        "attack_type": "privilege escalation",
+        "cvss_max": 9.4
+      },
+      "cve": {
+        "id": "CVE-2025-36852",
+        "sourceIdentifier": "36c7be3b-2937-45df-85ea-ca7133ea542c",
+        "published": "2025-06-10T20:15:22.877",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A critical security vulnerability exists in remote cache extensions for common build systems utilizing bucket-based remote cache (such as those using Amazon S3, Google Cloud Storage, or similar object storage) that allows any contributor with pull request privileges to inject compromised artifacts from an untrusted environment into trusted production environments without detection. \n\n\n\n\nThe vulnerability exploits a fundamental design flaw in the \"first-to-cache wins\" principle, where artifacts built in untrusted environments (feature branches, pull requests) can poison the cache used by trusted environments (protected branches, production deployments). \n\n\n\n\nThis attack bypasses all traditional security measures including encryption, access controls, and checksum validation because the poisoning occurs during the artifact construction phase, before any security measures are applied."
+          },
+          {
+            "lang": "es",
+            "value": "Existe una vulnerabilidad de seguridad crítica en las extensiones de caché remota para sistemas de compilación comunes que utilizan caché remota basada en buckets (como los que usan Amazon S3, Google Cloud Storage o almacenamiento de objetos similar). Esta vulnerabilidad permite a cualquier colaborador con privilegios de solicitud de extracción inyectar artefactos comprometidos desde un entorno no confiable en entornos de producción confiables sin ser detectado. Esta vulnerabilidad explota un fallo de diseño fundamental en el principio de \"primero en almacenar en caché, gana\", según el cual los artefactos compilados en entornos no confiables (ramas de características, solicitudes de extracción) pueden contaminar la caché utilizada por entornos confiables (ramas protegidas, implementaciones de producción). Este ataque elude todas las medidas de seguridad tradicionales, como el cifrado, los controles de acceso y la validación de sumas de comprobación, ya que el envenenamiento se produce durante la fase de construcción del artefacto, antes de que se apliquen las medidas de seguridad."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:P/AU:Y/R:U/V:C/RE:M/U:Red",
+                "baseScore": 9.4,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "36c7be3b-2937-45df-85ea-ca7133ea542c",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-829"
+              }
+            ],
+            "source": "36c7be3b-2937-45df-85ea-ca7133ea542c"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://nx.app/files/cve-2025-06",
+            "source": "36c7be3b-2937-45df-85ea-ca7133ea542c"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 8
+    },
+    {
+      "cve_id": "CVE-2025-40585",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-06-10",
+          "previous_max": null,
+          "current_max": 9.5
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-06-10",
+        "description": "A vulnerability has been identified in Energy Services (All versions with G5DFR). Affected solutions using G5DFR contain default credentials. This could allow an attacker to gain control of G5DFR component and tamper with outputs from the device.",
+        "title": "A vulnerability has been identified in Energy Services (All versions with G5DFR).",
+        "cvss_max": 9.9
+      },
+      "cve": {
+        "id": "CVE-2025-40585",
+        "sourceIdentifier": "productcert@siemens.com",
+        "published": "2025-06-10T16:15:38.943",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A vulnerability has been identified in Energy Services (All versions with G5DFR). Affected solutions using G5DFR contain default credentials. This could allow an attacker to gain control of G5DFR component and tamper with outputs from the device."
+          },
+          {
+            "lang": "es",
+            "value": "Se ha identificado una vulnerabilidad en Energy Services (todas las versiones con G5DFR). Las soluciones afectadas que utilizan G5DFR contienen credenciales predeterminadas. Esto podría permitir que un atacante tome el control del componente G5DFR y altere las salidas del dispositivo."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:H/A:L",
+                "baseScore": 9.9,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "productcert@siemens.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.3
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:L/SI:H/SA:L/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.5,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "productcert@siemens.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-276"
+              }
+            ],
+            "source": "productcert@siemens.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://cert-portal.siemens.com/productcert/html/ssa-345750.html",
+            "source": "productcert@siemens.com"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 9
+    },
+    {
+      "cve_id": "CVE-2025-40657",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-06-10",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-06-10",
+        "description": "A SQL injection vulnerability has been found in DM Corporative CMS. This vulnerability allows an attacker to retrieve, create, update and delete databases through the codform parameter in /modules/forms/collectform.asp.",
+        "title": "acc dm_corporative_cms SQL Injection",
+        "vendor": "acc",
+        "product": "dm_corporative_cms",
+        "attack_type": "SQL Injection",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-40657",
+        "sourceIdentifier": "cve-coordination@incibe.es",
+        "published": "2025-06-10T10:15:28.043",
+        "lastModified": "2025-10-22T14:00:13.857",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A SQL injection vulnerability has been found in DM Corporative CMS. This vulnerability allows an attacker to retrieve, create, update and delete databases through the codform parameter in /modules/forms/collectform.asp."
+          },
+          {
+            "lang": "es",
+            "value": "Se ha detectado una vulnerabilidad de inyección SQL en DM Corporative CMS. Esta vulnerabilidad permite a un atacante recuperar, crear, actualizar y eliminar bases de datos mediante el parámetro codform en /modules/forms/collectform.asp."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "cve-coordination@incibe.es",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-89"
+              }
+            ],
+            "source": "cve-coordination@incibe.es"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:acc:dm_corporative_cms:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "8424AC64-05AA-48EF-B312-CABE5A4437D0",
+                    "versionEndExcluding": "2025.01"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://www.incibe.es/en/incibe-cert/notices/aviso/multiple-vulnerabilities-dm-corporative-cms-dmacroweb",
+            "source": "cve-coordination@incibe.es",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 10
+    },
+    {
+      "cve_id": "CVE-2025-43698",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-06-10",
+          "previous_max": null,
+          "current_max": 9.1
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-06-10",
+        "description": "Improper Preservation of Permissions vulnerability in Salesforce OmniStudio (FlexCards) allows bypass of field level security controls for Salesforce objects. \nThis impacts OmniStudio: before Spring 2025",
+        "title": "Improper Preservation of Permissions vulnerability in Salesforce OmniStudio (FlexCards) allows bypass of field level security controls fo...",
+        "cvss_max": 9.1
+      },
+      "cve": {
+        "id": "CVE-2025-43698",
+        "sourceIdentifier": "security@salesforce.com",
+        "published": "2025-06-10T12:15:24.227",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Improper Preservation of Permissions vulnerability in Salesforce OmniStudio (FlexCards) allows bypass of field level security controls for Salesforce objects. \nThis impacts OmniStudio: before Spring 2025"
+          },
+          {
+            "lang": "es",
+            "value": "La vulnerabilidad de conservación incorrecta de permisos en Salesforce OmniStudio (FlexCards) permite eludir los controles de seguridad de campo para objetos de Salesforce. Esto afecta a OmniStudio: antes de la primavera de 2025."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+                "baseScore": 9.1,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.2
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-281"
+              }
+            ],
+            "source": "security@salesforce.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://help.salesforce.com/s/articleView?id=004980323&type=1",
+            "source": "security@salesforce.com"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 11
+    },
+    {
+      "cve_id": "CVE-2025-49455",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-06-10",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-06-10",
+        "description": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in ClickandPledge WordPress-WPJobBoard click-pledge-wpjobboard allows Blind SQL Injection.This issue affects WordPress-WPJobBoard: from n/a through <= 25.07010000-WP6.8.1-JB5.11.5.",
+        "title": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in ClickandPledge WordPress-WPJobBoard...",
+        "attack_type": "SQL Injection",
+        "cvss_max": 9.3
+      },
+      "cve": {
+        "id": "CVE-2025-49455",
+        "sourceIdentifier": "audit@patchstack.com",
+        "published": "2025-06-10T13:15:23.107",
+        "lastModified": "2026-04-23T15:31:42.853",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in ClickandPledge WordPress-WPJobBoard click-pledge-wpjobboard allows Blind SQL Injection.This issue affects WordPress-WPJobBoard: from n/a through <= 25.07010000-WP6.8.1-JB5.11.5."
+          },
+          {
+            "lang": "es",
+            "value": "La vulnerabilidad de deserialización de datos no confiables en LoftOcean TinySalt permite la inyección de objetos. Este problema afecta a TinySalt: desde n/d antes de 3.10.0."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:L",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "audit@patchstack.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 4.7
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-89"
+              }
+            ],
+            "source": "audit@patchstack.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://patchstack.com/database/Wordpress/Plugin/click-pledge-wpjobboard/vulnerability/wordpress-wordpress-wpjobboard-25-03000000-wp6-7-2-jb5-11-4-sql-injection-vulnerability?_s_id=cve",
+            "source": "audit@patchstack.com"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 12
+    },
+    {
+      "cve_id": "CVE-2025-49507",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-06-10",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-06-10",
+        "description": "Deserialization of Untrusted Data vulnerability in LoftOcean CozyStay cozystay allows Object Injection.This issue affects CozyStay: from n/a through < 1.7.1.",
+        "title": "Deserialization of Untrusted Data vulnerability in LoftOcean CozyStay cozystay allows Object Injection.This issue affects CozyStay: from...",
+        "attack_type": "Deserialization",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-49507",
+        "sourceIdentifier": "audit@patchstack.com",
+        "published": "2025-06-10T13:15:23.283",
+        "lastModified": "2026-04-23T15:31:42.973",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Deserialization of Untrusted Data vulnerability in LoftOcean CozyStay cozystay allows Object Injection.This issue affects CozyStay: from n/a through < 1.7.1."
+          },
+          {
+            "lang": "es",
+            "value": "La vulnerabilidad de deserialización de datos no confiables en LoftOcean CozyStay permite la inyección de objetos. Este problema afecta a CozyStay: desde n/d antes de 1.7.1."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "audit@patchstack.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-502"
+              }
+            ],
+            "source": "audit@patchstack.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://patchstack.com/database/Wordpress/Theme/cozystay/vulnerability/wordpress-cozystay-1-7-1-php-object-injection-vulnerability?_s_id=cve",
+            "source": "audit@patchstack.com"
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 13
+    }
+  ],
+  "source": "https://www.cvelogic.com/threat-intelligence/2025-06-10"
+}

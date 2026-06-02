@@ -1,0 +1,1945 @@
+{
+  "schema_version": "2.2",
+  "generated_at": "2026-06-02T07:34:04Z",
+  "day": "2025-12-29",
+  "window": {
+    "utc_start": "2025-12-29",
+    "utc_end": "2025-12-29",
+    "days": 1
+  },
+  "summary": {
+    "brief": "MongoDB And MongoDB Server added to CISA KEV — confirmed in-the-wild exploitation. · Nagios Xi — exploitation likelihood rose sharply (EPSS 6.4% → 39% · rising (+33%)). · 10 new critical disclosures — review patch status on exposed services.",
+    "bullets": [
+      "MongoDB And MongoDB Server added to CISA KEV — confirmed in-the-wild exploitation.",
+      "Nagios Xi — exploitation likelihood rose sharply (EPSS 6.4% → 39% · rising (+33%)).",
+      "10 new critical disclosures — review patch status on exposed services."
+    ],
+    "counts": {
+      "cves": 16,
+      "kev": 1,
+      "exploit": 0,
+      "epss": 5,
+      "cvss": 10,
+      "patch": 0
+    }
+  },
+  "cves": [
+    {
+      "cve_id": "CVE-2025-14847",
+      "signal_types": [
+        "KEV"
+      ],
+      "signals": {
+        "kev": {
+          "date_added": "2025-12-29"
+        },
+        "exploit": null,
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-12-19",
+        "description": "Mismatched length fields in Zlib compressed protocol headers may allow a read of uninitialized heap memory by an unauthenticated client. This issue affects all MongoDB Server v7.0 prior to 7.0.28 versions, MongoDB Server v8.0 versions prior to 8.0.17, MongoDB Server v8.2 versions prior to 8.2.3, MongoDB Server v6.0 versions prior to 6.0.27, MongoDB Server v5.0 versions prior to 5.0.32, MongoDB Server v4.4 versions prior to 4.4.30, MongoDB Server v4.2 versions greater than or equal to 4.2.0, MongoDB Server v4.0 versions greater than or equal to 4.0.0, and MongoDB Server v3.6 versions greater than or equal to 3.6.0.",
+        "title": "MongoDB and MongoDB Server Improper Handling of Length Parameter Inconsistency Vulnerability",
+        "vendor": "mongodb",
+        "product": "mongodb",
+        "cvss_max": 8.7
+      },
+      "cve": {
+        "id": "CVE-2025-14847",
+        "sourceIdentifier": "cna@mongodb.com",
+        "published": "2025-12-19T11:15:49.277",
+        "lastModified": "2026-01-13T22:24:20.380",
+        "vulnStatus": "Analyzed",
+        "cisaExploitAdd": "2025-12-29",
+        "cisaActionDue": "2026-01-19",
+        "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+        "cisaVulnerabilityName": "MongoDB and MongoDB Server Improper Handling of Length Parameter Inconsistency Vulnerability",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Mismatched length fields in Zlib compressed protocol headers may allow a read of uninitialized heap memory by an unauthenticated client. This issue affects all MongoDB Server v7.0 prior to 7.0.28 versions, MongoDB Server v8.0 versions prior to 8.0.17, MongoDB Server v8.2 versions prior to 8.2.3, MongoDB Server v6.0 versions prior to 6.0.27, MongoDB Server v5.0 versions prior to 5.0.32, MongoDB Server v4.4 versions prior to 4.4.30, MongoDB Server v4.2 versions greater than or equal to 4.2.0, MongoDB Server v4.0 versions greater than or equal to 4.0.0, and MongoDB Server v3.6 versions greater than or equal to 3.6.0."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+                "baseScore": 7.5,
+                "baseSeverity": "HIGH"
+              },
+              "source": "cna@mongodb.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 3.6
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 8.7,
+                "baseSeverity": "HIGH"
+              },
+              "source": "cna@mongodb.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-130"
+              }
+            ],
+            "source": "cna@mongodb.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:mongodb:mongodb:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "2FCC5203-4E5E-4B2B-86A1-FD47A097013C",
+                    "versionStartIncluding": "3.6.0",
+                    "versionEndExcluding": "4.4.30"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:mongodb:mongodb:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "CCD1EB22-51EA-4ABC-9E0B-99520670133B",
+                    "versionStartIncluding": "5.0.0",
+                    "versionEndExcluding": "5.0.32"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:mongodb:mongodb:*:*:*:*:-:*:*:*",
+                    "matchCriteriaId": "41ECB5AB-E6D0-412E-802F-839D53076677",
+                    "versionStartIncluding": "6.0.0",
+                    "versionEndExcluding": "6.0.27"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:mongodb:mongodb:*:*:*:*:-:*:*:*",
+                    "matchCriteriaId": "5C9277BB-90FC-4A57-9028-DD57322F1D44",
+                    "versionStartIncluding": "7.0.0",
+                    "versionEndExcluding": "7.0.28"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:mongodb:mongodb:*:*:*:*:-:*:*:*",
+                    "matchCriteriaId": "2F4D674D-CBC0-4412-AF68-6FED8A6394C3",
+                    "versionStartIncluding": "8.0.0",
+                    "versionEndExcluding": "8.0.17"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:mongodb:mongodb:*:*:*:*:-:*:*:*",
+                    "matchCriteriaId": "4302991B-E6CF-4E7B-9B24-BD2355C6F393",
+                    "versionStartIncluding": "8.2.0",
+                    "versionEndExcluding": "8.2.3"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://jira.mongodb.org/browse/SERVER-115508",
+            "source": "cna@mongodb.com",
+            "tags": [
+              "Issue Tracking",
+              "Patch",
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "http://www.openwall.com/lists/oss-security/2025/12/29/21",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Mailing List"
+            ]
+          },
+          {
+            "url": "https://www.smartkeyss.com/post/mongobleed-pre-auth-memory-disclosure-via-op_compressed-in-mongodb-cve-2025-14847",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Technical Description",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.vicarius.io/vsociety/posts/cve-2025-14847-detection-script-heap-memory-exposure-in-mongodb-server",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.vicarius.io/vsociety/posts/cve-2025-14847-mitigation-script-heap-memory-exposure-in-mongodb-server",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2025-14847",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Third Party Advisory",
+              "US Government Resource"
+            ]
+          }
+        ]
+      },
+      "risk_score": 88,
+      "rank": 1
+    },
+    {
+      "cve_id": "CVE-2020-15901",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 0.06445,
+            "score_date": "2025-12-17"
+          },
+          "current": {
+            "score": 0.38959,
+            "score_date": "2025-12-29"
+          },
+          "delta": 0.32514
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2020-07-22",
+        "description": "In Nagios XI before 5.7.3, ajaxhelper.php allows remote authenticated attackers to execute arbitrary commands via cmdsubsys.",
+        "title": "nagios nagios_xi",
+        "vendor": "nagios",
+        "product": "nagios_xi",
+        "cvss_max": 8.8
+      },
+      "cve": {
+        "id": "CVE-2020-15901",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2020-07-22T22:15:11.573",
+        "lastModified": "2024-11-21T05:06:24.823",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "In Nagios XI before 5.7.3, ajaxhelper.php allows remote authenticated attackers to execute arbitrary commands via cmdsubsys."
+          },
+          {
+            "lang": "es",
+            "value": "En Nagios XI versiones anteriores a 5.7.3, el archivo ajaxhelper.php  permite a atacantes autentificados remotos ejecutar comandos arbitrarios por medio de cmdsubsys"
+          }
+        ],
+        "metrics": {
+          "cvssMetricV2": [
+            {
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+                "baseScore": 7.5,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "baseSeverity": "HIGH",
+              "exploitabilityScore": 10.0,
+              "impactScore": 6.4
+            }
+          ],
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 8.8,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "NVD-CWE-noinfo"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nagios:nagios_xi:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "CE3BA539-3665-4DF4-9F54-EF07E78BE025",
+                    "versionEndExcluding": "5.7.2"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://insinuator.net/2020/07/security-advisories-for-nagios-xi/",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.nagios.com/downloads/nagios-xi/change-log/",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Release Notes",
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://www.nagios.com/products/security/",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 84,
+      "rank": 2
+    },
+    {
+      "cve_id": "CVE-2025-68562",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-12-29",
+          "previous_max": null,
+          "current_max": 9.9
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-12-29",
+        "description": "Unrestricted Upload of File with Dangerous Type vulnerability in RomanCode MapSVG mapsvg-lite-interactive-vector-maps allows Upload a Web Shell to a Web Server.This issue affects MapSVG: from n/a through <= 8.7.3.",
+        "title": "Unrestricted Upload of File with Dangerous Type vulnerability in RomanCode MapSVG mapsvg-lite-interactive-vector-maps allows Upload a Web...",
+        "cvss_max": 9.9
+      },
+      "cve": {
+        "id": "CVE-2025-68562",
+        "sourceIdentifier": "audit@patchstack.com",
+        "published": "2025-12-29T22:15:43.310",
+        "lastModified": "2026-04-23T15:36:01.723",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Unrestricted Upload of File with Dangerous Type vulnerability in RomanCode MapSVG mapsvg-lite-interactive-vector-maps allows Upload a Web Shell to a Web Server.This issue affects MapSVG: from n/a through <= 8.7.3."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+                "baseScore": 9.9,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "audit@patchstack.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.1,
+              "impactScore": 6.0
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-434"
+              }
+            ],
+            "source": "audit@patchstack.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://patchstack.com/database/Wordpress/Plugin/mapsvg-lite-interactive-vector-maps/vulnerability/wordpress-mapsvg-plugin-8-7-3-arbitrary-file-upload-vulnerability?_s_id=cve",
+            "source": "audit@patchstack.com"
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 3
+    },
+    {
+      "cve_id": "CVE-2008-6897",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 0.06323,
+            "score_date": "2025-12-25"
+          },
+          "current": {
+            "score": 0.23329,
+            "score_date": "2025-12-29"
+          },
+          "delta": 0.17006
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2009-08-05",
+        "description": "Multiple buffer overflows in Getleft.exe in Andres Garcia Getleft 1.2 allow remote attackers to cause a denial of service (crash) and possibly execute arbitrary code via a long (1) \"a\" HTML tag; a long src attribute in (2) embed, (3) img, or (4) script tags; (5) a long background attribute in a body tag; and other unspecified tags.",
+        "title": "andres_garcia getleft Buffer Overflow",
+        "vendor": "andres_garcia",
+        "product": "getleft",
+        "attack_type": "Buffer Overflow",
+        "cvss_max": 9.3
+      },
+      "cve": {
+        "id": "CVE-2008-6897",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2009-08-05T22:30:00.360",
+        "lastModified": "2026-04-23T00:35:47.467",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Multiple buffer overflows in Getleft.exe in Andres Garcia Getleft 1.2 allow remote attackers to cause a denial of service (crash) and possibly execute arbitrary code via a long (1) \"a\" HTML tag; a long src attribute in (2) embed, (3) img, or (4) script tags; (5) a long background attribute in a body tag; and other unspecified tags."
+          },
+          {
+            "lang": "es",
+            "value": "Múltiple desbordamiento de búfer en Getleft.exe en Andres Garcia Getleft v1.2 permite a atacantes remotos causar una denegación de servicio (caída) y probablemente ejecutar código a su elección a través de la etiqueta larga (1)HTML \"a\", un atributo largo src en (2) embed, (3) img, o (4) una etiqueta script; (5) un atributo background largo en body tag; y otras etiquetas no especificadas."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV2": [
+            {
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:M/Au:N/C:C/I:C/A:C",
+                "baseScore": 9.3,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "baseSeverity": "HIGH",
+              "exploitabilityScore": 8.6,
+              "impactScore": 10.0
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-119"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:andres_garcia:getleft:1.2:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "8BB505BB-5F56-42B6-B0F8-C6A2F6A86844"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "http://www.securityfocus.com/bid/32994",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "https://exchange.xforce.ibmcloud.com/vulnerabilities/47597",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "https://www.exploit-db.com/exploits/7564",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          }
+        ]
+      },
+      "risk_score": 85,
+      "rank": 4
+    },
+    {
+      "cve_id": "CVE-2022-41931",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 0.08508,
+            "score_date": "2025-12-17"
+          },
+          "current": {
+            "score": 0.18932,
+            "score_date": "2025-12-29"
+          },
+          "delta": 0.10424
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2022-11-23",
+        "description": "xwiki-platform-icon-ui is vulnerable to Improper Neutralization of Directives in Dynamically Evaluated Code ('Eval Injection'). Any user with view rights on commonly accessible documents including the icon picker macro can execute arbitrary Groovy, Python or Velocity code in XWiki due to improper neutralization of the macro parameters of the icon picker macro. The problem has been patched in XWiki 13.10.7, 14.5 and 14.4.2. Workarounds: The [patch](https://github.com/xwiki/xwiki-platform/commit/47eb8a5fba550f477944eb6da8ca91b87eaf1d01) can be manually applied by editing `IconThemesCode.IconPickerMacro` in the object editor. The whole document can also be replaced by the current version by importing the document from the XAR archive of a fixed version as the only changes to the document have been security fixes and small formatting changes.",
+        "title": "xwiki xwiki",
+        "vendor": "xwiki",
+        "product": "xwiki",
+        "cvss_max": 9.9
+      },
+      "cve": {
+        "id": "CVE-2022-41931",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2022-11-23T20:15:10.023",
+        "lastModified": "2024-11-21T07:24:05.783",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "xwiki-platform-icon-ui is vulnerable to Improper Neutralization of Directives in Dynamically Evaluated Code ('Eval Injection'). Any user with view rights on commonly accessible documents including the icon picker macro can execute arbitrary Groovy, Python or Velocity code in XWiki due to improper neutralization of the macro parameters of the icon picker macro. The problem has been patched in XWiki 13.10.7, 14.5 and 14.4.2. Workarounds: The [patch](https://github.com/xwiki/xwiki-platform/commit/47eb8a5fba550f477944eb6da8ca91b87eaf1d01) can be manually applied by editing `IconThemesCode.IconPickerMacro` in the object editor. The whole document can also be replaced by the current version by importing the document from the XAR archive of a fixed version as the only changes to the document have been security fixes and small formatting changes."
+          },
+          {
+            "lang": "es",
+            "value": "xwiki-platform-icon-ui es vulnerable a una Neutralización Inadecuada de Directivas en Código Evaluado Dinámicamente (\"Inyección de Evaluación\"). Cualquier usuario con derechos de visualización de documentos comúnmente accesibles, incluida la macro del selector de iconos, puede ejecutar código Groovy, Python o Velocity arbitrario en XWiki debido a una neutralización inadecuada de los parámetros macro de la macro del recolector de iconos. El problema se solucionó en XWiki 13.10.7, 14.5 y 14.4.2. Workarounds: el [parche](https://github.com/xwiki/xwiki-platform/commit/47eb8a5fba550f477944eb6da8ca91b87eaf1d01) se puede aplicar manualmente editando `IconThemesCode.IconPickerMacro` en el editor de objetos. El documento completo también se puede reemplazar por la versión actual importando el documento desde el archivo XAR de una versión fija, ya que los únicos cambios en el documento han sido correcciones de seguridad y pequeños cambios de formato."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+                "baseScore": 9.9,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.1,
+              "impactScore": 6.0
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 8.8,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-95"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:xwiki:xwiki:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "A2983665-C5BF-4D43-983A-585BA30399E7",
+                    "versionStartExcluding": "6.4",
+                    "versionEndExcluding": "13.10.7"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:xwiki:xwiki:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "B5DF0A47-B3DD-4A49-BA56-35374D029F02",
+                    "versionStartIncluding": "14.0.0",
+                    "versionEndExcluding": "14.4.2"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:xwiki:xwiki:6.4:milestone2:*:*:*:*:*:*",
+                    "matchCriteriaId": "2ED3CF77-5A0B-4A1C-9F83-B5851D415D3E"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:xwiki:xwiki:6.4:milestone3:*:*:*:*:*:*",
+                    "matchCriteriaId": "34004E8E-213E-4D7F-A6BF-953A5A5C3CA6"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:xwiki:xwiki:14.4.3:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "C9646DA8-7C5A-458E-975C-A67099D43047"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:xwiki:xwiki:14.4.4:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "CDAB9E27-2E41-44EA-BBCB-8015B22272B7"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/xwiki/xwiki-platform/commit/47eb8a5fba550f477944eb6da8ca91b87eaf1d01",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Patch",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/xwiki/xwiki-platform/security/advisories/GHSA-5j7g-cf6r-g2h7",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit",
+              "Patch",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://jira.xwiki.org/browse/XWIKI-19805",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit",
+              "Issue Tracking",
+              "Patch",
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 83,
+      "rank": 5
+    },
+    {
+      "cve_id": "CVE-2022-41934",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 0.09405,
+            "score_date": "2025-12-17"
+          },
+          "current": {
+            "score": 0.23616,
+            "score_date": "2025-12-29"
+          },
+          "delta": 0.14211
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2022-11-23",
+        "description": "XWiki Platform is a generic wiki platform offering runtime services for applications built on top of it. Any user with view rights on commonly accessible documents including the menu macro can execute arbitrary Groovy, Python or Velocity code in XWiki leading to full access to the XWiki installation due to improper escaping of the macro content and parameters of the menu macro. The problem has been patched in XWiki 14.6RC1, 13.10.8 and 14.4.3. The patch (commit `2fc20891`) for the document `Menu.MenuMacro` can be manually applied or a XAR archive of a patched version can be imported. The menu macro was basically unchanged since XWiki 11.6 so on XWiki 11.6 or later the patch for version of 13.10.8 (commit `59ccca24a`) can most likely be applied, on XWiki version 14.0 and later the versions in XWiki 14.6 and 14.4.3 should be appropriate.",
+        "title": "xwiki xwiki",
+        "vendor": "xwiki",
+        "product": "xwiki",
+        "cvss_max": 9.9
+      },
+      "cve": {
+        "id": "CVE-2022-41934",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2022-11-23T20:15:10.097",
+        "lastModified": "2024-11-21T07:24:06.210",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "XWiki Platform is a generic wiki platform offering runtime services for applications built on top of it. Any user with view rights on commonly accessible documents including the menu macro can execute arbitrary Groovy, Python or Velocity code in XWiki leading to full access to the XWiki installation due to improper escaping of the macro content and parameters of the menu macro. The problem has been patched in XWiki 14.6RC1, 13.10.8 and 14.4.3. The patch (commit `2fc20891`) for the document `Menu.MenuMacro` can be manually applied or a XAR archive of a patched version can be imported. The menu macro was basically unchanged since XWiki 11.6 so on XWiki 11.6 or later the patch for version of 13.10.8 (commit `59ccca24a`) can most likely be applied, on XWiki version 14.0 and later the versions in XWiki 14.6 and 14.4.3 should be appropriate."
+          },
+          {
+            "lang": "es",
+            "value": "XWiki Platform es una plataforma wiki genérica que ofrece servicios de ejecución para aplicaciones creadas sobre ella. Cualquier usuario con derechos de visualización de documentos comúnmente accesibles, incluida la macro de menú, puede ejecutar código Groovy, Python o Velocity arbitrario en XWiki, lo que le otorga acceso completo a la instalación de XWiki debido a un escape inadecuado del contenido de la macro y los parámetros de la macro de menú. El problema se solucionó en XWiki 14.6RC1, 13.10.8 y 14.4.3. El parche (commit `2fc20891`) para el documento `Menu.MenuMacro` se puede aplicar manualmente o se puede importar un archivo XAR de una versión parcheada. La macro del menú básicamente no ha cambiado desde XWiki 11.6, por lo que en XWiki 11.6 o posterior lo más probable es que se pueda aplicar el parche para la versión 13.10.8 (commit `59ccca24a`); en XWiki versión 14.0 y posteriores, las versiones en XWiki 14.6 y 14.4.3. debería ser apropiado."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+                "baseScore": 9.9,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.1,
+              "impactScore": 6.0
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 8.8,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-74"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          },
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-116"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:xwiki:xwiki:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "826127A0-9698-4FA6-8FFD-64C933B52A94",
+                    "versionEndExcluding": "13.10.8"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:xwiki:xwiki:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "CF0D4D4B-363F-4D5D-B780-1CBCC1C202B8",
+                    "versionStartIncluding": "14.0.0",
+                    "versionEndExcluding": "14.4.3"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:xwiki:xwiki:14.4.4:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "CDAB9E27-2E41-44EA-BBCB-8015B22272B7"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:xwiki:xwiki:14.4.5:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "79B3E9A4-CAC3-4E8D-9C76-F7AE5C3385C1"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/xwiki/xwiki-platform/commit/2fc20891e6c6b0ca05ee07e315e7f435e8919f8d",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Patch",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/xwiki/xwiki-platform/commit/59ccca24a8465a19f40c51d65fcc2c09c1edea16",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Patch",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/xwiki/xwiki-platform/security/advisories/GHSA-6w8h-26xx-cf8q",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit",
+              "Patch",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://jira.xwiki.org/browse/XWIKI-19857",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit",
+              "Issue Tracking",
+              "Patch",
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://www.xwiki.org/xwiki/bin/view/Documentation/UserGuide/Features/Imports#HImportingXWikipages",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 86,
+      "rank": 6
+    },
+    {
+      "cve_id": "CVE-2022-46538",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 0.06623,
+            "score_date": "2025-12-25"
+          },
+          "current": {
+            "score": 0.18362,
+            "score_date": "2025-12-29"
+          },
+          "delta": 0.11739
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2022-12-20",
+        "description": "Tenda F1203 V2.0.1.6 was discovered to contain a command injection vulnerability via the mac parameter at /goform/WriteFacMac.",
+        "title": "tenda f1203_firmware Command Injection",
+        "vendor": "tenda",
+        "product": "f1203_firmware",
+        "attack_type": "Command Injection",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2022-46538",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2022-12-20T15:15:12.373",
+        "lastModified": "2025-04-16T19:15:48.897",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Tenda F1203 V2.0.1.6 was discovered to contain a command injection vulnerability via the mac parameter at /goform/WriteFacMac."
+          },
+          {
+            "lang": "es",
+            "value": "Se descubrió que Tenda F1203 V2.0.1.6 contiene una vulnerabilidad de inyección de comandos a través del parámetro mac en /goform/WriteFacMac."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-78"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          },
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-78"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:tenda:f1203_firmware:2.0.1.6:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "0B3530E4-70D6-4246-84CA-E25797329DE0"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:tenda:f1203:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "0FB77DC8-C11D-418A-AB87-5FE0226CA6CA"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/Double-q1015/CVE-vulns/blob/main/tenda_f1203/formWriteFacMac/formWriteFacMac.md",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 85,
+      "rank": 7
+    },
+    {
+      "cve_id": "CVE-2024-25181",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-12-29",
+          "previous_max": null,
+          "current_max": 9.1
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-12-29",
+        "description": "A critical vulnerability has been identified in givanz VvvebJs 1.7.2, which allows both Server-Side Request Forgery (SSRF) and arbitrary file reading. The vulnerability stems from improper handling of user-supplied URLs in the \"file_get_contents\" function within the \"save.php\" file.",
+        "title": "vvveb vvvebjs SSRF",
+        "vendor": "vvveb",
+        "product": "vvvebjs",
+        "attack_type": "SSRF",
+        "cvss_max": 9.1
+      },
+      "cve": {
+        "id": "CVE-2024-25181",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2025-12-29T20:15:40.423",
+        "lastModified": "2026-01-07T14:50:45.963",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A critical vulnerability has been identified in givanz VvvebJs 1.7.2, which allows both Server-Side Request Forgery (SSRF) and arbitrary file reading. The vulnerability stems from improper handling of user-supplied URLs in the \"file_get_contents\" function within the \"save.php\" file."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+                "baseScore": 9.1,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.2
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-918"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vvveb:vvvebjs:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "37982B87-A2D0-491F-AA7C-5C61A27FB225",
+                    "versionEndIncluding": "1.7.4"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://gist.github.com/joaoviictorti/69cbae23d98fb9a1a4b3eee0c305c7de",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 8
+    },
+    {
+      "cve_id": "CVE-2024-25182",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-12-29",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-12-29",
+        "description": "givanz VvvebJs 1.7.2 suffers from a File Upload vulnerability via save.php.",
+        "title": "vvveb vvvebjs",
+        "vendor": "vvveb",
+        "product": "vvvebjs",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2024-25182",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2025-12-29T21:15:40.157",
+        "lastModified": "2026-01-02T22:15:43.363",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "givanz VvvebJs 1.7.2 suffers from a File Upload vulnerability via save.php."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-434"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          },
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-434"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vvveb:vvvebjs:1.7.2:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "00CE1B8B-C606-4F32-90B5-12910C726E0F"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://gist.github.com/joaoviictorti/ff6220d8ed6df77a0420f4413a1d9b8d",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Exploit",
+              "Issue Tracking"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 9
+    },
+    {
+      "cve_id": "CVE-2024-27480",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-12-29",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-12-29",
+        "description": "givanz VvvebJs 1.7.2 is vulnerable to Insecure File Upload.",
+        "title": "vvveb vvvebjs",
+        "vendor": "vvveb",
+        "product": "vvvebjs",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2024-27480",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2025-12-29T21:15:42.387",
+        "lastModified": "2026-01-02T22:15:43.553",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "givanz VvvebJs 1.7.2 is vulnerable to Insecure File Upload."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-434"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          },
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-434"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vvveb:vvvebjs:1.7.2:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "00CE1B8B-C606-4F32-90B5-12910C726E0F"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://gist.github.com/joaoviictorti/abb2d1929c29d09c13c60bb45f28a8ff",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Exploit",
+              "Issue Tracking"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 10
+    },
+    {
+      "cve_id": "CVE-2025-56333",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-12-29",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-12-29",
+        "description": "An issue in Fossorial fosrl/pangolin v.1.6.2 and before allows a remote attacker to escalate privileges via the 2FA component",
+        "title": "pangolin pangolin privilege escalation",
+        "vendor": "pangolin",
+        "product": "pangolin",
+        "attack_type": "privilege escalation",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-56333",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2025-12-29T16:15:42.483",
+        "lastModified": "2026-01-07T21:14:32.147",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "An issue in Fossorial fosrl/pangolin v.1.6.2 and before allows a remote attacker to escalate privileges via the 2FA component"
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-287"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:pangolin:pangolin:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "6F580181-628E-4A80-B0BE-A4567C710319",
+                    "versionEndExcluding": "1.7.0"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://gist.github.com/mrdgef/ef6fa41d69c0457874414c163d7d7d75",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Exploit"
+            ]
+          },
+          {
+            "url": "https://github.com/fosrl/pangolin",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Product"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 11
+    },
+    {
+      "cve_id": "CVE-2025-65570",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-12-29",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-12-29",
+        "description": "A type confusion in jsish 2.0 allows incorrect control flow during execution of the OP_NEXT opcode. When an “instanceof” expression uses an array element access as the left-hand operand inside a for-in loop, the instructions implementation leaves an additional array reference on the stack rather than consuming it during OP_INSTANCEOF. As a result, OP_NEXT interprets the array as an iterator object and reads the iterCmd function pointer from an invalid structure, potentially causing a crash or enabling code execution depending on heap layout.",
+        "title": "jsish jsish",
+        "vendor": "jsish",
+        "product": "jsish",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-65570",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2025-12-29T15:16:01.763",
+        "lastModified": "2025-12-31T20:04:10.750",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A type confusion in jsish 2.0 allows incorrect control flow during execution of the OP_NEXT opcode. When an “instanceof” expression uses an array element access as the left-hand operand inside a for-in loop, the instructions implementation leaves an additional array reference on the stack rather than consuming it during OP_INSTANCEOF. As a result, OP_NEXT interprets the array as an iterator object and reads the iterCmd function pointer from an invalid structure, potentially causing a crash or enabling code execution depending on heap layout."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-843"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:jsish:jsish:2.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "D2EBBCFD-094B-4ABF-B39E-A3EBD0D2CC83"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://blog.mcsky.ro/writeups/2025/11/15/inline8-writeup.html",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 12
+    },
+    {
+      "cve_id": "CVE-2025-68706",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-12-29",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-12-29",
+        "description": "A stack-based buffer overflow exists in the GoAhead-Webs HTTP daemon on KuWFi 4G LTE AC900 devices with firmware 1.0.13. The /goform/formMultiApnSetting handler uses sprintf() to copy the user-supplied pincode parameter into a fixed 132-byte stack buffer with no bounds checks. This allows an attacker to corrupt adjacent stack memory, crash the web server, and (under certain conditions) may enable arbitrary code execution.",
+        "title": "kuwfi ac900_firmware Buffer Overflow",
+        "vendor": "kuwfi",
+        "product": "ac900_firmware",
+        "attack_type": "Buffer Overflow",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-68706",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2025-12-29T19:15:57.090",
+        "lastModified": "2026-01-15T02:21:29.610",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A stack-based buffer overflow exists in the GoAhead-Webs HTTP daemon on KuWFi 4G LTE AC900 devices with firmware 1.0.13. The /goform/formMultiApnSetting handler uses sprintf() to copy the user-supplied pincode parameter into a fixed 132-byte stack buffer with no bounds checks. This allows an attacker to corrupt adjacent stack memory, crash the web server, and (under certain conditions) may enable arbitrary code execution."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-121"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:kuwfi:ac900_firmware:1.0.13:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "B897FBEF-F259-4AAA-BC46-820ABD0D9605"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:kuwfi:ac900:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "2A90E0A0-E2D2-40F5-8219-8FE34A1324D9"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://drive.proton.me/urls/HJCJYAC7JM#XtHcm3P7QaYk",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Broken Link"
+            ]
+          },
+          {
+            "url": "https://github.com/actuator/cve/blob/main/Kuwfi/CVE-2025-68706.txt",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/actuator/cve/tree/main/Kuwfi",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://kuwfi.com/products/kuwfi-gigabit-wireless-router-4g-lte-wifi-router-dual-band-portable-wifi-modem-hotspot-64-user-with-gigabit-wan-lan-rj11-port",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Product"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 13
+    },
+    {
+      "cve_id": "CVE-2025-68860",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-12-29",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-12-29",
+        "description": "Authentication Bypass Using an Alternate Path or Channel vulnerability in Mobile Builder Mobile builder mobile-builder allows Authentication Abuse.This issue affects Mobile builder: from n/a through <= 1.4.2.",
+        "title": "Authentication Bypass Using an Alternate Path or Channel vulnerability in Mobile Builder Mobile builder mobile-builder allows Authenticat...",
+        "attack_type": "Auth Bypass",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-68860",
+        "sourceIdentifier": "audit@patchstack.com",
+        "published": "2025-12-29T22:15:43.597",
+        "lastModified": "2026-04-23T15:36:09.940",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Authentication Bypass Using an Alternate Path or Channel vulnerability in Mobile Builder Mobile builder mobile-builder allows Authentication Abuse.This issue affects Mobile builder: from n/a through <= 1.4.2."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "audit@patchstack.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-288"
+              }
+            ],
+            "source": "audit@patchstack.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://patchstack.com/database/Wordpress/Plugin/mobile-builder/vulnerability/wordpress-mobile-builder-plugin-1-4-2-broken-authentication-vulnerability?_s_id=cve",
+            "source": "audit@patchstack.com"
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 14
+    },
+    {
+      "cve_id": "CVE-2025-68897",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-12-29",
+          "previous_max": null,
+          "current_max": 9.9
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-12-29",
+        "description": "Improper Control of Generation of Code ('Code Injection') vulnerability in Mohammad I. Okfie IF AS Shortcode if-as-shortcode allows Code Injection.This issue affects IF AS Shortcode: from n/a through <= 1.2.",
+        "title": "Improper Control of Generation of Code ('Code Injection') vulnerability in Mohammad I.",
+        "cvss_max": 9.9
+      },
+      "cve": {
+        "id": "CVE-2025-68897",
+        "sourceIdentifier": "audit@patchstack.com",
+        "published": "2025-12-29T16:15:43.457",
+        "lastModified": "2026-04-23T15:36:11.967",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Improper Control of Generation of Code ('Code Injection') vulnerability in Mohammad I. Okfie IF AS Shortcode if-as-shortcode allows Code Injection.This issue affects IF AS Shortcode: from n/a through <= 1.2."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+                "baseScore": 9.9,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "audit@patchstack.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.1,
+              "impactScore": 6.0
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-94"
+              }
+            ],
+            "source": "audit@patchstack.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://patchstack.com/database/Wordpress/Plugin/if-as-shortcode/vulnerability/wordpress-if-as-shortcode-plugin-1-2-remote-code-execution-rce-vulnerability?_s_id=cve",
+            "source": "audit@patchstack.com"
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 15
+    },
+    {
+      "cve_id": "CVE-2025-68929",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-12-29",
+          "previous_max": null,
+          "current_max": 9.0
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-12-29",
+        "description": "Frappe is a full-stack web application framework. Prior to versions 14.99.6 and 15.88.1, an authenticated user with specific permissions could be tricked into accessing a specially crafted link. This could lead to a malicious template being executed on the server, resulting in remote code execution. Versions 14.99.6 and 15.88.1 fix the issue. No known workarounds are available.",
+        "title": "frappe frappe RCE",
+        "vendor": "frappe",
+        "product": "frappe",
+        "attack_type": "RCE",
+        "cvss_max": 9.0
+      },
+      "cve": {
+        "id": "CVE-2025-68929",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2025-12-29T15:16:02.033",
+        "lastModified": "2025-12-31T20:02:50.403",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Frappe is a full-stack web application framework. Prior to versions 14.99.6 and 15.88.1, an authenticated user with specific permissions could be tricked into accessing a specially crafted link. This could lead to a malicious template being executed on the server, resulting in remote code execution. Versions 14.99.6 and 15.88.1 fix the issue. No known workarounds are available."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:H",
+                "baseScore": 9.0,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary",
+              "exploitabilityScore": 2.3,
+              "impactScore": 6.0
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:H",
+                "baseScore": 9.0,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 2.3,
+              "impactScore": 6.0
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-1336"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:frappe:frappe:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "EA87372E-A185-4E1A-B785-2767B3870D31",
+                    "versionEndExcluding": "14.99.6"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:frappe:frappe:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "1127BD2C-5599-46F5-89BF-684AF0D8FE52",
+                    "versionStartIncluding": "15.0.0",
+                    "versionEndExcluding": "15.88.1"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/frappe/frappe/releases/tag/v14.99.6",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Release Notes"
+            ]
+          },
+          {
+            "url": "https://github.com/frappe/frappe/releases/tag/v15.88.1",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Release Notes"
+            ]
+          },
+          {
+            "url": "https://github.com/frappe/frappe/security/advisories/GHSA-qq98-vfv9-xmxh",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 16
+    }
+  ],
+  "source": "https://www.cvelogic.com/threat-intelligence/2025-12-29"
+}

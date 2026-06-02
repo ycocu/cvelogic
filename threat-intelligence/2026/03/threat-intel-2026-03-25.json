@@ -1,0 +1,1597 @@
+{
+  "schema_version": "2.2",
+  "generated_at": "2026-06-02T07:34:45Z",
+  "day": "2026-03-25",
+  "window": {
+    "utc_start": "2026-03-25",
+    "utc_end": "2026-03-25",
+    "days": 1
+  },
+  "summary": {
+    "brief": "Langflow added to CISA KEV — confirmed in-the-wild exploitation. · Evilmartians Imgproxy — exploitation likelihood rose sharply (EPSS 24% → 40% · rising (+16%)). · 10 new critical disclosures — review patch status on exposed services.",
+    "bullets": [
+      "Langflow added to CISA KEV — confirmed in-the-wild exploitation.",
+      "Evilmartians Imgproxy — exploitation likelihood rose sharply (EPSS 24% → 40% · rising (+16%)).",
+      "10 new critical disclosures — review patch status on exposed services."
+    ],
+    "counts": {
+      "cves": 14,
+      "kev": 1,
+      "exploit": 0,
+      "epss": 3,
+      "cvss": 10,
+      "patch": 0
+    }
+  },
+  "cves": [
+    {
+      "cve_id": "CVE-2026-33017",
+      "signal_types": [
+        "KEV"
+      ],
+      "signals": {
+        "kev": {
+          "date_added": "2026-03-25"
+        },
+        "exploit": null,
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-03-20",
+        "description": "Langflow is a tool for building and deploying AI-powered agents and workflows. In versions prior to 1.9.0, the POST /api/v1/build_public_tmp/{flow_id}/flow endpoint allows building public flows without requiring authentication. When the optional data parameter is supplied, the endpoint uses attacker-controlled flow data (containing arbitrary Python code in node definitions) instead of the stored flow data from the database. This code is passed to exec() with zero sandboxing, resulting in unauthenticated remote code execution. This is distinct from CVE-2025-3248, which fixed /api/v1/validate/code by adding authentication. The build_public_tmp endpoint is designed to be unauthenticated (for public flows) but incorrectly accepts attacker-supplied flow data containing arbitrary executable code. This issue has been fixed in version 1.9.0.",
+        "title": "Langflow Code Injection Vulnerability",
+        "vendor": "langflow",
+        "product": "langflow",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2026-33017",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2026-03-20T05:16:15.550",
+        "lastModified": "2026-05-21T21:16:31.950",
+        "vulnStatus": "Modified",
+        "cisaExploitAdd": "2026-03-25",
+        "cisaActionDue": "2026-04-08",
+        "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+        "cisaVulnerabilityName": "Langflow Code Injection Vulnerability",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Langflow is a tool for building and deploying AI-powered agents and workflows. In versions prior to 1.9.0, the POST /api/v1/build_public_tmp/{flow_id}/flow endpoint allows building public flows without requiring authentication. When the optional data parameter is supplied, the endpoint uses attacker-controlled flow data (containing arbitrary Python code in node definitions) instead of the stored flow data from the database. This code is passed to exec() with zero sandboxing, resulting in unauthenticated remote code execution. This is distinct from CVE-2025-3248, which fixed /api/v1/validate/code by adding authentication. The build_public_tmp endpoint is designed to be unauthenticated (for public flows) but incorrectly accepts attacker-supplied flow data containing arbitrary executable code. This issue has been fixed in version 1.9.0."
+          },
+          {
+            "lang": "es",
+            "value": "Langflow es una herramienta para construir y desplegar agentes y flujos de trabajo impulsados por IA. En versiones anteriores a la 1.9.0, el endpoint POST /api/v1/build_public_tmp/{flow_id}/flow permite construir flujos públicos sin requerir autenticación. Cuando se suministra el parámetro opcional data, el endpoint utiliza datos de flujo controlados por el atacante (que contienen código Python arbitrario en las definiciones de nodos) en lugar de los datos de flujo almacenados en la base de datos. Este código se pasa a exec() sin ningún sandboxing, lo que resulta en una ejecución remota de código no autenticada. Esto es distinto de CVE-2025-3248, que corrigió /api/v1/validate/code añadiendo autenticación. El endpoint build_public_tmp está diseñado para no requerir autenticación (para flujos públicos) pero acepta incorrectamente datos de flujo suministrados por el atacante que contienen código ejecutable arbitrario. Este problema ha sido solucionado en la versión 1.9.0."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:L/SI:L/SA:L/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-94"
+              },
+              {
+                "lang": "en",
+                "value": "CWE-95"
+              },
+              {
+                "lang": "en",
+                "value": "CWE-306"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:langflow:langflow:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "B38E7511-B77D-4E5F-B33A-458EE5770358",
+                    "versionEndExcluding": "1.8.2"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/advisories/GHSA-rvqx-wpfh-mfx7",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/langflow-ai/langflow/commit/73b6612e3ef25fdae0a752d75b0fabd47328d4f0",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://github.com/langflow-ai/langflow/security/advisories/GHSA-vwmf-pq79-vjvx",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Exploit",
+              "Mitigation",
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/langflow-ai/langflow/releases/tag/1.8.2",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Release Notes"
+            ]
+          },
+          {
+            "url": "https://medium.com/@aviral23/cve-2026-33017-how-i-found-an-unauthenticated-rce-in-langflow-by-reading-the-code-they-already-dc96cdce5896",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-33017",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "US Government Resource"
+            ]
+          },
+          {
+            "url": "https://www.sysdig.com/blog/cve-2026-33017-how-attackers-compromised-langflow-ai-pipelines-in-20-hours",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Press/Media Coverage"
+            ]
+          }
+        ]
+      },
+      "risk_score": 88,
+      "rank": 1
+    },
+    {
+      "cve_id": "CVE-2023-1496",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 0.24052,
+            "score_date": "2026-03-21"
+          },
+          "current": {
+            "score": 0.39772,
+            "score_date": "2026-03-25"
+          },
+          "delta": 0.1572
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2023-03-19",
+        "description": "Cross-site Scripting (XSS) - Reflected in GitHub repository imgproxy/imgproxy prior to 3.14.0.",
+        "title": "evilmartians imgproxy XSS",
+        "vendor": "evilmartians",
+        "product": "imgproxy",
+        "attack_type": "XSS",
+        "cvss_max": 6.5
+      },
+      "cve": {
+        "id": "CVE-2023-1496",
+        "sourceIdentifier": "security@huntr.dev",
+        "published": "2023-03-19T17:15:11.173",
+        "lastModified": "2024-11-21T07:39:18.763",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Cross-site Scripting (XSS) - Reflected in GitHub repository imgproxy/imgproxy prior to 3.14.0."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV30": [
+            {
+              "cvssData": {
+                "version": "3.0",
+                "vectorString": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N",
+                "baseScore": 6.5,
+                "baseSeverity": "MEDIUM"
+              },
+              "source": "security@huntr.dev",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 2.5
+            }
+          ],
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N",
+                "baseScore": 5.4,
+                "baseSeverity": "MEDIUM"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 2.3,
+              "impactScore": 2.7
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-79"
+              }
+            ],
+            "source": "security@huntr.dev"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:evilmartians:imgproxy:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "D271D07A-F367-4DB0-9255-5FF0A8546417",
+                    "versionEndExcluding": "3.14.0"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/imgproxy/imgproxy/commit/62f8d08a93d301285dcd1dabcc7ba10c6c65b689",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://huntr.dev/bounties/de603972-935a-401a-96fb-17ddadd282b2",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit",
+              "Patch",
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 79,
+      "rank": 2
+    },
+    {
+      "cve_id": "CVE-2026-32523",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-03-25",
+          "previous_max": null,
+          "current_max": 9.9
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-03-25",
+        "description": "Unrestricted Upload of File with Dangerous Type vulnerability in denishua WPJAM Basic wpjam-basic allows Using Malicious Files.This issue affects WPJAM Basic: from n/a through <= 6.9.2.",
+        "title": "Unrestricted Upload of File with Dangerous Type vulnerability in denishua WPJAM Basic wpjam-basic allows Using Malicious Files.This issue...",
+        "cvss_max": 9.9
+      },
+      "cve": {
+        "id": "CVE-2026-32523",
+        "sourceIdentifier": "audit@patchstack.com",
+        "published": "2026-03-25T17:17:05.237",
+        "lastModified": "2026-04-24T16:35:20.070",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Unrestricted Upload of File with Dangerous Type vulnerability in denishua WPJAM Basic wpjam-basic allows Using Malicious Files.This issue affects WPJAM Basic: from n/a through <= 6.9.2."
+          },
+          {
+            "lang": "es",
+            "value": "Vulnerabilidad de carga sin restricciones de archivo con tipo peligroso en denishua WPJAM Basic wpjam-basic permite el uso de archivos maliciosos. Este problema afecta a WPJAM Basic: desde n/a hasta &lt;= 6.9.2."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+                "baseScore": 9.9,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.1,
+              "impactScore": 6.0
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-434"
+              }
+            ],
+            "source": "audit@patchstack.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://patchstack.com/database/Wordpress/Plugin/wpjam-basic/vulnerability/wordpress-wpjam-basic-plugin-6-9-2-arbitrary-file-upload-vulnerability?_s_id=cve",
+            "source": "audit@patchstack.com"
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 3
+    },
+    {
+      "cve_id": "CVE-2007-0297",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 0.1463,
+            "score_date": "2025-12-20"
+          },
+          "current": {
+            "score": 0.27674,
+            "score_date": "2026-03-25"
+          },
+          "delta": 0.13044
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2007-01-17",
+        "description": "Unspecified vulnerability in Oracle PeopleSoft Enterprise and JD Edwards EnterpriseOne 8.47.11 and 8.48.06 has unknown impact and attack vectors in PeopleTools, aka PSE03.",
+        "title": "oracle enterpriseone",
+        "vendor": "oracle",
+        "product": "enterpriseone",
+        "cvss_max": 4.0
+      },
+      "cve": {
+        "id": "CVE-2007-0297",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2007-01-17T02:28:00.000",
+        "lastModified": "2026-04-23T00:35:47.467",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Unspecified vulnerability in Oracle PeopleSoft Enterprise and JD Edwards EnterpriseOne 8.47.11 and 8.48.06 has unknown impact and attack vectors in PeopleTools, aka PSE03."
+          },
+          {
+            "lang": "es",
+            "value": "Vulnerabilidad sin especificar en el Oracle PeopleSoft Enterprise y JD Edwards EnterpriseOne 8.47.11 y 8.48.06 tiene impacto desconocido y ataca a vectores en PeopleTools, también conocido como PSE03."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV2": [
+            {
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:L/Au:S/C:N/I:P/A:N",
+                "baseScore": 4.0,
+                "baseSeverity": "MEDIUM"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "baseSeverity": "MEDIUM",
+              "exploitabilityScore": 8.0,
+              "impactScore": 2.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "NVD-CWE-Other"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:enterpriseone:8.47.11:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "EA65590F-05B5-43E4-AFE2-AC9F9E2B982D"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:enterpriseone:8.48.06:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "5739B493-2FC4-4A61-8414-CF8E70906CD1"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:peoplesoft_enterprise:8.47.11:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "C41DBB93-7103-4D09-AF8D-82DABF6A1FDF"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:peoplesoft_enterprise:8.48.06:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "A710268A-5D12-4FD8-8343-D401C376707A"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "http://secunia.com/advisories/23794",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Patch",
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "http://securitytracker.com/id?1017522",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://www.oracle.com/technetwork/topics/security/cpujan2007-101493.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://www.securityfocus.com/bid/22083",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://www.us-cert.gov/cas/techalerts/TA07-017A.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Patch",
+              "US Government Resource"
+            ]
+          },
+          {
+            "url": "https://exchange.xforce.ibmcloud.com/vulnerabilities/31541",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          }
+        ]
+      },
+      "risk_score": 77,
+      "rank": 4
+    },
+    {
+      "cve_id": "CVE-2022-35690",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 0.01902,
+            "score_date": "2026-02-04"
+          },
+          "current": {
+            "score": 0.14705,
+            "score_date": "2026-03-25"
+          },
+          "delta": 0.12803
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2022-10-14",
+        "description": "Adobe ColdFusion versions Update 14 (and earlier) and Update 4 (and earlier) are affected by a Stack-based Buffer Overflow vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue does not require user interaction, the vulnerability is triggered when a crafted network packet is sent to the server.",
+        "title": "adobe coldfusion RCE",
+        "vendor": "adobe",
+        "product": "coldfusion",
+        "attack_type": "RCE",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2022-35690",
+        "sourceIdentifier": "psirt@adobe.com",
+        "published": "2022-10-14T20:15:11.310",
+        "lastModified": "2024-11-21T07:11:29.117",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Adobe ColdFusion versions Update 14 (and earlier) and Update 4 (and earlier) are affected by a Stack-based Buffer Overflow vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue does not require user interaction, the vulnerability is triggered when a crafted network packet is sent to the server."
+          },
+          {
+            "lang": "es",
+            "value": "Adobe ColdFusion versiones Update 14 (y anteriores) y Update 4 (y anteriores) están afectadas por una vulnerabilidad de desbordamiento del búfer en la región Stack de la memoria que podría resultar en una ejecución de código arbitrario en el contexto del usuario actual. No es requerida una interacción del usuario para la explotación de este problema, la vulnerabilidad es desencadenada cuando es enviado un paquete de red diseñado al servidor"
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "psirt@adobe.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-121"
+              }
+            ],
+            "source": "psirt@adobe.com"
+          },
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-787"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:coldfusion:2018:-:*:*:*:*:*:*",
+                    "matchCriteriaId": "3B54B2B0-B1E1-4B4E-A529-D0BD3B5DEEF3"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:coldfusion:2018:update1:*:*:*:*:*:*",
+                    "matchCriteriaId": "EDB126BF-E09D-4E58-A39F-1190407D1CAB"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:coldfusion:2018:update10:*:*:*:*:*:*",
+                    "matchCriteriaId": "8DDD85DF-69A0-476F-8365-CD67C75CF0CE"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:coldfusion:2018:update11:*:*:*:*:*:*",
+                    "matchCriteriaId": "23F63675-7817-4AF0-A7DB-5E35EDABF04E"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:coldfusion:2018:update12:*:*:*:*:*:*",
+                    "matchCriteriaId": "3E3BF53E-2C0D-4F79-8B62-4C2A50CB5F52"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:coldfusion:2018:update13:*:*:*:*:*:*",
+                    "matchCriteriaId": "C26BF72C-E991-4170-B68B-09B20B6C0679"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:coldfusion:2018:update14:*:*:*:*:*:*",
+                    "matchCriteriaId": "25B4B4F2-318F-4046-ADE5-E9DD64F83FD9"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:coldfusion:2018:update2:*:*:*:*:*:*",
+                    "matchCriteriaId": "59649177-81EE-43C3-BFA5-E56E65B486DF"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:coldfusion:2018:update3:*:*:*:*:*:*",
+                    "matchCriteriaId": "453B96ED-738A-4642-B461-C5216CF45CA3"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:coldfusion:2018:update4:*:*:*:*:*:*",
+                    "matchCriteriaId": "58D32489-627B-4E49-9329-8A3B8F8E4903"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:coldfusion:2018:update5:*:*:*:*:*:*",
+                    "matchCriteriaId": "6D5860E1-D293-48FE-9796-058B78B2D571"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:coldfusion:2018:update6:*:*:*:*:*:*",
+                    "matchCriteriaId": "9F9336CC-E38F-4BCB-83CD-805EC7FEF806"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:coldfusion:2018:update7:*:*:*:*:*:*",
+                    "matchCriteriaId": "97964507-047A-4CC8-8D2B-0EA0C7F9BD50"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:coldfusion:2018:update8:*:*:*:*:*:*",
+                    "matchCriteriaId": "82208628-F32A-4380-9B0F-DC8507E7701D"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:coldfusion:2018:update9:*:*:*:*:*:*",
+                    "matchCriteriaId": "1563CE5E-A4F7-40A4-A050-BB96E332D8DD"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:coldfusion:2021:-:*:*:*:*:*:*",
+                    "matchCriteriaId": "7A94B406-C011-4673-8C2B-0DD94D46CC4C"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:coldfusion:2021:update1:*:*:*:*:*:*",
+                    "matchCriteriaId": "AFD05E3A-10F9-4C75-9710-BA46B66FF6E6"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:coldfusion:2021:update2:*:*:*:*:*:*",
+                    "matchCriteriaId": "D57C8681-AC68-47DF-A61E-B5C4B4A47663"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:coldfusion:2021:update3:*:*:*:*:*:*",
+                    "matchCriteriaId": "75608383-B727-48D6-8FFA-D552A338A562"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:coldfusion:2021:update4:*:*:*:*:*:*",
+                    "matchCriteriaId": "7773DB68-414A-4BA9-960F-52471A784379"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://helpx.adobe.com/security/products/coldfusion/apsb22-44.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Patch",
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 86,
+      "rank": 5
+    },
+    {
+      "cve_id": "CVE-2025-70888",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-03-25",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-03-25",
+        "description": "An issue in mtrojnar Osslsigncode affected at v2.10 and before allows a remote attacker to escalate privileges via the osslsigncode.c component",
+        "title": "osslsigncode_project osslsigncode privilege escalation",
+        "vendor": "osslsigncode_project",
+        "product": "osslsigncode",
+        "attack_type": "privilege escalation",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-70888",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2026-03-25T20:16:22.463",
+        "lastModified": "2026-04-02T17:13:18.527",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "An issue in mtrojnar Osslsigncode affected at v2.10 and before allows a remote attacker to escalate privileges via the osslsigncode.c component"
+          },
+          {
+            "lang": "es",
+            "value": "Un problema en mtrojnar Osslsigncode afectado en v2.10 y anteriores permite a un atacante remoto escalar privilegios a través del componente osslsigncode.c"
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-269"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:osslsigncode_project:osslsigncode:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "5E010F4C-F0A1-4F48-85EA-E1C2F74708ED",
+                    "versionEndIncluding": "2.10"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/mtrojnar/osslsigncode/issues/475",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Issue Tracking",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/mtrojnar/osslsigncode/pull/477",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Issue Tracking"
+            ]
+          },
+          {
+            "url": "https://github.com/ralphje/signify/issues/60",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Issue Tracking",
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 6
+    },
+    {
+      "cve_id": "CVE-2026-32520",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-03-25",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-03-25",
+        "description": "Incorrect Privilege Assignment vulnerability in Andrew Munro / AffiliateWP RewardsWP rewardswp allows Privilege Escalation.This issue affects RewardsWP: from n/a through <= 1.0.4.",
+        "title": "Incorrect Privilege Assignment vulnerability in Andrew Munro / AffiliateWP RewardsWP rewardswp allows Privilege Escalation.This issue aff...",
+        "attack_type": "Privilege Escalation",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2026-32520",
+        "sourceIdentifier": "audit@patchstack.com",
+        "published": "2026-03-25T17:17:04.773",
+        "lastModified": "2026-04-24T16:35:20.070",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Incorrect Privilege Assignment vulnerability in Andrew Munro / AffiliateWP RewardsWP rewardswp allows Privilege Escalation.This issue affects RewardsWP: from n/a through <= 1.0.4."
+          },
+          {
+            "lang": "es",
+            "value": "Vulnerabilidad de Asignación Incorrecta de Privilegios en Andrew Munro / AffiliateWP RewardsWP rewardswp permite la escalada de privilegios. Este problema afecta a RewardsWP: desde n/d hasta &lt;= 1.0.4."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-266"
+              }
+            ],
+            "source": "audit@patchstack.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://patchstack.com/database/Wordpress/Plugin/rewardswp/vulnerability/wordpress-rewardswp-plugin-1-0-4-privilege-escalation-vulnerability?_s_id=cve",
+            "source": "audit@patchstack.com"
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 7
+    },
+    {
+      "cve_id": "CVE-2026-32524",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-03-25",
+          "previous_max": null,
+          "current_max": 9.1
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-03-25",
+        "description": "Unrestricted Upload of File with Dangerous Type vulnerability in Jordy Meow Photo Engine wplr-sync allows Upload a Web Shell to a Web Server.This issue affects Photo Engine: from n/a through <= 6.4.9.",
+        "title": "Unrestricted Upload of File with Dangerous Type vulnerability in Jordy Meow Photo Engine wplr-sync allows Upload a Web Shell to a Web Ser...",
+        "cvss_max": 9.1
+      },
+      "cve": {
+        "id": "CVE-2026-32524",
+        "sourceIdentifier": "audit@patchstack.com",
+        "published": "2026-03-25T17:17:05.393",
+        "lastModified": "2026-04-24T16:35:20.070",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Unrestricted Upload of File with Dangerous Type vulnerability in Jordy Meow Photo Engine wplr-sync allows Upload a Web Shell to a Web Server.This issue affects Photo Engine: from n/a through <= 6.4.9."
+          },
+          {
+            "lang": "es",
+            "value": "Una vulnerabilidad de carga sin restricciones de archivo con tipo peligroso en Jordy Meow Photo Engine wplr-sync permite cargar un shell web a un servidor web. Este problema afecta a Photo Engine: desde n/a hasta &lt;= 6.4.9."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
+                "baseScore": 9.1,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 2.3,
+              "impactScore": 6.0
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-434"
+              }
+            ],
+            "source": "audit@patchstack.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://patchstack.com/database/Wordpress/Plugin/wplr-sync/vulnerability/wordpress-photo-engine-plugin-6-4-9-arbitrary-file-upload-vulnerability?_s_id=cve",
+            "source": "audit@patchstack.com"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 8
+    },
+    {
+      "cve_id": "CVE-2026-32525",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-03-25",
+          "previous_max": null,
+          "current_max": 9.9
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-03-25",
+        "description": "Improper Control of Generation of Code ('Code Injection') vulnerability in jetmonsters JetFormBuilder jetformbuilder allows Code Injection.This issue affects JetFormBuilder: from n/a through <= 3.5.6.1.",
+        "title": "Improper Control of Generation of Code ('Code Injection') vulnerability in jetmonsters JetFormBuilder jetformbuilder allows Code Injectio...",
+        "cvss_max": 9.9
+      },
+      "cve": {
+        "id": "CVE-2026-32525",
+        "sourceIdentifier": "audit@patchstack.com",
+        "published": "2026-03-25T17:17:05.553",
+        "lastModified": "2026-04-24T16:35:20.070",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Improper Control of Generation of Code ('Code Injection') vulnerability in jetmonsters JetFormBuilder jetformbuilder allows Code Injection.This issue affects JetFormBuilder: from n/a through <= 3.5.6.1."
+          },
+          {
+            "lang": "es",
+            "value": "Vulnerabilidad de Control Inadecuado de la Generación de Código ('Inyección de Código') en jetmonsters JetFormBuilder jetformbuilder permite la Inyección de Código. Este problema afecta a JetFormBuilder: desde n/a hasta &lt;= 3.5.6.1."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+                "baseScore": 9.9,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.1,
+              "impactScore": 6.0
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-94"
+              }
+            ],
+            "source": "audit@patchstack.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://patchstack.com/database/Wordpress/Plugin/jetformbuilder/vulnerability/wordpress-jetformbuilder-plugin-3-5-6-1-remote-code-execution-rce-vulnerability?_s_id=cve",
+            "source": "audit@patchstack.com"
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 9
+    },
+    {
+      "cve_id": "CVE-2026-32536",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-03-25",
+          "previous_max": null,
+          "current_max": 9.9
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-03-25",
+        "description": "Unrestricted Upload of File with Dangerous Type vulnerability in halfdata Green Downloads halfdata-paypal-green-downloads allows Using Malicious Files.This issue affects Green Downloads: from n/a through <= 2.08.",
+        "title": "Unrestricted Upload of File with Dangerous Type vulnerability in halfdata Green Downloads halfdata-paypal-green-downloads allows Using Ma...",
+        "cvss_max": 9.9
+      },
+      "cve": {
+        "id": "CVE-2026-32536",
+        "sourceIdentifier": "audit@patchstack.com",
+        "published": "2026-03-25T17:17:07.293",
+        "lastModified": "2026-04-24T16:35:20.070",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Unrestricted Upload of File with Dangerous Type vulnerability in halfdata Green Downloads halfdata-paypal-green-downloads allows Using Malicious Files.This issue affects Green Downloads: from n/a through <= 2.08."
+          },
+          {
+            "lang": "es",
+            "value": "Vulnerabilidad de carga sin restricciones de archivo con tipo peligroso en halfdata Green Downloads halfdata-paypal-green-downloads permite el uso de archivos maliciosos. Este problema afecta a Green Downloads: desde n/a hasta &lt;= 2.08."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+                "baseScore": 9.9,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.1,
+              "impactScore": 6.0
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-434"
+              }
+            ],
+            "source": "audit@patchstack.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://patchstack.com/database/Wordpress/Plugin/halfdata-paypal-green-downloads/vulnerability/wordpress-green-downloads-plugin-2-08-arbitrary-file-upload-vulnerability?_s_id=cve",
+            "source": "audit@patchstack.com"
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 10
+    },
+    {
+      "cve_id": "CVE-2026-32539",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-03-25",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-03-25",
+        "description": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in PublishPress PublishPress Revisions revisionary allows Blind SQL Injection.This issue affects PublishPress Revisions: from n/a through <= 3.7.23.",
+        "title": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in PublishPress PublishPress Revisions...",
+        "attack_type": "SQL Injection",
+        "cvss_max": 9.3
+      },
+      "cve": {
+        "id": "CVE-2026-32539",
+        "sourceIdentifier": "audit@patchstack.com",
+        "published": "2026-03-25T17:17:07.703",
+        "lastModified": "2026-04-24T16:35:20.070",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in PublishPress PublishPress Revisions revisionary allows Blind SQL Injection.This issue affects PublishPress Revisions: from n/a through <= 3.7.23."
+          },
+          {
+            "lang": "es",
+            "value": "Neutralización Incorrecta de Elementos Especiales utilizados en un Comando SQL ('Inyección SQL') vulnerabilidad en PublishPress PublishPress Revisions revisionary permite Inyección SQL Ciega. Este problema afecta a PublishPress Revisions: desde n/a hasta &lt;= 3.7.23."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:L",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 4.7
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-89"
+              }
+            ],
+            "source": "audit@patchstack.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://patchstack.com/database/Wordpress/Plugin/revisionary/vulnerability/wordpress-publishpress-revisions-plugin-3-7-23-sql-injection-vulnerability?_s_id=cve",
+            "source": "audit@patchstack.com"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 11
+    },
+    {
+      "cve_id": "CVE-2026-32573",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-03-25",
+          "previous_max": null,
+          "current_max": 9.1
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-03-25",
+        "description": "Improper Control of Generation of Code ('Code Injection') vulnerability in Nelio Software Nelio AB Testing nelio-ab-testing allows Code Injection.This issue affects Nelio AB Testing: from n/a through <= 8.2.7.",
+        "title": "Improper Control of Generation of Code ('Code Injection') vulnerability in Nelio Software Nelio AB Testing nelio-ab-testing allows Code I...",
+        "cvss_max": 9.1
+      },
+      "cve": {
+        "id": "CVE-2026-32573",
+        "sourceIdentifier": "audit@patchstack.com",
+        "published": "2026-03-25T17:17:08.927",
+        "lastModified": "2026-04-24T16:35:20.070",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Improper Control of Generation of Code ('Code Injection') vulnerability in Nelio Software Nelio AB Testing nelio-ab-testing allows Code Injection.This issue affects Nelio AB Testing: from n/a through <= 8.2.7."
+          },
+          {
+            "lang": "es",
+            "value": "Control inadecuado de la generación de código ('Inyección de Código') vulnerabilidad en Nelio Software Nelio AB Testing nelio-ab-testing permite la inyección de código. Este problema afecta a Nelio AB Testing: desde n/a hasta &lt;= 8.2.7."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
+                "baseScore": 9.1,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 2.3,
+              "impactScore": 6.0
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-94"
+              }
+            ],
+            "source": "audit@patchstack.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://patchstack.com/database/Wordpress/Plugin/nelio-ab-testing/vulnerability/wordpress-nelio-ab-testing-plugin-8-2-7-remote-code-execution-rce-vulnerability?_s_id=cve",
+            "source": "audit@patchstack.com"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 12
+    },
+    {
+      "cve_id": "CVE-2026-33660",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-03-25",
+          "previous_max": null,
+          "current_max": 9.4
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-03-25",
+        "description": "n8n is an open source workflow automation platform. Prior to versions 2.14.1, 2.13.3, and 1.123.26, an authenticated user with permission to create or modify workflows could use the Merge node's \"Combine by SQL\" mode to read local files on the n8n host and achieve remote code execution. The AlaSQL sandbox did not sufficiently restrict certain SQL statements, allowing an attacker to access sensitive files on the server or even compromise the instance. The issue has been fixed in n8n versions 2.14.1, 2.13.3, and 1.123.26. Users should upgrade to one of these versions or later to remediate the vulnerability. If upgrading is not immediately possible, administrators should consider the following temporary mitigations: Limit workflow creation and editing permissions to fully trusted users only, and/or disable the Merge node by adding `n8n-nodes-base.merge` to the `NODES_EXCLUDE` environment variable. These workarounds do not fully remediate the risk and should only be used as short-term mitigation measures.",
+        "title": "n8n n8n RCE",
+        "vendor": "n8n",
+        "product": "n8n",
+        "attack_type": "RCE",
+        "cvss_max": 9.4
+      },
+      "cve": {
+        "id": "CVE-2026-33660",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2026-03-25T18:16:32.080",
+        "lastModified": "2026-03-30T14:54:07.600",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "n8n is an open source workflow automation platform. Prior to versions 2.14.1, 2.13.3, and 1.123.26, an authenticated user with permission to create or modify workflows could use the Merge node's \"Combine by SQL\" mode to read local files on the n8n host and achieve remote code execution. The AlaSQL sandbox did not sufficiently restrict certain SQL statements, allowing an attacker to access sensitive files on the server or even compromise the instance. The issue has been fixed in n8n versions 2.14.1, 2.13.3, and 1.123.26. Users should upgrade to one of these versions or later to remediate the vulnerability. If upgrading is not immediately possible, administrators should consider the following temporary mitigations: Limit workflow creation and editing permissions to fully trusted users only, and/or disable the Merge node by adding `n8n-nodes-base.merge` to the `NODES_EXCLUDE` environment variable. These workarounds do not fully remediate the risk and should only be used as short-term mitigation measures."
+          },
+          {
+            "lang": "es",
+            "value": "n8n es una plataforma de automatización de flujos de trabajo de código abierto. Antes de las versiones 2.14.1, 2.13.3 y 1.123.26, un usuario autenticado con permiso para crear o modificar flujos de trabajo podría usar el modo 'Combine by SQL' del nodo Merge para leer archivos locales en el host de n8n y lograr ejecución remota de código. El sandbox de AlaSQL no restringía suficientemente ciertas sentencias SQL, permitiendo a un atacante acceder a archivos sensibles en el servidor o incluso comprometer la instancia. El problema ha sido solucionado en las versiones de n8n 2.14.1, 2.13.3 y 1.123.26. Los usuarios deben actualizar a una de estas versiones o posteriores para remediar la vulnerabilidad. Si la actualización no es posible de inmediato, los administradores deben considerar las siguientes mitigaciones temporales: Limitar los permisos de creación y edición de flujos de trabajo solo a usuarios de plena confianza, y/o deshabilitar el nodo Merge añadiendo `n8n-nodes-base.merge` a la variable de entorno `NODES_EXCLUDE`. Estas soluciones provisionales no remedian completamente el riesgo y solo deben usarse como medidas de mitigación a corto plazo."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 8.8,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.4,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-94"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          },
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-89"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:n8n:n8n:*:*:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "C5E7FBA6-35F5-426D-8BAA-25C7913A966A",
+                    "versionEndExcluding": "1.123.27"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:n8n:n8n:*:*:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "8ACE2AF2-6C9A-41A8-9883-6F2149E24151",
+                    "versionStartIncluding": "2.0.0",
+                    "versionEndExcluding": "2.13.3"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:n8n:n8n:2.14.0:*:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "22BDDF0A-0915-4FF2-920C-E75F2F2F677D"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/n8n-io/n8n/security/advisories/GHSA-58qr-rcgv-642v",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Vendor Advisory",
+              "Mitigation"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 13
+    },
+    {
+      "cve_id": "CVE-2026-33696",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-03-25",
+          "previous_max": null,
+          "current_max": 9.4
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-03-25",
+        "description": "n8n is an open source workflow automation platform. Prior to versions 2.14.1, 2.13.3, and 1.123.27, an authenticated user with permission to create or modify workflows could exploit a prototype pollution vulnerability in the XML and the GSuiteAdmin nodes. By supplying a crafted parameters as part of node configuration, an attacker could write attacker-controlled values onto `Object.prototype`. An attacker could use this prototype pollution to achieve remote code execution on the n8n instance. The issue has been fixed in n8n versions 2.14.1, 2.13.3, and 1.123.27. Users should upgrade to one of these versions or later to remediate the vulnerability. If upgrading is not immediately possible, administrators should consider the following temporary mitigations: Limit workflow creation and editing permissions to fully trusted users only, and/or disable the XML node by adding `n8n-nodes-base.xml` to the `NODES_EXCLUDE` environment variable. These workarounds do not fully remediate the risk and should only be used as short-term mitigation measures.",
+        "title": "n8n n8n",
+        "vendor": "n8n",
+        "product": "n8n",
+        "cvss_max": 9.4
+      },
+      "cve": {
+        "id": "CVE-2026-33696",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2026-03-25T18:16:32.550",
+        "lastModified": "2026-03-27T19:40:55.160",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "n8n is an open source workflow automation platform. Prior to versions 2.14.1, 2.13.3, and 1.123.27, an authenticated user with permission to create or modify workflows could exploit a prototype pollution vulnerability in the XML and the GSuiteAdmin nodes. By supplying a crafted parameters as part of node configuration, an attacker could write attacker-controlled values onto `Object.prototype`. An attacker could use this prototype pollution to achieve remote code execution on the n8n instance. The issue has been fixed in n8n versions 2.14.1, 2.13.3, and 1.123.27. Users should upgrade to one of these versions or later to remediate the vulnerability. If upgrading is not immediately possible, administrators should consider the following temporary mitigations: Limit workflow creation and editing permissions to fully trusted users only, and/or disable the XML node by adding `n8n-nodes-base.xml` to the `NODES_EXCLUDE` environment variable. These workarounds do not fully remediate the risk and should only be used as short-term mitigation measures."
+          },
+          {
+            "lang": "es",
+            "value": "n8n es una plataforma de automatización de flujos de trabajo de código abierto. Antes de las versiones 2.14.1, 2.13.3 y 1.123.27, un usuario autenticado con permiso para crear o modificar flujos de trabajo podría explotar una vulnerabilidad de contaminación de prototipos en los nodos XML y GSuiteAdmin. Al proporcionar parámetros manipulados como parte de la configuración del nodo, un atacante podría escribir valores controlados por el atacante en `Object.prototype`. Un atacante podría usar esta contaminación de prototipos para lograr la ejecución remota de código en la instancia de n8n. El problema ha sido solucionado en las versiones de n8n 2.14.1, 2.13.3 y 1.123.27. Los usuarios deberían actualizar a una de estas versiones o posteriores para remediar la vulnerabilidad. Si la actualización no es posible de inmediato, los administradores deberían considerar las siguientes mitigaciones temporales: Limitar los permisos de creación y edición de flujos de trabajo solo a usuarios de plena confianza, y/o deshabilitar el nodo XML añadiendo `n8n-nodes-base.xml` a la variable de entorno `NODES_EXCLUDE`. Estas soluciones alternativas no remedian completamente el riesgo y solo deberían usarse como medidas de mitigación a corto plazo."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 8.8,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.4,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-1321"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:n8n:n8n:*:*:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "C5E7FBA6-35F5-426D-8BAA-25C7913A966A",
+                    "versionEndExcluding": "1.123.27"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:n8n:n8n:*:*:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "8ACE2AF2-6C9A-41A8-9883-6F2149E24151",
+                    "versionStartIncluding": "2.0.0",
+                    "versionEndExcluding": "2.13.3"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:n8n:n8n:2.14.0:*:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "22BDDF0A-0915-4FF2-920C-E75F2F2F677D"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/n8n-io/n8n/security/advisories/GHSA-mxrg-77hm-89hv",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Vendor Advisory",
+              "Mitigation"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 14
+    }
+  ],
+  "source": "https://www.cvelogic.com/threat-intelligence/2026-03-25"
+}

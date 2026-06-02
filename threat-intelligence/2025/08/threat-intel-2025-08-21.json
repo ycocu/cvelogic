@@ -1,0 +1,1706 @@
+{
+  "schema_version": "2.2",
+  "generated_at": "2026-06-02T07:33:16Z",
+  "day": "2025-08-21",
+  "window": {
+    "utc_start": "2025-08-21",
+    "utc_end": "2025-08-21",
+    "days": 1
+  },
+  "summary": {
+    "brief": "Apple IOS, IPadOS, And MacOS added to CISA KEV — confirmed in-the-wild exploitation. · Netgear Nvrmini 2 — exploitation likelihood rose sharply (EPSS 10% → 33% · rising (+23%)). · 10 new critical disclosures — review patch status on exposed services.",
+    "bullets": [
+      "Apple IOS, IPadOS, And MacOS added to CISA KEV — confirmed in-the-wild exploitation.",
+      "Netgear Nvrmini 2 — exploitation likelihood rose sharply (EPSS 10% → 33% · rising (+23%)).",
+      "10 new critical disclosures — review patch status on exposed services."
+    ],
+    "counts": {
+      "cves": 13,
+      "kev": 1,
+      "exploit": 0,
+      "epss": 2,
+      "cvss": 10,
+      "patch": 0
+    }
+  },
+  "cves": [
+    {
+      "cve_id": "CVE-2025-43300",
+      "signal_types": [
+        "KEV"
+      ],
+      "signals": {
+        "kev": {
+          "date_added": "2025-08-21"
+        },
+        "exploit": null,
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-08-21",
+        "description": "An out-of-bounds write issue was addressed with improved bounds checking. This issue is fixed in iOS 15.8.5 and iPadOS 15.8.5, iOS 16.7.12 and iPadOS 16.7.12, iOS 18.6.2 and iPadOS 18.6.2, iPadOS 17.7.10, macOS Sequoia 15.6.1, macOS Sonoma 14.7.8, macOS Ventura 13.7.8. Processing a malicious image file may result in memory corruption. Apple is aware of a report that this issue may have been exploited in an extremely sophisticated attack against specific targeted individuals.",
+        "title": "Apple iOS, iPadOS, and macOS Out-of-Bounds Write Vulnerability",
+        "vendor": "apple",
+        "product": "ipados",
+        "attack_type": "Memory Corruption",
+        "cvss_max": 10.0
+      },
+      "cve": {
+        "id": "CVE-2025-43300",
+        "sourceIdentifier": "product-security@apple.com",
+        "published": "2025-08-21T01:15:36.243",
+        "lastModified": "2026-04-03T14:28:33.887",
+        "vulnStatus": "Analyzed",
+        "cisaExploitAdd": "2025-08-21",
+        "cisaActionDue": "2025-09-11",
+        "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+        "cisaVulnerabilityName": "Apple iOS, iPadOS, and macOS Out-of-Bounds Write Vulnerability",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "An out-of-bounds write issue was addressed with improved bounds checking. This issue is fixed in iOS 15.8.5 and iPadOS 15.8.5, iOS 16.7.12 and iPadOS 16.7.12, iOS 18.6.2 and iPadOS 18.6.2, iPadOS 17.7.10, macOS Sequoia 15.6.1, macOS Sonoma 14.7.8, macOS Ventura 13.7.8. Processing a malicious image file may result in memory corruption. Apple is aware of a report that this issue may have been exploited in an extremely sophisticated attack against specific targeted individuals."
+          },
+          {
+            "lang": "es",
+            "value": "Se solucionó un problema de escritura fuera de los límites mejorando la comprobación de los límites. Este problema se solucionó en macOS Sonoma 14.7.8, macOS Ventura 13.7.8, iPadOS 17.7.10, macOS Sequoia 15.6.1, iOS 18.6.2 y iPadOS 18.6.2. Procesar un archivo de imagen malicioso puede provocar daños en la memoria. Apple tiene conocimiento de un informe que indica que este problema podría haber sido explotado en un ataque extremadamente sofisticado contra individuos específicos."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+                "baseScore": 10.0,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 6.0
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-787"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:ipados:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "CBDB9319-770B-401B-8D7E-40BB6E370446",
+                    "versionEndExcluding": "15.8.5"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:ipados:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "9BD176E0-E5C8-4009-A214-B8C9AFA59934",
+                    "versionStartIncluding": "16.0",
+                    "versionEndExcluding": "16.7.12"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:ipados:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "627AF492-F9C4-4371-A223-D60CC5B6B62F",
+                    "versionStartIncluding": "17.0",
+                    "versionEndExcluding": "17.7.10"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:ipados:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "E640930D-FE94-4B16-9512-9E95091644E5",
+                    "versionStartIncluding": "18.0",
+                    "versionEndExcluding": "18.6.2"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:iphone_os:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "E1F99051-EE84-4D7D-8042-688337134F24",
+                    "versionEndExcluding": "15.8.5"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:iphone_os:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "D79D2C71-2062-4D9E-8E3C-23C00CEE6226",
+                    "versionStartIncluding": "16.0",
+                    "versionEndExcluding": "16.7.12"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:iphone_os:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "F0A2EB6F-B8DC-431A-8D79-9B333FFEC6F7",
+                    "versionStartIncluding": "17.0",
+                    "versionEndExcluding": "18.6.2"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:macos:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "258926FE-693C-4212-AC37-CB84E541DB00",
+                    "versionStartIncluding": "13.0",
+                    "versionEndExcluding": "13.7.8"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:macos:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "0FF9BBB9-6308-4730-AC66-90A7F6925B46",
+                    "versionStartIncluding": "14.0",
+                    "versionEndExcluding": "14.7.8"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:macos:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "79B1205D-7176-41CD-BC7F-2F28D6D31935",
+                    "versionStartIncluding": "15.0",
+                    "versionEndExcluding": "15.6.1"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://support.apple.com/en-us/124925",
+            "source": "product-security@apple.com",
+            "tags": [
+              "Release Notes",
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://support.apple.com/en-us/124926",
+            "source": "product-security@apple.com",
+            "tags": [
+              "Release Notes",
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://support.apple.com/en-us/124927",
+            "source": "product-security@apple.com",
+            "tags": [
+              "Release Notes",
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://support.apple.com/en-us/124928",
+            "source": "product-security@apple.com",
+            "tags": [
+              "Release Notes",
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://support.apple.com/en-us/124929",
+            "source": "product-security@apple.com",
+            "tags": [
+              "Release Notes",
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://support.apple.com/en-us/125141",
+            "source": "product-security@apple.com",
+            "tags": [
+              "Release Notes",
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://support.apple.com/en-us/125142",
+            "source": "product-security@apple.com",
+            "tags": [
+              "Release Notes",
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "http://seclists.org/fulldisclosure/2025/Sep/10",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Mailing List",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "http://seclists.org/fulldisclosure/2025/Sep/14",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Mailing List",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "http://seclists.org/fulldisclosure/2025/Sep/52",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Mailing List",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/b1n4r1b01/n-days/blob/main/CVE-2025-43300.md",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/cisagov/vulnrichment/issues/201",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Issue Tracking"
+            ]
+          },
+          {
+            "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2025-43300",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "US Government Resource"
+            ]
+          }
+        ]
+      },
+      "risk_score": 88,
+      "rank": 1
+    },
+    {
+      "cve_id": "CVE-2016-5680",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 0.10161,
+            "score_date": "2025-03-30"
+          },
+          "current": {
+            "score": 0.33302,
+            "score_date": "2025-08-21"
+          },
+          "delta": 0.23141
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2016-08-31",
+        "description": "Stack-based buffer overflow in cgi-bin/cgi_main in NUUO NVRmini 2 1.7.6 through 3.0.0 and NETGEAR ReadyNAS Surveillance 1.1.2 allows remote authenticated users to execute arbitrary code via the sn parameter to the transfer_license command.",
+        "title": "netgear nvrmini_2 Buffer Overflow",
+        "vendor": "nuuo",
+        "product": "nvrmini_2",
+        "attack_type": "Buffer Overflow",
+        "cvss_max": 9.0
+      },
+      "cve": {
+        "id": "CVE-2016-5680",
+        "sourceIdentifier": "cret@cert.org",
+        "published": "2016-08-31T15:59:06.827",
+        "lastModified": "2026-05-06T22:30:45.220",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Stack-based buffer overflow in cgi-bin/cgi_main in NUUO NVRmini 2 1.7.6 through 3.0.0 and NETGEAR ReadyNAS Surveillance 1.1.2 allows remote authenticated users to execute arbitrary code via the sn parameter to the transfer_license command."
+          },
+          {
+            "lang": "es",
+            "value": "Desbordamiento de búfer basado en pila en cgi-bin/cgi_main en NUUO NVRmini 2 1.7.6 hasta la versión 3.0.0 y NETGEAR ReadyNAS Surveillance 1.1.2 permite a usuarios remotos autenticados ejecutar código arbitrario a través del parámetro sn al comando transfer_license."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV2": [
+            {
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:L/Au:S/C:C/I:C/A:C",
+                "baseScore": 9.0,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "baseSeverity": "HIGH",
+              "exploitabilityScore": 8.0,
+              "impactScore": 10.0
+            }
+          ],
+          "cvssMetricV30": [
+            {
+              "cvssData": {
+                "version": "3.0",
+                "vectorString": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 8.8,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-119"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:nuuo:nvrmini_2:1.7.6:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "9BD02ABB-65FF-4F08-9C99-69BB03A2AE07"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:nuuo:nvrmini_2:2.0.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "949274A8-E85A-4344-A4F2-2E038B877874"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:nuuo:nvrmini_2:2.2.1:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "AD3D600A-4E84-416C-BAAE-70684DCFD15E"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:nuuo:nvrmini_2:3.0.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "1EA286A6-CCCD-419A-B9DC-10F4B59FF2FB"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:netgear:readynas_surveillance:1.1.2:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "EA1225D7-C268-4343-9988-7A75416B9860"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "http://www.kb.cert.org/vuls/id/856152",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory",
+              "US Government Resource"
+            ]
+          },
+          {
+            "url": "http://www.securityfocus.com/bid/92318",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "https://www.exploit-db.com/exploits/40200/",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          }
+        ]
+      },
+      "risk_score": 84,
+      "rank": 2
+    },
+    {
+      "cve_id": "CVE-2025-53763",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-08-21",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-08-21",
+        "description": "Improper access control in Azure Databricks allows an unauthorized attacker to elevate privileges over a network.",
+        "title": "microsoft purview_data_governance privilege escalation",
+        "vendor": "microsoft",
+        "product": "purview_data_governance",
+        "attack_type": "privilege escalation",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-53763",
+        "sourceIdentifier": "secure@microsoft.com",
+        "published": "2025-08-21T20:15:43.830",
+        "lastModified": "2025-08-25T18:38:23.763",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Improper access control in Azure Databricks allows an unauthorized attacker to elevate privileges over a network."
+          },
+          {
+            "lang": "es",
+            "value": "El control de acceso inadecuado en Azure Databricks permite que un atacante no autorizado eleve privilegios en una red."
+          }
+        ],
+        "cveTags": [
+          {
+            "sourceIdentifier": "secure@microsoft.com",
+            "tags": [
+              "exclusively-hosted-service"
+            ]
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "secure@microsoft.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-284"
+              }
+            ],
+            "source": "secure@microsoft.com"
+          },
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "NVD-CWE-noinfo"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:microsoft:purview_data_governance:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "9CAB0696-AF5B-4EDE-B6BD-0D18EFB8C663"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-53763",
+            "source": "secure@microsoft.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 3
+    },
+    {
+      "cve_id": "CVE-2010-20112",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-08-21",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-08-21",
+        "description": "Amlib’s NetOpacs webquery.dll contains a stack-based buffer overflow vulnerability triggered by improper handling of HTTP GET parameters. Specifically, the application fails to enforce bounds on input supplied to the app parameter, allowing excessive data to overwrite memory structures including the Structured Exception Handler (SEH). Additionally, malformed parameter names followed by an equals sign may result in unintended control flow behavior. This vulnerability is exposed through IIS and affects legacy Windows deployments",
+        "title": "Amlib’s NetOpacs webquery.dll contains a stack-based buffer overflow vulnerability triggered by improper handling of HTTP GET parameters.",
+        "attack_type": "Buffer Overflow",
+        "cvss_max": 9.3
+      },
+      "cve": {
+        "id": "CVE-2010-20112",
+        "sourceIdentifier": "disclosure@vulncheck.com",
+        "published": "2025-08-21T20:15:31.217",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Amlib’s NetOpacs webquery.dll contains a stack-based buffer overflow vulnerability triggered by improper handling of HTTP GET parameters. Specifically, the application fails to enforce bounds on input supplied to the app parameter, allowing excessive data to overwrite memory structures including the Structured Exception Handler (SEH). Additionally, malformed parameter names followed by an equals sign may result in unintended control flow behavior. This vulnerability is exposed through IIS and affects legacy Windows deployments"
+          },
+          {
+            "lang": "es",
+            "value": "El archivo webquery.dll de NetOpacs de Amlib contiene una vulnerabilidad de desbordamiento de búfer basada en pila, desencadenada por el manejo incorrecto de parámetros HTTP GET. En concreto, la aplicación no aplica límites a la entrada suministrada al parámetro app, lo que permite que un exceso de datos sobrescriba las estructuras de memoria, incluido el Gestor de Excepciones Estructuradas (SEH). Además, los nombres de parámetros mal formados seguidos de un signo igual pueden provocar un comportamiento no deseado en el flujo de control. Esta vulnerabilidad se expone a través de IIS y afecta a las implementaciones heredadas de Windows."
+          }
+        ],
+        "cveTags": [
+          {
+            "sourceIdentifier": "disclosure@vulncheck.com",
+            "tags": [
+              "unsupported-when-assigned"
+            ]
+          }
+        ],
+        "metrics": {
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-121"
+              }
+            ],
+            "source": "disclosure@vulncheck.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://advisories.checkpoint.com/defense/advisories/public/2013/cpai-2013-1344.html",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://raw.githubusercontent.com/rapid7/metasploit-framework/master/modules/exploits/windows/http/amlibweb_webquerydll_app.rb",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          },
+          {
+            "url": "https://www.amlib.co.uk/product/product.aspx?menuId=top_products",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://www.exploit-db.com/exploits/16793",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          },
+          {
+            "url": "https://www.fortiguard.com/encyclopedia/ips/24002",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://www.vulncheck.com/advisories/amlibweb-netopacs-stack-buffer-overflow",
+            "source": "disclosure@vulncheck.com"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 4
+    },
+    {
+      "cve_id": "CVE-2010-20113",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-08-21",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-08-21",
+        "description": "EasyFTP Server 1.7.0.11 and earlier contains a stack-based buffer overflow vulnerability in its HTTP interface. When processing a GET request to list.html, the server fails to properly validate the length of the path parameter. Supplying an excessively long value causes a buffer overflow on the stack, potentially corrupting control flow structures. The vulnerability is exposed through the embedded web server and does not require authentication due to default anonymous access. The issue was resolved in version 1.7.0.12, after which the product was renamed to UplusFtp.",
+        "title": "easyftp_server_project easyftp_server Buffer Overflow",
+        "vendor": "easyftp_server_project",
+        "product": "easyftp_server",
+        "attack_type": "Buffer Overflow",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2010-20113",
+        "sourceIdentifier": "disclosure@vulncheck.com",
+        "published": "2025-08-21T21:15:33.957",
+        "lastModified": "2025-09-10T20:06:30.820",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "EasyFTP Server 1.7.0.11 and earlier contains a stack-based buffer overflow vulnerability in its HTTP interface. When processing a GET request to list.html, the server fails to properly validate the length of the path parameter. Supplying an excessively long value causes a buffer overflow on the stack, potentially corrupting control flow structures. The vulnerability is exposed through the embedded web server and does not require authentication due to default anonymous access. The issue was resolved in version 1.7.0.12, after which the product was renamed to UplusFtp."
+          },
+          {
+            "lang": "es",
+            "value": "EasyFTP Server 1.7.0.11 y versiones anteriores contienen una vulnerabilidad de desbordamiento de búfer en la pila de su interfaz HTTP. Al procesar una solicitud GET a list.html, el servidor no valida correctamente la longitud del parámetro path. Proporcionar un valor excesivamente largo provoca un desbordamiento de búfer en la pila, lo que podría dañar las estructuras del flujo de control. La vulnerabilidad se expone a través del servidor web integrado y no requiere autenticación debido al acceso anónimo predeterminado. El problema se resolvió en la versión 1.7.0.12, tras lo cual el producto cambió su nombre a UplusFtp."
+          }
+        ],
+        "cveTags": [
+          {
+            "sourceIdentifier": "disclosure@vulncheck.com",
+            "tags": [
+              "unsupported-when-assigned"
+            ]
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-121"
+              }
+            ],
+            "source": "disclosure@vulncheck.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:easyftp_server_project:easyftp_server:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "C588FCA3-A10E-4DD4-9042-5EF4748FAEBA",
+                    "versionEndExcluding": "1.7.0.12"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://raw.githubusercontent.com/rapid7/metasploit-framework/master/modules/exploits/windows/http/easyftp_list.rb",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.exploit-db.com/exploits/11500",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Exploit",
+              "VDB Entry"
+            ]
+          },
+          {
+            "url": "https://www.vulncheck.com/advisories/easyftp-server-list-html-stack-buffer-overflow",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 5
+    },
+    {
+      "cve_id": "CVE-2010-20115",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-08-21",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-08-21",
+        "description": "Arcane Software’s Vermillion FTP Daemon (vftpd) versions up to and including 1.31 contains a memory corruption vulnerability triggered by a malformed FTP PORT command. The flaw arises from an out-of-bounds array access during input parsing, allowing an attacker to manipulate stack memory and potentially execute arbitrary code. Exploitation requires direct access to the FTP service and is constrained by a single execution attempt if the daemon is installed as a Windows service.",
+        "title": "Arcane Software’s Vermillion FTP Daemon (vftpd) versions up to and including 1.31 contains a memory corruption vulnerability triggered by...",
+        "attack_type": "Memory Corruption",
+        "cvss_max": 9.3
+      },
+      "cve": {
+        "id": "CVE-2010-20115",
+        "sourceIdentifier": "disclosure@vulncheck.com",
+        "published": "2025-08-21T21:15:34.313",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Arcane Software’s Vermillion FTP Daemon (vftpd) versions up to and including 1.31 contains a memory corruption vulnerability triggered by a malformed FTP PORT command. The flaw arises from an out-of-bounds array access during input parsing, allowing an attacker to manipulate stack memory and potentially execute arbitrary code. Exploitation requires direct access to the FTP service and is constrained by a single execution attempt if the daemon is installed as a Windows service."
+          },
+          {
+            "lang": "es",
+            "value": "Las versiones del daemon FTP Vermillion (vftpd) de Arcane Software, hasta la 1.31 incluida, contienen una vulnerabilidad de corrupción de memoria provocada por un comando FTP PORT mal formado. La falla surge de un acceso fuera de los límites a una matriz durante el análisis de entrada, lo que permite a un atacante manipular la memoria de la pila y potencialmente ejecutar código arbitrario. La explotación requiere acceso directo al servicio FTP y está limitada a un solo intento de ejecución si el daemon se instala como un servicio de Windows."
+          }
+        ],
+        "cveTags": [
+          {
+            "sourceIdentifier": "disclosure@vulncheck.com",
+            "tags": [
+              "unsupported-when-assigned"
+            ]
+          }
+        ],
+        "metrics": {
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-704"
+              },
+              {
+                "lang": "en",
+                "value": "CWE-787"
+              }
+            ],
+            "source": "disclosure@vulncheck.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://raw.githubusercontent.com/rapid7/metasploit-framework/master/modules/exploits/windows/ftp/vermillion_ftpd_port.rb",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          },
+          {
+            "url": "https://web.archive.org/web/20100213162028/http://www.softsea.com/review/Vermillion-FTP-Daemon.html",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://web.archive.org/web/20100416140657/http://www.global-evolution.info/news/files/vftpd/vftpd.txt",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://www.broadcom.com/support/security-center/attacksignatures/detail?asid=23681",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://www.exploit-db.com/exploits/11293",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          },
+          {
+            "url": "https://www.juniper.net/us/en/threatlabs/ips-signatures/detail.FTP:EXPLOIT:VERMILLION-PORT-OF.html",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://www.vulncheck.com/advisories/vermillion-ftp-daemon-port-command-memory-corruption",
+            "source": "disclosure@vulncheck.com"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 6
+    },
+    {
+      "cve_id": "CVE-2010-20121",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-08-21",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-08-21",
+        "description": "EasyFTP Server versions up to 1.7.0.11 contain a stack-based buffer overflow vulnerability in the FTP command parser. When processing the CWD (Change Working Directory) command, the server fails to properly validate the length of the input string, allowing attackers to overwrite memory on the stack. This flaw enables remote code execution without authentication, as EasyFTP allows anonymous access by default. The vulnerability was resolved in version 1.7.0.12, after which the product was renamed “UplusFtp.”",
+        "title": "easyftp_server_project easyftp_server RCE",
+        "vendor": "easyftp_server_project",
+        "product": "easyftp_server",
+        "attack_type": "RCE",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2010-20121",
+        "sourceIdentifier": "disclosure@vulncheck.com",
+        "published": "2025-08-21T20:15:31.610",
+        "lastModified": "2025-09-10T20:03:36.037",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "EasyFTP Server versions up to 1.7.0.11 contain a stack-based buffer overflow vulnerability in the FTP command parser. When processing the CWD (Change Working Directory) command, the server fails to properly validate the length of the input string, allowing attackers to overwrite memory on the stack. This flaw enables remote code execution without authentication, as EasyFTP allows anonymous access by default. The vulnerability was resolved in version 1.7.0.12, after which the product was renamed “UplusFtp.”"
+          },
+          {
+            "lang": "es",
+            "value": "Las versiones de EasyFTP Server hasta la 1.7.0.11 contienen una vulnerabilidad de desbordamiento de búfer en la pila del analizador de comandos FTP. Al procesar el comando CWD (Cambiar directorio de trabajo), el servidor no valida correctamente la longitud de la cadena de entrada, lo que permite a los atacantes sobrescribir la memoria en la pila. Esta falla permite la ejecución remota de código sin autenticación, ya que EasyFTP permite el acceso anónimo por defecto. La vulnerabilidad se resolvió en la versión 1.7.0.12, tras la cual el producto pasó a llamarse \"UplusFtp\"."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-121"
+              }
+            ],
+            "source": "disclosure@vulncheck.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:easyftp_server_project:easyftp_server:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "C588FCA3-A10E-4DD4-9042-5EF4748FAEBA",
+                    "versionEndExcluding": "1.7.0.12"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://paulmakowski.wordpress.com/2010/02/28/increasing-payload-size-w-return-address-overwrite/",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://raw.githubusercontent.com/rapid7/metasploit-framework/master/modules/exploits/windows/ftp/easyftp_cwd_fixret.rb",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Exploit"
+            ]
+          },
+          {
+            "url": "https://seclists.org/bugtraq/2010/Feb/202",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Exploit",
+              "Mailing List",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.exploit-db.com/exploits/11668",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Exploit",
+              "VDB Entry"
+            ]
+          },
+          {
+            "url": "https://www.exploit-db.com/exploits/12312",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Exploit",
+              "VDB Entry"
+            ]
+          },
+          {
+            "url": "https://www.exploit-db.com/exploits/14402",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Exploit",
+              "VDB Entry"
+            ]
+          },
+          {
+            "url": "https://www.exploit-db.com/exploits/16737",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Exploit",
+              "VDB Entry"
+            ]
+          },
+          {
+            "url": "https://www.vulncheck.com/advisories/easyftp-server-cwd-command-stack-buffer-overflow",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 7
+    },
+    {
+      "cve_id": "CVE-2010-20122",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-08-21",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-08-21",
+        "description": "Xftp FTP Client version up to and including 3.0 (build 0238) contain a stack-based buffer overflow vulnerability triggered by a maliciously crafted PWD response from an FTP server. When the client connects to a server and receives an overly long directory string in response to the PWD command, the client fails to properly validate the length of the input before copying it into a fixed-size buffer. This results in memory corruption and allows remote attackers to execute arbitrary code on the client system.",
+        "title": "Xftp FTP Client version up to and including 3.0 (build 0238) contain a stack-based buffer overflow vulnerability triggered by a malicious...",
+        "attack_type": "Buffer Overflow",
+        "cvss_max": 9.3
+      },
+      "cve": {
+        "id": "CVE-2010-20122",
+        "sourceIdentifier": "disclosure@vulncheck.com",
+        "published": "2025-08-21T21:15:34.680",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Xftp FTP Client version up to and including 3.0 (build 0238) contain a stack-based buffer overflow vulnerability triggered by a maliciously crafted PWD response from an FTP server. When the client connects to a server and receives an overly long directory string in response to the PWD command, the client fails to properly validate the length of the input before copying it into a fixed-size buffer. This results in memory corruption and allows remote attackers to execute arbitrary code on the client system."
+          },
+          {
+            "lang": "es",
+            "value": "Las versiones de Xftp FTP Client hasta la 3.0 (compilación 0238) contienen una vulnerabilidad de desbordamiento de búfer en la pila, desencadenada por una respuesta PWD maliciosa desde un servidor FTP. Cuando el cliente se conecta a un servidor y recibe una cadena de directorio excesivamente larga en respuesta al comando PWD, no valida correctamente la longitud de la entrada antes de copiarla en un búfer de tamaño fijo. Esto provoca corrupción de memoria y permite a atacantes remotos ejecutar código arbitrario en el sistema cliente."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-121"
+              }
+            ],
+            "source": "disclosure@vulncheck.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://raw.githubusercontent.com/rapid7/metasploit-framework/master/modules/exploits/windows/ftp/xftp_client_pwd.rb",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://web.archive.org/web/20090312072219/http://www.netsarang.com/download/down_xft3.html",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://www.exploit-db.com/exploits/12332",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://www.exploit-db.com/exploits/16739",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://www.vulncheck.com/advisories/xftp-ftp-client-pwd-response-buffer-overflow",
+            "source": "disclosure@vulncheck.com"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 8
+    },
+    {
+      "cve_id": "CVE-2015-2055",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 0.10211,
+            "score_date": "2025-03-30"
+          },
+          "current": {
+            "score": 0.20905,
+            "score_date": "2025-08-21"
+          },
+          "delta": 0.10694
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2015-02-23",
+        "description": "Zhone GPON 2520 with firmware R4.0.2.566b allows remote attackers to cause a denial of service via a long string in the oldpassword parameter.",
+        "title": "zhone_technologies gpon_2520_firmware DoS",
+        "vendor": "zhone_technologies",
+        "product": "gpon_2520_firmware",
+        "attack_type": "DoS",
+        "cvss_max": 7.8
+      },
+      "cve": {
+        "id": "CVE-2015-2055",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2015-02-23T17:59:12.167",
+        "lastModified": "2026-05-06T22:30:45.220",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Zhone GPON 2520 with firmware R4.0.2.566b allows remote attackers to cause a denial of service via a long string in the oldpassword parameter."
+          },
+          {
+            "lang": "es",
+            "value": "Zhone GPON 2520 con firmware R4.0.2.566b permite a atacantes remotos causar una denegación de servicio a través de una cadena larga en el parámetro oldpassword."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV2": [
+            {
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:L/Au:N/C:N/I:N/A:C",
+                "baseScore": 7.8,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "baseSeverity": "HIGH",
+              "exploitabilityScore": 10.0,
+              "impactScore": 6.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-20"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:zhone_technologies:gpon_2520_firmware:r4.0.2.566b:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "03FD62BD-9903-4538-B473-0A7EE193F144"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:zhone_technologies:gpon_2520:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "5EAB160F-CD87-43C2-9613-D4D94D4577B4"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "http://www.exploit-db.com/exploits/35859",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit"
+            ]
+          },
+          {
+            "url": "http://www.securityfocus.com/bid/74876",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          }
+        ]
+      },
+      "risk_score": 81,
+      "rank": 9
+    },
+    {
+      "cve_id": "CVE-2025-3128",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-08-21",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-08-21",
+        "description": "A remote unauthenticated attacker who has bypassed authentication could \nexecute arbitrary OS commands to disclose, tamper with, destroy or \ndelete information in Mitsubishi Electric smartRTU, or cause a denial-of\n service condition on the product.",
+        "title": "A remote unauthenticated attacker who has bypassed authentication could execute arbitrary OS commands to disclose, tamper with, destroy o...",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-3128",
+        "sourceIdentifier": "ics-cert@hq.dhs.gov",
+        "published": "2025-08-21T20:15:32.840",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A remote unauthenticated attacker who has bypassed authentication could \nexecute arbitrary OS commands to disclose, tamper with, destroy or \ndelete information in Mitsubishi Electric smartRTU, or cause a denial-of\n service condition on the product."
+          },
+          {
+            "lang": "es",
+            "value": "Un atacante remoto no autenticado que haya eludido la autenticación podría ejecutar comandos arbitrarios del sistema operativo para revelar, alterar, destruir o eliminar información en Mitsubishi Electric smartRTU, o provocar una condición de denegación de servicio en el producto."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "ics-cert@hq.dhs.gov",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "ics-cert@hq.dhs.gov",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-78"
+              }
+            ],
+            "source": "ics-cert@hq.dhs.gov"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://emea.mitsubishielectric.com/fa/products/quality/quality-news-information",
+            "source": "ics-cert@hq.dhs.gov"
+          },
+          {
+            "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-25-105-09",
+            "source": "ics-cert@hq.dhs.gov"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 10
+    },
+    {
+      "cve_id": "CVE-2025-52352",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-08-21",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-08-21",
+        "description": "Aikaan IoT management platform v3.25.0325-5-g2e9c59796 provides a configuration to disable user sign-up in distributed deployments by hiding the sign-up option on the login page UI. However, the sign-up API endpoint remains publicly accessible and functional, allowing unauthenticated users to register accounts via APIs even when the feature is disabled. This leads to authentication bypass and unauthorized access to admin portals, violating intended access controls.",
+        "title": "Aikaan IoT management platform v3.25.0325-5-g2e9c59796 provides a configuration to disable user sign-up in distributed deployments by hid...",
+        "attack_type": "Auth Bypass",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-52352",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2025-08-21T18:15:34.783",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Aikaan IoT management platform v3.25.0325-5-g2e9c59796 provides a configuration to disable user sign-up in distributed deployments by hiding the sign-up option on the login page UI. However, the sign-up API endpoint remains publicly accessible and functional, allowing unauthenticated users to register accounts via APIs even when the feature is disabled. This leads to authentication bypass and unauthorized access to admin portals, violating intended access controls."
+          },
+          {
+            "lang": "es",
+            "value": "Aikaan IoT management platform v3.25.0325-5-g2e9c59796 ofrece una configuración para deshabilitar el registro de usuarios en implementaciones distribuidas, ocultando la opción de registro en la interfaz de usuario de la página de inicio de sesión. Sin embargo, el endpoint de la API de registro permanece accesible públicamente y funcional, lo que permite que usuarios no autenticados registren cuentas mediante las API incluso cuando la función está deshabilitada. Esto provoca la omisión de la autenticación y el acceso no autorizado a los portales de administración, lo que viola los controles de acceso previstos."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-862"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/Shubhangborkar/aikaan-vulnerabilities/blob/main/cve4-signup-api-bypass.md",
+            "source": "cve@mitre.org"
+          },
+          {
+            "url": "https://www.aikaan.io",
+            "source": "cve@mitre.org"
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 11
+    },
+    {
+      "cve_id": "CVE-2025-53795",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-08-21",
+          "previous_max": null,
+          "current_max": 9.1
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-08-21",
+        "description": "Improper authorization in Microsoft PC Manager allows an unauthorized attacker to elevate privileges over a network.",
+        "title": "microsoft pc_manager privilege escalation",
+        "vendor": "microsoft",
+        "product": "pc_manager",
+        "attack_type": "privilege escalation",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-53795",
+        "sourceIdentifier": "secure@microsoft.com",
+        "published": "2025-08-21T20:15:45.707",
+        "lastModified": "2025-08-25T18:37:39.303",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Improper authorization in Microsoft PC Manager allows an unauthorized attacker to elevate privileges over a network."
+          },
+          {
+            "lang": "es",
+            "value": "Una autorización incorrecta en Microsoft PC Manager permite que un atacante no autorizado eleve privilegios en una red."
+          }
+        ],
+        "cveTags": [
+          {
+            "sourceIdentifier": "secure@microsoft.com",
+            "tags": [
+              "exclusively-hosted-service"
+            ]
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+                "baseScore": 9.1,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "secure@microsoft.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.2
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-285"
+              }
+            ],
+            "source": "secure@microsoft.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:microsoft:pc_manager:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "0873A928-113D-4A91-9150-CE194C8C230F"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-53795",
+            "source": "secure@microsoft.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 12
+    },
+    {
+      "cve_id": "CVE-2025-57761",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-08-21",
+          "previous_max": null,
+          "current_max": 9.4
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-08-21",
+        "description": "WeGIA is a Web manager for charitable institutions. Prior to 3.4.10, there is a SQL Injection vulnerability in the /html/funcionario/dependente_remover.php endpoint, specifically in the id_funcionario parameter. This vulnerability allows attackers to execute arbitrary SQL commands, compromising the confidentiality, integrity, and availability of the database. This vulnerability is fixed in 3.4.10.",
+        "title": "wegia wegia SQL Injection",
+        "vendor": "wegia",
+        "product": "wegia",
+        "attack_type": "SQL Injection",
+        "cvss_max": 9.4
+      },
+      "cve": {
+        "id": "CVE-2025-57761",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2025-08-21T17:15:31.793",
+        "lastModified": "2025-08-22T21:13:42.327",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "WeGIA is a Web manager for charitable institutions. Prior to 3.4.10, there is a SQL Injection vulnerability in the /html/funcionario/dependente_remover.php endpoint, specifically in the id_funcionario parameter. This vulnerability allows attackers to execute arbitrary SQL commands, compromising the confidentiality, integrity, and availability of the database. This vulnerability is fixed in 3.4.10."
+          },
+          {
+            "lang": "es",
+            "value": "WeGIA es un gestor web para instituciones benéficas. En versiones anteriores a la 3.4.10, existía una vulnerabilidad de inyección SQL en el endpoint /html/funcionario/dependente_remover.php, concretamente en el parámetro id_funcionario. Esta vulnerabilidad permite a los atacantes ejecutar comandos SQL arbitrarios, comprometiendo la confidencialidad, integridad y disponibilidad de la base de datos. Esta vulnerabilidad se corrigió en la 3.4.10."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 8.8,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.4,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-89"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:wegia:wegia:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "837A63A9-3482-4E9A-9276-E61604ED7CC9",
+                    "versionEndExcluding": "3.4.10"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "http://github.com/LabRedesCefetRJ/WeGIA/commit/baec5c70620b05a09b130a94db8216e3bfe7e4ce",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://github.com/LabRedesCefetRJ/WeGIA/security/advisories/GHSA-fxwc-r5m4-hj62",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Exploit",
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 13
+    }
+  ],
+  "source": "https://www.cvelogic.com/threat-intelligence/2025-08-21"
+}

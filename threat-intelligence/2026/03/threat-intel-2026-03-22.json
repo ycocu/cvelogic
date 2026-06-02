@@ -1,0 +1,154 @@
+{
+  "schema_version": "2.2",
+  "generated_at": "2026-06-02T07:34:43Z",
+  "day": "2026-03-22",
+  "window": {
+    "utc_start": "2026-03-22",
+    "utc_end": "2026-03-22",
+    "days": 1
+  },
+  "summary": {
+    "brief": "1 material risk changes today across KEV, exploits, critical disclosures, and EPSS movers.",
+    "bullets": [
+      "1 material risk changes today across KEV, exploits, critical disclosures, and EPSS movers."
+    ],
+    "counts": {
+      "cves": 1,
+      "kev": 0,
+      "exploit": 0,
+      "epss": 0,
+      "cvss": 1,
+      "patch": 0
+    }
+  },
+  "cves": [
+    {
+      "cve_id": "CVE-2019-25614",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-03-22",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-03-22",
+        "description": "Free Float FTP 1.0 contains a buffer overflow vulnerability in the STOR command handler that allows remote attackers to execute arbitrary code by sending a crafted STOR request with an oversized payload. Attackers can authenticate with anonymous credentials and send a malicious STOR command containing 247 bytes of padding followed by a return address and shellcode to trigger code execution on the FTP server.",
+        "title": "freefloat freefloat_ftp_server Code Execution",
+        "vendor": "freefloat",
+        "product": "freefloat_ftp_server",
+        "attack_type": "Code Execution",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2019-25614",
+        "sourceIdentifier": "disclosure@vulncheck.com",
+        "published": "2026-03-22T14:16:29.930",
+        "lastModified": "2026-03-23T19:42:13.470",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Free Float FTP 1.0 contains a buffer overflow vulnerability in the STOR command handler that allows remote attackers to execute arbitrary code by sending a crafted STOR request with an oversized payload. Attackers can authenticate with anonymous credentials and send a malicious STOR command containing 247 bytes of padding followed by a return address and shellcode to trigger code execution on the FTP server."
+          },
+          {
+            "lang": "es",
+            "value": "Free Float FTP 1.0 contiene una vulnerabilidad de desbordamiento de búfer en el gestor del comando STOR que permite a atacantes remotos ejecutar código arbitrario enviando una solicitud STOR manipulada con una carga útil excesiva. Los atacantes pueden autenticarse con credenciales anónimas y enviar un comando STOR malicioso que contenga 247 bytes de relleno seguidos de una dirección de retorno y shellcode para desencadenar la ejecución de código en el servidor FTP."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-787"
+              }
+            ],
+            "source": "disclosure@vulncheck.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:freefloat:freefloat_ftp_server:1.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "A9C3D4BD-07C8-4E11-8B6C-6CBBA66F0725"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "http://www.freefloat.com/software/freefloatftpserver.zip",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Broken Link"
+            ]
+          },
+          {
+            "url": "https://www.exploit-db.com/exploits/46763",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory",
+              "VDB Entry"
+            ]
+          },
+          {
+            "url": "https://www.vulncheck.com/advisories/free-float-ftp-stor-command-remote-buffer-overflow",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 1
+    }
+  ],
+  "source": "https://www.cvelogic.com/threat-intelligence/2026-03-22"
+}

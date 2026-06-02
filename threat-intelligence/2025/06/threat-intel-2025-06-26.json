@@ -1,0 +1,2095 @@
+{
+  "schema_version": "2.2",
+  "generated_at": "2026-06-02T07:32:57Z",
+  "day": "2025-06-26",
+  "window": {
+    "utc_start": "2025-06-26",
+    "utc_end": "2025-06-26",
+    "days": 1
+  },
+  "summary": {
+    "brief": "Freesshd: public exploit or PoC linked (DoS) · 10 new critical disclosures — review patch status on exposed services.",
+    "bullets": [
+      "Freesshd: public exploit or PoC linked (DoS)",
+      "10 new critical disclosures — review patch status on exposed services."
+    ],
+    "counts": {
+      "cves": 18,
+      "kev": 0,
+      "exploit": 8,
+      "epss": 0,
+      "cvss": 10,
+      "patch": 0
+    }
+  },
+  "cves": [
+    {
+      "cve_id": "CVE-2019-9978",
+      "signal_types": [
+        "EXP"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": {
+          "ref_published": "2025-06-26"
+        },
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2019-03-24",
+        "description": "The social-warfare plugin before 3.5.3 for WordPress has stored XSS via the wp-admin/admin-post.php?swp_debug=load_options swp_url parameter, as exploited in the wild in March 2019. This affects Social Warfare and Social Warfare Pro.",
+        "title": "WordPress Social Warfare Plugin Cross-Site Scripting (XSS) Vulnerability",
+        "vendor": "warfareplugins",
+        "product": "social_warfare",
+        "attack_type": "XSS",
+        "cvss_max": 6.1
+      },
+      "cve": {
+        "id": "CVE-2019-9978",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2019-03-24T15:29:00.243",
+        "lastModified": "2025-11-07T19:33:51.637",
+        "vulnStatus": "Analyzed",
+        "cisaExploitAdd": "2021-11-03",
+        "cisaActionDue": "2022-05-03",
+        "cisaRequiredAction": "Apply updates per vendor instructions.",
+        "cisaVulnerabilityName": "WordPress Social Warfare Plugin Cross-Site Scripting (XSS) Vulnerability",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The social-warfare plugin before 3.5.3 for WordPress has stored XSS via the wp-admin/admin-post.php?swp_debug=load_options swp_url parameter, as exploited in the wild in March 2019. This affects Social Warfare and Social Warfare Pro."
+          },
+          {
+            "lang": "es",
+            "value": "El plugin social-warfare, en versiones anteriores a la 3.5.3 para WordPress, tiene Cross-Site Scripting (XSS) persistente mediante el parámetro swp_url en wp-admin/admin-post.php?swp_debug=load_options, tal y como se explotó \"in the wild\" en marzo de 2019. Esto afecta a Social Warfare y Social Warfare Pro."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV2": [
+            {
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:M/Au:N/C:N/I:P/A:N",
+                "baseScore": 4.3,
+                "baseSeverity": "MEDIUM"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "baseSeverity": "MEDIUM",
+              "exploitabilityScore": 8.6,
+              "impactScore": 2.9
+            }
+          ],
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+                "baseScore": 6.1,
+                "baseSeverity": "MEDIUM"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 2.7
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+                "baseScore": 6.1,
+                "baseSeverity": "MEDIUM"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 2.7
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-79"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          },
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-79"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:warfareplugins:social_warfare:*:*:*:*:*:wordpress:*:*",
+                    "matchCriteriaId": "83C18979-2FA0-41FD-937B-D36626C39424",
+                    "versionEndExcluding": "3.5.3"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:warfareplugins:social_warfare_pro:*:*:*:*:*:wordpress:*:*",
+                    "matchCriteriaId": "36C5708C-0DF3-4426-BEDE-4E8B94AA36BD",
+                    "versionEndExcluding": "3.5.3"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "http://packetstormsecurity.com/files/152722/Wordpress-Social-Warfare-Remote-Code-Execution.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory",
+              "VDB Entry"
+            ]
+          },
+          {
+            "url": "http://packetstormsecurity.com/files/163680/WordPress-Social-Warfare-3.5.2-Remote-Code-Execution.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory",
+              "VDB Entry"
+            ]
+          },
+          {
+            "url": "https://blog.sucuri.net/2019/03/zero-day-stored-xss-in-social-warfare.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://twitter.com/warfareplugins/status/1108852747099652099",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://wordpress.org/plugins/social-warfare/#developers",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Product"
+            ]
+          },
+          {
+            "url": "https://wpvulndb.com/vulnerabilities/9238",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Broken Link",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.cybersecurity-help.cz/vdb/SB2019032105",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.exploit-db.com/exploits/46794/",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory",
+              "VDB Entry"
+            ]
+          },
+          {
+            "url": "https://www.pluginvulnerabilities.com/2019/03/21/full-disclosure-of-settings-change-persistent-cross-site-scripting-xss-vulnerability-in-social-warfare/",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.wordfence.com/blog/2019/03/unpatched-zero-day-vulnerability-in-social-warfare-plugin-exploited-in-the-wild/",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "http://seclists.org/fulldisclosure/2025/Jun/1",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Mailing List"
+            ]
+          },
+          {
+            "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2019-9978",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "US Government Resource"
+            ]
+          }
+        ]
+      },
+      "risk_score": 78,
+      "rank": 1
+    },
+    {
+      "cve_id": "CVE-2024-0723",
+      "signal_types": [
+        "EXP"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": {
+          "ref_published": "2025-06-26"
+        },
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2024-01-19",
+        "description": "A vulnerability was found in freeSSHd 1.0.9 on Windows. It has been classified as problematic. This affects an unknown part. The manipulation leads to denial of service. It is possible to initiate the attack remotely. The exploit has been disclosed to the public and may be used. The associated identifier of this vulnerability is VDB-251547.",
+        "title": "freesshd freesshd DoS",
+        "vendor": "freesshd",
+        "product": "freesshd",
+        "attack_type": "DoS",
+        "cvss_max": 7.5
+      },
+      "cve": {
+        "id": "CVE-2024-0723",
+        "sourceIdentifier": "cna@vuldb.com",
+        "published": "2024-01-19T17:15:08.573",
+        "lastModified": "2024-11-21T08:47:13.300",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A vulnerability was found in freeSSHd 1.0.9 on Windows. It has been classified as problematic. This affects an unknown part. The manipulation leads to denial of service. It is possible to initiate the attack remotely. The exploit has been disclosed to the public and may be used. The associated identifier of this vulnerability is VDB-251547."
+          },
+          {
+            "lang": "es",
+            "value": "Se encontró una vulnerabilidad en freeSSHd 1.0.9 en Windows. Ha sido clasificada como problemática. Esto afecta a una parte desconocida. La manipulación conduce a la denegación del servicio. Es posible iniciar el ataque de forma remota. El exploit ha sido divulgado al público y puede utilizarse. El identificador asociado de esta vulnerabilidad es VDB-251547."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV2": [
+            {
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+                "baseScore": 5.0,
+                "baseSeverity": "MEDIUM"
+              },
+              "source": "cna@vuldb.com",
+              "type": "Secondary",
+              "baseSeverity": "MEDIUM",
+              "exploitabilityScore": 10.0,
+              "impactScore": 2.9
+            }
+          ],
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+                "baseScore": 5.3,
+                "baseSeverity": "MEDIUM"
+              },
+              "source": "cna@vuldb.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 1.4
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                "baseScore": 7.5,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 3.6
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-404"
+              }
+            ],
+            "source": "cna@vuldb.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:freesshd:freesshd:1.0.9:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "D0856F72-9F1E-425C-B434-BB9DDF88BED6"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "A2572D17-1DE6-457B-99CC-64AFD54487EA"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://packetstormsecurity.com/files/176545/freeSSHd-1.0.9-Denial-Of-Service.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory",
+              "VDB Entry"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/?ctiid.251547",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Permissions Required"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/?id.251547",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Permissions Required"
+            ]
+          }
+        ]
+      },
+      "risk_score": 78,
+      "rank": 2
+    },
+    {
+      "cve_id": "CVE-2025-34046",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-06-26",
+          "previous_max": null,
+          "current_max": 10.0
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-06-26",
+        "description": "An unauthenticated file upload vulnerability exists in the Fanwei E-Office <= v9.4 web management interface. The vulnerability affects the /general/index/UploadFile.php endpoint, which improperly validates uploaded files when invoked with certain parameters (uploadType=eoffice_logo or uploadType=theme). An attacker can exploit this flaw by sending a crafted HTTP POST request to upload arbitrary files without requiring authentication. Successful exploitation could enable remote code execution on the affected server, leading to complete compromise of the web application and potentially the underlying system. Exploitation evidence was observed by the Shadowserver Foundation on 2025-02-05 UTC.",
+        "title": "An unauthenticated file upload vulnerability exists in the Fanwei E-Office <= v9.4 web management interface.",
+        "cvss_max": 10.0
+      },
+      "cve": {
+        "id": "CVE-2025-34046",
+        "sourceIdentifier": "disclosure@vulncheck.com",
+        "published": "2025-06-26T16:15:27.987",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "An unauthenticated file upload vulnerability exists in the Fanwei E-Office <= v9.4 web management interface. The vulnerability affects the /general/index/UploadFile.php endpoint, which improperly validates uploaded files when invoked with certain parameters (uploadType=eoffice_logo or uploadType=theme). An attacker can exploit this flaw by sending a crafted HTTP POST request to upload arbitrary files without requiring authentication. Successful exploitation could enable remote code execution on the affected server, leading to complete compromise of the web application and potentially the underlying system. Exploitation evidence was observed by the Shadowserver Foundation on 2025-02-05 UTC."
+          },
+          {
+            "lang": "es",
+            "value": "Existe una vulnerabilidad de carga de archivos no autenticados en la interfaz de administración web de Fanwei E-Office (versión anterior a la v9.4). La vulnerabilidad afecta al endpoint /general/index/UploadFile.php, que valida incorrectamente los archivos subidos al invocarse con ciertos parámetros (uploadType=eoffice_logo o uploadType=theme). Un atacante puede explotar esta vulnerabilidad enviando una solicitud HTTP POST manipulada para cargar archivos arbitrarios sin requerir autenticación. Una explotación exitosa podría permitir la ejecución remota de código en el servidor afectado, lo que comprometería por completo la aplicación web y, potencialmente, el sistema subyacente."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 10.0,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-434"
+              }
+            ],
+            "source": "disclosure@vulncheck.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/M0ge/CNVD-2021-49104-Fanwei-Eoffice-fileupload/blob/main/eoffice_fileupload.py",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://github.com/projectdiscovery/nuclei-templates/blob/main/http/cnvd/2021/CNVD-2021-49104.yaml",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://vulncheck.com/advisories/fanwei-eoffice-file-upload",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://www.cnvd.org.cn/flaw/show/CNVD-2021-49104",
+            "source": "disclosure@vulncheck.com"
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 3
+    },
+    {
+      "cve_id": "CVE-2014-0468",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-06-26",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-06-26",
+        "description": "Vulnerability in fusionforge in the shipped Apache configuration, where the web server may execute scripts that \nthe users would have uploaded in their raw SCM repositories (SVN, Git, \nBzr...). This issue affects fusionforge: before 5.3+20140506.",
+        "title": "fusionforge fusionforge",
+        "vendor": "fusionforge",
+        "product": "fusionforge",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2014-0468",
+        "sourceIdentifier": "security@debian.org",
+        "published": "2025-06-26T21:15:27.527",
+        "lastModified": "2025-08-06T16:34:59.133",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Vulnerability in fusionforge in the shipped Apache configuration, where the web server may execute scripts that \nthe users would have uploaded in their raw SCM repositories (SVN, Git, \nBzr...). This issue affects fusionforge: before 5.3+20140506."
+          },
+          {
+            "lang": "es",
+            "value": "Vulnerabilidad en fusionforge en la configuración de Apache de fábrica, donde el servidor web podría ejecutar scripts que los usuarios habrían subido a sus repositorios SCM sin procesar (SVN, Git, Bzr, etc.). Este problema afecta a fusionforge: versiones anteriores a 5.3+20140506."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-434"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:fusionforge:fusionforge:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "9381B16D-C319-4E04-A4F5-F76F10D24E0F",
+                    "versionEndExcluding": "5.3\\+20140506."
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "http://lists.fusionforge.org/pipermail/fusionforge-general/2014-March/002645.html",
+            "source": "security@debian.org",
+            "tags": [
+              "Broken Link"
+            ]
+          },
+          {
+            "url": "https://web.archive.org/web/20151019035734/http://lists.fusionforge.org/pipermail/fusionforge-general/2014-March/002645.html",
+            "source": "security@debian.org",
+            "tags": [
+              "Mailing List",
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 4
+    },
+    {
+      "cve_id": "CVE-2014-7210",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-06-26",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-06-26",
+        "description": "pdns specific as packaged in Debian in version before 3.3.1-1 creates a too privileged MySQL user. It was discovered that the maintainer scripts of pdns-backend-mysql grant too wide database permissions for the pdns user. Other backends\nare not affected.",
+        "title": "debian debian_linux privilege escalation",
+        "vendor": "debian",
+        "product": "pdns",
+        "attack_type": "privilege escalation",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2014-7210",
+        "sourceIdentifier": "security@debian.org",
+        "published": "2025-06-26T21:15:27.757",
+        "lastModified": "2025-08-06T16:38:04.910",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "pdns specific as packaged in Debian in version before 3.3.1-1 creates a too privileged MySQL user. It was discovered that the maintainer scripts of pdns-backend-mysql grant too wide database permissions for the pdns user. Other backends\nare not affected."
+          },
+          {
+            "lang": "es",
+            "value": "El paquete específico de pdns, tal como se incluye en Debian en versiones anteriores a la 3.3.1-1, crea un usuario MySQL con demasiados privilegios. Se descubrió que los scripts de mantenimiento de pdns-backend-mysql otorgan permisos de base de datos demasiado amplios al usuario pdns. Los demás backends no se ven afectados."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-276"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:debian:pdns:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "C956BF6D-B196-45E3-923E-70E08CE9D36B",
+                    "versionEndExcluding": "3.3.1-1"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:debian:debian_linux:7.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "16F59A04-14CF-49E2-9973-645477EA09DA"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://lists.debian.org/debian-lts-announce/2016/05/msg00046.html",
+            "source": "security@debian.org",
+            "tags": [
+              "Mailing List",
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://salsa.debian.org/debian/pdns/-/commit/f0de6b3583039bb63344fbd5eb246939264d7b05",
+            "source": "security@debian.org",
+            "tags": [
+              "Patch"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 5
+    },
+    {
+      "cve_id": "CVE-2015-0842",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-06-26",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-06-26",
+        "description": "yubiserver before 0.6 is prone to SQL injection issues, potentially leading to an authentication bypass.",
+        "title": "debian yubiserver Auth Bypass",
+        "vendor": "debian",
+        "product": "yubiserver",
+        "attack_type": "Auth Bypass",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2015-0842",
+        "sourceIdentifier": "security@debian.org",
+        "published": "2025-06-26T22:15:24.503",
+        "lastModified": "2025-08-06T15:38:05.563",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "yubiserver before 0.6 is prone to SQL injection issues, potentially leading to an authentication bypass."
+          },
+          {
+            "lang": "es",
+            "value": "yubiserver anterior a 0.6 es propenso a problemas de inyección de SQL, lo que puede llevar a una omisión de autenticación."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-89"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:debian:yubiserver:0.2-2:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "D614D391-8673-4584-8724-4FE5BCA49181"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:debian:yubiserver:0.5-2:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "8AB6A149-B93B-4950-A2C3-40CC5707A902"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "http://www.include.gr/debian/yubiserver/#changelog",
+            "source": "security@debian.org",
+            "tags": [
+              "Release Notes"
+            ]
+          },
+          {
+            "url": "https://bugs.debian.org/796495",
+            "source": "security@debian.org",
+            "tags": [
+              "Issue Tracking",
+              "Mailing List",
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 6
+    },
+    {
+      "cve_id": "CVE-2015-0843",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-06-26",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-06-26",
+        "description": "yubiserver before 0.6 is prone to buffer overflows due to misuse of sprintf.",
+        "title": "debian yubiserver Buffer Overflow",
+        "vendor": "debian",
+        "product": "yubiserver",
+        "attack_type": "Buffer Overflow",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2015-0843",
+        "sourceIdentifier": "security@debian.org",
+        "published": "2025-06-26T22:15:24.613",
+        "lastModified": "2025-08-06T15:39:51.850",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "yubiserver before 0.6 is prone to buffer overflows due to misuse of sprintf."
+          },
+          {
+            "lang": "es",
+            "value": "yubiserver anterior a 0.6 es propenso a desbordamientos de búfer debido al mal uso de sprintf."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-120"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:debian:yubiserver:0.2-2:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "D614D391-8673-4584-8724-4FE5BCA49181"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:debian:yubiserver:0.5-2:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "8AB6A149-B93B-4950-A2C3-40CC5707A902"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "http://www.include.gr/debian/yubiserver/#changelog",
+            "source": "security@debian.org",
+            "tags": [
+              "Release Notes"
+            ]
+          },
+          {
+            "url": "https://bugs.debian.org/796495",
+            "source": "security@debian.org",
+            "tags": [
+              "Issue Tracking",
+              "Mailing List",
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 7
+    },
+    {
+      "cve_id": "CVE-2022-1257",
+      "signal_types": [
+        "EXP"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": {
+          "ref_published": "2025-06-26"
+        },
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2022-04-14",
+        "description": "Insecure storage of sensitive information vulnerability in MA for Linux, macOS, and Windows prior to 5.7.6 allows a local user to gain access to sensitive information through storage in ma.db. The sensitive information has been moved to encrypted database files.",
+        "title": "mcafee agent",
+        "vendor": "mcafee",
+        "product": "agent",
+        "cvss_max": 6.1
+      },
+      "cve": {
+        "id": "CVE-2022-1257",
+        "sourceIdentifier": "trellixpsirt@trellix.com",
+        "published": "2022-04-14T15:15:08.007",
+        "lastModified": "2024-11-21T06:40:21.407",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Insecure storage of sensitive information vulnerability in MA for Linux, macOS, and Windows prior to 5.7.6 allows a local user to gain access to sensitive information through storage in ma.db. The sensitive information has been moved to encrypted database files."
+          },
+          {
+            "lang": "es",
+            "value": "Una vulnerabilidad de almacenamiento no seguro de información confidencial en MA para Linux, macOS y Windows versiones anteriores a 5.7.6 permite a un usuario local conseguir acceso a información confidencial mediante almacenamiento en ma.db. La información confidencial ha sido trasladada a archivos de base de datos cifrados"
+          }
+        ],
+        "metrics": {
+          "cvssMetricV2": [
+            {
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:L/AC:L/Au:N/C:P/I:N/A:N",
+                "baseScore": 2.1,
+                "baseSeverity": "LOW"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "baseSeverity": "LOW",
+              "exploitabilityScore": 3.9,
+              "impactScore": 2.9
+            }
+          ],
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:L/A:N",
+                "baseScore": 6.1,
+                "baseSeverity": "MEDIUM"
+              },
+              "source": "trellixpsirt@trellix.com",
+              "type": "Secondary",
+              "exploitabilityScore": 1.8,
+              "impactScore": 4.2
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+                "baseScore": 5.5,
+                "baseSeverity": "MEDIUM"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 1.8,
+              "impactScore": 3.6
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-922"
+              }
+            ],
+            "source": "trellixpsirt@trellix.com"
+          },
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-922"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:mcafee:agent:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "6F2B08BA-26B7-475F-86CF-D337717316C1",
+                    "versionEndExcluding": "5.7.6"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://kc.mcafee.com/corporate/index?page=content&id=SB10382",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          }
+        ]
+      },
+      "risk_score": 78,
+      "rank": 8
+    },
+    {
+      "cve_id": "CVE-2024-52928",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-06-26",
+          "previous_max": null,
+          "current_max": 9.6
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-06-26",
+        "description": "Arc before 1.26.1 on Windows has a bypass issue in the site settings that allows websites (with previously granted permissions) to add new permissions when the user clicks anywhere on the website.",
+        "title": "thebrowser arc",
+        "vendor": "thebrowser",
+        "product": "arc",
+        "cvss_max": 9.6
+      },
+      "cve": {
+        "id": "CVE-2024-52928",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2025-06-26T17:15:30.287",
+        "lastModified": "2025-07-10T00:59:09.070",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Arc before 1.26.1 on Windows has a bypass issue in the site settings that allows websites (with previously granted permissions) to add new permissions when the user clicks anywhere on the website."
+          },
+          {
+            "lang": "es",
+            "value": "Arc anterior a 1.26.1 en Windows tiene un problema de derivación en la configuración del sitio que permite a los sitios web (con permisos previamente otorgados) agregar nuevos permisos cuando el usuario hace clic en cualquier parte del sitio web."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:L",
+                "baseScore": 9.6,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "cve@mitre.org",
+              "type": "Secondary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 6.0
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:L",
+                "baseScore": 8.3,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 5.5
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-284"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:thebrowser:arc:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "01CFBCD9-1996-4E14-96CE-2F3E13FC1D3F",
+                    "versionEndExcluding": "1.26.1"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "A2572D17-1DE6-457B-99CC-64AFD54487EA"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://arc.net/security/bulletins#windows-site-settings-bypass-cve-2024-52928",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://thebrowser.company",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Product"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 9
+    },
+    {
+      "cve_id": "CVE-2024-57708",
+      "signal_types": [
+        "EXP"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": {
+          "ref_published": "2025-06-26"
+        },
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-06-25",
+        "description": "An issue in OneTrust SDK v.6.33.0 allows a local attacker to cause a denial of service via the Object.setPrototypeOf, __proto__, and Object.assign components. NOTE: this is disputed by the Supplier who does not agree it is a prototype pollution vulnerability.",
+        "title": "An issue in OneTrust SDK v.6.33.0 allows a local attacker to cause a denial of service via the Object.setPrototypeOf, __proto__, and Obje...",
+        "attack_type": "DoS",
+        "cvss_max": 5.7
+      },
+      "cve": {
+        "id": "CVE-2024-57708",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2025-06-25T16:15:25.590",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "An issue in OneTrust SDK v.6.33.0 allows a local attacker to cause a denial of service via the Object.setPrototypeOf, __proto__, and Object.assign components. NOTE: this is disputed by the Supplier who does not agree it is a prototype pollution vulnerability."
+          },
+          {
+            "lang": "es",
+            "value": "Un problema en el SDK de OneTrust v.6.33.0 permite que un atacante local provoque una denegación de servicio mediante los componentes Object.setPrototypeOf, __proto__ y Object.assign. NOTA: El proveedor lo niega y no acepta que se trate de una vulnerabilidad de contaminación del prototipo."
+          }
+        ],
+        "cveTags": [
+          {
+            "sourceIdentifier": "cve@mitre.org",
+            "tags": [
+              "disputed"
+            ]
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:A/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+                "baseScore": 5.7,
+                "baseSeverity": "MEDIUM"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 2.1,
+              "impactScore": 3.6
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-400"
+              },
+              {
+                "lang": "en",
+                "value": "CWE-471"
+              },
+              {
+                "lang": "en",
+                "value": "CWE-915"
+              },
+              {
+                "lang": "en",
+                "value": "CWE-1321"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://discord.com/assets/oneTrust/v4/scripttemplates/6.33.0/otBannerSdk.js",
+            "source": "cve@mitre.org"
+          },
+          {
+            "url": "https://github.com/brotheralameen1/Discordforschool/security/advisories/GHSA-63xr-98vc-whx5",
+            "source": "cve@mitre.org"
+          },
+          {
+            "url": "https://packetstorm.news/files/id/201222/",
+            "source": "cve@mitre.org"
+          }
+        ]
+      },
+      "risk_score": 78,
+      "rank": 10
+    },
+    {
+      "cve_id": "CVE-2025-27218",
+      "signal_types": [
+        "EXP"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": {
+          "ref_published": "2025-06-26"
+        },
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-02-20",
+        "description": "Sitecore Experience Manager (XM) and Experience Platform (XP) 10.4 before KB1002844 allow remote code execution through insecure deserialization.",
+        "title": "Sitecore Experience Manager (XM) and Experience Platform (XP) 10.4 before KB1002844 allow remote code execution through insecure deserial...",
+        "attack_type": "RCE",
+        "cvss_max": 5.3
+      },
+      "cve": {
+        "id": "CVE-2025-27218",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2025-02-20T05:15:15.270",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Sitecore Experience Manager (XM) and Experience Platform (XP) 10.4 before KB1002844 allow remote code execution through insecure deserialization."
+          },
+          {
+            "lang": "es",
+            "value": "Sitecore Experience Manager (XM) y Experience Platform (XP) 10.4 antes de KB1002844 permiten la ejecución del código remoto a través de la deserialización insegura."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+                "baseScore": 5.3,
+                "baseSeverity": "MEDIUM"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 1.4
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-94"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://support.sitecore.com/kb?id=kb_article_view&sysparm_article=KB1003535",
+            "source": "cve@mitre.org"
+          }
+        ]
+      },
+      "risk_score": 78,
+      "rank": 11
+    },
+    {
+      "cve_id": "CVE-2025-30131",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-06-26",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-06-26",
+        "description": "An issue was discovered on IROAD Dashcam FX2 devices. An unauthenticated file upload endpoint can be leveraged to execute arbitrary commands by uploading a CGI-based webshell. Once a file is uploaded, the attacker can execute commands with root privileges, gaining full control over the dashcam. Additionally, by uploading a netcat (nc) binary, the attacker can establish a reverse shell, maintaining persistent remote and privileged access to the device. This allows complete device takeover.",
+        "title": "iroadau fx2_firmware privilege escalation",
+        "vendor": "iroadau",
+        "product": "fx2_firmware",
+        "attack_type": "privilege escalation",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-30131",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2025-06-26T17:15:30.743",
+        "lastModified": "2025-11-06T20:24:24.220",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "An issue was discovered on IROAD Dashcam FX2 devices. An unauthenticated file upload endpoint can be leveraged to execute arbitrary commands by uploading a CGI-based webshell. Once a file is uploaded, the attacker can execute commands with root privileges, gaining full control over the dashcam. Additionally, by uploading a netcat (nc) binary, the attacker can establish a reverse shell, maintaining persistent remote and privileged access to the device. This allows complete device takeover."
+          },
+          {
+            "lang": "es",
+            "value": "Se descubrió un problema en los dispositivos IROAD Dashcam FX2. Un endpoint de carga de archivos no autenticado puede utilizarse para ejecutar comandos arbitrarios cargando un webshell basado en CGI. Una vez cargado el archivo, el atacante puede ejecutar comandos con privilegios de root, obteniendo así control total sobre la dashcam. Además, al cargar un binario netcat (nc), el atacante puede establecer un shell inverso, manteniendo acceso remoto persistente y privilegiado al dispositivo. Esto permite el control total del dispositivo."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-434"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:iroadau:fx2_firmware:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "A1C21728-4D54-42DB-98C8-B0B7C7A38B2C"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:iroadau:fx2:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "8E62E438-2D69-401D-B5A8-B54565CE049E"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/geo-chen/IROAD?tab=readme-ov-file#finding-11---cve-2025-30131-unrestricted-webshell",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.iroadau.com.au/downloads/",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Product"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 12
+    },
+    {
+      "cve_id": "CVE-2025-34049",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-06-26",
+          "previous_max": null,
+          "current_max": 9.4
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-06-26",
+        "description": "An OS command injection vulnerability exists in the OptiLink ONT1GEW GPON router firmware version V2.1.11_X101 Build 1127.190306 and earlier. The router’s web management interface fails to properly sanitize user input in the target_addr parameter of the formTracert and formPing administrative endpoints. An authenticated attacker can inject arbitrary operating system commands, which are executed with root privileges, leading to remote code execution. Successful exploitation enables full compromise of the device. Exploitation evidence was observed by the Shadowserver Foundation on 2025-02-04 UTC.",
+        "title": "An OS command injection vulnerability exists in the OptiLink ONT1GEW GPON router firmware version V2.1.11_X101 Build 1127.190306 and earl...",
+        "attack_type": "Command Injection",
+        "cvss_max": 9.4
+      },
+      "cve": {
+        "id": "CVE-2025-34049",
+        "sourceIdentifier": "disclosure@vulncheck.com",
+        "published": "2025-06-26T16:15:28.413",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "An OS command injection vulnerability exists in the OptiLink ONT1GEW GPON router firmware version V2.1.11_X101 Build 1127.190306 and earlier. The router’s web management interface fails to properly sanitize user input in the target_addr parameter of the formTracert and formPing administrative endpoints. An authenticated attacker can inject arbitrary operating system commands, which are executed with root privileges, leading to remote code execution. Successful exploitation enables full compromise of the device. Exploitation evidence was observed by the Shadowserver Foundation on 2025-02-04 UTC."
+          },
+          {
+            "lang": "es",
+            "value": "Existe una vulnerabilidad de inyección de comandos del sistema operativo en el firmware del router OptiLink ONT1GEW GPON, versión V2.1.11_X101, compilación 1127.190306 y anteriores. La interfaz de administración web del router no depura correctamente la entrada del usuario en el parámetro target_addr de los endpoints administrativos formTracert y formPing. Un atacante autenticado puede inyectar comandos arbitrarios del sistema operativo, que se ejecutan con privilegios de root, lo que provoca la ejecución remota de código. Una explotación exitosa permite la vulneración total del dispositivo."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.4,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-78"
+              }
+            ],
+            "source": "disclosure@vulncheck.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://optilinknetwork.com/",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://packetstorm.news/files/id/162993",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://vulncheck.com/advisories/optilink-ont1gew-router-rce",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://www.exploit-db.com/exploits/49955",
+            "source": "disclosure@vulncheck.com"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 13
+    },
+    {
+      "cve_id": "CVE-2025-3699",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-06-26",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-06-26",
+        "description": "Missing Authentication for Critical Function vulnerability in Mitsubishi Electric Corporation G-50 all versions, G-50-W all versions, G-50A all versions, GB-50 all versions, GB-50A all versions, GB-24A all versions, G-150AD all versions, AG-150A-A all versions, AG-150A-J all versions, GB-50AD all versions, GB-50ADA-A all versions, GB-50ADA-J all versions, EB-50GU-A all versions, EB-50GU-J all versions, AE-200J all versions, AE-200A all versions, AE-200E all versions, AE-50J all versions, AE-50A all versions, AE-50E all versions, EW-50J all versions, EW-50A all versions, EW-50E all versions, TE-200A all versions, TE-50A all versions, TW-50A all versions, and CMS-RMD-J all versions allows a remote unauthenticated attacker to bypass authentication and then control the air conditioning systems illegally, or disclose information in them by exploiting this vulnerability. In addition, the attacker may tamper with firmware for them using the disclosed information.",
+        "title": "Missing Authentication for Critical Function vulnerability in Mitsubishi Electric Corporation G-50 all versions, G-50-W all versions, G-5...",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-3699",
+        "sourceIdentifier": "Mitsubishielectric.Psirt@yd.MitsubishiElectric.co.jp",
+        "published": "2025-06-26T23:15:22.177",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Missing Authentication for Critical Function vulnerability in Mitsubishi Electric Corporation G-50 all versions, G-50-W all versions, G-50A all versions, GB-50 all versions, GB-50A all versions, GB-24A all versions, G-150AD all versions, AG-150A-A all versions, AG-150A-J all versions, GB-50AD all versions, GB-50ADA-A all versions, GB-50ADA-J all versions, EB-50GU-A all versions, EB-50GU-J all versions, AE-200J all versions, AE-200A all versions, AE-200E all versions, AE-50J all versions, AE-50A all versions, AE-50E all versions, EW-50J all versions, EW-50A all versions, EW-50E all versions, TE-200A all versions, TE-50A all versions, TW-50A all versions, and CMS-RMD-J all versions allows a remote unauthenticated attacker to bypass authentication and then control the air conditioning systems illegally, or disclose information in them by exploiting this vulnerability. In addition, the attacker may tamper with firmware for them using the disclosed information."
+          },
+          {
+            "lang": "es",
+            "value": "Vulnerabilidad de autenticación faltante para función crítica en Mitsubishi Electric Corporation G-50 versión 3.37 y anteriores, G-50-W versión 3.37 y anteriores, G-50A versión 3.37 y anteriores, GB-50 versión 3.37 y anteriores, GB-50A versión 3.37 y anteriores, GB-24A versión 9.12 y anteriores, G-150AD versión 3.21 y anteriores, AG-150A-A versión 3.21 y anteriores, AG-150A-J versión 3.21 y anteriores, GB-50AD versión 3.21 y anteriores, GB-50ADA-A versión 3.21 y anteriores, GB-50ADA-J versión 3.21 y anteriores, EB-50GU-A versión 7.11 y anteriores, EB-50GU-J versión 7.11 y anteriores, AE-200J versión 8.01 y anteriores. AE-200A versión 8.01 y anteriores, AE-200E versión 8.01 y anteriores, AE-50J versión 8.01 y anteriores, AE-50A versión 8.01 y anteriores, AE-50E versión 8.01 y anteriores, EW-50J versión 8.01 y anteriores, EW-50A versión 8.01 y anteriores, EW-50E versión 8.01 y anteriores, TE-200A versión 8.01 y anteriores, TE-50A versión 8.01 y anteriores, TW-50A versión 8.01 y anteriores, y CMS-RMD-J versión 1.40 y anteriores permiten a un atacante remoto no autenticado eludir la autenticación y, posteriormente, controlar ilegalmente los sistemas de aire acondicionado o divulgar información sobre ellos aprovechando esta vulnerabilidad. Además, el atacante puede manipular el firmware de los sistemas utilizando la información divulgada."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "Mitsubishielectric.Psirt@yd.MitsubishiElectric.co.jp",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-306"
+              }
+            ],
+            "source": "Mitsubishielectric.Psirt@yd.MitsubishiElectric.co.jp"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://jvn.jp/vu/JVNVU96471539/",
+            "source": "Mitsubishielectric.Psirt@yd.MitsubishiElectric.co.jp"
+          },
+          {
+            "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-25-177-01",
+            "source": "Mitsubishielectric.Psirt@yd.MitsubishiElectric.co.jp"
+          },
+          {
+            "url": "https://www.mitsubishielectric.com/psirt/vulnerability/pdf/2025-004_en.pdf",
+            "source": "Mitsubishielectric.Psirt@yd.MitsubishiElectric.co.jp"
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 14
+    },
+    {
+      "cve_id": "CVE-2025-47165",
+      "signal_types": [
+        "EXP"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": {
+          "ref_published": "2025-06-26"
+        },
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-06-10",
+        "description": "Use after free in Microsoft Office Excel allows an unauthorized attacker to execute code locally.",
+        "title": "microsoft 365_apps",
+        "vendor": "microsoft",
+        "product": "365_apps",
+        "cvss_max": 7.8
+      },
+      "cve": {
+        "id": "CVE-2025-47165",
+        "sourceIdentifier": "secure@microsoft.com",
+        "published": "2025-06-10T17:23:36.527",
+        "lastModified": "2025-07-09T14:02:09.283",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Use after free in Microsoft Office Excel allows an unauthorized attacker to execute code locally."
+          },
+          {
+            "lang": "es",
+            "value": "Use After Free en Microsoft Office Excel permite que un atacante no autorizado ejecute código localmente."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+                "baseScore": 7.8,
+                "baseSeverity": "HIGH"
+              },
+              "source": "secure@microsoft.com",
+              "type": "Secondary",
+              "exploitabilityScore": 1.8,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-416"
+              }
+            ],
+            "source": "secure@microsoft.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:microsoft:365_apps:-:*:*:*:enterprise:*:*:*",
+                    "matchCriteriaId": "40C15EDD-98D4-4D06-BA06-21AE0F33C72D"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:microsoft:excel:2016:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "09BF0981-749E-470B-A7AC-95AD087797EF"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:microsoft:office:2019:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "FF177984-A906-43FA-BF60-298133FBBD6B"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:microsoft:office_long_term_servicing_channel:2021:*:*:*:*:-:*:*",
+                    "matchCriteriaId": "6C9D7C93-E8CB-4A8A-BA15-093B03ACC62F"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:microsoft:office_long_term_servicing_channel:2021:*:*:*:*:macos:*:*",
+                    "matchCriteriaId": "BF0E8112-5B6F-4E55-8E40-38ADCF6FC654"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:microsoft:office_long_term_servicing_channel:2024:*:*:*:*:-:*:*",
+                    "matchCriteriaId": "BEA7C196-354E-414A-B0B8-821658C8BFB1"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:microsoft:office_long_term_servicing_channel:2024:*:*:*:*:macos:*:*",
+                    "matchCriteriaId": "EF3E56B5-E6A6-4061-9380-D421E52B9199"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:microsoft:office_online_server:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "FBDC86AC-541D-46FF-8F88-26114DDD1D76",
+                    "versionEndExcluding": "16.0.10417.20018"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-47165",
+            "source": "secure@microsoft.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 78,
+      "rank": 15
+    },
+    {
+      "cve_id": "CVE-2025-49132",
+      "signal_types": [
+        "EXP"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": {
+          "ref_published": "2025-06-26"
+        },
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-06-20",
+        "description": "Pterodactyl is a free, open-source game server management panel. Prior to version 1.11.11, using the /locales/locale.json with the locale and namespace query parameters, a malicious actor is able to execute arbitrary code without being authenticated. With the ability to execute arbitrary code it could be used to gain access to the Panel's server, read credentials from the Panel's config, extract sensitive information from the database, access files of servers managed by the panel, etc. This issue has been patched in version 1.11.11. There are no software workarounds for this vulnerability, but use of an external Web Application Firewall (WAF) could help mitigate this attack.",
+        "title": "Pterodactyl is a free, open-source game server management panel.",
+        "cvss_max": 10.0
+      },
+      "cve": {
+        "id": "CVE-2025-49132",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2025-06-20T17:15:41.140",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Pterodactyl is a free, open-source game server management panel. Prior to version 1.11.11, using the /locales/locale.json with the locale and namespace query parameters, a malicious actor is able to execute arbitrary code without being authenticated. With the ability to execute arbitrary code it could be used to gain access to the Panel's server, read credentials from the Panel's config, extract sensitive information from the database, access files of servers managed by the panel, etc. This issue has been patched in version 1.11.11. There are no software workarounds for this vulnerability, but use of an external Web Application Firewall (WAF) could help mitigate this attack."
+          },
+          {
+            "lang": "es",
+            "value": "Pterodactyl es un panel de administración de servidores de juegos gratuito y de código abierto. Antes de la versión 1.11.11, al usar el archivo /locales/locale.json con los parámetros de consulta de configuración regional y espacio de nombres, un actor malicioso podía ejecutar código arbitrario sin estar autenticado. Esta capacidad de ejecutar código arbitrario podía utilizarse para acceder al servidor del panel, leer credenciales de su configuración, extraer información confidencial de la base de datos, acceder a los archivos de los servidores administrados por el panel, etc. Este problema se ha corregido en la versión 1.11.11. No existen soluciones alternativas de software para esta vulnerabilidad, pero el uso de un firewall de aplicaciones web (WAF) externo podría ayudar a mitigar este ataque."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+                "baseScore": 10.0,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 6.0
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-94"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/pterodactyl/panel/commit/24c82b0e335fb5d7a844226b08abf9f176e592f0",
+            "source": "security-advisories@github.com"
+          },
+          {
+            "url": "https://github.com/pterodactyl/panel/releases/tag/v1.11.11",
+            "source": "security-advisories@github.com"
+          },
+          {
+            "url": "https://github.com/pterodactyl/panel/security/advisories/GHSA-24wv-6c99-f843",
+            "source": "security-advisories@github.com"
+          }
+        ]
+      },
+      "risk_score": 78,
+      "rank": 16
+    },
+    {
+      "cve_id": "CVE-2025-49603",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-06-26",
+          "previous_max": null,
+          "current_max": 9.1
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-06-26",
+        "description": "Northern.tech Mender Server before 3.7.11 and 4.x before 4.0.1 has Incorrect Access Control.",
+        "title": "Northern.tech Mender Server before 3.7.11 and 4.x before 4.0.1 has Incorrect Access Control.",
+        "cvss_max": 9.1
+      },
+      "cve": {
+        "id": "CVE-2025-49603",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2025-06-26T18:15:22.710",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Northern.tech Mender Server before 3.7.11 and 4.x before 4.0.1 has Incorrect Access Control."
+          },
+          {
+            "lang": "es",
+            "value": "Northern.tech Mender Server anterior a 3.7.11 y 4.x anterior a 4.0.1 tiene un control de acceso incorrecto."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+                "baseScore": 9.1,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.2
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-284"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://mender.io/blog/cve-2025-49603-improper-access-control-of-device-groups-in-mender-server",
+            "source": "cve@mitre.org"
+          },
+          {
+            "url": "https://northern.tech",
+            "source": "cve@mitre.org"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 17
+    },
+    {
+      "cve_id": "CVE-2025-5640",
+      "signal_types": [
+        "EXP"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": {
+          "ref_published": "2025-06-26"
+        },
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-06-05",
+        "description": "A vulnerability was found in PX4-Autopilot 1.12.3. It has been classified as problematic. This affects the function MavlinkReceiver::handle_message_trajectory_representation_waypoints of the file mavlink_receiver.cpp of the component TRAJECTORY_REPRESENTATION_WAYPOINTS Message Handler. The manipulation leads to stack-based buffer overflow. Local access is required to approach this attack. The exploit has been disclosed to the public and may be used.",
+        "title": "A vulnerability was found in PX4-Autopilot 1.12.3.",
+        "attack_type": "Buffer Overflow",
+        "cvss_max": 4.8
+      },
+      "cve": {
+        "id": "CVE-2025-5640",
+        "sourceIdentifier": "cna@vuldb.com",
+        "published": "2025-06-05T06:15:27.293",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A vulnerability was found in PX4-Autopilot 1.12.3. It has been classified as problematic. This affects the function MavlinkReceiver::handle_message_trajectory_representation_waypoints of the file mavlink_receiver.cpp of the component TRAJECTORY_REPRESENTATION_WAYPOINTS Message Handler. The manipulation leads to stack-based buffer overflow. Local access is required to approach this attack. The exploit has been disclosed to the public and may be used."
+          },
+          {
+            "lang": "es",
+            "value": "Se encontró una vulnerabilidad en PX4-Autopilot 1.12.3. Se ha clasificado como problemática. Afecta a la función MavlinkReceiver::handle_message_trajectory_representation_waypoints del archivo mavlink_receiver.cpp del componente TRAJECTORY_REPRESENTATION_WAYPOINTS Message Handler. La manipulación provoca un desbordamiento del búfer basado en la pila. Se requiere acceso local para abordar este ataque. Se ha hecho público el exploit y puede que sea utilizado."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV2": [
+            {
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:L/AC:L/Au:S/C:N/I:N/A:P",
+                "baseScore": 1.7,
+                "baseSeverity": "LOW"
+              },
+              "source": "cna@vuldb.com",
+              "type": "Secondary",
+              "baseSeverity": "LOW",
+              "exploitabilityScore": 3.1,
+              "impactScore": 2.9
+            }
+          ],
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L",
+                "baseScore": 3.3,
+                "baseSeverity": "LOW"
+              },
+              "source": "cna@vuldb.com",
+              "type": "Secondary",
+              "exploitabilityScore": 1.8,
+              "impactScore": 1.4
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 4.8,
+                "baseSeverity": "MEDIUM"
+              },
+              "source": "cna@vuldb.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-119"
+              },
+              {
+                "lang": "en",
+                "value": "CWE-121"
+              }
+            ],
+            "source": "cna@vuldb.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/PX4/PX4-Autopilot/issues/24915",
+            "source": "cna@vuldb.com"
+          },
+          {
+            "url": "https://github.com/PX4/PX4-Autopilot/issues/24915#issue-3091040552",
+            "source": "cna@vuldb.com"
+          },
+          {
+            "url": "https://vuldb.com/?ctiid.311127",
+            "source": "cna@vuldb.com"
+          },
+          {
+            "url": "https://vuldb.com/?id.311127",
+            "source": "cna@vuldb.com"
+          },
+          {
+            "url": "https://vuldb.com/?submit.584889",
+            "source": "cna@vuldb.com"
+          }
+        ]
+      },
+      "risk_score": 78,
+      "rank": 18
+    }
+  ],
+  "source": "https://www.cvelogic.com/threat-intelligence/2025-06-26"
+}

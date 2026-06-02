@@ -1,0 +1,1609 @@
+{
+  "schema_version": "2.2",
+  "generated_at": "2026-06-02T07:33:18Z",
+  "day": "2025-08-25",
+  "window": {
+    "utc_start": "2025-08-25",
+    "utc_end": "2025-08-25",
+    "days": 1
+  },
+  "summary": {
+    "brief": "Citrix Session Recording: 2 CVEs added to CISA KEV today. · 10 new critical disclosures — review patch status on exposed services.",
+    "bullets": [
+      "Citrix Session Recording: 2 CVEs added to CISA KEV today.",
+      "10 new critical disclosures — review patch status on exposed services."
+    ],
+    "counts": {
+      "cves": 13,
+      "kev": 3,
+      "exploit": 0,
+      "epss": 0,
+      "cvss": 10,
+      "patch": 0
+    }
+  },
+  "cves": [
+    {
+      "cve_id": "CVE-2024-8068",
+      "signal_types": [
+        "KEV"
+      ],
+      "signals": {
+        "kev": {
+          "date_added": "2025-08-25"
+        },
+        "exploit": null,
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2024-11-12",
+        "description": "Privilege escalation to NetworkService Account access in Citrix Session Recording when an attacker is an authenticated user in the same Windows Active Directory domain as the session recording server domain",
+        "title": "Citrix Session Recording Improper Privilege Management Vulnerability",
+        "vendor": "citrix",
+        "product": "session_recording",
+        "attack_type": "Privilege Escalation",
+        "cvss_max": 8.0
+      },
+      "cve": {
+        "id": "CVE-2024-8068",
+        "sourceIdentifier": "secure@citrix.com",
+        "published": "2024-11-12T18:15:47.450",
+        "lastModified": "2025-10-24T13:42:34.467",
+        "vulnStatus": "Analyzed",
+        "cisaExploitAdd": "2025-08-25",
+        "cisaActionDue": "2025-09-15",
+        "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+        "cisaVulnerabilityName": "Citrix Session Recording Improper Privilege Management Vulnerability",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Privilege escalation to NetworkService Account access in Citrix Session Recording when an attacker is an authenticated user in the same Windows Active Directory domain as the session recording server domain"
+          },
+          {
+            "lang": "es",
+            "value": "Escalada de privilegios para acceder a la cuenta de NetworkService en Citrix Session Recording cuando un atacante es un usuario autenticado en el mismo dominio de Windows Active Directory que el dominio del servidor de grabación de sesiones"
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:A/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 8.0,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 2.1,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:A/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 5.1,
+                "baseSeverity": "MEDIUM"
+              },
+              "source": "secure@citrix.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-269"
+              }
+            ],
+            "source": "secure@citrix.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:citrix:session_recording:*:*:*:*:-:*:*:*",
+                    "matchCriteriaId": "FCF54DB8-BBE4-4E48-9037-6FD0E3E3426E",
+                    "versionEndExcluding": "2407"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:citrix:session_recording:1912:-:*:*:ltsr:*:*:*",
+                    "matchCriteriaId": "7F7F0822-5777-4970-A81F-2FECDE137E53"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:citrix:session_recording:1912:cu1:*:*:ltsr:*:*:*",
+                    "matchCriteriaId": "E0A17B51-A720-4DB7-BF84-CE13B9517C91"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:citrix:session_recording:1912:cu2:*:*:ltsr:*:*:*",
+                    "matchCriteriaId": "9BE1BBDB-B867-4B8D-AE55-24D09F0D4EF7"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:citrix:session_recording:1912:cu3:*:*:ltsr:*:*:*",
+                    "matchCriteriaId": "B4E177A4-F2AF-450F-AC8F-5609E586C654"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:citrix:session_recording:1912:cu4:*:*:ltsr:*:*:*",
+                    "matchCriteriaId": "86C686E6-2980-49B3-8229-09EB8F91EDCE"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:citrix:session_recording:1912:cu5:*:*:ltsr:*:*:*",
+                    "matchCriteriaId": "79E71D63-EB85-4305-8F9D-D1BF7EC71992"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:citrix:session_recording:1912:cu6:*:*:ltsr:*:*:*",
+                    "matchCriteriaId": "A46CDA97-3C7C-45B6-890E-9676F059CD88"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:citrix:session_recording:1912:cu7:*:*:ltsr:*:*:*",
+                    "matchCriteriaId": "560A4530-C2D2-4631-A754-6DC97E3F29E9"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:citrix:session_recording:1912:cu8:*:*:ltsr:*:*:*",
+                    "matchCriteriaId": "A9650D15-919D-4F9E-A54D-9E5174D26B07"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:citrix:session_recording:2203:-:*:*:ltsr:*:*:*",
+                    "matchCriteriaId": "C160123B-9BD5-4B7A-A516-F5A5F97FCC79"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:citrix:session_recording:2203:cu1:*:*:ltsr:*:*:*",
+                    "matchCriteriaId": "3F507C4F-89AE-45DC-A849-44204AD06D09"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:citrix:session_recording:2203:cu2:*:*:ltsr:*:*:*",
+                    "matchCriteriaId": "D40669E2-BE98-420B-98F0-10FBF2EA5E6E"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:citrix:session_recording:2203:cu3:*:*:ltsr:*:*:*",
+                    "matchCriteriaId": "72923D9A-96C8-40D7-A630-C3C143A7AEA1"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:citrix:session_recording:2203:cu4:*:*:ltsr:*:*:*",
+                    "matchCriteriaId": "133696EC-56AB-4B77-8CFE-C97550886037"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:citrix:session_recording:2203:cu5:*:*:ltsr:*:*:*",
+                    "matchCriteriaId": "73477179-3270-419C-9ACC-26E43A8D3E93"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:citrix:session_recording:2402:-:*:*:ltsr:*:*:*",
+                    "matchCriteriaId": "34A32BF4-B379-46D9-AAE6-85680B5ECA42"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:citrix:session_recording:2407:-:*:*:-:*:*:*",
+                    "matchCriteriaId": "272D5CE4-4A2F-4417-A274-711FF4115907"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://support.citrix.com/s/article/CTX691941-citrix-session-recording-security-bulletin-for-cve20248068-and-cve20248069?language=en_US",
+            "source": "secure@citrix.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2024-8068",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "US Government Resource"
+            ]
+          }
+        ]
+      },
+      "risk_score": 88,
+      "rank": 1
+    },
+    {
+      "cve_id": "CVE-2025-54492",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-08-25",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-08-25",
+        "description": "A stack-based buffer overflow vulnerability exists in the MFER parsing functionality of The Biosig Project libbiosig 3.9.0 and Master Branch (35a819fa). A specially crafted MFER file can lead to arbitrary code execution. An attacker can provide a malicious file to trigger this vulnerability.This vulnerability manifests on line 9141 of biosig.c on the current master branch (35a819fa), when the Tag is 67:\r\n\r\n                else if (tag==67)     //0x43: Sample skew\r\n                {\r\n                    int skew=0;     // [1]\r\n                    curPos += ifread(&skew, 1, len,hdr);\r\n\r\nIn this case, the address of the newly-defined integer `skew` \\[1\\] is overflowed instead of `buf`. This means a stack overflow can occur using much smaller values of `len` in this code path.",
+        "title": "libbiosig_project libbiosig RCE",
+        "vendor": "libbiosig_project",
+        "product": "libbiosig",
+        "attack_type": "RCE",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-54492",
+        "sourceIdentifier": "talos-cna@cisco.com",
+        "published": "2025-08-25T14:15:35.807",
+        "lastModified": "2025-11-03T19:16:11.197",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A stack-based buffer overflow vulnerability exists in the MFER parsing functionality of The Biosig Project libbiosig 3.9.0 and Master Branch (35a819fa). A specially crafted MFER file can lead to arbitrary code execution. An attacker can provide a malicious file to trigger this vulnerability.This vulnerability manifests on line 9141 of biosig.c on the current master branch (35a819fa), when the Tag is 67:\r\n\r\n                else if (tag==67)     //0x43: Sample skew\r\n                {\r\n                    int skew=0;     // [1]\r\n                    curPos += ifread(&skew, 1, len,hdr);\r\n\r\nIn this case, the address of the newly-defined integer `skew` \\[1\\] is overflowed instead of `buf`. This means a stack overflow can occur using much smaller values of `len` in this code path."
+          },
+          {
+            "lang": "es",
+            "value": "Existe una vulnerabilidad de desbordamiento de búfer en la pila en la funcionalidad de análisis MFER de The Biosig Project libbiosig 3.9.0 y Master Branch (35a819fa). Un archivo MFER especialmente manipulado puede provocar la ejecución de código arbitrario. Un atacante puede proporcionar un archivo malicioso para activar esta vulnerabilidad. Esta vulnerabilidad se manifiesta en la línea 9141 de biosig.c en la rama maestra actual (35a819fa), cuando la etiqueta es 67: else if (tag==67) //0x43: Sample skew { int skew=0; // [1] curPos += ifread(&amp;skew, 1, len,hdr); En este caso, se desborda la dirección del entero recién definido `skew` \\[1\\] en lugar de `buf`. Esto significa que puede producirse un desbordamiento de pila utilizando valores mucho menores de `len` en esta ruta de código."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "talos-cna@cisco.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-121"
+              }
+            ],
+            "source": "talos-cna@cisco.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:libbiosig_project:libbiosig:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "4893D615-FD95-4393-A5B0-E1BE19F180A6",
+                    "versionEndExcluding": "3.9.1"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://talosintelligence.com/vulnerability_reports/TALOS-2025-2234",
+            "source": "talos-cna@cisco.com",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.talosintelligence.com/vulnerability_reports/TALOS-2025-2234",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 2
+    },
+    {
+      "cve_id": "CVE-2025-54493",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-08-25",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-08-25",
+        "description": "A stack-based buffer overflow vulnerability exists in the MFER parsing functionality of The Biosig Project libbiosig 3.9.0 and Master Branch (35a819fa). A specially crafted MFER file can lead to arbitrary code execution. An attacker can provide a malicious file to trigger this vulnerability.This vulnerability manifests on line 9184 of biosig.c on the current master branch (35a819fa), when the Tag is 131:\r\n\r\n                else if (tag==131)    //0x83\r\n                {\r\n                    // Patient Age\r\n                    if (len!=7) fprintf(stderr,\"Warning MFER tag131 incorrect length %i!=7\\n\",len);\r\n                    curPos += ifread(buf,1,len,hdr);",
+        "title": "libbiosig_project libbiosig RCE",
+        "vendor": "libbiosig_project",
+        "product": "libbiosig",
+        "attack_type": "RCE",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-54493",
+        "sourceIdentifier": "talos-cna@cisco.com",
+        "published": "2025-08-25T14:15:36.037",
+        "lastModified": "2025-11-03T19:16:11.307",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A stack-based buffer overflow vulnerability exists in the MFER parsing functionality of The Biosig Project libbiosig 3.9.0 and Master Branch (35a819fa). A specially crafted MFER file can lead to arbitrary code execution. An attacker can provide a malicious file to trigger this vulnerability.This vulnerability manifests on line 9184 of biosig.c on the current master branch (35a819fa), when the Tag is 131:\r\n\r\n                else if (tag==131)    //0x83\r\n                {\r\n                    // Patient Age\r\n                    if (len!=7) fprintf(stderr,\"Warning MFER tag131 incorrect length %i!=7\\n\",len);\r\n                    curPos += ifread(buf,1,len,hdr);"
+          },
+          {
+            "lang": "es",
+            "value": "Existe una vulnerabilidad de desbordamiento de búfer en la función de análisis MFER de The Biosig Project libbiosig 3.9.0 y Master Branch (35a819fa). Un archivo MFER especialmente manipulado puede provocar la ejecución de código arbitrario. Un atacante puede proporcionar un archivo malicioso para activar esta vulnerabilidad. Esta vulnerabilidad se manifiesta en la línea 9184 de biosig.c en la rama maestra actual (35a819fa), cuando la etiqueta es 131: else if (tag==131) //0x83 { // Edad del paciente if (len!=7) fprintf(stderr,\"Warning MFER tag131 incorrect length %i!=7\\n\",len); curPos += ifread(buf,1,len,hdr);"
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "talos-cna@cisco.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-121"
+              }
+            ],
+            "source": "talos-cna@cisco.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:libbiosig_project:libbiosig:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "4893D615-FD95-4393-A5B0-E1BE19F180A6",
+                    "versionEndExcluding": "3.9.1"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://talosintelligence.com/vulnerability_reports/TALOS-2025-2234",
+            "source": "talos-cna@cisco.com",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.talosintelligence.com/vulnerability_reports/TALOS-2025-2234",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 3
+    },
+    {
+      "cve_id": "CVE-2024-8069",
+      "signal_types": [
+        "KEV"
+      ],
+      "signals": {
+        "kev": {
+          "date_added": "2025-08-25"
+        },
+        "exploit": null,
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2024-11-12",
+        "description": "Limited remote code execution with privilege of a NetworkService Account access in Citrix Session Recording if the attacker is an authenticated user on the same intranet as the session recording server",
+        "title": "Citrix Session Recording Deserialization of Untrusted Data Vulnerability",
+        "vendor": "citrix",
+        "product": "session_recording",
+        "attack_type": "RCE",
+        "cvss_max": 8.0
+      },
+      "cve": {
+        "id": "CVE-2024-8069",
+        "sourceIdentifier": "secure@citrix.com",
+        "published": "2024-11-12T18:15:47.603",
+        "lastModified": "2025-10-24T13:42:29.560",
+        "vulnStatus": "Analyzed",
+        "cisaExploitAdd": "2025-08-25",
+        "cisaActionDue": "2025-09-15",
+        "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+        "cisaVulnerabilityName": "Citrix Session Recording Deserialization of Untrusted Data Vulnerability",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Limited remote code execution with privilege of a NetworkService Account access in Citrix Session Recording if the attacker is an authenticated user on the same intranet as the session recording server"
+          },
+          {
+            "lang": "es",
+            "value": "Ejecución remota limitada de código con privilegio de acceso a una cuenta de servicio de red en la grabación de sesiones de Citrix si el atacante es un usuario autenticado en la misma intranet que el servidor de grabación de sesiones"
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:A/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 8.0,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 2.1,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:A/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 5.1,
+                "baseSeverity": "MEDIUM"
+              },
+              "source": "secure@citrix.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-502"
+              }
+            ],
+            "source": "secure@citrix.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:citrix:session_recording:*:*:*:*:-:*:*:*",
+                    "matchCriteriaId": "FCF54DB8-BBE4-4E48-9037-6FD0E3E3426E",
+                    "versionEndExcluding": "2407"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:citrix:session_recording:1912:-:*:*:ltsr:*:*:*",
+                    "matchCriteriaId": "7F7F0822-5777-4970-A81F-2FECDE137E53"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:citrix:session_recording:1912:cu1:*:*:ltsr:*:*:*",
+                    "matchCriteriaId": "E0A17B51-A720-4DB7-BF84-CE13B9517C91"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:citrix:session_recording:1912:cu2:*:*:ltsr:*:*:*",
+                    "matchCriteriaId": "9BE1BBDB-B867-4B8D-AE55-24D09F0D4EF7"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:citrix:session_recording:1912:cu3:*:*:ltsr:*:*:*",
+                    "matchCriteriaId": "B4E177A4-F2AF-450F-AC8F-5609E586C654"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:citrix:session_recording:1912:cu4:*:*:ltsr:*:*:*",
+                    "matchCriteriaId": "86C686E6-2980-49B3-8229-09EB8F91EDCE"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:citrix:session_recording:1912:cu5:*:*:ltsr:*:*:*",
+                    "matchCriteriaId": "79E71D63-EB85-4305-8F9D-D1BF7EC71992"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:citrix:session_recording:1912:cu6:*:*:ltsr:*:*:*",
+                    "matchCriteriaId": "A46CDA97-3C7C-45B6-890E-9676F059CD88"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:citrix:session_recording:1912:cu7:*:*:ltsr:*:*:*",
+                    "matchCriteriaId": "560A4530-C2D2-4631-A754-6DC97E3F29E9"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:citrix:session_recording:1912:cu8:*:*:ltsr:*:*:*",
+                    "matchCriteriaId": "A9650D15-919D-4F9E-A54D-9E5174D26B07"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:citrix:session_recording:2203:-:*:*:ltsr:*:*:*",
+                    "matchCriteriaId": "C160123B-9BD5-4B7A-A516-F5A5F97FCC79"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:citrix:session_recording:2203:cu1:*:*:ltsr:*:*:*",
+                    "matchCriteriaId": "3F507C4F-89AE-45DC-A849-44204AD06D09"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:citrix:session_recording:2203:cu2:*:*:ltsr:*:*:*",
+                    "matchCriteriaId": "D40669E2-BE98-420B-98F0-10FBF2EA5E6E"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:citrix:session_recording:2203:cu3:*:*:ltsr:*:*:*",
+                    "matchCriteriaId": "72923D9A-96C8-40D7-A630-C3C143A7AEA1"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:citrix:session_recording:2203:cu4:*:*:ltsr:*:*:*",
+                    "matchCriteriaId": "133696EC-56AB-4B77-8CFE-C97550886037"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:citrix:session_recording:2402:-:*:*:ltsr:*:*:*",
+                    "matchCriteriaId": "34A32BF4-B379-46D9-AAE6-85680B5ECA42"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:citrix:session_recording:2407:-:*:*:-:*:*:*",
+                    "matchCriteriaId": "272D5CE4-4A2F-4417-A274-711FF4115907"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://support.citrix.com/s/article/CTX691941-citrix-session-recording-security-bulletin-for-cve20248068-and-cve20248069?language=en_US",
+            "source": "secure@citrix.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2024-8069",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "US Government Resource"
+            ]
+          }
+        ]
+      },
+      "risk_score": 88,
+      "rank": 4
+    },
+    {
+      "cve_id": "CVE-2025-48384",
+      "signal_types": [
+        "KEV"
+      ],
+      "signals": {
+        "kev": {
+          "date_added": "2025-08-25"
+        },
+        "exploit": null,
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-07-08",
+        "description": "Git is a fast, scalable, distributed revision control system with an unusually rich command set that provides both high-level operations and full access to internals. When reading a config value, Git strips any trailing carriage return and line feed (CRLF). When writing a config entry, values with a trailing CR are not quoted, causing the CR to be lost when the config is later read. When initializing a submodule, if the submodule path contains a trailing CR, the altered path is read resulting in the submodule being checked out to an incorrect location. If a symlink exists that points the altered path to the submodule hooks directory, and the submodule contains an executable post-checkout hook, the script may be unintentionally executed after checkout. This vulnerability is fixed in v2.43.7, v2.44.4, v2.45.4, v2.46.4, v2.47.3, v2.48.2, v2.49.1, and v2.50.1.",
+        "title": "Git Link Following Vulnerability",
+        "vendor": "git-scm",
+        "product": "git",
+        "cvss_max": 8.0
+      },
+      "cve": {
+        "id": "CVE-2025-48384",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2025-07-08T19:15:42.800",
+        "lastModified": "2025-11-06T14:52:47.590",
+        "vulnStatus": "Analyzed",
+        "cisaExploitAdd": "2025-08-25",
+        "cisaActionDue": "2025-09-15",
+        "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+        "cisaVulnerabilityName": "Git Link Following Vulnerability",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Git is a fast, scalable, distributed revision control system with an unusually rich command set that provides both high-level operations and full access to internals. When reading a config value, Git strips any trailing carriage return and line feed (CRLF). When writing a config entry, values with a trailing CR are not quoted, causing the CR to be lost when the config is later read. When initializing a submodule, if the submodule path contains a trailing CR, the altered path is read resulting in the submodule being checked out to an incorrect location. If a symlink exists that points the altered path to the submodule hooks directory, and the submodule contains an executable post-checkout hook, the script may be unintentionally executed after checkout. This vulnerability is fixed in v2.43.7, v2.44.4, v2.45.4, v2.46.4, v2.47.3, v2.48.2, v2.49.1, and v2.50.1."
+          },
+          {
+            "lang": "es",
+            "value": "Git es un sistema de control de versiones distribuido, rápido y escalable, con un conjunto de comandos excepcionalmente completo que proporciona operaciones de alto nivel y acceso completo a su funcionamiento interno. Al leer un valor de configuración, Git elimina cualquier retorno de carro y avance de línea (CRLF) final. Al escribir una entrada de configuración, los valores con un CR final no se entrecomillan, lo que provoca que el CR se pierda al leer la configuración posteriormente. Al inicializar un submódulo, si la ruta del submódulo contiene un CR final, se lee la ruta modificada, lo que provoca que el submódulo se extraiga a una ubicación incorrecta. Si existe un enlace simbólico que apunta la ruta modificada al directorio de ganchos del submódulo, y este contiene un gancho ejecutable posterior a la extracción, el script podría ejecutarse accidentalmente después de la extracción. Esta vulnerabilidad se ha corregido en v2.43.7, v2.44.4, v2.45.4, v2.46.4, v2.47.3, v2.48.2, v2.49.1 y v2.50.1."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:C/C:H/I:H/A:H",
+                "baseScore": 8.0,
+                "baseSeverity": "HIGH"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary",
+              "exploitabilityScore": 1.3,
+              "impactScore": 6.0
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-59"
+              },
+              {
+                "lang": "en",
+                "value": "CWE-436"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:git-scm:git:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "BB276680-D286-4DF6-BCB7-CAC1D9D77E08",
+                    "versionEndExcluding": "2.43.7"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:git-scm:git:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "856A8970-74E2-4F8F-A1A6-2AB1C0C87E45",
+                    "versionStartIncluding": "2.44.0",
+                    "versionEndExcluding": "2.44.4"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:git-scm:git:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "6D1DB9BA-3D91-4F7D-931E-A664737129F0",
+                    "versionStartIncluding": "2.45.0",
+                    "versionEndExcluding": "2.45.4"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:git-scm:git:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "01BDA55C-F398-4286-ABC6-979A783BDC65",
+                    "versionStartIncluding": "2.46.0",
+                    "versionEndExcluding": "2.46.4"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:git-scm:git:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "FF4A2ACC-0996-4869-884D-734D6006C032",
+                    "versionStartIncluding": "2.47.0",
+                    "versionEndExcluding": "2.47.3"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:git-scm:git:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "0DD21A83-8D62-4EE4-914B-B5ACA19A84A2",
+                    "versionStartIncluding": "2.48.0",
+                    "versionEndExcluding": "2.48.2"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:git-scm:git:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "95C1825C-B7A2-46E9-93D7-2D196DB2515E",
+                    "versionStartIncluding": "2.49.0",
+                    "versionEndExcluding": "2.49.1"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:git-scm:git:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "18F948AD-22C0-4B2E-B497-899F3A94B70A",
+                    "versionStartIncluding": "2.50.0",
+                    "versionEndExcluding": "2.50.1"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:debian:debian_linux:11.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "FA6FEEC2-9F11-4643-8827-749718254FED"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:apple:xcode:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "37CC7F40-CC3A-4AEB-9260-B621FE64735A",
+                    "versionEndExcluding": "26.0"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/git/git/security/advisories/GHSA-vwqx-4fm8-6qc9",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "http://seclists.org/fulldisclosure/2025/Sep/60",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Mailing List",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "http://www.openwall.com/lists/oss-security/2025/07/08/4",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Mailing List"
+            ]
+          },
+          {
+            "url": "https://lists.debian.org/debian-lts-announce/2025/10/msg00003.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Mailing List",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2025-48384",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "US Government Resource"
+            ]
+          }
+        ]
+      },
+      "risk_score": 88,
+      "rank": 5
+    },
+    {
+      "cve_id": "CVE-2025-50722",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-08-25",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-08-25",
+        "description": "Insecure Permissions vulnerability in sparkshop v.1.1.7 allows a remote attacker to execute arbitrary code via the Common.php component",
+        "title": "sparkshop sparkshop",
+        "vendor": "sparkshop",
+        "product": "sparkshop",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-50722",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2025-08-25T17:15:29.810",
+        "lastModified": "2025-09-09T18:57:52.620",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Insecure Permissions vulnerability in sparkshop v.1.1.7 allows a remote attacker to execute arbitrary code via the Common.php component"
+          },
+          {
+            "lang": "es",
+            "value": "La vulnerabilidad de permisos inseguros en sparkshop v.1.1.7 permite que un atacante remoto ejecute código arbitrario a través del componente Common.php"
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-77"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:sparkshop:sparkshop:1.1.7:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "1BD75A9D-F502-4520-9489-0AD59C6A888A"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/147536951/Qiany1/blob/main/SparkShop.pdf",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 6
+    },
+    {
+      "cve_id": "CVE-2025-50900",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-08-25",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-08-25",
+        "description": "An issue was discovered in getrebuild/rebuild 4.0.4. The affected source code class is com.rebuild.web.RebuildWebInterceptor, and the affected function is preHandle In the filter code, use CodecUtils.urlDecode(request.getRequestURI()) to obtain the URL-decoded request path, and then determine whether the path endsWith /error. If so, execute return true to skip this Interceptor. Else, redirect to /user/login api. Allowing unauthenticated attackers to gain sensitive information or escalated privileges.",
+        "title": "getrebuild rebuild",
+        "vendor": "getrebuild",
+        "product": "rebuild",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-50900",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2025-08-25T15:15:40.000",
+        "lastModified": "2025-10-09T17:54:22.767",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "An issue was discovered in getrebuild/rebuild 4.0.4. The affected source code class is com.rebuild.web.RebuildWebInterceptor, and the affected function is preHandle In the filter code, use CodecUtils.urlDecode(request.getRequestURI()) to obtain the URL-decoded request path, and then determine whether the path endsWith /error. If so, execute return true to skip this Interceptor. Else, redirect to /user/login api. Allowing unauthenticated attackers to gain sensitive information or escalated privileges."
+          },
+          {
+            "lang": "es",
+            "value": "Se detectó un problema en getrebuild/rebuild 4.0.4. La clase de código fuente afectada es com.rebuild.web.RebuildWebInterceptor y la función afectada es preHandle. En el código de filtro, use CodecUtils.urlDecode(request.getRequestURI()) para obtener la ruta de la solicitud decodificada por URL y, a continuación, determine si la ruta termina con /error. De ser así, ejecute `return true` para omitir este interceptor. De lo contrario, redirija a la API /user/login. Esto permite que atacantes no autenticados obtengan información confidencial o aumenten sus privilegios."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-284"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:getrebuild:rebuild:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "407A7829-C7CF-4C50-AE1A-C625B59CE8DE",
+                    "versionEndIncluding": "4.0.4"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://racerz.notion.site/Rebuild-Vulnerability-1ede0e0074f280d8a906c38442a393f0",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.notion.so/racerz/Rebuild-Vulnerability-1ede0e0074f280d8a906c38442a393f0?pvs=4",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 7
+    },
+    {
+      "cve_id": "CVE-2025-53118",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-08-25",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-08-25",
+        "description": "An authentication bypass vulnerability exists which allows an unauthenticated attacker to control administrator backup functions, leading to compromise of passwords, secrets, and application session tokens stored by the Unified PAM.",
+        "title": "An authentication bypass vulnerability exists which allows an unauthenticated attacker to control administrator backup functions, leading...",
+        "attack_type": "Auth Bypass",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-53118",
+        "sourceIdentifier": "cve@rapid7.com",
+        "published": "2025-08-25T16:15:31.023",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "An authentication bypass vulnerability exists which allows an unauthenticated attacker to control administrator backup functions, leading to compromise of passwords, secrets, and application session tokens stored by the Unified PAM."
+          },
+          {
+            "lang": "es",
+            "value": "Existe una vulnerabilidad de omisión de autenticación que permite a un atacante no autenticado controlar las funciones de respaldo del administrador, lo que lleva a comprometer las contraseñas, los secretos y los tokens de sesión de aplicación almacenados por Unified PAM."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "cve@rapid7.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-306"
+              }
+            ],
+            "source": "cve@rapid7.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://www.rapid7.com/blog/post/securden-unified-pam-multiple-critical-vulnerabilities-fixed/",
+            "source": "cve@rapid7.com"
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 8
+    },
+    {
+      "cve_id": "CVE-2025-53120",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-08-25",
+          "previous_max": null,
+          "current_max": 9.4
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-08-25",
+        "description": "A path traversal vulnerability in unauthenticated upload functionality allows a malicious actor to upload binaries and scripts to the server’s configuration and web root directories, achieving remote code execution on the Unified PAM server.",
+        "title": "A path traversal vulnerability in unauthenticated upload functionality allows a malicious actor to upload binaries and scripts to the ser...",
+        "attack_type": "RCE",
+        "cvss_max": 9.4
+      },
+      "cve": {
+        "id": "CVE-2025-53120",
+        "sourceIdentifier": "cve@rapid7.com",
+        "published": "2025-08-25T17:15:29.960",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A path traversal vulnerability in unauthenticated upload functionality allows a malicious actor to upload binaries and scripts to the server’s configuration and web root directories, achieving remote code execution on the Unified PAM server."
+          },
+          {
+            "lang": "es",
+            "value": "Una vulnerabilidad de path traversal en la funcionalidad de carga no autenticada permite que un actor malicioso cargue archivos binarios y scripts en los directorios raíz de configuración y web del servidor, logrando la ejecución remota de código en el servidor Unified PAM."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:L",
+                "baseScore": 9.4,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "cve@rapid7.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.5
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-22"
+              }
+            ],
+            "source": "cve@rapid7.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://www.rapid7.com/blog/post/securden-unified-pam-multiple-critical-vulnerabilities-fixed/",
+            "source": "cve@rapid7.com"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 9
+    },
+    {
+      "cve_id": "CVE-2025-54494",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-08-25",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-08-25",
+        "description": "A stack-based buffer overflow vulnerability exists in the MFER parsing functionality of The Biosig Project libbiosig 3.9.0 and Master Branch (35a819fa). A specially crafted MFER file can lead to arbitrary code execution. An attacker can provide a malicious file to trigger this vulnerability.This vulnerability manifests on line 9205 of biosig.c on the current master branch (35a819fa), when the Tag is 133:\r\n\r\n                else if (tag==133)    //0x85\r\n                {\r\n                    curPos += ifread(buf,1,len,hdr);",
+        "title": "libbiosig_project libbiosig RCE",
+        "vendor": "libbiosig_project",
+        "product": "libbiosig",
+        "attack_type": "RCE",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-54494",
+        "sourceIdentifier": "talos-cna@cisco.com",
+        "published": "2025-08-25T14:15:36.230",
+        "lastModified": "2025-11-03T19:16:11.420",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A stack-based buffer overflow vulnerability exists in the MFER parsing functionality of The Biosig Project libbiosig 3.9.0 and Master Branch (35a819fa). A specially crafted MFER file can lead to arbitrary code execution. An attacker can provide a malicious file to trigger this vulnerability.This vulnerability manifests on line 9205 of biosig.c on the current master branch (35a819fa), when the Tag is 133:\r\n\r\n                else if (tag==133)    //0x85\r\n                {\r\n                    curPos += ifread(buf,1,len,hdr);"
+          },
+          {
+            "lang": "es",
+            "value": "Existe una vulnerabilidad de desbordamiento de búfer en la pila en la funcionalidad de análisis MFER de The Biosig Project libbiosig 3.9.0 y Master Branch (35a819fa). Un archivo MFER especialmente manipulado puede provocar la ejecución de código arbitrario. Un atacante puede proporcionar un archivo malicioso para activar esta vulnerabilidad. Esta vulnerabilidad se manifiesta en la línea 9205 de biosig.c en la rama maestra actual (35a819fa), cuando la etiqueta es 133: else if (tag==133) //0x85 { curPos += ifread(buf,1,len,hdr);"
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "talos-cna@cisco.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-121"
+              }
+            ],
+            "source": "talos-cna@cisco.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:libbiosig_project:libbiosig:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "4893D615-FD95-4393-A5B0-E1BE19F180A6",
+                    "versionEndExcluding": "3.9.1"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://talosintelligence.com/vulnerability_reports/TALOS-2025-2234",
+            "source": "talos-cna@cisco.com",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.talosintelligence.com/vulnerability_reports/TALOS-2025-2234",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 10
+    },
+    {
+      "cve_id": "CVE-2025-55575",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-08-25",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-08-25",
+        "description": "SQL Injection vulnerability in SMM Panel 3.1 allowing remote attackers to gain sensitive information via a crafted HTTP request with action=service_detail.",
+        "title": "SQL Injection vulnerability in SMM Panel 3.1 allowing remote attackers to gain sensitive information via a crafted HTTP request with acti...",
+        "attack_type": "SQL Injection",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-55575",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2025-08-25T16:15:32.200",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "SQL Injection vulnerability in SMM Panel 3.1 allowing remote attackers to gain sensitive information via a crafted HTTP request with action=service_detail."
+          },
+          {
+            "lang": "es",
+            "value": "Vulnerabilidad de inyección SQL en SMM Panel 3.1 que permite a atacantes remotos obtener información confidencial a través de una solicitud HTTP manipulada con action=service_detail."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-89"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/Aether-0/CVE-2025-55575",
+            "source": "cve@mitre.org"
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 11
+    },
+    {
+      "cve_id": "CVE-2025-56212",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-08-25",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-08-25",
+        "description": "phpgurukul Hospital Management System 4.0 is vulnerable to SQL Injection in add-doctor.php via the docname parameter.",
+        "title": "phpgurukul hospital_management_system SQL Injection",
+        "vendor": "phpgurukul",
+        "product": "hospital_management_system",
+        "attack_type": "SQL Injection",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-56212",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2025-08-25T15:15:41.590",
+        "lastModified": "2026-04-06T14:16:21.277",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "phpgurukul Hospital Management System 4.0 is vulnerable to SQL Injection in add-doctor.php via the docname parameter."
+          },
+          {
+            "lang": "es",
+            "value": "phpgurukul Hospital Management System 4.0 es vulnerable a la inyección SQL en add-doctor.php a través del parámetro docname."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-89"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:phpgurukul:hospital_management_system:4.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "DA36E354-4DBF-4BE4-9BC4-CB00C6771BAF"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://doc.clickup.com/3897127/p/h/3pxt7-11896/20b47e0ff9d894d",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Broken Link"
+            ]
+          },
+          {
+            "url": "https://github.com/hptcybersecurity/CVE/blob/main/CVE-2025-56212.md",
+            "source": "cve@mitre.org"
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 12
+    },
+    {
+      "cve_id": "CVE-2025-56214",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-08-25",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-08-25",
+        "description": "phpgurukul Hospital Management System 4.0 is vulnerable to SQL Injection in index.php via the username parameter.",
+        "title": "phpgurukul hospital_management_system SQL Injection",
+        "vendor": "phpgurukul",
+        "product": "hospital_management_system",
+        "attack_type": "SQL Injection",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-56214",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2025-08-25T15:15:41.740",
+        "lastModified": "2026-04-06T14:16:21.767",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "phpgurukul Hospital Management System 4.0 is vulnerable to SQL Injection in index.php via the username parameter."
+          },
+          {
+            "lang": "es",
+            "value": "phpgurukul Hospital Management System 4.0 es vulnerable a la inyección SQL en index.php a través del parámetro de username."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-89"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:phpgurukul:hospital_management_system:4.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "DA36E354-4DBF-4BE4-9BC4-CB00C6771BAF"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://doc.clickup.com/3897127/p/h/3pxt7-11996/43458c7f19aa2e0",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Broken Link"
+            ]
+          },
+          {
+            "url": "https://github.com/hptcybersecurity/CVE/blob/main/CVE-2025-56214.md",
+            "source": "cve@mitre.org"
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 13
+    }
+  ],
+  "source": "https://www.cvelogic.com/threat-intelligence/2025-08-25"
+}

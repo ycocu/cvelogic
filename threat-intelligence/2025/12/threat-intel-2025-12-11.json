@@ -1,0 +1,1332 @@
+{
+  "schema_version": "2.2",
+  "generated_at": "2026-06-02T07:33:57Z",
+  "day": "2025-12-11",
+  "window": {
+    "utc_start": "2025-12-11",
+    "utc_end": "2025-12-11",
+    "days": 1
+  },
+  "summary": {
+    "brief": "OSGeo GeoServer added to CISA KEV — confirmed in-the-wild exploitation. · Tenda W6-s Firmware — exploitation likelihood rose sharply (EPSS 6.6% → 18% · rising (+12%)). · 10 new critical disclosures — review patch status on exposed services.",
+    "bullets": [
+      "OSGeo GeoServer added to CISA KEV — confirmed in-the-wild exploitation.",
+      "Tenda W6-s Firmware — exploitation likelihood rose sharply (EPSS 6.6% → 18% · rising (+12%)).",
+      "10 new critical disclosures — review patch status on exposed services."
+    ],
+    "counts": {
+      "cves": 12,
+      "kev": 1,
+      "exploit": 0,
+      "epss": 1,
+      "cvss": 10,
+      "patch": 0
+    }
+  },
+  "cves": [
+    {
+      "cve_id": "CVE-2025-58360",
+      "signal_types": [
+        "KEV"
+      ],
+      "signals": {
+        "kev": {
+          "date_added": "2025-12-11"
+        },
+        "exploit": null,
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-11-25",
+        "description": "GeoServer is an open source server that allows users to share and edit geospatial data. From version 2.26.0 to before 2.26.2 and before 2.25.6, an XML External Entity (XXE) vulnerability was identified. The application accepts XML input through a specific endpoint /geoserver/wms operation GetMap. However, this input is not sufficiently sanitized or restricted, allowing an attacker to define external entities within the XML request. This issue has been patched in GeoServer 2.25.6, GeoServer 2.26.3, and GeoServer 2.27.0.",
+        "title": "OSGeo GeoServer Improper Restriction of XML External Entity Reference Vulnerability",
+        "vendor": "geoserver",
+        "product": "geoserver",
+        "attack_type": "XXE",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-58360",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2025-11-25T21:15:56.363",
+        "lastModified": "2025-12-12T13:54:01.187",
+        "vulnStatus": "Analyzed",
+        "cisaExploitAdd": "2025-12-11",
+        "cisaActionDue": "2026-01-01",
+        "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+        "cisaVulnerabilityName": "OSGeo GeoServer Improper Restriction of XML External Entity Reference Vulnerability",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "GeoServer is an open source server that allows users to share and edit geospatial data. From version 2.26.0 to before 2.26.2 and before 2.25.6, an XML External Entity (XXE) vulnerability was identified. The application accepts XML input through a specific endpoint /geoserver/wms operation GetMap. However, this input is not sufficiently sanitized or restricted, allowing an attacker to define external entities within the XML request. This issue has been patched in GeoServer 2.25.6, GeoServer 2.26.3, and GeoServer 2.27.0."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:L",
+                "baseScore": 8.2,
+                "baseSeverity": "HIGH"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 4.2
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-611"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:geoserver:geoserver:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "929A415A-3926-49DE-855E-9363B5E495D3",
+                    "versionEndExcluding": "2.25.6"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:geoserver:geoserver:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "58DCFD5D-914E-442F-AD07-C019C3BDDB2A",
+                    "versionStartIncluding": "2.26.0",
+                    "versionEndExcluding": "2.26.2"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/geoserver/geoserver/security/advisories/GHSA-fjf5-xgmq-5525",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://osgeo-org.atlassian.net/browse/GEOS-11682",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Issue Tracking"
+            ]
+          },
+          {
+            "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2025-58360",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "US Government Resource"
+            ]
+          }
+        ]
+      },
+      "risk_score": 88,
+      "rank": 1
+    },
+    {
+      "cve_id": "CVE-2022-45497",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 0.06587,
+            "score_date": "2025-12-10"
+          },
+          "current": {
+            "score": 0.18362,
+            "score_date": "2025-12-11"
+          },
+          "delta": 0.11775
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2022-12-08",
+        "description": "Tenda W6-S v1.0.0.4(510) was discovered to contain a command injection vulnerability in the tpi_get_ping_output function at /goform/exeCommand.",
+        "title": "tenda w6-s_firmware Command Injection",
+        "vendor": "tenda",
+        "product": "w6-s_firmware",
+        "attack_type": "Command Injection",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2022-45497",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2022-12-08T16:15:13.610",
+        "lastModified": "2025-04-23T15:15:53.980",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Tenda W6-S v1.0.0.4(510) was discovered to contain a command injection vulnerability in the tpi_get_ping_output function at /goform/exeCommand."
+          },
+          {
+            "lang": "es",
+            "value": "Se descubrió que Tenda W6-S v1.0.0.4(510) contiene una vulnerabilidad de inyección de comandos en la función tpi_get_ping_output en /goform/exeCommand."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-78"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          },
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-78"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:tenda:w6-s_firmware:1.0.0.4\\(510\\):*:*:*:*:*:*:*",
+                    "matchCriteriaId": "C6BBEE21-6F2D-4881-B8B5-010E399DDA5B"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:tenda:w6-s:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "6E45D16E-59CF-4868-AD49-4B52C37D3BEE"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/z1r00/IOT_Vul/blob/main/Tenda/W6-S/exeCommand/readme.md",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 85,
+      "rank": 2
+    },
+    {
+      "cve_id": "CVE-2025-64721",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-12-11",
+          "previous_max": null,
+          "current_max": 9.9
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-12-11",
+        "description": "Sandboxie is a sandbox-based isolation software for 32-bit and 64-bit Windows NT-based operating systems. In versions 1.16.6 and below, the SYSTEM-level service SbieSvc.exe exposes SbieIniServer::RC4Crypt to sandboxed processes. The handler adds a fixed header size to a caller-controlled value_len without overflow checking. A large value_len (e.g., 0xFFFFFFF0) wraps the allocation size, causing a heap overflow when attacker data is copied into the undersized buffer. This allows sandboxed processes to execute arbitrary code as SYSTEM, fully compromising the host. This issue is fixed in version 1.16.7.",
+        "title": "sandboxie-plus sandboxie",
+        "vendor": "sandboxie-plus",
+        "product": "sandboxie",
+        "cvss_max": 10.0
+      },
+      "cve": {
+        "id": "CVE-2025-64721",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2025-12-11T22:15:55.653",
+        "lastModified": "2025-12-22T18:44:17.920",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Sandboxie is a sandbox-based isolation software for 32-bit and 64-bit Windows NT-based operating systems. In versions 1.16.6 and below, the SYSTEM-level service SbieSvc.exe exposes SbieIniServer::RC4Crypt to sandboxed processes. The handler adds a fixed header size to a caller-controlled value_len without overflow checking. A large value_len (e.g., 0xFFFFFFF0) wraps the allocation size, causing a heap overflow when attacker data is copied into the undersized buffer. This allows sandboxed processes to execute arbitrary code as SYSTEM, fully compromising the host. This issue is fixed in version 1.16.7."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+                "baseScore": 10.0,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 6.0
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.9,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-190"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:sandboxie-plus:sandboxie:*:*:*:*:plus:*:*:*",
+                    "matchCriteriaId": "4EA496DD-32FD-406F-A660-9CA483B86C06",
+                    "versionStartIncluding": "1.14.0",
+                    "versionEndExcluding": "1.16.7"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/sandboxie-plus/Sandboxie/commit/000492f8c411d24292f1b977a107994347bc7dfa",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://github.com/sandboxie-plus/Sandboxie/releases/tag/v1.16.7",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Release Notes"
+            ]
+          },
+          {
+            "url": "https://github.com/sandboxie-plus/Sandboxie/security/advisories/GHSA-w476-j57g-96vp",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Exploit",
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 3
+    },
+    {
+      "cve_id": "CVE-2024-58286",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-12-11",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-12-11",
+        "description": "dizqueTV 1.5.3 contains a remote code execution vulnerability that allows attackers to inject arbitrary commands through the FFMPEG Executable Path settings. Attackers can modify the executable path with shell commands to read system files like /etc/passwd by exploiting improper input validation.",
+        "title": "dizqueTV 1.5.3 contains a remote code execution vulnerability that allows attackers to inject arbitrary commands through the FFMPEG Execu...",
+        "attack_type": "RCE",
+        "cvss_max": 9.3
+      },
+      "cve": {
+        "id": "CVE-2024-58286",
+        "sourceIdentifier": "disclosure@vulncheck.com",
+        "published": "2025-12-11T22:15:48.203",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "dizqueTV 1.5.3 contains a remote code execution vulnerability that allows attackers to inject arbitrary commands through the FFMPEG Executable Path settings. Attackers can modify the executable path with shell commands to read system files like /etc/passwd by exploiting improper input validation."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-78"
+              }
+            ],
+            "source": "disclosure@vulncheck.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/vexorian/dizquetv",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://www.exploit-db.com/exploits/52079",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://www.vulncheck.com/advisories/dizquetv-remote-code-execution-via-ffmpeg-executable-path",
+            "source": "disclosure@vulncheck.com"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 4
+    },
+    {
+      "cve_id": "CVE-2024-58290",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-12-11",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-12-11",
+        "description": "Xhibiter NFT Marketplace 1.10.2 contains a SQL injection vulnerability in the collections endpoint that allows attackers to manipulate database queries through the 'id' parameter. Attackers can exploit boolean-based, time-based, and UNION-based SQL injection techniques to potentially extract or manipulate database information by sending crafted payloads to the collections page.",
+        "title": "Xhibiter NFT Marketplace 1.10.2 contains a SQL injection vulnerability in the collections endpoint that allows attackers to manipulate da...",
+        "attack_type": "SQL Injection",
+        "cvss_max": 9.3
+      },
+      "cve": {
+        "id": "CVE-2024-58290",
+        "sourceIdentifier": "disclosure@vulncheck.com",
+        "published": "2025-12-11T22:15:49.763",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Xhibiter NFT Marketplace 1.10.2 contains a SQL injection vulnerability in the collections endpoint that allows attackers to manipulate database queries through the 'id' parameter. Attackers can exploit boolean-based, time-based, and UNION-based SQL injection techniques to potentially extract or manipulate database information by sending crafted payloads to the collections page."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-89"
+              }
+            ],
+            "source": "disclosure@vulncheck.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://elements.envato.com/xhibiter-nft-marketplace-html-template-AQN45FA",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://www.exploit-db.com/exploits/52060",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://www.vulncheck.com/advisories/xhibiter-nft-marketplace-sql-injection-via-collections-endpoint",
+            "source": "disclosure@vulncheck.com"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 5
+    },
+    {
+      "cve_id": "CVE-2024-58298",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-12-11",
+          "previous_max": null,
+          "current_max": 9.2
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-12-11",
+        "description": "Compuware iStrobe Web 20.13 contains a pre-authentication remote code execution vulnerability that allows unauthenticated attackers to upload malicious JSP files through a path traversal in the file upload form. Attackers can exploit the 'fileName' parameter to upload a web shell and execute arbitrary commands by sending POST requests to the uploaded JSP endpoint.",
+        "title": "Compuware iStrobe Web 20.13 contains a pre-authentication remote code execution vulnerability that allows unauthenticated attackers to up...",
+        "attack_type": "RCE",
+        "cvss_max": 9.2
+      },
+      "cve": {
+        "id": "CVE-2024-58298",
+        "sourceIdentifier": "disclosure@vulncheck.com",
+        "published": "2025-12-11T22:15:51.060",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Compuware iStrobe Web 20.13 contains a pre-authentication remote code execution vulnerability that allows unauthenticated attackers to upload malicious JSP files through a path traversal in the file upload form. Attackers can exploit the 'fileName' parameter to upload a web shell and execute arbitrary commands by sending POST requests to the uploaded JSP endpoint."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.2,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-434"
+              }
+            ],
+            "source": "disclosure@vulncheck.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://www.bmc.com/",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://www.bmc.com/support",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://www.exploit-db.com/exploits/51991",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://www.vulncheck.com/advisories/compuware-istrobe-web-pre-auth-remote-code-execution-via-file-upload",
+            "source": "disclosure@vulncheck.com"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 6
+    },
+    {
+      "cve_id": "CVE-2024-58301",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-12-11",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-12-11",
+        "description": "Purei CMS 1.0 contains a time-based blind SQL injection vulnerability that allows attackers to manipulate database queries through unfiltered user input parameters. Attackers can exploit vulnerable endpoints like getAllParks.php and events-ajax.php by injecting crafted SQL payloads to potentially extract or modify database information.",
+        "title": "Purei CMS 1.0 contains a time-based blind SQL injection vulnerability that allows attackers to manipulate database queries through unfilt...",
+        "attack_type": "SQL Injection",
+        "cvss_max": 9.3
+      },
+      "cve": {
+        "id": "CVE-2024-58301",
+        "sourceIdentifier": "disclosure@vulncheck.com",
+        "published": "2025-12-11T22:15:51.390",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Purei CMS 1.0 contains a time-based blind SQL injection vulnerability that allows attackers to manipulate database queries through unfiltered user input parameters. Attackers can exploit vulnerable endpoints like getAllParks.php and events-ajax.php by injecting crafted SQL payloads to potentially extract or modify database information."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-89"
+              }
+            ],
+            "source": "disclosure@vulncheck.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://purei.com",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://www.exploit-db.com/exploits/51929",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://www.vulncheck.com/advisories/purei-cms-sql-injection-via-multiple-vulnerable-endpoints",
+            "source": "disclosure@vulncheck.com"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 7
+    },
+    {
+      "cve_id": "CVE-2024-58307",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-12-11",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-12-11",
+        "description": "CSZCMS 1.3.0 contains an authenticated SQL injection vulnerability in the members view functionality that allows authenticated attackers to manipulate database queries. Attackers can inject malicious SQL code through the view parameter to potentially execute time-based blind SQL injection attacks and extract database information.",
+        "title": "cszcms csz_cms SQL Injection",
+        "vendor": "cszcms",
+        "product": "csz_cms",
+        "attack_type": "SQL Injection",
+        "cvss_max": 9.3
+      },
+      "cve": {
+        "id": "CVE-2024-58307",
+        "sourceIdentifier": "disclosure@vulncheck.com",
+        "published": "2025-12-11T22:15:52.173",
+        "lastModified": "2025-12-22T18:40:40.883",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "CSZCMS 1.3.0 contains an authenticated SQL injection vulnerability in the members view functionality that allows authenticated attackers to manipulate database queries. Attackers can inject malicious SQL code through the view parameter to potentially execute time-based blind SQL injection attacks and extract database information."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 8.8,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-89"
+              }
+            ],
+            "source": "disclosure@vulncheck.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cszcms:csz_cms:1.3.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "B83DE2F9-E5FF-4A78-A40C-AB8CFF373992"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://sourceforge.net/projects/cszcms/files/install/CSZCMS-V1.3.0.zip/download",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Product"
+            ]
+          },
+          {
+            "url": "https://www.cszcms.com/",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Product"
+            ]
+          },
+          {
+            "url": "https://www.exploit-db.com/exploits/51916",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory",
+              "VDB Entry"
+            ]
+          },
+          {
+            "url": "https://www.vulncheck.com/advisories/cszcms-authenticated-sql-injection-via-members-view-endpoint",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 8
+    },
+    {
+      "cve_id": "CVE-2024-58308",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-12-11",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-12-11",
+        "description": "Quick.CMS 6.7 contains a SQL injection vulnerability that allows unauthenticated attackers to bypass login authentication by manipulating the login form. Attackers can inject specific SQL payloads like ' or '1'='1 to gain unauthorized administrative access to the system.",
+        "title": "opensolution quick_cms SQL Injection",
+        "vendor": "opensolution",
+        "product": "quick_cms",
+        "attack_type": "SQL Injection",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2024-58308",
+        "sourceIdentifier": "disclosure@vulncheck.com",
+        "published": "2025-12-11T22:15:52.340",
+        "lastModified": "2025-12-31T18:30:13.567",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Quick.CMS 6.7 contains a SQL injection vulnerability that allows unauthenticated attackers to bypass login authentication by manipulating the login form. Attackers can inject specific SQL payloads like ' or '1'='1 to gain unauthorized administrative access to the system."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-89"
+              }
+            ],
+            "source": "disclosure@vulncheck.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:opensolution:quick_cms:6.7:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "0B571ABB-F2E3-4C39-9560-74C3E9E98593"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://opensolution.org/download/home.html?sFile=Quick.Cms_v6.7-en.zip",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Exploit"
+            ]
+          },
+          {
+            "url": "https://www.exploit-db.com/exploits/51910",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Exploit"
+            ]
+          },
+          {
+            "url": "https://www.opensolution.org",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Product"
+            ]
+          },
+          {
+            "url": "https://www.vulncheck.com/advisories/quickcms-sql-injection-authentication-bypass-via-admin-login",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 9
+    },
+    {
+      "cve_id": "CVE-2025-13780",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-12-11",
+          "previous_max": null,
+          "current_max": 9.1
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-12-11",
+        "description": "pgAdmin versions up to 9.10 are affected by a Remote Code Execution (RCE) vulnerability that occurs when running in server mode and performing restores from PLAIN-format dump files. This issue allows attackers to inject and execute arbitrary commands on the server hosting pgAdmin, posing a critical risk to the integrity and security of the database management system and underlying data.",
+        "title": "pgadmin pgadmin_4 RCE",
+        "vendor": "pgadmin",
+        "product": "pgadmin_4",
+        "attack_type": "RCE",
+        "cvss_max": 9.1
+      },
+      "cve": {
+        "id": "CVE-2025-13780",
+        "sourceIdentifier": "f86ef6dc-4d3a-42ad-8f28-e6d5547a5007",
+        "published": "2025-12-11T19:15:52.857",
+        "lastModified": "2025-12-19T19:51:13.657",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "pgAdmin versions up to 9.10 are affected by a Remote Code Execution (RCE) vulnerability that occurs when running in server mode and performing restores from PLAIN-format dump files. This issue allows attackers to inject and execute arbitrary commands on the server hosting pgAdmin, posing a critical risk to the integrity and security of the database management system and underlying data."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:L/A:L",
+                "baseScore": 9.1,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "f86ef6dc-4d3a-42ad-8f28-e6d5547a5007",
+              "type": "Secondary",
+              "exploitabilityScore": 3.1,
+              "impactScore": 5.3
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 8.8,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-94"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:pgadmin:pgadmin_4:*:*:*:*:*:postgresql:*:*",
+                    "matchCriteriaId": "31BFDAD3-B87D-46DD-9984-3000087309DD",
+                    "versionEndIncluding": "9.10"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/pgadmin-org/pgadmin4/issues/9368",
+            "source": "f86ef6dc-4d3a-42ad-8f28-e6d5547a5007",
+            "tags": [
+              "Issue Tracking"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 10
+    },
+    {
+      "cve_id": "CVE-2025-36937",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-12-11",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-12-11",
+        "description": "In AudioDecoder::HandleProduceRequest of audio_decoder.cc, there is a possible out of bounds write due to an incorrect bounds check. This could lead to remote code execution with no additional execution privileges needed. User interaction is not needed for exploitation.",
+        "title": "google android RCE",
+        "vendor": "google",
+        "product": "android",
+        "attack_type": "RCE",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-36937",
+        "sourceIdentifier": "dsap-vuln-management@google.com",
+        "published": "2025-12-11T20:15:58.243",
+        "lastModified": "2026-01-05T21:16:10.410",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "In AudioDecoder::HandleProduceRequest of audio_decoder.cc, there is a possible out of bounds write due to an incorrect bounds check. This could lead to remote code execution with no additional execution privileges needed. User interaction is not needed for exploitation."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-787"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          },
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-787"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:google:android:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "F8B9FEC8-73B6-43B8-B24E-1F7C20D91D26"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://source.android.com/security/bulletin/pixel/2025-12-01",
+            "source": "dsap-vuln-management@google.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 11
+    },
+    {
+      "cve_id": "CVE-2025-66048",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-12-11",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-12-11",
+        "description": "Several stack-based buffer overflow vulnerabilities exists in the MFER parsing functionality of The Biosig Project libbiosig 3.9.1. A specially crafted MFER file can lead to arbitrary code execution. An attacker can provide a malicious file to trigger these vulnerabilities.When Tag is 133",
+        "title": "libbiosig_project libbiosig RCE",
+        "vendor": "libbiosig_project",
+        "product": "libbiosig",
+        "attack_type": "RCE",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-66048",
+        "sourceIdentifier": "talos-cna@cisco.com",
+        "published": "2025-12-11T17:15:59.023",
+        "lastModified": "2025-12-17T20:23:57.247",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Several stack-based buffer overflow vulnerabilities exists in the MFER parsing functionality of The Biosig Project libbiosig 3.9.1. A specially crafted MFER file can lead to arbitrary code execution. An attacker can provide a malicious file to trigger these vulnerabilities.When Tag is 133"
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "talos-cna@cisco.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-121"
+              }
+            ],
+            "source": "talos-cna@cisco.com"
+          },
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-787"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:libbiosig_project:libbiosig:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "2D3CD139-6F71-4B97-95A3-A52466FF6563",
+                    "versionEndExcluding": "3.9.2"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://talosintelligence.com/vulnerability_reports/TALOS-2025-2296",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 12
+    }
+  ],
+  "source": "https://www.cvelogic.com/threat-intelligence/2025-12-11"
+}

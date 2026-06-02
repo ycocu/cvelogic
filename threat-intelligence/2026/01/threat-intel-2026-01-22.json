@@ -1,0 +1,2249 @@
+{
+  "schema_version": "2.2",
+  "generated_at": "2026-06-02T07:34:15Z",
+  "day": "2026-01-22",
+  "window": {
+    "utc_start": "2026-01-22",
+    "utc_end": "2026-01-22",
+    "days": 1
+  },
+  "summary": {
+    "brief": "Synacor Zimbra Collaboration Suite (ZCS) added to CISA KEV — confirmed in-the-wild exploitation. · Lfprojects Mlflow — exploitation likelihood rose sharply (EPSS 22% → 33% · rising (+11%)). · 10 new critical disclosures — review patch status on exposed services.",
+    "bullets": [
+      "Synacor Zimbra Collaboration Suite (ZCS) added to CISA KEV — confirmed in-the-wild exploitation.",
+      "Lfprojects Mlflow — exploitation likelihood rose sharply (EPSS 22% → 33% · rising (+11%)).",
+      "10 new critical disclosures — review patch status on exposed services."
+    ],
+    "counts": {
+      "cves": 16,
+      "kev": 4,
+      "exploit": 0,
+      "epss": 2,
+      "cvss": 10,
+      "patch": 0
+    }
+  },
+  "cves": [
+    {
+      "cve_id": "CVE-2025-34026",
+      "signal_types": [
+        "KEV"
+      ],
+      "signals": {
+        "kev": {
+          "date_added": "2026-01-22"
+        },
+        "exploit": null,
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-05-21",
+        "description": "The Versa Concerto SD-WAN orchestration platform is vulnerable to an authentication bypass in the Traefik reverse proxy configuration, allowing at attacker to access administrative endpoints. The internal Actuator endpoint can be leveraged for access to heap dumps and trace logs.This issue is known to affect Concerto from 12.1.2 through 12.2.0. Additional versions may be vulnerable.",
+        "title": "Versa Concerto Improper Authentication Vulnerability",
+        "vendor": "versa-networks",
+        "product": "concerto",
+        "attack_type": "Auth Bypass",
+        "cvss_max": 9.2
+      },
+      "cve": {
+        "id": "CVE-2025-34026",
+        "sourceIdentifier": "disclosure@vulncheck.com",
+        "published": "2025-05-21T22:15:50.510",
+        "lastModified": "2026-01-23T18:39:24.063",
+        "vulnStatus": "Analyzed",
+        "cisaExploitAdd": "2026-01-22",
+        "cisaActionDue": "2026-02-12",
+        "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+        "cisaVulnerabilityName": "Versa Concerto Improper Authentication Vulnerability",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The Versa Concerto SD-WAN orchestration platform is vulnerable to an authentication bypass in the Traefik reverse proxy configuration, allowing at attacker to access administrative endpoints. The internal Actuator endpoint can be leveraged for access to heap dumps and trace logs.This issue is known to affect Concerto from 12.1.2 through 12.2.0. Additional versions may be vulnerable."
+          },
+          {
+            "lang": "es",
+            "value": "La plataforma de orquestación SD-WAN Versa Concerto es vulnerable a una omisión de autenticación en la configuración del proxy inverso Traefik, lo que permite a un atacante acceder a los endpoints administrativos. El endpoint interno del Actuador puede utilizarse para acceder a volcados de pila y registros de seguimiento. Se sabe que este problema afecta a Concerto desde la versión 12.1.2 hasta la 12.2.0. Otras versiones podrían ser vulnerables."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+                "baseScore": 7.5,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 3.6
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:H/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.2,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-288"
+              }
+            ],
+            "source": "disclosure@vulncheck.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:versa-networks:concerto:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "78511D68-DB7C-4B51-A603-3A6315D8729D",
+                    "versionStartIncluding": "11.4.0",
+                    "versionEndExcluding": "12.1.2"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:versa-networks:concerto:12.1.2:-:*:*:*:*:*:*",
+                    "matchCriteriaId": "BC56E615-FC18-48FF-B52E-2251B45A6B43"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:versa-networks:concerto:12.2.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "BD1AC8C4-C516-49E7-AE0B-D9B5F209D928"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://projectdiscovery.io/blog/versa-concerto-authentication-bypass-rce",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Exploit",
+              "Mitigation",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://security-portal.versa-networks.com/emailbulletins/6830f94328defa375486ff2e",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2025-34026",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "US Government Resource"
+            ]
+          }
+        ]
+      },
+      "risk_score": 88,
+      "rank": 1
+    },
+    {
+      "cve_id": "CVE-2023-6568",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 0.22147,
+            "score_date": "2025-11-21"
+          },
+          "current": {
+            "score": 0.33351,
+            "score_date": "2026-01-22"
+          },
+          "delta": 0.11204
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2023-12-07",
+        "description": "A reflected Cross-Site Scripting (XSS) vulnerability exists in the mlflow/mlflow repository, specifically within the handling of the Content-Type header in POST requests. An attacker can inject malicious JavaScript code into the Content-Type header, which is then improperly reflected back to the user without adequate sanitization or escaping, leading to arbitrary JavaScript execution in the context of the victim's browser. The vulnerability is present in the mlflow/server/auth/__init__.py file, where the user-supplied Content-Type header is directly injected into a Python formatted string and returned to the user, facilitating the XSS attack.",
+        "title": "lfprojects mlflow XSS",
+        "vendor": "lfprojects",
+        "product": "mlflow",
+        "attack_type": "XSS",
+        "cvss_max": 6.5
+      },
+      "cve": {
+        "id": "CVE-2023-6568",
+        "sourceIdentifier": "security@huntr.dev",
+        "published": "2023-12-07T05:15:09.347",
+        "lastModified": "2024-11-21T08:44:07.173",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A reflected Cross-Site Scripting (XSS) vulnerability exists in the mlflow/mlflow repository, specifically within the handling of the Content-Type header in POST requests. An attacker can inject malicious JavaScript code into the Content-Type header, which is then improperly reflected back to the user without adequate sanitization or escaping, leading to arbitrary JavaScript execution in the context of the victim's browser. The vulnerability is present in the mlflow/server/auth/__init__.py file, where the user-supplied Content-Type header is directly injected into a Python formatted string and returned to the user, facilitating the XSS attack."
+          },
+          {
+            "lang": "es",
+            "value": "Cross-Site-Scripting (XSS) Reflejadas en el repositorio de GitHub mlflow/mlflow antes de 2.9.0."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV30": [
+            {
+              "cvssData": {
+                "version": "3.0",
+                "vectorString": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N",
+                "baseScore": 6.5,
+                "baseSeverity": "MEDIUM"
+              },
+              "source": "security@huntr.dev",
+              "type": "Secondary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 3.6
+            }
+          ],
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+                "baseScore": 6.1,
+                "baseSeverity": "MEDIUM"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 2.7
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-79"
+              }
+            ],
+            "source": "security@huntr.dev"
+          },
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-79"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:lfprojects:mlflow:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "D7B09299-B859-4252-B907-2924010BD019",
+                    "versionEndIncluding": "2.9.0"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/mlflow/mlflow/commit/28ff3f94994941e038f2172c6484b65dc4db6ca1",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://huntr.com/bounties/816bdaaa-8153-4732-951e-b0d92fddf709",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 79,
+      "rank": 2
+    },
+    {
+      "cve_id": "CVE-2026-24306",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-01-22",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-01-22",
+        "description": "Improper access control in Azure Front Door (AFD) allows an unauthorized attacker to elevate privileges over a network.",
+        "title": "microsoft azure_front_door privilege escalation",
+        "vendor": "microsoft",
+        "product": "azure_front_door",
+        "attack_type": "privilege escalation",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2026-24306",
+        "sourceIdentifier": "secure@microsoft.com",
+        "published": "2026-01-22T23:15:58.837",
+        "lastModified": "2026-02-27T13:44:45.297",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Improper access control in Azure Front Door (AFD) allows an unauthorized attacker to elevate privileges over a network."
+          },
+          {
+            "lang": "es",
+            "value": "Control de acceso inadecuado en Azure Front Door (AFD) permite a un atacante no autorizado elevar privilegios sobre una red."
+          }
+        ],
+        "cveTags": [
+          {
+            "sourceIdentifier": "secure@microsoft.com",
+            "tags": [
+              "exclusively-hosted-service"
+            ]
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "secure@microsoft.com",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-284"
+              }
+            ],
+            "source": "secure@microsoft.com"
+          },
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "NVD-CWE-noinfo"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:microsoft:azure_front_door:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "F66AE777-ECFA-4FD1-A6B5-AD9E8181020A"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-24306",
+            "source": "secure@microsoft.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 3
+    },
+    {
+      "cve_id": "CVE-2009-4107",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 0.05035,
+            "score_date": "2025-04-21"
+          },
+          "current": {
+            "score": 0.15074,
+            "score_date": "2026-01-22"
+          },
+          "delta": 0.10039
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2009-11-29",
+        "description": "Buffer overflow in Invisible Browsing 5.0.52 allows user-assisted remote attackers to execute arbitrary code via a crafted .ibkey file containing a long string.",
+        "title": "amplusnet invisible_browsing Buffer Overflow",
+        "vendor": "amplusnet",
+        "product": "invisible_browsing",
+        "attack_type": "Buffer Overflow",
+        "cvss_max": 9.3
+      },
+      "cve": {
+        "id": "CVE-2009-4107",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2009-11-29T13:08:29.563",
+        "lastModified": "2026-04-23T00:35:47.467",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Buffer overflow in Invisible Browsing 5.0.52 allows user-assisted remote attackers to execute arbitrary code via a crafted .ibkey file containing a long string."
+          },
+          {
+            "lang": "es",
+            "value": "Desbordamiento de búfer en Invisible Browsing v5.0.52, permite a atacantes remotos asistidos por el usuario, la ejecución de código de su elección a través de un archivo .ibkey manipulado que contiene una cadena larga."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV2": [
+            {
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:M/Au:N/C:C/I:C/A:C",
+                "baseScore": 9.3,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "baseSeverity": "HIGH",
+              "exploitabilityScore": 8.6,
+              "impactScore": 10.0
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-119"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:amplusnet:invisible_browsing:5.0.52:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "D1FB14CB-8FF8-43A2-ADEC-CE6CBB947B4E"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "http://hjafari.blogspot.com/2009/09/invisible-browsing-5052-ibkey-local.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit"
+            ]
+          },
+          {
+            "url": "http://www.exploit-db.com/exploits/9655",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          }
+        ]
+      },
+      "risk_score": 82,
+      "rank": 4
+    },
+    {
+      "cve_id": "CVE-2025-31125",
+      "signal_types": [
+        "KEV"
+      ],
+      "signals": {
+        "kev": {
+          "date_added": "2026-01-22"
+        },
+        "exploit": null,
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-03-31",
+        "description": "Vite is a frontend tooling framework for javascript. Vite exposes content of non-allowed files using ?inline&import or ?raw?import. Only apps explicitly exposing the Vite dev server to the network (using --host or server.host config option) are affected. This vulnerability is fixed in 6.2.4, 6.1.3, 6.0.13, 5.4.16, and 4.5.11.",
+        "title": "Vite Vitejs Improper Access Control Vulnerability",
+        "vendor": "vitejs",
+        "product": "vite",
+        "cvss_max": 7.5
+      },
+      "cve": {
+        "id": "CVE-2025-31125",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2025-03-31T17:15:43.163",
+        "lastModified": "2026-01-23T18:39:55.027",
+        "vulnStatus": "Analyzed",
+        "cisaExploitAdd": "2026-01-22",
+        "cisaActionDue": "2026-02-12",
+        "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+        "cisaVulnerabilityName": "Vite Vitejs Improper Access Control Vulnerability",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Vite is a frontend tooling framework for javascript. Vite exposes content of non-allowed files using ?inline&import or ?raw?import. Only apps explicitly exposing the Vite dev server to the network (using --host or server.host config option) are affected. This vulnerability is fixed in 6.2.4, 6.1.3, 6.0.13, 5.4.16, and 4.5.11."
+          },
+          {
+            "lang": "es",
+            "value": "Vite es un framework de herramientas frontend para JavaScript. Vite expone el contenido de archivos no permitidos mediante ?inline&amp;import o ?raw?import. Solo las aplicaciones que exponen explícitamente el servidor de desarrollo de Vite a la red (mediante la opción de configuración --host o server.host) se ven afectadas. Esta vulnerabilidad está corregida en las versiones 6.2.4, 6.1.3, 6.0.13, 5.4.16 y 4.5.11."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:N/A:N",
+                "baseScore": 5.3,
+                "baseSeverity": "MEDIUM"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary",
+              "exploitabilityScore": 1.6,
+              "impactScore": 3.6
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+                "baseScore": 7.5,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 3.6
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-200"
+              },
+              {
+                "lang": "en",
+                "value": "CWE-284"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          },
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "NVD-CWE-noinfo"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vitejs:vite:*:*:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "7A30C04F-CD9B-4205-BC89-9C9FE6C4B8D4",
+                    "versionEndExcluding": "4.5.11"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vitejs:vite:*:*:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "B4B2C2B8-B924-4101-922A-F7164B58F683",
+                    "versionStartIncluding": "5.0.0",
+                    "versionEndExcluding": "5.4.16"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vitejs:vite:*:*:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "4E94BAC6-64A0-4514-85EA-E307E267D688",
+                    "versionStartIncluding": "6.0.0",
+                    "versionEndExcluding": "6.0.13"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vitejs:vite:*:*:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "7E8A7AC3-D23F-44DA-B505-59CE155792DB",
+                    "versionStartIncluding": "6.1.0",
+                    "versionEndExcluding": "6.1.3"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vitejs:vite:*:*:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "B3710ACF-96C0-4931-A5A1-7810D116AADE",
+                    "versionStartIncluding": "6.2.0",
+                    "versionEndExcluding": "6.2.4"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/vitejs/vite/commit/59673137c45ac2bcfad1170d954347c1a17ab949",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://github.com/vitejs/vite/security/advisories/GHSA-4r4m-qw57-chr8",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Exploit",
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2025-31125",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "US Government Resource"
+            ]
+          }
+        ]
+      },
+      "risk_score": 88,
+      "rank": 5
+    },
+    {
+      "cve_id": "CVE-2025-54313",
+      "signal_types": [
+        "KEV"
+      ],
+      "signals": {
+        "kev": {
+          "date_added": "2026-01-22"
+        },
+        "exploit": null,
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-07-19",
+        "description": "eslint-config-prettier 8.10.1, 9.1.1, 10.1.6, and 10.1.7 has embedded malicious code for a supply chain compromise. Installing an affected package executes an install.js file that launches the node-gyp.dll malware on Windows.",
+        "title": "Prettier eslint-config-prettier Embedded Malicious Code Vulnerability",
+        "vendor": "prettier",
+        "product": "eslint-config-prettier",
+        "cvss_max": 7.5
+      },
+      "cve": {
+        "id": "CVE-2025-54313",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2025-07-19T17:15:23.733",
+        "lastModified": "2026-01-23T18:33:09.503",
+        "vulnStatus": "Analyzed",
+        "cisaExploitAdd": "2026-01-22",
+        "cisaActionDue": "2026-02-12",
+        "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+        "cisaVulnerabilityName": "Prettier eslint-config-prettier Embedded Malicious Code Vulnerability",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "eslint-config-prettier 8.10.1, 9.1.1, 10.1.6, and 10.1.7 has embedded malicious code for a supply chain compromise. Installing an affected package executes an install.js file that launches the node-gyp.dll malware on Windows."
+          },
+          {
+            "lang": "es",
+            "value": "eslint-config-prettier 8.10.1, 9.1.1, 10.1.6 y 10.1.7 contiene código malicioso que compromete la cadena de suministro. Al instalar un paquete afectado, se ejecuta un archivo install.js que lanza el malware node-gyp.dll en Windows."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:L/I:H/A:N",
+                "baseScore": 7.5,
+                "baseSeverity": "HIGH"
+              },
+              "source": "cve@mitre.org",
+              "type": "Secondary",
+              "exploitabilityScore": 2.2,
+              "impactScore": 4.7
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-506"
+              }
+            ],
+            "source": "cve@mitre.org"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:prettier:eslint-config-prettier:8.10.1:*:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "B43B0C8D-0662-45E9-ADA9-AA6A8A5AC042"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:prettier:eslint-config-prettier:9.1.1:*:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "9CAD3812-C7C4-443C-BFFE-3B7751EBCB38"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:prettier:eslint-config-prettier:10.1.6:*:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "64749F3A-C896-4133-8C21-4C2439780CB0"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:prettier:eslint-config-prettier:10.1.7:*:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "C9CE9AC7-568C-43CF-8417-ADA21CECB3A5"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "A2572D17-1DE6-457B-99CC-64AFD54487EA"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:prettier:eslint-plugin-prettier:4.2.2:*:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "3A8983B4-86E8-4B13-95A1-EEF13107122B"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:prettier:eslint-plugin-prettier:4.2.3:*:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "F22A30A9-BA7F-4B49-8C9B-547E79F1CD46"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "A2572D17-1DE6-457B-99CC-64AFD54487EA"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:un-ts:synckit:0.11.9:*:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "92E47D68-A074-4FFD-8A7C-91BC032A95E1"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "A2572D17-1DE6-457B-99CC-64AFD54487EA"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:un-ts:pkgr\\/core:0.2.8:*:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "CDB0E59B-E301-4686-88E0-A107B823FE77"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "A2572D17-1DE6-457B-99CC-64AFD54487EA"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:alexghr:got-fetch:5.1.1:*:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "9839FE3B-999A-4CA8-AE29-C6854B13A1FD"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:alexghr:got-fetch:5.1.2:*:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "6AA8D543-56F5-438E-B99B-ECD89642C416"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "A2572D17-1DE6-457B-99CC-64AFD54487EA"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:un-ts:napi-postinstall:0.3.1:*:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "044AD411-E619-4FAE-8506-3C44FBBC5666"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "A2572D17-1DE6-457B-99CC-64AFD54487EA"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:homarr:homarr:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "F3427958-A7B3-4FBA-A8D8-7F04C04E5F2F",
+                    "versionStartIncluding": "1.29.0",
+                    "versionEndExcluding": "1.30.0"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "A2572D17-1DE6-457B-99CC-64AFD54487EA"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/prettier/eslint-config-prettier/issues/339",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Issue Tracking"
+            ]
+          },
+          {
+            "url": "https://news.ycombinator.com/item?id=44608811",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Issue Tracking"
+            ]
+          },
+          {
+            "url": "https://news.ycombinator.com/item?id=44609732",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Issue Tracking"
+            ]
+          },
+          {
+            "url": "https://socket.dev/blog/npm-phishing-campaign-leads-to-prettier-tooling-packages-compromise",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.bleepingcomputer.com/news/security/popular-npm-linter-packages-hijacked-via-phishing-to-drop-malware/",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.npmjs.com/package/eslint-config-prettier?activeTab=versions",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Product"
+            ]
+          },
+          {
+            "url": "https://www.stepsecurity.io/blog/supply-chain-security-alert-eslint-config-prettier-package-shows-signs-of-compromise",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/community-scripts/ProxmoxVE/discussions/6115",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.endorlabs.com/learn/cve-2025-54313-eslint-config-prettier-compromise----high-severity-but-windows-only",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2025-54313",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "US Government Resource"
+            ]
+          }
+        ]
+      },
+      "risk_score": 88,
+      "rank": 6
+    },
+    {
+      "cve_id": "CVE-2025-54816",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-01-22",
+          "previous_max": null,
+          "current_max": 9.4
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-01-22",
+        "description": "This vulnerability occurs when a WebSocket endpoint does not enforce \nproper authentication mechanisms, allowing unauthorized users to \nestablish connections. As a result, attackers can exploit this weakness \nto gain unauthorized access to sensitive data or perform unauthorized \nactions. Given that no authentication is required, this can lead to \nprivilege escalation and potentially compromise the security of the \nentire system.",
+        "title": "evmapa evmapa Privilege Escalation",
+        "vendor": "evmapa",
+        "product": "evmapa",
+        "attack_type": "Privilege Escalation",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-54816",
+        "sourceIdentifier": "ics-cert@hq.dhs.gov",
+        "published": "2026-01-22T23:15:49.953",
+        "lastModified": "2026-02-02T19:56:13.070",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "This vulnerability occurs when a WebSocket endpoint does not enforce \nproper authentication mechanisms, allowing unauthorized users to \nestablish connections. As a result, attackers can exploit this weakness \nto gain unauthorized access to sensitive data or perform unauthorized \nactions. Given that no authentication is required, this can lead to \nprivilege escalation and potentially compromise the security of the \nentire system."
+          },
+          {
+            "lang": "es",
+            "value": "Esta vulnerabilidad ocurre cuando un endpoint WebSocket no aplica mecanismos de autenticación adecuados, permitiendo a usuarios no autorizados establecer conexiones. Como resultado, los atacantes pueden explotar esta debilidad para obtener acceso no autorizado a datos sensibles o realizar acciones no autorizadas. Dado que no se requiere autenticación, esto puede llevar a una escalada de privilegios y potencialmente comprometer la seguridad de todo el sistema."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:L",
+                "baseScore": 9.4,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "ics-cert@hq.dhs.gov",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.5
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-306"
+              }
+            ],
+            "source": "ics-cert@hq.dhs.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:evmapa:evmapa:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "8C85ACDB-38D2-4466-9206-529F45F4720E"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/cisagov/CSAF/blob/develop/csaf_files/OT/white/2026/icsa-26-022-08.json",
+            "source": "ics-cert@hq.dhs.gov",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-022-08",
+            "source": "ics-cert@hq.dhs.gov",
+            "tags": [
+              "Third Party Advisory",
+              "US Government Resource"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 7
+    },
+    {
+      "cve_id": "CVE-2025-56590",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-01-22",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-01-22",
+        "description": "An issue was discovered in the InsertFromURL() function of the Apryse HTML2PDF SDK thru 11.10. This vulnerability could allow an attacker to execute arbitrary operating system commands on the local server.",
+        "title": "apryse html2pdf",
+        "vendor": "apryse",
+        "product": "html2pdf",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-56590",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2026-01-22T18:16:42.443",
+        "lastModified": "2026-02-12T15:01:49.683",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "An issue was discovered in the InsertFromURL() function of the Apryse HTML2PDF SDK thru 11.10. This vulnerability could allow an attacker to execute arbitrary operating system commands on the local server."
+          },
+          {
+            "lang": "es",
+            "value": "Se descubrió un problema en la función InsertFromURL() del SDK Apryse HTML2PDF hasta la versión 11.10. Esta vulnerabilidad podría permitir a un atacante ejecutar comandos arbitrarios del sistema operativo en el servidor local."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-78"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:apryse:html2pdf:11.5.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "FB6DEBF8-CD85-485C-8B52-F70A4BE7909B"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:apryse:html2pdf:11.7.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "CF5C0850-F608-426E-8FD8-AC4E4312E4A6"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:apryse:html2pdf:11.10.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "F5AD5BCA-FF3F-4C6B-91DF-00CA12E4C82E"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "http://apryse.com",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Product"
+            ]
+          },
+          {
+            "url": "https://www.stratascale.com/resource/apryse-server-argument-injection-rce/",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 8
+    },
+    {
+      "cve_id": "CVE-2025-68645",
+      "signal_types": [
+        "KEV"
+      ],
+      "signals": {
+        "kev": {
+          "date_added": "2026-01-22"
+        },
+        "exploit": null,
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-12-22",
+        "description": "A Local File Inclusion (LFI) vulnerability exists in the Webmail Classic UI of Zimbra Collaboration (ZCS) 10.0 and 10.1 because of improper handling of user-supplied request parameters in the RestFilter servlet. An unauthenticated remote attacker can craft requests to the /h/rest endpoint to influence internal request dispatching, allowing inclusion of arbitrary files from the WebRoot directory.",
+        "title": "Synacor Zimbra Collaboration Suite (ZCS) PHP Remote File Inclusion Vulnerability",
+        "vendor": "synacor",
+        "product": "zimbra_collaboration_suite",
+        "cvss_max": 8.8
+      },
+      "cve": {
+        "id": "CVE-2025-68645",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2025-12-22T18:16:17.070",
+        "lastModified": "2026-01-23T18:39:33.290",
+        "vulnStatus": "Analyzed",
+        "cisaExploitAdd": "2026-01-22",
+        "cisaActionDue": "2026-02-12",
+        "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+        "cisaVulnerabilityName": "Synacor Zimbra Collaboration Suite (ZCS) PHP Remote File Inclusion Vulnerability",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A Local File Inclusion (LFI) vulnerability exists in the Webmail Classic UI of Zimbra Collaboration (ZCS) 10.0 and 10.1 because of improper handling of user-supplied request parameters in the RestFilter servlet. An unauthenticated remote attacker can craft requests to the /h/rest endpoint to influence internal request dispatching, allowing inclusion of arbitrary files from the WebRoot directory."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+                "baseScore": 8.8,
+                "baseSeverity": "HIGH"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-98"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "7D423DB3-FCD4-445F-A778-BC5F83E01953",
+                    "versionStartIncluding": "10.0.0",
+                    "versionEndExcluding": "10.0.18"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "7C3F6B1E-1671-461B-A093-7B6854C227FE",
+                    "versionStartIncluding": "10.1.0",
+                    "versionEndExcluding": "10.1.13"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://wiki.zimbra.com/wiki/Security_Center",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Release Notes",
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://wiki.zimbra.com/wiki/Zimbra_Responsible_Disclosure_Policy",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Product"
+            ]
+          },
+          {
+            "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2025-68645",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "US Government Resource"
+            ]
+          }
+        ]
+      },
+      "risk_score": 88,
+      "rank": 9
+    },
+    {
+      "cve_id": "CVE-2026-1201",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-01-22",
+          "previous_max": null,
+          "current_max": 9.4
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-01-22",
+        "description": "An Authorization Bypass Through User-Controlled Key vulnerability in Hubitat Elevation home automation controllers prior to version 2.4.2.157 could allow a remote authenticated user to control connected devices outside of their authorized scope via client-side request manipulation.",
+        "title": "An Authorization Bypass Through User-Controlled Key vulnerability in Hubitat Elevation home automation controllers prior to version 2.4.2...",
+        "attack_type": "privilege escalation",
+        "cvss_max": 9.4
+      },
+      "cve": {
+        "id": "CVE-2026-1201",
+        "sourceIdentifier": "ics-cert@hq.dhs.gov",
+        "published": "2026-01-22T22:16:16.130",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "An Authorization Bypass Through User-Controlled Key vulnerability in Hubitat Elevation home automation controllers prior to version 2.4.2.157 could allow a remote authenticated user to control connected devices outside of their authorized scope via client-side request manipulation."
+          },
+          {
+            "lang": "es",
+            "value": "Una vulnerabilidad de elusión de autorización a través de una clave controlada por el usuario en los controladores de automatización del hogar Hubitat Elevation anteriores a la versión 2.4.2.157 podría permitir a un usuario remoto autenticado controlar dispositivos conectados fuera de su ámbito de autorización mediante la manipulación de solicitudes del lado del cliente."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.4,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "ics-cert@hq.dhs.gov",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-639"
+              }
+            ],
+            "source": "ics-cert@hq.dhs.gov"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://ostrichlab.io/research-blog/?post=hubitat_writeup",
+            "source": "ics-cert@hq.dhs.gov"
+          },
+          {
+            "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-022-06",
+            "source": "ics-cert@hq.dhs.gov"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 10
+    },
+    {
+      "cve_id": "CVE-2026-20750",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-01-22",
+          "previous_max": null,
+          "current_max": 9.1
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-01-22",
+        "description": "Gitea does not properly validate project ownership in organization project operations. A user with project write access in one organization may be able to modify projects belonging to a different organization.",
+        "title": "gitea gitea",
+        "vendor": "gitea",
+        "product": "gitea",
+        "cvss_max": 9.1
+      },
+      "cve": {
+        "id": "CVE-2026-20750",
+        "sourceIdentifier": "88ee5874-cf24-4952-aea0-31affedb7ff2",
+        "published": "2026-01-22T22:16:17.370",
+        "lastModified": "2026-01-29T21:48:07.563",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Gitea does not properly validate project ownership in organization project operations. A user with project write access in one organization may be able to modify projects belonging to a different organization."
+          },
+          {
+            "lang": "es",
+            "value": "Gitea no valida correctamente la titularidad de los proyectos en las operaciones de proyectos de la organización. Un usuario con permisos de escritura en proyectos de una organización podría modificar proyectos pertenecientes a una organización diferente."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+                "baseScore": 9.1,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.2
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-284"
+              }
+            ],
+            "source": "88ee5874-cf24-4952-aea0-31affedb7ff2"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:gitea:gitea:*:*:*:*:*:-:*:*",
+                    "matchCriteriaId": "DFCB7D74-331D-4582-AB41-113A25BE8FAA",
+                    "versionEndExcluding": "1.25.4"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://blog.gitea.com/release-of-1.25.4/",
+            "source": "88ee5874-cf24-4952-aea0-31affedb7ff2",
+            "tags": [
+              "Release Notes"
+            ]
+          },
+          {
+            "url": "https://github.com/go-gitea/gitea/pull/36318",
+            "source": "88ee5874-cf24-4952-aea0-31affedb7ff2",
+            "tags": [
+              "Issue Tracking",
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://github.com/go-gitea/gitea/pull/36373",
+            "source": "88ee5874-cf24-4952-aea0-31affedb7ff2",
+            "tags": [
+              "Issue Tracking",
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://github.com/go-gitea/gitea/releases/tag/v1.25.4",
+            "source": "88ee5874-cf24-4952-aea0-31affedb7ff2",
+            "tags": [
+              "Release Notes"
+            ]
+          },
+          {
+            "url": "https://github.com/go-gitea/gitea/security/advisories/GHSA-h4fh-pc4w-8w27",
+            "source": "88ee5874-cf24-4952-aea0-31affedb7ff2",
+            "tags": [
+              "Broken Link"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 11
+    },
+    {
+      "cve_id": "CVE-2026-20897",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-01-22",
+          "previous_max": null,
+          "current_max": 9.1
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-01-22",
+        "description": "Gitea does not properly validate repository ownership when deleting Git LFS locks. A user with write access to one repository may be able to delete LFS locks belonging to other repositories.",
+        "title": "gitea gitea",
+        "vendor": "gitea",
+        "product": "gitea",
+        "cvss_max": 9.1
+      },
+      "cve": {
+        "id": "CVE-2026-20897",
+        "sourceIdentifier": "88ee5874-cf24-4952-aea0-31affedb7ff2",
+        "published": "2026-01-22T22:16:18.960",
+        "lastModified": "2026-01-29T22:02:20.170",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Gitea does not properly validate repository ownership when deleting Git LFS locks. A user with write access to one repository may be able to delete LFS locks belonging to other repositories."
+          },
+          {
+            "lang": "es",
+            "value": "Gitea no valida correctamente la propiedad del repositorio al eliminar bloqueos de Git LFS. Un usuario con acceso de escritura a un repositorio podría eliminar bloqueos LFS pertenecientes a otros repositorios."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+                "baseScore": 9.1,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.2
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-284"
+              },
+              {
+                "lang": "en",
+                "value": "CWE-639"
+              }
+            ],
+            "source": "88ee5874-cf24-4952-aea0-31affedb7ff2"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:gitea:gitea:*:*:*:*:*:-:*:*",
+                    "matchCriteriaId": "DFCB7D74-331D-4582-AB41-113A25BE8FAA",
+                    "versionEndExcluding": "1.25.4"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://blog.gitea.com/release-of-1.25.4/",
+            "source": "88ee5874-cf24-4952-aea0-31affedb7ff2",
+            "tags": [
+              "Release Notes"
+            ]
+          },
+          {
+            "url": "https://github.com/go-gitea/gitea/pull/36344",
+            "source": "88ee5874-cf24-4952-aea0-31affedb7ff2",
+            "tags": [
+              "Issue Tracking",
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://github.com/go-gitea/gitea/pull/36349",
+            "source": "88ee5874-cf24-4952-aea0-31affedb7ff2",
+            "tags": [
+              "Issue Tracking",
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://github.com/go-gitea/gitea/releases/tag/v1.25.4",
+            "source": "88ee5874-cf24-4952-aea0-31affedb7ff2",
+            "tags": [
+              "Release Notes"
+            ]
+          },
+          {
+            "url": "https://github.com/go-gitea/gitea/security/advisories/GHSA-rrq5-r9h5-pc7c",
+            "source": "88ee5874-cf24-4952-aea0-31affedb7ff2",
+            "tags": [
+              "Broken Link"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 12
+    },
+    {
+      "cve_id": "CVE-2026-20912",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-01-22",
+          "previous_max": null,
+          "current_max": 9.1
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-01-22",
+        "description": "Gitea does not properly validate repository ownership when linking attachments to releases. An attachment uploaded to a private repository could potentially be linked to a release in a different public repository, making it accessible to unauthorized users.",
+        "title": "gitea gitea",
+        "vendor": "gitea",
+        "product": "gitea",
+        "cvss_max": 9.1
+      },
+      "cve": {
+        "id": "CVE-2026-20912",
+        "sourceIdentifier": "88ee5874-cf24-4952-aea0-31affedb7ff2",
+        "published": "2026-01-22T22:16:19.297",
+        "lastModified": "2026-01-29T22:03:58.330",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Gitea does not properly validate repository ownership when linking attachments to releases. An attachment uploaded to a private repository could potentially be linked to a release in a different public repository, making it accessible to unauthorized users."
+          },
+          {
+            "lang": "es",
+            "value": "Gitea no valida correctamente la propiedad del repositorio al vincular adjuntos a las versiones. Un adjunto subido a un repositorio privado podría vincularse potencialmente a una versión en un repositorio público diferente, haciéndolo accesible a usuarios no autorizados."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+                "baseScore": 9.1,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.2
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-284"
+              },
+              {
+                "lang": "en",
+                "value": "CWE-639"
+              }
+            ],
+            "source": "88ee5874-cf24-4952-aea0-31affedb7ff2"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:gitea:gitea:*:*:*:*:*:-:*:*",
+                    "matchCriteriaId": "DFCB7D74-331D-4582-AB41-113A25BE8FAA",
+                    "versionEndExcluding": "1.25.4"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://blog.gitea.com/release-of-1.25.4/",
+            "source": "88ee5874-cf24-4952-aea0-31affedb7ff2",
+            "tags": [
+              "Release Notes"
+            ]
+          },
+          {
+            "url": "https://github.com/go-gitea/gitea/pull/36320",
+            "source": "88ee5874-cf24-4952-aea0-31affedb7ff2",
+            "tags": [
+              "Issue Tracking",
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://github.com/go-gitea/gitea/pull/36355",
+            "source": "88ee5874-cf24-4952-aea0-31affedb7ff2",
+            "tags": [
+              "Issue Tracking",
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://github.com/go-gitea/gitea/releases/tag/v1.25.4",
+            "source": "88ee5874-cf24-4952-aea0-31affedb7ff2",
+            "tags": [
+              "Release Notes"
+            ]
+          },
+          {
+            "url": "https://github.com/go-gitea/gitea/security/advisories/GHSA-vfmv-f93v-37mw",
+            "source": "88ee5874-cf24-4952-aea0-31affedb7ff2",
+            "tags": [
+              "Broken Link"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 13
+    },
+    {
+      "cve_id": "CVE-2026-21264",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-01-22",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-01-22",
+        "description": "Improper neutralization of input during web page generation ('cross-site scripting') in Microsoft Account allows an unauthorized attacker to perform spoofing over a network.",
+        "title": "microsoft account XSS",
+        "vendor": "microsoft",
+        "product": "account",
+        "attack_type": "XSS",
+        "cvss_max": 9.3
+      },
+      "cve": {
+        "id": "CVE-2026-21264",
+        "sourceIdentifier": "secure@microsoft.com",
+        "published": "2026-01-22T23:15:57.407",
+        "lastModified": "2026-02-03T12:58:31.007",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Improper neutralization of input during web page generation ('cross-site scripting') in Microsoft Account allows an unauthorized attacker to perform spoofing over a network."
+          },
+          {
+            "lang": "es",
+            "value": "Neutralización incorrecta de la entrada durante la generación de páginas web ('cross-site scripting') en Microsoft Account permite a un atacante no autorizado realizar suplantación de identidad a través de una red."
+          }
+        ],
+        "cveTags": [
+          {
+            "sourceIdentifier": "secure@microsoft.com",
+            "tags": [
+              "exclusively-hosted-service"
+            ]
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:N",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "secure@microsoft.com",
+              "type": "Secondary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 5.8
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+                "baseScore": 6.1,
+                "baseSeverity": "MEDIUM"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 2.7
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-79"
+              }
+            ],
+            "source": "secure@microsoft.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:microsoft:account:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "7CAFA2F9-C35B-4359-A38D-6AF611819033"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-21264",
+            "source": "secure@microsoft.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 14
+    },
+    {
+      "cve_id": "CVE-2026-24305",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-01-22",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-01-22",
+        "description": "Azure Entra ID Elevation of Privilege Vulnerability",
+        "title": "microsoft entra_id privilege escalation",
+        "vendor": "microsoft",
+        "product": "entra_id",
+        "attack_type": "privilege escalation",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2026-24305",
+        "sourceIdentifier": "secure@microsoft.com",
+        "published": "2026-01-22T23:15:58.667",
+        "lastModified": "2026-02-03T12:46:12.437",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Azure Entra ID Elevation of Privilege Vulnerability"
+          },
+          {
+            "lang": "es",
+            "value": "Vulnerabilidad de Elevación de Privilegios en Azure Entra ID"
+          }
+        ],
+        "cveTags": [
+          {
+            "sourceIdentifier": "secure@microsoft.com",
+            "tags": [
+              "exclusively-hosted-service"
+            ]
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:L/A:N",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "secure@microsoft.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 4.7
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-285"
+              }
+            ],
+            "source": "secure@microsoft.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:microsoft:entra_id:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "D09E509F-AFF3-4991-877A-D197388E7AD4"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-24305",
+            "source": "secure@microsoft.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 15
+    },
+    {
+      "cve_id": "CVE-2026-24307",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-01-22",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-01-22",
+        "description": "Improper validation of specified type of input in M365 Copilot allows an unauthorized attacker to disclose information over a network.",
+        "title": "microsoft 365_copilot",
+        "vendor": "microsoft",
+        "product": "365_copilot",
+        "cvss_max": 9.3
+      },
+      "cve": {
+        "id": "CVE-2026-24307",
+        "sourceIdentifier": "secure@microsoft.com",
+        "published": "2026-01-22T23:15:59.003",
+        "lastModified": "2026-02-12T17:29:54.847",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Improper validation of specified type of input in M365 Copilot allows an unauthorized attacker to disclose information over a network."
+          },
+          {
+            "lang": "es",
+            "value": "Validación incorrecta del tipo de entrada especificado en M365 Copilot permite a un atacante no autorizado divulgar información a través de una red."
+          }
+        ],
+        "cveTags": [
+          {
+            "sourceIdentifier": "secure@microsoft.com",
+            "tags": [
+              "exclusively-hosted-service"
+            ]
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:N",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "secure@microsoft.com",
+              "type": "Secondary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 5.8
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+                "baseScore": 7.5,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 3.6
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-1287"
+              }
+            ],
+            "source": "secure@microsoft.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:microsoft:365_copilot:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "E4A390D9-7457-430A-82CC-A24DA275BF06"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-24307",
+            "source": "secure@microsoft.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 16
+    }
+  ],
+  "source": "https://www.cvelogic.com/threat-intelligence/2026-01-22"
+}

@@ -1,0 +1,1898 @@
+{
+  "schema_version": "2.2",
+  "generated_at": "2026-06-02T07:04:02Z",
+  "day": "2026-05-17",
+  "window": {
+    "utc_start": "2026-05-17",
+    "utc_end": "2026-05-17",
+    "days": 1
+  },
+  "summary": {
+    "brief": "Xwiki — exploitation likelihood rose sharply (EPSS 25% → 54% · rising (+29%)). · 5 new critical disclosures — review patch status on exposed services.",
+    "bullets": [
+      "Xwiki — exploitation likelihood rose sharply (EPSS 25% → 54% · rising (+29%)).",
+      "5 new critical disclosures — review patch status on exposed services."
+    ],
+    "counts": {
+      "cves": 15,
+      "kev": 0,
+      "exploit": 0,
+      "epss": 10,
+      "cvss": 5,
+      "patch": 0
+    }
+  },
+  "cves": [
+    {
+      "cve_id": "CVE-2023-29525",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 0.25244,
+            "score_date": "2026-05-02"
+          },
+          "current": {
+            "score": 0.54257,
+            "score_date": "2026-05-17"
+          },
+          "delta": 0.29013
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2023-04-19",
+        "description": "XWiki Platform is a generic wiki platform offering runtime services for applications built on top of it. Affected versions of xwiki are subject to code injection in the `since` parameter of the `/xwiki/bin/view/XWiki/Notifications/Code/LegacyNotificationAdministration` endpoint. This provides an XWiki syntax injection attack via the since-parameter, allowing privilege escalation from view to programming rights and subsequent code execution privilege. The vulnerability has been patched in XWiki 15.0-rc-1, 14.10.3, 14.4.8 and 14.10.3. Users are advised to upgrade. Users unable to upgrade may modify the page `XWiki.Notifications.Code.LegacyNotificationAdministration` to add the missing escaping. For versions < 14.6-rc-1 a workaround is to modify the file `<xwikiwebapp>/templates/distribution/eventmigration.wiki` to add the missing escaping.",
+        "title": "xwiki xwiki Privilege Escalation",
+        "vendor": "xwiki",
+        "product": "xwiki",
+        "attack_type": "Privilege Escalation",
+        "cvss_max": 9.9
+      },
+      "cve": {
+        "id": "CVE-2023-29525",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2023-04-19T00:15:09.127",
+        "lastModified": "2024-11-21T07:57:13.917",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "XWiki Platform is a generic wiki platform offering runtime services for applications built on top of it. Affected versions of xwiki are subject to code injection in the `since` parameter of the `/xwiki/bin/view/XWiki/Notifications/Code/LegacyNotificationAdministration` endpoint. This provides an XWiki syntax injection attack via the since-parameter, allowing privilege escalation from view to programming rights and subsequent code execution privilege. The vulnerability has been patched in XWiki 15.0-rc-1, 14.10.3, 14.4.8 and 14.10.3. Users are advised to upgrade. Users unable to upgrade may modify the page `XWiki.Notifications.Code.LegacyNotificationAdministration` to add the missing escaping. For versions < 14.6-rc-1 a workaround is to modify the file `<xwikiwebapp>/templates/distribution/eventmigration.wiki` to add the missing escaping."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+                "baseScore": 9.9,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.1,
+              "impactScore": 6.0
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 8.8,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-74"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:xwiki:xwiki:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "18312249-9E74-4967-B376-EDD80C07233B",
+                    "versionEndExcluding": "14.4.8"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:xwiki:xwiki:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "4472030C-B32C-42AD-B137-2FA730A29836",
+                    "versionStartIncluding": "14.5",
+                    "versionEndExcluding": "14.10.3"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/xwiki/xwiki-platform/commit/6d74e2e4aa03d19f0be385ab63ae9e0f0e90a766",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://github.com/xwiki/xwiki-platform/commit/8e7c7f90f2ddaf067cb5b83b181af41513028754#diff-4e13f4ee4a42938bf1201b7ee71ca32edeacba22559daf0bcb89d534e0225949R70",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://github.com/xwiki/xwiki-platform/security/advisories/GHSA-jgg7-w2rj-58cj",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit",
+              "Patch",
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://jira.xwiki.org/browse/XWIKI-20287",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit",
+              "Issue Tracking",
+              "Patch",
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 86,
+      "rank": 1
+    },
+    {
+      "cve_id": "CVE-2022-36971",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 0.62413,
+            "score_date": "2026-03-31"
+          },
+          "current": {
+            "score": 0.86075,
+            "score_date": "2026-05-17"
+          },
+          "delta": 0.23662
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2023-03-29",
+        "description": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of Ivanti Avalanche 6.3.2.3490. Although authentication is required to exploit this vulnerability, the existing authentication mechanism can be bypassed. The specific flaw exists within the JwtTokenUtility class. The issue results from the lack of proper validation of user-supplied data, which can result in deserialization of untrusted data. An attacker can leverage this vulnerability to execute code in the context of the service account. Was ZDI-CAN-15301.",
+        "title": "ivanti avalanche",
+        "vendor": "ivanti",
+        "product": "avalanche",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2022-36971",
+        "sourceIdentifier": "zdi-disclosures@trendmicro.com",
+        "published": "2023-03-29T19:15:11.897",
+        "lastModified": "2024-11-21T07:14:11.087",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of Ivanti Avalanche 6.3.2.3490. Although authentication is required to exploit this vulnerability, the existing authentication mechanism can be bypassed. The specific flaw exists within the JwtTokenUtility class. The issue results from the lack of proper validation of user-supplied data, which can result in deserialization of untrusted data. An attacker can leverage this vulnerability to execute code in the context of the service account. Was ZDI-CAN-15301."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV30": [
+            {
+              "cvssData": {
+                "version": "3.0",
+                "vectorString": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "zdi-disclosures@trendmicro.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 8.8,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-502"
+              }
+            ],
+            "source": "zdi-disclosures@trendmicro.com"
+          },
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-502"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:ivanti:avalanche:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "15814CD7-C562-4360-8E57-354E1D275F92",
+                    "versionStartIncluding": "6.3.2.3490",
+                    "versionEndExcluding": "6.3.4"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://download.wavelink.com/Files/avalanche_v6.3.4_release_notes.txt",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Release Notes"
+            ]
+          },
+          {
+            "url": "https://www.zerodayinitiative.com/advisories/ZDI-22-776/",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory",
+              "VDB Entry"
+            ]
+          }
+        ]
+      },
+      "risk_score": 84,
+      "rank": 2
+    },
+    {
+      "cve_id": "CVE-2026-8507",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-05-17",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-05-17",
+        "description": "Crypt::OpenSSL::PKCS12 versions through 1.94 for Perl have out-of-bounds (OOB) write flaws.\n\nWhen parsing a PKCS12 file, with a >= 1 GiB OCTET STRING (or BIT STRING) attribute on a SAFEBAG, via info() or info_as_hash(), a heap out-of-bounds write would be triggered with remote-code-execution potential (RCE) due to a signed integer overflow in the size calculation passed to Renew().",
+        "title": "Crypt::OpenSSL::PKCS12 versions through 1.94 for Perl have out-of-bounds (OOB) write flaws.",
+        "attack_type": "Out-of-Bounds Write",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2026-8507",
+        "sourceIdentifier": "9b29abf9-4ab0-4765-b253-1875cd9b441e",
+        "published": "2026-05-17T19:16:24.590",
+        "lastModified": "2026-05-18T17:40:45.343",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Crypt::OpenSSL::PKCS12 versions through 1.94 for Perl have out-of-bounds (OOB) write flaws.\n\nWhen parsing a PKCS12 file, with a >= 1 GiB OCTET STRING (or BIT STRING) attribute on a SAFEBAG, via info() or info_as_hash(), a heap out-of-bounds write would be triggered with remote-code-execution potential (RCE) due to a signed integer overflow in the size calculation passed to Renew()."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-787"
+              }
+            ],
+            "source": "9b29abf9-4ab0-4765-b253-1875cd9b441e"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/dsully/perl-crypt-openssl-pkcs12/commit/b9d0469c6d8f5b5c6c2a45a3d0647a532b749397.patch",
+            "source": "9b29abf9-4ab0-4765-b253-1875cd9b441e"
+          },
+          {
+            "url": "https://github.com/dsully/perl-crypt-openssl-pkcs12/issues/55",
+            "source": "9b29abf9-4ab0-4765-b253-1875cd9b441e"
+          },
+          {
+            "url": "https://github.com/dsully/perl-crypt-openssl-pkcs12/issues/56",
+            "source": "9b29abf9-4ab0-4765-b253-1875cd9b441e"
+          },
+          {
+            "url": "https://metacpan.org/release/JONASBN/Crypt-OpenSSL-PKCS12-1.95/view/Changes.md",
+            "source": "9b29abf9-4ab0-4765-b253-1875cd9b441e"
+          },
+          {
+            "url": "http://www.openwall.com/lists/oss-security/2026/05/17/5",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 3
+    },
+    {
+      "cve_id": "CVE-2018-25320",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-05-17",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-05-17",
+        "description": "ACL Analytics versions 11.x through 13.0.0.579 contain an arbitrary code execution vulnerability that allows attackers to execute arbitrary commands by leveraging the EXECUTE function. Attackers can use bitsadmin to download malicious PowerShell scripts and execute them with system privileges to establish reverse shells and gain complete system control.",
+        "title": "ACL Analytics versions 11.x through 13.0.0.579 contain an arbitrary code execution vulnerability that allows attackers to execute arbitra...",
+        "attack_type": "RCE",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2018-25320",
+        "sourceIdentifier": "disclosure@vulncheck.com",
+        "published": "2026-05-17T13:16:43.270",
+        "lastModified": "2026-05-18T19:42:03.353",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "ACL Analytics versions 11.x through 13.0.0.579 contain an arbitrary code execution vulnerability that allows attackers to execute arbitrary commands by leveraging the EXECUTE function. Attackers can use bitsadmin to download malicious PowerShell scripts and execute them with system privileges to establish reverse shells and gain complete system control."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-94"
+              }
+            ],
+            "source": "disclosure@vulncheck.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://www.acl.com",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://www.acl.com/products/acl-analytics/",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://www.exploit-db.com/exploits/44281",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://www.vulncheck.com/advisories/acl-analytics-11-x-arbitrary-code-execution",
+            "source": "disclosure@vulncheck.com"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 4
+    },
+    {
+      "cve_id": "CVE-2018-25332",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-05-17",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-05-17",
+        "description": "GitBucket 4.23.1 contains an unauthenticated remote code execution vulnerability that allows attackers to execute arbitrary commands by exploiting weak secret token generation and insecure file upload functionality. Attackers can brute-force the Blowfish encryption key, upload a malicious JAR plugin via the git-lfs endpoint, and execute system commands through an exposed exploit endpoint.",
+        "title": "gitbucket gitbucket RCE",
+        "vendor": "gitbucket",
+        "product": "gitbucket",
+        "attack_type": "RCE",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2018-25332",
+        "sourceIdentifier": "disclosure@vulncheck.com",
+        "published": "2026-05-17T13:16:44.840",
+        "lastModified": "2026-05-27T20:44:54.467",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "GitBucket 4.23.1 contains an unauthenticated remote code execution vulnerability that allows attackers to execute arbitrary commands by exploiting weak secret token generation and insecure file upload functionality. Attackers can brute-force the Blowfish encryption key, upload a malicious JAR plugin via the git-lfs endpoint, and execute system commands through an exposed exploit endpoint."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-306"
+              }
+            ],
+            "source": "disclosure@vulncheck.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:gitbucket:gitbucket:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "8AFD6583-CF86-40E1-9CEB-E06847B768AB",
+                    "versionEndExcluding": "4.24.0"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/gitbucket/gitbucket",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Product"
+            ]
+          },
+          {
+            "url": "https://security.szurek.pl/",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Not Applicable",
+              "Press/Media Coverage"
+            ]
+          },
+          {
+            "url": "https://www.exploit-db.com/exploits/44668",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Exploit",
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://www.vulncheck.com/advisories/gitbucket-unauthenticated-remote-code-execution",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 5
+    },
+    {
+      "cve_id": "CVE-2018-25335",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-05-17",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-05-17",
+        "description": "WordPress Plugin Peugeot Music 1.0 contains an arbitrary file upload vulnerability that allows unauthenticated attackers to upload malicious files by sending POST requests to the upload.php endpoint. Attackers can upload files with arbitrary extensions by manipulating the 'name' parameter to execute code from the uploads directory.",
+        "title": "WordPress Plugin Peugeot Music 1.0 contains an arbitrary file upload vulnerability that allows unauthenticated attackers to upload malici...",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2018-25335",
+        "sourceIdentifier": "disclosure@vulncheck.com",
+        "published": "2026-05-17T13:16:45.220",
+        "lastModified": "2026-05-18T17:05:46.240",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "WordPress Plugin Peugeot Music 1.0 contains an arbitrary file upload vulnerability that allows unauthenticated attackers to upload malicious files by sending POST requests to the upload.php endpoint. Attackers can upload files with arbitrary extensions by manipulating the 'name' parameter to execute code from the uploads directory."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-306"
+              }
+            ],
+            "source": "disclosure@vulncheck.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://www.exploit-db.com/exploits/44737",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://www.vulncheck.com/advisories/wordpress-plugin-peugeot-music-arbitrary-file-upload",
+            "source": "disclosure@vulncheck.com"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 6
+    },
+    {
+      "cve_id": "CVE-2018-4898",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 0.04194,
+            "score_date": "2025-11-21"
+          },
+          "current": {
+            "score": 0.21906,
+            "score_date": "2026-05-17"
+          },
+          "delta": 0.17712
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2018-02-27",
+        "description": "An issue was discovered in Adobe Acrobat Reader 2018.009.20050 and earlier versions, 2017.011.30070 and earlier versions, 2015.006.30394 and earlier versions. The vulnerability is caused by the computation that writes data past the end of the intended buffer; the computation is part of the XPS engine that adds vector graphics and images to a fixed page. An attacker can potentially leverage the vulnerability to corrupt sensitive data or execute arbitrary code.",
+        "title": "adobe acrobat",
+        "vendor": "adobe",
+        "product": "acrobat",
+        "cvss_max": 8.8
+      },
+      "cve": {
+        "id": "CVE-2018-4898",
+        "sourceIdentifier": "psirt@adobe.com",
+        "published": "2018-02-27T05:29:01.377",
+        "lastModified": "2024-11-21T04:07:40.200",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "An issue was discovered in Adobe Acrobat Reader 2018.009.20050 and earlier versions, 2017.011.30070 and earlier versions, 2015.006.30394 and earlier versions. The vulnerability is caused by the computation that writes data past the end of the intended buffer; the computation is part of the XPS engine that adds vector graphics and images to a fixed page. An attacker can potentially leverage the vulnerability to corrupt sensitive data or execute arbitrary code."
+          },
+          {
+            "lang": "es",
+            "value": "Se ha descubierto un problema en Adobe Acrobat Reader 2018.009.20050 y anteriores, 2017.011.30070 y anteriores y 2015.006.30394 y anteriores. La vulnerabilidad se debe a un cálculo que escribe datos más allá del final del búfer planeado; el cálculo forma parte del motor XPS que añade gráficos e imágenes de vectores a una página fija. Un atacante podría aprovechar la vulnerabilidad para corromper datos sensibles o ejecutar código arbitrario."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV2": [
+            {
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+                "baseScore": 6.8,
+                "baseSeverity": "MEDIUM"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "baseSeverity": "MEDIUM",
+              "exploitabilityScore": 8.6,
+              "impactScore": 6.4
+            }
+          ],
+          "cvssMetricV30": [
+            {
+              "cvssData": {
+                "version": "3.0",
+                "vectorString": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+                "baseScore": 8.8,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-787"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:acrobat:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "6AA5E332-A7C9-40EE-AA1D-ECD20C6AC948",
+                    "versionStartIncluding": "17.0",
+                    "versionEndIncluding": "17.011.30070"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:acrobat_dc:*:*:*:*:continuous:*:*:*",
+                    "matchCriteriaId": "5561E635-D92E-4598-9D10-2FB1F7B3AD82",
+                    "versionStartIncluding": "-",
+                    "versionEndIncluding": "18.009.20050"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:acrobat_dc:*:*:*:*:classic:*:*:*",
+                    "matchCriteriaId": "665540E1-CF26-4390-BC76-5FEF40E7DB9F",
+                    "versionStartIncluding": "15.0",
+                    "versionEndIncluding": "15.006.30394"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:acrobat_reader:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "2E402EC4-3717-4634-90E9-BDE1C76FAB5E",
+                    "versionStartIncluding": "17.0",
+                    "versionEndIncluding": "17.011.30070"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:acrobat_reader_dc:*:*:*:*:continuous:*:*:*",
+                    "matchCriteriaId": "381AB5FE-10AE-4B06-9CAD-0614295928BA",
+                    "versionStartIncluding": "-",
+                    "versionEndIncluding": "18.009.20050"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:acrobat_reader_dc:*:*:*:*:classic:*:*:*",
+                    "matchCriteriaId": "68EEAB61-2409-432D-B10F-0B59FC4EB1E1",
+                    "versionStartIncluding": "15.0",
+                    "versionEndIncluding": "15.006.30394"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "http://www.securityfocus.com/bid/102994",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory",
+              "VDB Entry"
+            ]
+          },
+          {
+            "url": "http://www.securitytracker.com/id/1040364",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory",
+              "VDB Entry"
+            ]
+          },
+          {
+            "url": "https://helpx.adobe.com/security/products/acrobat/apsb18-02.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://www.zerodayinitiative.com/advisories/ZDI-18-208/",
+            "source": "nvd@nist.gov",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 84,
+      "rank": 7
+    },
+    {
+      "cve_id": "CVE-2018-4904",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 0.05245,
+            "score_date": "2025-11-21"
+          },
+          "current": {
+            "score": 0.28505,
+            "score_date": "2026-05-17"
+          },
+          "delta": 0.2326
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2018-02-27",
+        "description": "An issue was discovered in Adobe Acrobat Reader 2018.009.20050 and earlier versions, 2017.011.30070 and earlier versions, 2015.006.30394 and earlier versions. This vulnerability is an instance of a heap overflow vulnerability. The vulnerability is triggered by crafted TIFF data within an XPS file, which causes an out of bounds memory access. An attacker can potentially leverage the vulnerability to corrupt sensitive data or execute arbitrary code.",
+        "title": "adobe acrobat memory safety",
+        "vendor": "adobe",
+        "product": "acrobat",
+        "attack_type": "memory safety",
+        "cvss_max": 8.8
+      },
+      "cve": {
+        "id": "CVE-2018-4904",
+        "sourceIdentifier": "psirt@adobe.com",
+        "published": "2018-02-27T05:29:01.703",
+        "lastModified": "2024-11-21T04:07:40.880",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "An issue was discovered in Adobe Acrobat Reader 2018.009.20050 and earlier versions, 2017.011.30070 and earlier versions, 2015.006.30394 and earlier versions. This vulnerability is an instance of a heap overflow vulnerability. The vulnerability is triggered by crafted TIFF data within an XPS file, which causes an out of bounds memory access. An attacker can potentially leverage the vulnerability to corrupt sensitive data or execute arbitrary code."
+          },
+          {
+            "lang": "es",
+            "value": "Se ha descubierto un problema en Adobe Acrobat Reader 2018.009.20050 y anteriores, 2017.011.30070 y anteriores y 2015.006.30394 y anteriores. Esta vulnerabilidad es un ejemplo de una vulnerabilidad de desbordamiento de memoria dinámica (heap). La vulnerabilidad se desencadena mediante datos TIFF manipulados en un archivo XPS, lo que provoca un acceso a la memoria fuera de límites. Un atacante podría aprovechar la vulnerabilidad para corromper datos sensibles o ejecutar código arbitrario."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV2": [
+            {
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+                "baseScore": 6.8,
+                "baseSeverity": "MEDIUM"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "baseSeverity": "MEDIUM",
+              "exploitabilityScore": 8.6,
+              "impactScore": 6.4
+            }
+          ],
+          "cvssMetricV30": [
+            {
+              "cvssData": {
+                "version": "3.0",
+                "vectorString": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+                "baseScore": 8.8,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-787"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:acrobat:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "6AA5E332-A7C9-40EE-AA1D-ECD20C6AC948",
+                    "versionStartIncluding": "17.0",
+                    "versionEndIncluding": "17.011.30070"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:acrobat_dc:*:*:*:*:continuous:*:*:*",
+                    "matchCriteriaId": "5561E635-D92E-4598-9D10-2FB1F7B3AD82",
+                    "versionStartIncluding": "-",
+                    "versionEndIncluding": "18.009.20050"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:acrobat_dc:*:*:*:*:classic:*:*:*",
+                    "matchCriteriaId": "665540E1-CF26-4390-BC76-5FEF40E7DB9F",
+                    "versionStartIncluding": "15.0",
+                    "versionEndIncluding": "15.006.30394"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:acrobat_reader:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "2E402EC4-3717-4634-90E9-BDE1C76FAB5E",
+                    "versionStartIncluding": "17.0",
+                    "versionEndIncluding": "17.011.30070"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:acrobat_reader_dc:*:*:*:*:continuous:*:*:*",
+                    "matchCriteriaId": "381AB5FE-10AE-4B06-9CAD-0614295928BA",
+                    "versionStartIncluding": "-",
+                    "versionEndIncluding": "18.009.20050"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:acrobat_reader_dc:*:*:*:*:classic:*:*:*",
+                    "matchCriteriaId": "68EEAB61-2409-432D-B10F-0B59FC4EB1E1",
+                    "versionStartIncluding": "15.0",
+                    "versionEndIncluding": "15.006.30394"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "http://www.securityfocus.com/bid/102992",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory",
+              "VDB Entry"
+            ]
+          },
+          {
+            "url": "http://www.securitytracker.com/id/1040364",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory",
+              "VDB Entry"
+            ]
+          },
+          {
+            "url": "https://helpx.adobe.com/security/products/acrobat/apsb18-02.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://www.zerodayinitiative.com/advisories/ZDI-18-170/",
+            "source": "nvd@nist.gov",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 84,
+      "rank": 8
+    },
+    {
+      "cve_id": "CVE-2022-36972",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 0.08142,
+            "score_date": "2026-03-31"
+          },
+          "current": {
+            "score": 0.30906,
+            "score_date": "2026-05-17"
+          },
+          "delta": 0.22764
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2023-03-29",
+        "description": "This vulnerability allows remote attackers to bypass authentication on affected installations of Ivanti Avalanche 6.3.2.3490. The specific flaw exists within the ProfileDaoImpl class. A crafted request can trigger execution of SQL queries composed from a user-supplied string. An attacker can leverage this vulnerability to bypass authentication on the system. Was ZDI-CAN-15328.",
+        "title": "ivanti avalanche SQL injection",
+        "vendor": "ivanti",
+        "product": "avalanche",
+        "attack_type": "SQL injection",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2022-36972",
+        "sourceIdentifier": "zdi-disclosures@trendmicro.com",
+        "published": "2023-03-29T19:15:11.990",
+        "lastModified": "2024-11-21T07:14:11.223",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "This vulnerability allows remote attackers to bypass authentication on affected installations of Ivanti Avalanche 6.3.2.3490. The specific flaw exists within the ProfileDaoImpl class. A crafted request can trigger execution of SQL queries composed from a user-supplied string. An attacker can leverage this vulnerability to bypass authentication on the system. Was ZDI-CAN-15328."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV30": [
+            {
+              "cvssData": {
+                "version": "3.0",
+                "vectorString": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+                "baseScore": 9.1,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "zdi-disclosures@trendmicro.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.2
+            }
+          ],
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-89"
+              }
+            ],
+            "source": "zdi-disclosures@trendmicro.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:ivanti:avalanche:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "15814CD7-C562-4360-8E57-354E1D275F92",
+                    "versionStartIncluding": "6.3.2.3490",
+                    "versionEndExcluding": "6.3.4"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://download.wavelink.com/Files/avalanche_v6.3.4_release_notes.txt",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Release Notes"
+            ]
+          },
+          {
+            "url": "https://www.zerodayinitiative.com/advisories/ZDI-22-777/",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory",
+              "VDB Entry"
+            ]
+          }
+        ]
+      },
+      "risk_score": 86,
+      "rank": 9
+    },
+    {
+      "cve_id": "CVE-2022-36973",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 0.07465,
+            "score_date": "2026-03-31"
+          },
+          "current": {
+            "score": 0.29053,
+            "score_date": "2026-05-17"
+          },
+          "delta": 0.21588
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2023-03-29",
+        "description": "This vulnerability allows remote attackers to bypass authentication on affected installations of Ivanti Avalanche 6.3.2.3490. Although authentication is required to exploit this vulnerability, the existing authentication mechanism can be bypassed. The specific flaw exists within the ProfileDaoImpl class. A crafted request can trigger execution of SQL queries composed from a user-supplied string. An attacker can leverage this vulnerability to bypass authentication on the system. Was ZDI-CAN-15329.",
+        "title": "ivanti avalanche SQL injection",
+        "vendor": "ivanti",
+        "product": "avalanche",
+        "attack_type": "SQL injection",
+        "cvss_max": 9.1
+      },
+      "cve": {
+        "id": "CVE-2022-36973",
+        "sourceIdentifier": "zdi-disclosures@trendmicro.com",
+        "published": "2023-03-29T19:15:12.067",
+        "lastModified": "2024-11-21T07:14:11.350",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "This vulnerability allows remote attackers to bypass authentication on affected installations of Ivanti Avalanche 6.3.2.3490. Although authentication is required to exploit this vulnerability, the existing authentication mechanism can be bypassed. The specific flaw exists within the ProfileDaoImpl class. A crafted request can trigger execution of SQL queries composed from a user-supplied string. An attacker can leverage this vulnerability to bypass authentication on the system. Was ZDI-CAN-15329."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV30": [
+            {
+              "cvssData": {
+                "version": "3.0",
+                "vectorString": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+                "baseScore": 9.1,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "zdi-disclosures@trendmicro.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.2
+            }
+          ],
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 8.8,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-89"
+              }
+            ],
+            "source": "zdi-disclosures@trendmicro.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:ivanti:avalanche:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "15814CD7-C562-4360-8E57-354E1D275F92",
+                    "versionStartIncluding": "6.3.2.3490",
+                    "versionEndExcluding": "6.3.4"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://download.wavelink.com/Files/avalanche_v6.3.4_release_notes.txt",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Release Notes"
+            ]
+          },
+          {
+            "url": "https://www.zerodayinitiative.com/advisories/ZDI-22-778/",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory",
+              "VDB Entry"
+            ]
+          }
+        ]
+      },
+      "risk_score": 84,
+      "rank": 10
+    },
+    {
+      "cve_id": "CVE-2022-36975",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 0.08142,
+            "score_date": "2026-03-31"
+          },
+          "current": {
+            "score": 0.30906,
+            "score_date": "2026-05-17"
+          },
+          "delta": 0.22764
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2023-03-29",
+        "description": "This vulnerability allows remote attackers to bypass authentication on affected installations of Ivanti Avalanche 6.3.2.3490. The specific flaw exists within the ProfileDaoImpl class. A crafted request can trigger execution of SQL queries composed from a user-supplied string. An attacker can leverage this vulnerability to bypass authentication on the system. Was ZDI-CAN-15332.",
+        "title": "ivanti avalanche SQL injection",
+        "vendor": "ivanti",
+        "product": "avalanche",
+        "attack_type": "SQL injection",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2022-36975",
+        "sourceIdentifier": "zdi-disclosures@trendmicro.com",
+        "published": "2023-03-29T19:15:12.190",
+        "lastModified": "2024-11-21T07:14:11.597",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "This vulnerability allows remote attackers to bypass authentication on affected installations of Ivanti Avalanche 6.3.2.3490. The specific flaw exists within the ProfileDaoImpl class. A crafted request can trigger execution of SQL queries composed from a user-supplied string. An attacker can leverage this vulnerability to bypass authentication on the system. Was ZDI-CAN-15332."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV30": [
+            {
+              "cvssData": {
+                "version": "3.0",
+                "vectorString": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+                "baseScore": 9.1,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "zdi-disclosures@trendmicro.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.2
+            }
+          ],
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-89"
+              }
+            ],
+            "source": "zdi-disclosures@trendmicro.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:ivanti:avalanche:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "15814CD7-C562-4360-8E57-354E1D275F92",
+                    "versionStartIncluding": "6.3.2.3490",
+                    "versionEndExcluding": "6.3.4"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://download.wavelink.com/Files/avalanche_v6.3.4_release_notes.txt",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Release Notes"
+            ]
+          },
+          {
+            "url": "https://www.zerodayinitiative.com/advisories/ZDI-22-780/",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory",
+              "VDB Entry"
+            ]
+          }
+        ]
+      },
+      "risk_score": 86,
+      "rank": 11
+    },
+    {
+      "cve_id": "CVE-2022-36976",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 0.08142,
+            "score_date": "2026-03-31"
+          },
+          "current": {
+            "score": 0.30906,
+            "score_date": "2026-05-17"
+          },
+          "delta": 0.22764
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2023-03-29",
+        "description": "This vulnerability allows remote attackers to bypass authentication on affected installations of Ivanti Avalanche 6.3.2.3490. The specific flaw exists within the GroupDaoImpl class. A crafted request can trigger execution of SQL queries composed from a user-supplied string. An attacker can leverage this vulnerability to bypass authentication on the system. Was ZDI-CAN-15333.",
+        "title": "ivanti avalanche SQL injection",
+        "vendor": "ivanti",
+        "product": "avalanche",
+        "attack_type": "SQL injection",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2022-36976",
+        "sourceIdentifier": "zdi-disclosures@trendmicro.com",
+        "published": "2023-03-29T19:15:12.250",
+        "lastModified": "2024-11-21T07:14:11.720",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "This vulnerability allows remote attackers to bypass authentication on affected installations of Ivanti Avalanche 6.3.2.3490. The specific flaw exists within the GroupDaoImpl class. A crafted request can trigger execution of SQL queries composed from a user-supplied string. An attacker can leverage this vulnerability to bypass authentication on the system. Was ZDI-CAN-15333."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV30": [
+            {
+              "cvssData": {
+                "version": "3.0",
+                "vectorString": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+                "baseScore": 9.1,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "zdi-disclosures@trendmicro.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.2
+            }
+          ],
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-89"
+              }
+            ],
+            "source": "zdi-disclosures@trendmicro.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:ivanti:avalanche:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "15814CD7-C562-4360-8E57-354E1D275F92",
+                    "versionStartIncluding": "6.3.2.3490",
+                    "versionEndExcluding": "6.3.4"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://download.wavelink.com/Files/avalanche_v6.3.4_release_notes.txt",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Release Notes"
+            ]
+          },
+          {
+            "url": "https://www.zerodayinitiative.com/advisories/ZDI-22-781/",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory",
+              "VDB Entry"
+            ]
+          }
+        ]
+      },
+      "risk_score": 86,
+      "rank": 12
+    },
+    {
+      "cve_id": "CVE-2022-36978",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 0.6291,
+            "score_date": "2026-03-31"
+          },
+          "current": {
+            "score": 0.86233,
+            "score_date": "2026-05-17"
+          },
+          "delta": 0.23323
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2023-03-29",
+        "description": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of Ivanti Avalanche 6.3.2.3490. Although authentication is required to exploit this vulnerability, the existing authentication mechanism can be bypassed. The specific flaw exists within the Notification Server service. The issue results from the lack of proper validation of user-supplied data, which can result in deserialization of untrusted data. An attacker can leverage this vulnerability to execute code in the context of the service account. Was ZDI-CAN-15448.",
+        "title": "ivanti avalanche",
+        "vendor": "ivanti",
+        "product": "avalanche",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2022-36978",
+        "sourceIdentifier": "zdi-disclosures@trendmicro.com",
+        "published": "2023-03-29T19:15:12.377",
+        "lastModified": "2024-11-21T07:14:11.963",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "This vulnerability allows remote attackers to execute arbitrary code on affected installations of Ivanti Avalanche 6.3.2.3490. Although authentication is required to exploit this vulnerability, the existing authentication mechanism can be bypassed. The specific flaw exists within the Notification Server service. The issue results from the lack of proper validation of user-supplied data, which can result in deserialization of untrusted data. An attacker can leverage this vulnerability to execute code in the context of the service account. Was ZDI-CAN-15448."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV30": [
+            {
+              "cvssData": {
+                "version": "3.0",
+                "vectorString": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "zdi-disclosures@trendmicro.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-502"
+              }
+            ],
+            "source": "zdi-disclosures@trendmicro.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:ivanti:avalanche:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "15814CD7-C562-4360-8E57-354E1D275F92",
+                    "versionStartIncluding": "6.3.2.3490",
+                    "versionEndExcluding": "6.3.4"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://download.wavelink.com/Files/avalanche_v6.3.4_release_notes.txt",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Release Notes"
+            ]
+          },
+          {
+            "url": "https://www.zerodayinitiative.com/advisories/ZDI-22-783/",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory",
+              "VDB Entry"
+            ]
+          }
+        ]
+      },
+      "risk_score": 86,
+      "rank": 13
+    },
+    {
+      "cve_id": "CVE-2022-36979",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 0.08142,
+            "score_date": "2026-03-31"
+          },
+          "current": {
+            "score": 0.30906,
+            "score_date": "2026-05-17"
+          },
+          "delta": 0.22764
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2023-03-29",
+        "description": "This vulnerability allows remote attackers to bypass authentication on affected installations of Ivanti Avalanche 6.3.2.3490. Although authentication is required to exploit this vulnerability, the existing authentication mechanism can be bypassed. The specific flaw exists within the AvalancheDaoSupport class. A crafted request can trigger execution of SQL queries composed from a user-supplied string. An attacker can leverage this vulnerability to bypass authentication on the system. Was ZDI-CAN-15493.",
+        "title": "ivanti avalanche SQL injection",
+        "vendor": "ivanti",
+        "product": "avalanche",
+        "attack_type": "SQL injection",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2022-36979",
+        "sourceIdentifier": "zdi-disclosures@trendmicro.com",
+        "published": "2023-03-29T19:15:12.450",
+        "lastModified": "2024-11-21T07:14:12.087",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "This vulnerability allows remote attackers to bypass authentication on affected installations of Ivanti Avalanche 6.3.2.3490. Although authentication is required to exploit this vulnerability, the existing authentication mechanism can be bypassed. The specific flaw exists within the AvalancheDaoSupport class. A crafted request can trigger execution of SQL queries composed from a user-supplied string. An attacker can leverage this vulnerability to bypass authentication on the system. Was ZDI-CAN-15493."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV30": [
+            {
+              "cvssData": {
+                "version": "3.0",
+                "vectorString": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+                "baseScore": 7.5,
+                "baseSeverity": "HIGH"
+              },
+              "source": "zdi-disclosures@trendmicro.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 3.6
+            }
+          ],
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-89"
+              }
+            ],
+            "source": "zdi-disclosures@trendmicro.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:ivanti:avalanche:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "15814CD7-C562-4360-8E57-354E1D275F92",
+                    "versionStartIncluding": "6.3.2.3490",
+                    "versionEndExcluding": "6.3.4"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://download.wavelink.com/Files/avalanche_v6.3.4_release_notes.txt",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Release Notes"
+            ]
+          },
+          {
+            "url": "https://www.zerodayinitiative.com/advisories/ZDI-22-784/",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory",
+              "VDB Entry"
+            ]
+          }
+        ]
+      },
+      "risk_score": 86,
+      "rank": 14
+    },
+    {
+      "cve_id": "CVE-2026-8721",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-05-17",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-05-17",
+        "description": "Crypt::OpenSSL::PKCS12 versions through 1.94 for Perl truncates passwords with embedded NULLs.\n\nPassword parameters in PKCS12.xs are declared char *, which routes through Perl's default typemap to SvPV_nolen.  The Perl length is discarded.\n\nThe C code (or OpenSSL internally) calls strlen() on the buffer.  Any password byte at or after the first NULL is silently dropped. Binary / KDF-derived / HMAC-derived passwords lose entropy without any warnings.",
+        "title": "Crypt::OpenSSL::PKCS12 versions through 1.94 for Perl truncates passwords with embedded NULLs.",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2026-8721",
+        "sourceIdentifier": "9b29abf9-4ab0-4765-b253-1875cd9b441e",
+        "published": "2026-05-17T19:16:25.310",
+        "lastModified": "2026-05-18T17:40:45.343",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Crypt::OpenSSL::PKCS12 versions through 1.94 for Perl truncates passwords with embedded NULLs.\n\nPassword parameters in PKCS12.xs are declared char *, which routes through Perl's default typemap to SvPV_nolen.  The Perl length is discarded.\n\nThe C code (or OpenSSL internally) calls strlen() on the buffer.  Any password byte at or after the first NULL is silently dropped. Binary / KDF-derived / HMAC-derived passwords lose entropy without any warnings."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-170"
+              }
+            ],
+            "source": "9b29abf9-4ab0-4765-b253-1875cd9b441e"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://metacpan.org/release/JONASBN/Crypt-OpenSSL-PKCS12-1.95/view/Changes.md",
+            "source": "9b29abf9-4ab0-4765-b253-1875cd9b441e"
+          },
+          {
+            "url": "http://www.openwall.com/lists/oss-security/2026/05/17/6",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 15
+    }
+  ],
+  "source": "https://www.cvelogic.com/threat-intelligence/2026-05-17"
+}

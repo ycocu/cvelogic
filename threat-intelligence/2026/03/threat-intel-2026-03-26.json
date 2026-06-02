@@ -1,0 +1,1593 @@
+{
+  "schema_version": "2.2",
+  "generated_at": "2026-06-02T07:34:45Z",
+  "day": "2026-03-26",
+  "window": {
+    "utc_start": "2026-03-26",
+    "utc_end": "2026-03-26",
+    "days": 1
+  },
+  "summary": {
+    "brief": "Aquasecurity Trivy added to CISA KEV — confirmed in-the-wild exploitation. · Darkwet Webcam Xp — exploitation likelihood rose sharply (EPSS 22% → 35% · rising (+13%)). · 10 new critical disclosures — review patch status on exposed services.",
+    "bullets": [
+      "Aquasecurity Trivy added to CISA KEV — confirmed in-the-wild exploitation.",
+      "Darkwet Webcam Xp — exploitation likelihood rose sharply (EPSS 22% → 35% · rising (+13%)).",
+      "10 new critical disclosures — review patch status on exposed services."
+    ],
+    "counts": {
+      "cves": 12,
+      "kev": 1,
+      "exploit": 0,
+      "epss": 1,
+      "cvss": 10,
+      "patch": 0
+    }
+  },
+  "cves": [
+    {
+      "cve_id": "CVE-2026-33634",
+      "signal_types": [
+        "KEV"
+      ],
+      "signals": {
+        "kev": {
+          "date_added": "2026-03-26"
+        },
+        "exploit": null,
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-03-23",
+        "description": "Trivy is a security scanner. On March 19, 2026, a threat actor used compromised credentials to publish a malicious Trivy v0.69.4 release, force-push 76 of 77 version tags in `aquasecurity/trivy-action` to credential-stealing malware, and replace all 7 tags in `aquasecurity/setup-trivy` with malicious commits. This incident is a continuation of the supply chain attack that began in late February 2026. Following the initial disclosure on March 1, credential rotation was performed but was not atomic (not all credentials were revoked simultaneously). The attacker could have use a valid token to exfiltrate newly rotated secrets during the rotation window (which lasted a few days). This could have allowed the attacker to retain access and execute the March 19 attack. Affected components include the `aquasecurity/trivy` Go / Container image version 0.69.4, the `aquasecurity/trivy-action` GitHub Action versions 0.0.1 – 0.34.2 (76/77), and the`aquasecurity/setup-trivy` GitHub Action versions 0.2.0 – 0.2.6, prior to the recreation of 0.2.6 with a safe commit. Known safe versions include versions 0.69.2 and 0.69.3 of the Trivy binary, version 0.35.0 of trivy-action, and version 0.2.6 of setup-trivy. Additionally, take other mitigations to ensure the safety of secrets. If there is any possibility that a compromised version ran in one's environment, all secrets accessible to affected pipelines must be treated as exposed and rotated immediately. Check whether one's organization pulled or executed Trivy v0.69.4 from any source. Remove any affected artifacts immediately. Review all workflows using `aquasecurity/trivy-action` or `aquasecurity/setup-trivy`. Those who referenced a version tag rather than a full commit SHA should check workflow run logs from March 19–20, 2026 for signs of compromise. Look for repositories named `tpcp-docs` in one's GitHub organization. The presence of such a repository may indicate that the fallback exfiltration mechanism was triggered and secrets were successfully stolen. Pin GitHub Actions to full, immutable commit SHA hashes, don't use mutable version tags.",
+        "title": "Aquasecurity Trivy Embedded Malicious Code Vulnerability",
+        "vendor": "aquasec",
+        "product": "setup-trivy",
+        "cvss_max": 9.4
+      },
+      "cve": {
+        "id": "CVE-2026-33634",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2026-03-23T22:16:31.290",
+        "lastModified": "2026-03-30T18:50:38.270",
+        "vulnStatus": "Analyzed",
+        "cisaExploitAdd": "2026-03-26",
+        "cisaActionDue": "2026-04-09",
+        "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+        "cisaVulnerabilityName": "Aquasecurity Trivy Embedded Malicious Code Vulnerability",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Trivy is a security scanner. On March 19, 2026, a threat actor used compromised credentials to publish a malicious Trivy v0.69.4 release, force-push 76 of 77 version tags in `aquasecurity/trivy-action` to credential-stealing malware, and replace all 7 tags in `aquasecurity/setup-trivy` with malicious commits. This incident is a continuation of the supply chain attack that began in late February 2026. Following the initial disclosure on March 1, credential rotation was performed but was not atomic (not all credentials were revoked simultaneously). The attacker could have use a valid token to exfiltrate newly rotated secrets during the rotation window (which lasted a few days). This could have allowed the attacker to retain access and execute the March 19 attack. Affected components include the `aquasecurity/trivy` Go / Container image version 0.69.4, the `aquasecurity/trivy-action` GitHub Action versions 0.0.1 – 0.34.2 (76/77), and the`aquasecurity/setup-trivy` GitHub Action versions 0.2.0 – 0.2.6, prior to the recreation of 0.2.6 with a safe commit. Known safe versions include versions 0.69.2 and 0.69.3 of the Trivy binary, version 0.35.0 of trivy-action, and version 0.2.6 of setup-trivy. Additionally, take other mitigations to ensure the safety of secrets. If there is any possibility that a compromised version ran in one's environment, all secrets accessible to affected pipelines must be treated as exposed and rotated immediately. Check whether one's organization pulled or executed Trivy v0.69.4 from any source. Remove any affected artifacts immediately. Review all workflows using `aquasecurity/trivy-action` or `aquasecurity/setup-trivy`. Those who referenced a version tag rather than a full commit SHA should check workflow run logs from March 19–20, 2026 for signs of compromise. Look for repositories named `tpcp-docs` in one's GitHub organization. The presence of such a repository may indicate that the fallback exfiltration mechanism was triggered and secrets were successfully stolen. Pin GitHub Actions to full, immutable commit SHA hashes, don't use mutable version tags."
+          },
+          {
+            "lang": "es",
+            "value": "Trivy es un escáner de seguridad. El 19 de marzo de 2026, un actor de amenaza utilizó credenciales comprometidas para publicar una versión maliciosa de Trivy v0.69.4, forzar el envío de 76 de 77 etiquetas de versión en `aquasecurity/trivy-action` a malware de robo de credenciales, y reemplazar las 7 etiquetas en `aquasecurity/setup-trivy` con commits maliciosos. Este incidente es una continuación del ataque a la cadena de suministro que comenzó a finales de febrero de 2026. Tras la divulgación inicial el 1 de marzo, se realizó la rotación de credenciales pero no fue atómica (no todas las credenciales fueron revocadas simultáneamente). El atacante podría haber utilizado un token válido para exfiltrar secretos recién rotados durante la ventana de rotación (que duró unos pocos días). Esto podría haber permitido al atacante retener el acceso y ejecutar el ataque del 19 de marzo. Los componentes afectados incluyen la imagen Go / contenedor `aquasecurity/trivy` versión 0.69.4, las versiones 0.0.1 – 0.34.2 (76/77) de la GitHub Action `aquasecurity/trivy-action`, y las versiones 0.2.0 – 0.2.6 de la GitHub Action `aquasecurity/setup-trivy`, antes de la recreación de la 0.2.6 con un commit seguro. Las versiones seguras conocidas incluyen las versiones 0.69.2 y 0.69.3 del binario de Trivy, la versión 0.35.0 de trivy-action, y la versión 0.2.6 de setup-trivy. Además, tome otras mitigaciones para asegurar la seguridad de los secretos. Si existe alguna posibilidad de que una versión comprometida se haya ejecutado en el entorno de uno, todos los secretos accesibles a las pipelines afectadas deben ser tratados como expuestos y rotados inmediatamente. Verifique si la organización de uno extrajo o ejecutó Trivy v0.69.4 de cualquier fuente. Elimine cualquier artefacto afectado inmediatamente. Revise todos los flujos de trabajo que utilizan `aquasecurity/trivy-action` o `aquasecurity/setup-trivy`. Aquellos que referenciaron una etiqueta de versión en lugar de un SHA de commit completo deben revisar los registros de ejecución del flujo de trabajo del 19 al 20 de marzo de 2026 en busca de signos de compromiso. Busque repositorios llamados `tpcp-docs` en la organización de GitHub de uno. La presencia de dicho repositorio puede indicar que el mecanismo de exfiltración de respaldo se activó y los secretos fueron robados con éxito. Fije las GitHub Actions a hashes SHA de commit completos e inmutables, no use etiquetas de versión mutables."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 8.8,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.4,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-506"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:aquasec:setup-trivy:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "1F71EEF3-BE0B-4465-8FA9-6F7AC0232611",
+                    "versionEndExcluding": "0.2.6"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:aquasec:trivy:0.69.4:*:*:*:*:go:*:*",
+                    "matchCriteriaId": "0FA4DA16-3603-489F-B55B-758F0C90FA7D"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:aquasec:trivy_action:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "B248C8E0-CFEF-484E-BA95-95E56B0EF550",
+                    "versionEndExcluding": "0.35.0"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:litellm:litellm:1.82.7:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "754B1179-4A04-46A0-87EA-BAE142088E23"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:litellm:litellm:1.82.8:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "AE8FD26B-9DD9-4BC4-A15F-01852A979B79"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:telnyx:telnyx:4.87.1:*:*:*:*:python:*:*",
+                    "matchCriteriaId": "3F64D45B-84AA-433F-A29E-09A1F957B2E4"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:telnyx:telnyx:4.87.2:*:*:*:*:python:*:*",
+                    "matchCriteriaId": "C5216D3E-B5AD-48A8-B7C9-6DD16981ECAD"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://docs.litellm.ai/blog/security-update-march-2026",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://futuresearch.ai/blog/litellm-pypi-supply-chain-attack",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/BerriAI/litellm/issues/24518",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Issue Tracking",
+              "Mitigation",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/aquasecurity/trivy/discussions/10425",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Issue Tracking",
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/aquasecurity/trivy/security/advisories/GHSA-69fq-xp46-6x23",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Exploit",
+              "Mitigation",
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/pypa/advisory-database/tree/main/vulns/litellm/PYSEC-2026-2.yaml",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/team-telnyx/telnyx-python/security/advisories/GHSA-955r-262c-33jc",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://inspector.pypi.io/project/litellm/1.82.7/packages/79/5f/b6998d42c6ccd32d36e12661f2734602e72a576d52a51f4245aef0b20b4d/litellm-1.82.7-py3-none-any.whl/litellm/proxy/proxy_server.py#line.130",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Broken Link"
+            ]
+          },
+          {
+            "url": "https://inspector.pypi.io/project/litellm/1.82.8/packages/f6/2c/731b614e6cee0bca1e010a36fd381fba69ee836fe3cb6753ba23ef2b9601/litellm-1.82.8.tar.gz/litellm-1.82.8/litellm_init.pth#line.1",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Broken Link"
+            ]
+          },
+          {
+            "url": "https://www.wiz.io/blog/teampcp-attack-kics-github-action",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Not Applicable"
+            ]
+          },
+          {
+            "url": "https://github.com/BerriAI/litellm/issues/24518#issuecomment-4127436387",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Issue Tracking",
+              "Mitigation",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://rosesecurity.dev/2026/03/20/typosquatting-trivy.html",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-33634",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "US Government Resource"
+            ]
+          },
+          {
+            "url": "https://www.microsoft.com/en-us/security/blog/2026/03/24/detecting-investigating-defending-against-trivy-supply-chain-compromise/",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Technical Description"
+            ]
+          }
+        ]
+      },
+      "risk_score": 88,
+      "rank": 1
+    },
+    {
+      "cve_id": "CVE-2008-5674",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 0.22055,
+            "score_date": "2026-02-07"
+          },
+          "current": {
+            "score": 0.35188,
+            "score_date": "2026-03-26"
+          },
+          "delta": 0.13133
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2008-12-19",
+        "description": "Multiple array index errors in the HTTP server in Darkwet Network webcamXP 3.72.440.0 and earlier and beta 4.05.280 and earlier allow remote attackers to cause a denial of service (device crash) and read portions of memory via (1) an invalid camnum parameter to the pocketpc component and (2) an invalid id parameter to the show_gallery_pic component.",
+        "title": "darkwet webcam_xp DoS",
+        "vendor": "darkwet",
+        "product": "webcam_xp",
+        "attack_type": "DoS",
+        "cvss_max": 9.4
+      },
+      "cve": {
+        "id": "CVE-2008-5674",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2008-12-19T01:52:02.670",
+        "lastModified": "2026-04-23T00:35:47.467",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Multiple array index errors in the HTTP server in Darkwet Network webcamXP 3.72.440.0 and earlier and beta 4.05.280 and earlier allow remote attackers to cause a denial of service (device crash) and read portions of memory via (1) an invalid camnum parameter to the pocketpc component and (2) an invalid id parameter to the show_gallery_pic component."
+          },
+          {
+            "lang": "es",
+            "value": "Múltiples errores de índice de array en el servidor HTTP en Darkwet Network webcamXP v3.72.440.0 y anteriores y beta v4.05.280 y anteriores que permitiría a atacantes remotos producir una denegación de servicio (caída del dispositivo) y leer fragmentos de memoria a través de (1)un parámetro invalido \"camnum\" al componente pocketpc y (2) un parámetro \"id\" invalido al componente show_gallery_pic."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV2": [
+            {
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:L/Au:N/C:C/I:N/A:C",
+                "baseScore": 9.4,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "baseSeverity": "HIGH",
+              "exploitabilityScore": 10.0,
+              "impactScore": 9.2
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-20"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:darkwet:webcam_xp:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "15872E1F-C1B4-49EC-AE30-8DC2147B1BDC",
+                    "versionEndIncluding": "3.72.440.0"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:darkwet:webcam_xp:1.02.432:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "C8DA647F-F355-49CF-8D98-C2877A683234"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:darkwet:webcam_xp:1.02.535:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "CFDFC029-4448-4CE7-B6A3-299D1E9E0DA9"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:darkwet:webcam_xp:1.6.945:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "C89E7E91-1FBD-4980-B3E1-8EB8D9E76571"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:darkwet:webcam_xp:2.20:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "34AD5B8C-0F46-45A1-999A-7C0864D7904C"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:darkwet:webcam_xp:3.72:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "78C08C2B-58E0-4C28-9EF3-2624CC5A1716"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "http://aluigi.altervista.org/adv/webcamxp-adv.txt",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://osvdb.org/42929",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://secunia.com/advisories/29007",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "http://securityreason.com/securityalert/4788",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://www.osvdb.org/42927",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://www.osvdb.org/42928",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://www.securityfocus.com/archive/1/488364/100/200/threaded",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://www.securityfocus.com/bid/27875",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit"
+            ]
+          }
+        ]
+      },
+      "risk_score": 85,
+      "rank": 2
+    },
+    {
+      "cve_id": "CVE-2026-33494",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-03-26",
+          "previous_max": null,
+          "current_max": 10.0
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-03-26",
+        "description": "ORY Oathkeeper is an Identity & Access Proxy (IAP) and Access Control Decision API that authorizes HTTP requests based on sets of Access Rules. Versions prior to 26.2.0 are vulnerable to an authorization bypass via HTTP path traversal. An attacker can craft a URL containing path traversal sequences (e.g. `/public/../admin/secrets`) that resolves to a protected path after normalization, but is matched against a permissive rule because the raw, un-normalized path is used during rule evaluation. Version 26.2.0 contains a patch.",
+        "title": "ory oathkeeper Path Traversal",
+        "vendor": "ory",
+        "product": "oathkeeper",
+        "attack_type": "Path Traversal",
+        "cvss_max": 10.0
+      },
+      "cve": {
+        "id": "CVE-2026-33494",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2026-03-26T18:16:30.400",
+        "lastModified": "2026-04-07T21:15:14.387",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "ORY Oathkeeper is an Identity & Access Proxy (IAP) and Access Control Decision API that authorizes HTTP requests based on sets of Access Rules. Versions prior to 26.2.0 are vulnerable to an authorization bypass via HTTP path traversal. An attacker can craft a URL containing path traversal sequences (e.g. `/public/../admin/secrets`) that resolves to a protected path after normalization, but is matched against a permissive rule because the raw, un-normalized path is used during rule evaluation. Version 26.2.0 contains a patch."
+          },
+          {
+            "lang": "es",
+            "value": "ORY Oathkeeper es un proxy de identidad y acceso (IAP) y una API de decisión de control de acceso que autoriza solicitudes HTTP basándose en conjuntos de reglas de acceso. Las versiones anteriores a la 26.2.0 son vulnerables a una omisión de autorización a través de un salto de ruta HTTP. Un atacante puede crear una URL que contenga secuencias de salto de ruta (por ejemplo, '/public/../admin/secrets') que se resuelva en una ruta protegida después de la normalización, pero que se compare con una regla permisiva porque la ruta sin procesar y sin normalizar se utiliza durante la evaluación de la regla. La versión 26.2.0 contiene un parche."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:N",
+                "baseScore": 10.0,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.8
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-23"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:ory:oathkeeper:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "657854A7-D847-40E5-9771-601F5BF0FDA4",
+                    "versionEndExcluding": "26.2.0"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/ory/oathkeeper/commit/8e0002140491c592db41fa141dc6ad68f417e2b2",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://github.com/ory/oathkeeper/security/advisories/GHSA-p224-6x5r-fjpm",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Mitigation",
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 3
+    },
+    {
+      "cve_id": "CVE-2026-30457",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-03-26",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-03-26",
+        "description": "An issue in the /parser/dwoo component of Daylight Studio FuelCMS v1.5.2 allows attackers to execute arbitrary code via crafted PHP code.",
+        "title": "thedaylightstudio dwoo",
+        "vendor": "thedaylightstudio",
+        "product": "dwoo",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2026-30457",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2026-03-26T19:16:59.900",
+        "lastModified": "2026-03-30T14:11:06.703",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "An issue in the /parser/dwoo component of Daylight Studio FuelCMS v1.5.2 allows attackers to execute arbitrary code via crafted PHP code."
+          },
+          {
+            "lang": "es",
+            "value": "Un problema en el componente /parser/dwoo de Daylight Studio FuelCMS v1.5.2 permite a los atacantes ejecutar código arbitrario a través de código PHP especialmente diseñado."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-94"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:thedaylightstudio:dwoo:1.1.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "198E645D-F606-400B-BCAA-525E32EB8051"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:thedaylightstudio:fuel_cms:1.5.2:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "E3A44312-83D2-4421-9A35-3FD048EA578A"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "http://daylight.com",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Not Applicable"
+            ]
+          },
+          {
+            "url": "http://fuelcms.com",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Product"
+            ]
+          },
+          {
+            "url": "https://github.com/daylightstudio/FUEL-CMS/tree/master/fuel/modules/fuel/libraries/parser/dwoo",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Product"
+            ]
+          },
+          {
+            "url": "https://pentest-tools.com/PTT-2025-026-PHP-Code-Execution-Via-Dwoo-Escape.pdf",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Third Party Advisory",
+              "Exploit"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 4
+    },
+    {
+      "cve_id": "CVE-2026-30458",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-03-26",
+          "previous_max": null,
+          "current_max": 9.1
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-03-26",
+        "description": "An issue in Daylight Studio FuelCMS v1.5.2 allows attackers to exfiltrate users' password reset tokens via a mail splitting attack.",
+        "title": "thedaylightstudio fuel_cms",
+        "vendor": "thedaylightstudio",
+        "product": "fuel_cms",
+        "cvss_max": 9.1
+      },
+      "cve": {
+        "id": "CVE-2026-30458",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2026-03-26T19:17:00.050",
+        "lastModified": "2026-03-30T14:11:49.907",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "An issue in Daylight Studio FuelCMS v1.5.2 allows attackers to exfiltrate users' password reset tokens via a mail splitting attack."
+          },
+          {
+            "lang": "es",
+            "value": "Un problema en Daylight Studio FuelCMS v1.5.2 permite a los atacantes exfiltrar tokens de restablecimiento de contraseña de los usuarios mediante un ataque de división de correo."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+                "baseScore": 9.1,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.2
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-620"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:thedaylightstudio:fuel_cms:1.5.2:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "E3A44312-83D2-4421-9A35-3FD048EA578A"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "http://daylight.com",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Not Applicable"
+            ]
+          },
+          {
+            "url": "http://fuelcms.com",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Product"
+            ]
+          },
+          {
+            "url": "https://github.com/daylightstudio/FUEL-CMS",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Product"
+            ]
+          },
+          {
+            "url": "https://pentest-tools.com/PTT-2025-025-Account-Takeover-via-Email-Array.pdf",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 5
+    },
+    {
+      "cve_id": "CVE-2026-33152",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-03-26",
+          "previous_max": null,
+          "current_max": 9.1
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-03-26",
+        "description": "Tandoor Recipes is an application for managing recipes, planning meals, and building shopping lists. In versions prior to 2.6.0, Tandoor Recipes configures Django REST Framework with BasicAuthentication as one of the default authentication backends. The AllAuth rate limiting configuration (ACCOUNT_RATE_LIMITS: login: 5/m/ip) only applies to the HTML-based login endpoint at /accounts/login/. Any API endpoint that accepts authenticated requests can be targeted via Authorization: Basic headers with zero rate limiting, zero account lockout, and unlimited attempts. An attacker can perform high-speed password guessing against any known username. Version 2.6.0 patches the issue.",
+        "title": "tandoor recipes",
+        "vendor": "tandoor",
+        "product": "recipes",
+        "cvss_max": 9.1
+      },
+      "cve": {
+        "id": "CVE-2026-33152",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2026-03-26T19:17:03.147",
+        "lastModified": "2026-03-30T19:18:18.253",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Tandoor Recipes is an application for managing recipes, planning meals, and building shopping lists. In versions prior to 2.6.0, Tandoor Recipes configures Django REST Framework with BasicAuthentication as one of the default authentication backends. The AllAuth rate limiting configuration (ACCOUNT_RATE_LIMITS: login: 5/m/ip) only applies to the HTML-based login endpoint at /accounts/login/. Any API endpoint that accepts authenticated requests can be targeted via Authorization: Basic headers with zero rate limiting, zero account lockout, and unlimited attempts. An attacker can perform high-speed password guessing against any known username. Version 2.6.0 patches the issue."
+          },
+          {
+            "lang": "es",
+            "value": "Tandoor Recipes es una aplicación para gestionar recetas, planificar comidas y crear listas de compras. En versiones anteriores a la 2.6.0, Tandoor Recipes configura Django REST Framework con BasicAuthentication como uno de los backends de autenticación predeterminados. La configuración de limitación de tasa de AllAuth (ACCOUNT_RATE_LIMITS: login: 5/m/ip) solo se aplica al endpoint de inicio de sesión basado en HTML en /accounts/login/. Cualquier endpoint de API que acepte solicitudes autenticadas puede ser objetivo a través de encabezados Authorization: Basic sin limitación de tasa, sin bloqueo de cuenta y con intentos ilimitados. Un atacante puede realizar adivinación de contraseñas a alta velocidad contra cualquier nombre de usuario conocido. La versión 2.6.0 corrige el problema."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+                "baseScore": 9.1,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.2
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+                "baseScore": 7.5,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 3.6
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-307"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:tandoor:recipes:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "6EFEDF7D-1D00-4901-A064-ECC168038F6C",
+                    "versionEndExcluding": "2.6.0"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/TandoorRecipes/recipes/releases/tag/2.6.0",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Release Notes"
+            ]
+          },
+          {
+            "url": "https://github.com/TandoorRecipes/recipes/security/advisories/GHSA-7m7c-jjqc-r522",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Exploit",
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 6
+    },
+    {
+      "cve_id": "CVE-2026-33396",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-03-26",
+          "previous_max": null,
+          "current_max": 9.9
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-03-26",
+        "description": "OneUptime is an open-source monitoring and observability platform. Prior to version 10.0.35, a low-privileged authenticated user (ProjectMember) can achieve remote command execution on the Probe container/host by abusing Synthetic Monitor Playwright script execution. Synthetic monitor code is executed in VMRunner.runCodeInNodeVM with a live Playwright page object in context. The sandbox relies on a denylist of blocked properties/methods, but it is incomplete. Specifically, _browserType and launchServer are not blocked, so attacker code can traverse `page.context().browser()._browserType.launchServer(...)` and spawn arbitrary processes. Version 10.0.35 contains a patch.",
+        "title": "hackerbay oneuptime privilege escalation",
+        "vendor": "hackerbay",
+        "product": "oneuptime",
+        "attack_type": "privilege escalation",
+        "cvss_max": 9.9
+      },
+      "cve": {
+        "id": "CVE-2026-33396",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2026-03-26T14:16:13.310",
+        "lastModified": "2026-03-26T20:40:52.840",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "OneUptime is an open-source monitoring and observability platform. Prior to version 10.0.35, a low-privileged authenticated user (ProjectMember) can achieve remote command execution on the Probe container/host by abusing Synthetic Monitor Playwright script execution. Synthetic monitor code is executed in VMRunner.runCodeInNodeVM with a live Playwright page object in context. The sandbox relies on a denylist of blocked properties/methods, but it is incomplete. Specifically, _browserType and launchServer are not blocked, so attacker code can traverse `page.context().browser()._browserType.launchServer(...)` and spawn arbitrary processes. Version 10.0.35 contains a patch."
+          },
+          {
+            "lang": "es",
+            "value": "OneUptime es una plataforma de monitoreo y observabilidad de código abierto. Antes de la versión 10.0.35, un usuario autenticado con bajos privilegios (ProjectMember) puede lograr la ejecución remota de comandos en el contenedor/host de Probe abusando de la ejecución de scripts de Playwright del Monitor Sintético. El código del monitor sintético se ejecuta en VMRunner.runCodeInNodeVM con un objeto de página de Playwright en vivo en contexto. El sandbox se basa en una lista de denegación de propiedades/métodos bloqueados, pero está incompleta. Específicamente, _browserType y launchServer no están bloqueados, por lo que el código del atacante puede recorrer 'page.context().browser()._browserType.launchServer(...)' y generar procesos arbitrarios. La versión 10.0.35 contiene un parche."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+                "baseScore": 9.9,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.1,
+              "impactScore": 6.0
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-78"
+              },
+              {
+                "lang": "en",
+                "value": "CWE-184"
+              },
+              {
+                "lang": "en",
+                "value": "CWE-693"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:hackerbay:oneuptime:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "BE6EDDCA-31EC-4458-ACF2-9FA51FAE4FAE",
+                    "versionEndExcluding": "10.0.35"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/OneUptime/oneuptime/commit/e8e4ee3ff0740eb131045ab3d67453141c46178a",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://github.com/OneUptime/oneuptime/security/advisories/GHSA-cqpg-phpp-9jjg",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Exploit",
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 7
+    },
+    {
+      "cve_id": "CVE-2026-33640",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-03-26",
+          "previous_max": null,
+          "current_max": 9.1
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-03-26",
+        "description": "Outline is a service that allows for collaborative documentation. Outline implements an Email OTP login flow for users not associated with an Identity Provider. Starting in version 0.86.0 and prior to version 1.6.0, Outline does not invalidate OTP codes based on amount or frequency of invalid submissions, rather it relies on the rate limiter to restrict attempts. Consequently, identified bypasses in the rate limiter permit unrestricted OTP code submissions within the codes lifetime. This allows attackers to perform brute force attacks which enable account takeover. Version 1.6.0 fixes the issue.",
+        "title": "getoutline outline",
+        "vendor": "getoutline",
+        "product": "outline",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2026-33640",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2026-03-26T21:17:07.637",
+        "lastModified": "2026-03-31T01:42:34.940",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Outline is a service that allows for collaborative documentation. Outline implements an Email OTP login flow for users not associated with an Identity Provider. Starting in version 0.86.0 and prior to version 1.6.0, Outline does not invalidate OTP codes based on amount or frequency of invalid submissions, rather it relies on the rate limiter to restrict attempts. Consequently, identified bypasses in the rate limiter permit unrestricted OTP code submissions within the codes lifetime. This allows attackers to perform brute force attacks which enable account takeover. Version 1.6.0 fixes the issue."
+          },
+          {
+            "lang": "es",
+            "value": "Outline es un servicio que permite la documentación colaborativa. Outline implementa un flujo de inicio de sesión con OTP por correo electrónico para usuarios no asociados con un Proveedor de Identidad. A partir de la versión 0.86.0 y antes de la versión 1.6.0, Outline no invalida los códigos OTP basándose en la cantidad o frecuencia de envíos inválidos, sino que se basa en el limitador de velocidad para restringir los intentos. En consecuencia, los bypasses identificados en el limitador de velocidad permiten el envío ilimitado de códigos OTP dentro de la vida útil de los códigos. Esto permite a los atacantes realizar ataques de fuerza bruta que posibilitan la toma de control de cuentas. La versión 1.6.0 corrige el problema."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.1,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-307"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:getoutline:outline:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "618371C5-39DB-422A-9E34-034A84D32E3A",
+                    "versionStartIncluding": "0.86.0",
+                    "versionEndExcluding": "1.6.0"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/outline/outline/releases/tag/v1.6.0",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Release Notes"
+            ]
+          },
+          {
+            "url": "https://github.com/outline/outline/security/advisories/GHSA-cwhc-53hw-qqx6",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Exploit",
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 8
+    },
+    {
+      "cve_id": "CVE-2026-33669",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-03-26",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-03-26",
+        "description": "SiYuan is a personal knowledge management system. Prior to version 3.6.2, document IDs were retrieved via the /api/file/readDir interface, and then the /api/block/getChildBlocks interface was used to view the content of all documents. Version 3.6.2 patches the issue.",
+        "title": "b3log siyuan",
+        "vendor": "b3log",
+        "product": "siyuan",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2026-33669",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2026-03-26T22:16:29.887",
+        "lastModified": "2026-03-30T17:03:33.350",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "SiYuan is a personal knowledge management system. Prior to version 3.6.2, document IDs were retrieved via the /api/file/readDir interface, and then the /api/block/getChildBlocks interface was used to view the content of all documents. Version 3.6.2 patches the issue."
+          },
+          {
+            "lang": "es",
+            "value": "SiYuan es un sistema de gestión de conocimiento personal. Antes de la versión 3.6.2, los ID de los documentos se recuperaban a través de la interfaz /API/file/readDir, y luego se utilizaba la interfaz /API/block/getChildBlocks para ver el contenido de todos los documentos. La versión 3.6.2 corrige el problema."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+                "baseScore": 7.5,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 3.6
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-125"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:b3log:siyuan:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "27CB71A7-7208-417A-AE6D-266D57F683E9",
+                    "versionEndExcluding": "3.6.2"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/siyuan-note/siyuan/security/advisories/GHSA-34xj-66v3-6j83",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Exploit",
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 9
+    },
+    {
+      "cve_id": "CVE-2026-33670",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-03-26",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-03-26",
+        "description": "SiYuan is a personal knowledge management system. Prior to version 3.6.2, the /api/file/readDir interface was used to traverse and retrieve the file names of all documents under a notebook. Version 3.6.2 patches the issue.",
+        "title": "b3log siyuan",
+        "vendor": "b3log",
+        "product": "siyuan",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2026-33670",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2026-03-26T22:16:30.050",
+        "lastModified": "2026-03-30T17:02:13.797",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "SiYuan is a personal knowledge management system. Prior to version 3.6.2, the /api/file/readDir interface was used to traverse and retrieve the file names of all documents under a notebook. Version 3.6.2 patches the issue."
+          },
+          {
+            "lang": "es",
+            "value": "SiYuan es un sistema de gestión de conocimiento personal. Antes de la versión 3.6.2, la interfaz /API/file/readDir se utilizaba para recorrer y recuperar los nombres de archivo de todos los documentos bajo un cuaderno. La versión 3.6.2 corrige el problema."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+                "baseScore": 7.5,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 3.6
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-22"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:b3log:siyuan:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "27CB71A7-7208-417A-AE6D-266D57F683E9",
+                    "versionEndExcluding": "3.6.2"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/siyuan-note/siyuan/security/advisories/GHSA-xmw9-6r43-x9ww",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Exploit",
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 10
+    },
+    {
+      "cve_id": "CVE-2026-33897",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-03-26",
+          "previous_max": null,
+          "current_max": 9.9
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-03-26",
+        "description": "Incus is a system container and virtual machine manager. Prior to version 6.23.0, instance template files can be used to cause arbitrary read or writes as root on the host server. Incus allows for pongo2 templates within instances which can be used at various times in the instance lifecycle to template files inside of the instance. This particular implementation of pongo2 within Incus allowed for file read/write but with the expectation that the pongo2 chroot feature would isolate all such access to the instance's filesystem. This was allowed such that a template could theoretically read a file and then generate a new version of said file. Unfortunately the chroot isolation mechanism is entirely skipped by pongo2 leading to easy access to the entire system's filesystem with root privileges. Version 6.23.0 patches the issue.",
+        "title": "linuxcontainers incus",
+        "vendor": "linuxcontainers",
+        "product": "incus",
+        "cvss_max": 9.9
+      },
+      "cve": {
+        "id": "CVE-2026-33897",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2026-03-26T23:16:20.743",
+        "lastModified": "2026-03-30T18:55:33.887",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Incus is a system container and virtual machine manager. Prior to version 6.23.0, instance template files can be used to cause arbitrary read or writes as root on the host server. Incus allows for pongo2 templates within instances which can be used at various times in the instance lifecycle to template files inside of the instance. This particular implementation of pongo2 within Incus allowed for file read/write but with the expectation that the pongo2 chroot feature would isolate all such access to the instance's filesystem. This was allowed such that a template could theoretically read a file and then generate a new version of said file. Unfortunately the chroot isolation mechanism is entirely skipped by pongo2 leading to easy access to the entire system's filesystem with root privileges. Version 6.23.0 patches the issue."
+          },
+          {
+            "lang": "es",
+            "value": "Incus es un gestor de contenedores de sistema y máquinas virtuales. Antes de la versión 6.23.0, los archivos de plantilla de instancia pueden usarse para causar lecturas o escrituras arbitrarias como root en el servidor anfitrión. Incus permite plantillas pongo2 dentro de las instancias que pueden usarse en varios momentos del ciclo de vida de la instancia para crear plantillas de archivos dentro de la instancia. Esta implementación particular de pongo2 dentro de Incus permitía la lectura/escritura de archivos, pero con la expectativa de que la característica chroot de pongo2 aislaría todo ese acceso al sistema de archivos de la instancia. Esto se permitía de tal manera que una plantilla podría teóricamente leer un archivo y luego generar una nueva versión de dicho archivo. Desafortunadamente, el mecanismo de aislamiento chroot es completamente omitido por pongo2, lo que lleva a un fácil acceso a todo el sistema de archivos del sistema con privilegios de root. La versión 6.23.0 parchea el problema."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+                "baseScore": 9.9,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.1,
+              "impactScore": 6.0
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-1336"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:linuxcontainers:incus:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "CBE3ABCB-1D47-4A45-A09A-C9F609C53131",
+                    "versionEndExcluding": "6.23.0"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/lxc/incus/security/advisories/GHSA-83xr-5xxr-mh92",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 11
+    },
+    {
+      "cve_id": "CVE-2026-4809",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-03-26",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-03-26",
+        "description": "plank/laravel-mediable through version 6.4.0 can allow upload of a dangerous file type when an application using the package accepts or prefers a client-supplied MIME type during file upload handling. In that configuration, a remote attacker can submit a file containing executable PHP code while declaring a benign image MIME type, resulting in arbitrary file upload. If the uploaded file is stored in a web-accessible and executable location, this may lead to remote code execution. At the time of publication, no patch was available and the vendor had not responded to coordinated disclosure attempts.",
+        "title": "plank/laravel-mediable through version 6.4.0 can allow upload of a dangerous file type when an application using the package accepts or p...",
+        "cvss_max": 10.0
+      },
+      "cve": {
+        "id": "CVE-2026-4809",
+        "sourceIdentifier": "309f9ea4-e3e9-4c6c-b79d-e8eb01244f2c",
+        "published": "2026-03-26T11:16:21.440",
+        "lastModified": "2026-05-19T15:50:41.340",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "plank/laravel-mediable through version 6.4.0 can allow upload of a dangerous file type when an application using the package accepts or prefers a client-supplied MIME type during file upload handling. In that configuration, a remote attacker can submit a file containing executable PHP code while declaring a benign image MIME type, resulting in arbitrary file upload. If the uploaded file is stored in a web-accessible and executable location, this may lead to remote code execution. At the time of publication, no patch was available and the vendor had not responded to coordinated disclosure attempts."
+          },
+          {
+            "lang": "es",
+            "value": "plank/laravel-mediable hasta la versión 6.4.0 puede permitir la carga de un tipo de archivo peligroso cuando una aplicación que utiliza el paquete acepta o prefiere un tipo MIME proporcionado por el cliente durante el manejo de la carga de archivos. En esa configuración, un atacante remoto puede enviar un archivo que contiene código PHP ejecutable mientras declara un tipo MIME de imagen benigno, lo que resulta en la carga arbitraria de archivos. Si el archivo cargado se almacena en una ubicación accesible por la web y ejecutable, esto puede conducir a la ejecución remota de código. En el momento de la publicación, no había ningún parche disponible y el proveedor no había respondido a los intentos de divulgación coordinada."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV2": [
+            {
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+                "baseScore": 10.0,
+                "baseSeverity": "HIGH"
+              },
+              "source": "309f9ea4-e3e9-4c6c-b79d-e8eb01244f2c",
+              "type": "Secondary",
+              "baseSeverity": "HIGH",
+              "exploitabilityScore": 10.0,
+              "impactScore": 10.0
+            }
+          ],
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "309f9ea4-e3e9-4c6c-b79d-e8eb01244f2c",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "309f9ea4-e3e9-4c6c-b79d-e8eb01244f2c",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-434"
+              }
+            ],
+            "source": "309f9ea4-e3e9-4c6c-b79d-e8eb01244f2c"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/plank/laravel-mediable",
+            "source": "309f9ea4-e3e9-4c6c-b79d-e8eb01244f2c"
+          },
+          {
+            "url": "https://github.com/plank/laravel-mediable/releases/tag/6.4.0",
+            "source": "309f9ea4-e3e9-4c6c-b79d-e8eb01244f2c"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 12
+    }
+  ],
+  "source": "https://www.cvelogic.com/threat-intelligence/2026-03-26"
+}

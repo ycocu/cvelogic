@@ -1,0 +1,1694 @@
+{
+  "schema_version": "2.2",
+  "generated_at": "2026-06-02T07:03:57Z",
+  "day": "2026-05-08",
+  "window": {
+    "utc_start": "2026-05-08",
+    "utc_end": "2026-05-08",
+    "days": 1
+  },
+  "summary": {
+    "brief": "BerriAI LiteLLM added to CISA KEV — confirmed in-the-wild exploitation. · Netgear Prosafe Network Management System — exploitation likelihood rose sharply (EPSS 11% → 59% · rising (+48%)). · 10 new critical disclosures — review patch status on exposed services.",
+    "bullets": [
+      "BerriAI LiteLLM added to CISA KEV — confirmed in-the-wild exploitation.",
+      "Netgear Prosafe Network Management System — exploitation likelihood rose sharply (EPSS 11% → 59% · rising (+48%)).",
+      "10 new critical disclosures — review patch status on exposed services."
+    ],
+    "counts": {
+      "cves": 15,
+      "kev": 1,
+      "exploit": 0,
+      "epss": 4,
+      "cvss": 10,
+      "patch": 0
+    }
+  },
+  "cves": [
+    {
+      "cve_id": "CVE-2026-42208",
+      "signal_types": [
+        "KEV"
+      ],
+      "signals": {
+        "kev": {
+          "date_added": "2026-05-08"
+        },
+        "exploit": null,
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-05-08",
+        "description": "LiteLLM is a proxy server (AI Gateway) to call LLM APIs in OpenAI (or native) format. From version 1.81.16 to before version 1.83.7, a database query used during proxy API key checks mixed the caller-supplied key value into the query text instead of passing it as a separate parameter. An unauthenticated attacker could send a specially crafted Authorization header to any LLM API route (for example POST /chat/completions) and reach this query through the proxy's error-handling path. An attacker could read data from the proxy's database and may be able to modify it, leading to unauthorised access to the proxy and the credentials it manages. This issue has been patched in version 1.83.7.",
+        "title": "BerriAI LiteLLM SQL Injection Vulnerability",
+        "vendor": "litellm",
+        "product": "litellm",
+        "attack_type": "SQL Injection",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2026-42208",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2026-05-08T04:16:19.923",
+        "lastModified": "2026-05-08T19:19:34.537",
+        "vulnStatus": "Analyzed",
+        "cisaExploitAdd": "2026-05-08",
+        "cisaActionDue": "2026-05-11",
+        "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+        "cisaVulnerabilityName": "BerriAI LiteLLM SQL Injection Vulnerability",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "LiteLLM is a proxy server (AI Gateway) to call LLM APIs in OpenAI (or native) format. From version 1.81.16 to before version 1.83.7, a database query used during proxy API key checks mixed the caller-supplied key value into the query text instead of passing it as a separate parameter. An unauthenticated attacker could send a specially crafted Authorization header to any LLM API route (for example POST /chat/completions) and reach this query through the proxy's error-handling path. An attacker could read data from the proxy's database and may be able to modify it, leading to unauthorised access to the proxy and the credentials it manages. This issue has been patched in version 1.83.7."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-89"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:litellm:litellm:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "3A3CA0FD-F124-4495-A36B-96BB1A2AE4E5",
+                    "versionStartIncluding": "1.81.16",
+                    "versionEndExcluding": "1.83.7"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/BerriAI/litellm/releases/tag/v1.83.7-stable",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Product",
+              "Release Notes"
+            ]
+          },
+          {
+            "url": "https://github.com/BerriAI/litellm/security/advisories/GHSA-r75f-5x8p-qvmc",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Mitigation",
+              "Patch",
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-42208",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "US Government Resource"
+            ]
+          }
+        ]
+      },
+      "risk_score": 88,
+      "rank": 1
+    },
+    {
+      "cve_id": "CVE-2021-27276",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 0.10722,
+            "score_date": "2026-03-31"
+          },
+          "current": {
+            "score": 0.5902,
+            "score_date": "2026-05-08"
+          },
+          "delta": 0.48298
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2021-03-29",
+        "description": "This vulnerability allows remote attackers to delete arbitrary files on affected installations of NETGEAR ProSAFE Network Management System 1.6.0.26. Although authentication is required to exploit this vulnerability, the existing authentication mechanism can be bypassed. The specific flaw exists within the MibController class. When parsing the realName parameter, the process does not properly validate a user-supplied path prior to using it in file operations. An attacker can leverage this vulnerability to create a denial-of-service condition on the system. Was ZDI-CAN-12122.",
+        "title": "netgear prosafe_network_management_system",
+        "vendor": "netgear",
+        "product": "prosafe_network_management_system",
+        "cvss_max": 7.1
+      },
+      "cve": {
+        "id": "CVE-2021-27276",
+        "sourceIdentifier": "zdi-disclosures@trendmicro.com",
+        "published": "2021-03-29T21:15:13.437",
+        "lastModified": "2024-11-21T05:57:44.733",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "This vulnerability allows remote attackers to delete arbitrary files on affected installations of NETGEAR ProSAFE Network Management System 1.6.0.26. Although authentication is required to exploit this vulnerability, the existing authentication mechanism can be bypassed. The specific flaw exists within the MibController class. When parsing the realName parameter, the process does not properly validate a user-supplied path prior to using it in file operations. An attacker can leverage this vulnerability to create a denial-of-service condition on the system. Was ZDI-CAN-12122."
+          },
+          {
+            "lang": "es",
+            "value": "Esta vulnerabilidad permite a atacantes remotos eliminar archivos arbitrarios en las instalaciones afectadas de NETGEAR ProSAFE Network Management System  versión 1.6.0.26.&#xa0;Aunque es requerida una autenticación para explotar esta vulnerabilidad, el mecanismo de autenticación existente puede ser omitido.&#xa0;El fallo específico se presenta dentro de la clase MibController.&#xa0;Cuando se analiza el parámetro realName, el proceso no comprueba apropiadamente una ruta suministrada por el usuario antes de usarla en operaciones de archivo.&#xa0;Un atacante puede aprovechar esta vulnerabilidad para crear una condición de denegación de servicio en el sistema.&#xa0;Era ZDI-CAN-12122"
+          }
+        ],
+        "metrics": {
+          "cvssMetricV2": [
+            {
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:L/Au:S/C:N/I:P/A:P",
+                "baseScore": 5.5,
+                "baseSeverity": "MEDIUM"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "baseSeverity": "MEDIUM",
+              "exploitabilityScore": 8.0,
+              "impactScore": 4.9
+            }
+          ],
+          "cvssMetricV30": [
+            {
+              "cvssData": {
+                "version": "3.0",
+                "vectorString": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:H",
+                "baseScore": 7.1,
+                "baseSeverity": "HIGH"
+              },
+              "source": "zdi-disclosures@trendmicro.com",
+              "type": "Secondary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 4.2
+            }
+          ],
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:H",
+                "baseScore": 7.1,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 4.2
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-22"
+              }
+            ],
+            "source": "zdi-disclosures@trendmicro.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:netgear:prosafe_network_management_system:1.6.0.26:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "A2C1F32B-238F-4435-9229-345EB07DE7D2"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://kb.netgear.com/000062722/Security-Advisory-for-Denial-of-Service-on-NMS300-PSV-2020-0500",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://www.zerodayinitiative.com/advisories/ZDI-21-359/",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory",
+              "VDB Entry"
+            ]
+          }
+        ]
+      },
+      "risk_score": 82,
+      "rank": 2
+    },
+    {
+      "cve_id": "CVE-2026-42298",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-05-08",
+          "previous_max": null,
+          "current_max": 10.0
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-05-08",
+        "description": "Postiz is an AI social media scheduling tool. Prior to commit da44801, a \"Pwn Request\" vulnerability in the Build and Publish PR Docker Image workflow (.github/workflows/pr-docker-build.yml) allows any unauthenticated user to execute arbitrary code during the Docker build process and exfiltrate a highly privileged GITHUB_TOKEN (write-all permissions). This can be achieved simply by opening a Pull Request from a fork with a maliciously modified Dockerfile.dev. This issue has been patched via commit da44801.",
+        "title": "gitroom postiz privilege escalation",
+        "vendor": "gitroom",
+        "product": "postiz",
+        "attack_type": "privilege escalation",
+        "cvss_max": 10.0
+      },
+      "cve": {
+        "id": "CVE-2026-42298",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2026-05-08T23:16:36.497",
+        "lastModified": "2026-06-01T16:42:12.873",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Postiz is an AI social media scheduling tool. Prior to commit da44801, a \"Pwn Request\" vulnerability in the Build and Publish PR Docker Image workflow (.github/workflows/pr-docker-build.yml) allows any unauthenticated user to execute arbitrary code during the Docker build process and exfiltrate a highly privileged GITHUB_TOKEN (write-all permissions). This can be achieved simply by opening a Pull Request from a fork with a maliciously modified Dockerfile.dev. This issue has been patched via commit da44801."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+                "baseScore": 10.0,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 6.0
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-94"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:gitroom:postiz:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "031E8CE9-E0C5-4ED4-BD59-E846B9525F58",
+                    "versionEndExcluding": "2.21.7"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/gitroomhq/postiz-app/commit/da448012dd87e94944cbe83a38e7fd023269ec46",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "URL Repurposed"
+            ]
+          },
+          {
+            "url": "https://github.com/gitroomhq/postiz-app/security/advisories/GHSA-v975-9h5p-xhm4",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 3
+    },
+    {
+      "cve_id": "CVE-2006-2458",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 0.19115,
+            "score_date": "2025-04-20"
+          },
+          "current": {
+            "score": 0.30953,
+            "score_date": "2026-05-08"
+          },
+          "delta": 0.11838
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2006-05-18",
+        "description": "Multiple heap-based buffer overflows in Libextractor 0.5.13 and earlier allow remote attackers to execute arbitrary code via (1) the asf_read_header function in the ASF plugin (plugins/asfextractor.c), and (2) the parse_trak_atom function in the QT plugin (plugins/qtextractor.c).",
+        "title": "libextractor libextractor Buffer Overflow",
+        "vendor": "libextractor",
+        "product": "libextractor",
+        "attack_type": "Buffer Overflow",
+        "cvss_max": 4.0
+      },
+      "cve": {
+        "id": "CVE-2006-2458",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2006-05-18T23:02:00.000",
+        "lastModified": "2026-04-16T00:27:16.627",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Multiple heap-based buffer overflows in Libextractor 0.5.13 and earlier allow remote attackers to execute arbitrary code via (1) the asf_read_header function in the ASF plugin (plugins/asfextractor.c), and (2) the parse_trak_atom function in the QT plugin (plugins/qtextractor.c)."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV2": [
+            {
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:H/Au:N/C:P/I:P/A:N",
+                "baseScore": 4.0,
+                "baseSeverity": "MEDIUM"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "baseSeverity": "MEDIUM",
+              "exploitabilityScore": 4.9,
+              "impactScore": 4.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "NVD-CWE-Other"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:libextractor:libextractor:0.5.13:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "69979B1F-1D91-4178-B692-0F1E907DC81A"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "http://gnunet.org/libextractor/",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://secunia.com/advisories/20150",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Patch",
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "http://secunia.com/advisories/20160",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://secunia.com/advisories/20326",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://secunia.com/advisories/20457",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://securityreason.com/securityalert/916",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://securitytracker.com/id?1016118",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit",
+              "Patch"
+            ]
+          },
+          {
+            "url": "http://www.debian.org/security/2006/dsa-1081",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://www.gentoo.org/security/en/glsa/glsa-200605-14.xml",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://www.novell.com/linux/security/advisories/2006-06-02.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://www.securityfocus.com/archive/1/434288/100/0/threaded",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://www.securityfocus.com/bid/18021",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit",
+              "Patch"
+            ]
+          },
+          {
+            "url": "http://www.vupen.com/english/advisories/2006/1848",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "https://exchange.xforce.ibmcloud.com/vulnerabilities/26531",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "https://exchange.xforce.ibmcloud.com/vulnerabilities/26532",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          }
+        ]
+      },
+      "risk_score": 76,
+      "rank": 4
+    },
+    {
+      "cve_id": "CVE-2021-35590",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 0.28894,
+            "score_date": "2025-11-21"
+          },
+          "current": {
+            "score": 0.46904,
+            "score_date": "2026-05-08"
+          },
+          "delta": 0.1801
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2021-10-20",
+        "description": "Vulnerability in the MySQL Cluster product of Oracle MySQL (component: Cluster: General). Supported versions that are affected are 7.4.33 and prior, 7.5.23 and prior, 7.6.19 and prior and 8.0.26 and prior. Difficult to exploit vulnerability allows high privileged attacker with access to the physical communication segment attached to the hardware where the MySQL Cluster executes to compromise MySQL Cluster. Successful attacks require human interaction from a person other than the attacker. Successful attacks of this vulnerability can result in takeover of MySQL Cluster. CVSS 3.1 Base Score 6.3 (Confidentiality, Integrity and Availability impacts). CVSS Vector: (CVSS:3.1/AV:A/AC:H/PR:H/UI:R/S:U/C:H/I:H/A:H).",
+        "title": "netapp mysql_cluster privilege escalation",
+        "vendor": "oracle",
+        "product": "mysql_cluster",
+        "attack_type": "privilege escalation",
+        "cvss_max": 6.5
+      },
+      "cve": {
+        "id": "CVE-2021-35590",
+        "sourceIdentifier": "secalert_us@oracle.com",
+        "published": "2021-10-20T11:17:00.500",
+        "lastModified": "2024-11-21T06:12:35.990",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Vulnerability in the MySQL Cluster product of Oracle MySQL (component: Cluster: General). Supported versions that are affected are 7.4.33 and prior, 7.5.23 and prior, 7.6.19 and prior and 8.0.26 and prior. Difficult to exploit vulnerability allows high privileged attacker with access to the physical communication segment attached to the hardware where the MySQL Cluster executes to compromise MySQL Cluster. Successful attacks require human interaction from a person other than the attacker. Successful attacks of this vulnerability can result in takeover of MySQL Cluster. CVSS 3.1 Base Score 6.3 (Confidentiality, Integrity and Availability impacts). CVSS Vector: (CVSS:3.1/AV:A/AC:H/PR:H/UI:R/S:U/C:H/I:H/A:H)."
+          },
+          {
+            "lang": "es",
+            "value": "Una vulnerabilidad en el producto MySQL Cluster de Oracle MySQL (componente: Cluster: General). Las versiones compatibles que están afectadas son 7.4.33 y anteriores, 7.5.23 y anteriores, 7.6.19 y anteriores y 8.0.26 y anteriores. Una vulnerabilidad difícil de explotar permite a un atacante muy privilegiado con acceso al segmento de comunicación física conectado al hardware donde se ejecuta el MySQL Cluster comprometer a MySQL Cluster. Los ataques con éxito requieren una interacción humana de una persona diferente del atacante. Los ataques con éxito de esta vulnerabilidad pueden resultar en la toma de control de MySQL Cluster. CVSS 3.1 Puntuación Base 6.3 (impactos en la Confidencialidad, Integridad y Disponibilidad). Vector CVSS: (CVSS:3.1/AV:A/AC:H/PR:H/UI:R/S:U/C:H/I:H/A:H)"
+          }
+        ],
+        "metrics": {
+          "cvssMetricV2": [
+            {
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:A/AC:H/Au:S/C:C/I:C/A:C",
+                "baseScore": 6.5,
+                "baseSeverity": "MEDIUM"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "baseSeverity": "MEDIUM",
+              "exploitabilityScore": 2.5,
+              "impactScore": 10.0
+            }
+          ],
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:A/AC:H/PR:H/UI:R/S:U/C:H/I:H/A:H",
+                "baseScore": 6.3,
+                "baseSeverity": "MEDIUM"
+              },
+              "source": "secalert_us@oracle.com",
+              "type": "Secondary",
+              "exploitabilityScore": 0.4,
+              "impactScore": 5.9
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:A/AC:H/PR:H/UI:R/S:U/C:H/I:H/A:H",
+                "baseScore": 6.3,
+                "baseSeverity": "MEDIUM"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 0.4,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-787"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:mysql_cluster:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "C7E7ACE6-C9CA-4A0C-9627-172064C8AC49",
+                    "versionStartIncluding": "7.4.0",
+                    "versionEndIncluding": "7.4.33"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:mysql_cluster:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "11FFF2C7-7217-4416-AC53-61EF6CC5D7EC",
+                    "versionStartIncluding": "7.5.0",
+                    "versionEndIncluding": "7.5.23"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:mysql_cluster:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "E8CF1647-EFAE-429A-8A76-196A8211925C",
+                    "versionStartIncluding": "7.6.0",
+                    "versionEndIncluding": "7.6.19"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:mysql_cluster:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "41A20A41-26F4-4DFB-8015-A38EB94BEAF4",
+                    "versionStartIncluding": "8.0.0",
+                    "versionEndIncluding": "8.0.26"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:netapp:oncommand_insight:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "F1BE6C1F-2565-4E97-92AA-16563E5660A5"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:netapp:snapcenter:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "BDFB1169-41A0-4A86-8E4F-FDA9730B1E94"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://security.netapp.com/advisory/ntap-20211022-0003/",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.oracle.com/security-alerts/cpuoct2021.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Patch",
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://www.zerodayinitiative.com/advisories/ZDI-21-1226/",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory",
+              "VDB Entry"
+            ]
+          }
+        ]
+      },
+      "risk_score": 80,
+      "rank": 5
+    },
+    {
+      "cve_id": "CVE-2021-37573",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 0.24162,
+            "score_date": "2026-03-09"
+          },
+          "current": {
+            "score": 0.51947,
+            "score_date": "2026-05-08"
+          },
+          "delta": 0.27785
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2021-08-09",
+        "description": "A reflected cross-site scripting (XSS) vulnerability in the web server TTiny Java Web Server and Servlet Container (TJWS) <=1.115 allows an adversary to inject malicious code on the server's \"404 Page not Found\" error page",
+        "title": "tiny_java_web_server_project tiny_java_web_server XSS",
+        "vendor": "tiny_java_web_server_project",
+        "product": "tiny_java_web_server",
+        "attack_type": "XSS",
+        "cvss_max": 6.1
+      },
+      "cve": {
+        "id": "CVE-2021-37573",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2021-08-09T13:15:07.480",
+        "lastModified": "2024-11-21T06:15:27.223",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A reflected cross-site scripting (XSS) vulnerability in the web server TTiny Java Web Server and Servlet Container (TJWS) <=1.115 allows an adversary to inject malicious code on the server's \"404 Page not Found\" error page"
+          },
+          {
+            "lang": "es",
+            "value": "Una vulnerabilidad de tipo cross-site scripting (XSS) reflejado en el servidor web TTiny Java Web Server and Servlet Container (TJWS) versiones anteriores a 1.115 incluyéndola, permite a un adversario inyectar código malicioso en la página de error \"404 Page not Found\" del servidor"
+          }
+        ],
+        "metrics": {
+          "cvssMetricV2": [
+            {
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:M/Au:N/C:N/I:P/A:N",
+                "baseScore": 4.3,
+                "baseSeverity": "MEDIUM"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "baseSeverity": "MEDIUM",
+              "exploitabilityScore": 8.6,
+              "impactScore": 2.9
+            }
+          ],
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+                "baseScore": 6.1,
+                "baseSeverity": "MEDIUM"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 2.7
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-79"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:tiny_java_web_server_project:tiny_java_web_server:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "CA51DA4D-6E72-43B6-A7A8-32CCDEB91D2F",
+                    "versionEndIncluding": "1.115"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "http://packetstormsecurity.com/files/163825/Tiny-Java-Web-Server-1.115-Cross-Site-Scripting.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "http://seclists.org/fulldisclosure/2021/Aug/13",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit",
+              "Mailing List",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.syss.de/fileadmin/dokumente/Publikationen/Advisories/SYSS-2021-042.txt",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 80,
+      "rank": 6
+    },
+    {
+      "cve_id": "CVE-2026-38360",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-05-08",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-05-08",
+        "description": "Directory Traversal vulnerability in fohrloop dash-uploader v.0.1.0 through v.0.7.0a2 allows a remote attacker to execute arbitrary code via the dash_uploader/httprequesthandler.py, aseHttpRequestHandler.get_temp_root(), BaseHttpRequestHandler._post() components",
+        "title": "Directory Traversal vulnerability in fohrloop dash-uploader v.0.1.0 through v.0.7.0a2 allows a remote attacker to execute arbitrary code...",
+        "attack_type": "Directory Traversal",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2026-38360",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2026-05-08T17:16:30.380",
+        "lastModified": "2026-05-12T15:10:27.993",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Directory Traversal vulnerability in fohrloop dash-uploader v.0.1.0 through v.0.7.0a2 allows a remote attacker to execute arbitrary code via the dash_uploader/httprequesthandler.py, aseHttpRequestHandler.get_temp_root(), BaseHttpRequestHandler._post() components"
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-22"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/a1ohadance/CVE-2026-38360",
+            "source": "cve@mitre.org"
+          },
+          {
+            "url": "https://github.com/fohrloop/dash-uploader",
+            "source": "cve@mitre.org"
+          },
+          {
+            "url": "https://github.com/fohrloop/dash-uploader/blob/dev/dash_uploader/httprequesthandler.py",
+            "source": "cve@mitre.org"
+          },
+          {
+            "url": "https://github.com/fohrloop/dash-uploader/blob/stable/dash_uploader/httprequesthandler.py",
+            "source": "cve@mitre.org"
+          },
+          {
+            "url": "https://github.com/fohrloop/dash-uploader/issues/153",
+            "source": "cve@mitre.org"
+          },
+          {
+            "url": "https://pypi.org/project/dash-uploader/",
+            "source": "cve@mitre.org"
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 7
+    },
+    {
+      "cve_id": "CVE-2026-42072",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-05-08",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-05-08",
+        "description": "Nornicdb is a distributed low-latency, Graph+Vector, Temporal MVCC with all sub-ms HNSW search, graph traversal, and writes. Prior to version 1.0.42-hotfix, the --address CLI flag (and NORNICDB_ADDRESS / server.host config key) is plumbed through to the HTTP server correctly but never reaches the Bolt server config. The Bolt listener therefore always binds to the wildcard address (all interfaces), regardless of what the user configures. On a LAN, this exposes the graph database — with its default admin:password credentials — to any device sharing the network. This issue has been patched in version 1.0.42-hotfix.",
+        "title": "Nornicdb is a distributed low-latency, Graph+Vector, Temporal MVCC with all sub-ms HNSW search, graph traversal, and writes.",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2026-42072",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2026-05-08T17:16:31.447",
+        "lastModified": "2026-05-13T16:34:42.677",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Nornicdb is a distributed low-latency, Graph+Vector, Temporal MVCC with all sub-ms HNSW search, graph traversal, and writes. Prior to version 1.0.42-hotfix, the --address CLI flag (and NORNICDB_ADDRESS / server.host config key) is plumbed through to the HTTP server correctly but never reaches the Bolt server config. The Bolt listener therefore always binds to the wildcard address (all interfaces), regardless of what the user configures. On a LAN, this exposes the graph database — with its default admin:password credentials — to any device sharing the network. This issue has been patched in version 1.0.42-hotfix."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-1392"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/orneryd/NornicDB/commit/adce4f9a9fc7b6aada07c0bfa2d737cd7a6efaca",
+            "source": "security-advisories@github.com"
+          },
+          {
+            "url": "https://github.com/orneryd/NornicDB/releases/tag/v1.0.42",
+            "source": "security-advisories@github.com"
+          },
+          {
+            "url": "https://github.com/orneryd/NornicDB/security/advisories/GHSA-2hp7-65r3-wv54",
+            "source": "security-advisories@github.com"
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 8
+    },
+    {
+      "cve_id": "CVE-2026-42160",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-05-08",
+          "previous_max": null,
+          "current_max": 10.0
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-05-08",
+        "description": "Data Space Portal is an open-source Software as a Service (SaaS) solution designed to streamline Dataspace management. From version 2.1.1 to before version 7.3.2, there is insufficient authorization in the dataspace-portal backend regarding self-registered \"PENDING\" organization / user accounts. This issue has been patched in version 7.3.2.",
+        "title": "Data Space Portal is an open-source Software as a Service (SaaS) solution designed to streamline Dataspace management.",
+        "attack_type": "privilege escalation",
+        "cvss_max": 10.0
+      },
+      "cve": {
+        "id": "CVE-2026-42160",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2026-05-08T20:16:30.743",
+        "lastModified": "2026-05-13T17:24:36.160",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Data Space Portal is an open-source Software as a Service (SaaS) solution designed to streamline Dataspace management. From version 2.1.1 to before version 7.3.2, there is insufficient authorization in the dataspace-portal backend regarding self-registered \"PENDING\" organization / user accounts. This issue has been patched in version 7.3.2."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:L/SC:H/SI:H/SA:L/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 10.0,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-602"
+              },
+              {
+                "lang": "en",
+                "value": "CWE-863"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/sovity/dataspace-portal/releases/tag/v7.3.2",
+            "source": "security-advisories@github.com"
+          },
+          {
+            "url": "https://github.com/sovity/dataspace-portal/security/advisories/GHSA-989g-wpfv-6vxx",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 9
+    },
+    {
+      "cve_id": "CVE-2026-42193",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-05-08",
+          "previous_max": null,
+          "current_max": 9.1
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-05-08",
+        "description": "Plunk is an open-source email platform built on top of AWS SES. Prior to version 0.9.0, the /webhooks/sns endpoint accepts Amazon SNS notification payloads from unauthenticated requests without verifying the SNS signature, certificate, or topic ARN, meaning anyone can forge a valid-looking webhook request. This allows an unauthenticated attacker to spoof SNS events to trigger workflow automations, unsubscribe contacts, manipulate email delivery metrics, and potentially exhaust billing credits. This issue has been patched in version 0.9.0.",
+        "title": "Plunk is an open-source email platform built on top of AWS SES.",
+        "cvss_max": 9.1
+      },
+      "cve": {
+        "id": "CVE-2026-42193",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2026-05-08T22:16:31.273",
+        "lastModified": "2026-05-12T16:45:18.893",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Plunk is an open-source email platform built on top of AWS SES. Prior to version 0.9.0, the /webhooks/sns endpoint accepts Amazon SNS notification payloads from unauthenticated requests without verifying the SNS signature, certificate, or topic ARN, meaning anyone can forge a valid-looking webhook request. This allows an unauthenticated attacker to spoof SNS events to trigger workflow automations, unsubscribe contacts, manipulate email delivery metrics, and potentially exhaust billing credits. This issue has been patched in version 0.9.0."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:H",
+                "baseScore": 9.1,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.2
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-347"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/useplunk/plunk/releases/tag/v0.9.0",
+            "source": "security-advisories@github.com"
+          },
+          {
+            "url": "https://github.com/useplunk/plunk/security/advisories/GHSA-9792-w86v-gx53",
+            "source": "security-advisories@github.com"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 10
+    },
+    {
+      "cve_id": "CVE-2026-42287",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-05-08",
+          "previous_max": null,
+          "current_max": 10.0
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-05-08",
+        "description": "Emlog is an open source website building system. Prior to version 2.6.11, direct SQL injection in article creation and update functions allows attackers to execute arbitrary SQL commands, potentially leading to complete database compromise, data theft, or system destruction. This issue has been patched in version 2.6.11.",
+        "title": "Emlog is an open source website building system.",
+        "attack_type": "SQL Injection",
+        "cvss_max": 10.0
+      },
+      "cve": {
+        "id": "CVE-2026-42287",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2026-05-08T22:16:33.057",
+        "lastModified": "2026-05-12T16:45:18.893",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Emlog is an open source website building system. Prior to version 2.6.11, direct SQL injection in article creation and update functions allows attackers to execute arbitrary SQL commands, potentially leading to complete database compromise, data theft, or system destruction. This issue has been patched in version 2.6.11."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 10.0,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-89"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/emlog/emlog/security/advisories/GHSA-xxj8-fc63-j3gw",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 11
+    },
+    {
+      "cve_id": "CVE-2026-42302",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-05-08",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-05-08",
+        "description": "FastGPT is an AI Agent building platform. From version 4.14.10 to before version 4.14.13, the agent-sandbox component of FastGPT is vulnerable to unauthenticated Remote Code Execution (RCE). The startup script entrypoint.sh initializes code-server with the --auth none flag and binds the service to all network interfaces (0.0.0.0:8080). This configuration allows any user with network access to the port to bypass authentication and gain full control over the sandbox environment. This issue has been patched in version 4.14.13.",
+        "title": "FastGPT is an AI Agent building platform.",
+        "attack_type": "RCE",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2026-42302",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2026-05-08T23:16:36.640",
+        "lastModified": "2026-05-12T19:16:32.950",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "FastGPT is an AI Agent building platform. From version 4.14.10 to before version 4.14.13, the agent-sandbox component of FastGPT is vulnerable to unauthenticated Remote Code Execution (RCE). The startup script entrypoint.sh initializes code-server with the --auth none flag and binds the service to all network interfaces (0.0.0.0:8080). This configuration allows any user with network access to the port to bypass authentication and gain full control over the sandbox environment. This issue has been patched in version 4.14.13."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-306"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/labring/FastGPT/commit/9d1cafce9241430fb5bcdd646455055c5f4ae0a4",
+            "source": "security-advisories@github.com"
+          },
+          {
+            "url": "https://github.com/labring/FastGPT/pull/6781",
+            "source": "security-advisories@github.com"
+          },
+          {
+            "url": "https://github.com/labring/FastGPT/releases/tag/v4.14.13",
+            "source": "security-advisories@github.com"
+          },
+          {
+            "url": "https://github.com/labring/FastGPT/security/advisories/GHSA-34rc-438g-7w78",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 12
+    },
+    {
+      "cve_id": "CVE-2026-42354",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-05-08",
+          "previous_max": null,
+          "current_max": 9.1
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-05-08",
+        "description": "Sentry is an error tracking and performance monitoring tool. From version 21.12.0 to before version 26.4.1, a critical vulnerability was discovered in the SAML SSO implementation of Sentry. The vulnerability allows an attacker to take over any user account by using a malicious SAML Identity Provider and another organization on the same Sentry instance. The victim email address must be known in order to exploit this vulnerability. This issue has been patched in version 26.4.1.",
+        "title": "sentry sentry",
+        "vendor": "sentry",
+        "product": "sentry",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2026-42354",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2026-05-08T23:16:38.513",
+        "lastModified": "2026-05-18T14:43:16.687",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Sentry is an error tracking and performance monitoring tool. From version 21.12.0 to before version 26.4.1, a critical vulnerability was discovered in the SAML SSO implementation of Sentry. The vulnerability allows an attacker to take over any user account by using a malicious SAML Identity Provider and another organization on the same Sentry instance. The victim email address must be known in order to exploit this vulnerability. This issue has been patched in version 26.4.1."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+                "baseScore": 9.1,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.2
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-290"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:sentry:sentry:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "2F70446C-FC30-4634-9659-BDF3DCE63BDE",
+                    "versionStartIncluding": "21.12.0",
+                    "versionEndExcluding": "26.4.1"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/getsentry/sentry/commit/0c67558ae7fe08738912d4c5233b53ead048da3b",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://github.com/getsentry/sentry/pull/113720",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Issue Tracking",
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://github.com/getsentry/sentry/releases/tag/26.4.1",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Product",
+              "Release Notes"
+            ]
+          },
+          {
+            "url": "https://github.com/getsentry/sentry/security/advisories/GHSA-rcmw-7mc7-3rj7",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Mitigation",
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 13
+    },
+    {
+      "cve_id": "CVE-2026-42454",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-05-08",
+          "previous_max": null,
+          "current_max": 9.9
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-05-08",
+        "description": "Termix is a web-based server management platform with SSH terminal, tunneling, and file editing capabilities. Prior to version 2.1.0, all Docker container management endpoints in Termix interpolate the containerId URL path parameter and WebSocket message field directly into shell commands executed via ssh2.Client.exec() on remote managed servers without any sanitization or validation. An authenticated attacker can inject arbitrary OS commands by crafting a malicious container ID, achieving Remote Code Execution on any managed server. This issue has been patched in version 2.1.0.",
+        "title": "Termix is a web-based server management platform with SSH terminal, tunneling, and file editing capabilities.",
+        "cvss_max": 9.9
+      },
+      "cve": {
+        "id": "CVE-2026-42454",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2026-05-08T23:16:39.097",
+        "lastModified": "2026-05-12T16:40:53.150",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Termix is a web-based server management platform with SSH terminal, tunneling, and file editing capabilities. Prior to version 2.1.0, all Docker container management endpoints in Termix interpolate the containerId URL path parameter and WebSocket message field directly into shell commands executed via ssh2.Client.exec() on remote managed servers without any sanitization or validation. An authenticated attacker can inject arbitrary OS commands by crafting a malicious container ID, achieving Remote Code Execution on any managed server. This issue has been patched in version 2.1.0."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+                "baseScore": 9.9,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.1,
+              "impactScore": 6.0
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-78"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/Termix-SSH/Termix/releases/tag/release-2.1.0-tag",
+            "source": "security-advisories@github.com"
+          },
+          {
+            "url": "https://github.com/Termix-SSH/Termix/security/advisories/GHSA-c2g2-hqgq-6w9v",
+            "source": "security-advisories@github.com"
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 14
+    },
+    {
+      "cve_id": "CVE-2026-8178",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-05-08",
+          "previous_max": null,
+          "current_max": 9.2
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-05-08",
+        "description": "An issue exists in Amazon Redshift JDBC Driver versions prior to 2.2.2. Under certain conditions, the driver could load and execute arbitrary classes when processing JDBC connection URL parameters. An actor who can influence the connection URL could potentially execute code in the application context, provided a suitable class is available on the application's classpath.\n\n\n\nTo mitigate this issue, users should upgrade to version 2.2.2 or later.",
+        "title": "An issue exists in Amazon Redshift JDBC Driver versions prior to 2.2.2.",
+        "cvss_max": 9.2
+      },
+      "cve": {
+        "id": "CVE-2026-8178",
+        "sourceIdentifier": "ff89ba41-3aa1-4d27-914a-91399e9639e5",
+        "published": "2026-05-08T19:16:31.827",
+        "lastModified": "2026-05-12T14:13:03.510",
+        "vulnStatus": "Awaiting Analysis",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "An issue exists in Amazon Redshift JDBC Driver versions prior to 2.2.2. Under certain conditions, the driver could load and execute arbitrary classes when processing JDBC connection URL parameters. An actor who can influence the connection URL could potentially execute code in the application context, provided a suitable class is available on the application's classpath.\n\n\n\nTo mitigate this issue, users should upgrade to version 2.2.2 or later."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 8.1,
+                "baseSeverity": "HIGH"
+              },
+              "source": "ff89ba41-3aa1-4d27-914a-91399e9639e5",
+              "type": "Secondary",
+              "exploitabilityScore": 2.2,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.2,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "ff89ba41-3aa1-4d27-914a-91399e9639e5",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-470"
+              }
+            ],
+            "source": "ff89ba41-3aa1-4d27-914a-91399e9639e5"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://aws.amazon.com/security/security-bulletins/2026-028-aws/",
+            "source": "ff89ba41-3aa1-4d27-914a-91399e9639e5"
+          },
+          {
+            "url": "https://github.com/aws/amazon-redshift-jdbc-driver/releases/tag/v2.2.2",
+            "source": "ff89ba41-3aa1-4d27-914a-91399e9639e5"
+          },
+          {
+            "url": "https://github.com/aws/amazon-redshift-jdbc-driver/security/advisories/GHSA-wmmv-vvg5-993q",
+            "source": "ff89ba41-3aa1-4d27-914a-91399e9639e5"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 15
+    }
+  ],
+  "source": "https://www.cvelogic.com/threat-intelligence/2026-05-08"
+}
