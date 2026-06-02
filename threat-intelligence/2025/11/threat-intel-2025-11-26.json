@@ -1,0 +1,1214 @@
+{
+  "schema_version": "2.2",
+  "generated_at": "2026-06-02T07:33:51Z",
+  "day": "2025-11-26",
+  "window": {
+    "utc_start": "2025-11-26",
+    "utc_end": "2025-11-26",
+    "days": 1
+  },
+  "summary": {
+    "brief": "Kame Ipcomp — exploitation likelihood rose sharply (EPSS 28% → 54% · rising (+26%)). · 10 new critical disclosures — review patch status on exposed services.",
+    "bullets": [
+      "Kame Ipcomp — exploitation likelihood rose sharply (EPSS 28% → 54% · rising (+26%)).",
+      "10 new critical disclosures — review patch status on exposed services."
+    ],
+    "counts": {
+      "cves": 11,
+      "kev": 0,
+      "exploit": 0,
+      "epss": 1,
+      "cvss": 10,
+      "patch": 0
+    }
+  },
+  "cves": [
+    {
+      "cve_id": "CVE-2008-0177",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 0.28131,
+            "score_date": "2025-03-30"
+          },
+          "current": {
+            "score": 0.54461,
+            "score_date": "2025-11-26"
+          },
+          "delta": 0.2633
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2008-02-07",
+        "description": "The ipcomp6_input function in sys/netinet6/ipcomp_input.c in the KAME project before 20071201 does not properly check the return value of the m_pulldown function, which allows remote attackers to cause a denial of service (system crash) via an IPv6 packet with an IPComp header.",
+        "title": "kame ipcomp DoS",
+        "vendor": "kame",
+        "product": "ipcomp",
+        "attack_type": "DoS",
+        "cvss_max": 7.8
+      },
+      "cve": {
+        "id": "CVE-2008-0177",
+        "sourceIdentifier": "cret@cert.org",
+        "published": "2008-02-07T22:00:00.000",
+        "lastModified": "2026-04-23T00:35:47.467",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The ipcomp6_input function in sys/netinet6/ipcomp_input.c in the KAME project before 20071201 does not properly check the return value of the m_pulldown function, which allows remote attackers to cause a denial of service (system crash) via an IPv6 packet with an IPComp header."
+          },
+          {
+            "lang": "es",
+            "value": "La función ipcomp6_input en sys/netinet6/ipcomp_input.c en el Proyecto KAME antes del 2007-12-01 no comprueba correctamente el valor de retorno de la función m_pulldown, lo que permite a atacantes remotos provocar una denegación de servicio (caída del sistema) mediante un paquete IPv6 con cabecera IPComp."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV2": [
+            {
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:L/Au:N/C:N/I:N/A:C",
+                "baseScore": 7.8,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "baseSeverity": "HIGH",
+              "exploitabilityScore": 10.0,
+              "impactScore": 6.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "NVD-CWE-Other"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:kame:ipcomp:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "D2434FDC-4269-4FEC-9627-8743C8A5D7A1"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "http://cvsweb.netbsd.org/bsdweb.cgi/src/sys/netinet6/ipcomp_input.c?f=u&only_with_tag=netbsd-3-1",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "http://lists.apple.com/archives/security-announce/2008//Jul/msg00001.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://lists.apple.com/archives/security-announce/2008//May/msg00001.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://secunia.com/advisories/28788",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Patch",
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "http://secunia.com/advisories/28816",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "http://secunia.com/advisories/28979",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://secunia.com/advisories/29130",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://secunia.com/advisories/30430",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://secunia.com/advisories/31074",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://security.freebsd.org/advisories/FreeBSD-SA-08:04.ipsec.asc",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://securitytracker.com/id?1019314",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://www.kame.net/dev/cvsweb2.cgi/kame/kame/sys/netinet6/ipcomp_input.c.diff?r1=1.36%3Br2=1.37",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://www.kb.cert.org/vuls/id/110947",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "US Government Resource"
+            ]
+          },
+          {
+            "url": "http://www.securityfocus.com/bid/27642",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "http://www.us-cert.gov/cas/techalerts/TA08-150A.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "US Government Resource"
+            ]
+          },
+          {
+            "url": "http://www.vupen.com/english/advisories/2008/0441",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://www.vupen.com/english/advisories/2008/0688",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://www.vupen.com/english/advisories/2008/1697",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://www.vupen.com/english/advisories/2008/2094/references",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "https://www.exploit-db.com/exploits/5191",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          }
+        ]
+      },
+      "risk_score": 83,
+      "rank": 1
+    },
+    {
+      "cve_id": "CVE-2025-64126",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-11-26",
+          "previous_max": null,
+          "current_max": 10.0
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-11-26",
+        "description": "An OS command injection vulnerability exists due to improper input \nvalidation. The application accepts a parameter directly from user input\n without verifying it is a valid IP address or filtering potentially \nmalicious characters. This could allow an unauthenticated attacker to \ninject arbitrary commands.",
+        "title": "An OS command injection vulnerability exists due to improper input validation.",
+        "attack_type": "Command Injection",
+        "cvss_max": 10.0
+      },
+      "cve": {
+        "id": "CVE-2025-64126",
+        "sourceIdentifier": "ics-cert@hq.dhs.gov",
+        "published": "2025-11-26T18:15:49.043",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "An OS command injection vulnerability exists due to improper input \nvalidation. The application accepts a parameter directly from user input\n without verifying it is a valid IP address or filtering potentially \nmalicious characters. This could allow an unauthenticated attacker to \ninject arbitrary commands."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+                "baseScore": 10.0,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "ics-cert@hq.dhs.gov",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 6.0
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:L/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 10.0,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "ics-cert@hq.dhs.gov",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-78"
+              }
+            ],
+            "source": "ics-cert@hq.dhs.gov"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/cisagov/CSAF/blob/develop/csaf_files/OT/white/2025/icsa-25-329-03.json",
+            "source": "ics-cert@hq.dhs.gov"
+          },
+          {
+            "url": "https://wiki.zenitel.com/wiki/Downloads#Station_and_Device_Firmware_Package_.28VS-IS.29",
+            "source": "ics-cert@hq.dhs.gov"
+          },
+          {
+            "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-25-329-03",
+            "source": "ics-cert@hq.dhs.gov"
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 2
+    },
+    {
+      "cve_id": "CVE-2025-64127",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-11-26",
+          "previous_max": null,
+          "current_max": 10.0
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-11-26",
+        "description": "An OS command injection vulnerability exists due to insufficient \nsanitization of user-supplied input. The application accepts parameters \nthat are later incorporated into OS commands without adequate \nvalidation. This could allow an unauthenticated attacker to execute \narbitrary commands remotely.",
+        "title": "An OS command injection vulnerability exists due to insufficient sanitization of user-supplied input.",
+        "attack_type": "Command Injection",
+        "cvss_max": 10.0
+      },
+      "cve": {
+        "id": "CVE-2025-64127",
+        "sourceIdentifier": "ics-cert@hq.dhs.gov",
+        "published": "2025-11-26T18:15:49.243",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "An OS command injection vulnerability exists due to insufficient \nsanitization of user-supplied input. The application accepts parameters \nthat are later incorporated into OS commands without adequate \nvalidation. This could allow an unauthenticated attacker to execute \narbitrary commands remotely."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+                "baseScore": 10.0,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "ics-cert@hq.dhs.gov",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 6.0
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:L/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 10.0,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "ics-cert@hq.dhs.gov",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-78"
+              }
+            ],
+            "source": "ics-cert@hq.dhs.gov"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/cisagov/CSAF/blob/develop/csaf_files/OT/white/2025/icsa-25-329-03.json",
+            "source": "ics-cert@hq.dhs.gov"
+          },
+          {
+            "url": "https://wiki.zenitel.com/wiki/Downloads#Station_and_Device_Firmware_Package_.28VS-IS.29",
+            "source": "ics-cert@hq.dhs.gov"
+          },
+          {
+            "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-25-329-03",
+            "source": "ics-cert@hq.dhs.gov"
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 3
+    },
+    {
+      "cve_id": "CVE-2025-26155",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-11-26",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-11-26",
+        "description": "NCP Secure Enterprise Client 13.18 and NCP Secure Entry Windows Client 13.19 have an Untrusted Search Path vulnerability.",
+        "title": "ncp-e ncp_secure_entry_client",
+        "vendor": "ncp-e",
+        "product": "ncp_secure_entry_client",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-26155",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2025-11-26T19:15:46.967",
+        "lastModified": "2025-12-30T15:41:08.380",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "NCP Secure Enterprise Client 13.18 and NCP Secure Entry Windows Client 13.19 have an Untrusted Search Path vulnerability."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-426"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:ncp-e:ncp_secure_entry_client:13.19:*:*:*:*:windows:*:*",
+                    "matchCriteriaId": "555B6B88-3A1D-48F0-B193-67B1B5BC1CFA"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:ncp-e:secure_enterprise_client:13.18:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "B7ACC890-BEA0-47C8-9E2A-382F39921C09"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://pentest.axians.de/viewer.html?file=cve-2025-26155/CVE-axians-eng.pdf",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.ncp-e.com/",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Product"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 4
+    },
+    {
+      "cve_id": "CVE-2025-40934",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-11-26",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-11-26",
+        "description": "XML-Sig versions 0.27 through 0.67 for Perl incorrectly validates XML files if signatures are omitted.\n\nAn attacker can remove the signature from the XML document to make it pass the verification check.\n\nXML-Sig is a Perl module to validate signatures on XML files.  An unsigned XML file should return an error message.  The affected versions return true when attempting to validate an XML file that contains no signatures.",
+        "title": "xml::sig_project xml::sig",
+        "vendor": "xml\\",
+        "product": "\\",
+        "cvss_max": 9.3
+      },
+      "cve": {
+        "id": "CVE-2025-40934",
+        "sourceIdentifier": "9b29abf9-4ab0-4765-b253-1875cd9b441e",
+        "published": "2025-11-26T23:15:47.773",
+        "lastModified": "2025-12-30T15:21:37.487",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "XML-Sig versions 0.27 through 0.67 for Perl incorrectly validates XML files if signatures are omitted.\n\nAn attacker can remove the signature from the XML document to make it pass the verification check.\n\nXML-Sig is a Perl module to validate signatures on XML files.  An unsigned XML file should return an error message.  The affected versions return true when attempting to validate an XML file that contains no signatures."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:H/A:N",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 4.7
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-347"
+              }
+            ],
+            "source": "9b29abf9-4ab0-4765-b253-1875cd9b441e"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:xml\\:\\:sig_project:xml\\:\\:sig:*:*:*:*:*:perl:*:*",
+                    "matchCriteriaId": "8F401AE6-72AA-4188-B763-4354213AA0BB",
+                    "versionStartIncluding": "0.27",
+                    "versionEndIncluding": "0.67"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/perl-net-saml2/perl-XML-Sig/issues/63",
+            "source": "9b29abf9-4ab0-4765-b253-1875cd9b441e",
+            "tags": [
+              "Issue Tracking",
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://github.com/perl-net-saml2/perl-XML-Sig/pull/64",
+            "source": "9b29abf9-4ab0-4765-b253-1875cd9b441e",
+            "tags": [
+              "Issue Tracking"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 5
+    },
+    {
+      "cve_id": "CVE-2025-50433",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-11-26",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-11-26",
+        "description": "An issue was discovered in imonnit.com (2025-04-24) allowing malicious actors to gain escalated privileges via crafted password reset to take over arbitrary user accounts.",
+        "title": "monnit imonnit privilege escalation",
+        "vendor": "monnit",
+        "product": "imonnit",
+        "attack_type": "privilege escalation",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-50433",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2025-11-26T20:15:49.367",
+        "lastModified": "2025-12-29T15:46:51.940",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "An issue was discovered in imonnit.com (2025-04-24) allowing malicious actors to gain escalated privileges via crafted password reset to take over arbitrary user accounts."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-640"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:monnit:imonnit:-:*:*:*:cloud_basic:*:*:*",
+                    "matchCriteriaId": "5A6BE212-6C74-422A-A64F-EC40E675915C"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:monnit:imonnit:-:*:*:*:cloud_premiere:*:*:*",
+                    "matchCriteriaId": "47117C5D-A36E-4C2E-8786-59F9E769E1CC"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "http://imonnitcom.com",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Broken Link"
+            ]
+          },
+          {
+            "url": "http://monnit.com",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Product"
+            ]
+          },
+          {
+            "url": "https://github.com/0xMandor/imonnit-ato-advisory/blob/main/CVE-2025-50433.md",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://youtu.be/-BqcdwHgMMA",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Exploit"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 6
+    },
+    {
+      "cve_id": "CVE-2025-62593",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-11-26",
+          "previous_max": null,
+          "current_max": 9.4
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-11-26",
+        "description": "Ray is an AI compute engine. Prior to version 2.52.0, developers working with Ray as a development tool can be exploited via a critical RCE vulnerability exploitable via Firefox and Safari. This vulnerability is due to an insufficient guard against browser-based attacks, as the current defense uses the User-Agent header starting with the string \"Mozilla\" as a defense mechanism. This defense is insufficient as the fetch specification allows the User-Agent header to be modified. Combined with a DNS rebinding attack against the browser, and this vulnerability is exploitable against a developer running Ray who inadvertently visits a malicious website, or is served a malicious advertisement (malvertising). This issue has been patched in version 2.52.0.",
+        "title": "Ray is an AI compute engine.",
+        "attack_type": "RCE",
+        "cvss_max": 9.4
+      },
+      "cve": {
+        "id": "CVE-2025-62593",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2025-11-26T23:15:47.927",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Ray is an AI compute engine. Prior to version 2.52.0, developers working with Ray as a development tool can be exploited via a critical RCE vulnerability exploitable via Firefox and Safari. This vulnerability is due to an insufficient guard against browser-based attacks, as the current defense uses the User-Agent header starting with the string \"Mozilla\" as a defense mechanism. This defense is insufficient as the fetch specification allows the User-Agent header to be modified. Combined with a DNS rebinding attack against the browser, and this vulnerability is exploitable against a developer running Ray who inadvertently visits a malicious website, or is served a malicious advertisement (malvertising). This issue has been patched in version 2.52.0."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.4,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-94"
+              },
+              {
+                "lang": "en",
+                "value": "CWE-352"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/ray-project/ray/commit/70e7c72780bdec075dba6cad1afe0832772bfe09",
+            "source": "security-advisories@github.com"
+          },
+          {
+            "url": "https://github.com/ray-project/ray/security/advisories/GHSA-q279-jhrf-cc6v",
+            "source": "security-advisories@github.com"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 7
+    },
+    {
+      "cve_id": "CVE-2025-64128",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-11-26",
+          "previous_max": null,
+          "current_max": 10.0
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-11-26",
+        "description": "An OS command injection vulnerability exists due to incomplete \nvalidation of user-supplied input. Validation fails to enforce \nsufficient formatting rules, which could permit attackers to append \narbitrary data. This could allow an unauthenticated attacker to inject \narbitrary commands.",
+        "title": "An OS command injection vulnerability exists due to incomplete validation of user-supplied input.",
+        "attack_type": "Command Injection",
+        "cvss_max": 10.0
+      },
+      "cve": {
+        "id": "CVE-2025-64128",
+        "sourceIdentifier": "ics-cert@hq.dhs.gov",
+        "published": "2025-11-26T18:15:49.650",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "An OS command injection vulnerability exists due to incomplete \nvalidation of user-supplied input. Validation fails to enforce \nsufficient formatting rules, which could permit attackers to append \narbitrary data. This could allow an unauthenticated attacker to inject \narbitrary commands."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+                "baseScore": 10.0,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "ics-cert@hq.dhs.gov",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 6.0
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:L/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 10.0,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "ics-cert@hq.dhs.gov",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-78"
+              }
+            ],
+            "source": "ics-cert@hq.dhs.gov"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/cisagov/CSAF/blob/develop/csaf_files/OT/white/2025/icsa-25-329-03.json",
+            "source": "ics-cert@hq.dhs.gov"
+          },
+          {
+            "url": "https://wiki.zenitel.com/wiki/Downloads#Station_and_Device_Firmware_Package_.28VS-IS.29",
+            "source": "ics-cert@hq.dhs.gov"
+          },
+          {
+            "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-25-329-03",
+            "source": "ics-cert@hq.dhs.gov"
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 8
+    },
+    {
+      "cve_id": "CVE-2025-64130",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-11-26",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-11-26",
+        "description": "Zenitel TCIV-3+ is vulnerable to a reflected cross-site scripting \nvulnerability, which could allow a remote attacker to execute arbitrary \nJavaScript on the victim's browser.",
+        "title": "Zenitel TCIV-3+ is vulnerable to a reflected cross-site scripting vulnerability, which could allow a remote attacker to execute arbitrary...",
+        "attack_type": "XSS",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-64130",
+        "sourceIdentifier": "ics-cert@hq.dhs.gov",
+        "published": "2025-11-26T18:15:50.243",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Zenitel TCIV-3+ is vulnerable to a reflected cross-site scripting \nvulnerability, which could allow a remote attacker to execute arbitrary \nJavaScript on the victim's browser."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "ics-cert@hq.dhs.gov",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "ics-cert@hq.dhs.gov",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-79"
+              }
+            ],
+            "source": "ics-cert@hq.dhs.gov"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/cisagov/CSAF/blob/develop/csaf_files/OT/white/2025/icsa-25-329-03.json",
+            "source": "ics-cert@hq.dhs.gov"
+          },
+          {
+            "url": "https://wiki.zenitel.com/wiki/Downloads#Station_and_Device_Firmware_Package_.28VS-IS.29",
+            "source": "ics-cert@hq.dhs.gov"
+          },
+          {
+            "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-25-329-03",
+            "source": "ics-cert@hq.dhs.gov"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 9
+    },
+    {
+      "cve_id": "CVE-2025-65276",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-11-26",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-11-26",
+        "description": "An unauthenticated administrative access vulnerability exists in the open-source HashTech project (https://github.com/henzljw/hashtech) 1.0 thru commit 5919decaff2681dc250e934814fc3a35f6093ee5 (2021-07-02). Due to missing authentication checks on /admin_index.php, an attacker can directly access the admin dashboard without valid credentials. This allows full administrative control including viewing/modifying user accounts, managing orders, changing payments, and editing product listings. Successful exploitation can lead to information disclosure, data manipulation, and privilege escalation.",
+        "title": "henzljw hashtech",
+        "vendor": "henzljw",
+        "product": "hashtech",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-65276",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2025-11-26T20:15:49.660",
+        "lastModified": "2025-12-30T15:34:16.817",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "An unauthenticated administrative access vulnerability exists in the open-source HashTech project (https://github.com/henzljw/hashtech) 1.0 thru commit 5919decaff2681dc250e934814fc3a35f6093ee5 (2021-07-02). Due to missing authentication checks on /admin_index.php, an attacker can directly access the admin dashboard without valid credentials. This allows full administrative control including viewing/modifying user accounts, managing orders, changing payments, and editing product listings. Successful exploitation can lead to information disclosure, data manipulation, and privilege escalation."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-284"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:henzljw:hashtech:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "BEB49649-CE3A-40D3-A3DE-81293E8D2098",
+                    "versionEndIncluding": "2021-07-02"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://gist.github.com/whoisrushi/c3bfcd1adf96d80952edbd03d0310836",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 10
+    },
+    {
+      "cve_id": "CVE-2025-65669",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-11-26",
+          "previous_max": null,
+          "current_max": 9.1
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-11-26",
+        "description": "An issue was discovered in classroomio 0.1.13. Student accounts are able to delete courses from the Explore page without any authorization or authentication checks, bypassing the expected admin-only deletion restriction.",
+        "title": "classroomio classroomio privilege escalation",
+        "vendor": "classroomio",
+        "product": "classroomio",
+        "attack_type": "privilege escalation",
+        "cvss_max": 9.1
+      },
+      "cve": {
+        "id": "CVE-2025-65669",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2025-11-26T19:15:47.483",
+        "lastModified": "2025-12-03T20:50:01.060",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "An issue was discovered in classroomio 0.1.13. Student accounts are able to delete courses from the Explore page without any authorization or authentication checks, bypassing the expected admin-only deletion restriction."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:H",
+                "baseScore": 9.1,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.2
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-862"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:classroomio:classroomio:0.1.13:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "7C6D9D0E-58A9-4468-90E2-3717E4632BF0"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "http://classroomio.com",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Product"
+            ]
+          },
+          {
+            "url": "https://github.com/Rivek619/CVE-2025-65669",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/classroomio/classroomio",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Product"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 11
+    }
+  ],
+  "source": "https://www.cvelogic.com/threat-intelligence/2025-11-26"
+}

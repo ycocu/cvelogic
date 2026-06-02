@@ -1,0 +1,1524 @@
+{
+  "schema_version": "2.2",
+  "generated_at": "2026-06-02T07:33:21Z",
+  "day": "2025-09-04",
+  "window": {
+    "utc_start": "2025-09-04",
+    "utc_end": "2025-09-04",
+    "days": 1
+  },
+  "summary": {
+    "brief": "Android Runtime added to CISA KEV — confirmed in-the-wild exploitation. · 10 new critical disclosures — review patch status on exposed services.",
+    "bullets": [
+      "Android Runtime added to CISA KEV — confirmed in-the-wild exploitation.",
+      "10 new critical disclosures — review patch status on exposed services."
+    ],
+    "counts": {
+      "cves": 13,
+      "kev": 3,
+      "exploit": 0,
+      "epss": 0,
+      "cvss": 10,
+      "patch": 0
+    }
+  },
+  "cves": [
+    {
+      "cve_id": "CVE-2025-48543",
+      "signal_types": [
+        "KEV"
+      ],
+      "signals": {
+        "kev": {
+          "date_added": "2025-09-04"
+        },
+        "exploit": null,
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-09-04",
+        "description": "In multiple locations, there is a possible way to escape chrome sandbox to attack android system_server due to a use after free. This could lead to local escalation of privilege with no additional execution privileges needed. User interaction is not needed for exploitation.",
+        "title": "Android Runtime Use-After-Free Vulnerability",
+        "vendor": "google",
+        "product": "android",
+        "attack_type": "Use-After-Free",
+        "cvss_max": 8.8
+      },
+      "cve": {
+        "id": "CVE-2025-48543",
+        "sourceIdentifier": "security@android.com",
+        "published": "2025-09-04T19:15:40.780",
+        "lastModified": "2025-10-23T14:52:51.863",
+        "vulnStatus": "Analyzed",
+        "cisaExploitAdd": "2025-09-04",
+        "cisaActionDue": "2025-09-25",
+        "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+        "cisaVulnerabilityName": "Android Runtime Use-After-Free Vulnerability",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "In multiple locations, there is a possible way to escape chrome sandbox to attack android system_server due to a use after free. This could lead to local escalation of privilege with no additional execution privileges needed. User interaction is not needed for exploitation."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+                "baseScore": 8.8,
+                "baseSeverity": "HIGH"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 2.0,
+              "impactScore": 6.0
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-416"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:google:android:13.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "879FFD0C-9B38-4CAA-B057-1086D794D469"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:google:android:14.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "2700BCC5-634D-4EC6-AB67-5B678D5F951D"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:google:android:15.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "8538774C-906D-4B03-A3E7-FA7A55E0DA9E"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:google:android:16.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "2D49E611-5D53-479D-A981-42388FDC0E8D"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://android.googlesource.com/platform/art/+/444fc40dfb04d2ec5f74c443ed3a4dd45d3131f2",
+            "source": "security@android.com",
+            "tags": [
+              "Patch",
+              "Product"
+            ]
+          },
+          {
+            "url": "https://source.android.com/security/bulletin/2025-09-01",
+            "source": "security@android.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2025-48543",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Third Party Advisory",
+              "US Government Resource"
+            ]
+          }
+        ]
+      },
+      "risk_score": 88,
+      "rank": 1
+    },
+    {
+      "cve_id": "CVE-2025-54914",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-09-04",
+          "previous_max": null,
+          "current_max": 10.0
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-09-04",
+        "description": "Azure Networking Elevation of Privilege Vulnerability",
+        "title": "microsoft azure_networking privilege escalation",
+        "vendor": "microsoft",
+        "product": "azure_networking",
+        "attack_type": "privilege escalation",
+        "cvss_max": 10.0
+      },
+      "cve": {
+        "id": "CVE-2025-54914",
+        "sourceIdentifier": "secure@microsoft.com",
+        "published": "2025-09-04T23:15:32.110",
+        "lastModified": "2025-10-20T19:21:37.337",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Azure Networking Elevation of Privilege Vulnerability"
+          }
+        ],
+        "cveTags": [
+          {
+            "sourceIdentifier": "secure@microsoft.com",
+            "tags": [
+              "exclusively-hosted-service"
+            ]
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+                "baseScore": 10.0,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "secure@microsoft.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 6.0
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-284"
+              }
+            ],
+            "source": "secure@microsoft.com"
+          },
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "NVD-CWE-noinfo"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:microsoft:azure_networking:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "3486E570-A530-426B-AB03-4666BE1EF4EF"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-54914",
+            "source": "secure@microsoft.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 2
+    },
+    {
+      "cve_id": "CVE-2025-55241",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-09-04",
+          "previous_max": null,
+          "current_max": 10.0
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-09-04",
+        "description": "Azure Entra ID Elevation of Privilege Vulnerability",
+        "title": "microsoft entra_id privilege escalation",
+        "vendor": "microsoft",
+        "product": "entra_id",
+        "attack_type": "privilege escalation",
+        "cvss_max": 10.0
+      },
+      "cve": {
+        "id": "CVE-2025-55241",
+        "sourceIdentifier": "secure@microsoft.com",
+        "published": "2025-09-04T23:15:32.960",
+        "lastModified": "2025-09-24T19:15:37.787",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Azure Entra ID Elevation of Privilege Vulnerability"
+          }
+        ],
+        "cveTags": [
+          {
+            "sourceIdentifier": "secure@microsoft.com",
+            "tags": [
+              "exclusively-hosted-service"
+            ]
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+                "baseScore": 10.0,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "secure@microsoft.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 6.0
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-287"
+              }
+            ],
+            "source": "secure@microsoft.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:microsoft:entra_id:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "D09E509F-AFF3-4991-877A-D197388E7AD4"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-55241",
+            "source": "secure@microsoft.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://dirkjanm.io/obtaining-global-admin-in-every-entra-id-tenant-with-actor-tokens/",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Technical Description",
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 3
+    },
+    {
+      "cve_id": "CVE-2025-36897",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-09-04",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-09-04",
+        "description": "In unknown of cd_CnMsgCodecUserApi.cpp, there is a possible out of bounds write due to a missing bounds check. This could lead to remote code execution with no additional execution privileges needed. User interaction is not needed for exploitation.",
+        "title": "google android RCE",
+        "vendor": "google",
+        "product": "android",
+        "attack_type": "RCE",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-36897",
+        "sourceIdentifier": "dsap-vuln-management@google.com",
+        "published": "2025-09-04T10:42:30.107",
+        "lastModified": "2025-09-05T16:38:32.233",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "In unknown of cd_CnMsgCodecUserApi.cpp, there is a possible out of bounds write due to a missing bounds check. This could lead to remote code execution with no additional execution privileges needed. User interaction is not needed for exploitation."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-787"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:google:android:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "F8B9FEC8-73B6-43B8-B24E-1F7C20D91D26"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://source.android.com/security/bulletin/pixel/2025-09-01",
+            "source": "dsap-vuln-management@google.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 4
+    },
+    {
+      "cve_id": "CVE-2025-36904",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-09-04",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-09-04",
+        "description": "WLAN in Android before 2025-09-05 on Google Pixel devices allows elevation of privilege, aka A-396458384.",
+        "title": "google android privilege escalation",
+        "vendor": "google",
+        "product": "android",
+        "attack_type": "privilege escalation",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-36904",
+        "sourceIdentifier": "dsap-vuln-management@google.com",
+        "published": "2025-09-04T10:42:30.937",
+        "lastModified": "2025-09-05T16:37:36.547",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "WLAN in Android before 2025-09-05 on Google Pixel devices allows elevation of privilege, aka A-396458384."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-269"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:google:android:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "F8B9FEC8-73B6-43B8-B24E-1F7C20D91D26"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://source.android.com/security/bulletin/pixel/2025-09-01",
+            "source": "dsap-vuln-management@google.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 5
+    },
+    {
+      "cve_id": "CVE-2025-38352",
+      "signal_types": [
+        "KEV"
+      ],
+      "signals": {
+        "kev": {
+          "date_added": "2025-09-04"
+        },
+        "exploit": null,
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-07-22",
+        "description": "In the Linux kernel, the following vulnerability has been resolved:\n\nposix-cpu-timers: fix race between handle_posix_cpu_timers() and posix_cpu_timer_del()\n\nIf an exiting non-autoreaping task has already passed exit_notify() and\ncalls handle_posix_cpu_timers() from IRQ, it can be reaped by its parent\nor debugger right after unlock_task_sighand().\n\nIf a concurrent posix_cpu_timer_del() runs at that moment, it won't be\nable to detect timer->it.cpu.firing != 0: cpu_timer_task_rcu() and/or\nlock_task_sighand() will fail.\n\nAdd the tsk->exit_state check into run_posix_cpu_timers() to fix this.\n\nThis fix is not needed if CONFIG_POSIX_CPU_TIMERS_TASK_WORK=y, because\nexit_task_work() is called before exit_notify(). But the check still\nmakes sense, task_work_add(&tsk->posix_cputimers_work.work) will fail\nanyway in this case.",
+        "title": "Linux Kernel Time-of-Check Time-of-Use (TOCTOU) Race Condition Vulnerability",
+        "vendor": "linux",
+        "product": "linux_kernel",
+        "cvss_max": 7.4
+      },
+      "cve": {
+        "id": "CVE-2025-38352",
+        "sourceIdentifier": "416baaa9-dc9f-4396-8d5f-8c081fb06d67",
+        "published": "2025-07-22T08:15:23.577",
+        "lastModified": "2026-01-08T16:28:23.960",
+        "vulnStatus": "Analyzed",
+        "cisaExploitAdd": "2025-09-04",
+        "cisaActionDue": "2025-09-25",
+        "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+        "cisaVulnerabilityName": "Linux Kernel Time-of-Check Time-of-Use (TOCTOU) Race Condition Vulnerability",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "In the Linux kernel, the following vulnerability has been resolved:\n\nposix-cpu-timers: fix race between handle_posix_cpu_timers() and posix_cpu_timer_del()\n\nIf an exiting non-autoreaping task has already passed exit_notify() and\ncalls handle_posix_cpu_timers() from IRQ, it can be reaped by its parent\nor debugger right after unlock_task_sighand().\n\nIf a concurrent posix_cpu_timer_del() runs at that moment, it won't be\nable to detect timer->it.cpu.firing != 0: cpu_timer_task_rcu() and/or\nlock_task_sighand() will fail.\n\nAdd the tsk->exit_state check into run_posix_cpu_timers() to fix this.\n\nThis fix is not needed if CONFIG_POSIX_CPU_TIMERS_TASK_WORK=y, because\nexit_task_work() is called before exit_notify(). But the check still\nmakes sense, task_work_add(&tsk->posix_cputimers_work.work) will fail\nanyway in this case."
+          },
+          {
+            "lang": "es",
+            "value": "En el kernel de Linux, se ha resuelto la siguiente vulnerabilidad: posix-cpu-timers: corregir la ejecución entre handle_posix_cpu_timers() y posix_cpu_timer_del(). Si una tarea no autorecuperadora que está saliendo ya ha pasado exit_notify() y llama a handle_posix_cpu_timers() desde IRQ, puede ser recuperada por su padre o depurador justo después de unlock_task_sighand(). Si en ese momento se ejecuta un posix_cpu_timer_del() concurrente, no podrá detectar timer-&gt;it.cpu.firing != 0: cpu_timer_task_rcu() y/o lock_task_sighand() fallarán. Agregue la verificación tsk-&gt;exit_state en run_posix_cpu_timers() para corregir esto. Esta corrección no es necesaria si CONFIG_POSIX_CPU_TIMERS_TASK_WORK=y, porque exit_task_work() se llama antes de exit_notify(). Pero la verificación sigue teniendo sentido, task_work_add(&amp;tsk-&gt;posix_cputimers_work.work) fallará de todos modos en este caso."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 7.4,
+                "baseSeverity": "HIGH"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 1.4,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-367"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "AA6F945B-F2BB-4787-B4AD-104604AAF325",
+                    "versionStartIncluding": "2.6.36",
+                    "versionEndExcluding": "5.4.295"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "C3D14F4C-A21E-465D-A928-5CCE684E2B98",
+                    "versionStartIncluding": "5.5",
+                    "versionEndExcluding": "5.10.239"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "D96F2C0D-0D4A-4658-AD34-D8A626EA422D",
+                    "versionStartIncluding": "5.11",
+                    "versionEndExcluding": "5.15.186"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "459B4E94-FE0E-434D-B782-95E3A5FFC6B1",
+                    "versionStartIncluding": "5.16",
+                    "versionEndExcluding": "6.1.142"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "304E3F01-7D7A-4908-994E-7F95C5C00B06",
+                    "versionStartIncluding": "6.2",
+                    "versionEndExcluding": "6.6.94"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "4FFA54AA-CDFE-4591-BD07-72813D0948F4",
+                    "versionStartIncluding": "6.7",
+                    "versionEndExcluding": "6.12.34"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "0541C761-BD5E-4C1A-8432-83B375D7EB92",
+                    "versionStartIncluding": "6.13",
+                    "versionEndExcluding": "6.15.3"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:6.16:rc1:*:*:*:*:*:*",
+                    "matchCriteriaId": "6D4894DB-CCFE-4602-B1BF-3960B2E19A01"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:debian:debian_linux:11.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "FA6FEEC2-9F11-4643-8827-749718254FED"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://git.kernel.org/stable/c/2c72fe18cc5f9f1750f5bc148cf1c94c29e106ff",
+            "source": "416baaa9-dc9f-4396-8d5f-8c081fb06d67",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://git.kernel.org/stable/c/2f3daa04a9328220de46f0d5c919a6c0073a9f0b",
+            "source": "416baaa9-dc9f-4396-8d5f-8c081fb06d67",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://git.kernel.org/stable/c/460188bc042a3f40f72d34b9f7fc6ee66b0b757b",
+            "source": "416baaa9-dc9f-4396-8d5f-8c081fb06d67",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://git.kernel.org/stable/c/764a7a5dfda23f69919441f2eac2a83e7db6e5bb",
+            "source": "416baaa9-dc9f-4396-8d5f-8c081fb06d67",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://git.kernel.org/stable/c/78a4b8e3795b31dae58762bc091bb0f4f74a2200",
+            "source": "416baaa9-dc9f-4396-8d5f-8c081fb06d67",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://git.kernel.org/stable/c/c076635b3a42771ace7d276de8dc3bc76ee2ba1b",
+            "source": "416baaa9-dc9f-4396-8d5f-8c081fb06d67",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://git.kernel.org/stable/c/c29d5318708e67ac13c1b6fc1007d179fb65b4d7",
+            "source": "416baaa9-dc9f-4396-8d5f-8c081fb06d67",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://git.kernel.org/stable/c/f90fff1e152dedf52b932240ebbd670d83330eca",
+            "source": "416baaa9-dc9f-4396-8d5f-8c081fb06d67",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://lists.debian.org/debian-lts-announce/2025/10/msg00007.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Mailing List",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://lists.debian.org/debian-lts-announce/2025/10/msg00008.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Mailing List",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/farazsth98/chronomaly",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Exploit"
+            ]
+          },
+          {
+            "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2025-38352",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "US Government Resource"
+            ]
+          }
+        ]
+      },
+      "risk_score": 88,
+      "rank": 6
+    },
+    {
+      "cve_id": "CVE-2025-53690",
+      "signal_types": [
+        "KEV"
+      ],
+      "signals": {
+        "kev": {
+          "date_added": "2025-09-04"
+        },
+        "exploit": null,
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-09-03",
+        "description": "Deserialization of Untrusted Data vulnerability in Sitecore Experience Manager (XM), Sitecore Experience Platform (XP) allows Code Injection.This issue affects Experience Manager (XM): through 9.0; Experience Platform (XP): through 9.0.",
+        "title": "Sitecore Multiple Products Deserialization of Untrusted Data Vulnerability",
+        "vendor": "sitecore",
+        "product": "experience_commerce",
+        "attack_type": "Deserialization",
+        "cvss_max": 9.0
+      },
+      "cve": {
+        "id": "CVE-2025-53690",
+        "sourceIdentifier": "9947ef80-c5d5-474a-bbab-97341a59000e",
+        "published": "2025-09-03T20:15:33.473",
+        "lastModified": "2025-10-30T20:39:16.593",
+        "vulnStatus": "Analyzed",
+        "cisaExploitAdd": "2025-09-04",
+        "cisaActionDue": "2025-09-25",
+        "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+        "cisaVulnerabilityName": "Sitecore Multiple Products Deserialization of Untrusted Data Vulnerability",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Deserialization of Untrusted Data vulnerability in Sitecore Experience Manager (XM), Sitecore Experience Platform (XP) allows Code Injection.This issue affects Experience Manager (XM): through 9.0; Experience Platform (XP): through 9.0."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:H/A:H",
+                "baseScore": 9.0,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "9947ef80-c5d5-474a-bbab-97341a59000e",
+              "type": "Secondary",
+              "exploitabilityScore": 2.2,
+              "impactScore": 6.0
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-502"
+              }
+            ],
+            "source": "9947ef80-c5d5-474a-bbab-97341a59000e"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:sitecore:experience_commerce:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "40097CA2-94C2-4CBD-B94C-10B5A8F282FD",
+                    "versionEndIncluding": "9.0"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:sitecore:experience_manager:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "96C832B3-FB9D-443A-A501-65BFF0A47092",
+                    "versionEndIncluding": "9.0"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:sitecore:experience_platform:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "8F60EDF8-6CCE-4440-A4FB-337FBFC881DD",
+                    "versionEndIncluding": "9.0"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:sitecore:managed_cloud:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "520CF670-01A2-479F-B637-C413A82463E0"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://cloud.google.com/blog/topics/threat-intelligence/viewstate-deserialization-zero-day-vulnerability",
+            "source": "9947ef80-c5d5-474a-bbab-97341a59000e",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://support.sitecore.com/kb?id=kb_article_view&sysparm_article=KB1003865",
+            "source": "9947ef80-c5d5-474a-bbab-97341a59000e",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2025-53690",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "US Government Resource"
+            ]
+          }
+        ]
+      },
+      "risk_score": 88,
+      "rank": 7
+    },
+    {
+      "cve_id": "CVE-2025-55190",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-09-04",
+          "previous_max": null,
+          "current_max": 9.9
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-09-04",
+        "description": "Argo CD is a declarative, GitOps continuous delivery tool for Kubernetes. In versions 2.13.0 through 2.13.8, 2.14.0 through 2.14.15, 3.0.0 through 3.0.12 and 3.1.0-rc1 through 3.1.1, API tokens with project-level permissions are able to retrieve sensitive repository credentials (usernames, passwords) through the project details API endpoint, even when the token only has standard application management permissions and no explicit access to secrets. This vulnerability does not only affect project-level permissions. Any token with project get permissions is also vulnerable, including global permissions such as: `p, role/user, projects, get, *, allow`. This issue is fixed in versions 2.13.9, 2.14.16, 3.0.14 and 3.1.2.",
+        "title": "argoproj argo_cd",
+        "vendor": "argoproj",
+        "product": "argo_cd",
+        "cvss_max": 9.9
+      },
+      "cve": {
+        "id": "CVE-2025-55190",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2025-09-04T23:15:32.400",
+        "lastModified": "2025-09-19T15:20:53.823",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Argo CD is a declarative, GitOps continuous delivery tool for Kubernetes. In versions 2.13.0 through 2.13.8, 2.14.0 through 2.14.15, 3.0.0 through 3.0.12 and 3.1.0-rc1 through 3.1.1, API tokens with project-level permissions are able to retrieve sensitive repository credentials (usernames, passwords) through the project details API endpoint, even when the token only has standard application management permissions and no explicit access to secrets. This vulnerability does not only affect project-level permissions. Any token with project get permissions is also vulnerable, including global permissions such as: `p, role/user, projects, get, *, allow`. This issue is fixed in versions 2.13.9, 2.14.16, 3.0.14 and 3.1.2."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+                "baseScore": 9.9,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.1,
+              "impactScore": 6.0
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-200"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:argoproj:argo_cd:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "509DC36B-0F94-49A8-9FCC-759608EE674A",
+                    "versionStartIncluding": "2.2.0",
+                    "versionEndExcluding": "2.13.9"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:argoproj:argo_cd:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "94CAAB98-4756-4D4C-9D65-6AC761182AF2",
+                    "versionStartIncluding": "2.14.0",
+                    "versionEndExcluding": "2.14.16"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:argoproj:argo_cd:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "F787DAD3-5CDA-437F-9234-730303893260",
+                    "versionStartIncluding": "3.0.0",
+                    "versionEndExcluding": "3.0.14"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:argoproj:argo_cd:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "EF17F8A2-1829-49D6-BD12-D608DA1A6EB0",
+                    "versionStartIncluding": "3.1.0",
+                    "versionEndExcluding": "3.1.2"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/argoproj/argo-cd/commit/e8f86101f5378662ae6151ce5c3a76e9141900e8",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://github.com/argoproj/argo-cd/security/advisories/GHSA-786q-9hcg-v9ff",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Exploit",
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 8
+    },
+    {
+      "cve_id": "CVE-2025-55244",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-09-04",
+          "previous_max": null,
+          "current_max": 9.0
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-09-04",
+        "description": "Azure Bot Service Elevation of Privilege Vulnerability",
+        "title": "microsoft azure_ai_bot_service privilege escalation",
+        "vendor": "microsoft",
+        "product": "azure_ai_bot_service",
+        "attack_type": "privilege escalation",
+        "cvss_max": 9.0
+      },
+      "cve": {
+        "id": "CVE-2025-55244",
+        "sourceIdentifier": "secure@microsoft.com",
+        "published": "2025-09-04T23:15:33.333",
+        "lastModified": "2025-10-17T15:46:21.553",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Azure Bot Service Elevation of Privilege Vulnerability"
+          }
+        ],
+        "cveTags": [
+          {
+            "sourceIdentifier": "secure@microsoft.com",
+            "tags": [
+              "exclusively-hosted-service"
+            ]
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:H/A:H",
+                "baseScore": 9.0,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "secure@microsoft.com",
+              "type": "Secondary",
+              "exploitabilityScore": 2.2,
+              "impactScore": 6.0
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-284"
+              }
+            ],
+            "source": "secure@microsoft.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:microsoft:azure_ai_bot_service:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "5720F705-09CD-48BE-A6F7-EC9696104A24"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-55244",
+            "source": "secure@microsoft.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 9
+    },
+    {
+      "cve_id": "CVE-2025-58357",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-09-04",
+          "previous_max": null,
+          "current_max": 9.6
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-09-04",
+        "description": "5ire is a cross-platform desktop artificial intelligence assistant and model context protocol client. Version 0.13.2 contains a vulnerability in the chat page's script gadgets that enables content injection attacks through multiple vectors: malicious prompt injection pages, compromised MCP servers, and exploited tool integrations. This is fixed in version 0.14.0.",
+        "title": "5ire 5ire",
+        "vendor": "5ire",
+        "product": "5ire",
+        "cvss_max": 9.6
+      },
+      "cve": {
+        "id": "CVE-2025-58357",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2025-09-04T10:42:32.810",
+        "lastModified": "2026-01-22T20:09:16.937",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "5ire is a cross-platform desktop artificial intelligence assistant and model context protocol client. Version 0.13.2 contains a vulnerability in the chat page's script gadgets that enables content injection attacks through multiple vectors: malicious prompt injection pages, compromised MCP servers, and exploited tool integrations. This is fixed in version 0.14.0."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H",
+                "baseScore": 9.6,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 6.0
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-79"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:5ire:5ire:0.13.2:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "124E7E01-D368-463D-8795-F0C9B577B9B0"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/nanbingxyz/5ire/releases/tag/v0.14.0",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Release Notes"
+            ]
+          },
+          {
+            "url": "https://github.com/nanbingxyz/5ire/security/advisories/GHSA-8527-3cch-95gf",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Exploit",
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 10
+    },
+    {
+      "cve_id": "CVE-2025-58361",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-09-04",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-09-04",
+        "description": "Promptcraft Forge Studio is a toolkit for evaluating, optimizing, and maintaining  LLM-powered applications. All versions contain an non-exhaustive URL scheme check that does not protect against XSS. User-controlled URLs pass through src/utils/validation.ts, but the check only strips `javascript:` and a few patterns. `data:` URLs (for example data:image/svg+xml,…) still pass. If a sanitized value is used in href/src, an attacker can execute a script. There is currently no fix for this issue.",
+        "title": "Promptcraft Forge Studio is a toolkit for evaluating, optimizing, and maintaining LLM-powered applications.",
+        "attack_type": "cross-site scripting",
+        "cvss_max": 9.3
+      },
+      "cve": {
+        "id": "CVE-2025-58361",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2025-09-04T20:15:39.617",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Promptcraft Forge Studio is a toolkit for evaluating, optimizing, and maintaining  LLM-powered applications. All versions contain an non-exhaustive URL scheme check that does not protect against XSS. User-controlled URLs pass through src/utils/validation.ts, but the check only strips `javascript:` and a few patterns. `data:` URLs (for example data:image/svg+xml,…) still pass. If a sanitized value is used in href/src, an attacker can execute a script. There is currently no fix for this issue."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:N",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 5.8
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-20"
+              },
+              {
+                "lang": "en",
+                "value": "CWE-79"
+              },
+              {
+                "lang": "en",
+                "value": "CWE-184"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/MarceloTessaro/promptcraft-forge-studio/security/advisories/GHSA-fjch-4g87-g4p4",
+            "source": "security-advisories@github.com"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 11
+    },
+    {
+      "cve_id": "CVE-2025-7385",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-09-04",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-09-04",
+        "description": "Input from search query parameter in GOV CMS is not sanitized properly, leading to a Blind SQL injection vulnerability, which might be exploited by an unauthenticated remote attacker. \n\nVersions 4.0 and above are not affected.",
+        "title": "Input from search query parameter in GOV CMS is not sanitized properly, leading to a Blind SQL injection vulnerability, which might be ex...",
+        "attack_type": "SQL Injection",
+        "cvss_max": 9.3
+      },
+      "cve": {
+        "id": "CVE-2025-7385",
+        "sourceIdentifier": "cvd@cert.pl",
+        "published": "2025-09-04T13:15:45.357",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Input from search query parameter in GOV CMS is not sanitized properly, leading to a Blind SQL injection vulnerability, which might be exploited by an unauthenticated remote attacker. \n\nVersions 4.0 and above are not affected."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "cvd@cert.pl",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-89"
+              }
+            ],
+            "source": "cvd@cert.pl"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://cert.pl/posts/2025/09/CVE-2025-7385",
+            "source": "cvd@cert.pl"
+          },
+          {
+            "url": "https://sam3.pl/strona-305-za_co_nas_cenia_redaktorzy.html",
+            "source": "cvd@cert.pl"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 12
+    },
+    {
+      "cve_id": "CVE-2025-8311",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-09-04",
+          "previous_max": null,
+          "current_max": 9.4
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-09-04",
+        "description": "dotCMS versions 24.03.22 and after, identified a Boolean-based blind SQLi vulnerability in the /api/v1/contenttype endpoint. This endpoint uses the sites query parameter, which accepts a comma-separated list of site identifiers or keys.\n\nThe vulnerability was triggered via the sites parameter, which was directly concatenated into a SQL query without proper sanitization. \n\nExploitation allowed an authenticated attacker with low privileges to extract data from database, perform privilege escalation, or trigger denial-of-service conditions. \n\nThe vulnerability was verified using tools such as SQLMap and confirmed to allow full database exfiltration and potential denial-of-service conditions via crafted payloads.\n\nThe vulnerability is fixed in the following versions of dotCMS stack: 25.08.14 / 25.07.10-1v2 LTS / 24.12.27v10 LTS / 24.04.24v21 LTS",
+        "title": "dotCMS versions 24.03.22 and after, identified a Boolean-based blind SQLi vulnerability in the /api/v1/contenttype endpoint.",
+        "attack_type": "SQL injection",
+        "cvss_max": 9.4
+      },
+      "cve": {
+        "id": "CVE-2025-8311",
+        "sourceIdentifier": "security@dotcms.com",
+        "published": "2025-09-04T15:15:48.980",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "dotCMS versions 24.03.22 and after, identified a Boolean-based blind SQLi vulnerability in the /api/v1/contenttype endpoint. This endpoint uses the sites query parameter, which accepts a comma-separated list of site identifiers or keys.\n\nThe vulnerability was triggered via the sites parameter, which was directly concatenated into a SQL query without proper sanitization. \n\nExploitation allowed an authenticated attacker with low privileges to extract data from database, perform privilege escalation, or trigger denial-of-service conditions. \n\nThe vulnerability was verified using tools such as SQLMap and confirmed to allow full database exfiltration and potential denial-of-service conditions via crafted payloads.\n\nThe vulnerability is fixed in the following versions of dotCMS stack: 25.08.14 / 25.07.10-1v2 LTS / 24.12.27v10 LTS / 24.04.24v21 LTS"
+          }
+        ],
+        "metrics": {
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.4,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security@dotcms.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-89"
+              }
+            ],
+            "source": "security@dotcms.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://dev.dotcms.com/docs/known-security-issues?issueNumber=SI-73",
+            "source": "security@dotcms.com"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 13
+    }
+  ],
+  "source": "https://www.cvelogic.com/threat-intelligence/2025-09-04"
+}

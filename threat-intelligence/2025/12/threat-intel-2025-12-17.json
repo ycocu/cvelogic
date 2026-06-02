@@ -1,0 +1,2092 @@
+{
+  "schema_version": "2.2",
+  "generated_at": "2026-06-02T07:33:59Z",
+  "day": "2025-12-17",
+  "window": {
+    "utc_start": "2025-12-17",
+    "utc_end": "2025-12-17",
+    "days": 1
+  },
+  "summary": {
+    "brief": "SonicWall SMA1000 Appliance added to CISA KEV — confirmed in-the-wild exploitation. · Goodtechsystems Goodtech Ssh — exploitation likelihood rose sharply (EPSS 16% → 50% · rising (+33%)). · 10 new critical disclosures — review patch status on exposed services.",
+    "bullets": [
+      "SonicWall SMA1000 Appliance added to CISA KEV — confirmed in-the-wild exploitation.",
+      "Goodtechsystems Goodtech Ssh — exploitation likelihood rose sharply (EPSS 16% → 50% · rising (+33%)).",
+      "10 new critical disclosures — review patch status on exposed services."
+    ],
+    "counts": {
+      "cves": 15,
+      "kev": 3,
+      "exploit": 0,
+      "epss": 2,
+      "cvss": 10,
+      "patch": 0
+    }
+  },
+  "cves": [
+    {
+      "cve_id": "CVE-2025-20393",
+      "signal_types": [
+        "KEV"
+      ],
+      "signals": {
+        "kev": {
+          "date_added": "2025-12-17"
+        },
+        "exploit": null,
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-12-17",
+        "description": "A vulnerability in the Spam Quarantine feature of Cisco AsyncOS Software for Cisco Secure Email Gateway and Cisco Secure Email and Web Manager could allow an unauthenticated, remote attacker to execute arbitrary system commands on an affected device with root privileges.\r\n\r\nThis vulnerability is due to insufficient validation of HTTP requests by the Spam Quarantine feature. An attacker could exploit this vulnerability by sending a crafted HTTP request to the affected device. A successful exploit could allow the attacker to execute arbitrary commands on the underlying operating system with&nbsp;root privileges.",
+        "title": "Cisco Multiple Products Improper Input Validation Vulnerability",
+        "vendor": "cisco",
+        "product": "asyncos",
+        "attack_type": "privilege escalation",
+        "cvss_max": 10.0
+      },
+      "cve": {
+        "id": "CVE-2025-20393",
+        "sourceIdentifier": "psirt@cisco.com",
+        "published": "2025-12-17T17:15:48.523",
+        "lastModified": "2026-01-16T14:00:12.647",
+        "vulnStatus": "Analyzed",
+        "cisaExploitAdd": "2025-12-17",
+        "cisaActionDue": "2025-12-24",
+        "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+        "cisaVulnerabilityName": "Cisco Multiple Products Improper Input Validation Vulnerability",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A vulnerability in the Spam Quarantine feature of Cisco AsyncOS Software for Cisco Secure Email Gateway and Cisco Secure Email and Web Manager could allow an unauthenticated, remote attacker to execute arbitrary system commands on an affected device with root privileges.\r\n\r\nThis vulnerability is due to insufficient validation of HTTP requests by the Spam Quarantine feature. An attacker could exploit this vulnerability by sending a crafted HTTP request to the affected device. A successful exploit could allow the attacker to execute arbitrary commands on the underlying operating system with&nbsp;root privileges."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+                "baseScore": 10.0,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "psirt@cisco.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 6.0
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-20"
+              }
+            ],
+            "source": "psirt@cisco.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:cisco:asyncos:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "F7005EE5-0976-4E88-933F-C451D196C057",
+                    "versionEndExcluding": "15.0.5-016"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:cisco:asyncos:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "81772A3F-141D-4C3D-8094-1BD359D07C4A",
+                    "versionStartIncluding": "15.5",
+                    "versionEndExcluding": "15.5.4-012"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:cisco:asyncos:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "32FF4E02-3750-4654-BD48-126133B33E6A",
+                    "versionStartIncluding": "16.0",
+                    "versionEndExcluding": "16.0.4-016"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:secure_email_gateway_virtual_appliance_c100v:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "5B6FBC8A-8187-4903-B786-6CF341C142B5"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:secure_email_gateway_virtual_appliance_c300v:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "68864429-9730-43E9-96C3-20B9035BB291"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:secure_email_gateway_virtual_appliance_c600v:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "B52D8B2B-E9AE-4B02-87BD-9CF9FA95906A"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:cisco:secure_email_gateway_c195:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "7B1322B8-1CF9-4B17-9A58-38788051ED4F"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:cisco:secure_email_gateway_c395:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "139A640B-1957-4953-AA88-9D373A5152D1"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:cisco:secure_email_gateway_c695:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "F08EA2AD-618B-4834-A52D-73F6A4502DF1"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:cisco:asyncos:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "6893AE30-31DE-42CB-A463-E3DE22977107",
+                    "versionEndExcluding": "15.0.2-007"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:cisco:asyncos:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "12017942-B997-4FB1-B7FF-504EA72AC705",
+                    "versionStartIncluding": "15.5",
+                    "versionEndExcluding": "15.5.4-007"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:cisco:asyncos:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "F29F71EF-ED63-4DB2-A8BA-EB1E1A3BFF09",
+                    "versionStartIncluding": "16.0",
+                    "versionEndExcluding": "16.0.4-010"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:secure_email_and_web_manager_virtual_appliance_m100v:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "0C9613A5-B198-4AD2-BC74-F21ABAF79174"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:secure_email_and_web_manager_virtual_appliance_m300v:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "57831FD6-1CF3-4ABE-81BA-2576418F9083"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:secure_email_and_web_manager_virtual_appliance_m600v:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "67E804AE-4743-44AD-A364-504B0AB0D9BF"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:cisco:secure_email_and_web_manager_m170:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "3057023B-AD68-4953-A780-75EA416A7B94"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:cisco:secure_email_and_web_manager_m190:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "B87164B6-4717-4968-86F7-C62EB677FC50"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:cisco:secure_email_and_web_manager_m195:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "10BD81D0-D81A-4361-B4E8-D674732A2A33"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:cisco:secure_email_and_web_manager_m380:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "D28903F8-3C4D-4337-9721-CEC108A7E2D5"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:cisco:secure_email_and_web_manager_m390:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "84ACD394-2E45-4E8E-A342-AC57935C7038"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:cisco:secure_email_and_web_manager_m390x:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "6112D56B-B68B-40B0-8EB9-3315533110C7"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:cisco:secure_email_and_web_manager_m395:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "8A1198BC-C934-4C26-887D-D599E8128FD3"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:cisco:secure_email_and_web_manager_m680:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "10374BA0-E7DD-4930-8C58-251F98B75A11"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:cisco:secure_email_and_web_manager_m690:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "CD265B49-C691-44B3-A505-DC704E80313C"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:cisco:secure_email_and_web_manager_m690x:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "E37CFC3A-1752-4C66-BD32-CFFA46C3E6AD"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:cisco:secure_email_and_web_manager_m695:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "830693AC-A737-43B9-BBB4-E3A1C950C47F"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-sma-attack-N9bf4",
+            "source": "psirt@cisco.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2025-20393",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "US Government Resource"
+            ]
+          }
+        ]
+      },
+      "risk_score": 88,
+      "rank": 1
+    },
+    {
+      "cve_id": "CVE-2008-4726",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 0.16365,
+            "score_date": "2025-10-23"
+          },
+          "current": {
+            "score": 0.49546,
+            "score_date": "2025-12-17"
+          },
+          "delta": 0.33181
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2008-10-24",
+        "description": "Stack-based buffer overflow in the SFTP subsystem in GoodTech SSH 6.4 allows remote authenticated users to execute arbitrary code via a long string to the (1) open (aka SSH_FXP_OPEN), (2) unlink, (3) opendir, and other unspecified parameters.",
+        "title": "goodtechsystems goodtech_ssh Buffer Overflow",
+        "vendor": "goodtechsystems",
+        "product": "goodtech_ssh",
+        "attack_type": "Buffer Overflow",
+        "cvss_max": 9.0
+      },
+      "cve": {
+        "id": "CVE-2008-4726",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2008-10-24T00:00:00.883",
+        "lastModified": "2026-04-23T00:35:47.467",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Stack-based buffer overflow in the SFTP subsystem in GoodTech SSH 6.4 allows remote authenticated users to execute arbitrary code via a long string to the (1) open (aka SSH_FXP_OPEN), (2) unlink, (3) opendir, and other unspecified parameters."
+          },
+          {
+            "lang": "es",
+            "value": "Desbordamiento de búfer basado en pila en el subsistema SFTP de GoodTech SSH v6.4 permite a usuarios remotamente autentificados ejecutar código de su elección mediante una cadena larga a los parámetros (1) open (también conocido como SSH_FXP_OPEN), (2) unlink, (3) opendir y otros no especificados."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV2": [
+            {
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:L/Au:S/C:C/I:C/A:C",
+                "baseScore": 9.0,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "baseSeverity": "HIGH",
+              "exploitabilityScore": 8.0,
+              "impactScore": 10.0
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-119"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:goodtechsystems:goodtech_ssh:6.4:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "B889DC63-2911-4341-BAA1-2A5AD9436086"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "http://secunia.com/advisories/32375",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "http://securityreason.com/securityalert/4498",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://www.securityfocus.com/archive/1/497745/100/0/threaded",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://www.securityfocus.com/bid/31879",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit"
+            ]
+          },
+          {
+            "url": "http://www.vupen.com/english/advisories/2008/2895",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "https://exchange.xforce.ibmcloud.com/vulnerabilities/46038",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "https://www.exploit-db.com/exploits/6804",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          }
+        ]
+      },
+      "risk_score": 84,
+      "rank": 2
+    },
+    {
+      "cve_id": "CVE-2025-68110",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-12-17",
+          "previous_max": null,
+          "current_max": 9.9
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-12-17",
+        "description": "ChurchCRM is an open-source church management system. Versions prior to 6.5.3 may disclose database information in an error message including the host, ip, username, and password. Version 6.5.3 fixes the issue.",
+        "title": "churchcrm churchcrm",
+        "vendor": "churchcrm",
+        "product": "churchcrm",
+        "cvss_max": 9.9
+      },
+      "cve": {
+        "id": "CVE-2025-68110",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2025-12-17T22:16:00.913",
+        "lastModified": "2025-12-18T18:29:30.070",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "ChurchCRM is an open-source church management system. Versions prior to 6.5.3 may disclose database information in an error message including the host, ip, username, and password. Version 6.5.3 fixes the issue."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+                "baseScore": 9.9,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.1,
+              "impactScore": 6.0
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 8.8,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-200"
+              },
+              {
+                "lang": "en",
+                "value": "CWE-209"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          },
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-209"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:churchcrm:churchcrm:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "5B1435CA-1370-4154-85E0-6AF1846DEEBD",
+                    "versionEndExcluding": "6.5.3"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/ChurchCRM/CRM/security/advisories/GHSA-82mq-xc2j-3qv2",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Exploit",
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 3
+    },
+    {
+      "cve_id": "CVE-2008-4588",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 0.0906,
+            "score_date": "2025-12-05"
+          },
+          "current": {
+            "score": 0.2849,
+            "score_date": "2025-12-17"
+          },
+          "delta": 0.1943
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2008-10-15",
+        "description": "Stack-based buffer overflow in the FTP server in Etype Eserv 3.x, possibly 3.26, allows remote attackers to cause a denial of service (daemon crash) and possibly execute arbitrary code via a long argument to the ABOR command.",
+        "title": "etype eserv Buffer Overflow",
+        "vendor": "etype",
+        "product": "eserv",
+        "attack_type": "Buffer Overflow",
+        "cvss_max": 10.0
+      },
+      "cve": {
+        "id": "CVE-2008-4588",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2008-10-15T22:45:31.320",
+        "lastModified": "2026-04-23T00:35:47.467",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Stack-based buffer overflow in the FTP server in Etype Eserv 3.x, possibly 3.26, allows remote attackers to cause a denial of service (daemon crash) and possibly execute arbitrary code via a long argument to the ABOR command."
+          },
+          {
+            "lang": "es",
+            "value": "Desbordamiento de búfer basado en pila en el servidor FTP de Etype Eserv 3.x, posiblemente 3.26, permite a atacantes remotos provocar una denegación de servicio (caída del demonio) y posiblemente ejecutar código de su elección mediante un argumento largo al comando ABOR."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV2": [
+            {
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+                "baseScore": 10.0,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "baseSeverity": "HIGH",
+              "exploitabilityScore": 10.0,
+              "impactScore": 10.0
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-119"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:etype:eserv:3.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "8071783F-930B-41C1-9284-290314BDB568"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:etype:eserv:3.25:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "4A76EA1C-D6C0-4AA3-91FD-2FF4301304B4"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:etype:eserv:3.26:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "21A93346-0592-448E-9E46-E8C7CEF5F46A"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "http://securityreason.com/securityalert/4415",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://www.securityfocus.com/bid/31753",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit"
+            ]
+          },
+          {
+            "url": "http://www.zeroscience.org/codes/eserv_bof.txt",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit"
+            ]
+          },
+          {
+            "url": "https://exchange.xforce.ibmcloud.com/vulnerabilities/45864",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "https://www.exploit-db.com/exploits/6752",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          }
+        ]
+      },
+      "risk_score": 86,
+      "rank": 4
+    },
+    {
+      "cve_id": "CVE-2023-53914",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-12-17",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-12-17",
+        "description": "UliCMS 2023.1 contains an authentication bypass vulnerability that allows unauthenticated attackers to create admin users through mass assignment in the UserController. Attackers can send a crafted POST request to the admin index.php endpoint with specific parameters to generate an administrative account with full system access.",
+        "title": "ulicms ulicms Auth Bypass",
+        "vendor": "ulicms",
+        "product": "ulicms",
+        "attack_type": "Auth Bypass",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2023-53914",
+        "sourceIdentifier": "disclosure@vulncheck.com",
+        "published": "2025-12-17T23:15:49.983",
+        "lastModified": "2025-12-24T17:04:53.853",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "UliCMS 2023.1 contains an authentication bypass vulnerability that allows unauthenticated attackers to create admin users through mass assignment in the UserController. Attackers can send a crafted POST request to the admin index.php endpoint with specific parameters to generate an administrative account with full system access."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-639"
+              }
+            ],
+            "source": "disclosure@vulncheck.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:ulicms:ulicms:2023.1:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "CF295D7E-7EE5-4EB2-89EB-4430EDAEA71E"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://web.archive.org/web/20230314183734/https://en.ulicms.de/",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Product"
+            ]
+          },
+          {
+            "url": "https://www.exploit-db.com/exploits/51486",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Exploit"
+            ]
+          },
+          {
+            "url": "https://www.vulncheck.com/advisories/ulicms-authentication-bypass-via-mass-assignment-vulnerability",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 5
+    },
+    {
+      "cve_id": "CVE-2023-53922",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-12-17",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-12-17",
+        "description": "TinyWebGallery v2.5 contains a remote code execution vulnerability in the admin upload functionality that allows unauthenticated attackers to upload malicious PHP files. Attackers can upload .phar files with embedded system commands to execute arbitrary code on the server by accessing the uploaded file's URL.",
+        "title": "tinywebgallery tinywebgallery RCE",
+        "vendor": "tinywebgallery",
+        "product": "tinywebgallery",
+        "attack_type": "RCE",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2023-53922",
+        "sourceIdentifier": "disclosure@vulncheck.com",
+        "published": "2025-12-17T23:15:51.270",
+        "lastModified": "2025-12-24T16:50:20.607",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "TinyWebGallery v2.5 contains a remote code execution vulnerability in the admin upload functionality that allows unauthenticated attackers to upload malicious PHP files. Attackers can upload .phar files with embedded system commands to execute arbitrary code on the server by accessing the uploaded file's URL."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-434"
+              }
+            ],
+            "source": "disclosure@vulncheck.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:tinywebgallery:tinywebgallery:2.5:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "B3FAA560-76CA-4FEB-A469-5D9FBC5A82F4"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "http://www.tinywebgallery.com/",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Product"
+            ]
+          },
+          {
+            "url": "https://www.exploit-db.com/exploits/51443",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory",
+              "VDB Entry"
+            ]
+          },
+          {
+            "url": "https://www.vulncheck.com/advisories/tinywebgallery-remote-code-execution-via-unrestricted-file-upload",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Third Party Advisory",
+              "Exploit"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 6
+    },
+    {
+      "cve_id": "CVE-2023-53923",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-12-17",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-12-17",
+        "description": "UliCMS 2023.1 contains a privilege escalation vulnerability that allows unauthenticated attackers to create administrative accounts through the UserController endpoint. Attackers can send a crafted POST request to /dist/admin/index.php with specific parameters to generate a new admin user with full system access.",
+        "title": "ulicms ulicms Privilege Escalation",
+        "vendor": "ulicms",
+        "product": "ulicms",
+        "attack_type": "Privilege Escalation",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2023-53923",
+        "sourceIdentifier": "disclosure@vulncheck.com",
+        "published": "2025-12-17T23:15:51.430",
+        "lastModified": "2025-12-18T19:16:19.793",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "UliCMS 2023.1 contains a privilege escalation vulnerability that allows unauthenticated attackers to create administrative accounts through the UserController endpoint. Attackers can send a crafted POST request to /dist/admin/index.php with specific parameters to generate a new admin user with full system access."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-862"
+              }
+            ],
+            "source": "disclosure@vulncheck.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:ulicms:ulicms:2023.1:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "CF295D7E-7EE5-4EB2-89EB-4430EDAEA71E"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://web.archive.org/web/20230314183734/https://en.ulicms.de/",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Product"
+            ]
+          },
+          {
+            "url": "https://www.exploit-db.com/exploits/51433",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Exploit"
+            ]
+          },
+          {
+            "url": "https://www.vulncheck.com/advisories/ulicms-privilege-escalation-via-unauthenticated-admin-account-creation",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 7
+    },
+    {
+      "cve_id": "CVE-2025-40602",
+      "signal_types": [
+        "KEV"
+      ],
+      "signals": {
+        "kev": {
+          "date_added": "2025-12-17"
+        },
+        "exploit": null,
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-12-18",
+        "description": "A local privilege escalation vulnerability due to insufficient authorization in the SonicWall SMA1000 appliance management console (AMC).",
+        "title": "SonicWall SMA1000 Missing Authorization Vulnerability",
+        "vendor": "sonicwall",
+        "product": "sma6200_firmware",
+        "attack_type": "Privilege Escalation",
+        "cvss_max": 6.6
+      },
+      "cve": {
+        "id": "CVE-2025-40602",
+        "sourceIdentifier": "PSIRT@sonicwall.com",
+        "published": "2025-12-18T11:15:46.760",
+        "lastModified": "2025-12-19T13:57:43.150",
+        "vulnStatus": "Analyzed",
+        "cisaExploitAdd": "2025-12-17",
+        "cisaActionDue": "2025-12-24",
+        "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable",
+        "cisaVulnerabilityName": "SonicWall SMA1000 Missing Authorization Vulnerability",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A local privilege escalation vulnerability due to insufficient authorization in the SonicWall SMA1000 appliance management console (AMC)."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 6.6,
+                "baseSeverity": "MEDIUM"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 0.7,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-250"
+              },
+              {
+                "lang": "en",
+                "value": "CWE-862"
+              }
+            ],
+            "source": "PSIRT@sonicwall.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:sonicwall:sma6200_firmware:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "FA502098-85D4-4263-A972-5C257A27E566",
+                    "versionEndExcluding": "12.4.3-03245"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:sonicwall:sma6200_firmware:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "A8117AD1-538B-4D74-B7BD-CDDFDF1CA5D6",
+                    "versionStartIncluding": "12.5.0",
+                    "versionEndExcluding": "12.5.0-02283"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:sonicwall:sma6200:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "57B3C90F-F633-41B9-855E-902F6DC8ACA5"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:sonicwall:sma6210_firmware:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "11F3325C-B52F-4569-A900-87A3062BA955",
+                    "versionEndExcluding": "12.4.3-03245"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:sonicwall:sma6210_firmware:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "83F28647-1EB1-4BD4-806E-ECFA82C7F81F",
+                    "versionStartIncluding": "12.5.0",
+                    "versionEndExcluding": "12.5.0-02283"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:sonicwall:sma6210:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "7B24D300-1154-49A1-A1F3-FB0CC717166A"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:sonicwall:sma7200_firmware:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "634F6A69-541B-4C08-80CC-D75BCA1AFA0C",
+                    "versionEndExcluding": "12.4.3-03245"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:sonicwall:sma7200_firmware:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "557266E9-9045-4686-B260-ADCCE884E47B",
+                    "versionStartIncluding": "12.5.0",
+                    "versionEndExcluding": "12.5.0-02283"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:sonicwall:sma7200:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "4F7B4ED9-7A57-48DC-AAEC-A2C2EAFF3B64"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:sonicwall:sma7210_firmware:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "A4BD7021-91E8-4E68-AC7B-6C971E6C6F77",
+                    "versionEndExcluding": "12.4.3-03245"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:sonicwall:sma7210_firmware:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "3FBEAD8B-7C9F-445C-BDC4-E2D19291D155",
+                    "versionStartIncluding": "12.5.0",
+                    "versionEndExcluding": "12.5.0-02283"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:sonicwall:sma7210:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "E9B414C5-C376-4216-A267-ABC0930905CE"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:sonicwall:sma8200v:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "A68FFD03-F144-4F74-A7FC-700AC5CA789D",
+                    "versionEndExcluding": "12.4.3-03245"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:sonicwall:sma8200v:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "42CE52E0-1CD5-4CA2-85CB-D5BDB2FE63D8",
+                    "versionStartIncluding": "12.5.0",
+                    "versionEndExcluding": "12.5.0-02283"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://psirt.global.sonicwall.com/vuln-detail/SNWLID-2025-0019",
+            "source": "PSIRT@sonicwall.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2025-40602",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "US Government Resource"
+            ]
+          }
+        ]
+      },
+      "risk_score": 88,
+      "rank": 8
+    },
+    {
+      "cve_id": "CVE-2025-59374",
+      "signal_types": [
+        "KEV"
+      ],
+      "signals": {
+        "kev": {
+          "date_added": "2025-12-17"
+        },
+        "exploit": null,
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-12-17",
+        "description": "\"UNSUPPORTED WHEN ASSIGNED\" Certain versions of the ASUS Live Update client were distributed with unauthorized modifications introduced through a supply chain compromise. The modified builds could cause devices meeting specific targeting conditions to perform unintended actions. Only devices that met these conditions and installed the compromised versions were affected. The Live Update client has already reached End-of-Support (EOS) in October 2021, and no currently supported devices or products are affected by this issue.",
+        "title": "ASUS Live Update Embedded Malicious Code Vulnerability",
+        "vendor": "asus",
+        "product": "live_update",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-59374",
+        "sourceIdentifier": "54bf65a7-a193-42d2-b1ba-8e150d3c35e1",
+        "published": "2025-12-17T05:16:13.080",
+        "lastModified": "2025-12-18T15:42:03.790",
+        "vulnStatus": "Analyzed",
+        "cisaExploitAdd": "2025-12-17",
+        "cisaActionDue": "2026-01-07",
+        "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+        "cisaVulnerabilityName": "ASUS Live Update Embedded Malicious Code Vulnerability",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "\"UNSUPPORTED WHEN ASSIGNED\" Certain versions of the ASUS Live Update client were distributed with unauthorized modifications introduced through a supply chain compromise. The modified builds could cause devices meeting specific targeting conditions to perform unintended actions. Only devices that met these conditions and installed the compromised versions were affected. The Live Update client has already reached End-of-Support (EOS) in October 2021, and no currently supported devices or products are affected by this issue."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "54bf65a7-a193-42d2-b1ba-8e150d3c35e1",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-506"
+              }
+            ],
+            "source": "54bf65a7-a193-42d2-b1ba-8e150d3c35e1"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:asus:live_update:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "649A2172-4D6A-491F-A8CF-1CD0D253B879",
+                    "versionEndExcluding": "3.6.8"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://www.asus.com/news/hqfgvuyz6uyayje1/",
+            "source": "54bf65a7-a193-42d2-b1ba-8e150d3c35e1",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2025-59374",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "US Government Resource"
+            ]
+          }
+        ]
+      },
+      "risk_score": 88,
+      "rank": 9
+    },
+    {
+      "cve_id": "CVE-2025-67876",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-12-17",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-12-17",
+        "description": "ChurchCRM is an open-source church management system. A stored cross-site scripting (XSS) vulnerability exists in ChurchCRM versions 6.4.0 and prior that allows a low-privilege user with the “Manage Groups” permission to inject persistent JavaScript into group role names. The payload is saved in the database and executed whenever any user (including administrators) views a page that displays that role, such as GroupView.php or PersonView.php. This allows full session hijacking and account takeover. As of time of publication, no known patched versions are available.",
+        "title": "churchcrm churchcrm XSS",
+        "vendor": "churchcrm",
+        "product": "churchcrm",
+        "attack_type": "XSS",
+        "cvss_max": 9.3
+      },
+      "cve": {
+        "id": "CVE-2025-67876",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2025-12-17T22:16:00.453",
+        "lastModified": "2025-12-18T18:30:45.957",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "ChurchCRM is an open-source church management system. A stored cross-site scripting (XSS) vulnerability exists in ChurchCRM versions 6.4.0 and prior that allows a low-privilege user with the “Manage Groups” permission to inject persistent JavaScript into group role names. The payload is saved in the database and executed whenever any user (including administrators) views a page that displays that role, such as GroupView.php or PersonView.php. This allows full session hijacking and account takeover. As of time of publication, no known patched versions are available."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N",
+                "baseScore": 5.4,
+                "baseSeverity": "MEDIUM"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 2.3,
+              "impactScore": 2.7
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:P/VC:H/VI:H/VA:L/SC:H/SI:H/SA:L/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-79"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:churchcrm:churchcrm:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "5D73B218-28EE-4D3A-AAB7-1211D66CB4F7",
+                    "versionEndIncluding": "6.4.0"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/ChurchCRM/CRM/security/advisories/GHSA-j9gv-26c7-3qrh",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Exploit",
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 10
+    },
+    {
+      "cve_id": "CVE-2025-68109",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-12-17",
+          "previous_max": null,
+          "current_max": 9.1
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-12-17",
+        "description": "ChurchCRM is an open-source church management system. In versions prior to 6.5.3, the Database Restore functionality does not validate the content or file extension of uploaded files. As a result, an attacker can upload a web shell file and subsequently upload a .htaccess file to enable direct access to it. Once accessed, the uploaded web shell allows remote code execution (RCE) on the server. Version 6.5.3 fixes the issue.",
+        "title": "churchcrm churchcrm RCE",
+        "vendor": "churchcrm",
+        "product": "churchcrm",
+        "attack_type": "RCE",
+        "cvss_max": 9.1
+      },
+      "cve": {
+        "id": "CVE-2025-68109",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2025-12-17T22:16:00.750",
+        "lastModified": "2025-12-18T18:30:07.923",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "ChurchCRM is an open-source church management system. In versions prior to 6.5.3, the Database Restore functionality does not validate the content or file extension of uploaded files. As a result, an attacker can upload a web shell file and subsequently upload a .htaccess file to enable direct access to it. Once accessed, the uploaded web shell allows remote code execution (RCE) on the server. Version 6.5.3 fixes the issue."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
+                "baseScore": 9.1,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary",
+              "exploitabilityScore": 2.3,
+              "impactScore": 6.0
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 7.2,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 1.2,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-78"
+              },
+              {
+                "lang": "en",
+                "value": "CWE-434"
+              },
+              {
+                "lang": "en",
+                "value": "CWE-494"
+              },
+              {
+                "lang": "en",
+                "value": "CWE-552"
+              },
+              {
+                "lang": "en",
+                "value": "CWE-915"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:churchcrm:churchcrm:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "5B1435CA-1370-4154-85E0-6AF1846DEEBD",
+                    "versionEndExcluding": "6.5.3"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/ChurchCRM/CRM/security/advisories/GHSA-pqm7-g8px-9r77",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Exploit",
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 11
+    },
+    {
+      "cve_id": "CVE-2025-68112",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-12-17",
+          "previous_max": null,
+          "current_max": 9.6
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-12-17",
+        "description": "ChurchCRM is an open-source church management system. In versions prior to 6.5.3, a SQL injection vulnerability in ChurchCRM's Event Attendee Editor allows authenticated users to execute arbitrary SQL commands, leading to complete database compromise, administrative credential theft, and potential system takeover. The vulnerability enables attackers to extract sensitive member data, authentication credentials, and financial information from the church management system. Version 6.5.3 contains a patch for the issue.",
+        "title": "churchcrm churchcrm SQL Injection",
+        "vendor": "churchcrm",
+        "product": "churchcrm",
+        "attack_type": "SQL Injection",
+        "cvss_max": 9.6
+      },
+      "cve": {
+        "id": "CVE-2025-68112",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2025-12-17T22:16:01.240",
+        "lastModified": "2025-12-18T18:28:00.853",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "ChurchCRM is an open-source church management system. In versions prior to 6.5.3, a SQL injection vulnerability in ChurchCRM's Event Attendee Editor allows authenticated users to execute arbitrary SQL commands, leading to complete database compromise, administrative credential theft, and potential system takeover. The vulnerability enables attackers to extract sensitive member data, authentication credentials, and financial information from the church management system. Version 6.5.3 contains a patch for the issue."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:N",
+                "baseScore": 9.6,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.1,
+              "impactScore": 5.8
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 8.8,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-89"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:churchcrm:churchcrm:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "5B1435CA-1370-4154-85E0-6AF1846DEEBD",
+                    "versionEndExcluding": "6.5.3"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/ChurchCRM/CRM/security/advisories/GHSA-hxf4-3vhp-wqcq",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Exploit",
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 12
+    },
+    {
+      "cve_id": "CVE-2025-68275",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-12-17",
+          "previous_max": null,
+          "current_max": 9.2
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-12-17",
+        "description": "ChurchCRM is an open-source church management system. Versions prior to 6.5.3 have a stored cross-site scripting vulnerability on the pages `View Active People`, `View Inactive people`, and `View All People`. Version 6.5.3 fixes the issue.",
+        "title": "churchcrm churchcrm XSS",
+        "vendor": "churchcrm",
+        "product": "churchcrm",
+        "attack_type": "XSS",
+        "cvss_max": 9.2
+      },
+      "cve": {
+        "id": "CVE-2025-68275",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2025-12-17T22:16:01.923",
+        "lastModified": "2025-12-18T18:27:40.170",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "ChurchCRM is an open-source church management system. Versions prior to 6.5.3 have a stored cross-site scripting vulnerability on the pages `View Active People`, `View Inactive people`, and `View All People`. Version 6.5.3 fixes the issue."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:C/C:L/I:L/A:N",
+                "baseScore": 4.8,
+                "baseSeverity": "MEDIUM"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 1.7,
+              "impactScore": 2.7
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:A/VC:H/VI:H/VA:N/SC:H/SI:H/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.2,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-79"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:churchcrm:churchcrm:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "5B1435CA-1370-4154-85E0-6AF1846DEEBD",
+                    "versionEndExcluding": "6.5.3"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/ChurchCRM/CRM/security/advisories/GHSA-3q97-q4hv-gxwr",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Exploit",
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 13
+    },
+    {
+      "cve_id": "CVE-2025-68400",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-12-17",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-12-17",
+        "description": "ChurchCRM is an open-source church management system. A SQL Injection vulnerability exists in the legacy endpoint `/Reports/ConfirmReportEmail.php` in ChurchCRM prior to version 6.5.3. Although the feature was removed from the UI, the file remains deployed and reachable directly via URL. This is a classic case of *dead but reachable code*. Any authenticated user - including one with zero assigned permissions - can exploit SQL injection through the `familyId` parameter. Version 6.5.3 fixes the issue.",
+        "title": "churchcrm churchcrm SQL Injection",
+        "vendor": "churchcrm",
+        "product": "churchcrm",
+        "attack_type": "SQL Injection",
+        "cvss_max": 9.3
+      },
+      "cve": {
+        "id": "CVE-2025-68400",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2025-12-17T22:16:02.230",
+        "lastModified": "2025-12-18T16:46:12.477",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "ChurchCRM is an open-source church management system. A SQL Injection vulnerability exists in the legacy endpoint `/Reports/ConfirmReportEmail.php` in ChurchCRM prior to version 6.5.3. Although the feature was removed from the UI, the file remains deployed and reachable directly via URL. This is a classic case of *dead but reachable code*. Any authenticated user - including one with zero assigned permissions - can exploit SQL injection through the `familyId` parameter. Version 6.5.3 fixes the issue."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 8.8,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-89"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:churchcrm:churchcrm:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "5B1435CA-1370-4154-85E0-6AF1846DEEBD",
+                    "versionEndExcluding": "6.5.3"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/ChurchCRM/CRM/security/advisories/GHSA-v54g-2pvg-gvp2",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Exploit",
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 14
+    },
+    {
+      "cve_id": "CVE-2025-68435",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-12-17",
+          "previous_max": null,
+          "current_max": 9.1
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-12-17",
+        "description": "Zerobyte is a backup automation tool Zerobyte versions prior to 0.18.5 and 0.19.0 contain an authentication bypass vulnerability where authentication middleware is not properly applied to API endpoints. This results in certain API endpoints being accessible without valid session credentials. This is dangerous for those who have exposed Zerobyte to be used outside of their internal network. A fix has been applied in both version 0.19.0 and 0.18.5. If immediate upgrade is not possible, restrict network access to the Zerobyte instance to trusted networks only using firewall rules or network segmentation. This is only a temporary mitigation; upgrading is strongly recommended.",
+        "title": "nicotsx zerobyte Auth Bypass",
+        "vendor": "nicotsx",
+        "product": "zerobyte",
+        "attack_type": "Auth Bypass",
+        "cvss_max": 9.1
+      },
+      "cve": {
+        "id": "CVE-2025-68435",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2025-12-17T23:16:05.747",
+        "lastModified": "2026-03-05T19:30:16.960",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Zerobyte is a backup automation tool Zerobyte versions prior to 0.18.5 and 0.19.0 contain an authentication bypass vulnerability where authentication middleware is not properly applied to API endpoints. This results in certain API endpoints being accessible without valid session credentials. This is dangerous for those who have exposed Zerobyte to be used outside of their internal network. A fix has been applied in both version 0.19.0 and 0.18.5. If immediate upgrade is not possible, restrict network access to the Zerobyte instance to trusted networks only using firewall rules or network segmentation. This is only a temporary mitigation; upgrading is strongly recommended."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+                "baseScore": 9.1,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.2
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-305"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nicotsx:zerobyte:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "35D7F142-68D1-470E-A7C9-2DD3B4853E66",
+                    "versionEndExcluding": "0.18.5"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nicotsx:zerobyte:0.19.0:beta1:*:*:*:*:*:*",
+                    "matchCriteriaId": "CADD228A-ABF0-48DB-97E1-12C8AA30A5B6"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/nicotsx/zerobyte/commit/13e080a18967705bd2b4e110e5f7693fdca1c692",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://github.com/nicotsx/zerobyte/issues/161",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Issue Tracking"
+            ]
+          },
+          {
+            "url": "https://github.com/nicotsx/zerobyte/security/advisories/GHSA-x539-c98q-38gv",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Mitigation",
+              "Patch",
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 15
+    }
+  ],
+  "source": "https://www.cvelogic.com/threat-intelligence/2025-12-17"
+}

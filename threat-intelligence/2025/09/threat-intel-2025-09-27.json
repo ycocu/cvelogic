@@ -1,0 +1,218 @@
+{
+  "schema_version": "2.2",
+  "generated_at": "2026-06-02T07:33:29Z",
+  "day": "2025-09-27",
+  "window": {
+    "utc_start": "2025-09-27",
+    "utc_end": "2025-09-27",
+    "days": 1
+  },
+  "summary": {
+    "brief": "Vote Pro — exploitation likelihood rose sharply (EPSS 6.0% → 18% · rising (+12%)).",
+    "bullets": [
+      "Vote Pro — exploitation likelihood rose sharply (EPSS 6.0% → 18% · rising (+12%))."
+    ],
+    "counts": {
+      "cves": 2,
+      "kev": 0,
+      "exploit": 0,
+      "epss": 1,
+      "cvss": 1,
+      "patch": 0
+    }
+  },
+  "cves": [
+    {
+      "cve_id": "CVE-2007-0504",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 0.06008,
+            "score_date": "2025-09-14"
+          },
+          "current": {
+            "score": 0.17544,
+            "score_date": "2025-09-27"
+          },
+          "delta": 0.11536
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2007-01-26",
+        "description": "Eval injection vulnerability in poll_frame.php in Vote! Pro 4.0, and possibly other scripts, allows remote attackers to execute arbitrary code via the poll_id parameter, which is supplied to an eval function call, a different vulnerability type than CVE-2005-4632.",
+        "title": "vote_pro vote_pro",
+        "vendor": "vote_pro",
+        "product": "vote_pro",
+        "cvss_max": 10.0
+      },
+      "cve": {
+        "id": "CVE-2007-0504",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2007-01-26T00:28:00.000",
+        "lastModified": "2026-04-23T00:35:47.467",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Eval injection vulnerability in poll_frame.php in Vote! Pro 4.0, and possibly other scripts, allows remote attackers to execute arbitrary code via the poll_id parameter, which is supplied to an eval function call, a different vulnerability type than CVE-2005-4632."
+          },
+          {
+            "lang": "es",
+            "value": "Vulnerabilidad de inyección de Eval en poll_frame.php en Vote! Pro 4.0, y posiblemente otros scripts, permite a atacantes remotos ejecutar código de su elección a través del parámetro poll_id, que se suministra a una llamada de función eval, tipo de vulnerabilidad distinta a CVE-2005-4632."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV2": [
+            {
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+                "baseScore": 10.0,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "baseSeverity": "HIGH",
+              "exploitabilityScore": 10.0,
+              "impactScore": 10.0
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "NVD-CWE-Other"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vote_pro:vote_pro:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "DCB08CA1-1AFD-4ADE-A7BC-E81E7E662BC4",
+                    "versionEndIncluding": "4.0"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "http://osvdb.org/31606",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://secunia.com/advisories/23834",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://www.vupen.com/english/advisories/2007/0300",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "https://www.exploit-db.com/exploits/3180",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          }
+        ]
+      },
+      "risk_score": 85,
+      "rank": 1
+    },
+    {
+      "cve_id": "CVE-2025-59936",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-09-27",
+          "previous_max": null,
+          "current_max": 9.4
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-09-27",
+        "description": "get-jwks contains fetch utils for JWKS keys. In versions prior to 11.0.2, a vulnerability in get-jwks can lead to cache poisoning in the JWKS key-fetching mechanism. When the iss (issuer) claim is validated only after keys are retrieved from the cache, it is possible for cached keys from an unexpected issuer to be reused, resulting in a bypass of issuer validation. This design flaw enables a potential attack where a malicious actor crafts a pair of JWTs, the first one ensuring that a chosen public key is fetched and stored in the shared JWKS cache, and the second one leveraging that cached key to pass signature validation for a targeted iss value. The vulnerability will work only if the iss validation is done after the use of get-jwks for keys retrieval. This issue has been patched in version 11.0.2.",
+        "title": "get-jwks contains fetch utils for JWKS keys.",
+        "cvss_max": 9.4
+      },
+      "cve": {
+        "id": "CVE-2025-59936",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2025-09-27T01:15:43.590",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "get-jwks contains fetch utils for JWKS keys. In versions prior to 11.0.2, a vulnerability in get-jwks can lead to cache poisoning in the JWKS key-fetching mechanism. When the iss (issuer) claim is validated only after keys are retrieved from the cache, it is possible for cached keys from an unexpected issuer to be reused, resulting in a bypass of issuer validation. This design flaw enables a potential attack where a malicious actor crafts a pair of JWTs, the first one ensuring that a chosen public key is fetched and stored in the shared JWKS cache, and the second one leveraging that cached key to pass signature validation for a targeted iss value. The vulnerability will work only if the iss validation is done after the use of get-jwks for keys retrieval. This issue has been patched in version 11.0.2."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV30": [
+            {
+              "cvssData": {
+                "version": "3.0",
+                "vectorString": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:L",
+                "baseScore": 9.4,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.5
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-116"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/nearform/get-jwks/commit/1706a177a80a1759fe68e3339dc5a219ce03ddb9",
+            "source": "security-advisories@github.com"
+          },
+          {
+            "url": "https://github.com/nearform/get-jwks/security/advisories/GHSA-qc2q-qhf3-235m",
+            "source": "security-advisories@github.com"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 2
+    }
+  ],
+  "source": "https://www.cvelogic.com/threat-intelligence/2025-09-27"
+}

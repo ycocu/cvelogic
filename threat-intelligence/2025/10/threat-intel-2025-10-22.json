@@ -1,0 +1,1416 @@
+{
+  "schema_version": "2.2",
+  "generated_at": "2026-06-02T07:33:38Z",
+  "day": "2025-10-22",
+  "window": {
+    "utc_start": "2025-10-22",
+    "utc_end": "2025-10-22",
+    "days": 1
+  },
+  "summary": {
+    "brief": "Motex LANSCOPE Endpoint Manager added to CISA KEV — confirmed in-the-wild exploitation. · Zohocorp Manageengine Adselfservice Plus — exploitation likelihood rose sharply (EPSS 2.5% → 21% · rising (+19%)). · 10 new critical disclosures — review patch status on exposed services.",
+    "bullets": [
+      "Motex LANSCOPE Endpoint Manager added to CISA KEV — confirmed in-the-wild exploitation.",
+      "Zohocorp Manageengine Adselfservice Plus — exploitation likelihood rose sharply (EPSS 2.5% → 21% · rising (+19%)).",
+      "10 new critical disclosures — review patch status on exposed services."
+    ],
+    "counts": {
+      "cves": 13,
+      "kev": 1,
+      "exploit": 0,
+      "epss": 2,
+      "cvss": 10,
+      "patch": 0
+    }
+  },
+  "cves": [
+    {
+      "cve_id": "CVE-2025-61932",
+      "signal_types": [
+        "KEV"
+      ],
+      "signals": {
+        "kev": {
+          "date_added": "2025-10-22"
+        },
+        "exploit": null,
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-10-20",
+        "description": "Lanscope Endpoint Manager (On-Premises) (Client program (MR) and Detection agent (DA)) improperly verifies the origin of incoming requests, allowing an attacker to execute arbitrary code by sending specially crafted packets.",
+        "title": "Motex LANSCOPE Endpoint Manager Improper Verification of Source of a Communication Channel Vulnerability",
+        "vendor": "motex",
+        "product": "lanscope_endpoint_manager",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-61932",
+        "sourceIdentifier": "vultures@jpcert.or.jp",
+        "published": "2025-10-20T08:15:33.303",
+        "lastModified": "2025-10-23T13:00:14.270",
+        "vulnStatus": "Analyzed",
+        "cisaExploitAdd": "2025-10-22",
+        "cisaActionDue": "2025-11-12",
+        "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+        "cisaVulnerabilityName": "Motex LANSCOPE Endpoint Manager Improper Verification of Source of a Communication Channel Vulnerability",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Lanscope Endpoint Manager (On-Premises) (Client program (MR) and Detection agent (DA)) improperly verifies the origin of incoming requests, allowing an attacker to execute arbitrary code by sending specially crafted packets."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV30": [
+            {
+              "cvssData": {
+                "version": "3.0",
+                "vectorString": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "vultures@jpcert.or.jp",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "vultures@jpcert.or.jp",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-940"
+              }
+            ],
+            "source": "vultures@jpcert.or.jp"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:motex:lanscope_endpoint_manager:*:*:*:*:on-premise:*:*:*",
+                    "matchCriteriaId": "F9AF3F85-064B-469C-B530-7264EF91A04F",
+                    "versionEndExcluding": "9.3.2.7"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:motex:lanscope_endpoint_manager:*:*:*:*:on-premise:*:*:*",
+                    "matchCriteriaId": "99DC2ADE-F5D6-45F9-B529-11C492FCDD31",
+                    "versionStartIncluding": "9.3.3.0",
+                    "versionEndExcluding": "9.3.3.9"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:motex:lanscope_endpoint_manager:*:*:*:*:on-premise:*:*:*",
+                    "matchCriteriaId": "431F6B9C-8A9C-45FD-B287-E9E1D2B3ECEE",
+                    "versionStartIncluding": "9.4.0.0",
+                    "versionEndExcluding": "9.4.0.5"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:motex:lanscope_endpoint_manager:*:*:*:*:on-premise:*:*:*",
+                    "matchCriteriaId": "B2398AA5-1CFD-41BA-8229-84DAC45D9382",
+                    "versionStartIncluding": "9.4.1.0",
+                    "versionEndExcluding": "9.4.1.5"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:motex:lanscope_endpoint_manager:*:*:*:*:on-premise:*:*:*",
+                    "matchCriteriaId": "0429C621-5DDE-4773-99D3-A20DC0C4798F",
+                    "versionStartIncluding": "9.4.2.0",
+                    "versionEndExcluding": "9.4.2.6"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:motex:lanscope_endpoint_manager:*:*:*:*:on-premise:*:*:*",
+                    "matchCriteriaId": "034F13F1-D926-4298-BCC9-DF424591CBF1",
+                    "versionStartIncluding": "9.4.3.0",
+                    "versionEndExcluding": "9.4.3.8"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:motex:lanscope_endpoint_manager:*:*:*:*:on-premise:*:*:*",
+                    "matchCriteriaId": "66C87047-9DE9-4CE8-80A9-AEBEB58B8402",
+                    "versionStartIncluding": "9.4.4.0",
+                    "versionEndExcluding": "9.4.4.6"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:motex:lanscope_endpoint_manager:*:*:*:*:on-premise:*:*:*",
+                    "matchCriteriaId": "8FF0B7EE-805A-431D-96E5-BF5BDDD3178E",
+                    "versionStartIncluding": "9.4.5.0",
+                    "versionEndExcluding": "9.4.5.4"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:motex:lanscope_endpoint_manager:*:*:*:*:on-premise:*:*:*",
+                    "matchCriteriaId": "21520838-C0C4-4F66-B5C6-1B6231225FF1",
+                    "versionStartIncluding": "9.4.6.0",
+                    "versionEndExcluding": "9.4.6.3"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:motex:lanscope_endpoint_manager:*:*:*:*:on-premise:*:*:*",
+                    "matchCriteriaId": "C669A3EF-3A71-46C0-B1FB-455CBB78B887",
+                    "versionStartIncluding": "9.4.7.0",
+                    "versionEndIncluding": "9.4.7.1"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://jvn.jp/en/jp/JVN86318557/",
+            "source": "vultures@jpcert.or.jp",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.motex.co.jp/news/notice/2025/release251020/",
+            "source": "vultures@jpcert.or.jp",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2025-61932",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Third Party Advisory",
+              "US Government Resource"
+            ]
+          }
+        ]
+      },
+      "risk_score": 88,
+      "rank": 1
+    },
+    {
+      "cve_id": "CVE-2021-37423",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 0.02451,
+            "score_date": "2025-03-30"
+          },
+          "current": {
+            "score": 0.21242,
+            "score_date": "2025-10-22"
+          },
+          "delta": 0.18791
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2021-09-10",
+        "description": "Zoho ManageEngine ADSelfService Plus 6111 and prior is vulnerable to linked applications takeover.",
+        "title": "zohocorp manageengine_adselfservice_plus",
+        "vendor": "zohocorp",
+        "product": "manageengine_adselfservice_plus",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2021-37423",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2021-09-10T15:15:12.007",
+        "lastModified": "2024-11-21T06:15:08.117",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Zoho ManageEngine ADSelfService Plus 6111 and prior is vulnerable to linked applications takeover."
+          },
+          {
+            "lang": "es",
+            "value": "Zoho ManageEngine ADSelfService Plus versiones 6111 y anteriores, son vulnerables a una toma de posesión de aplicaciones vinculadas"
+          }
+        ],
+        "metrics": {
+          "cvssMetricV2": [
+            {
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+                "baseScore": 7.5,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "baseSeverity": "HIGH",
+              "exploitabilityScore": 10.0,
+              "impactScore": 6.4
+            }
+          ],
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "NVD-CWE-noinfo"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:zohocorp:manageengine_adselfservice_plus:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "A79AAA12-67D4-4343-9E0B-249C07144DD8",
+                    "versionEndExcluding": "6.1"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:zohocorp:manageengine_adselfservice_plus:6.1:-:*:*:*:*:*:*",
+                    "matchCriteriaId": "B2320EEE-367C-4CE1-8AC4-048B97DE71F3"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:zohocorp:manageengine_adselfservice_plus:6.1:6100:*:*:*:*:*:*",
+                    "matchCriteriaId": "B1E5484A-D834-4C7A-962C-C78CF0CDAA8B"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:zohocorp:manageengine_adselfservice_plus:6.1:6101:*:*:*:*:*:*",
+                    "matchCriteriaId": "6FA21683-29F7-44EB-84C6-D29C6C64DE97"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:zohocorp:manageengine_adselfservice_plus:6.1:6102:*:*:*:*:*:*",
+                    "matchCriteriaId": "7BE0B72F-2963-4666-9A82-7812BFB52DB0"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:zohocorp:manageengine_adselfservice_plus:6.1:6103:*:*:*:*:*:*",
+                    "matchCriteriaId": "85DD7E26-B9C5-4DCC-8F50-F5884AF61105"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:zohocorp:manageengine_adselfservice_plus:6.1:6104:*:*:*:*:*:*",
+                    "matchCriteriaId": "AC37608E-E61B-4333-8358-50C8377A1ABF"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:zohocorp:manageengine_adselfservice_plus:6.1:6105:*:*:*:*:*:*",
+                    "matchCriteriaId": "C13EF458-FE95-49E5-9A13-04C96C3F114A"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:zohocorp:manageengine_adselfservice_plus:6.1:6106:*:*:*:*:*:*",
+                    "matchCriteriaId": "12919644-3D85-488C-89A3-58A1FB31279D"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:zohocorp:manageengine_adselfservice_plus:6.1:6107:*:*:*:*:*:*",
+                    "matchCriteriaId": "75206A94-9155-48D7-A378-5020877B8B97"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:zohocorp:manageengine_adselfservice_plus:6.1:6108:*:*:*:*:*:*",
+                    "matchCriteriaId": "E50CF265-DE6F-4281-8300-06D54185AA43"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:zohocorp:manageengine_adselfservice_plus:6.1:6109:*:*:*:*:*:*",
+                    "matchCriteriaId": "EB577C00-1412-4F87-B91A-5E956EB2213F"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:zohocorp:manageengine_adselfservice_plus:6.1:6110:*:*:*:*:*:*",
+                    "matchCriteriaId": "4C7681FA-FC15-49CE-9288-3C4E361F4D21"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:zohocorp:manageengine_adselfservice_plus:6.1:6111:*:*:*:*:*:*",
+                    "matchCriteriaId": "80F12A94-93C5-4442-8FB3-4E02E4DECCEB"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://pitstop.manageengine.com/portal/en/community/topic/adselfservice-plus-6112-hotfix-release",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Release Notes",
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 86,
+      "rank": 2
+    },
+    {
+      "cve_id": "CVE-2025-60226",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-10-22",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-10-22",
+        "description": "Deserialization of Untrusted Data vulnerability in axiomthemes White Rabbit whiterabbit allows Object Injection.This issue affects White Rabbit: from n/a through <= 1.5.2.",
+        "title": "axiomthemes white_rabbit Deserialization",
+        "vendor": "axiomthemes",
+        "product": "white_rabbit",
+        "attack_type": "Deserialization",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-60226",
+        "sourceIdentifier": "audit@patchstack.com",
+        "published": "2025-10-22T15:15:59.757",
+        "lastModified": "2026-01-20T15:17:35.367",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Deserialization of Untrusted Data vulnerability in axiomthemes White Rabbit whiterabbit allows Object Injection.This issue affects White Rabbit: from n/a through <= 1.5.2."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-502"
+              }
+            ],
+            "source": "audit@patchstack.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:axiomthemes:white_rabbit:*:*:*:*:*:wordpress:*:*",
+                    "matchCriteriaId": "1FAD1794-BCD7-46A0-8993-5A1617EDDA9D",
+                    "versionEndIncluding": "1.5.2"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://patchstack.com/database/Wordpress/Theme/whiterabbit/vulnerability/wordpress-white-rabbit-theme-1-5-2-php-object-injection-vulnerability?_s_id=cve",
+            "source": "audit@patchstack.com"
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 3
+    },
+    {
+      "cve_id": "CVE-2021-20147",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 0.06868,
+            "score_date": "2025-03-30"
+          },
+          "current": {
+            "score": 0.18027,
+            "score_date": "2025-10-22"
+          },
+          "delta": 0.11159
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2022-01-03",
+        "description": "ManageEngine ADSelfService Plus below build 6116 contains an observable response discrepancy in the UMCP operation of the ChangePasswordAPI. This allows an unauthenticated remote attacker to determine whether a Windows domain user exists.",
+        "title": "zohocorp manageengine_adselfservice_plus",
+        "vendor": "zohocorp",
+        "product": "manageengine_adselfservice_plus",
+        "cvss_max": 5.3
+      },
+      "cve": {
+        "id": "CVE-2021-20147",
+        "sourceIdentifier": "vulnreport@tenable.com",
+        "published": "2022-01-03T22:15:08.503",
+        "lastModified": "2024-11-21T05:46:00.767",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "ManageEngine ADSelfService Plus below build 6116 contains an observable response discrepancy in the UMCP operation of the ChangePasswordAPI. This allows an unauthenticated remote attacker to determine whether a Windows domain user exists."
+          },
+          {
+            "lang": "es",
+            "value": "ManageEngine ADSelfService Plus versiones anteriores a la compilación 6116, contiene una discrepancia de respuesta observable en la operación UMCP de la ChangePasswordAPI. Esto permite a un atacante remoto no autenticado determinar si se presenta un usuario de dominio de Windows"
+          }
+        ],
+        "metrics": {
+          "cvssMetricV2": [
+            {
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:L/Au:N/C:P/I:N/A:N",
+                "baseScore": 5.0,
+                "baseSeverity": "MEDIUM"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "baseSeverity": "MEDIUM",
+              "exploitabilityScore": 10.0,
+              "impactScore": 2.9
+            }
+          ],
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+                "baseScore": 5.3,
+                "baseSeverity": "MEDIUM"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 1.4
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-203"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:zohocorp:manageengine_adselfservice_plus:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "4D9FC84E-958F-450A-8400-1C51E00231A4",
+                    "versionEndIncluding": "6.0"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:zohocorp:manageengine_adselfservice_plus:6.1:-:*:*:*:*:*:*",
+                    "matchCriteriaId": "B2320EEE-367C-4CE1-8AC4-048B97DE71F3"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:zohocorp:manageengine_adselfservice_plus:6.1:6100:*:*:*:*:*:*",
+                    "matchCriteriaId": "B1E5484A-D834-4C7A-962C-C78CF0CDAA8B"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:zohocorp:manageengine_adselfservice_plus:6.1:6101:*:*:*:*:*:*",
+                    "matchCriteriaId": "6FA21683-29F7-44EB-84C6-D29C6C64DE97"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:zohocorp:manageengine_adselfservice_plus:6.1:6102:*:*:*:*:*:*",
+                    "matchCriteriaId": "7BE0B72F-2963-4666-9A82-7812BFB52DB0"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:zohocorp:manageengine_adselfservice_plus:6.1:6103:*:*:*:*:*:*",
+                    "matchCriteriaId": "85DD7E26-B9C5-4DCC-8F50-F5884AF61105"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:zohocorp:manageengine_adselfservice_plus:6.1:6104:*:*:*:*:*:*",
+                    "matchCriteriaId": "AC37608E-E61B-4333-8358-50C8377A1ABF"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:zohocorp:manageengine_adselfservice_plus:6.1:6105:*:*:*:*:*:*",
+                    "matchCriteriaId": "C13EF458-FE95-49E5-9A13-04C96C3F114A"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:zohocorp:manageengine_adselfservice_plus:6.1:6106:*:*:*:*:*:*",
+                    "matchCriteriaId": "12919644-3D85-488C-89A3-58A1FB31279D"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:zohocorp:manageengine_adselfservice_plus:6.1:6107:*:*:*:*:*:*",
+                    "matchCriteriaId": "75206A94-9155-48D7-A378-5020877B8B97"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:zohocorp:manageengine_adselfservice_plus:6.1:6108:*:*:*:*:*:*",
+                    "matchCriteriaId": "E50CF265-DE6F-4281-8300-06D54185AA43"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:zohocorp:manageengine_adselfservice_plus:6.1:6109:*:*:*:*:*:*",
+                    "matchCriteriaId": "EB577C00-1412-4F87-B91A-5E956EB2213F"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:zohocorp:manageengine_adselfservice_plus:6.1:6110:*:*:*:*:*:*",
+                    "matchCriteriaId": "4C7681FA-FC15-49CE-9288-3C4E361F4D21"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:zohocorp:manageengine_adselfservice_plus:6.1:6111:*:*:*:*:*:*",
+                    "matchCriteriaId": "80F12A94-93C5-4442-8FB3-4E02E4DECCEB"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:zohocorp:manageengine_adselfservice_plus:6.1:6112:*:*:*:*:*:*",
+                    "matchCriteriaId": "17270CDC-C800-4B5A-BEAA-83AF455BBBEA"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:zohocorp:manageengine_adselfservice_plus:6.1:6113:*:*:*:*:*:*",
+                    "matchCriteriaId": "DAFE53B1-7736-4560-8FEF-AA0F56FEACF2"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:zohocorp:manageengine_adselfservice_plus:6.1:6114:*:*:*:*:*:*",
+                    "matchCriteriaId": "C5491174-9BE3-4FBF-AEF5-6A313E2CEBA0"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:zohocorp:manageengine_adselfservice_plus:6.1:6115:*:*:*:*:*:*",
+                    "matchCriteriaId": "E407C5F1-43D0-4B5D-A3B8-A48A7024CCB1"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://www.tenable.com/security/research/tra-2021-52",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 77,
+      "rank": 4
+    },
+    {
+      "cve_id": "CVE-2025-11957",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-10-22",
+          "previous_max": null,
+          "current_max": 9.0
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-10-22",
+        "description": "Improper authorization in the temporary access workflow of Devolutions Server 2025.2.12.0 and earlier allows an authenticated basic user to self-approve or approve the temporary access requests of other users and gain unauthorized access to vaults and entries via crafted API requests.",
+        "title": "devolutions devolutions_server privilege escalation",
+        "vendor": "devolutions",
+        "product": "devolutions_server",
+        "attack_type": "privilege escalation",
+        "cvss_max": 9.0
+      },
+      "cve": {
+        "id": "CVE-2025-11957",
+        "sourceIdentifier": "security@devolutions.net",
+        "published": "2025-10-22T17:15:56.103",
+        "lastModified": "2025-11-25T18:15:49.353",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Improper authorization in the temporary access workflow of Devolutions Server 2025.2.12.0 and earlier allows an authenticated basic user to self-approve or approve the temporary access requests of other users and gain unauthorized access to vaults and entries via crafted API requests."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:C/C:H/I:H/A:L",
+                "baseScore": 8.4,
+                "baseSeverity": "HIGH"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 1.8,
+              "impactScore": 6.0
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:H/AT:P/PR:L/UI:N/VC:H/VI:H/VA:L/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.0,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security@devolutions.net",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-639"
+              }
+            ],
+            "source": "security@devolutions.net"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:devolutions:devolutions_server:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "8D3F9B81-CD48-41F8-A9CC-9CCE424DF9D7",
+                    "versionEndExcluding": "2025.2.14.0"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://devolutions.net/security/advisories/DEVO-2025-0015/",
+            "source": "security@devolutions.net",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 5
+    },
+    {
+      "cve_id": "CVE-2025-60220",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-10-22",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-10-22",
+        "description": "Incorrect Privilege Assignment vulnerability in pebas CouponXxL couponxxl allows Privilege Escalation.This issue affects CouponXxL: from n/a through <= 3.0.0.",
+        "title": "Incorrect Privilege Assignment vulnerability in pebas CouponXxL couponxxl allows Privilege Escalation.This issue affects CouponXxL: from...",
+        "attack_type": "Privilege Escalation",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-60220",
+        "sourceIdentifier": "audit@patchstack.com",
+        "published": "2025-10-22T15:15:59.107",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Incorrect Privilege Assignment vulnerability in pebas CouponXxL couponxxl allows Privilege Escalation.This issue affects CouponXxL: from n/a through <= 3.0.0."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-266"
+              }
+            ],
+            "source": "audit@patchstack.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://patchstack.com/database/Wordpress/Theme/couponxxl/vulnerability/wordpress-couponxxl-theme-3-0-0-privilege-escalation-vulnerability?_s_id=cve",
+            "source": "audit@patchstack.com"
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 6
+    },
+    {
+      "cve_id": "CVE-2025-60221",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-10-22",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-10-22",
+        "description": "Deserialization of Untrusted Data vulnerability in captivateaudio Captivate Sync captivatesync-trade allows Object Injection.This issue affects Captivate Sync: from n/a through <= 3.0.3.",
+        "title": "Deserialization of Untrusted Data vulnerability in captivateaudio Captivate Sync captivatesync-trade allows Object Injection.This issue a...",
+        "attack_type": "Deserialization",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-60221",
+        "sourceIdentifier": "audit@patchstack.com",
+        "published": "2025-10-22T15:15:59.257",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Deserialization of Untrusted Data vulnerability in captivateaudio Captivate Sync captivatesync-trade allows Object Injection.This issue affects Captivate Sync: from n/a through <= 3.0.3."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-502"
+              }
+            ],
+            "source": "audit@patchstack.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://patchstack.com/database/Wordpress/Plugin/captivatesync-trade/vulnerability/wordpress-captivate-sync-plugin-3-0-3-php-object-injection-vulnerability?_s_id=cve",
+            "source": "audit@patchstack.com"
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 7
+    },
+    {
+      "cve_id": "CVE-2025-60224",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-10-22",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-10-22",
+        "description": "Deserialization of Untrusted Data vulnerability in wpshuffle Subscribe to Download subscribe-to-download allows Object Injection.This issue affects Subscribe to Download: from n/a through <= 2.0.9.",
+        "title": "Deserialization of Untrusted Data vulnerability in wpshuffle Subscribe to Download subscribe-to-download allows Object Injection.This iss...",
+        "attack_type": "Deserialization",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-60224",
+        "sourceIdentifier": "audit@patchstack.com",
+        "published": "2025-10-22T15:15:59.497",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Deserialization of Untrusted Data vulnerability in wpshuffle Subscribe to Download subscribe-to-download allows Object Injection.This issue affects Subscribe to Download: from n/a through <= 2.0.9."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-502"
+              }
+            ],
+            "source": "audit@patchstack.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://patchstack.com/database/Wordpress/Plugin/subscribe-to-download/vulnerability/wordpress-subscribe-to-download-plugin-2-0-9-php-object-injection-vulnerability?_s_id=cve",
+            "source": "audit@patchstack.com"
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 8
+    },
+    {
+      "cve_id": "CVE-2025-60225",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-10-22",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-10-22",
+        "description": "Deserialization of Untrusted Data vulnerability in AncoraThemes BugsPatrol bugspatrol allows Object Injection.This issue affects BugsPatrol: from n/a through <= 1.5.0.",
+        "title": "Deserialization of Untrusted Data vulnerability in AncoraThemes BugsPatrol bugspatrol allows Object Injection.This issue affects BugsPatr...",
+        "attack_type": "Deserialization",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-60225",
+        "sourceIdentifier": "audit@patchstack.com",
+        "published": "2025-10-22T15:15:59.620",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Deserialization of Untrusted Data vulnerability in AncoraThemes BugsPatrol bugspatrol allows Object Injection.This issue affects BugsPatrol: from n/a through <= 1.5.0."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-502"
+              }
+            ],
+            "source": "audit@patchstack.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://patchstack.com/database/Wordpress/Theme/bugspatrol/vulnerability/wordpress-bugspatrol-theme-1-5-0-php-object-injection-vulnerability?_s_id=cve",
+            "source": "audit@patchstack.com"
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 9
+    },
+    {
+      "cve_id": "CVE-2025-60232",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-10-22",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-10-22",
+        "description": "Deserialization of Untrusted Data vulnerability in quantumcloud KBx Pro Ultimate knowledgebase-helpdesk-pro allows Object Injection.This issue affects KBx Pro Ultimate: from n/a through <= 8.0.5.",
+        "title": "Deserialization of Untrusted Data vulnerability in quantumcloud KBx Pro Ultimate knowledgebase-helpdesk-pro allows Object Injection.This...",
+        "attack_type": "Deserialization",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-60232",
+        "sourceIdentifier": "audit@patchstack.com",
+        "published": "2025-10-22T15:16:00.130",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Deserialization of Untrusted Data vulnerability in quantumcloud KBx Pro Ultimate knowledgebase-helpdesk-pro allows Object Injection.This issue affects KBx Pro Ultimate: from n/a through <= 8.0.5."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-502"
+              }
+            ],
+            "source": "audit@patchstack.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://patchstack.com/database/Wordpress/Plugin/knowledgebase-helpdesk-pro/vulnerability/wordpress-kbx-pro-ultimate-plugin-8-0-5-php-object-injection-vulnerability?_s_id=cve",
+            "source": "audit@patchstack.com"
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 10
+    },
+    {
+      "cve_id": "CVE-2025-60238",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-10-22",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-10-22",
+        "description": "Deserialization of Untrusted Data vulnerability in universam UNIVERSAM universam-demo allows Object Injection.This issue affects UNIVERSAM: from n/a through <= 9.04.02.",
+        "title": "Deserialization of Untrusted Data vulnerability in universam UNIVERSAM universam-demo allows Object Injection.This issue affects UNIVERSA...",
+        "attack_type": "Deserialization",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-60238",
+        "sourceIdentifier": "audit@patchstack.com",
+        "published": "2025-10-22T15:16:00.377",
+        "lastModified": "2026-04-23T15:34:24.780",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Deserialization of Untrusted Data vulnerability in universam UNIVERSAM universam-demo allows Object Injection.This issue affects UNIVERSAM: from n/a through <= 9.04.02."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "audit@patchstack.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-502"
+              }
+            ],
+            "source": "audit@patchstack.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://patchstack.com/database/Wordpress/Plugin/universam-demo/vulnerability/wordpress-universam-plugin-8-72-14-php-object-injection-vulnerability?_s_id=cve",
+            "source": "audit@patchstack.com"
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 11
+    },
+    {
+      "cve_id": "CVE-2025-62023",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-10-22",
+          "previous_max": null,
+          "current_max": 9.0
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-10-22",
+        "description": "Improper Control of Generation of Code ('Code Injection') vulnerability in Cristián Lávaque s2Member s2member.This issue affects s2Member: from n/a through <= 250905.",
+        "title": "Improper Control of Generation of Code ('Code Injection') vulnerability in Cristián Lávaque s2Member s2member.This issue affects s2Member...",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-62023",
+        "sourceIdentifier": "audit@patchstack.com",
+        "published": "2025-10-22T15:16:03.667",
+        "lastModified": "2026-04-23T15:34:26.803",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Improper Control of Generation of Code ('Code Injection') vulnerability in Cristián Lávaque s2Member s2member.This issue affects s2Member: from n/a through <= 250905."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:H/A:H",
+                "baseScore": 9.0,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "audit@patchstack.com",
+              "type": "Secondary",
+              "exploitabilityScore": 2.2,
+              "impactScore": 6.0
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-94"
+              }
+            ],
+            "source": "audit@patchstack.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://patchstack.com/database/Wordpress/Plugin/s2member/vulnerability/wordpress-s2member-plugin-250905-remote-code-execution-rce-vulnerability?_s_id=cve",
+            "source": "audit@patchstack.com"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 12
+    },
+    {
+      "cve_id": "CVE-2025-62025",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-10-22",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-10-22",
+        "description": "Deserialization of Untrusted Data vulnerability in eyecix JobSearch wp-jobsearch.This issue affects JobSearch: from n/a through < 3.0.8.",
+        "title": "Deserialization of Untrusted Data vulnerability in eyecix JobSearch wp-jobsearch.This issue affects JobSearch: from n/a through < 3.0.8.",
+        "attack_type": "Deserialization",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-62025",
+        "sourceIdentifier": "audit@patchstack.com",
+        "published": "2025-10-22T15:16:03.913",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Deserialization of Untrusted Data vulnerability in eyecix JobSearch wp-jobsearch.This issue affects JobSearch: from n/a through < 3.0.8."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-502"
+              }
+            ],
+            "source": "audit@patchstack.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://patchstack.com/database/Wordpress/Plugin/wp-jobsearch/vulnerability/wordpress-jobsearch-plugin-3-0-8-php-object-injection-vulnerability?_s_id=cve",
+            "source": "audit@patchstack.com"
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 13
+    }
+  ],
+  "source": "https://www.cvelogic.com/threat-intelligence/2025-10-22"
+}

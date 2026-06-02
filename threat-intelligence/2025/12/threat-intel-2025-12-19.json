@@ -1,0 +1,1654 @@
+{
+  "schema_version": "2.2",
+  "generated_at": "2026-06-02T07:34:00Z",
+  "day": "2025-12-19",
+  "window": {
+    "utc_start": "2025-12-19",
+    "utc_end": "2025-12-19",
+    "days": 1
+  },
+  "summary": {
+    "brief": "WatchGuard Firebox added to CISA KEV — confirmed in-the-wild exploitation. · Arista Dcs-7050cx3-32s-r Firmware — exploitation likelihood rose sharply (EPSS 67% → 78% · rising (+11%)). · 10 new critical disclosures — review patch status on exposed services.",
+    "bullets": [
+      "WatchGuard Firebox added to CISA KEV — confirmed in-the-wild exploitation.",
+      "Arista Dcs-7050cx3-32s-r Firmware — exploitation likelihood rose sharply (EPSS 67% → 78% · rising (+11%)).",
+      "10 new critical disclosures — review patch status on exposed services."
+    ],
+    "counts": {
+      "cves": 12,
+      "kev": 1,
+      "exploit": 0,
+      "epss": 1,
+      "cvss": 10,
+      "patch": 0
+    }
+  },
+  "cves": [
+    {
+      "cve_id": "CVE-2025-14733",
+      "signal_types": [
+        "KEV"
+      ],
+      "signals": {
+        "kev": {
+          "date_added": "2025-12-19"
+        },
+        "exploit": null,
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-12-19",
+        "description": "An Out-of-bounds Write vulnerability in WatchGuard Fireware OS may allow a remote unauthenticated attacker to execute arbitrary code. This vulnerability affects both the Mobile User VPN with IKEv2 and the Branch Office VPN using IKEv2 when configured with a dynamic gateway peer.This vulnerability affects Fireware OS 11.10.2 up to and including 11.12.4_Update1, 12.0 up to and including 12.11.5 and 2025.1 up to and including 2025.1.3.",
+        "title": "WatchGuard Firebox Out of Bounds Write Vulnerability",
+        "vendor": "watchguard",
+        "product": "fireware",
+        "attack_type": "Out-of-Bounds Write",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-14733",
+        "sourceIdentifier": "5d1c2695-1a31-4499-88ae-e847036fd7e3",
+        "published": "2025-12-19T01:16:05.530",
+        "lastModified": "2025-12-23T11:34:46.317",
+        "vulnStatus": "Analyzed",
+        "cisaExploitAdd": "2025-12-19",
+        "cisaActionDue": "2025-12-26",
+        "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+        "cisaVulnerabilityName": "WatchGuard Firebox Out of Bounds Write Vulnerability",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "An Out-of-bounds Write vulnerability in WatchGuard Fireware OS may allow a remote unauthenticated attacker to execute arbitrary code. This vulnerability affects both the Mobile User VPN with IKEv2 and the Branch Office VPN using IKEv2 when configured with a dynamic gateway peer.This vulnerability affects Fireware OS 11.10.2 up to and including 11.12.4_Update1, 12.0 up to and including 12.11.5 and 2025.1 up to and including 2025.1.3."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:Red",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "5d1c2695-1a31-4499-88ae-e847036fd7e3",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-787"
+              }
+            ],
+            "source": "5d1c2695-1a31-4499-88ae-e847036fd7e3"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:watchguard:fireware:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "C506DA98-651D-4EA6-BEAE-4E5E69841E0F",
+                    "versionStartIncluding": "11.10.2",
+                    "versionEndExcluding": "12.5.15"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:watchguard:firebox_t15:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "CC78E84B-C17B-44C5-9427-5EF97B90A6EF"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:watchguard:firebox_t35:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "12FED793-9DF3-46BB-AA64-3B1934123616"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:watchguard:fireware:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "9C81D87D-AB69-48F3-B780-1DB762865AB5",
+                    "versionStartIncluding": "11.10.2",
+                    "versionEndExcluding": "12.11.6"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:watchguard:firebox_m270:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "DB00A42A-2065-4914-80CA-981E62DEC2CC"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:watchguard:firebox_m290:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "5FC5E2C2-B0E3-4879-9B7C-E6E84A7BEC4E"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:watchguard:firebox_m370:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "22AC145E-2F33-4C0D-AA78-080CEA1980AB"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:watchguard:firebox_m390:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "80F83640-57E7-4DF8-A201-E8D5722EF978"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:watchguard:firebox_m440:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "2F639188-7E3D-46B8-8443-5B1F32A3EC59"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:watchguard:firebox_m4600:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "BB643AE5-6432-474F-BCF9-7A92B907EDE1"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:watchguard:firebox_m470:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "08FC5CE7-00F5-40C4-877F-78D3DF6B01DC"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:watchguard:firebox_m4800:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "04B14406-F7EC-4573-8AF0-BCCBA9BD1A15"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:watchguard:firebox_m5600:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "4D10EFE3-0342-4670-AC73-011D08A4CBEA"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:watchguard:firebox_m570:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "68953F7A-9037-4848-9F7B-FD8E798CB761"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:watchguard:firebox_m5800:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "1A49CF31-D888-4DAE-B1D4-2E4E5A98B38A"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:watchguard:firebox_m590:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "9F14FE4A-4C09-4B2E-8D2C-ECA03FC62595"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:watchguard:firebox_m670:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "413CB88D-9755-43BF-9D76-4252C7151A84"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:watchguard:firebox_m690:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "902C261B-AE76-4F2A-B660-2C069692E95D"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:watchguard:firebox_nv5:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "F3781D2E-80EF-4F6C-BBC3-7570940A5EBF"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:watchguard:firebox_t20:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "1D5FBFA4-219F-49F8-BD2C-415A621F6ED6"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:watchguard:firebox_t25:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "157A59B2-F420-4203-92C4-412685C51893"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:watchguard:firebox_t40:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "FFD1036B-87F5-4523-B67C-0DE6E9AACE32"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:watchguard:firebox_t45:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "CA4FE4DD-A364-4D3C-B84A-516AFC05F5A4"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:watchguard:firebox_t55:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "8050A99B-C106-422D-9497-5E7C79FB89E0"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:watchguard:firebox_t70:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "7F2A1048-7830-4CEB-B6D1-4A4F0C10580F"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:watchguard:firebox_t80:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "F97AE5A0-E6E5-46BD-B05D-98E4253773F7"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:watchguard:firebox_t85:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "BD55ABF8-7C3C-476C-9A04-C889F3D8A21E"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:watchguard:fireboxcloud:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "9882123D-992F-4BDA-8EE0-433A3AF62B54"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:watchguard:fireboxv:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "4D86B0B2-D05B-4361-A02A-C1FEE2F710DD"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:watchguard:fireware:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "D89FF95E-552C-4264-94F9-F7D50FE002FA",
+                    "versionStartIncluding": "2025.1",
+                    "versionEndExcluding": "2025.1.4"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:watchguard:firebox_t115-w:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "E28F563C-BC6E-41FB-8C62-F56CC539D4DD"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:watchguard:firebox_t125:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "2296AE00-4806-484D-BD1D-B58A8FB87CE0"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:watchguard:firebox_t125-w:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "F9071315-92A1-45FA-A048-BB750A40EF76"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:watchguard:firebox_t145:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "9A435F5A-752F-44D7-8083-0C2670F26689"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:watchguard:firebox_t145-w:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "591A04F9-FF92-4484-91DC-F268805A8708"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:watchguard:firebox_t185:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "49672197-C3FA-42A5-A550-DCA5ED89D0FA"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://www.watchguard.com/wgrd-psirt/advisory/wgsa-2025-00027",
+            "source": "5d1c2695-1a31-4499-88ae-e847036fd7e3",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2025-14733",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "US Government Resource"
+            ]
+          }
+        ]
+      },
+      "risk_score": 88,
+      "rank": 1
+    },
+    {
+      "cve_id": "CVE-2020-9015",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 0.67484,
+            "score_date": "2025-11-21"
+          },
+          "current": {
+            "score": 0.78409,
+            "score_date": "2025-12-19"
+          },
+          "delta": 0.10925
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2020-02-20",
+        "description": "Arista DCS-7050QX-32S-R 4.20.9M, DCS-7050CX3-32S-R 4.20.11M, and DCS-7280SRAM-48C6-R 4.22.0.1F devices (and possibly other products) allow attackers to bypass intended TACACS+ shell restrictions via a | character. NOTE: the vendor reports that this is a configuration issue relating to an overly permissive regular expression in the TACACS+ server permitted commands",
+        "title": "arista dcs-7050cx3-32s-r_firmware",
+        "vendor": "arista",
+        "product": "dcs-7050qx-32s-r_firmware",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2020-9015",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2020-02-20T22:15:12.177",
+        "lastModified": "2024-11-21T05:39:49.993",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Arista DCS-7050QX-32S-R 4.20.9M, DCS-7050CX3-32S-R 4.20.11M, and DCS-7280SRAM-48C6-R 4.22.0.1F devices (and possibly other products) allow attackers to bypass intended TACACS+ shell restrictions via a | character. NOTE: the vendor reports that this is a configuration issue relating to an overly permissive regular expression in the TACACS+ server permitted commands"
+          },
+          {
+            "lang": "es",
+            "value": "** EN DISPUTA ** Los dispositivos Arista DCS-7050QX-32S-R versión 4.20.9M, DCS-7050CX3-32S-R versión 4.20.11M y DCS-7280SRAM-48C6-R versión 4.22.0.1F (y posiblemente otros productos), permiten a atacantes omitir las restricciones de shell TACACS+ previstas por medio de un carácter |. NOTA: el proveedor informa que este es un problema de configuración relacionado con una expresión regular demasiado permisiva en los comandos permitidos del servidor TACACS +."
+          }
+        ],
+        "cveTags": [
+          {
+            "sourceIdentifier": "cve@mitre.org",
+            "tags": [
+              "disputed"
+            ]
+          }
+        ],
+        "metrics": {
+          "cvssMetricV2": [
+            {
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+                "baseScore": 7.5,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "baseSeverity": "HIGH",
+              "exploitabilityScore": 10.0,
+              "impactScore": 6.4
+            }
+          ],
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "NVD-CWE-noinfo"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:arista:dcs-7050qx-32s-r_firmware:4.20.9m:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "FFBADFE5-A368-4CA9-AD72-400DFBF381AF"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:arista:dcs-7050qx-32s-r:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "0630F568-230E-4067-B80E-4280CA371B35"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:arista:dcs-7050cx3-32s-r_firmware:4.20.11m:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "F7F04E8A-9FA0-4199-8F62-291EC835B154"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:arista:dcs-7050cx3-32s-r:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "E6F270D9-1B05-4CBC-BEE0-0850C94BB9F0"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:arista:dcs-7280sram-48c6-r_firmware:4.22.0.1f:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "09B0C068-0FBB-48BA-B5F4-A427D40CF110"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:arista:dcs-7280sram-48c6-r:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "4592091C-AD4A-4904-9EFF-C85AABFD7CDE"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "http://packetstormsecurity.com/files/158119/Arista-Restricted-Shell-Escape-Privilege-Escalation.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "https://eos.arista.com/arista-eos-is-not-vulnerable-to-cve-2020-9015/",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "https://securitybytes.me",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://securitybytes.me/posts/cve-2020-9015/",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Broken Link"
+            ]
+          }
+        ]
+      },
+      "risk_score": 84,
+      "rank": 2
+    },
+    {
+      "cve_id": "CVE-2025-68613",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-12-19",
+          "previous_max": null,
+          "current_max": 9.9
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-12-19",
+        "description": "n8n is an open source workflow automation platform. Versions starting with 0.211.0 and prior to 1.120.4, 1.121.1, and 1.122.0 contain a critical Remote Code Execution (RCE) vulnerability in their workflow expression evaluation system. Under certain conditions, expressions supplied by authenticated users during workflow configuration may be evaluated in an execution context that is not sufficiently isolated from the underlying runtime. An authenticated attacker could abuse this behavior to execute arbitrary code with the privileges of the n8n process. Successful exploitation may lead to full compromise of the affected instance, including unauthorized access to sensitive data, modification of workflows, and execution of system-level operations. This issue has been fixed in versions 1.120.4, 1.121.1, and 1.122.0. Users are strongly advised to upgrade to a patched version, which introduces additional safeguards to restrict expression evaluation. If upgrading is not immediately possible, administrators should consider the following temporary mitigations: Limit workflow creation and editing permissions to fully trusted users only; and/or deploy n8n in a hardened environment with restricted operating system privileges and network access to reduce the impact of potential exploitation. These workarounds do not fully eliminate the risk and should only be used as short-term measures.",
+        "title": "n8n Improper Control of Dynamically-Managed Code Resources Vulnerability",
+        "vendor": "n8n",
+        "product": "n8n",
+        "attack_type": "RCE",
+        "cvss_max": 9.9
+      },
+      "cve": {
+        "id": "CVE-2025-68613",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2025-12-19T23:15:52.083",
+        "lastModified": "2026-03-11T19:40:09.533",
+        "vulnStatus": "Analyzed",
+        "cisaExploitAdd": "2026-03-11",
+        "cisaActionDue": "2026-03-25",
+        "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+        "cisaVulnerabilityName": "n8n Improper Control of Dynamically-Managed Code Resources Vulnerability",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "n8n is an open source workflow automation platform. Versions starting with 0.211.0 and prior to 1.120.4, 1.121.1, and 1.122.0 contain a critical Remote Code Execution (RCE) vulnerability in their workflow expression evaluation system. Under certain conditions, expressions supplied by authenticated users during workflow configuration may be evaluated in an execution context that is not sufficiently isolated from the underlying runtime. An authenticated attacker could abuse this behavior to execute arbitrary code with the privileges of the n8n process. Successful exploitation may lead to full compromise of the affected instance, including unauthorized access to sensitive data, modification of workflows, and execution of system-level operations. This issue has been fixed in versions 1.120.4, 1.121.1, and 1.122.0. Users are strongly advised to upgrade to a patched version, which introduces additional safeguards to restrict expression evaluation. If upgrading is not immediately possible, administrators should consider the following temporary mitigations: Limit workflow creation and editing permissions to fully trusted users only; and/or deploy n8n in a hardened environment with restricted operating system privileges and network access to reduce the impact of potential exploitation. These workarounds do not fully eliminate the risk and should only be used as short-term measures."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+                "baseScore": 9.9,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.1,
+              "impactScore": 6.0
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 8.8,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-913"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          },
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-913"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:n8n:n8n:*:*:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "C9961CCA-C266-4997-AA60-A32EFD3BAFF9",
+                    "versionStartIncluding": "0.211.0",
+                    "versionEndExcluding": "1.120.4"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:n8n:n8n:1.121.0:*:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "9FD26170-639E-4E8E-9AF2-5966FD81B4D3"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/n8n-io/n8n/commit/08f332015153decdda3c37ad4fcb9f7ba13a7c79",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://github.com/n8n-io/n8n/commit/1c933358acef527ff61466e53268b41a04be1000",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://github.com/n8n-io/n8n/commit/39a2d1d60edde89674ca96dcbb3eb076ffff6316",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://github.com/n8n-io/n8n/security/advisories/GHSA-v98v-ff95-f3cp",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Patch",
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://www.akamai.com/blog/security-research/2026/feb/zerobot-malware-targets-n8n-automation-platform",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2025-68613",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "US Government Resource"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 3
+    },
+    {
+      "cve_id": "CVE-2023-53948",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-12-19",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-12-19",
+        "description": "Lilac-Reloaded for Nagios 2.0.8 contains a remote code execution vulnerability in the autodiscovery feature that allows attackers to inject arbitrary commands. Attackers can exploit the lack of input filtering in the nmap_binary parameter to execute a reverse shell by sending a crafted POST request to the autodiscovery endpoint.",
+        "title": "Lilac-Reloaded for Nagios 2.0.8 contains a remote code execution vulnerability in the autodiscovery feature that allows attackers to inje...",
+        "attack_type": "RCE",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2023-53948",
+        "sourceIdentifier": "disclosure@vulncheck.com",
+        "published": "2025-12-19T21:15:50.207",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Lilac-Reloaded for Nagios 2.0.8 contains a remote code execution vulnerability in the autodiscovery feature that allows attackers to inject arbitrary commands. Attackers can exploit the lack of input filtering in the nmap_binary parameter to execute a reverse shell by sending a crafted POST request to the autodiscovery endpoint."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-78"
+              }
+            ],
+            "source": "disclosure@vulncheck.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://exchange.nagios.org/directory/addons/configuration/lilac-2dreloaded/details/",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://www.exploit-db.com/exploits/51374",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://www.vulncheck.com/advisories/lilac-reloaded-for-nagios-remote-code-execution-via-autodiscovery",
+            "source": "disclosure@vulncheck.com"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 4
+    },
+    {
+      "cve_id": "CVE-2023-53950",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-12-19",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-12-19",
+        "description": "InnovaStudio WYSIWYG Editor 5.4 contains an unrestricted file upload vulnerability that allows attackers to bypass file extension restrictions through filename manipulation. Attackers can upload malicious ASP shells by using null byte techniques and alternate file extensions to circumvent upload controls in the asset manager.",
+        "title": "InnovaStudio WYSIWYG Editor 5.4 contains an unrestricted file upload vulnerability that allows attackers to bypass file extension restric...",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2023-53950",
+        "sourceIdentifier": "disclosure@vulncheck.com",
+        "published": "2025-12-19T21:15:51.080",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "InnovaStudio WYSIWYG Editor 5.4 contains an unrestricted file upload vulnerability that allows attackers to bypass file extension restrictions through filename manipulation. Attackers can upload malicious ASP shells by using null byte techniques and alternate file extensions to circumvent upload controls in the asset manager."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-434"
+              }
+            ],
+            "source": "disclosure@vulncheck.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://innovastudio.com",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://www.exploit-db.com/exploits/51362",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://www.vulncheck.com/advisories/innovastudio-wysiwyg-editor-unrestricted-file-upload-via-filename-manipulation",
+            "source": "disclosure@vulncheck.com"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 5
+    },
+    {
+      "cve_id": "CVE-2023-53951",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-12-19",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-12-19",
+        "description": "Ever Gauzy v0.281.9 contains a JWT authentication vulnerability that allows attackers to exploit weak HMAC secret key implementation. Attackers can leverage the exposed JWT token to authenticate and gain unauthorized access with administrative permissions.",
+        "title": "Ever Gauzy v0.281.9 contains a JWT authentication vulnerability that allows attackers to exploit weak HMAC secret key implementation.",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2023-53951",
+        "sourceIdentifier": "disclosure@vulncheck.com",
+        "published": "2025-12-19T21:15:51.240",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Ever Gauzy v0.281.9 contains a JWT authentication vulnerability that allows attackers to exploit weak HMAC secret key implementation. Attackers can leverage the exposed JWT token to authenticate and gain unauthorized access with administrative permissions."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-347"
+              }
+            ],
+            "source": "disclosure@vulncheck.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/ever-co/ever-gauzy",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://www.exploit-db.com/exploits/51354",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://www.vulncheck.com/advisories/ever-gauzy-jwt-authentication-weakness-via-hmac-secret",
+            "source": "disclosure@vulncheck.com"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 6
+    },
+    {
+      "cve_id": "CVE-2024-49587",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-12-19",
+          "previous_max": null,
+          "current_max": 9.1
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-12-19",
+        "description": "Glutton V1 service endpoints were exposed without any authentication on Gotham stacks, this could have allowed users that did not have any permission to hit glutton backend directly and read/update/delete data. The affected service has been patched and automatically deployed to all Apollo-managed Gotham Instances",
+        "title": "Glutton V1 service endpoints were exposed without any authentication on Gotham stacks, this could have allowed users that did not have an...",
+        "cvss_max": 9.1
+      },
+      "cve": {
+        "id": "CVE-2024-49587",
+        "sourceIdentifier": "cve-coordination@palantir.com",
+        "published": "2025-12-19T17:15:50.643",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Glutton V1 service endpoints were exposed without any authentication on Gotham stacks, this could have allowed users that did not have any permission to hit glutton backend directly and read/update/delete data. The affected service has been patched and automatically deployed to all Apollo-managed Gotham Instances"
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+                "baseScore": 9.1,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "cve-coordination@palantir.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.2
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-305"
+              }
+            ],
+            "source": "cve-coordination@palantir.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://palantir.safebase.us/?tcuUid=95e2d805-dd2f-4544-b164-e61100f47b11",
+            "source": "cve-coordination@palantir.com"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 7
+    },
+    {
+      "cve_id": "CVE-2025-14964",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-12-19",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-12-19",
+        "description": "A vulnerability has been found in TOTOLINK T10 4.1.8cu.5083_B20200521. This affects the function sprintf of the file /cgi-bin/cstecgi.cgi. Such manipulation of the argument loginAuthUrl leads to stack-based buffer overflow. The attack may be performed from remote.",
+        "title": "totolink t10_firmware Buffer Overflow",
+        "vendor": "totolink",
+        "product": "t10_firmware",
+        "attack_type": "Buffer Overflow",
+        "cvss_max": 10.0
+      },
+      "cve": {
+        "id": "CVE-2025-14964",
+        "sourceIdentifier": "cna@vuldb.com",
+        "published": "2025-12-19T19:15:50.213",
+        "lastModified": "2025-12-30T18:16:07.343",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A vulnerability has been found in TOTOLINK T10 4.1.8cu.5083_B20200521. This affects the function sprintf of the file /cgi-bin/cstecgi.cgi. Such manipulation of the argument loginAuthUrl leads to stack-based buffer overflow. The attack may be performed from remote."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV2": [
+            {
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+                "baseScore": 10.0,
+                "baseSeverity": "HIGH"
+              },
+              "source": "cna@vuldb.com",
+              "type": "Secondary",
+              "baseSeverity": "HIGH",
+              "exploitabilityScore": 10.0,
+              "impactScore": 10.0
+            }
+          ],
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "cna@vuldb.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "cna@vuldb.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-119"
+              },
+              {
+                "lang": "en",
+                "value": "CWE-121"
+              }
+            ],
+            "source": "cna@vuldb.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:totolink:t10_firmware:4.1.8cu.5803_b20200521:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "47CB81FA-1CCC-4BE4-A16B-DBAC90971DC1"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:totolink:t10:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "1C410805-E3D4-4F8C-8DF4-013ACE3937FA"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/JackWesleyy/CVE/blob/main/TOTOLINK_T10_BOC.md",
+            "source": "cna@vuldb.com",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/?ctiid.337599",
+            "source": "cna@vuldb.com",
+            "tags": [
+              "Permissions Required",
+              "VDB Entry"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/?id.337599",
+            "source": "cna@vuldb.com",
+            "tags": [
+              "Third Party Advisory",
+              "VDB Entry"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/?submit.717720",
+            "source": "cna@vuldb.com",
+            "tags": [
+              "Third Party Advisory",
+              "VDB Entry"
+            ]
+          },
+          {
+            "url": "https://www.totolink.net/",
+            "source": "cna@vuldb.com",
+            "tags": [
+              "Product"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 8
+    },
+    {
+      "cve_id": "CVE-2025-1928",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-12-19",
+          "previous_max": null,
+          "current_max": 9.1
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-12-19",
+        "description": "Improper Restriction of Excessive Authentication Attempts vulnerability in Restajet Information Technologies Inc. Online Food Delivery System allows Password Recovery Exploitation.This issue affects Online Food Delivery System: through 19122025. NOTE: The vendor was contacted early about this disclosure but did not respond in any way.",
+        "title": "restajet online_food_delivery_system",
+        "vendor": "restajet",
+        "product": "online_food_delivery_system",
+        "cvss_max": 9.1
+      },
+      "cve": {
+        "id": "CVE-2025-1928",
+        "sourceIdentifier": "iletisim@usom.gov.tr",
+        "published": "2025-12-19T13:16:03.313",
+        "lastModified": "2026-03-26T08:16:19.620",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Improper Restriction of Excessive Authentication Attempts vulnerability in Restajet Information Technologies Inc. Online Food Delivery System allows Password Recovery Exploitation.This issue affects Online Food Delivery System: through 19122025. NOTE: The vendor was contacted early about this disclosure but did not respond in any way."
+          },
+          {
+            "lang": "es",
+            "value": "Vulnerabilidad de restricción inadecuada de intentos de autenticación excesivos en el sistema de entrega de comida en línea de Restajet Information Technologies Inc. permite la explotación de recuperación de contraseña. Este problema afecta al sistema de entrega de comida en línea: hasta el 19122025. NOTA: Se contactó al proveedor con antelación sobre esta divulgación, pero no respondió de ninguna manera."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+                "baseScore": 9.1,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "iletisim@usom.gov.tr",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.2
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-307"
+              }
+            ],
+            "source": "iletisim@usom.gov.tr"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:restajet:online_food_delivery_system:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "D9645287-A3CA-4036-B2DB-513F54F58AE6"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://www.usom.gov.tr/bildirim/tr-25-0469",
+            "source": "iletisim@usom.gov.tr",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 9
+    },
+    {
+      "cve_id": "CVE-2025-34433",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-12-19",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-12-19",
+        "description": "AVideo versions 14.3.1 prior to 20.1 contain an unauthenticated remote code execution vulnerability caused by predictable generation of an installation salt using PHP uniqid(). The installation timestamp is exposed via a public endpoint, and a derived hash identifier is accessible through unauthenticated API responses, allowing attackers to brute-force the remaining entropy. The recovered salt can then be used to encrypt a malicious payload supplied to a notification API endpoint that evaluates attacker-controlled input, resulting in arbitrary code execution as the web server user.",
+        "title": "AVideo versions 14.3.1 prior to 20.1 contain an unauthenticated remote code execution vulnerability caused by predictable generation of a...",
+        "attack_type": "RCE",
+        "cvss_max": 9.3
+      },
+      "cve": {
+        "id": "CVE-2025-34433",
+        "sourceIdentifier": "disclosure@vulncheck.com",
+        "published": "2025-12-19T16:15:55.393",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "AVideo versions 14.3.1 prior to 20.1 contain an unauthenticated remote code execution vulnerability caused by predictable generation of an installation salt using PHP uniqid(). The installation timestamp is exposed via a public endpoint, and a derived hash identifier is accessible through unauthenticated API responses, allowing attackers to brute-force the remaining entropy. The recovered salt can then be used to encrypt a malicious payload supplied to a notification API endpoint that evaluates attacker-controlled input, resulting in arbitrary code execution as the web server user."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-94"
+              }
+            ],
+            "source": "disclosure@vulncheck.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://chocapikk.com/posts/2025/avideo-security-vulnerabilities/",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://github.com/WWBN/AVideo/commit/4a53ab2",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://github.com/WWBN/AVideo/commit/a2bdbff",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://www.vulncheck.com/advisories/avideo-unauthenticated-rce-via-predictable-installation-salt",
+            "source": "disclosure@vulncheck.com"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 10
+    },
+    {
+      "cve_id": "CVE-2025-63665",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-12-19",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-12-19",
+        "description": "An issue in GT Edge AI Community Edition Versions before v2.0.12 allows attackers to execute arbitrary code via injecting a crafted JSON payload into the Prompt window.",
+        "title": "gtedge gt_edge_ai",
+        "vendor": "gtedge",
+        "product": "gt_edge_ai",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-63665",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2025-12-19T17:15:52.963",
+        "lastModified": "2026-01-05T17:58:58.503",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "An issue in GT Edge AI Community Edition Versions before v2.0.12 allows attackers to execute arbitrary code via injecting a crafted JSON payload into the Prompt window."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-94"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:gtedge:gt_edge_ai:*:*:*:*:community:*:*:*",
+                    "matchCriteriaId": "B5535437-227D-49B8-A0E1-D5A8585D8BF3",
+                    "versionEndExcluding": "2.0.12"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://gist.github.com/p80n-sec/e5eefcef155e9dd14aaaaa49f9f94cd1",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/p80n-sec/Vulnerability-Research/blob/main/CVE-2025-63665/CVE-2025-63665.md",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 11
+    },
+    {
+      "cve_id": "CVE-2025-66580",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-12-19",
+          "previous_max": null,
+          "current_max": 9.6
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-12-19",
+        "description": "Dive is an open-source MCP Host Desktop Application that enables integration with function-calling LLMs. A critical Stored Cross-Site Scripting (XSS) vulnerability exists in versions prior to 0.11.1 in the Mermaid diagram rendering component. The application allows the execution of arbitrary JavaScript via `javascript:`. An attacker can exploit this to inject a malicious Model Context Protocol (MCP) server configuration, leading to Remote Code Execution (RCE) on the victim's machine when the node is clicked. Version 0.11.1 fixes the issue.",
+        "title": "openagentplatform dive XSS",
+        "vendor": "openagentplatform",
+        "product": "dive",
+        "attack_type": "XSS",
+        "cvss_max": 9.6
+      },
+      "cve": {
+        "id": "CVE-2025-66580",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2025-12-19T17:15:53.243",
+        "lastModified": "2026-01-02T19:15:17.203",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Dive is an open-source MCP Host Desktop Application that enables integration with function-calling LLMs. A critical Stored Cross-Site Scripting (XSS) vulnerability exists in versions prior to 0.11.1 in the Mermaid diagram rendering component. The application allows the execution of arbitrary JavaScript via `javascript:`. An attacker can exploit this to inject a malicious Model Context Protocol (MCP) server configuration, leading to Remote Code Execution (RCE) on the victim's machine when the node is clicked. Version 0.11.1 fixes the issue."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H",
+                "baseScore": 9.6,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 6.0
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H",
+                "baseScore": 9.6,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 6.0
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-94"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          },
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-79"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:openagentplatform:dive:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "8AC703A1-4045-496D-8282-99BD95E65DF7",
+                    "versionEndExcluding": "0.11.1"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/OpenAgentPlatform/Dive/security/advisories/GHSA-xv8m-365j-x6h2",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Exploit",
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 12
+    }
+  ],
+  "source": "https://www.cvelogic.com/threat-intelligence/2025-12-19"
+}

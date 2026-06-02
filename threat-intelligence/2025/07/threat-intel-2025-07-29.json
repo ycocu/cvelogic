@@ -1,0 +1,667 @@
+{
+  "schema_version": "2.2",
+  "generated_at": "2026-06-02T07:33:08Z",
+  "day": "2025-07-29",
+  "window": {
+    "utc_start": "2025-07-29",
+    "utc_end": "2025-07-29",
+    "days": 1
+  },
+  "summary": {
+    "brief": "5 new critical disclosures — review patch status on exposed services.",
+    "bullets": [
+      "5 new critical disclosures — review patch status on exposed services."
+    ],
+    "counts": {
+      "cves": 5,
+      "kev": 0,
+      "exploit": 0,
+      "epss": 0,
+      "cvss": 5,
+      "patch": 0
+    }
+  },
+  "cves": [
+    {
+      "cve_id": "CVE-2025-54381",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-07-29",
+          "previous_max": null,
+          "current_max": 9.9
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-07-29",
+        "description": "BentoML is a Python library for building online serving systems optimized for AI apps and model inference. In versions 1.4.0 until 1.4.19, the file upload processing system contains an SSRF vulnerability that allows unauthenticated remote attackers to force the server to make arbitrary HTTP requests. The vulnerability stems from the multipart form data and JSON request handlers, which automatically download files from user-provided URLs without validating whether those URLs point to internal network addresses, cloud metadata endpoints, or other restricted resources. The documentation explicitly promotes this URL-based file upload feature, making it an intended design that exposes all deployed services to SSRF attacks by default. Version 1.4.19 contains a patch for the issue.",
+        "title": "bentoml bentoml SSRF",
+        "vendor": "bentoml",
+        "product": "bentoml",
+        "attack_type": "SSRF",
+        "cvss_max": 9.9
+      },
+      "cve": {
+        "id": "CVE-2025-54381",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2025-07-29T23:15:32.947",
+        "lastModified": "2025-08-05T15:41:26.900",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "BentoML is a Python library for building online serving systems optimized for AI apps and model inference. In versions 1.4.0 until 1.4.19, the file upload processing system contains an SSRF vulnerability that allows unauthenticated remote attackers to force the server to make arbitrary HTTP requests. The vulnerability stems from the multipart form data and JSON request handlers, which automatically download files from user-provided URLs without validating whether those URLs point to internal network addresses, cloud metadata endpoints, or other restricted resources. The documentation explicitly promotes this URL-based file upload feature, making it an intended design that exposes all deployed services to SSRF attacks by default. Version 1.4.19 contains a patch for the issue."
+          },
+          {
+            "lang": "es",
+            "value": "BentoML es una librería de Python para crear sistemas de servicios en línea optimizados para aplicaciones de IA e inferencia de modelos. En las versiones 1.4.0 a 1.4.19, el sistema de procesamiento de carga de archivos contiene una vulnerabilidad SSRF que permite a atacantes remotos no autenticados forzar al servidor a realizar solicitudes HTTP arbitrarias. La vulnerabilidad se origina en los manejadores de datos de formularios multiparte y solicitudes JSON, que descargan archivos automáticamente desde URL proporcionadas por el usuario sin validar si estas URL apuntan a direcciones de red internas, endpoints de metadatos en la nube u otros recursos restringidos. La documentación promueve explícitamente esta función de carga de archivos basada en URL, lo que la convierte en un diseño que expone todos los servicios implementados a ataques SSRF por defecto. La versión 1.4.19 incluye un parche para este problema."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:L/A:L",
+                "baseScore": 9.9,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.3
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-918"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:bentoml:bentoml:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "FDC38760-A29D-4F73-A6EE-1AEF5BE60C37",
+                    "versionStartIncluding": "1.4.0",
+                    "versionEndExcluding": "1.4.19"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/bentoml/BentoML/commit/534c3584621da4ab954bdc3d814cc66b95ae5fb8",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://github.com/bentoml/BentoML/security/advisories/GHSA-mrmq-3q62-6cc8",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Exploit",
+              "Mitigation",
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 1
+    },
+    {
+      "cve_id": "CVE-2025-44136",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-07-29",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-07-29",
+        "description": "MapTiler Tileserver-php v2.0 is vulnerable to Cross Site Scripting (XSS). The GET parameter \"layer\" is reflected in an error message without html encoding. This leads to XSS and allows an unauthenticated attacker to execute arbitrary HTML or JavaScript code on a victim's browser.",
+        "title": "maptiler tileserver_php cross-site scripting",
+        "vendor": "maptiler",
+        "product": "tileserver_php",
+        "attack_type": "cross-site scripting",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-44136",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2025-07-29T17:15:33.327",
+        "lastModified": "2025-08-06T20:47:45.487",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "MapTiler Tileserver-php v2.0 is vulnerable to Cross Site Scripting (XSS). The GET parameter \"layer\" is reflected in an error message without html encoding. This leads to XSS and allows an unauthenticated attacker to execute arbitrary HTML or JavaScript code on a victim's browser."
+          },
+          {
+            "lang": "es",
+            "value": "MapTiler Tileserver-php v2.0 es vulnerable a ataques de Cross-Site Scripting (XSS). El parámetro GET \"layer\" se refleja en un mensaje de error sin codificación HTML. Esto genera XSS y permite que un atacante no autenticado ejecute código HTML o JavaScript arbitrario en el navegador de la víctima."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-79"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:maptiler:tileserver_php:2.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "08A42D37-DC8C-4FED-8840-47FDA1818564"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/maptiler/tileserver-php/issues/167",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Exploit",
+              "Issue Tracking"
+            ]
+          },
+          {
+            "url": "https://github.com/mheranco/CVE-2025-44136",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Exploit"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 2
+    },
+    {
+      "cve_id": "CVE-2025-40600",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-07-29",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-07-29",
+        "description": "Use of Externally-Controlled Format String vulnerability in the SonicOS SSL VPN interface allows a remote unauthenticated attacker to cause service disruption.",
+        "title": "sonicwall sonicos",
+        "vendor": "sonicwall",
+        "product": "sonicos",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-40600",
+        "sourceIdentifier": "PSIRT@sonicwall.com",
+        "published": "2025-07-29T22:15:24.927",
+        "lastModified": "2025-08-11T14:59:40.867",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Use of Externally-Controlled Format String vulnerability in the SonicOS SSL VPN interface allows a remote unauthenticated attacker to cause service disruption."
+          },
+          {
+            "lang": "es",
+            "value": "La vulnerabilidad del uso de una cadena de formato controlada externamente en la interfaz SonicOS SSL VPN permite que un atacante remoto no autenticado provoque la interrupción del servicio."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-134"
+              }
+            ],
+            "source": "PSIRT@sonicwall.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:sonicwall:sonicos:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "612519F2-E1D6-49F3-8920-6431ADC4ED84",
+                    "versionStartIncluding": "7.1.1-7040",
+                    "versionEndExcluding": "7.3.0-7012"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:sonicwall:nsa_2700:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "8D8B0C7A-FD65-47CA-A625-150A90EFA7A1"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:sonicwall:nsa_3700:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "A69E000B-5806-46FD-A233-4E2CC9DD38D2"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:sonicwall:nsa_4700:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "8DF4A322-7CC7-4AB9-B10E-FFF34DF2182D"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:sonicwall:nsa_5700:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "4C15FED5-C48C-47CF-9645-0563D77883C1"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:sonicwall:nsa_6700:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "A884B1BB-F201-4C77-9F6E-B8A884DCD4C2"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:sonicwall:nssp_10700:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "7C3BA5A3-1160-4793-A8D6-40B9D264BCC4"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:sonicwall:nssp_11700:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "6739DEA3-06FF-4FEB-9931-0DB27F63B70E"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:sonicwall:nssp_13700:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "0250EDF9-0AEF-4711-8EF6-D447CF48BCAF"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:sonicwall:nssp_15700:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "7D6CF3CF-256C-4C04-8BDF-B16398CD0459"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:sonicwall:nsv270:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "DACDCE12-74C2-4F3C-8421-9191700514C5"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:sonicwall:nsv470:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "3AF1ECB1-6257-41E3-A050-6467063F4807"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:sonicwall:nsv870:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "0883D805-1BA9-49CE-AEC7-51C9D9A69C5C"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:sonicwall:tz270:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "70340DD4-687B-402C-85AF-C2B80D0F1600"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:sonicwall:tz270w:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "52847BA2-470B-4078-A79B-52095DB9214B"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:sonicwall:tz370:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "9853AE3A-B0EA-4249-AA7D-1F2051C9BF91"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:sonicwall:tz370w:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "4DBDD10C-F89D-4051-BC70-67B41167FF9B"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:sonicwall:tz470:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "6C23940E-2F9D-447B-A740-42035ED5D400"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:sonicwall:tz470w:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "90C790AD-C40E-4527-8F83-D278282A9600"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:sonicwall:tz570:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "C7DF76E0-8E3D-4E0D-A3BB-F5AE05A4C7C9"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:sonicwall:tz570p:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "352DFCF9-E333-41C0-8033-91265768FD8E"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:sonicwall:tz570w:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "4C882C38-9DA5-4C03-BB23-AB2B448E3307"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:sonicwall:tz670:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "AEEA6065-48D3-4EC7-BD94-CBAE3D1010FF"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://psirt.global.sonicwall.com/vuln-detail/SNWLID-2025-0013",
+            "source": "PSIRT@sonicwall.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 3
+    },
+    {
+      "cve_id": "CVE-2025-46059",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-07-29",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-07-29",
+        "description": "langchain-ai v0.3.51 was discovered to contain an indirect prompt injection vulnerability in the GmailToolkit component. This vulnerability allows attackers to execute arbitrary code and compromise the application via a crafted email message. NOTE: this is disputed by the Supplier because the code-execution issue was introduced by user-written code that does not adhere to the LangChain security practices.",
+        "title": "langchain-ai v0.3.51 was discovered to contain an indirect prompt injection vulnerability in the GmailToolkit component.",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-46059",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2025-07-29T15:15:35.003",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "langchain-ai v0.3.51 was discovered to contain an indirect prompt injection vulnerability in the GmailToolkit component. This vulnerability allows attackers to execute arbitrary code and compromise the application via a crafted email message. NOTE: this is disputed by the Supplier because the code-execution issue was introduced by user-written code that does not adhere to the LangChain security practices."
+          },
+          {
+            "lang": "es",
+            "value": "Se descubrió que langchain-ai v0.3.51 contenía una vulnerabilidad de inyección indirecta de mensajes en el componente GmailToolkit. Esta vulnerabilidad permite a los atacantes ejecutar código arbitrario y comprometer la aplicación mediante un mensaje de correo electrónico manipulado."
+          }
+        ],
+        "cveTags": [
+          {
+            "sourceIdentifier": "cve@mitre.org",
+            "tags": [
+              "disputed"
+            ]
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-94"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/Jr61-star/CVEs/blob/main/CVE-2025-46059.md",
+            "source": "cve@mitre.org"
+          },
+          {
+            "url": "https://github.com/langchain-ai/langchain-community/issues/217#issuecomment-3144824471",
+            "source": "cve@mitre.org"
+          },
+          {
+            "url": "https://github.com/langchain-ai/langchain/issues/30833",
+            "source": "cve@mitre.org"
+          },
+          {
+            "url": "https://python.langchain.com/docs/security/",
+            "source": "cve@mitre.org"
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 4
+    },
+    {
+      "cve_id": "CVE-2025-50738",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-07-29",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-07-29",
+        "description": "The Memos application, up to version v0.24.3, allows for the embedding of markdown images with arbitrary URLs. When a user views a memo containing such an image, their browser automatically fetches the image URL without explicit user consent or interaction beyond viewing the memo. This can be exploited by an attacker to disclose the viewing user's IP address, browser User-Agent string, and potentially other request-specific information to the attacker-controlled server, leading to information disclosure and user tracking.",
+        "title": "usememos memos",
+        "vendor": "usememos",
+        "product": "memos",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-50738",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2025-07-29T15:15:35.543",
+        "lastModified": "2025-08-22T16:15:43.973",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The Memos application, up to version v0.24.3, allows for the embedding of markdown images with arbitrary URLs. When a user views a memo containing such an image, their browser automatically fetches the image URL without explicit user consent or interaction beyond viewing the memo. This can be exploited by an attacker to disclose the viewing user's IP address, browser User-Agent string, and potentially other request-specific information to the attacker-controlled server, leading to information disclosure and user tracking."
+          },
+          {
+            "lang": "es",
+            "value": "La aplicación Memos, hasta la versión v0.24.3, permite incrustar imágenes en formato Markdown con URL arbitrarias. Cuando un usuario visualiza un memo que contiene dicha imagen, su navegador obtiene automáticamente la URL de la imagen sin su consentimiento explícito ni interacción alguna más allá de la visualización del memo. Un atacante puede aprovechar esto para divulgar la dirección IP del usuario, la cadena de agente de usuario del navegador y, potencialmente, otra información específica de la solicitud al servidor controlado por el atacante, lo que conlleva la divulgación de información y el rastreo del usuario."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-200"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:usememos:memos:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "76BF7961-5449-4484-9504-692375C6AC4B",
+                    "versionEndIncluding": "0.24.3"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/fai1424/Vulnerability-Research/tree/main/CVE-2025-50738",
+            "source": "cve@mitre.org"
+          },
+          {
+            "url": "https://github.com/usememos/memos",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Product"
+            ]
+          },
+          {
+            "url": "https://github.com/usememos/memos/issues/4707#issuecomment-2898504237",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Exploit",
+              "Issue Tracking"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 5
+    }
+  ],
+  "source": "https://www.cvelogic.com/threat-intelligence/2025-07-29"
+}

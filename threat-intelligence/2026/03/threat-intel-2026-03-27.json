@@ -1,0 +1,1422 @@
+{
+  "schema_version": "2.2",
+  "generated_at": "2026-06-02T07:34:46Z",
+  "day": "2026-03-27",
+  "window": {
+    "utc_start": "2026-03-27",
+    "utc_end": "2026-03-27",
+    "days": 1
+  },
+  "summary": {
+    "brief": "F5 BIG-IP added to CISA KEV — confirmed in-the-wild exploitation. · Microfocus Rumba — exploitation likelihood rose sharply (EPSS 34% → 51% · rising (+18%)). · 10 new critical disclosures — review patch status on exposed services.",
+    "bullets": [
+      "F5 BIG-IP added to CISA KEV — confirmed in-the-wild exploitation.",
+      "Microfocus Rumba — exploitation likelihood rose sharply (EPSS 34% → 51% · rising (+18%)).",
+      "10 new critical disclosures — review patch status on exposed services."
+    ],
+    "counts": {
+      "cves": 12,
+      "kev": 1,
+      "exploit": 0,
+      "epss": 1,
+      "cvss": 10,
+      "patch": 0
+    }
+  },
+  "cves": [
+    {
+      "cve_id": "CVE-2025-53521",
+      "signal_types": [
+        "KEV"
+      ],
+      "signals": {
+        "kev": {
+          "date_added": "2026-03-27"
+        },
+        "exploit": null,
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-10-15",
+        "description": "When a BIG-IP APM access policy is configured on a virtual server, specific malicious traffic can lead to Remote Code Execution (RCE).  \n\nNote: Software versions which have reached End of Technical Support (EoTS) are not evaluated.",
+        "title": "F5 BIG-IP Stack-Based Buffer Overflow Vulnerability",
+        "vendor": "f5",
+        "product": "big-ip_access_policy_manager",
+        "attack_type": "RCE",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-53521",
+        "sourceIdentifier": "f5sirt@f5.com",
+        "published": "2025-10-15T14:15:48.377",
+        "lastModified": "2026-04-02T19:00:01.543",
+        "vulnStatus": "Analyzed",
+        "cisaExploitAdd": "2026-03-27",
+        "cisaActionDue": "2026-03-30",
+        "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+        "cisaVulnerabilityName": "F5 BIG-IP Stack-Based Buffer Overflow Vulnerability",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "When a BIG-IP APM access policy is configured on a virtual server, specific malicious traffic can lead to Remote Code Execution (RCE).  \n\nNote: Software versions which have reached End of Technical Support (EoTS) are not evaluated."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "f5sirt@f5.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "f5sirt@f5.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-121"
+              }
+            ],
+            "source": "f5sirt@f5.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:f5:big-ip_access_policy_manager:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "A7A0C1CA-EDEF-463F-B7C8-8B9E67239FC1",
+                    "versionStartIncluding": "15.1.0",
+                    "versionEndExcluding": "15.1.10.8"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:f5:big-ip_access_policy_manager:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "6494E2A7-1473-46C0-97F8-90827D9466AA",
+                    "versionStartIncluding": "16.1.0",
+                    "versionEndExcluding": "16.1.6.1"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:f5:big-ip_access_policy_manager:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "96D35435-27A7-4A88-9432-1F5AB0112B8C",
+                    "versionStartIncluding": "17.1.0",
+                    "versionEndExcluding": "17.1.3"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:f5:big-ip_access_policy_manager:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "252ED1A4-5F29-4440-B1BA-9621E6791812",
+                    "versionStartIncluding": "17.5.0",
+                    "versionEndExcluding": "17.5.1.3"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://my.f5.com/manage/s/article/K000156741",
+            "source": "f5sirt@f5.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2025-53521",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "US Government Resource"
+            ]
+          }
+        ]
+      },
+      "risk_score": 88,
+      "rank": 1
+    },
+    {
+      "cve_id": "CVE-2016-5228",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 0.33708,
+            "score_date": "2025-03-30"
+          },
+          "current": {
+            "score": 0.51245,
+            "score_date": "2026-03-27"
+          },
+          "delta": 0.17537
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2016-07-03",
+        "description": "Stack-based buffer overflow in the PlayMacro function in ObjectXMacro.ObjectXMacro in WdMacCtl.ocx in Micro Focus Rumba 9.x before 9.3 HF 11997 and 9.4.x before 9.4 HF 12815 allows remote attackers to execute arbitrary code via a long MacroName argument. NOTE: some references mention CVE-2016-5226 but that is not a correct ID for any Rumba vulnerability.",
+        "title": "microfocus rumba Buffer Overflow",
+        "vendor": "microfocus",
+        "product": "rumba",
+        "attack_type": "Buffer Overflow",
+        "cvss_max": 10.0
+      },
+      "cve": {
+        "id": "CVE-2016-5228",
+        "sourceIdentifier": "security@opentext.com",
+        "published": "2016-07-03T01:59:09.923",
+        "lastModified": "2026-05-06T22:30:45.220",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Stack-based buffer overflow in the PlayMacro function in ObjectXMacro.ObjectXMacro in WdMacCtl.ocx in Micro Focus Rumba 9.x before 9.3 HF 11997 and 9.4.x before 9.4 HF 12815 allows remote attackers to execute arbitrary code via a long MacroName argument. NOTE: some references mention CVE-2016-5226 but that is not a correct ID for any Rumba vulnerability."
+          },
+          {
+            "lang": "es",
+            "value": "Desbordamiento del buffer basado en pila en la función PlayMacro en ObjectXMacro.ObjectXMacro en WdMacCtl.ocx en Micro Focus Rumba 9.x en versiones anteriores a 9.3 HF 11997 y 9.4.x en versiones anteriores a 9.4 HF 12815 permite a atacantes remotos ejecutar un código arbitrario a través de un argumento MacroName largo. NOTA: algunas referencias mencionan CVE-2016-5226 pero ese no es el ID corrector para ninguna vulnerabilidad de Rumba."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV2": [
+            {
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+                "baseScore": 10.0,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "baseSeverity": "HIGH",
+              "exploitabilityScore": 10.0,
+              "impactScore": 10.0
+            }
+          ],
+          "cvssMetricV30": [
+            {
+              "cvssData": {
+                "version": "3.0",
+                "vectorString": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-119"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:microfocus:rumba:9.4:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "2505F7B7-F0A6-40F4-950B-B3FFB4A2BF0A"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "http://community.microfocus.com/microfocus/mainframe_solutions/rumba/w/knowledge_base/28600.micro-focus-rumba-9-x-security-update.aspx",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://www.zeroscience.mk/en/vulnerabilities/ZSL-2016-5327.php",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "https://cxsecurity.com/issue/WLB-2016050136",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "https://www.exploit-db.com/exploits/40649/",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          }
+        ]
+      },
+      "risk_score": 86,
+      "rank": 2
+    },
+    {
+      "cve_id": "CVE-2026-30533",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-03-27",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-03-27",
+        "description": "A SQL Injection vulnerability exists in SourceCodester Online Food Ordering System v1.0 in the admin/manage_product.php file via the \"id\" parameter.",
+        "title": "oretnom23 online_food_ordering_system SQL Injection",
+        "vendor": "oretnom23",
+        "product": "online_food_ordering_system",
+        "attack_type": "SQL Injection",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2026-30533",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2026-03-27T16:16:23.917",
+        "lastModified": "2026-03-30T18:17:38.850",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A SQL Injection vulnerability exists in SourceCodester Online Food Ordering System v1.0 in the admin/manage_product.php file via the \"id\" parameter."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-89"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oretnom23:online_food_ordering_system:1.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "0FAA9C4A-10ED-4AA4-8295-F4324DD2F879"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/meifukun/Web-Security-PoCs/blob/main/Online-Food-Ordering-System/SQLi-ManageProduct-id.md",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 3
+    },
+    {
+      "cve_id": "CVE-2019-25651",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-03-27",
+          "previous_max": null,
+          "current_max": 9.0
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-03-27",
+        "description": "Ubiquiti UniFi Network Controller prior to 5.10.12 (excluding 5.6.42), UAP FW prior to 4.0.6, UAP-AC, UAP-AC v2, and UAP-AC Outdoor FW prior to 3.8.17, USW FW prior to 4.0.6, USG FW prior to 4.4.34 uses AES-CBC encryption for device-to-controller communication, which contains cryptographic weaknesses that allow attackers to recover encryption keys from captured traffic. Attackers with adjacent network access can capture sufficient encrypted traffic and exploit AES-CBC mode vulnerabilities to derive the encryption keys, enabling unauthorized control and management of network devices.",
+        "title": "Ubiquiti UniFi Network Controller prior to 5.10.12 (excluding 5.6.42), UAP FW prior to 4.0.6, UAP-AC, UAP-AC v2, and UAP-AC Outdoor FW pr...",
+        "cvss_max": 9.0
+      },
+      "cve": {
+        "id": "CVE-2019-25651",
+        "sourceIdentifier": "disclosure@vulncheck.com",
+        "published": "2026-03-27T22:16:19.107",
+        "lastModified": "2026-04-29T01:00:01.613",
+        "vulnStatus": "Awaiting Analysis",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Ubiquiti UniFi Network Controller prior to 5.10.12 (excluding 5.6.42), UAP FW prior to 4.0.6, UAP-AC, UAP-AC v2, and UAP-AC Outdoor FW prior to 3.8.17, USW FW prior to 4.0.6, USG FW prior to 4.4.34 uses AES-CBC encryption for device-to-controller communication, which contains cryptographic weaknesses that allow attackers to recover encryption keys from captured traffic. Attackers with adjacent network access can capture sufficient encrypted traffic and exploit AES-CBC mode vulnerabilities to derive the encryption keys, enabling unauthorized control and management of network devices."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:A/AC:H/PR:N/UI:N/S:C/C:H/I:H/A:H",
+                "baseScore": 8.3,
+                "baseSeverity": "HIGH"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Primary",
+              "exploitabilityScore": 1.6,
+              "impactScore": 6.0
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:A/AC:H/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.0,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-327"
+              }
+            ],
+            "source": "disclosure@vulncheck.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://community.ui.com/releases/Security-Advisory-Bulletin-004-004/462e561b-9efd-4c23-bfa7-53d59cc64ecb",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://www.vulncheck.com/advisories/ubiquiti-unifi-devices-use-of-aes-cbc-allows-key-recovery-and-unauthorized-device-control",
+            "source": "disclosure@vulncheck.com"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 4
+    },
+    {
+      "cve_id": "CVE-2026-33867",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-03-27",
+          "previous_max": null,
+          "current_max": 9.1
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-03-27",
+        "description": "WWBN AVideo is an open source video platform. In versions up to and including 26.0, AVideo allows content owners to password-protect individual videos. The video password is stored in the database in plaintext — no hashing, salting, or encryption is applied. If an attacker gains read access to the database (via SQL injection, a database backup, or misconfigured access controls), they obtain all video passwords in cleartext. Commit f2d68d2adbf73588ea61be2b781d93120a819e36 contains a patch.",
+        "title": "wwbn avideo SQL Injection",
+        "vendor": "wwbn",
+        "product": "avideo",
+        "attack_type": "SQL Injection",
+        "cvss_max": 9.1
+      },
+      "cve": {
+        "id": "CVE-2026-33867",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2026-03-27T17:16:29.893",
+        "lastModified": "2026-03-31T16:43:15.033",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "WWBN AVideo is an open source video platform. In versions up to and including 26.0, AVideo allows content owners to password-protect individual videos. The video password is stored in the database in plaintext — no hashing, salting, or encryption is applied. If an attacker gains read access to the database (via SQL injection, a database backup, or misconfigured access controls), they obtain all video passwords in cleartext. Commit f2d68d2adbf73588ea61be2b781d93120a819e36 contains a patch."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+                "baseScore": 7.5,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 3.6
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:N/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.1,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-312"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:wwbn:avideo:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "774C24F1-9D26-484F-B931-1DA107C8F588",
+                    "versionEndIncluding": "26.0"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/WWBN/AVideo/commit/f2d68d2adbf73588ea61be2b781d93120a819e36",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://github.com/WWBN/AVideo/security/advisories/GHSA-363v-5rh8-23wg",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Exploit",
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 5
+    },
+    {
+      "cve_id": "CVE-2026-33873",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-03-27",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-03-27",
+        "description": "Langflow is a tool for building and deploying AI-powered agents and workflows. Prior to version 1.9.0, the Agentic Assistant feature in Langflow executes LLM-generated Python code during its validation phase. Although this phase appears intended to validate generated component code, the implementation reaches dynamic execution sinks and instantiates the generated class server-side. In deployments where an attacker can access the Agentic Assistant feature and influence the model output, this can result in arbitrary server-side Python execution. Version 1.9.0 fixes the issue.",
+        "title": "langflow langflow",
+        "vendor": "langflow",
+        "product": "langflow",
+        "cvss_max": 9.9
+      },
+      "cve": {
+        "id": "CVE-2026-33873",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2026-03-27T21:17:23.953",
+        "lastModified": "2026-04-03T17:03:54.760",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Langflow is a tool for building and deploying AI-powered agents and workflows. Prior to version 1.9.0, the Agentic Assistant feature in Langflow executes LLM-generated Python code during its validation phase. Although this phase appears intended to validate generated component code, the implementation reaches dynamic execution sinks and instantiates the generated class server-side. In deployments where an attacker can access the Agentic Assistant feature and influence the model output, this can result in arbitrary server-side Python execution. Version 1.9.0 fixes the issue."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+                "baseScore": 9.9,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.1,
+              "impactScore": 6.0
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:N/SC:H/SI:H/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-94"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:langflow:langflow:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "D51A889E-5C89-4A92-B32B-C91EAF735430",
+                    "versionEndExcluding": "1.9.0"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/langflow-ai/langflow/blob/f7f4d1e70ba5eecd18162ec96f3571c2cfbcd1fc/src/backend/base/langflow/agentic/api/router.py#L252-L297",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Product"
+            ]
+          },
+          {
+            "url": "https://github.com/langflow-ai/langflow/blob/f7f4d1e70ba5eecd18162ec96f3571c2cfbcd1fc/src/backend/base/langflow/agentic/api/schemas.py#L20-L31",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Product"
+            ]
+          },
+          {
+            "url": "https://github.com/langflow-ai/langflow/blob/f7f4d1e70ba5eecd18162ec96f3571c2cfbcd1fc/src/backend/base/langflow/agentic/helpers/code_extraction.py#L11-L53",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Product"
+            ]
+          },
+          {
+            "url": "https://github.com/langflow-ai/langflow/blob/f7f4d1e70ba5eecd18162ec96f3571c2cfbcd1fc/src/backend/base/langflow/agentic/helpers/validation.py#L27-L47",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Product"
+            ]
+          },
+          {
+            "url": "https://github.com/langflow-ai/langflow/blob/f7f4d1e70ba5eecd18162ec96f3571c2cfbcd1fc/src/backend/base/langflow/agentic/services/assistant_service.py#L142-L156",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Product"
+            ]
+          },
+          {
+            "url": "https://github.com/langflow-ai/langflow/blob/f7f4d1e70ba5eecd18162ec96f3571c2cfbcd1fc/src/backend/base/langflow/agentic/services/assistant_service.py#L259-L300",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Product"
+            ]
+          },
+          {
+            "url": "https://github.com/langflow-ai/langflow/blob/f7f4d1e70ba5eecd18162ec96f3571c2cfbcd1fc/src/backend/base/langflow/agentic/services/assistant_service.py#L58-L79",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Product"
+            ]
+          },
+          {
+            "url": "https://github.com/langflow-ai/langflow/blob/f7f4d1e70ba5eecd18162ec96f3571c2cfbcd1fc/src/backend/base/langflow/api/utils/core.py#L38",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Product"
+            ]
+          },
+          {
+            "url": "https://github.com/langflow-ai/langflow/blob/f7f4d1e70ba5eecd18162ec96f3571c2cfbcd1fc/src/backend/base/langflow/api/v1/login.py#L96-L135",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Product"
+            ]
+          },
+          {
+            "url": "https://github.com/langflow-ai/langflow/blob/f7f4d1e70ba5eecd18162ec96f3571c2cfbcd1fc/src/backend/base/langflow/services/auth/utils.py#L156-L163",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Product"
+            ]
+          },
+          {
+            "url": "https://github.com/langflow-ai/langflow/blob/f7f4d1e70ba5eecd18162ec96f3571c2cfbcd1fc/src/backend/base/langflow/services/auth/utils.py#L39-L53",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Product"
+            ]
+          },
+          {
+            "url": "https://github.com/langflow-ai/langflow/blob/f7f4d1e70ba5eecd18162ec96f3571c2cfbcd1fc/src/lfx/src/lfx/custom/validate.py#L241-L272",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Product"
+            ]
+          },
+          {
+            "url": "https://github.com/langflow-ai/langflow/blob/f7f4d1e70ba5eecd18162ec96f3571c2cfbcd1fc/src/lfx/src/lfx/custom/validate.py#L394-L399",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Product"
+            ]
+          },
+          {
+            "url": "https://github.com/langflow-ai/langflow/blob/f7f4d1e70ba5eecd18162ec96f3571c2cfbcd1fc/src/lfx/src/lfx/custom/validate.py#L441-L443",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Product"
+            ]
+          },
+          {
+            "url": "https://github.com/langflow-ai/langflow/blob/f7f4d1e70ba5eecd18162ec96f3571c2cfbcd1fc/src/lfx/src/lfx/services/settings/auth.py#L71-L87",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Product"
+            ]
+          },
+          {
+            "url": "https://github.com/langflow-ai/langflow/security/advisories/GHSA-v8hw-mh8c-jxfc",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Exploit",
+              "Mitigation",
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 6
+    },
+    {
+      "cve_id": "CVE-2026-33875",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-03-27",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-03-27",
+        "description": "Gematik Authenticator securely authenticates users for login to digital health applications. Versions prior to 4.16.0 are vulnerable to authentication flow hijacking, potentially allowing attackers to authenticate with the identities of victim users who click on a malicious deep link. Update Gematik Authenticator to version 4.16.0 or greater to receive a patch. There are no known workarounds.",
+        "title": "gematik authenticator",
+        "vendor": "gematik",
+        "product": "authenticator",
+        "cvss_max": 9.3
+      },
+      "cve": {
+        "id": "CVE-2026-33875",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2026-03-27T21:17:24.377",
+        "lastModified": "2026-04-03T16:16:40.093",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Gematik Authenticator securely authenticates users for login to digital health applications. Versions prior to 4.16.0 are vulnerable to authentication flow hijacking, potentially allowing attackers to authenticate with the identities of victim users who click on a malicious deep link. Update Gematik Authenticator to version 4.16.0 or greater to receive a patch. There are no known workarounds."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:N",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 5.8
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-940"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:gematik:authenticator:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "B6F3F2CC-8AAB-467C-A2CB-D8D994FB4195",
+                    "versionEndExcluding": "4.16.0"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/gematik/app-Authenticator/security/advisories/GHSA-qg87-cf56-2rmr",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://www.machinespirits.com/advisory/f41e56/",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 7
+    },
+    {
+      "cve_id": "CVE-2026-33937",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-03-27",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-03-27",
+        "description": "Handlebars provides the power necessary to let users build semantic templates. In versions 4.0.0 through 4.7.8, `Handlebars.compile()` accepts a pre-parsed AST object in addition to a template string. The `value` field of a `NumberLiteral` AST node is emitted directly into the generated JavaScript without quoting or sanitization. An attacker who can supply a crafted AST to `compile()` can therefore inject and execute arbitrary JavaScript, leading to Remote Code Execution on the server. Version 4.7.9 fixes the issue. Some workarounds are available. Validate input type before calling `Handlebars.compile()`; ensure the argument is always a  `string`, never a plain object or JSON-deserialized value. Use the Handlebars runtime-only build (`handlebars/runtime`) on the server if templates are pre-compiled at build time; `compile()` will be unavailable.",
+        "title": "handlebarsjs handlebars",
+        "vendor": "handlebarsjs",
+        "product": "handlebars",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2026-33937",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2026-03-27T21:17:27.417",
+        "lastModified": "2026-03-31T17:49:05.807",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Handlebars provides the power necessary to let users build semantic templates. In versions 4.0.0 through 4.7.8, `Handlebars.compile()` accepts a pre-parsed AST object in addition to a template string. The `value` field of a `NumberLiteral` AST node is emitted directly into the generated JavaScript without quoting or sanitization. An attacker who can supply a crafted AST to `compile()` can therefore inject and execute arbitrary JavaScript, leading to Remote Code Execution on the server. Version 4.7.9 fixes the issue. Some workarounds are available. Validate input type before calling `Handlebars.compile()`; ensure the argument is always a  `string`, never a plain object or JSON-deserialized value. Use the Handlebars runtime-only build (`handlebars/runtime`) on the server if templates are pre-compiled at build time; `compile()` will be unavailable."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-94"
+              },
+              {
+                "lang": "en",
+                "value": "CWE-843"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:handlebarsjs:handlebars:*:*:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "A9D1F9A7-8359-4C3F-9932-4A085094F388",
+                    "versionStartIncluding": "4.0.0",
+                    "versionEndExcluding": "4.7.9"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/handlebars-lang/handlebars.js/commit/68d8df5a88e0a26fe9e6084c5c6aaebe67b07da2",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://github.com/handlebars-lang/handlebars.js/releases/tag/v4.7.9",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Release Notes"
+            ]
+          },
+          {
+            "url": "https://github.com/handlebars-lang/handlebars.js/security/advisories/GHSA-2w6w-674q-4c4q",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Exploit",
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 8
+    },
+    {
+      "cve_id": "CVE-2026-33976",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-03-27",
+          "previous_max": null,
+          "current_max": 9.6
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-03-27",
+        "description": "Notesnook is a note-taking app. Prior to version 3.3.11 on Web/Desktop and 3.3.17 on Android/iOS, a stored XSS in the Web Clipper rendering flow can be escalated to remote code execution in the desktop app. The root cause is that the clipper preserves attacker-controlled attributes from the source page’s root element and stores them inside web-clip HTML. When the clip is later opened, Notesnook renders that HTML into a same-origin, unsandboxed iframe using `contentDocument.write(...)`. Event-handler attributes such as `onload`, `onclick`, or `onmouseover` execute in the Notesnook origin. In the desktop app, this becomes RCE because Electron is configured with `nodeIntegration: true` and `contextIsolation: false`. Version 3.3.11 Web/Desktop and 3.3.17 on Android/iOS patch the issue.",
+        "title": "streetwriters notesnook_desktop RCE",
+        "vendor": "streetwriters",
+        "product": "notesnook_desktop",
+        "attack_type": "RCE",
+        "cvss_max": 9.6
+      },
+      "cve": {
+        "id": "CVE-2026-33976",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2026-03-27T22:16:22.250",
+        "lastModified": "2026-03-31T18:21:36.440",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Notesnook is a note-taking app. Prior to version 3.3.11 on Web/Desktop and 3.3.17 on Android/iOS, a stored XSS in the Web Clipper rendering flow can be escalated to remote code execution in the desktop app. The root cause is that the clipper preserves attacker-controlled attributes from the source page’s root element and stores them inside web-clip HTML. When the clip is later opened, Notesnook renders that HTML into a same-origin, unsandboxed iframe using `contentDocument.write(...)`. Event-handler attributes such as `onload`, `onclick`, or `onmouseover` execute in the Notesnook origin. In the desktop app, this becomes RCE because Electron is configured with `nodeIntegration: true` and `contextIsolation: false`. Version 3.3.11 Web/Desktop and 3.3.17 on Android/iOS patch the issue."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H",
+                "baseScore": 9.6,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 6.0
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-79"
+              },
+              {
+                "lang": "en",
+                "value": "CWE-94"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:streetwriters:notesnook_desktop:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "08C11EDB-67C1-4E85-A07D-0164CB036757",
+                    "versionEndExcluding": "3.3.11"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:streetwriters:notesnook_mobile:*:*:*:*:*:android:*:*",
+                    "matchCriteriaId": "105C802D-D317-4B9A-B883-D07A1E0840E6",
+                    "versionEndExcluding": "3.3.17"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:streetwriters:notesnook_mobile:*:*:*:*:*:iphone_os:*:*",
+                    "matchCriteriaId": "858B01C2-38C3-4093-A638-E380119ABDF5",
+                    "versionEndExcluding": "3.3.17"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/streetwriters/notesnook/security/advisories/GHSA-f42f-phvp-43x5",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Exploit",
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 9
+    },
+    {
+      "cve_id": "CVE-2026-33992",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-03-27",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-03-27",
+        "description": "pyLoad is a free and open-source download manager written in Python. Prior to version 0.5.0b3.dev97, PyLoad's download engine accepts arbitrary URLs without validation, enabling Server-Side Request Forgery (SSRF) attacks. An authenticated attacker can exploit this to access internal network services and exfiltrate cloud provider metadata. On DigitalOcean droplets, this exposes sensitive infrastructure data including droplet ID, network configuration, region, authentication keys, and SSH keys configured in user-data/cloud-init. Version 0.5.0b3.dev97 contains a patch.",
+        "title": "pyload pyload SSRF",
+        "vendor": "pyload",
+        "product": "pyload",
+        "attack_type": "SSRF",
+        "cvss_max": 9.3
+      },
+      "cve": {
+        "id": "CVE-2026-33992",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2026-03-27T23:17:14.070",
+        "lastModified": "2026-03-31T14:49:16.640",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "pyLoad is a free and open-source download manager written in Python. Prior to version 0.5.0b3.dev97, PyLoad's download engine accepts arbitrary URLs without validation, enabling Server-Side Request Forgery (SSRF) attacks. An authenticated attacker can exploit this to access internal network services and exfiltrate cloud provider metadata. On DigitalOcean droplets, this exposes sensitive infrastructure data including droplet ID, network configuration, region, authentication keys, and SSH keys configured in user-data/cloud-init. Version 0.5.0b3.dev97 contains a patch."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+                "baseScore": 6.5,
+                "baseSeverity": "MEDIUM"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 3.6
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:N/SC:H/SI:H/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-918"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:pyload:pyload:0.5.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "E5A06D79-6D64-41FB-9040-17E9630DF4E9"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/pyload/pyload/commit/b76b6d4ee5e32d2118d26afdee1d0a9e57d4bfe8",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://github.com/pyload/pyload/security/advisories/GHSA-m74m-f7cr-432x",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Exploit",
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 10
+    },
+    {
+      "cve_id": "CVE-2026-34205",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-03-27",
+          "previous_max": null,
+          "current_max": 9.6
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-03-27",
+        "description": "Home Assistant is open source home automation software that puts local control and privacy first. Home Assistant apps (formerly add-ons) configured with host network mode expose unauthenticated endpoints bound to the internal Docker bridge interface to the local network. On Linux, this configuration does not restrict access to the app as intended, allowing any device on the same network to reach these endpoints without authentication. Home Assistant Supervisor 2026.03.02 addresses the issue.",
+        "title": "Home Assistant is open source home automation software that puts local control and privacy first.",
+        "cvss_max": 9.6
+      },
+      "cve": {
+        "id": "CVE-2026-34205",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2026-03-27T20:16:35.360",
+        "lastModified": "2026-03-30T13:26:29.793",
+        "vulnStatus": "Awaiting Analysis",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Home Assistant is open source home automation software that puts local control and privacy first. Home Assistant apps (formerly add-ons) configured with host network mode expose unauthenticated endpoints bound to the internal Docker bridge interface to the local network. On Linux, this configuration does not restrict access to the app as intended, allowing any device on the same network to reach these endpoints without authentication. Home Assistant Supervisor 2026.03.02 addresses the issue."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+                "baseScore": 9.6,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 6.0
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-923"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/home-assistant/core/security/advisories/GHSA-gh5m-4m97-c95h",
+            "source": "security-advisories@github.com"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 11
+    },
+    {
+      "cve_id": "CVE-2026-34374",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-03-27",
+          "previous_max": null,
+          "current_max": 9.1
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-03-27",
+        "description": "WWBN AVideo is an open source video platform. In versions up to and including 26.0, the `Live_schedule::keyExists()` method constructs a SQL query by interpolating a stream key directly into the query string without parameterization. This method is called as a fallback from `LiveTransmition::keyExists()` when the initial parameterized lookup returns no results. Although the calling function correctly uses parameterized queries for its own lookup, the fallback path to `Live_schedule::keyExists()` undoes this protection entirely. This vulnerability is distinct from GHSA-pvw4-p2jm-chjm, which covers SQL injection via the `live_schedule_id` parameter in the reminder function. This finding targets the stream key lookup path used during RTMP publish authentication. As of time of publication, no patched versions are available.",
+        "title": "wwbn avideo SQL injection",
+        "vendor": "wwbn",
+        "product": "avideo",
+        "attack_type": "SQL injection",
+        "cvss_max": 9.1
+      },
+      "cve": {
+        "id": "CVE-2026-34374",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2026-03-27T19:16:42.930",
+        "lastModified": "2026-03-31T18:49:13.140",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "WWBN AVideo is an open source video platform. In versions up to and including 26.0, the `Live_schedule::keyExists()` method constructs a SQL query by interpolating a stream key directly into the query string without parameterization. This method is called as a fallback from `LiveTransmition::keyExists()` when the initial parameterized lookup returns no results. Although the calling function correctly uses parameterized queries for its own lookup, the fallback path to `Live_schedule::keyExists()` undoes this protection entirely. This vulnerability is distinct from GHSA-pvw4-p2jm-chjm, which covers SQL injection via the `live_schedule_id` parameter in the reminder function. This finding targets the stream key lookup path used during RTMP publish authentication. As of time of publication, no patched versions are available."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+                "baseScore": 9.1,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.2
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-89"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:wwbn:avideo:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "774C24F1-9D26-484F-B931-1DA107C8F588",
+                    "versionEndIncluding": "26.0"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/WWBN/AVideo/security/advisories/GHSA-xgv5-66wp-ch88",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Exploit",
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 12
+    }
+  ],
+  "source": "https://www.cvelogic.com/threat-intelligence/2026-03-27"
+}

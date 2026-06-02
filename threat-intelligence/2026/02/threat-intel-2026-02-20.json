@@ -1,0 +1,2257 @@
+{
+  "schema_version": "2.2",
+  "generated_at": "2026-06-02T07:34:28Z",
+  "day": "2026-02-20",
+  "window": {
+    "utc_start": "2026-02-20",
+    "utc_end": "2026-02-20",
+    "days": 1
+  },
+  "summary": {
+    "brief": "Roundcube Webmail: 2 CVEs added to CISA KEV today. · Hp Openvms — exploitation likelihood rose sharply (EPSS 11% → 26% · rising (+15%)). · 10 new critical disclosures — review patch status on exposed services.",
+    "bullets": [
+      "Roundcube Webmail: 2 CVEs added to CISA KEV today.",
+      "Hp Openvms — exploitation likelihood rose sharply (EPSS 11% → 26% · rising (+15%)).",
+      "10 new critical disclosures — review patch status on exposed services."
+    ],
+    "counts": {
+      "cves": 16,
+      "kev": 2,
+      "exploit": 0,
+      "epss": 4,
+      "cvss": 10,
+      "patch": 0
+    }
+  },
+  "cves": [
+    {
+      "cve_id": "CVE-2025-49113",
+      "signal_types": [
+        "KEV"
+      ],
+      "signals": {
+        "kev": {
+          "date_added": "2026-02-20"
+        },
+        "exploit": null,
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-06-02",
+        "description": "Roundcube Webmail before 1.5.10 and 1.6.x before 1.6.11 allows remote code execution by authenticated users because the _from parameter in a URL is not validated in program/actions/settings/upload.php, leading to PHP Object Deserialization.",
+        "title": "RoundCube Webmail Deserialization of Untrusted Data Vulnerability",
+        "vendor": "roundcube",
+        "product": "webmail",
+        "attack_type": "RCE",
+        "cvss_max": 9.9
+      },
+      "cve": {
+        "id": "CVE-2025-49113",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2025-06-02T05:15:53.420",
+        "lastModified": "2026-02-23T13:24:21.387",
+        "vulnStatus": "Analyzed",
+        "cisaExploitAdd": "2026-02-20",
+        "cisaActionDue": "2026-03-13",
+        "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+        "cisaVulnerabilityName": "RoundCube Webmail Deserialization of Untrusted Data Vulnerability",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Roundcube Webmail before 1.5.10 and 1.6.x before 1.6.11 allows remote code execution by authenticated users because the _from parameter in a URL is not validated in program/actions/settings/upload.php, leading to PHP Object Deserialization."
+          },
+          {
+            "lang": "es",
+            "value": "Roundcube Webmail anterior a 1.5.10 y 1.6.x anterior a 1.6.11 permite la ejecución remota de código por parte de usuarios autenticados porque el parámetro _from en una URL no está validado en program/actions/settings/upload.php, lo que lleva a la deserialización de objetos PHP."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+                "baseScore": 9.9,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "cve@mitre.org",
+              "type": "Secondary",
+              "exploitabilityScore": 3.1,
+              "impactScore": 6.0
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 8.8,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-502"
+              }
+            ],
+            "source": "cve@mitre.org"
+          },
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-502"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:roundcube:webmail:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "AAD2AF8E-DC67-45E3-ABC2-872B771C88C5",
+                    "versionEndExcluding": "1.5.10"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:roundcube:webmail:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "5DA16DB4-CE88-4E84-BBD6-2A749FFDA43D",
+                    "versionStartIncluding": "1.6.0",
+                    "versionEndExcluding": "1.6.11"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:debian:debian_linux:11.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "FA6FEEC2-9F11-4643-8827-749718254FED"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://fearsoff.org/research/roundcube",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/roundcube/roundcubemail/commit/0376f69e958a8fef7f6f09e352c541b4e7729c4d",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://github.com/roundcube/roundcubemail/commit/7408f31379666124a39f9cb1018f62bc5e2dc695",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://github.com/roundcube/roundcubemail/commit/c50a07d88ca38f018a0f4a0b008e9a1deb32637e",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://github.com/roundcube/roundcubemail/pull/9865",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Issue Tracking"
+            ]
+          },
+          {
+            "url": "https://github.com/roundcube/roundcubemail/releases/tag/1.5.10",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Release Notes"
+            ]
+          },
+          {
+            "url": "https://github.com/roundcube/roundcubemail/releases/tag/1.6.11",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Release Notes"
+            ]
+          },
+          {
+            "url": "https://roundcube.net/news/2025/06/01/security-updates-1.6.11-and-1.5.10",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://www.vicarius.io/vsociety/posts/cve-2025-49113-roundcube-mitigation-script",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Exploit",
+              "Mitigation",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.vicarius.io/vsociety/posts/cve-2025-49113-roundcube-vulnerability-detection",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Exploit",
+              "Mitigation",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "http://www.openwall.com/lists/oss-security/2025/06/02/3",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Mailing List",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://lists.debian.org/debian-lts-announce/2025/06/msg00008.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Mailing List",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2025-49113",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "US Government Resource"
+            ]
+          }
+        ]
+      },
+      "risk_score": 88,
+      "rank": 1
+    },
+    {
+      "cve_id": "CVE-2008-5120",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 0.10655,
+            "score_date": "2026-01-08"
+          },
+          "current": {
+            "score": 0.2589,
+            "score_date": "2026-02-20"
+          },
+          "delta": 0.15235
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2008-11-18",
+        "description": "Stack-based buffer overflow in the Process Software MultiNet finger service (aka FINGERD) for HP OpenVMS 8.3 allows remote attackers to execute arbitrary code via a long request string.",
+        "title": "hp openvms Buffer Overflow",
+        "vendor": "hp",
+        "product": "openvms",
+        "attack_type": "Buffer Overflow",
+        "cvss_max": 10.0
+      },
+      "cve": {
+        "id": "CVE-2008-5120",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2008-11-18T00:30:00.500",
+        "lastModified": "2026-04-23T00:35:47.467",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Stack-based buffer overflow in the Process Software MultiNet finger service (aka FINGERD) for HP OpenVMS 8.3 allows remote attackers to execute arbitrary code via a long request string."
+          },
+          {
+            "lang": "es",
+            "value": "Un desbordamiento de búfer basado en Process Software MultiNet finger service (también conocido como FINGERD) para HP OpenVMS 8.3 permite a atacantes remotos ejecutar código arbitrario a través de una peticion con una cadena de texto excesivamente larga."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV2": [
+            {
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+                "baseScore": 10.0,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "baseSeverity": "HIGH",
+              "exploitabilityScore": 10.0,
+              "impactScore": 10.0
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-119"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:hp:openvms:8.3:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "C447F682-D584-4704-8195-21ABE097CC66"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "http://securityreason.com/securityalert/4602",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://www.securityfocus.com/archive/1/495207/100/0/threaded",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://www.securityfocus.com/bid/30589",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          }
+        ]
+      },
+      "risk_score": 86,
+      "rank": 2
+    },
+    {
+      "cve_id": "CVE-2021-35402",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-02-20",
+          "previous_max": null,
+          "current_max": 10.0
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-02-20",
+        "description": "PROLiNK PRC2402M 20190909 before 2021-06-13 allows live_api.cgi?page=satellite_list OS command injection via shell metacharacters in the ip parameter (for satellite_status).",
+        "title": "PROLiNK PRC2402M 20190909 before 2021-06-13 allows live_api.cgi?page=satellite_list OS command injection via shell metacharacters in the...",
+        "attack_type": "Command Injection",
+        "cvss_max": 10.0
+      },
+      "cve": {
+        "id": "CVE-2021-35402",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2026-02-20T19:23:14.200",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "PROLiNK PRC2402M 20190909 before 2021-06-13 allows live_api.cgi?page=satellite_list OS command injection via shell metacharacters in the ip parameter (for satellite_status)."
+          },
+          {
+            "lang": "es",
+            "value": "PROLiNK PRC2402M 20190909 antes del 2021-06-13 permite la inyección de comandos del sistema operativo en live_api.cgi?page=satellite_list a través de metacaracteres de shell en el parámetro ip (para satellite_status)."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+                "baseScore": 10.0,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "cve@mitre.org",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 6.0
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-78"
+              }
+            ],
+            "source": "cve@mitre.org"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://starlabs.sg/advisories/21/21-35402/",
+            "source": "cve@mitre.org"
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 3
+    },
+    {
+      "cve_id": "CVE-2007-1350",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 0.67648,
+            "score_date": "2025-10-25"
+          },
+          "current": {
+            "score": 0.81253,
+            "score_date": "2026-02-20"
+          },
+          "delta": 0.13605
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2007-03-08",
+        "description": "Stack-based buffer overflow in webadmin.exe in Novell NetMail 3.5.2 allows remote attackers to execute arbitrary code via a long username during HTTP Basic authentication.",
+        "title": "novell netmail Buffer Overflow",
+        "vendor": "novell",
+        "product": "netmail",
+        "attack_type": "Buffer Overflow",
+        "cvss_max": 6.8
+      },
+      "cve": {
+        "id": "CVE-2007-1350",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2007-03-08T22:19:00.000",
+        "lastModified": "2026-04-23T00:35:47.467",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Stack-based buffer overflow in webadmin.exe in Novell NetMail 3.5.2 allows remote attackers to execute arbitrary code via a long username during HTTP Basic authentication."
+          },
+          {
+            "lang": "es",
+            "value": "Desbordamiento basado en pila en el webadmin.exe del Novell NetMail 3.5.2 permite a atacantes remotos ejecutar código de su elección mediante un nombre de usuario largo durante la autenticación HTTP Básica."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV2": [
+            {
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+                "baseScore": 6.8,
+                "baseSeverity": "MEDIUM"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "baseSeverity": "MEDIUM",
+              "exploitabilityScore": 8.6,
+              "impactScore": 6.4
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "NVD-CWE-Other"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:novell:netmail:3.5.2:a:*:*:*:*:*:*",
+                    "matchCriteriaId": "6AFAEE62-246B-4687-8B9A-A6C142D72308"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:novell:netmail:3.5.2:b:*:*:*:*:*:*",
+                    "matchCriteriaId": "21946EC8-3327-4AE6-9A0D-09C1EBCC7683"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:novell:netmail:3.5.2:c:*:*:*:*:*:*",
+                    "matchCriteriaId": "0B922B34-BBCA-4791-92EF-43ADDA7E2473"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:novell:netmail:3.5.2:c1:*:*:*:*:*:*",
+                    "matchCriteriaId": "21A064F2-7DFD-47FE-8537-1DC60B8E1087"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:novell:netmail:3.5.2:d:*:*:*:*:*:*",
+                    "matchCriteriaId": "7F7C6105-37B1-491A-BE29-34D409CC22FA"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:novell:netmail:3.5.2:e-ftfl:*:*:*:*:*:*",
+                    "matchCriteriaId": "36CAB36C-7E40-4DE2-BC52-CDF5BE5C1371"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "http://download.novell.com/Download?buildid=sMYRODW09pw",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "http://secunia.com/advisories/24445",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://securityreason.com/securityalert/2395",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://www.kb.cert.org/vuls/id/919369",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "US Government Resource"
+            ]
+          },
+          {
+            "url": "http://www.securityfocus.com/archive/1/462154/100/0/threaded",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://www.securityfocus.com/bid/22857",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Patch",
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "http://www.securitytracker.com/id?1017734",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://www.vupen.com/english/advisories/2007/0870",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://www.zerodayinitiative.com/advisories/ZDI-07-009.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://exchange.xforce.ibmcloud.com/vulnerabilities/32861",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          }
+        ]
+      },
+      "risk_score": 81,
+      "rank": 4
+    },
+    {
+      "cve_id": "CVE-2008-0947",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 0.32205,
+            "score_date": "2025-11-18"
+          },
+          "current": {
+            "score": 0.45097,
+            "score_date": "2026-02-20"
+          },
+          "delta": 0.12892
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2008-03-19",
+        "description": "Buffer overflow in the RPC library used by libgssrpc and kadmind in MIT Kerberos 5 (krb5) 1.4 through 1.6.3 allows remote attackers to execute arbitrary code by triggering a large number of open file descriptors.",
+        "title": "mit kerberos_5 Buffer Overflow",
+        "vendor": "mit",
+        "product": "kerberos_5",
+        "attack_type": "Buffer Overflow",
+        "cvss_max": 10.0
+      },
+      "cve": {
+        "id": "CVE-2008-0947",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2008-03-19T00:44:00.000",
+        "lastModified": "2026-04-23T00:35:47.467",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Buffer overflow in the RPC library used by libgssrpc and kadmind in MIT Kerberos 5 (krb5) 1.4 through 1.6.3 allows remote attackers to execute arbitrary code by triggering a large number of open file descriptors."
+          },
+          {
+            "lang": "es",
+            "value": "Desbordamiento de búfer en la librería RPC utilizada por libgssrpc y kadmind en MIT Kerberos 5 (krb5) de 1.4 a 1.6.3 permite a atacantes remotos ejecutar código de su elección disparando una gran cantidad de descriptores de archivo abierto."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV2": [
+            {
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+                "baseScore": 10.0,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "baseSeverity": "HIGH",
+              "exploitabilityScore": 10.0,
+              "impactScore": 10.0
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-119"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:mit:kerberos_5:1.4:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "52F0EECF-7787-442B-9888-D22F7D36C3DE"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:mit:kerberos_5:1.4.1:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "EF344AED-BE00-4A9B-A9DE-C6FB0BEE4617"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:mit:kerberos_5:1.4.2:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "567406CA-58D8-453E-B36E-6D1D2EFC8EB6"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:mit:kerberos_5:1.4.3:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "7830E03F-A813-4E35-893E-BF27395CEFB3"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:mit:kerberos_5:1.4.4:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "7764411E-C056-4696-822E-235F2620FAC4"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:mit:kerberos_5:1.5:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "4DD315AE-868B-4061-BF01-CDBF59B02499"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:mit:kerberos_5:1.5.1:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "B639DD5F-71C7-4D9B-BA5C-51CAF64140B6"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:mit:kerberos_5:1.5.2:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "2B904DCE-D59F-45C7-A814-DE42CF02792D"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:mit:kerberos_5:1.5.3:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "9957FE9E-1E89-4C27-852C-44F866A1834E"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:mit:kerberos_5:1.6:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "2C382DAA-68D2-4DD9-BE29-8EEB0BAF1A7A"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:mit:kerberos_5:1.6.1:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "73BB258E-51CF-4D12-836B-BCEA587A3F5F"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:mit:kerberos_5:1.6.2:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "F81DE01C-BA3B-40B4-BD85-17692F0AF8A8"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:mit:kerberos_5:1.6.3:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "40563B3B-4AC7-4419-AB6A-72BDE484DB66"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "http://lists.opensuse.org/opensuse-security-announce/2008-03/msg00006.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://marc.info/?l=bugtraq&m=130497213107107&w=2",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://secunia.com/advisories/29424",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://secunia.com/advisories/29428",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://secunia.com/advisories/29435",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://secunia.com/advisories/29438",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://secunia.com/advisories/29451",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://secunia.com/advisories/29457",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://secunia.com/advisories/29462",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://secunia.com/advisories/29464",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://secunia.com/advisories/29516",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://secunia.com/advisories/29663",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://security.gentoo.org/glsa/glsa-200803-31.xml",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://securityreason.com/securityalert/3752",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://support.novell.com/docs/Readmes/InfoDocument/patchbuilder/readme_5022520.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://support.novell.com/docs/Readmes/InfoDocument/patchbuilder/readme_5022542.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://web.mit.edu/kerberos/advisories/MITKRB5-SA-2008-002.txt",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://wiki.rpath.com/Advisories:rPSA-2008-0112",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://wiki.rpath.com/wiki/Advisories:rPSA-2008-0112",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://www.debian.org/security/2008/dsa-1524",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://www.kb.cert.org/vuls/id/374121",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "US Government Resource"
+            ]
+          },
+          {
+            "url": "http://www.mandriva.com/security/advisories?name=MDVSA-2008:069",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://www.mandriva.com/security/advisories?name=MDVSA-2008:070",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://www.redhat.com/support/errata/RHSA-2008-0164.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://www.securityfocus.com/archive/1/489762/100/0/threaded",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://www.securityfocus.com/archive/1/489784/100/0/threaded",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://www.securityfocus.com/archive/1/489883/100/0/threaded",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://www.securityfocus.com/bid/28302",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://www.securitytracker.com/id?1019631",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://www.ubuntu.com/usn/usn-587-1",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://www.us-cert.gov/cas/techalerts/TA08-079B.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "US Government Resource"
+            ]
+          },
+          {
+            "url": "http://www.vupen.com/english/advisories/2008/0922/references",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://www.vupen.com/english/advisories/2008/1102/references",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "https://exchange.xforce.ibmcloud.com/vulnerabilities/41273",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "https://oval.cisecurity.org/repository/search/definition/oval%3Aorg.mitre.oval%3Adef%3A10984",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "https://www.redhat.com/archives/fedora-package-announce/2008-March/msg00537.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "https://www.redhat.com/archives/fedora-package-announce/2008-March/msg00544.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          }
+        ]
+      },
+      "risk_score": 86,
+      "rank": 5
+    },
+    {
+      "cve_id": "CVE-2016-10960",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 0.57085,
+            "score_date": "2025-12-21"
+          },
+          "current": {
+            "score": 0.71112,
+            "score_date": "2026-02-20"
+          },
+          "delta": 0.14027
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2019-09-16",
+        "description": "The wsecure plugin before 2.4 for WordPress has remote code execution via shell metacharacters in the wsecure-config.php publish parameter.",
+        "title": "joomlaserviceprovider wsecure RCE",
+        "vendor": "joomlaserviceprovider",
+        "product": "wsecure",
+        "attack_type": "RCE",
+        "cvss_max": 8.8
+      },
+      "cve": {
+        "id": "CVE-2016-10960",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2019-09-16T13:15:10.510",
+        "lastModified": "2024-11-21T02:45:10.557",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The wsecure plugin before 2.4 for WordPress has remote code execution via shell metacharacters in the wsecure-config.php publish parameter."
+          },
+          {
+            "lang": "es",
+            "value": "El plugin wsecure versiones anteriores a 2.4 para WordPress, presenta una ejecución de código remota por medio de metacaracteres de shell en el parámetro publish en el archivo wsecure-config.php"
+          }
+        ],
+        "metrics": {
+          "cvssMetricV2": [
+            {
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:L/Au:S/C:P/I:P/A:P",
+                "baseScore": 6.5,
+                "baseSeverity": "MEDIUM"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "baseSeverity": "MEDIUM",
+              "exploitabilityScore": 8.0,
+              "impactScore": 6.4
+            }
+          ],
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 8.8,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-20"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:joomlaserviceprovider:wsecure:*:*:*:*:lite:wordpress:*:*",
+                    "matchCriteriaId": "6967DC21-B48E-4461-81F0-19737554E574",
+                    "versionEndExcluding": "2.4"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://wordpress.org/plugins/wsecure/#developers",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Release Notes"
+            ]
+          },
+          {
+            "url": "https://www.pluginvulnerabilities.com/2016/07/12/remote-code-execution-rce-vulnerability-in-wsecure-lite/",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 84,
+      "rank": 6
+    },
+    {
+      "cve_id": "CVE-2019-25441",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-02-20",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-02-20",
+        "description": "thesystem 1.0 contains a command injection vulnerability that allows unauthenticated attackers to execute arbitrary system commands by submitting malicious input to the run_command endpoint. Attackers can send POST requests with shell commands in the command parameter to execute arbitrary code on the server without authentication.",
+        "title": "kostasmitroglou thesystem Command Injection",
+        "vendor": "kostasmitroglou",
+        "product": "thesystem",
+        "attack_type": "Command Injection",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2019-25441",
+        "sourceIdentifier": "disclosure@vulncheck.com",
+        "published": "2026-02-20T23:16:00.990",
+        "lastModified": "2026-03-12T16:12:14.967",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "thesystem 1.0 contains a command injection vulnerability that allows unauthenticated attackers to execute arbitrary system commands by submitting malicious input to the run_command endpoint. Attackers can send POST requests with shell commands in the command parameter to execute arbitrary code on the server without authentication."
+          },
+          {
+            "lang": "es",
+            "value": "thesystem 1.0 contiene una vulnerabilidad de inyección de comandos que permite a atacantes no autenticados ejecutar comandos de sistema arbitrarios al enviar entrada maliciosa al endpoint run_command. Los atacantes pueden enviar solicitudes POST con comandos de shell en el parámetro command para ejecutar código arbitrario en el servidor sin autenticación."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-78"
+              }
+            ],
+            "source": "disclosure@vulncheck.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:kostasmitroglou:thesystem:1.0.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "9880CB55-F769-45D4-8B05-6F92B87FA148"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/kostasmitroglou/thesystem",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Product"
+            ]
+          },
+          {
+            "url": "https://www.exploit-db.com/exploits/47441",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Exploit",
+              "VDB Entry"
+            ]
+          },
+          {
+            "url": "https://www.vulncheck.com/advisories/thesystem-command-injection-via-runcommand-endpoint",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Broken Link"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 7
+    },
+    {
+      "cve_id": "CVE-2025-68461",
+      "signal_types": [
+        "KEV"
+      ],
+      "signals": {
+        "kev": {
+          "date_added": "2026-02-20"
+        },
+        "exploit": null,
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-12-18",
+        "description": "Roundcube Webmail before 1.5.12 and 1.6 before 1.6.12 is prone to a Cross-Site-Scripting (XSS) vulnerability via the animate tag in an SVG document.",
+        "title": "RoundCube Webmail Cross-site Scripting Vulnerability",
+        "vendor": "roundcube",
+        "product": "webmail",
+        "attack_type": "XSS",
+        "cvss_max": 7.2
+      },
+      "cve": {
+        "id": "CVE-2025-68461",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2025-12-18T05:15:56.623",
+        "lastModified": "2026-02-23T13:24:12.310",
+        "vulnStatus": "Analyzed",
+        "cisaExploitAdd": "2026-02-20",
+        "cisaActionDue": "2026-03-13",
+        "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+        "cisaVulnerabilityName": "RoundCube Webmail Cross-site Scripting Vulnerability",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Roundcube Webmail before 1.5.12 and 1.6 before 1.6.12 is prone to a Cross-Site-Scripting (XSS) vulnerability via the animate tag in an SVG document."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N",
+                "baseScore": 7.2,
+                "baseSeverity": "HIGH"
+              },
+              "source": "cve@mitre.org",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 2.7
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+                "baseScore": 6.1,
+                "baseSeverity": "MEDIUM"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 2.7
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-79"
+              }
+            ],
+            "source": "cve@mitre.org"
+          },
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-79"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:roundcube:webmail:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "72BDB5DF-B892-4EB7-B953-BCF6571CFE33",
+                    "versionEndExcluding": "1.5.12"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:roundcube:webmail:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "2E7809A5-BC6E-47F6-8175-261C417A1648",
+                    "versionStartIncluding": "1.6.0",
+                    "versionEndExcluding": "1.6.12"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/roundcube/roundcubemail/commit/bfa032631c36b900e7444dfa278340b33cbf7cdb",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://roundcube.net/news/2025/12/13/security-updates-1.6.12-and-1.5.12",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2025-68461",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "US Government Resource"
+            ]
+          }
+        ]
+      },
+      "risk_score": 88,
+      "rank": 8
+    },
+    {
+      "cve_id": "CVE-2026-2038",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-02-20",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-02-20",
+        "description": "GFI Archiver MArc.Core Missing Authorization Authentication Bypass Vulnerability. This vulnerability allows remote attackers to bypass authentication on affected installations of GFI Archiver. Authentication is not required to exploit this vulnerability.\n\nThe specific flaw exists within the configuration of the MArc.Core.Remoting.exe process, which listens on port 8017. The issue results from the lack of authorization prior to allowing access to functionality. An attacker can leverage this in conjunction with other vulnerabilities to execute code in the context of SYSTEM. Was ZDI-CAN-27934.",
+        "title": "gfi archiver Auth Bypass",
+        "vendor": "gfi",
+        "product": "archiver",
+        "attack_type": "Auth Bypass",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2026-2038",
+        "sourceIdentifier": "zdi-disclosures@trendmicro.com",
+        "published": "2026-02-20T23:16:03.777",
+        "lastModified": "2026-02-24T21:43:04.817",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "GFI Archiver MArc.Core Missing Authorization Authentication Bypass Vulnerability. This vulnerability allows remote attackers to bypass authentication on affected installations of GFI Archiver. Authentication is not required to exploit this vulnerability.\n\nThe specific flaw exists within the configuration of the MArc.Core.Remoting.exe process, which listens on port 8017. The issue results from the lack of authorization prior to allowing access to functionality. An attacker can leverage this in conjunction with other vulnerabilities to execute code in the context of SYSTEM. Was ZDI-CAN-27934."
+          },
+          {
+            "lang": "es",
+            "value": "Vulnerabilidad de omisión de autenticación por falta de autorización en GFI Archiver MArc.Core. Esta vulnerabilidad permite a atacantes remotos omitir la autenticación en instalaciones afectadas de GFI Archiver. No es necesario estar autenticado para explotar esta vulnerabilidad.\n\nLa falla reside en la configuración del proceso MArc.Core.Remoting.exe, que escucha en el puerto 8017. El problema se debe a la falta de autorización antes de permitir el acceso a la funcionalidad. Un atacante puede aprovechar esto junto con otras vulnerabilidades para ejecutar código en el contexto de SYSTEM. Fue ZDI-CAN-27934."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV30": [
+            {
+              "cvssData": {
+                "version": "3.0",
+                "vectorString": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+                "baseScore": 7.3,
+                "baseSeverity": "HIGH"
+              },
+              "source": "zdi-disclosures@trendmicro.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 3.4
+            }
+          ],
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-862"
+              }
+            ],
+            "source": "zdi-disclosures@trendmicro.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:gfi:archiver:15.10:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "7191FB98-8BE2-4921-8035-6750A76F8491"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://www.zerodayinitiative.com/advisories/ZDI-26-075/",
+            "source": "zdi-disclosures@trendmicro.com",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 9
+    },
+    {
+      "cve_id": "CVE-2026-2039",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-02-20",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-02-20",
+        "description": "GFI Archiver MArc.Store Missing Authorization Authentication Bypass Vulnerability. This vulnerability allows remote attackers to bypass authentication on affected installations of GFI Archiver. Authentication is not required to exploit this vulnerability.\n\nThe specific flaw exists within the configuration of the MArc.Store.Remoting.exe process, which listens on port 8018. The issue results from the lack of authorization prior to allowing access to functionality. An attacker can leverage this in conjunction with other vulnerabilities to execute code in the context of SYSTEM. Was ZDI-CAN-28597.",
+        "title": "gfi archiver Auth Bypass",
+        "vendor": "gfi",
+        "product": "archiver",
+        "attack_type": "Auth Bypass",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2026-2039",
+        "sourceIdentifier": "zdi-disclosures@trendmicro.com",
+        "published": "2026-02-20T23:16:03.913",
+        "lastModified": "2026-02-24T21:42:14.183",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "GFI Archiver MArc.Store Missing Authorization Authentication Bypass Vulnerability. This vulnerability allows remote attackers to bypass authentication on affected installations of GFI Archiver. Authentication is not required to exploit this vulnerability.\n\nThe specific flaw exists within the configuration of the MArc.Store.Remoting.exe process, which listens on port 8018. The issue results from the lack of authorization prior to allowing access to functionality. An attacker can leverage this in conjunction with other vulnerabilities to execute code in the context of SYSTEM. Was ZDI-CAN-28597."
+          },
+          {
+            "lang": "es",
+            "value": "Vulnerabilidad de omisión de autenticación por falta de autorización en GFI Archiver MArc.Store. Esta vulnerabilidad permite a atacantes remotos omitir la autenticación en instalaciones afectadas de GFI Archiver. No es necesario estar autenticado para explotar esta vulnerabilidad.\n\nLa falla se encuentra en la configuración del proceso MArc.Store.Remoting.exe, que escucha en el puerto 8018. El problema se debe a la falta de autorización antes de permitir el acceso a la funcionalidad. Un atacante puede aprovechar esto junto con otras vulnerabilidades para ejecutar código en el contexto de SYSTEM. Fue ZDI-CAN-28597."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV30": [
+            {
+              "cvssData": {
+                "version": "3.0",
+                "vectorString": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+                "baseScore": 7.3,
+                "baseSeverity": "HIGH"
+              },
+              "source": "zdi-disclosures@trendmicro.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 3.4
+            }
+          ],
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-862"
+              }
+            ],
+            "source": "zdi-disclosures@trendmicro.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:gfi:archiver:15.10:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "7191FB98-8BE2-4921-8035-6750A76F8491"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://www.zerodayinitiative.com/advisories/ZDI-26-077/",
+            "source": "zdi-disclosures@trendmicro.com",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 10
+    },
+    {
+      "cve_id": "CVE-2026-2333",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-02-20",
+          "previous_max": null,
+          "current_max": 9.2
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-02-20",
+        "description": "Improper Neutralization of Special Elements used in a Command ('Command Injection') in Owl opds 2.2.0.4 allows Command Injection via a crafted network request.",
+        "title": "owlcyberdefense opds-talon Command Injection",
+        "vendor": "owlcyberdefense",
+        "product": "opds-talon",
+        "attack_type": "Command Injection",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2026-2333",
+        "sourceIdentifier": "prodsec@nozominetworks.com",
+        "published": "2026-02-20T17:25:57.570",
+        "lastModified": "2026-02-26T23:10:43.847",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Improper Neutralization of Special Elements used in a Command ('Command Injection') in Owl opds 2.2.0.4 allows Command Injection via a crafted network request."
+          },
+          {
+            "lang": "es",
+            "value": "Neutralización incorrecta de elementos especiales utilizados en un comando ('Inyección de comandos') en Owl opds 2.2.0.4 permite la inyección de comandos a través de una solicitud de red manipulada."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.2,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "prodsec@nozominetworks.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-77"
+              }
+            ],
+            "source": "prodsec@nozominetworks.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:owlcyberdefense:opds-talon:2.2.0.4:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "8B979FF6-C6CD-47C0-9409-EBF036DB39E6"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:owlcyberdefense:opds-100:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "76B6558D-D323-40D3-99A7-909C24D49951"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:owlcyberdefense:opds-talon:2.2.0.4:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "8B979FF6-C6CD-47C0-9409-EBF036DB39E6"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:owlcyberdefense:opds-1000:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "FA72CA3A-BE76-49B0-A670-3EB19D29333D"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://www.nozominetworks.com/labs/vulnerability-advisories-cve-2026-2333",
+            "source": "prodsec@nozominetworks.com",
+            "tags": [
+              "Broken Link"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 11
+    },
+    {
+      "cve_id": "CVE-2026-25896",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-02-20",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-02-20",
+        "description": "fast-xml-parser allows users to validate XML, parse XML to JS object, or build XML from JS object without C/C++ based libraries and no callback. From 4.1.3to before 5.3.5, a dot (.) in a DOCTYPE entity name is treated as a regex wildcard during entity replacement, allowing an attacker to shadow built-in XML entities (&lt;, &gt;, &amp;, &quot;, &apos;) with arbitrary values. This bypasses entity encoding and leads to XSS when parsed output is rendered. This vulnerability is fixed in 5.3.5.",
+        "title": "naturalintelligence fast-xml-parser",
+        "vendor": "naturalintelligence",
+        "product": "fast-xml-parser",
+        "cvss_max": 9.3
+      },
+      "cve": {
+        "id": "CVE-2026-25896",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2026-02-20T21:19:27.470",
+        "lastModified": "2026-03-02T14:54:02.760",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "fast-xml-parser allows users to validate XML, parse XML to JS object, or build XML from JS object without C/C++ based libraries and no callback. From 4.1.3to before 5.3.5, a dot (.) in a DOCTYPE entity name is treated as a regex wildcard during entity replacement, allowing an attacker to shadow built-in XML entities (&lt;, &gt;, &amp;, &quot;, &apos;) with arbitrary values. This bypasses entity encoding and leads to XSS when parsed output is rendered. This vulnerability is fixed in 5.3.5."
+          },
+          {
+            "lang": "es",
+            "value": "fast-xml-parser permite a los usuarios validar XML, analizar XML a objeto JS, o construir XML desde objeto JS sin librerías basadas en C/C++ y sin callback. Desde la versión 4.1.3 hasta antes de la 5.3.5, un punto (.) en un nombre de entidad DOCTYPE es tratado como un comodín de expresión regular durante el reemplazo de entidades, permitiendo a un atacante sombrear entidades XML incorporadas (&lt;, &gt;, &amp;, \", ') con valores arbitrarios. Esto omite la codificación de entidades y conduce a XSS cuando la salida analizada es renderizada. Esta vulnerabilidad se corrige en la versión 5.3.5."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:H/A:N",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 4.7
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-185"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:naturalintelligence:fast-xml-parser:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "CC7C6F3C-019C-4D48-A09F-D926B57DC0BC",
+                    "versionStartIncluding": "4.1.3",
+                    "versionEndExcluding": "5.3.5"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/NaturalIntelligence/fast-xml-parser/commit/943ef0eb1b2d3284e72dd74f44a042ee9f07026e",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://github.com/NaturalIntelligence/fast-xml-parser/commit/ddcd0acf26ddd682cb0dc15a2bd6aa3b96bb1e69",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://github.com/NaturalIntelligence/fast-xml-parser/releases/tag/v5.3.5",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Product",
+              "Release Notes"
+            ]
+          },
+          {
+            "url": "https://github.com/NaturalIntelligence/fast-xml-parser/security/advisories/GHSA-m7jm-9gc2-mpf2",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Exploit",
+              "Mitigation",
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 12
+    },
+    {
+      "cve_id": "CVE-2026-2635",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-02-20",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-02-20",
+        "description": "MLflow Use of Default Password Authentication Bypass Vulnerability. This vulnerability allows remote attackers to bypass authentication on affected installations of MLflow. Authentication is not required to exploit this vulnerability.\n\nThe specific flaw exists within the basic_auth.ini file. The file contains hard-coded default credentials. An attacker can leverage this vulnerability to bypass authentication and execute arbitrary code in the context of the administrator. Was ZDI-CAN-28256.",
+        "title": "MLflow Use of Default Password Authentication Bypass Vulnerability.",
+        "attack_type": "Auth Bypass",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2026-2635",
+        "sourceIdentifier": "zdi-disclosures@trendmicro.com",
+        "published": "2026-02-20T23:16:05.577",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "MLflow Use of Default Password Authentication Bypass Vulnerability. This vulnerability allows remote attackers to bypass authentication on affected installations of MLflow. Authentication is not required to exploit this vulnerability.\n\nThe specific flaw exists within the basic_auth.ini file. The file contains hard-coded default credentials. An attacker can leverage this vulnerability to bypass authentication and execute arbitrary code in the context of the administrator. Was ZDI-CAN-28256."
+          },
+          {
+            "lang": "es",
+            "value": "Vulnerabilidad de Omisión de Autenticación por Uso de Contraseña Predeterminada en MLflow. Esta vulnerabilidad permite a atacantes remotos omitir la autenticación en instalaciones afectadas de MLflow. No es necesario autenticase para explotar esta vulnerabilidad.\n\nLa falla específica existe en el archivo basic_auth.ini. El archivo contiene credenciales predeterminadas almacenadas en el código. Un atacante puede aprovechar esta vulnerabilidad para omitir la autenticación y ejecutar código arbitrario en el contexto del administrador. Fue ZDI-CAN-28256."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV30": [
+            {
+              "cvssData": {
+                "version": "3.0",
+                "vectorString": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "zdi-disclosures@trendmicro.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-1393"
+              }
+            ],
+            "source": "zdi-disclosures@trendmicro.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/mlflow/mlflow/pull/19260",
+            "source": "zdi-disclosures@trendmicro.com"
+          },
+          {
+            "url": "https://www.zerodayinitiative.com/advisories/ZDI-26-111/",
+            "source": "zdi-disclosures@trendmicro.com"
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 13
+    },
+    {
+      "cve_id": "CVE-2026-26725",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-02-20",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-02-20",
+        "description": "An issue in edu Business Solutions Print Shop Pro WebDesk v.18.34 (fixed in 19.76) allows a remote attacker to escalate privileges via the AccessID parameter.",
+        "title": "edubusinesssolutions print_shop_pro_webdesk privilege escalation",
+        "vendor": "edubusinesssolutions",
+        "product": "print_shop_pro_webdesk",
+        "attack_type": "privilege escalation",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2026-26725",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2026-02-20T17:25:55.700",
+        "lastModified": "2026-05-14T19:16:31.257",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "An issue in edu Business Solutions Print Shop Pro WebDesk v.18.34 (fixed in 19.76) allows a remote attacker to escalate privileges via the AccessID parameter."
+          },
+          {
+            "lang": "es",
+            "value": "Un problema en edu Business Solutions Print Shop Pro WebDesk v.18.34 permite a un atacante remoto escalar privilegios a través del parámetro AccessID."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-269"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:edubusinesssolutions:print_shop_pro_webdesk:18.34:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "88C72179-FF05-44F1-87A2-80179F38245D"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/chndlrx/vulnerability-disclosures/tree/main/CVE-2026-26725",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 14
+    },
+    {
+      "cve_id": "CVE-2026-26747",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-02-20",
+          "previous_max": null,
+          "current_max": 9.1
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-02-20",
+        "description": "A Host Header Poisoning vulnerability exists in Monica 4.1.2 due to improper handling of the HTTP Host header in app/Providers/AppServiceProvider.php, combined with the default misconfiguration where the \"app.force_url\" is not set and default is \"false\". The application generates absolute URLs (such as those used in password reset emails) using the user-supplied Host header. This allows remote attackers to poison the password reset link sent to a victim,",
+        "title": "monicahq monica",
+        "vendor": "monicahq",
+        "product": "monica",
+        "cvss_max": 9.1
+      },
+      "cve": {
+        "id": "CVE-2026-26747",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2026-02-20T17:25:56.023",
+        "lastModified": "2026-02-26T02:42:23.743",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A Host Header Poisoning vulnerability exists in Monica 4.1.2 due to improper handling of the HTTP Host header in app/Providers/AppServiceProvider.php, combined with the default misconfiguration where the \"app.force_url\" is not set and default is \"false\". The application generates absolute URLs (such as those used in password reset emails) using the user-supplied Host header. This allows remote attackers to poison the password reset link sent to a victim,"
+          },
+          {
+            "lang": "es",
+            "value": "Una vulnerabilidad de envenenamiento de encabezado Host existe en Monica 4.1.2 debido a un manejo inadecuado del encabezado HTTP Host en app/Providers/AppServiceProvider.php, combinado con la configuración errónea predeterminada donde 'app.force_url' no está configurado y su valor predeterminado es 'false'. La aplicación genera URLs absolutas (como las utilizadas en los correos electrónicos de restablecimiento de contraseña) utilizando el encabezado Host proporcionado por el usuario. Esto permite a atacantes remotos envenenar el enlace de restablecimiento de contraseña enviado a una víctima."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+                "baseScore": 9.1,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.2
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-644"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:monicahq:monica:4.1.2:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "9B4E9530-0DB5-4B0C-BF09-3BCD409A20F9"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/hungnqdz/cve-research/blob/main/CVE-2026-26747.md",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Exploit",
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/monicahq/monica",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Product"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 15
+    },
+    {
+      "cve_id": "CVE-2026-27112",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-02-20",
+          "previous_max": null,
+          "current_max": 9.4
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-02-20",
+        "description": "Kargo manages and automates the promotion of software artifacts. From 1.7.0 to before v1.7.8, v1.8.11, and v1.9.3, the batch resource creation endpoints of both Kargo's legacy gRPC API and newer REST API accept multi-document YAML payloads. Specially crafted payloads can manifest a bug present in the logic of both endpoints to inject arbitrary resources (of specific types only) into the underlying namespace of an existing Project using the API server's own permissions when that behavior was not intended. Critically, an attacker may exploit this as a vector for elevating their own permissions, which can then be leveraged to achieve remote code execution or secret exfiltration. Exfiltrated artifact repository credentials can be leveraged, in turn, to execute further attacks. In some configurations of the Kargo control plane's underlying Kubernetes cluster, elevated permissions may additionally be leveraged to achieve remote code execution or secret exfiltration using kubectl. This can reduce the complexity of the attack, however, worst case scenarios remain entirely achievable even without this. This vulnerability is fixed in v1.7.8, v1.8.11, and v1.9.3.",
+        "title": "akuity kargo",
+        "vendor": "akuity",
+        "product": "kargo",
+        "cvss_max": 9.9
+      },
+      "cve": {
+        "id": "CVE-2026-27112",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2026-02-20T22:16:29.343",
+        "lastModified": "2026-02-25T18:03:32.900",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Kargo manages and automates the promotion of software artifacts. From 1.7.0 to before v1.7.8, v1.8.11, and v1.9.3, the batch resource creation endpoints of both Kargo's legacy gRPC API and newer REST API accept multi-document YAML payloads. Specially crafted payloads can manifest a bug present in the logic of both endpoints to inject arbitrary resources (of specific types only) into the underlying namespace of an existing Project using the API server's own permissions when that behavior was not intended. Critically, an attacker may exploit this as a vector for elevating their own permissions, which can then be leveraged to achieve remote code execution or secret exfiltration. Exfiltrated artifact repository credentials can be leveraged, in turn, to execute further attacks. In some configurations of the Kargo control plane's underlying Kubernetes cluster, elevated permissions may additionally be leveraged to achieve remote code execution or secret exfiltration using kubectl. This can reduce the complexity of the attack, however, worst case scenarios remain entirely achievable even without this. This vulnerability is fixed in v1.7.8, v1.8.11, and v1.9.3."
+          },
+          {
+            "lang": "es",
+            "value": "Kargo gestiona y automatiza la promoción de artefactos de software. Desde la 1.7.0 hasta antes de las v1.7.8, v1.8.11 y v1.9.3, los puntos finales de creación de recursos por lotes tanto de la API gRPC heredada de Kargo como de la API REST más reciente aceptan cargas útiles YAML de múltiples documentos. Cargas útiles especialmente diseñadas pueden manifestar un error presente en la lógica de ambos puntos finales para inyectar recursos arbitrarios (solo de tipos específicos) en el espacio de nombres subyacente de un Proyecto existente utilizando los propios permisos del servidor API cuando ese comportamiento no estaba previsto. Críticamente, un atacante puede explotar esto como un vector para elevar sus propios permisos, lo que luego puede aprovecharse para lograr la ejecución remota de código o la exfiltración de secretos. Las credenciales de repositorio de artefactos exfiltradas pueden aprovecharse, a su vez, para ejecutar ataques adicionales. En algunas configuraciones del clúster de Kubernetes subyacente del plano de control de Kargo, los permisos elevados pueden aprovecharse adicionalmente para lograr la ejecución remota de código o la exfiltración de secretos usando kubectl. Esto puede reducir la complejidad del ataque, sin embargo, los escenarios de peor caso siguen siendo totalmente alcanzables incluso sin esto. Esta vulnerabilidad está corregida en las v1.7.8, v1.8.11 y v1.9.3."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+                "baseScore": 9.9,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.1,
+              "impactScore": 6.0
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.4,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-863"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:akuity:kargo:*:*:*:*:*:kubernetes:*:*",
+                    "matchCriteriaId": "5A5AF03C-6D09-45BD-9C5D-A26A58F2FF32",
+                    "versionStartIncluding": "1.7.0",
+                    "versionEndExcluding": "1.7.8"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:akuity:kargo:*:*:*:*:*:kubernetes:*:*",
+                    "matchCriteriaId": "E8F9AD6D-0D73-48DE-BC30-52DA3E9539A9",
+                    "versionStartIncluding": "1.8.0",
+                    "versionEndExcluding": "1.8.11"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:akuity:kargo:*:*:*:*:*:kubernetes:*:*",
+                    "matchCriteriaId": "3B60DE85-B240-4BA0-896D-2A0BA369B0AF",
+                    "versionStartIncluding": "1.9.0",
+                    "versionEndExcluding": "1.9.3"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/akuity/kargo/commit/155c6852ffbffa2902f18e6c7add91a846e8d344",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://github.com/akuity/kargo/security/advisories/GHSA-7g9x-cp9g-92mr",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 16
+    }
+  ],
+  "source": "https://www.cvelogic.com/threat-intelligence/2026-02-20"
+}

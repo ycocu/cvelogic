@@ -1,0 +1,505 @@
+{
+  "schema_version": "2.2",
+  "generated_at": "2026-06-02T07:34:03Z",
+  "day": "2025-12-26",
+  "window": {
+    "utc_start": "2025-12-26",
+    "utc_end": "2025-12-26",
+    "days": 1
+  },
+  "summary": {
+    "brief": "5 new critical disclosures — review patch status on exposed services.",
+    "bullets": [
+      "5 new critical disclosures — review patch status on exposed services."
+    ],
+    "counts": {
+      "cves": 5,
+      "kev": 0,
+      "exploit": 0,
+      "epss": 0,
+      "cvss": 5,
+      "patch": 0
+    }
+  },
+  "cves": [
+    {
+      "cve_id": "CVE-2025-68668",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-12-26",
+          "previous_max": null,
+          "current_max": 9.9
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-12-26",
+        "description": "n8n is an open source workflow automation platform. From version 1.0.0 to before 2.0.0, a sandbox bypass vulnerability exists in the Python Code Node that uses Pyodide. An authenticated user with permission to create or modify workflows can exploit this vulnerability to execute arbitrary commands on the host system running n8n, using the same privileges as the n8n process. This issue has been patched in version 2.0.0. Workarounds for this issue involve disabling the Code Node by setting the environment variable NODES_EXCLUDE: \"[\\\"n8n-nodes-base.code\\\"]\", disabling Python support in the Code node by setting the environment variable N8N_PYTHON_ENABLED=false, which was introduced in n8n version 1.104.0, and configuring n8n to use the task runner based Python sandbox via the N8N_RUNNERS_ENABLED and N8N_NATIVE_PYTHON_RUNNER environment variables.",
+        "title": "n8n n8n privilege escalation",
+        "vendor": "n8n",
+        "product": "n8n",
+        "attack_type": "privilege escalation",
+        "cvss_max": 9.9
+      },
+      "cve": {
+        "id": "CVE-2025-68668",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2025-12-26T22:15:52.597",
+        "lastModified": "2026-01-05T17:15:46.633",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "n8n is an open source workflow automation platform. From version 1.0.0 to before 2.0.0, a sandbox bypass vulnerability exists in the Python Code Node that uses Pyodide. An authenticated user with permission to create or modify workflows can exploit this vulnerability to execute arbitrary commands on the host system running n8n, using the same privileges as the n8n process. This issue has been patched in version 2.0.0. Workarounds for this issue involve disabling the Code Node by setting the environment variable NODES_EXCLUDE: \"[\\\"n8n-nodes-base.code\\\"]\", disabling Python support in the Code node by setting the environment variable N8N_PYTHON_ENABLED=false, which was introduced in n8n version 1.104.0, and configuring n8n to use the task runner based Python sandbox via the N8N_RUNNERS_ENABLED and N8N_NATIVE_PYTHON_RUNNER environment variables."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:L",
+                "baseScore": 9.9,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.1,
+              "impactScore": 6.0
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+                "baseScore": 9.9,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.1,
+              "impactScore": 6.0
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-693"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:n8n:n8n:*:*:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "FF192A40-40BB-4836-836D-D8FBF2694556",
+                    "versionStartIncluding": "1.0.0",
+                    "versionEndExcluding": "2.0.0"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/n8n-io/n8n/security/advisories/GHSA-62r4-hw23-cc8v",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Patch",
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://www.smartkeyss.com/post/cve-2025-68668-breaking-out-of-the-python-sandbox-in-n8n",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 1
+    },
+    {
+      "cve_id": "CVE-2024-44065",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-12-26",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-12-26",
+        "description": "Time-based blind SQL Injection vulnerability in Cloudlog v2.6.15 at the endpoint /index.php/logbookadvanced/search in the qsoresults parameter.",
+        "title": "magicbug cloudlog SQL Injection",
+        "vendor": "magicbug",
+        "product": "cloudlog",
+        "attack_type": "SQL Injection",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2024-44065",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2025-12-26T17:15:42.527",
+        "lastModified": "2025-12-31T21:35:07.857",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Time-based blind SQL Injection vulnerability in Cloudlog v2.6.15 at the endpoint /index.php/logbookadvanced/search in the qsoresults parameter."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-89"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:magicbug:cloudlog:2.6.15:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "D4E30153-EF1D-44A1-87F3-803F895BC6BC"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/jacopo1223/jacopo.github/tree/main/CVE-2024-44065",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/magicbug/Cloudlog",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Product"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 2
+    },
+    {
+      "cve_id": "CVE-2025-13915",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-12-26",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-12-26",
+        "description": "IBM API Connect 10.0.8.0 through 10.0.8.5, and 10.0.11.0 could allow a remote attacker to bypass authentication mechanisms and gain unauthorized access to the application.",
+        "title": "ibm api_connect",
+        "vendor": "ibm",
+        "product": "api_connect",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-13915",
+        "sourceIdentifier": "psirt@us.ibm.com",
+        "published": "2025-12-26T14:15:58.193",
+        "lastModified": "2025-12-31T21:37:43.290",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "IBM API Connect 10.0.8.0 through 10.0.8.5, and 10.0.11.0 could allow a remote attacker to bypass authentication mechanisms and gain unauthorized access to the application."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "psirt@us.ibm.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-305"
+              }
+            ],
+            "source": "psirt@us.ibm.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:ibm:api_connect:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "93252B35-2824-4183-8D91-E3AAE4ADBB22",
+                    "versionStartIncluding": "10.0.8.0",
+                    "versionEndIncluding": "10.0.8.5"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:ibm:api_connect:10.0.11.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "CB79D210-459D-4394-9895-B15DA4069C6A"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://www.ibm.com/support/pages/node/7255149",
+            "source": "psirt@us.ibm.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 3
+    },
+    {
+      "cve_id": "CVE-2025-13158",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-12-26",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-12-26",
+        "description": "Prototype pollution vulnerability in apidoc-core versions 0.2.0 and all subsequent versions allows remote attackers to modify JavaScript object prototypes via malformed data structures, including the “define” property processed by the application, potentially leading to denial of service or unintended behavior in applications relying on the integrity of prototype chains. This affects the preProcess() function in api_group.js, api_param_title.js, api_use.js, and api_permission.js worker modules.",
+        "title": "Prototype pollution vulnerability in apidoc-core versions 0.2.0 and all subsequent versions allows remote attackers to modify JavaScript...",
+        "attack_type": "DoS",
+        "cvss_max": 9.3
+      },
+      "cve": {
+        "id": "CVE-2025-13158",
+        "sourceIdentifier": "103e4ec9-0a87-450b-af77-479448ddef11",
+        "published": "2025-12-26T16:15:43.263",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Prototype pollution vulnerability in apidoc-core versions 0.2.0 and all subsequent versions allows remote attackers to modify JavaScript object prototypes via malformed data structures, including the “define” property processed by the application, potentially leading to denial of service or unintended behavior in applications relying on the integrity of prototype chains. This affects the preProcess() function in api_group.js, api_param_title.js, api_use.js, and api_permission.js worker modules."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "103e4ec9-0a87-450b-af77-479448ddef11",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-1321"
+              }
+            ],
+            "source": "103e4ec9-0a87-450b-af77-479448ddef11"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://www.sonatype.com/security-advisories/cve-2025-13158",
+            "source": "103e4ec9-0a87-450b-af77-479448ddef11"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 4
+    },
+    {
+      "cve_id": "CVE-2025-68937",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-12-26",
+          "previous_max": null,
+          "current_max": 9.5
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-12-26",
+        "description": "Forgejo before 13.0.2 allows attackers to write to unintended files, and possibly obtain server shell access, because of mishandling of out-of-repository symlink destinations for template repositories. This is also fixed for 11 LTS in 11.0.7 and later.",
+        "title": "Forgejo before 13.0.2 allows attackers to write to unintended files, and possibly obtain server shell access, because of mishandling of o...",
+        "cvss_max": 9.5
+      },
+      "cve": {
+        "id": "CVE-2025-68937",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2025-12-26T00:16:01.173",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Forgejo before 13.0.2 allows attackers to write to unintended files, and possibly obtain server shell access, because of mishandling of out-of-repository symlink destinations for template repositories. This is also fixed for 11 LTS in 11.0.7 and later."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.5,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "cve@mitre.org",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-61"
+              }
+            ],
+            "source": "cve@mitre.org"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://blog.gitea.com/release-of-1.24.7/",
+            "source": "cve@mitre.org"
+          },
+          {
+            "url": "https://codeberg.org/forgejo/forgejo/milestone/27340",
+            "source": "cve@mitre.org"
+          },
+          {
+            "url": "https://codeberg.org/forgejo/forgejo/milestone/29156",
+            "source": "cve@mitre.org"
+          },
+          {
+            "url": "https://codeberg.org/forgejo/forgejo/src/branch/forgejo/release-notes-published/11.0.7.md",
+            "source": "cve@mitre.org"
+          },
+          {
+            "url": "https://codeberg.org/forgejo/forgejo/src/branch/forgejo/release-notes-published/13.0.2.md",
+            "source": "cve@mitre.org"
+          },
+          {
+            "url": "https://codeberg.org/forgejo/security-announcements/issues/43",
+            "source": "cve@mitre.org"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 5
+    }
+  ],
+  "source": "https://www.cvelogic.com/threat-intelligence/2025-12-26"
+}

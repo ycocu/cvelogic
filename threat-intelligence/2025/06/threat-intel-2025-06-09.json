@@ -1,0 +1,2276 @@
+{
+  "schema_version": "2.2",
+  "generated_at": "2026-06-02T07:32:51Z",
+  "day": "2025-06-09",
+  "window": {
+    "utc_start": "2025-06-09",
+    "utc_end": "2025-06-09",
+    "days": 1
+  },
+  "summary": {
+    "brief": "Erlang/OTP added to CISA KEV — confirmed in-the-wild exploitation. · Microsoft Windows 11 22h2: public exploit or PoC linked (privilege escalation) · 10 new critical disclosures — review patch status on exposed services.",
+    "bullets": [
+      "Erlang/OTP added to CISA KEV — confirmed in-the-wild exploitation.",
+      "Microsoft Windows 11 22h2: public exploit or PoC linked (privilege escalation)",
+      "10 new critical disclosures — review patch status on exposed services."
+    ],
+    "counts": {
+      "cves": 16,
+      "kev": 2,
+      "exploit": 4,
+      "epss": 0,
+      "cvss": 10,
+      "patch": 0
+    }
+  },
+  "cves": [
+    {
+      "cve_id": "CVE-2024-42009",
+      "signal_types": [
+        "KEV"
+      ],
+      "signals": {
+        "kev": {
+          "date_added": "2025-06-09"
+        },
+        "exploit": null,
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2024-08-05",
+        "description": "A Cross-Site Scripting vulnerability in Roundcube through 1.5.7 and 1.6.x through 1.6.7 allows a remote attacker to steal and send emails of a victim via a crafted e-mail message that abuses a Desanitization issue in message_body() in program/actions/mail/show.php.",
+        "title": "RoundCube Webmail Cross-Site Scripting Vulnerability",
+        "vendor": "roundcube",
+        "product": "webmail",
+        "attack_type": "XSS",
+        "cvss_max": 9.3
+      },
+      "cve": {
+        "id": "CVE-2024-42009",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2024-08-05T19:15:38.220",
+        "lastModified": "2025-11-04T15:01:04.997",
+        "vulnStatus": "Analyzed",
+        "cisaExploitAdd": "2025-06-09",
+        "cisaActionDue": "2025-06-30",
+        "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+        "cisaVulnerabilityName": "RoundCube Webmail Cross-Site Scripting Vulnerability",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A Cross-Site Scripting vulnerability in Roundcube through 1.5.7 and 1.6.x through 1.6.7 allows a remote attacker to steal and send emails of a victim via a crafted e-mail message that abuses a Desanitization issue in message_body() in program/actions/mail/show.php."
+          },
+          {
+            "lang": "es",
+            "value": "Una vulnerabilidad de Cross-Site Scripting en Roundcube hasta 1.5.7 y 1.6.x hasta 1.6.7 permite a un atacante remoto robar y enviar correos electrónicos de una víctima a través de un mensaje de correo electrónico manipulado que abusa de un problema de desanitización en message_body() en program/actions/mail/show.php."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:N",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 5.8
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:N",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 5.8
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-79"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          },
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-79"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:roundcube:webmail:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "DC573DD9-42FE-4467-89E4-E3DAC9E3C744",
+                    "versionEndExcluding": "1.5.8"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:roundcube:webmail:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "350AC515-3D8C-48E1-9D73-023609560C8A",
+                    "versionStartIncluding": "1.6.0",
+                    "versionEndExcluding": "1.6.8"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/roundcube/roundcubemail/releases",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Release Notes"
+            ]
+          },
+          {
+            "url": "https://github.com/roundcube/roundcubemail/releases/tag/1.5.8",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Release Notes"
+            ]
+          },
+          {
+            "url": "https://github.com/roundcube/roundcubemail/releases/tag/1.6.8",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Release Notes"
+            ]
+          },
+          {
+            "url": "https://roundcube.net/news/2024/08/04/security-updates-1.6.8-and-1.5.8",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://sonarsource.com/blog/government-emails-at-risk-critical-cross-site-scripting-vulnerability-in-roundcube-webmail/",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Technical Description",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2024-42009",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "US Government Resource"
+            ]
+          }
+        ]
+      },
+      "risk_score": 88,
+      "rank": 1
+    },
+    {
+      "cve_id": "CVE-2024-0725",
+      "signal_types": [
+        "EXP"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": {
+          "ref_published": "2025-06-09"
+        },
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2024-01-19",
+        "description": "A vulnerability was found in ProSSHD 1.2 on Windows. It has been declared as problematic. This vulnerability affects unknown code. The manipulation leads to denial of service. The attack can be initiated remotely. The exploit has been disclosed to the public and may be used. The identifier of this vulnerability is VDB-251548.",
+        "title": "prosshd prosshd DoS",
+        "vendor": "prosshd",
+        "product": "prosshd",
+        "attack_type": "DoS",
+        "cvss_max": 7.5
+      },
+      "cve": {
+        "id": "CVE-2024-0725",
+        "sourceIdentifier": "cna@vuldb.com",
+        "published": "2024-01-19T18:15:08.040",
+        "lastModified": "2024-11-21T08:47:13.437",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A vulnerability was found in ProSSHD 1.2 on Windows. It has been declared as problematic. This vulnerability affects unknown code. The manipulation leads to denial of service. The attack can be initiated remotely. The exploit has been disclosed to the public and may be used. The identifier of this vulnerability is VDB-251548."
+          },
+          {
+            "lang": "es",
+            "value": "Se encontró una vulnerabilidad en ProSSHD 1.2 en Windows. Ha sido declarada problemática. Esta vulnerabilidad afecta a código desconocido. La manipulación conduce a la denegación del servicio. El ataque se puede iniciar de forma remota. El exploit ha sido divulgado al público y puede utilizarse. El identificador de esta vulnerabilidad es VDB-251548."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV2": [
+            {
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+                "baseScore": 5.0,
+                "baseSeverity": "MEDIUM"
+              },
+              "source": "cna@vuldb.com",
+              "type": "Secondary",
+              "baseSeverity": "MEDIUM",
+              "exploitabilityScore": 10.0,
+              "impactScore": 2.9
+            }
+          ],
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+                "baseScore": 5.3,
+                "baseSeverity": "MEDIUM"
+              },
+              "source": "cna@vuldb.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 1.4
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                "baseScore": 7.5,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 3.6
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-404"
+              }
+            ],
+            "source": "cna@vuldb.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:prosshd:prosshd:1.2_20090726:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "A3C8B3DD-5F85-4132-B905-9280256450EC"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "A2572D17-1DE6-457B-99CC-64AFD54487EA"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://packetstormsecurity.com/files/176544/ProSSHD-1.2-20090726-Denial-Of-Service.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory",
+              "VDB Entry"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/?ctiid.251548",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Permissions Required"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/?id.251548",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Permissions Required"
+            ]
+          }
+        ]
+      },
+      "risk_score": 78,
+      "rank": 2
+    },
+    {
+      "cve_id": "CVE-2025-48123",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-06-09",
+          "previous_max": null,
+          "current_max": 10.0
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-06-09",
+        "description": "Improper Control of Generation of Code ('Code Injection') vulnerability in Holest Engineering Spreadsheet Price Changer for WooCommerce and WP E-commerce – Light excel-like-price-change-for-woocommerce-and-wp-e-commerce-light allows Code Injection.This issue affects Spreadsheet Price Changer for WooCommerce and WP E-commerce – Light: from n/a through <= 2.4.37.",
+        "title": "Improper Control of Generation of Code ('Code Injection') vulnerability in Holest Engineering Spreadsheet Price Changer for WooCommerce a...",
+        "cvss_max": 10.0
+      },
+      "cve": {
+        "id": "CVE-2025-48123",
+        "sourceIdentifier": "audit@patchstack.com",
+        "published": "2025-06-09T16:15:42.547",
+        "lastModified": "2026-04-23T15:30:50.233",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Improper Control of Generation of Code ('Code Injection') vulnerability in Holest Engineering Spreadsheet Price Changer for WooCommerce and WP E-commerce – Light excel-like-price-change-for-woocommerce-and-wp-e-commerce-light allows Code Injection.This issue affects Spreadsheet Price Changer for WooCommerce and WP E-commerce – Light: from n/a through <= 2.4.37."
+          },
+          {
+            "lang": "es",
+            "value": "Vulnerabilidad de control inadecuado de generación de código (inyección de código) en Holest Engineering Spreadsheet Price Changer for WooCommerce and WP E-commerce – Light permite la inyección de código. Este problema afecta a Spreadsheet Price Changer para WooCommerce y WP E-commerce – Light: desde n/d hasta la versión 2.4.37."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+                "baseScore": 10.0,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "audit@patchstack.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 6.0
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-94"
+              }
+            ],
+            "source": "audit@patchstack.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://patchstack.com/database/Wordpress/Plugin/excel-like-price-change-for-woocommerce-and-wp-e-commerce-light/vulnerability/wordpress-spreadsheet-price-changer-for-woocommerce-and-wp-e-commerce-light-2-4-37-remote-code-execution-rce-vulnerability?_s_id=cve",
+            "source": "audit@patchstack.com"
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 3
+    },
+    {
+      "cve_id": "CVE-2024-42049",
+      "signal_types": [
+        "EXP"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": {
+          "ref_published": "2025-06-09"
+        },
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2024-07-28",
+        "description": "TightVNC (Server for Windows) before 2.8.84 allows attackers to connect to the control pipe via a network connection.",
+        "title": "TightVNC (Server for Windows) before 2.8.84 allows attackers to connect to the control pipe via a network connection.",
+        "cvss_max": 9.1
+      },
+      "cve": {
+        "id": "CVE-2024-42049",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2024-07-28T02:15:09.823",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "TightVNC (Server for Windows) before 2.8.84 allows attackers to connect to the control pipe via a network connection."
+          },
+          {
+            "lang": "es",
+            "value": "TightVNC (Servidor para Windows) anterior a 2.8.84 permite a los atacantes conectarse a la tubería de control a través de una conexión de red."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+                "baseScore": 9.1,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.2
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-200"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://sourceforge.net/p/vnc-tight/bugs/1629/",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "https://www.tightvnc.com/whatsnew.php",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          }
+        ]
+      },
+      "risk_score": 78,
+      "rank": 4
+    },
+    {
+      "cve_id": "CVE-2024-55661",
+      "signal_types": [
+        "EXP"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": {
+          "ref_published": "2025-06-09"
+        },
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2024-12-13",
+        "description": "Laravel Pulse is a real-time application performance monitoring tool and dashboard for Laravel applications. A vulnerability has been discovered in Laravel Pulse prior to version 1.3.1 that could allow remote code execution through the public `remember()` method in the `Laravel\\Pulse\\Livewire\\Concerns\\RemembersQueries` trait. This method is accessible via Livewire components and can be exploited to call arbitrary callables within the application. An authenticated user with access to Laravel Pulse dashboard can execute arbitrary code by calling any function or static method in which the callable is a function or static method and the callable has no parameters or no strict parameter types. The vulnerable to component is `remember(callable $query, string $key = '')` method in `Laravel\\Pulse\\Livewire\\Concerns\\RemembersQueries`, and the vulnerability affects all Pulse card components that use this trait. Version 1.3.1 contains a patch.",
+        "title": "laravel pulse RCE",
+        "vendor": "laravel",
+        "product": "pulse",
+        "attack_type": "RCE",
+        "cvss_max": 8.8
+      },
+      "cve": {
+        "id": "CVE-2024-55661",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2024-12-13T16:15:27.767",
+        "lastModified": "2025-08-25T18:30:20.253",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Laravel Pulse is a real-time application performance monitoring tool and dashboard for Laravel applications. A vulnerability has been discovered in Laravel Pulse prior to version 1.3.1 that could allow remote code execution through the public `remember()` method in the `Laravel\\Pulse\\Livewire\\Concerns\\RemembersQueries` trait. This method is accessible via Livewire components and can be exploited to call arbitrary callables within the application. An authenticated user with access to Laravel Pulse dashboard can execute arbitrary code by calling any function or static method in which the callable is a function or static method and the callable has no parameters or no strict parameter types. The vulnerable to component is `remember(callable $query, string $key = '')` method in `Laravel\\Pulse\\Livewire\\Concerns\\RemembersQueries`, and the vulnerability affects all Pulse card components that use this trait. Version 1.3.1 contains a patch."
+          },
+          {
+            "lang": "es",
+            "value": "Laravel Pulse es una herramienta de monitoreo de rendimiento de aplicaciones en tiempo real y un panel de control para aplicaciones Laravel. Se ha descubierto una vulnerabilidad en Laravel Pulse anterior a la versión 1.3.1 que podría permitir la ejecución remota de código a través del método público `remember()` en el rasgo `Laravel\\Pulse\\Livewire\\Concerns\\RemembersQueries`. Este método es accesible a través de los componentes Livewire y se puede explotar para llamar a elementos invocables arbitrarios dentro de la aplicación. Un usuario autenticado con acceso al panel de control de Laravel Pulse puede ejecutar código arbitrario llamando a cualquier función o método estático en el que el invocable sea una función o un método estático y el invocable no tenga parámetros o ningún tipo de parámetro estricto. El componente vulnerable es el método `remember(callable $query, string $key = '')` en `Laravel\\Pulse\\Livewire\\Concerns\\RemembersQueries`, y la vulnerabilidad afecta a todos los componentes de la tarjeta Pulse que usan este rasgo. La versión 1.3.1 contiene un parche."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+                "baseScore": 8.8,
+                "baseSeverity": "HIGH"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 8.7,
+                "baseSeverity": "HIGH"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-94"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:laravel:pulse:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "F9169050-64BE-4896-B09A-44A7BA501795",
+                    "versionEndExcluding": "1.3.1"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/laravel/pulse/commit/d1a5bf2eca36c6e3bedb4ceecd45df7d002a1ebc",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://github.com/laravel/pulse/security/advisories/GHSA-8vwh-pr89-4mw2",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 78,
+      "rank": 5
+    },
+    {
+      "cve_id": "CVE-2025-24076",
+      "signal_types": [
+        "EXP"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": {
+          "ref_published": "2025-06-09"
+        },
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-03-11",
+        "description": "Improper access control in Windows Cross Device Service allows an authorized attacker to elevate privileges locally.",
+        "title": "microsoft windows_11_22h2 privilege escalation",
+        "vendor": "microsoft",
+        "product": "windows_11_22h2",
+        "attack_type": "privilege escalation",
+        "cvss_max": 7.3
+      },
+      "cve": {
+        "id": "CVE-2025-24076",
+        "sourceIdentifier": "secure@microsoft.com",
+        "published": "2025-03-11T17:16:30.480",
+        "lastModified": "2025-07-07T17:24:22.777",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Improper access control in Windows Cross Device Service allows an authorized attacker to elevate privileges locally."
+          },
+          {
+            "lang": "es",
+            "value": "Un control de acceso inadecuado en el servicio de dispositivos cruzados de Windows permite que un atacante autorizado eleve privilegios localmente."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H",
+                "baseScore": 7.3,
+                "baseSeverity": "HIGH"
+              },
+              "source": "secure@microsoft.com",
+              "type": "Secondary",
+              "exploitabilityScore": 1.3,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-284"
+              }
+            ],
+            "source": "secure@microsoft.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_11_22h2:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "0B27CE48-66A0-488B-A7B6-18A5A191AFDA",
+                    "versionEndExcluding": "10.0.22621.5039"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_11_23h2:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "77DC7D9D-F85F-41B4-A944-D27B388A1157",
+                    "versionEndExcluding": "10.0.22631.5039"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_11_24h2:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "84168D48-1F68-4590-98BB-E926339D1A01",
+                    "versionEndExcluding": "10.0.26100.3403"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_server_2022_23h2:*:*:*:*:*:*:x64:*",
+                    "matchCriteriaId": "96046A7B-76A1-4DCF-AEA5-25344D37E492",
+                    "versionEndExcluding": "10.0.25398.1486"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_server_2025:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "CF81B44C-8FF7-4C61-9974-3F98DA9D492C",
+                    "versionEndExcluding": "10.0.26100.3403"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-24076",
+            "source": "secure@microsoft.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 78,
+      "rank": 6
+    },
+    {
+      "cve_id": "CVE-2025-30184",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-06-09",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-06-09",
+        "description": "CyberData 011209 Intercom could allow an unauthenticated user access to the Web Interface through an alternate path.",
+        "title": "cyberdata 011209_sip_emergency_intercom_firmware",
+        "vendor": "cyberdata",
+        "product": "011209_sip_emergency_intercom_firmware",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-30184",
+        "sourceIdentifier": "ics-cert@hq.dhs.gov",
+        "published": "2025-06-09T22:15:21.440",
+        "lastModified": "2025-08-12T14:22:08.940",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "CyberData 011209 Intercom could allow an unauthenticated user access to the Web Interface through an alternate path."
+          },
+          {
+            "lang": "es",
+            "value": "CyberData 011209 Intercom podría permitir que un usuario no autenticado acceda a la interfaz web a través de una ruta alternativa."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "ics-cert@hq.dhs.gov",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "ics-cert@hq.dhs.gov",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-288"
+              }
+            ],
+            "source": "ics-cert@hq.dhs.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:cyberdata:011209_sip_emergency_intercom_firmware:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "32FED1EF-1F2B-4774-9E0B-F0AF3F1E293B",
+                    "versionEndExcluding": "22.0.1"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:cyberdata:011209_sip_emergency_intercom:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "44364BDF-A50E-425D-BBEB-B24A23B0843A"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-25-155-01",
+            "source": "ics-cert@hq.dhs.gov",
+            "tags": [
+              "Third Party Advisory",
+              "US Government Resource"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 7
+    },
+    {
+      "cve_id": "CVE-2025-30515",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-06-09",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-06-09",
+        "description": "CyberData 011209 Intercom\n \ncould allow an authenticated attacker to upload arbitrary files to multiple locations within the system.",
+        "title": "cyberdata 011209_sip_emergency_intercom_firmware",
+        "vendor": "cyberdata",
+        "product": "011209_sip_emergency_intercom_firmware",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-30515",
+        "sourceIdentifier": "ics-cert@hq.dhs.gov",
+        "published": "2025-06-09T23:15:22.273",
+        "lastModified": "2025-08-12T14:21:22.130",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "CyberData 011209 Intercom\n \ncould allow an authenticated attacker to upload arbitrary files to multiple locations within the system."
+          },
+          {
+            "lang": "es",
+            "value": "CyberData 011209 Intercom podría permitir que un atacante autenticado cargue archivos arbitrarios en múltiples ubicaciones dentro del sistema."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "ics-cert@hq.dhs.gov",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 8.8,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "ics-cert@hq.dhs.gov",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-35"
+              }
+            ],
+            "source": "ics-cert@hq.dhs.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:cyberdata:011209_sip_emergency_intercom_firmware:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "32FED1EF-1F2B-4774-9E0B-F0AF3F1E293B",
+                    "versionEndExcluding": "22.0.1"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:cyberdata:011209_sip_emergency_intercom:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "44364BDF-A50E-425D-BBEB-B24A23B0843A"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-25-155-01",
+            "source": "ics-cert@hq.dhs.gov",
+            "tags": [
+              "Third Party Advisory",
+              "US Government Resource"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 8
+    },
+    {
+      "cve_id": "CVE-2025-32433",
+      "signal_types": [
+        "KEV"
+      ],
+      "signals": {
+        "kev": {
+          "date_added": "2025-06-09"
+        },
+        "exploit": null,
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-04-16",
+        "description": "Erlang/OTP is a set of libraries for the Erlang programming language. Prior to versions OTP-27.3.3, OTP-26.2.5.11, and OTP-25.3.2.20, a SSH server may allow an attacker to perform unauthenticated remote code execution (RCE). By exploiting a flaw in SSH protocol message handling, a malicious actor could gain unauthorized access to affected systems and execute arbitrary commands without valid credentials. This issue is patched in versions OTP-27.3.3, OTP-26.2.5.11, and OTP-25.3.2.20. A temporary workaround involves disabling the SSH server or to prevent access via firewall rules.",
+        "title": "Erlang Erlang/OTP SSH Server Missing Authentication for Critical Function Vulnerability",
+        "vendor": "erlang",
+        "product": "erlang\\/otp",
+        "attack_type": "RCE",
+        "cvss_max": 10.0
+      },
+      "cve": {
+        "id": "CVE-2025-32433",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2025-04-16T22:15:14.373",
+        "lastModified": "2025-11-04T14:49:05.177",
+        "vulnStatus": "Analyzed",
+        "cisaExploitAdd": "2025-06-09",
+        "cisaActionDue": "2025-06-30",
+        "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+        "cisaVulnerabilityName": "Erlang Erlang/OTP SSH Server Missing Authentication for Critical Function Vulnerability",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Erlang/OTP is a set of libraries for the Erlang programming language. Prior to versions OTP-27.3.3, OTP-26.2.5.11, and OTP-25.3.2.20, a SSH server may allow an attacker to perform unauthenticated remote code execution (RCE). By exploiting a flaw in SSH protocol message handling, a malicious actor could gain unauthorized access to affected systems and execute arbitrary commands without valid credentials. This issue is patched in versions OTP-27.3.3, OTP-26.2.5.11, and OTP-25.3.2.20. A temporary workaround involves disabling the SSH server or to prevent access via firewall rules."
+          },
+          {
+            "lang": "es",
+            "value": "Erlang/OTP es un conjunto de librerías para el lenguaje de programación Erlang. En versiones anteriores a OTP-27.3.3, OTP-26.2.5.11 y OTP-25.3.2.20, un servidor SSH podía permitir a un atacante realizar una ejecución remota de código (RCE) sin autenticación. Al explotar una falla en la gestión de mensajes del protocolo SSH, un atacante podría obtener acceso no autorizado a los sistemas afectados y ejecutar comandos arbitrarios sin credenciales válidas. Este problema está corregido en las versiones OTP-27.3.3, OTP-26.2.5.11 y OTP-25.3.2.20. Una solución temporal consiste en deshabilitar el servidor SSH o impedir el acceso mediante reglas de firewall."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+                "baseScore": 10.0,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 6.0
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-306"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:erlang:erlang\\/otp:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "E83BFB53-C1CC-4F9E-9794-EE0057EE770B",
+                    "versionEndExcluding": "25.3.2.20"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:erlang:erlang\\/otp:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "4842AC3A-E1AE-491A-AFCE-F3669397CA82",
+                    "versionStartIncluding": "26.0",
+                    "versionEndExcluding": "26.2.5.11"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:erlang:erlang\\/otp:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "36383ED9-EA7D-4AFF-B2C7-1FFD16207C54",
+                    "versionStartIncluding": "27.0",
+                    "versionEndExcluding": "27.3.3"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:confd_basic:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "8FD911AA-C8F6-4109-A3B4-602AEAF2C77D",
+                    "versionEndExcluding": "7.7.19.1"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:confd_basic:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "8B6F7512-CAC2-42DE-B150-D56AE6F78053",
+                    "versionStartIncluding": "8.0.18",
+                    "versionEndExcluding": "8.1.16.2"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:confd_basic:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "4F1269B5-554F-42E0-95A1-BD22C5C23309",
+                    "versionStartIncluding": "8.2",
+                    "versionEndExcluding": "8.2.11.1"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:confd_basic:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "6D1C890C-D8CA-45FB-B70E-3960B0E9D41B",
+                    "versionStartIncluding": "8.3",
+                    "versionEndExcluding": "8.3.8.1"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:confd_basic:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "37F31D4A-E5B4-4ED3-BE3C-07FFA0F4D689",
+                    "versionStartIncluding": "8.4",
+                    "versionEndExcluding": "8.4.4.1"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:network_services_orchestrator:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "C911AA6C-9CD2-48F5-BC9B-A2D1AACEED03",
+                    "versionEndExcluding": "5.7.19.1"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:network_services_orchestrator:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "1A800C1C-CED2-4D88-ADD3-1705DF8D1611",
+                    "versionStartIncluding": "5.8",
+                    "versionEndExcluding": "6.1.16.2"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:network_services_orchestrator:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "4C18189F-8645-4801-9217-B7A1E3539F89",
+                    "versionStartIncluding": "6.2",
+                    "versionEndExcluding": "6.2.11.1"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:network_services_orchestrator:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "8B4EF3D5-5633-4C99-B4AE-360A2A3B985B",
+                    "versionStartIncluding": "6.3",
+                    "versionEndExcluding": "6.3.8.1"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:network_services_orchestrator:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "553AEE68-3FBE-453B-BD12-03FAF3BA6F2C",
+                    "versionStartIncluding": "6.4",
+                    "versionEndExcluding": "6.4.1.1"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:network_services_orchestrator:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "9DCC5384-91EF-44D6-908B-CC019036273A",
+                    "versionStartIncluding": "6.4.2",
+                    "versionEndExcluding": "6.4.4.1"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:cloud_native_broadband_network_gateway:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "F813EFB7-F2E8-4E36-BBF3-1FA1C2CB6035",
+                    "versionEndExcluding": "2025.03.1"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:inode_manager:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "BA1A6D3F-C7B9-415B-AE44-A263BFAA8B21"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:smart_phy:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "D14D75E9-5247-4D0F-A92E-10821629089D",
+                    "versionEndExcluding": "25.2"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:ultra_packet_core:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "25BC4E65-0344-45F3-8570-CEBEAA26D302",
+                    "versionEndExcluding": "2025.03"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:ultra_services_platform:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "378484EF-6E71-4D73-8864-538A869F8D08"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:cisco:staros:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "CDADC228-B7DA-405D-B704-4E6198D4308E",
+                    "versionEndExcluding": "2025.03"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:optical_site_manager:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "2A91EBA2-5C6A-43D1-9657-E0B0B2D214F4",
+                    "versionEndExcluding": "25.2.1"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:cisco:ncs_1001:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "0F6E0FBE-70B7-413C-8943-39BEFE050298"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:cisco:ncs_1002:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "37AE5FB0-D9A6-4EBE-9F7F-243299AE918B"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:cisco:ncs_1004:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "60C9AAF8-4C5B-4EF5-B575-8235F3C54BCC"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:cisco:ncs_2000_shelf_virtualization_orchestrator_firmware:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "3FBA50A5-A1E7-41C4-AC8C-19A2393ACF89",
+                    "versionEndExcluding": "25.1.1"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:cisco:ncs_2000_shelf_virtualization_orchestrator_module:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "B66F36B9-0E4E-4AE0-9102-9B963C5E67D6"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:enterprise_nfv_infrastructure_software:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "B41BD0FB-372F-418B-A453-232D04C7C055",
+                    "versionEndExcluding": "4.18"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:ultra_cloud_core:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "41890CCA-16A7-429C-8A31-F467141171A7",
+                    "versionEndExcluding": "2025.03.1"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:cisco:rv160w_firmware:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "E4C81717-86CA-4B78-B60B-1ABEA71D0243"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:cisco:rv160w:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "2B7E3792-5D0F-4CCC-874D-512059CA8E12"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:cisco:rv260_firmware:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "B8B9D17F-A3E5-498D-9AE1-11915FEF8B3B"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:cisco:rv260:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "6FFC99C1-954E-408B-8A08-C79941350F05"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:cisco:rv160_firmware:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "C2D5DF69-3106-40B4-9DEA-1655EC394E01"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:cisco:rv160:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "EC1DC21D-8C6C-4CE7-B5CB-8646659B02BC"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:cisco:rv260p_firmware:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "3BA3E845-95EC-4CAD-8105-2348F8D58E3A"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:cisco:rv260p:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "A62A6E2F-FA43-4F40-A684-651FEDAC2114"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:cisco:rv260w_firmware:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "33291CE9-C896-4798-BAD3-5ACA2A412E92"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:cisco:rv260w:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "95737F9F-1779-4AAB-875E-2CD586A8B780"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:cisco:rv340_firmware:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "FAA54684-D12C-4050-AFD3-A1A3E2B6585F"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:cisco:rv340:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "2A4411AC-2A74-4315-BA6B-D7E1AA538BDB"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:cisco:rv340w_firmware:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "7440DB48-9ACC-4D14-A042-12946145AB45"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:cisco:rv340w:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "21E55019-F969-4ACD-A6C8-1D2EE05F8EE4"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:cisco:rv345_firmware:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "F6DBB708-31C2-499B-B6DC-2DC3501F2FDE"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:cisco:rv345:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "5E91E68B-CBE9-462E-82D4-6F588B8E84E8"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:cisco:rv345p_firmware:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "26BE8976-95F2-41DB-A76B-E67CF07DF500"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:cisco:rv345p:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "5120BAB7-FB3A-481E-9ECD-48341846AFBD"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:debian:debian_linux:11.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "FA6FEEC2-9F11-4643-8827-749718254FED"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/erlang/otp/commit/0fcd9c56524b28615e8ece65fc0c3f66ef6e4c12",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://github.com/erlang/otp/commit/6eef04130afc8b0ccb63c9a0d8650209cf54892f",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://github.com/erlang/otp/commit/b1924d37fd83c070055beb115d5d6a6a9490b891",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://github.com/erlang/otp/security/advisories/GHSA-37cp-fgq5-7wc2",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "http://www.openwall.com/lists/oss-security/2025/04/16/2",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Mailing List"
+            ]
+          },
+          {
+            "url": "http://www.openwall.com/lists/oss-security/2025/04/18/1",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Mailing List"
+            ]
+          },
+          {
+            "url": "http://www.openwall.com/lists/oss-security/2025/04/18/2",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Mailing List"
+            ]
+          },
+          {
+            "url": "http://www.openwall.com/lists/oss-security/2025/04/18/6",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Mailing List"
+            ]
+          },
+          {
+            "url": "http://www.openwall.com/lists/oss-security/2025/04/19/1",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Mailing List"
+            ]
+          },
+          {
+            "url": "https://lists.debian.org/debian-lts-announce/2025/04/msg00028.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://security.netapp.com/advisory/ntap-20250425-0001/",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/ProDefense/CVE-2025-32433/blob/main/CVE-2025-32433.py",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Exploit"
+            ]
+          },
+          {
+            "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-erlang-otp-ssh-xyZZy",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2025-32433",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "US Government Resource"
+            ]
+          }
+        ]
+      },
+      "risk_score": 88,
+      "rank": 9
+    },
+    {
+      "cve_id": "CVE-2025-48122",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-06-09",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-06-09",
+        "description": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in Holest Engineering Spreadsheet Price Changer for WooCommerce and WP E-commerce – Light excel-like-price-change-for-woocommerce-and-wp-e-commerce-light allows SQL Injection.This issue affects Spreadsheet Price Changer for WooCommerce and WP E-commerce – Light: from n/a through <= 2.4.37.",
+        "title": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in Holest Engineering Spreadsheet Pric...",
+        "attack_type": "SQL Injection",
+        "cvss_max": 9.3
+      },
+      "cve": {
+        "id": "CVE-2025-48122",
+        "sourceIdentifier": "audit@patchstack.com",
+        "published": "2025-06-09T16:15:42.390",
+        "lastModified": "2026-04-23T15:30:50.137",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in Holest Engineering Spreadsheet Price Changer for WooCommerce and WP E-commerce – Light excel-like-price-change-for-woocommerce-and-wp-e-commerce-light allows SQL Injection.This issue affects Spreadsheet Price Changer for WooCommerce and WP E-commerce – Light: from n/a through <= 2.4.37."
+          },
+          {
+            "lang": "es",
+            "value": "Vulnerabilidad de neutralización incorrecta de elementos especiales utilizados en un comando SQL ('Inyección SQL') en Holest Engineering Spreadsheet Price Changer for WooCommerce and WP E-commerce – Light permite la inyección SQL. Este problema afecta a Spreadsheet Price Changer para WooCommerce y WP E-commerce – Light: desde n/d hasta la versión 2.4.37."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:L",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "audit@patchstack.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 4.7
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-89"
+              }
+            ],
+            "source": "audit@patchstack.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://patchstack.com/database/Wordpress/Plugin/excel-like-price-change-for-woocommerce-and-wp-e-commerce-light/vulnerability/wordpress-spreadsheet-price-changer-for-woocommerce-and-wp-e-commerce-light-2-4-37-sql-injection-vulnerability?_s_id=cve",
+            "source": "audit@patchstack.com"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 10
+    },
+    {
+      "cve_id": "CVE-2025-48129",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-06-09",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-06-09",
+        "description": "Incorrect Privilege Assignment vulnerability in Holest Engineering Spreadsheet Price Changer for WooCommerce and WP E-commerce – Light excel-like-price-change-for-woocommerce-and-wp-e-commerce-light allows Privilege Escalation.This issue affects Spreadsheet Price Changer for WooCommerce and WP E-commerce – Light: from n/a through <= 2.4.37.",
+        "title": "Incorrect Privilege Assignment vulnerability in Holest Engineering Spreadsheet Price Changer for WooCommerce and WP E-commerce – Light ex...",
+        "attack_type": "Privilege Escalation",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-48129",
+        "sourceIdentifier": "audit@patchstack.com",
+        "published": "2025-06-09T16:15:43.133",
+        "lastModified": "2026-04-23T15:30:50.937",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Incorrect Privilege Assignment vulnerability in Holest Engineering Spreadsheet Price Changer for WooCommerce and WP E-commerce – Light excel-like-price-change-for-woocommerce-and-wp-e-commerce-light allows Privilege Escalation.This issue affects Spreadsheet Price Changer for WooCommerce and WP E-commerce – Light: from n/a through <= 2.4.37."
+          },
+          {
+            "lang": "es",
+            "value": "Vulnerabilidad de asignación incorrecta de privilegios en Holest Engineering Spreadsheet Price Changer for WooCommerce and WP E-commerce – Light permite la escalada de privilegios. Este problema afecta a Spreadsheet Price Changer para WooCommerce y WP E-commerce – Light: desde n/d hasta la versión 2.4.37."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "audit@patchstack.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-266"
+              }
+            ],
+            "source": "audit@patchstack.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://patchstack.com/database/Wordpress/Plugin/excel-like-price-change-for-woocommerce-and-wp-e-commerce-light/vulnerability/wordpress-spreadsheet-price-changer-for-woocommerce-and-wp-e-commerce-light-2-4-37-privilege-escalation-vulnerability?_s_id=cve",
+            "source": "audit@patchstack.com"
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 11
+    },
+    {
+      "cve_id": "CVE-2025-48140",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-06-09",
+          "previous_max": null,
+          "current_max": 9.9
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-06-09",
+        "description": "Improper Control of Generation of Code ('Code Injection') vulnerability in metalpriceapi MetalpriceAPI metalpriceapi allows Code Injection.This issue affects MetalpriceAPI: from n/a through <= 1.1.4.",
+        "title": "Improper Control of Generation of Code ('Code Injection') vulnerability in metalpriceapi MetalpriceAPI metalpriceapi allows Code Injectio...",
+        "cvss_max": 9.9
+      },
+      "cve": {
+        "id": "CVE-2025-48140",
+        "sourceIdentifier": "audit@patchstack.com",
+        "published": "2025-06-09T16:15:43.573",
+        "lastModified": "2026-04-23T15:30:52.317",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Improper Control of Generation of Code ('Code Injection') vulnerability in metalpriceapi MetalpriceAPI metalpriceapi allows Code Injection.This issue affects MetalpriceAPI: from n/a through <= 1.1.4."
+          },
+          {
+            "lang": "es",
+            "value": "Vulnerabilidad de control inadecuado de la generación de código (inyección de código) en metalpriceapi MetalpriceAPI permite la inyección de código. Este problema afecta a MetalpriceAPI desde n/d hasta la versión 1.1.4."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+                "baseScore": 9.9,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "audit@patchstack.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.1,
+              "impactScore": 6.0
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-94"
+              }
+            ],
+            "source": "audit@patchstack.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://patchstack.com/database/Wordpress/Plugin/metalpriceapi/vulnerability/wordpress-metalpriceapi-1-1-4-remote-code-execution-rce-vulnerability?_s_id=cve",
+            "source": "audit@patchstack.com"
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 12
+    },
+    {
+      "cve_id": "CVE-2025-48141",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-06-09",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-06-09",
+        "description": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in Alex Zaytseff Multi CryptoCurrency Payments multi-crypto-currency-payment allows SQL Injection.This issue affects Multi CryptoCurrency Payments: from n/a through <= 2.0.7.",
+        "title": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in Alex Zaytseff Multi CryptoCurrency...",
+        "attack_type": "SQL Injection",
+        "cvss_max": 9.3
+      },
+      "cve": {
+        "id": "CVE-2025-48141",
+        "sourceIdentifier": "audit@patchstack.com",
+        "published": "2025-06-09T16:15:43.730",
+        "lastModified": "2026-04-23T15:30:52.430",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in Alex Zaytseff Multi CryptoCurrency Payments multi-crypto-currency-payment allows SQL Injection.This issue affects Multi CryptoCurrency Payments: from n/a through <= 2.0.7."
+          },
+          {
+            "lang": "es",
+            "value": "La vulnerabilidad de neutralización incorrecta de elementos especiales utilizados en un comando SQL ('Inyección SQL') en Alex Zaytseff Multi CryptoCurrency Payments permite la inyección SQL. Este problema afecta a Pagos Multicriptomoneda desde n/d hasta la versión 2.0.3."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:L",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "audit@patchstack.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 4.7
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-89"
+              }
+            ],
+            "source": "audit@patchstack.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://patchstack.com/database/Wordpress/Plugin/multi-crypto-currency-payment/vulnerability/wordpress-multi-cryptocurrency-payments-2-0-3-sql-injection-vulnerability?_s_id=cve",
+            "source": "audit@patchstack.com"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 13
+    },
+    {
+      "cve_id": "CVE-2025-48281",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-06-09",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-06-09",
+        "description": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in mystyleplatform MyStyle Custom Product Designer mystyle-custom-product-designer allows Blind SQL Injection.This issue affects MyStyle Custom Product Designer: from n/a through <= 3.21.1.",
+        "title": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in mystyleplatform MyStyle Custom Prod...",
+        "attack_type": "SQL Injection",
+        "cvss_max": 9.3
+      },
+      "cve": {
+        "id": "CVE-2025-48281",
+        "sourceIdentifier": "audit@patchstack.com",
+        "published": "2025-06-09T16:15:44.637",
+        "lastModified": "2026-04-23T15:31:01.487",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in mystyleplatform MyStyle Custom Product Designer mystyle-custom-product-designer allows Blind SQL Injection.This issue affects MyStyle Custom Product Designer: from n/a through <= 3.21.1."
+          },
+          {
+            "lang": "es",
+            "value": "Vulnerabilidad de neutralización incorrecta de elementos especiales utilizados en un comando SQL ('Inyección SQL') en mystyleplatform MyStyle Custom Product Designer permite la inyección SQL ciega. Este problema afecta a MyStyle Custom Product Designer desde n/d hasta la versión 3.21.1."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:L",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "audit@patchstack.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 4.7
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-89"
+              }
+            ],
+            "source": "audit@patchstack.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://patchstack.com/database/Wordpress/Plugin/mystyle-custom-product-designer/vulnerability/wordpress-mystyle-custom-product-designer-3-21-1-sql-injection-vulnerability?_s_id=cve",
+            "source": "audit@patchstack.com"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 14
+    },
+    {
+      "cve_id": "CVE-2025-49136",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-06-09",
+          "previous_max": null,
+          "current_max": 9.0
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-06-09",
+        "description": "listmonk is a standalone, self-hosted, newsletter and mailing list manager. Starting in version 4.0.0 and prior to version 5.0.2, the `env` and `expandenv` template functions which is enabled by default in Sprig enables capturing of env variables on host. While this may not be a problem on single-user (super admin) installations, on multi-user installations, this allows non-super-admin users with campaign or template permissions to use the `{{ env }}` template expression to capture sensitive environment variables. Users should upgrade to v5.0.2 to mitigate the issue.",
+        "title": "nadh listmonk",
+        "vendor": "nadh",
+        "product": "listmonk",
+        "cvss_max": 9.0
+      },
+      "cve": {
+        "id": "CVE-2025-49136",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2025-06-09T17:15:29.917",
+        "lastModified": "2025-07-11T17:23:30.110",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "listmonk is a standalone, self-hosted, newsletter and mailing list manager. Starting in version 4.0.0 and prior to version 5.0.2, the `env` and `expandenv` template functions which is enabled by default in Sprig enables capturing of env variables on host. While this may not be a problem on single-user (super admin) installations, on multi-user installations, this allows non-super-admin users with campaign or template permissions to use the `{{ env }}` template expression to capture sensitive environment variables. Users should upgrade to v5.0.2 to mitigate the issue."
+          },
+          {
+            "lang": "es",
+            "value": "Listmonk es un gestor de boletines y listas de correo independiente y autoalojado. A partir de la versión 4.0.0 y anteriores a la 5.0.2, las funciones de plantilla `env` y `expandenv`, habilitadas por defecto en Sprig, permiten la captura de variables de entorno en el host. Si bien esto puede no ser un problema en instalaciones de un solo usuario (superadministrador), en instalaciones multiusuario, permite a los usuarios sin superadministrador con permisos de campaña o plantilla usar la expresión de plantilla `{{ env }}` para capturar variables de entorno sensibles. Los usuarios deben actualizar a la versión 5.0.2 para mitigar el problema."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:H",
+                "baseScore": 9.0,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary",
+              "exploitabilityScore": 2.3,
+              "impactScore": 6.0
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+                "baseScore": 6.5,
+                "baseSeverity": "MEDIUM"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 3.6
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-1336"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          },
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "NVD-CWE-noinfo"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nadh:listmonk:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "0819712B-FBD6-4D10-875B-7DFAA1D602D1",
+                    "versionStartIncluding": "4.0.0",
+                    "versionEndExcluding": "5.0.2"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/knadh/listmonk/commit/d27d2c32cf3af2d0b24e29ea5a686ba149b49b3e",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://github.com/knadh/listmonk/releases/tag/v5.0.2",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Release Notes"
+            ]
+          },
+          {
+            "url": "https://github.com/knadh/listmonk/security/advisories/GHSA-jc7g-x28f-3v3h",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Exploit",
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 15
+    },
+    {
+      "cve_id": "CVE-2025-49652",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-06-09",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-06-09",
+        "description": "Missing Authentication in the registration feature of Lablup's BackendAI allows arbitrary users to create user accounts that can access private data even when registration is disabled.",
+        "title": "Missing Authentication in the registration feature of Lablup's BackendAI allows arbitrary users to create user accounts that can access p...",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-49652",
+        "sourceIdentifier": "6f8de1f0-f67e-45a6-b68f-98777fdb759c",
+        "published": "2025-06-09T18:15:26.897",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Missing Authentication in the registration feature of Lablup's BackendAI allows arbitrary users to create user accounts that can access private data even when registration is disabled."
+          },
+          {
+            "lang": "es",
+            "value": "La falta de autenticación en la función de registro de BackendAI de Lablup permite que usuarios arbitrarios creen cuentas de usuario que pueden acceder a datos privados incluso cuando el registro está deshabilitado."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "6f8de1f0-f67e-45a6-b68f-98777fdb759c",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-306"
+              }
+            ],
+            "source": "6f8de1f0-f67e-45a6-b68f-98777fdb759c"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://hiddenlayer.com/sai_security_advisor/2025-06-backendai/",
+            "source": "6f8de1f0-f67e-45a6-b68f-98777fdb759c"
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 16
+    }
+  ],
+  "source": "https://www.cvelogic.com/threat-intelligence/2025-06-09"
+}

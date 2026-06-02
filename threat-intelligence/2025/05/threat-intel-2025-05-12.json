@@ -1,0 +1,1351 @@
+{
+  "schema_version": "2.2",
+  "generated_at": "2026-06-02T07:32:42Z",
+  "day": "2025-05-12",
+  "window": {
+    "utc_start": "2025-05-12",
+    "utc_end": "2025-05-12",
+    "days": 1
+  },
+  "summary": {
+    "brief": "TeleMessage TM SGNL added to CISA KEV — confirmed in-the-wild exploitation. · 10 new critical disclosures — review patch status on exposed services.",
+    "bullets": [
+      "TeleMessage TM SGNL added to CISA KEV — confirmed in-the-wild exploitation.",
+      "10 new critical disclosures — review patch status on exposed services."
+    ],
+    "counts": {
+      "cves": 11,
+      "kev": 1,
+      "exploit": 0,
+      "epss": 0,
+      "cvss": 10,
+      "patch": 0
+    }
+  },
+  "cves": [
+    {
+      "cve_id": "CVE-2025-47729",
+      "signal_types": [
+        "KEV"
+      ],
+      "signals": {
+        "kev": {
+          "date_added": "2025-05-12"
+        },
+        "exploit": null,
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-05-08",
+        "description": "The TeleMessage archiving backend through 2025-05-05 holds cleartext copies of messages from TM SGNL (aka Archive Signal) app users, which is different functionality than described in the TeleMessage \"End-to-End encryption from the mobile phone through to the corporate archive\" documentation, as exploited in the wild in May 2025.",
+        "title": "TeleMessage TM SGNL Hidden Functionality Vulnerability",
+        "vendor": "telemessage",
+        "product": "text_message_archiver",
+        "cvss_max": 4.9
+      },
+      "cve": {
+        "id": "CVE-2025-47729",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2025-05-08T14:15:26.883",
+        "lastModified": "2025-11-05T19:26:39.130",
+        "vulnStatus": "Analyzed",
+        "cisaExploitAdd": "2025-05-12",
+        "cisaActionDue": "2025-06-02",
+        "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+        "cisaVulnerabilityName": "TeleMessage TM SGNL Hidden Functionality Vulnerability",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The TeleMessage archiving backend through 2025-05-05 holds cleartext copies of messages from TM SGNL (aka Archive Signal) app users, which is different functionality than described in the TeleMessage \"End-to-End encryption from the mobile phone through to the corporate archive\" documentation, as exploited in the wild in May 2025."
+          },
+          {
+            "lang": "es",
+            "value": "El backend de archivo de TeleMessage hasta el 5 de mayo de 2025 contiene copias de texto sin formato de los mensajes de los usuarios de la aplicación TM SGNL (también conocida como Archive Signal), lo que constituye una funcionalidad diferente a la descrita en la documentación de TeleMessage \"Cifrado de extremo a extremo desde el teléfono móvil hasta el archivo corporativo\", tal como se explotó en la naturaleza en mayo de 2025."
+          }
+        ],
+        "cveTags": [
+          {
+            "sourceIdentifier": "cve@mitre.org",
+            "tags": [
+              "exclusively-hosted-service"
+            ]
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:L/AC:H/PR:H/UI:N/S:U/C:L/I:N/A:N",
+                "baseScore": 1.9,
+                "baseSeverity": "LOW"
+              },
+              "source": "cve@mitre.org",
+              "type": "Secondary",
+              "exploitabilityScore": 0.5,
+              "impactScore": 1.4
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:N/A:N",
+                "baseScore": 4.9,
+                "baseSeverity": "MEDIUM"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 1.2,
+              "impactScore": 3.6
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-912"
+              }
+            ],
+            "source": "cve@mitre.org"
+          },
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "NVD-CWE-Other"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:telemessage:text_message_archiver:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "9E704BA3-25AB-4F8F-93DD-96A824FD0E85",
+                    "versionEndIncluding": "2025-05-05"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://arstechnica.com/security/2025/05/signal-clone-used-by-trump-official-stops-operations-after-report-it-was-hacked/",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Press/Media Coverage"
+            ]
+          },
+          {
+            "url": "https://news.ycombinator.com/item?id=43909220",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Press/Media Coverage"
+            ]
+          },
+          {
+            "url": "https://www.theregister.com/2025/05/05/telemessage_investigating/",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Press/Media Coverage"
+            ]
+          },
+          {
+            "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2025-47729",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "US Government Resource"
+            ]
+          }
+        ]
+      },
+      "risk_score": 88,
+      "rank": 1
+    },
+    {
+      "cve_id": "CVE-2025-44830",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-05-12",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-05-12",
+        "description": "EngineerCMS v1.02 through v.2.0.5 has a SQL injection vulnerability in the /project/addprojtemplet interface.",
+        "title": "engineercms_project engineercms SQL Injection",
+        "vendor": "engineercms_project",
+        "product": "engineercms",
+        "attack_type": "SQL Injection",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-44830",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2025-05-12T16:15:25.187",
+        "lastModified": "2025-06-13T13:49:14.850",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "EngineerCMS v1.02 through v.2.0.5 has a SQL injection vulnerability in the /project/addprojtemplet interface."
+          },
+          {
+            "lang": "es",
+            "value": "EngineerCMS v1.02 a v.2.0.5 tiene una vulnerabilidad de inyección SQL en la interfaz /project/addprojtemplet."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-89"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:engineercms_project:engineercms:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "FC41A52F-6BE1-43C7-8587-5870EFB696B8",
+                    "versionStartIncluding": "1.02",
+                    "versionEndIncluding": "2.0.5"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://gist.github.com/LTLTLXEY/e00ec21b730742ef432a7a560cd9b70a",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/3xxx/engineercms/issues/90",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Exploit",
+              "Issue Tracking",
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 2
+    },
+    {
+      "cve_id": "CVE-2025-45779",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-05-12",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-05-12",
+        "description": "Tenda AC10 V1.0re_V15.03.06.46 is vulnerable to Buffer Overflow in the formSetPPTPUserList handler via the list POST parameter.",
+        "title": "tenda ac10_firmware Buffer Overflow",
+        "vendor": "tenda",
+        "product": "ac10_firmware",
+        "attack_type": "Buffer Overflow",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-45779",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2025-05-12T17:15:47.297",
+        "lastModified": "2025-06-13T13:40:52.883",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Tenda AC10 V1.0re_V15.03.06.46 is vulnerable to Buffer Overflow in the formSetPPTPUserList handler via the list POST parameter."
+          },
+          {
+            "lang": "es",
+            "value": "Tenda AC10 V1.0re_V15.03.06.46 es vulnerable a un desbordamiento de búfer en el controlador formSetPPTPUserList a través del parámetro POST de lista."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-120"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:tenda:ac10_firmware:15.03.06.46:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "2ECA9E7E-D892-478F-8CB3-6EBC4565ACB8"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:tenda:ac10:1.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "AF790B76-6CAD-483A-95FA-80955643825B"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/sunyou-iot/iot-vul/blob/main/TendaAC10/CVE-2025-45779/README.md",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.tendacn.com/us/download/detail-3782.html",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Product"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 3
+    },
+    {
+      "cve_id": "CVE-2024-56523",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-05-12",
+          "previous_max": null,
+          "current_max": 9.1
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-05-12",
+        "description": "Radware Cloud Web Application Firewall (WAF) before 2025-05-07 allows remote attackers to bypass firewall filters by placing random data in the HTTP request body when using the HTTP GET method.",
+        "title": "radware cloud_waf",
+        "vendor": "radware",
+        "product": "cloud_waf",
+        "cvss_max": 9.1
+      },
+      "cve": {
+        "id": "CVE-2024-56523",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2025-05-12T15:15:58.813",
+        "lastModified": "2025-07-01T20:03:38.823",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Radware Cloud Web Application Firewall (WAF) before 2025-05-07 allows remote attackers to bypass firewall filters by placing random data in the HTTP request body when using the HTTP GET method."
+          },
+          {
+            "lang": "es",
+            "value": "Radware Cloud Web Application Firewall (WAF) anterior al 7 de mayo de 2025 permite a atacantes remotos eludir los filtros del firewall colocando datos aleatorios en el cuerpo de la solicitud HTTP cuando se utiliza el método HTTP GET."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+                "baseScore": 9.1,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.2
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-444"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:radware:cloud_waf:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "9EEA96F3-E42F-4D47-B17C-E35E4B202428",
+                    "versionEndExcluding": "2025-05-07"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://radware.com/solutions/cloud-security/",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Product"
+            ]
+          },
+          {
+            "url": "https://www.kb.cert.org/vuls/id/722229",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Third Party Advisory",
+              "US Government Resource"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 4
+    },
+    {
+      "cve_id": "CVE-2024-56524",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-05-12",
+          "previous_max": null,
+          "current_max": 9.1
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-05-12",
+        "description": "Radware Cloud Web Application Firewall (WAF) before 2025-05-07 allows remote attackers to bypass firewall filters by adding a special character to the request.",
+        "title": "radware cloud_waf",
+        "vendor": "radware",
+        "product": "cloud_waf",
+        "cvss_max": 9.1
+      },
+      "cve": {
+        "id": "CVE-2024-56524",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2025-05-12T15:15:58.907",
+        "lastModified": "2025-07-01T19:51:36.820",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Radware Cloud Web Application Firewall (WAF) before 2025-05-07 allows remote attackers to bypass firewall filters by adding a special character to the request."
+          },
+          {
+            "lang": "es",
+            "value": "Radware Cloud Web Application Firewall (WAF) anterior al 7 de mayo de 2025 permite a atacantes remotos eludir los filtros del firewall agregando un carácter especial a la solicitud."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+                "baseScore": 9.1,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.2
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-116"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:radware:cloud_waf:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "9EEA96F3-E42F-4D47-B17C-E35E4B202428",
+                    "versionEndExcluding": "2025-05-07"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://radware.com/solutions/cloud-security/",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Product"
+            ]
+          },
+          {
+            "url": "https://www.kb.cert.org/vuls/id/722229",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Third Party Advisory",
+              "US Government Resource"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 5
+    },
+    {
+      "cve_id": "CVE-2025-26846",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-05-12",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-05-12",
+        "description": "An issue was discovered in Znuny before 7.1.4. Permissions are not checked properly when using the Generic Interface to update ticket metadata.",
+        "title": "znuny znuny",
+        "vendor": "znuny",
+        "product": "znuny",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-26846",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2025-05-12T15:15:59.407",
+        "lastModified": "2025-06-13T13:51:43.497",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "An issue was discovered in Znuny before 7.1.4. Permissions are not checked properly when using the Generic Interface to update ticket metadata."
+          },
+          {
+            "lang": "es",
+            "value": "Se detectó un problema en Znuny antes de la versión 7.1.4. Los permisos no se verifican correctamente al usar la interfaz genérica para actualizar los metadatos de los tickets."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-862"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:znuny:znuny:*:*:*:*:lts:*:*:*",
+                    "matchCriteriaId": "E7C13CC9-8B89-48C0-B6CF-8CC261B46F42",
+                    "versionStartIncluding": "6.0.0",
+                    "versionEndIncluding": "6.0.48"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:znuny:znuny:*:*:*:*:lts:*:*:*",
+                    "matchCriteriaId": "81E060E6-A261-4BCE-9595-1F02922BDC8C",
+                    "versionStartIncluding": "6.5.1",
+                    "versionEndIncluding": "6.5.11"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:znuny:znuny:*:*:*:*:lts:*:*:*",
+                    "matchCriteriaId": "48128C29-D7ED-4FE8-8D76-77AE48B32B54",
+                    "versionStartIncluding": "7.0.1",
+                    "versionEndIncluding": "7.1.3"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://www.znuny.com",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Product"
+            ]
+          },
+          {
+            "url": "https://www.znuny.org/en/advisories/zsa-2025-02",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 6
+    },
+    {
+      "cve_id": "CVE-2025-30436",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-05-12",
+          "previous_max": null,
+          "current_max": 9.1
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-05-12",
+        "description": "This issue was addressed by restricting options offered on a locked device. This issue is fixed in iOS 18.4 and iPadOS 18.4. An attacker may be able to use Siri to enable Auto-Answer Calls.",
+        "title": "apple ipados",
+        "vendor": "apple",
+        "product": "ipados",
+        "cvss_max": 9.1
+      },
+      "cve": {
+        "id": "CVE-2025-30436",
+        "sourceIdentifier": "product-security@apple.com",
+        "published": "2025-05-12T22:15:20.927",
+        "lastModified": "2025-05-27T13:58:06.607",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "This issue was addressed by restricting options offered on a locked device. This issue is fixed in iOS 18.4 and iPadOS 18.4. An attacker may be able to use Siri to enable Auto-Answer Calls."
+          },
+          {
+            "lang": "es",
+            "value": "Este problema se solucionó restringiendo las opciones disponibles en un dispositivo bloqueado. Este problema se solucionó en iOS 18.4 y iPadOS 18.4. Un atacante podría usar Siri para habilitar la respuesta automática de llamadas."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:H",
+                "baseScore": 9.1,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.2
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-284"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:ipados:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "6B3450F7-7B4A-46CE-A6E0-BBE6569F2EBF",
+                    "versionEndExcluding": "18.4"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:iphone_os:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "0D9C73F9-FEF4-4FC1-B83D-56566AD35990",
+                    "versionEndExcluding": "18.4"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://support.apple.com/en-us/122371",
+            "source": "product-security@apple.com",
+            "tags": [
+              "Release Notes",
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 7
+    },
+    {
+      "cve_id": "CVE-2025-30448",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-05-12",
+          "previous_max": null,
+          "current_max": 9.1
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-05-12",
+        "description": "This issue was addressed with additional entitlement checks. This issue is fixed in iOS 18.5 and iPadOS 18.5, iPadOS 17.7.7, macOS Sequoia 15.4, macOS Sonoma 14.7.6, macOS Ventura 13.7.6, visionOS 2.5. An attacker may be able to turn on sharing of an iCloud folder without authentication.",
+        "title": "apple ipados",
+        "vendor": "apple",
+        "product": "ipados",
+        "cvss_max": 9.1
+      },
+      "cve": {
+        "id": "CVE-2025-30448",
+        "sourceIdentifier": "product-security@apple.com",
+        "published": "2025-05-12T22:15:21.190",
+        "lastModified": "2026-04-02T19:19:38.797",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "This issue was addressed with additional entitlement checks. This issue is fixed in iOS 18.5 and iPadOS 18.5, iPadOS 17.7.7, macOS Sequoia 15.4, macOS Sonoma 14.7.6, macOS Ventura 13.7.6, visionOS 2.5. An attacker may be able to turn on sharing of an iCloud folder without authentication."
+          },
+          {
+            "lang": "es",
+            "value": "Este problema se solucionó con comprobaciones adicionales de derechos. Este problema está corregido en macOS Sonoma 14.7.6, iPadOS 17.7.7, iOS 18.5 y iPadOS 18.5, visionOS 2.5, macOS Ventura 13.7.6 y macOS Sequoia 15.4. Un atacante podría activar el uso compartido de una carpeta de iCloud sin autenticación."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:H",
+                "baseScore": 9.1,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.2
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-862"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:ipados:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "683ECAF8-DB29-40DB-963A-B95EA2A2AC01",
+                    "versionEndExcluding": "17.7.7"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:ipados:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "069735D6-38B4-402A-9E79-1961701C9AD3",
+                    "versionStartIncluding": "18.0",
+                    "versionEndExcluding": "18.5"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:iphone_os:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "AF6AAC00-F384-4B0D-BBA9-C2AD278BF653",
+                    "versionEndExcluding": "18.5"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:macos:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "A90AA958-60F3-474C-B351-0F143B498B3E",
+                    "versionEndExcluding": "13.7.6"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:macos:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "0EE6D3FD-8A49-48CF-80A3-0FFC6BA80B99",
+                    "versionStartIncluding": "14.0",
+                    "versionEndExcluding": "14.7.6"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:macos:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "1320B815-0457-4276-83B9-AFAFDAF17EDA",
+                    "versionStartIncluding": "15.0",
+                    "versionEndExcluding": "15.4"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:visionos:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "047CDCCE-04BB-4D43-9831-7694992C5CC4",
+                    "versionEndExcluding": "2.5"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://support.apple.com/en-us/122373",
+            "source": "product-security@apple.com",
+            "tags": [
+              "Release Notes",
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://support.apple.com/en-us/122404",
+            "source": "product-security@apple.com",
+            "tags": [
+              "Release Notes",
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://support.apple.com/en-us/122405",
+            "source": "product-security@apple.com",
+            "tags": [
+              "Release Notes",
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://support.apple.com/en-us/122717",
+            "source": "product-security@apple.com",
+            "tags": [
+              "Release Notes",
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://support.apple.com/en-us/122718",
+            "source": "product-security@apple.com",
+            "tags": [
+              "Release Notes",
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://support.apple.com/en-us/122721",
+            "source": "product-security@apple.com",
+            "tags": [
+              "Release Notes",
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "http://seclists.org/fulldisclosure/2025/May/12",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://seclists.org/fulldisclosure/2025/May/6",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://seclists.org/fulldisclosure/2025/May/9",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 8
+    },
+    {
+      "cve_id": "CVE-2025-3659",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-05-12",
+          "previous_max": null,
+          "current_max": 9.4
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-05-12",
+        "description": "Improper authentication handling was identified in a set of HTTP POST requests affecting the following product families: \n\n  *  Digi PortServer TS - prior to and including 82000747_AA, build date 06/17/2022\n\n\n  *  Digi One SP/Digi One SP IA/Digi One IA - prior to and including 82000774_Z, build date 10/19/2020\n\n\n  *  Digi One IAP – prior to and including 82000770 Z, build date 10/19/2020\n\n\n\n\nA specially crafted POST request to the device’s web interface may allow an unauthenticated attacker to modify configuration settings.",
+        "title": "Improper authentication handling was identified in a set of HTTP POST requests affecting the following product families: * Digi PortServe...",
+        "cvss_max": 9.4
+      },
+      "cve": {
+        "id": "CVE-2025-3659",
+        "sourceIdentifier": "e8a6bb0b-e373-42b1-a5de-93e314325576",
+        "published": "2025-05-12T21:15:46.513",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Improper authentication handling was identified in a set of HTTP POST requests affecting the following product families: \n\n  *  Digi PortServer TS - prior to and including 82000747_AA, build date 06/17/2022\n\n\n  *  Digi One SP/Digi One SP IA/Digi One IA - prior to and including 82000774_Z, build date 10/19/2020\n\n\n  *  Digi One IAP – prior to and including 82000770 Z, build date 10/19/2020\n\n\n\n\nA specially crafted POST request to the device’s web interface may allow an unauthenticated attacker to modify configuration settings."
+          },
+          {
+            "lang": "es",
+            "value": "Se identificó un manejo incorrecto de la autenticación en un conjunto de solicitudes HTTP POST que afectan a las siguientes familias de productos: * Digi PortServer TS: anterior a 82000747_AA incluida, fecha de compilación 17/06/2022 * Digi One SP/Digi One SP IA/Digi One IA: anterior a 82000774_Z incluida, fecha de compilación 19/10/2020 * Digi One IAP: anterior a 82000770 Z incluida, fecha de compilación 19/10/2020 Una solicitud POST especialmente manipulada para la interfaz web del dispositivo puede permitir que un atacante no autenticado modifique los ajustes de configuración."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:A/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:L/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.4,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "e8a6bb0b-e373-42b1-a5de-93e314325576",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-287"
+              }
+            ],
+            "source": "e8a6bb0b-e373-42b1-a5de-93e314325576"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://hub.digi.com/support/products/infrastructure-management/digi-one-iap-haz/",
+            "source": "e8a6bb0b-e373-42b1-a5de-93e314325576"
+          },
+          {
+            "url": "https://hub.digi.com/support/products/infrastructure-management/digi-one-sp-ia/",
+            "source": "e8a6bb0b-e373-42b1-a5de-93e314325576"
+          },
+          {
+            "url": "https://hub.digi.com/support/products/infrastructure-management/digi-portserver-ts/",
+            "source": "e8a6bb0b-e373-42b1-a5de-93e314325576"
+          },
+          {
+            "url": "https://www.digi.com/getattachment/Resources/Security/Alerts/Improper-authentication-handling-for-Digi-PortServ/improper-authentication-handling.pdf",
+            "source": "e8a6bb0b-e373-42b1-a5de-93e314325576"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 9
+    },
+    {
+      "cve_id": "CVE-2025-44022",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-05-12",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-05-12",
+        "description": "An issue in vvveb CMS v.1.0.6 allows a remote attacker to execute arbitrary code via the Plugin mechanism.",
+        "title": "vvveb vvveb",
+        "vendor": "vvveb",
+        "product": "vvveb",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-44022",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2025-05-12T16:15:25.070",
+        "lastModified": "2025-06-23T19:15:17.153",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "An issue in vvveb CMS v.1.0.6 allows a remote attacker to execute arbitrary code via the Plugin mechanism."
+          },
+          {
+            "lang": "es",
+            "value": "Un problema en vvveb CMS v.1.0.6 permite que un atacante remoto ejecute código arbitrario a través del mecanismo del complemento."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-94"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vvveb:vvveb:1.0.6:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "B228E786-F967-434D-9C79-01BE6894F968"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/chimmeee/vulnerability-research/blob/main/CVE-2025-44022",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/givanz/Vvveb/commit/dd74abcae88f658779f61338b9f4c123884eef0d",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://github.com/givanz/Vvveb/issues/289",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 10
+    },
+    {
+      "cve_id": "CVE-2025-47682",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-05-12",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-05-12",
+        "description": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in Cozy Vision SMS Alert Order Notifications sms-alert allows SQL Injection.This issue affects SMS Alert Order Notifications: from n/a through <= 3.8.1.",
+        "title": "cozyvision sms_alert_order_notifications SQL Injection",
+        "vendor": "cozyvision",
+        "product": "sms_alert_order_notifications",
+        "attack_type": "SQL Injection",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-47682",
+        "sourceIdentifier": "audit@patchstack.com",
+        "published": "2025-05-12T19:15:51.420",
+        "lastModified": "2026-04-29T10:16:48.010",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in Cozy Vision SMS Alert Order Notifications sms-alert allows SQL Injection.This issue affects SMS Alert Order Notifications: from n/a through <= 3.8.1."
+          },
+          {
+            "lang": "es",
+            "value": "Vulnerabilidad de neutralización incorrecta de elementos especiales utilizados en un comando SQL ('Inyección SQL') en Cozy Vision Technologies Pvt. Ltd. SMS Alert Order Notifications – WooCommerce permiten la inyección SQL. Este problema afecta a SMS Alert Order Notifications – WooCommerce: desde n/d hasta 3.8.2."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:L",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "audit@patchstack.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 4.7
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-89"
+              }
+            ],
+            "source": "audit@patchstack.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cozyvision:sms_alert_order_notifications:*:*:*:*:free:wordpress:*:*",
+                    "matchCriteriaId": "FC050880-F7A8-436C-AD72-5E4201199421",
+                    "versionEndExcluding": "3.8.2"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://patchstack.com/database/Wordpress/Plugin/sms-alert/vulnerability/wordpress-sms-alert-order-notifications-woocommerce-3-8-1-sql-injection-vulnerability?_s_id=cve",
+            "source": "audit@patchstack.com",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 11
+    }
+  ],
+  "source": "https://www.cvelogic.com/threat-intelligence/2025-05-12"
+}

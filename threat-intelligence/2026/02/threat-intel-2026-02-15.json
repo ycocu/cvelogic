@@ -1,0 +1,570 @@
+{
+  "schema_version": "2.2",
+  "generated_at": "2026-06-02T07:34:25Z",
+  "day": "2026-02-15",
+  "window": {
+    "utc_start": "2026-02-15",
+    "utc_end": "2026-02-15",
+    "days": 1
+  },
+  "summary": {
+    "brief": "Macromedia Shockwave — exploitation likelihood rose sharply (EPSS 22% → 56% · rising (+34%)). · 4 new critical disclosures — review patch status on exposed services.",
+    "bullets": [
+      "Macromedia Shockwave — exploitation likelihood rose sharply (EPSS 22% → 56% · rising (+34%)).",
+      "4 new critical disclosures — review patch status on exposed services."
+    ],
+    "counts": {
+      "cves": 5,
+      "kev": 0,
+      "exploit": 0,
+      "epss": 1,
+      "cvss": 4,
+      "patch": 0
+    }
+  },
+  "cves": [
+    {
+      "cve_id": "CVE-2007-1403",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 0.21529,
+            "score_date": "2025-10-27"
+          },
+          "current": {
+            "score": 0.55775,
+            "score_date": "2026-02-15"
+          },
+          "delta": 0.34246
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2007-03-10",
+        "description": "Multiple stack-based buffer overflows in an ActiveX control in SwDir.dll 10.1.4.20 in Macromedia Shockwave allow remote attackers to cause a denial of service (Internet Explorer 7 crash) and possibly execute arbitrary code via a long (1) BGCOLOR, (2) SRC, (3) AutoStart, (4) Sound, (5) DrawLogo, or (6) DrawProgress property value, different vectors than CVE-2006-6885.",
+        "title": "macromedia shockwave Buffer Overflow",
+        "vendor": "macromedia",
+        "product": "shockwave",
+        "attack_type": "Buffer Overflow",
+        "cvss_max": 7.5
+      },
+      "cve": {
+        "id": "CVE-2007-1403",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2007-03-10T22:19:00.000",
+        "lastModified": "2026-04-23T00:35:47.467",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Multiple stack-based buffer overflows in an ActiveX control in SwDir.dll 10.1.4.20 in Macromedia Shockwave allow remote attackers to cause a denial of service (Internet Explorer 7 crash) and possibly execute arbitrary code via a long (1) BGCOLOR, (2) SRC, (3) AutoStart, (4) Sound, (5) DrawLogo, or (6) DrawProgress property value, different vectors than CVE-2006-6885."
+          },
+          {
+            "lang": "es",
+            "value": "Múltiples desbordamientos de búfer basado en pila en un control ActiveX en SwDir.dll 10.1.4.20 en Macromedia Shockwave permite a atacantes remotos provocar denegación de servicio (caida de Internet Explorer 7) y posiblemente ejecutar código de su elección a través de valores característicos de (1) BGCOLOR, (2) SRC, (3) AutoStart, (4) Sound, (5) DrawLogo, o (6) DrawProgress, vectores diferentes que CVE-2006-6885."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV2": [
+            {
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+                "baseScore": 7.5,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "baseSeverity": "HIGH",
+              "exploitabilityScore": 10.0,
+              "impactScore": 6.4
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "NVD-CWE-Other"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:macromedia:shockwave:10.1.4.20:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "6B698CF0-29DF-4B23-BA14-AE7BA5771AEC"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "http://osvdb.org/36005",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://www.securityfocus.com/bid/22842",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "https://www.exploit-db.com/exploits/3421",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          }
+        ]
+      },
+      "risk_score": 82,
+      "rank": 1
+    },
+    {
+      "cve_id": "CVE-2026-1490",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-02-15",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-02-15",
+        "description": "The Spam protection, Anti-Spam, FireWall by CleanTalk plugin for WordPress is vulnerable to unauthorized Arbitrary Plugin Installation due to an authorization bypass via reverse DNS (PTR record) spoofing on the 'checkWithoutToken' function in all versions up to, and including, 6.71. This makes it possible for unauthenticated attackers to install and activate arbitrary plugins which can be leveraged to achieve remote code execution if another vulnerable plugin is installed and activated. Note: This is only exploitable on sites with an invalid API key.",
+        "title": "The Spam protection, Anti-Spam, FireWall by CleanTalk plugin for WordPress is vulnerable to unauthorized Arbitrary Plugin Installation du...",
+        "attack_type": "privilege escalation",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2026-1490",
+        "sourceIdentifier": "security@wordfence.com",
+        "published": "2026-02-15T04:15:53.783",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The Spam protection, Anti-Spam, FireWall by CleanTalk plugin for WordPress is vulnerable to unauthorized Arbitrary Plugin Installation due to an authorization bypass via reverse DNS (PTR record) spoofing on the 'checkWithoutToken' function in all versions up to, and including, 6.71. This makes it possible for unauthenticated attackers to install and activate arbitrary plugins which can be leveraged to achieve remote code execution if another vulnerable plugin is installed and activated. Note: This is only exploitable on sites with an invalid API key."
+          },
+          {
+            "lang": "es",
+            "value": "El plugin de protección contra el correo no deseado, Antispam, Cortafuegos de CleanTalk para WordPress es vulnerable a la instalación arbitraria de plugins no autorizada debido a una omisión de autorización mediante suplantación de DNS inverso (registro PTR) en la función 'checkWithoutToken' en todas las versiones hasta la 6.71, inclusive. Esto permite a atacantes no autenticados instalar y activar plugins arbitrarios, lo que puede aprovecharse para lograr la ejecución remota de código si otro plugin vulnerable está instalado y activado. Nota: Esto solo es explotable en sitios con una clave API no válida."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security@wordfence.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-350"
+              }
+            ],
+            "source": "security@wordfence.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/cleantalk-spam-protect/trunk/lib/Cleantalk/ApbctWP/RemoteCalls.php#L69",
+            "source": "security@wordfence.com"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/cleantalk-spam-protect/trunk/lib/Cleantalk/Common/Helper.php#L64",
+            "source": "security@wordfence.com"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/changeset/3454488/cleantalk-spam-protect#file473",
+            "source": "security@wordfence.com"
+          },
+          {
+            "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/cb603be6-4a12-49e1-b8cc-b2062eb97f16?source=cve",
+            "source": "security@wordfence.com"
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 2
+    },
+    {
+      "cve_id": "CVE-2026-26369",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-02-15",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-02-15",
+        "description": "eNet SMART HOME server 2.2.1 and 2.3.1 contains a privilege escalation vulnerability due to insufficient authorization checks in the setUserGroup JSON-RPC method. A low-privileged user (UG_USER) can send a crafted POST request to /jsonrpc/management specifying their own username to elevate their account to the UG_ADMIN group, bypassing intended access controls and gaining administrative capabilities such as modifying device configurations, network settings, and other smart home system functions.",
+        "title": "jung-group enet_smart_home Privilege Escalation",
+        "vendor": "jung-group",
+        "product": "enet_smart_home",
+        "attack_type": "Privilege Escalation",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2026-26369",
+        "sourceIdentifier": "disclosure@vulncheck.com",
+        "published": "2026-02-15T16:15:54.407",
+        "lastModified": "2026-02-28T01:34:28.150",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "eNet SMART HOME server 2.2.1 and 2.3.1 contains a privilege escalation vulnerability due to insufficient authorization checks in the setUserGroup JSON-RPC method. A low-privileged user (UG_USER) can send a crafted POST request to /jsonrpc/management specifying their own username to elevate their account to the UG_ADMIN group, bypassing intended access controls and gaining administrative capabilities such as modifying device configurations, network settings, and other smart home system functions."
+          },
+          {
+            "lang": "es",
+            "value": "eNet SMART HOME servidor 2.2.1 y 2.3.1 contiene una vulnerabilidad de escalada de privilegios debido a comprobaciones de autorización insuficientes en el método JSON-RPC setUserGroup. Un usuario con pocos privilegios (UG_USER) puede enviar una solicitud POST manipulada a /jsonrpc/management especificando su propio nombre de usuario para elevar su cuenta al grupo UG_ADMIN, eludiendo los controles de acceso previstos y obteniendo capacidades administrativas como modificar configuraciones de dispositivos, ajustes de red y otras funciones del sistema de hogar inteligente."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-269"
+              }
+            ],
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "NVD-CWE-noinfo"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:jung-group:enet_smart_home:2.2.1:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "4B230A5E-D3D3-4F14-8F2C-6230798C0A61"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:jung-group:enet_smart_home:2.3.1:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "B80A70BE-E277-40FC-9E03-C5D31F9DAD5B"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://www.vulncheck.com/advisories/jung-enet-smart-home-server-privilege-escalation-v",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Broken Link"
+            ]
+          },
+          {
+            "url": "https://www.zeroscience.mk/en/vulnerabilities/ZSL-2026-5975.php",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Third Party Advisory",
+              "Exploit"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 3
+    },
+    {
+      "cve_id": "CVE-2025-32058",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-02-15",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-02-15",
+        "description": "The Infotainment ECU manufactured by Bosch uses a RH850 module for CAN communication. RH850 is connected to infotainment over the INC interface through a custom protocol. There is a vulnerability during processing requests of this protocol on the V850 side which allows an attacker with code execution on the infotainment main SoC to perform code execution on the RH850 module and subsequently send arbitrary CAN messages over the connected CAN bus.\n\n\n\nFirst identified on Nissan Leaf ZE1 manufactured in 2020.",
+        "title": "The Infotainment ECU manufactured by Bosch uses a RH850 module for CAN communication.",
+        "attack_type": "Code Execution",
+        "cvss_max": 9.3
+      },
+      "cve": {
+        "id": "CVE-2025-32058",
+        "sourceIdentifier": "cve@asrg.io",
+        "published": "2026-02-15T11:15:52.773",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The Infotainment ECU manufactured by Bosch uses a RH850 module for CAN communication. RH850 is connected to infotainment over the INC interface through a custom protocol. There is a vulnerability during processing requests of this protocol on the V850 side which allows an attacker with code execution on the infotainment main SoC to perform code execution on the RH850 module and subsequently send arbitrary CAN messages over the connected CAN bus.\n\n\n\nFirst identified on Nissan Leaf ZE1 manufactured in 2020."
+          },
+          {
+            "lang": "es",
+            "value": "La ECU de infoentretenimiento fabricada por Bosch utiliza un módulo RH850 para la comunicación CAN. El RH850 está conectado al infoentretenimiento a través de la interfaz INC mediante un protocolo personalizado. Existe una vulnerabilidad durante el procesamiento de solicitudes de este protocolo en el lado V850 que permite a un atacante con ejecución de código en el SoC principal de infoentretenimiento realizar ejecución de código en el módulo RH850 y posteriormente enviar mensajes CAN arbitrarios a través del bus CAN conectado.\n\nIdentificada por primera vez en el Nissan Leaf ZE1 fabricado en 2020."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "cve@asrg.io",
+              "type": "Secondary",
+              "exploitabilityScore": 2.5,
+              "impactScore": 6.0
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-121"
+              }
+            ],
+            "source": "cve@asrg.io"
+          }
+        ],
+        "references": [
+          {
+            "url": "http://i.blackhat.com/Asia-25/Asia-25-Evdokimov-Remote-Exploitation-of-Nissan-Leaf.pdf",
+            "source": "cve@asrg.io"
+          },
+          {
+            "url": "https://pcacybersecurity.com/resources/advisory/vulnerabilities-in-nissan-infotainment-manufactured-by-bosch",
+            "source": "cve@asrg.io"
+          },
+          {
+            "url": "https://www.nissan.co.uk/vehicles/new-vehicles/leaf.html",
+            "source": "cve@asrg.io"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 4
+    },
+    {
+      "cve_id": "CVE-2026-26366",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-02-15",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-02-15",
+        "description": "eNet SMART HOME server 2.2.1 and 2.3.1 ships with default credentials (user:user, admin:admin) that remain active after installation and commissioning without enforcing a mandatory password change. Unauthenticated attackers can use these default credentials to gain administrative access to sensitive smart home configuration and control functions.",
+        "title": "jung-group enet_smart_home",
+        "vendor": "jung-group",
+        "product": "enet_smart_home",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2026-26366",
+        "sourceIdentifier": "disclosure@vulncheck.com",
+        "published": "2026-02-15T16:15:53.870",
+        "lastModified": "2026-02-26T22:44:42.813",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "eNet SMART HOME server 2.2.1 and 2.3.1 ships with default credentials (user:user, admin:admin) that remain active after installation and commissioning without enforcing a mandatory password change. Unauthenticated attackers can use these default credentials to gain administrative access to sensitive smart home configuration and control functions."
+          },
+          {
+            "lang": "es",
+            "value": "El servidor eNet SMART HOME 2.2.1 y 2.3.1 se envía con credenciales predeterminadas (usuario:usuario, admin:admin) que permanecen activas después de la instalación y puesta en marcha sin forzar un cambio de contraseña obligatorio. Atacantes no autenticados pueden usar estas credenciales predeterminadas para obtener acceso administrativo a funciones sensibles de configuración y control del hogar inteligente."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-1392"
+              }
+            ],
+            "source": "disclosure@vulncheck.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:jung-group:enet_smart_home:2.2.1:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "4B230A5E-D3D3-4F14-8F2C-6230798C0A61"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:jung-group:enet_smart_home:2.3.1:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "B80A70BE-E277-40FC-9E03-C5D31F9DAD5B"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://www.vulncheck.com/advisories/jung-enet-smart-home-server-use-of-default-credent",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Broken Link"
+            ]
+          },
+          {
+            "url": "https://www.zeroscience.mk/en/vulnerabilities/ZSL-2026-5972.php",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Third Party Advisory",
+              "Exploit"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 5
+    }
+  ],
+  "source": "https://www.cvelogic.com/threat-intelligence/2026-02-15"
+}

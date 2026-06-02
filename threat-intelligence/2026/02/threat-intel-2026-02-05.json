@@ -1,0 +1,1322 @@
+{
+  "schema_version": "2.2",
+  "generated_at": "2026-06-02T07:34:21Z",
+  "day": "2026-02-05",
+  "window": {
+    "utc_start": "2026-02-05",
+    "utc_end": "2026-02-05",
+    "days": 1
+  },
+  "summary": {
+    "brief": "SmarterTools SmarterMail added to CISA KEV — confirmed in-the-wild exploitation. · Sun Solaris — exploitation likelihood rose sharply (EPSS 8.3% → 23% · rising (+14%)). · 6 new critical disclosures — review patch status on exposed services.",
+    "bullets": [
+      "SmarterTools SmarterMail added to CISA KEV — confirmed in-the-wild exploitation.",
+      "Sun Solaris — exploitation likelihood rose sharply (EPSS 8.3% → 23% · rising (+14%)).",
+      "6 new critical disclosures — review patch status on exposed services."
+    ],
+    "counts": {
+      "cves": 10,
+      "kev": 2,
+      "exploit": 0,
+      "epss": 2,
+      "cvss": 6,
+      "patch": 0
+    }
+  },
+  "cves": [
+    {
+      "cve_id": "CVE-2025-11953",
+      "signal_types": [
+        "KEV"
+      ],
+      "signals": {
+        "kev": {
+          "date_added": "2026-02-05"
+        },
+        "exploit": null,
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-11-03",
+        "description": "The Metro Development Server, which is opened by the React Native Community CLI, binds to external interfaces by default. The server exposes an endpoint that is vulnerable to OS command injection. This allows unauthenticated network attackers to send a POST request to the server and run arbitrary executables. On Windows, the attackers can also execute arbitrary shell commands with fully controlled arguments.",
+        "title": "React Native Community CLI OS Command Injection Vulnerability",
+        "vendor": "react-native-community",
+        "product": "react_native_community_cli",
+        "attack_type": "Command Injection",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-11953",
+        "sourceIdentifier": "reefs@jfrog.com",
+        "published": "2025-11-03T17:15:32.677",
+        "lastModified": "2026-02-06T19:43:47.703",
+        "vulnStatus": "Analyzed",
+        "cisaExploitAdd": "2026-02-05",
+        "cisaActionDue": "2026-02-26",
+        "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+        "cisaVulnerabilityName": "React Native Community CLI OS Command Injection Vulnerability",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The Metro Development Server, which is opened by the React Native Community CLI, binds to external interfaces by default. The server exposes an endpoint that is vulnerable to OS command injection. This allows unauthenticated network attackers to send a POST request to the server and run arbitrary executables. On Windows, the attackers can also execute arbitrary shell commands with fully controlled arguments."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "reefs@jfrog.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-78"
+              }
+            ],
+            "source": "reefs@jfrog.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:react-native-community:react_native_community_cli:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "99E1FC34-6FDB-45F5-841F-F96C5012DC5C",
+                    "versionStartIncluding": "19.0.0",
+                    "versionEndExcluding": "19.1.2"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:react-native-community:react_native_community_cli:18.0.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "2C0FCA50-3DE2-4CD3-87AB-EA793072E856"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:react-native-community:react_native_community_cli:20.0.0:alpha0:*:*:*:*:*:*",
+                    "matchCriteriaId": "681E0D24-769A-4A3C-B19A-B260114B7291"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:react-native-community:react_native_community_cli:20.0.0:alpha1:*:*:*:*:*:*",
+                    "matchCriteriaId": "D3BBB26F-FAB1-49BB-A7EE-E9FDF0797B01"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:react-native-community:react_native_community_cli:20.0.0:alpha2:*:*:*:*:*:*",
+                    "matchCriteriaId": "84D809F4-D4FF-44F4-857F-294D208F5C9E"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/react-native-community/cli/commit/15089907d1f1301b22c72d7f68846a2ef20df547",
+            "source": "reefs@jfrog.com",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://jfrog.com/blog/cve-2025-11953-critical-react-native-community-cli-vulnerability",
+            "source": "reefs@jfrog.com",
+            "tags": [
+              "Exploit",
+              "Mitigation",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://x.com/SzymonRybczak/status/1986199665000566848",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://x.com/thymikee/status/1986770875954475375",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2025-11953",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "US Government Resource"
+            ]
+          },
+          {
+            "url": "https://www.vulncheck.com/blog/metro4shell_eitw",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 88,
+      "rank": 1
+    },
+    {
+      "cve_id": "CVE-1999-0210",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 0.08326,
+            "score_date": "2025-05-26"
+          },
+          "current": {
+            "score": 0.22557,
+            "score_date": "2026-02-05"
+          },
+          "delta": 0.14231
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "1997-11-26",
+        "description": "Automount daemon automountd allows local or remote users to gain privileges via shell metacharacters.",
+        "title": "sun solaris privilege escalation",
+        "vendor": "sun",
+        "product": "solaris",
+        "attack_type": "privilege escalation",
+        "cvss_max": 10.0
+      },
+      "cve": {
+        "id": "CVE-1999-0210",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "1997-11-26T05:00:00.000",
+        "lastModified": "2026-04-16T00:27:16.627",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Automount daemon automountd allows local or remote users to gain privileges via shell metacharacters."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV2": [
+            {
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+                "baseScore": 10.0,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "baseSeverity": "HIGH",
+              "exploitabilityScore": 10.0,
+              "impactScore": 10.0
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "NVD-CWE-Other"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:sun:solaris:2.4:*:x86:*:*:*:*:*",
+                    "matchCriteriaId": "1F881110-7B54-49DA-B23A-710273430C44"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:sun:solaris:2.5:*:x86:*:*:*:*:*",
+                    "matchCriteriaId": "200D8CB2-0D52-40A8-9CD9-6E4513605201"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:sun:solaris:2.5.1:*:x86:*:*:*:*:*",
+                    "matchCriteriaId": "F66BAF35-A8B9-4E95-B270-444206FDD35B"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:sun:sunos:5.4:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "7AAC8954-74A8-4FE3-ABE7-57DA041D9D8F"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:sun:sunos:5.5:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "5B72953B-E873-4E44-A3CF-12D770A0D416"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:sun:sunos:5.5.1:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "39F847DB-65A9-47DA-BCFA-A179E5E2301A"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "http://marc.info/?l=bugtraq&m=88053459921223&w=2",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://marc.info/?l=bugtraq&m=91547759121289&w=2",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://www.cert.org/advisories/CA-99-05-statd-automountd.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Patch",
+              "Third Party Advisory",
+              "US Government Resource"
+            ]
+          },
+          {
+            "url": "http://www.securityfocus.com/bid/235",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://www1.itrc.hp.com/service/cki/docDisplay.do?docId=HPSBUX9910-104",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          }
+        ]
+      },
+      "risk_score": 86,
+      "rank": 2
+    },
+    {
+      "cve_id": "CVE-2025-68121",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-02-05",
+          "previous_max": null,
+          "current_max": 10.0
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-02-05",
+        "description": "During session resumption in crypto/tls, if the underlying Config has its ClientCAs or RootCAs fields mutated between the initial handshake and the resumed handshake, the resumed handshake may succeed when it should have failed. This may happen when a user calls Config.Clone and mutates the returned Config, or uses Config.GetConfigForClient. This can cause a client to resume a session with a server that it would not have resumed with during the initial handshake, or cause a server to resume a session with a client that it would not have resumed with during the initial handshake.",
+        "title": "golang go",
+        "vendor": "golang",
+        "product": "go",
+        "cvss_max": 10.0
+      },
+      "cve": {
+        "id": "CVE-2025-68121",
+        "sourceIdentifier": "security@golang.org",
+        "published": "2026-02-05T18:16:10.857",
+        "lastModified": "2026-04-29T14:16:16.170",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "During session resumption in crypto/tls, if the underlying Config has its ClientCAs or RootCAs fields mutated between the initial handshake and the resumed handshake, the resumed handshake may succeed when it should have failed. This may happen when a user calls Config.Clone and mutates the returned Config, or uses Config.GetConfigForClient. This can cause a client to resume a session with a server that it would not have resumed with during the initial handshake, or cause a server to resume a session with a client that it would not have resumed with during the initial handshake."
+          },
+          {
+            "lang": "es",
+            "value": "Durante la reanudación de la sesión en crypto/tls, si la Config subyacente tiene sus campos ClientCAs o RootCAs mutados entre el handshake inicial y el handshake reanudado, el handshake reanudado puede tener éxito cuando debería haber fallado. Esto puede ocurrir cuando un usuario llama a Config.Clone y muta la Config devuelta, o usa Config.GetConfigForClient. Esto puede hacer que un cliente reanude una sesión con un servidor con el que no la habría reanudado durante el handshake inicial, o hacer que un servidor reanude una sesión con un cliente con el que no la habría reanudado durante el handshake inicial."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+                "baseScore": 10.0,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 6.0
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+                "baseScore": 9.1,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.2
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-295"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:golang:go:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "9FEE539A-EDC2-4044-A38C-5A0FDF567509",
+                    "versionEndExcluding": "1.24.13"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:golang:go:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "B275853C-E253-485B-B469-31D1A7383965",
+                    "versionStartIncluding": "1.25.0",
+                    "versionEndExcluding": "1.25.7"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:golang:go:1.26.0:rc1:*:*:*:*:*:*",
+                    "matchCriteriaId": "E529A0EC-B944-4E2F-B26A-2A9F31AFF240"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:golang:go:1.26.0:rc2:*:*:*:*:*:*",
+                    "matchCriteriaId": "553D6D90-140E-4A54-86A3-00E66AC30F3C"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://go.dev/cl/737700",
+            "source": "security@golang.org",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://go.dev/issue/77217",
+            "source": "security@golang.org",
+            "tags": [
+              "Exploit",
+              "Issue Tracking"
+            ]
+          },
+          {
+            "url": "https://groups.google.com/g/golang-announce/c/K09ubi9FQFk",
+            "source": "security@golang.org",
+            "tags": [
+              "Mailing List",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://pkg.go.dev/vuln/GO-2026-4337",
+            "source": "security@golang.org",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 3
+    },
+    {
+      "cve_id": "CVE-2004-1288",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 0.08518,
+            "score_date": "2025-05-26"
+          },
+          "current": {
+            "score": 0.1927,
+            "score_date": "2026-02-05"
+          },
+          "delta": 0.10752
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2005-01-10",
+        "description": "Buffer overflow in the parse_html function in o3read.c for o3read 0.0.3 allows remote attackers to execute arbitrary code via a crafted SXW file.",
+        "title": "siag o3read Buffer Overflow",
+        "vendor": "siag",
+        "product": "o3read",
+        "attack_type": "Buffer Overflow",
+        "cvss_max": 10.0
+      },
+      "cve": {
+        "id": "CVE-2004-1288",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2005-01-10T05:00:00.000",
+        "lastModified": "2026-04-16T00:27:16.627",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Buffer overflow in the parse_html function in o3read.c for o3read 0.0.3 allows remote attackers to execute arbitrary code via a crafted SXW file."
+          },
+          {
+            "lang": "es",
+            "value": "Desbordamiento de búfer en la función parse_html en o3read.c de o3read 0.0.3 permite a atacantes remotos ejecutar código de su elección mediante un fichero SXW artesanal."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV2": [
+            {
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+                "baseScore": 10.0,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "baseSeverity": "HIGH",
+              "exploitabilityScore": 10.0,
+              "impactScore": 10.0
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "NVD-CWE-Other"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:siag:o3read:.3:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "1EE3D740-31F9-42E3-A2C8-28FCB664BC4A"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "http://tigger.uic.edu/~jlongs2/holes/o3read.txt",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit",
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "http://www.gentoo.org/security/en/glsa/glsa-200501-20.xml",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "https://exchange.xforce.ibmcloud.com/vulnerabilities/18547",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          }
+        ]
+      },
+      "risk_score": 84,
+      "rank": 4
+    },
+    {
+      "cve_id": "CVE-2020-37123",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-02-05",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-02-05",
+        "description": "Pinger 1.0 contains a remote code execution vulnerability that allows attackers to inject shell commands through the ping and socket parameters. Attackers can exploit the unsanitized input in ping.php to write arbitrary PHP files and execute system commands by appending shell metacharacters.",
+        "title": "Pinger 1.0 contains a remote code execution vulnerability that allows attackers to inject shell commands through the ping and socket para...",
+        "attack_type": "RCE",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2020-37123",
+        "sourceIdentifier": "disclosure@vulncheck.com",
+        "published": "2026-02-05T17:16:06.890",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Pinger 1.0 contains a remote code execution vulnerability that allows attackers to inject shell commands through the ping and socket parameters. Attackers can exploit the unsanitized input in ping.php to write arbitrary PHP files and execute system commands by appending shell metacharacters."
+          },
+          {
+            "lang": "es",
+            "value": "Pinger 1.0 contiene una vulnerabilidad de ejecución remota de código que permite a los atacantes inyectar comandos de shell a través de los parámetros ping y socket. Los atacantes pueden explotar la entrada no saneada en ping.php para escribir archivos PHP arbitrarios y ejecutar comandos del sistema añadiendo metacaracteres de shell."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-78"
+              }
+            ],
+            "source": "disclosure@vulncheck.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/wcchandler/pinger",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://www.exploit-db.com/exploits/48323",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://www.vulncheck.com/advisories/pinger-remote-code-execution",
+            "source": "disclosure@vulncheck.com"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 5
+    },
+    {
+      "cve_id": "CVE-2020-37125",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-02-05",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-02-05",
+        "description": "Edimax EW-7438RPn-v3 Mini 1.27 contains a remote code execution vulnerability that allows unauthenticated attackers to execute arbitrary commands through the /goform/mp endpoint. Attackers can exploit the vulnerability by sending crafted POST requests with command injection payloads to download and execute malicious scripts on the device.",
+        "title": "edimax ew-7438rpn_mini_firmware RCE",
+        "vendor": "edimax",
+        "product": "ew-7438rpn_mini_firmware",
+        "attack_type": "RCE",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2020-37125",
+        "sourceIdentifier": "disclosure@vulncheck.com",
+        "published": "2026-02-05T17:16:07.207",
+        "lastModified": "2026-02-18T18:09:41.337",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Edimax EW-7438RPn-v3 Mini 1.27 contains a remote code execution vulnerability that allows unauthenticated attackers to execute arbitrary commands through the /goform/mp endpoint. Attackers can exploit the vulnerability by sending crafted POST requests with command injection payloads to download and execute malicious scripts on the device."
+          },
+          {
+            "lang": "es",
+            "value": "Edimax EW-7438RPn-v3 Mini 1.27 contiene una vulnerabilidad de ejecución remota de código que permite a atacantes no autenticados ejecutar comandos arbitrarios a través del endpoint /goform/mp. Los atacantes pueden explotar la vulnerabilidad enviando solicitudes POST manipuladas con cargas útiles de inyección de comandos para descargar y ejecutar scripts maliciosos en el dispositivo."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-78"
+              }
+            ],
+            "source": "disclosure@vulncheck.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:edimax:ew-7438rpn_mini_firmware:1.27:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "005D56EE-F7CD-4A93-875B-5C7EAD2E2A35"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:edimax:ew-7438rpn_mini:3:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "C3347C70-B947-45E4-8681-F4503A9ACFBD"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://www.edimax.com/edimax/merchandise/merchandise_detail/data/edimax/global/wi-fi_range_extenders_n300/ew-7438rpn_mini/",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Product"
+            ]
+          },
+          {
+            "url": "https://www.exploit-db.com/exploits/48318",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory",
+              "VDB Entry"
+            ]
+          },
+          {
+            "url": "https://www.vulncheck.com/advisories/edimax-technology-ew-rpn-mini-remote-code-execution",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Broken Link"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 6
+    },
+    {
+      "cve_id": "CVE-2025-68723",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-02-05",
+          "previous_max": null,
+          "current_max": 9.0
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-02-05",
+        "description": "Axigen Mail Server before 10.5.57 contains multiple stored Cross-Site Scripting (XSS) vulnerabilities in the WebAdmin interface. Three instances exist: (1) the log file name parameter in the Local Services Log page, (2) certificate file content in the SSL Certificates View Usage feature, and (3) the Certificate File name parameter in the WebMail Listeners SSL settings. Attackers can inject malicious JavaScript payloads that execute in administrators' browsers when they access affected pages or features, enabling privilege escalation attacks where low-privileged admins can force high-privileged admins to perform unauthorized actions.",
+        "title": "axigen axigen_mail_server XSS",
+        "vendor": "axigen",
+        "product": "axigen_mail_server",
+        "attack_type": "XSS",
+        "cvss_max": 9.0
+      },
+      "cve": {
+        "id": "CVE-2025-68723",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2026-02-05T17:16:12.700",
+        "lastModified": "2026-02-13T15:15:57.503",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Axigen Mail Server before 10.5.57 contains multiple stored Cross-Site Scripting (XSS) vulnerabilities in the WebAdmin interface. Three instances exist: (1) the log file name parameter in the Local Services Log page, (2) certificate file content in the SSL Certificates View Usage feature, and (3) the Certificate File name parameter in the WebMail Listeners SSL settings. Attackers can inject malicious JavaScript payloads that execute in administrators' browsers when they access affected pages or features, enabling privilege escalation attacks where low-privileged admins can force high-privileged admins to perform unauthorized actions."
+          },
+          {
+            "lang": "es",
+            "value": "Axigen Mail Server anterior a 10.5.57 contiene múltiples vulnerabilidades de cross-site scripting (XSS) almacenado en la interfaz WebAdmin. Existen tres instancias: (1) el parámetro del nombre del archivo de registro en la página de registro de servicios locales (Local Services Log), (2) el contenido del archivo de certificado en la función de visualización de uso de certificados SSL (SSL Certificates View Usage), y (3) el parámetro del nombre del archivo de certificado en la configuración SSL de los oyentes de WebMail (WebMail Listeners). Los atacantes pueden inyectar cargas útiles de JavaScript maliciosas que se ejecutan en los navegadores de los administradores cuando acceden a las páginas o funciones afectadas, lo que permite ataques de escalada de privilegios donde los administradores con pocos privilegios pueden obligar a los administradores con muchos privilegios a realizar acciones no autorizadas."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:H",
+                "baseScore": 9.0,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 2.3,
+              "impactScore": 6.0
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:H",
+                "baseScore": 9.0,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 2.3,
+              "impactScore": 6.0
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-79"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          },
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-79"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:axigen:axigen_mail_server:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "7FD23438-2B7F-48CB-9300-2A47F2B96A01",
+                    "versionStartIncluding": "10.3.0",
+                    "versionEndExcluding": "10.5.57"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:axigen:axigen_mail_server:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "5FE47CA3-597B-45EE-BCFA-60440CDB5ECB",
+                    "versionStartIncluding": "10.6.0",
+                    "versionEndExcluding": "10.6.26"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://www.axigen.com/knowledgebase/Axigen-WebAdmin-Stored-XSS-Vulnerabilities-CVE-2025-68723-_408.html",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://www.axigen.com/mail-server/download/",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Product"
+            ]
+          },
+          {
+            "url": "https://github.com/osmancanvural/CVE-2025-68723",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 7
+    },
+    {
+      "cve_id": "CVE-2026-0106",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-02-05",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-02-05",
+        "description": "In vpu_mmap of vpu_ioctl, there is a possible arbitrary address mmap due to a missing bounds check. This could lead to local escalation of privilege with no additional execution privileges needed. User interaction is not needed for exploitation.",
+        "title": "google android privilege escalation",
+        "vendor": "google",
+        "product": "android",
+        "attack_type": "privilege escalation",
+        "cvss_max": 9.3
+      },
+      "cve": {
+        "id": "CVE-2026-0106",
+        "sourceIdentifier": "dsap-vuln-management@google.com",
+        "published": "2026-02-05T21:15:52.597",
+        "lastModified": "2026-02-19T18:24:53.930",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "In vpu_mmap of vpu_ioctl, there is a possible arbitrary address mmap due to a missing bounds check. This could lead to local escalation of privilege with no additional execution privileges needed. User interaction is not needed for exploitation."
+          },
+          {
+            "lang": "es",
+            "value": "En vpu_mmap de vpu_ioctl, existe una posible mmap de dirección arbitraria debido a una falta de comprobación de límites. Esto podría llevar a una escalada local de privilegios sin necesidad de privilegios de ejecución adicionales. No se necesita interacción del usuario para la explotación."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 2.5,
+              "impactScore": 6.0
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-119"
+              },
+              {
+                "lang": "en",
+                "value": "CWE-125"
+              },
+              {
+                "lang": "en",
+                "value": "CWE-787"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:google:android:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "F8B9FEC8-73B6-43B8-B24E-1F7C20D91D26"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://source.android.com/docs/security/bulletin/pixel/2026/2026-02-01",
+            "source": "dsap-vuln-management@google.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 8
+    },
+    {
+      "cve_id": "CVE-2026-24300",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-02-05",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-02-05",
+        "description": "Azure Front Door Elevation of Privilege Vulnerability",
+        "title": "microsoft azure_front_door privilege escalation",
+        "vendor": "microsoft",
+        "product": "azure_front_door",
+        "attack_type": "privilege escalation",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2026-24300",
+        "sourceIdentifier": "secure@microsoft.com",
+        "published": "2026-02-05T23:15:54.490",
+        "lastModified": "2026-02-12T19:02:39.727",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Azure Front Door Elevation of Privilege Vulnerability"
+          },
+          {
+            "lang": "es",
+            "value": "Azure Front Door Elevación de Privilegios vulnerabilidad"
+          }
+        ],
+        "cveTags": [
+          {
+            "sourceIdentifier": "secure@microsoft.com",
+            "tags": [
+              "exclusively-hosted-service"
+            ]
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "secure@microsoft.com",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-284"
+              }
+            ],
+            "source": "secure@microsoft.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:microsoft:azure_front_door:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "F66AE777-ECFA-4FD1-A6B5-AD9E8181020A"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-24300",
+            "source": "secure@microsoft.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 9
+    },
+    {
+      "cve_id": "CVE-2026-24423",
+      "signal_types": [
+        "KEV"
+      ],
+      "signals": {
+        "kev": {
+          "date_added": "2026-02-05"
+        },
+        "exploit": null,
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-01-23",
+        "description": "SmarterTools SmarterMail versions prior to build 9511 contain an unauthenticated remote code execution vulnerability in the ConnectToHub API method. The attacker could point the SmarterMail to the malicious HTTP server, which serves the malicious OS command. This command will be executed by the vulnerable application.",
+        "title": "SmarterTools SmarterMail Missing Authentication for Critical Function Vulnerability",
+        "vendor": "smartertools",
+        "product": "smartermail",
+        "attack_type": "RCE",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2026-24423",
+        "sourceIdentifier": "disclosure@vulncheck.com",
+        "published": "2026-01-23T17:16:13.483",
+        "lastModified": "2026-02-06T16:45:15.323",
+        "vulnStatus": "Analyzed",
+        "cisaExploitAdd": "2026-02-05",
+        "cisaActionDue": "2026-02-26",
+        "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+        "cisaVulnerabilityName": "SmarterTools SmarterMail Missing Authentication for Critical Function Vulnerability",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "SmarterTools SmarterMail versions prior to build 9511 contain an unauthenticated remote code execution vulnerability in the ConnectToHub API method. The attacker could point the SmarterMail to the malicious HTTP server, which serves the malicious OS command. This command will be executed by the vulnerable application."
+          },
+          {
+            "lang": "es",
+            "value": "Las versiones de SmarterTools SmarterMail anteriores a la compilación 9511 contienen una vulnerabilidad de ejecución remota de código no autenticada en el método API ConnectToHub. El atacante podría dirigir SmarterMail al servidor HTTP malicioso, que sirve el comando malicioso del sistema operativo. Este comando será ejecutado por la aplicación vulnerable."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-306"
+              }
+            ],
+            "source": "disclosure@vulncheck.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:smartertools:smartermail:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "D508C7EA-385D-428C-ACD3-9E2F93F0FB31",
+                    "versionEndExcluding": "100.0.9511"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://code-white.com/public-vulnerability-list/#systemadminsettingscontrollerconnecttohub-missing-authentication-in-smartermail",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.smartertools.com/smartermail/release-notes/current",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Release Notes"
+            ]
+          },
+          {
+            "url": "https://www.vulncheck.com/advisories/smartertools-smartermail-unauthenticated-rce-via-connecttohub-api",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-24423",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "US Government Resource"
+            ]
+          }
+        ]
+      },
+      "risk_score": 88,
+      "rank": 10
+    }
+  ],
+  "source": "https://www.cvelogic.com/threat-intelligence/2026-02-05"
+}

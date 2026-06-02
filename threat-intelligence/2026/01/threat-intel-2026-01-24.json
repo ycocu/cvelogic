@@ -1,0 +1,901 @@
+{
+  "schema_version": "2.2",
+  "generated_at": "2026-06-02T07:34:16Z",
+  "day": "2026-01-24",
+  "window": {
+    "utc_start": "2026-01-24",
+    "utc_end": "2026-01-24",
+    "days": 1
+  },
+  "summary": {
+    "brief": "Samba — exploitation likelihood rose sharply (EPSS 5.3% → 22% · rising (+17%)). · 7 new critical disclosures — review patch status on exposed services.",
+    "bullets": [
+      "Samba — exploitation likelihood rose sharply (EPSS 5.3% → 22% · rising (+17%)).",
+      "7 new critical disclosures — review patch status on exposed services."
+    ],
+    "counts": {
+      "cves": 8,
+      "kev": 0,
+      "exploit": 0,
+      "epss": 1,
+      "cvss": 7,
+      "patch": 0
+    }
+  },
+  "cves": [
+    {
+      "cve_id": "CVE-2014-0239",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 0.05345,
+            "score_date": "2025-10-31"
+          },
+          "current": {
+            "score": 0.22157,
+            "score_date": "2026-01-24"
+          },
+          "delta": 0.16812
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2014-05-28",
+        "description": "The internal DNS server in Samba 4.x before 4.0.18 does not check the QR field in the header section of an incoming DNS message before sending a response, which allows remote attackers to cause a denial of service (CPU and bandwidth consumption) via a forged response packet that triggers a communication loop, a related issue to CVE-1999-0103.",
+        "title": "samba samba DoS",
+        "vendor": "samba",
+        "product": "samba",
+        "attack_type": "DoS",
+        "cvss_max": 5.0
+      },
+      "cve": {
+        "id": "CVE-2014-0239",
+        "sourceIdentifier": "secalert@redhat.com",
+        "published": "2014-05-28T04:58:32.750",
+        "lastModified": "2026-05-06T22:30:45.220",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The internal DNS server in Samba 4.x before 4.0.18 does not check the QR field in the header section of an incoming DNS message before sending a response, which allows remote attackers to cause a denial of service (CPU and bandwidth consumption) via a forged response packet that triggers a communication loop, a related issue to CVE-1999-0103."
+          },
+          {
+            "lang": "es",
+            "value": "El servidor DNS interno en Samba 4.x anterior a 4.0.18 no comprueba el campo QR en la sección de cabecera de un mensaje DNS entrante antes de enviar una respuesta, lo que permite a atacantes remotos causar una denegación de servicio (consumo de CPU y ancho de banda) a través de un paquete de respuestas falsificado que provoca un bucle de comunicación, un problema relacionado con CVE-1999-0103."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV2": [
+            {
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+                "baseScore": 5.0,
+                "baseSeverity": "MEDIUM"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "baseSeverity": "MEDIUM",
+              "exploitabilityScore": 10.0,
+              "impactScore": 2.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-20"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:samba:samba:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "49235CF9-9463-4408-9747-C37CE719E437",
+                    "versionStartIncluding": "4.0.0",
+                    "versionEndExcluding": "4.0.18"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:samba:samba:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "AAC0F01F-2023-47CE-9661-A8E2A0FD4E92",
+                    "versionStartIncluding": "4.1.0",
+                    "versionEndExcluding": "4.1.8"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "http://secunia.com/advisories/59579",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "http://security.gentoo.org/glsa/glsa-201502-15.xml",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "http://www.samba.org/samba/security/CVE-2014-0239",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "http://www.securityfocus.com/bid/67691",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory",
+              "VDB Entry"
+            ]
+          },
+          {
+            "url": "http://www.securitytracker.com/id/1030309",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory",
+              "VDB Entry"
+            ]
+          }
+        ]
+      },
+      "risk_score": 78,
+      "rank": 1
+    },
+    {
+      "cve_id": "CVE-2025-13952",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-01-24",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-01-24",
+        "description": "A web page that contains unusual GPU shader code is loaded from the Internet into the GPU compiler process triggers a write use-after-free crash in the GPU shader compiler library. On certain platforms, when the compiler process has system privileges this could enable further exploits on the device.\n\nThe shader code contained in the web page executes a path in the compiler that held onto an out of date pointer, pointing to a freed memory object.",
+        "title": "imaginationtech ddk Use-After-Free",
+        "vendor": "imaginationtech",
+        "product": "ddk",
+        "attack_type": "Use-After-Free",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-13952",
+        "sourceIdentifier": "367425dc-4d06-4041-9650-c2dc6aaa27ce",
+        "published": "2026-01-24T03:16:00.360",
+        "lastModified": "2026-01-28T18:33:18.030",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A web page that contains unusual GPU shader code is loaded from the Internet into the GPU compiler process triggers a write use-after-free crash in the GPU shader compiler library. On certain platforms, when the compiler process has system privileges this could enable further exploits on the device.\n\nThe shader code contained in the web page executes a path in the compiler that held onto an out of date pointer, pointing to a freed memory object."
+          },
+          {
+            "lang": "es",
+            "value": "Una página web que contiene código de sombreador de GPU inusual se carga desde Internet en el proceso del compilador de GPU y desencadena un fallo de escritura de uso después de liberación en la librería del compilador de sombreadores de GPU. En ciertas plataformas, cuando el proceso del compilador tiene privilegios de sistema, esto podría permitir explotaciones adicionales en el dispositivo.\n\nEl código de sombreador contenido en la página web ejecuta una ruta en el compilador que mantenía un puntero obsoleto, apuntando a un objeto de memoria liberado."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-416"
+              }
+            ],
+            "source": "367425dc-4d06-4041-9650-c2dc6aaa27ce"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:imaginationtech:ddk:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "99A33CBA-49C5-4976-B668-88F87F0FF575",
+                    "versionEndExcluding": "25.3"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://www.imaginationtech.com/gpu-driver-vulnerabilities/",
+            "source": "367425dc-4d06-4041-9650-c2dc6aaa27ce",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 2
+    },
+    {
+      "cve_id": "CVE-2026-22582",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-01-24",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-01-24",
+        "description": "Improper Neutralization of Argument Delimiters in a Command ('Argument Injection') vulnerability in Salesforce Marketing Cloud Engagement (MicrositeUrl module) allows Web Services Protocol Manipulation. This issue affects Marketing Cloud Engagement: before January 21st, 2026.",
+        "title": "salesforce marketing_cloud_engagement",
+        "vendor": "salesforce",
+        "product": "marketing_cloud_engagement",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2026-22582",
+        "sourceIdentifier": "security@salesforce.com",
+        "published": "2026-01-24T01:15:49.920",
+        "lastModified": "2026-02-12T16:13:12.287",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Improper Neutralization of Argument Delimiters in a Command ('Argument Injection') vulnerability in Salesforce Marketing Cloud Engagement (MicrositeUrl module) allows Web Services Protocol Manipulation. This issue affects Marketing Cloud Engagement: before January 21st, 2026."
+          },
+          {
+            "lang": "es",
+            "value": "Vulnerabilidad de Neutralización Inadecuada de Delimitadores de Argumentos en un Comando ('Inyección de Argumentos') en Salesforce Marketing Cloud Engagement (módulo MicrositeUrl) permite la Manipulación del Protocolo de Servicios Web. Este problema afecta a Marketing Cloud Engagement: antes del 21 de enero de 2026."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-88"
+              }
+            ],
+            "source": "security@salesforce.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:salesforce:marketing_cloud_engagement:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "5A41CCDE-A5EA-45D6-A009-A6908459C453",
+                    "versionEndExcluding": "2026-01-21"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://help.salesforce.com/s/articleView?id=005299346&type=1",
+            "source": "security@salesforce.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 3
+    },
+    {
+      "cve_id": "CVE-2025-13374",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-01-24",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-01-24",
+        "description": "The Kalrav AI Agent plugin for WordPress is vulnerable to arbitrary file uploads due to missing file type validation in the kalrav_upload_file AJAX action in all versions up to, and including, 2.3.3. This makes it possible for unauthenticated attackers to upload arbitrary files on the affected site's server which may make remote code execution possible.",
+        "title": "The Kalrav AI Agent plugin for WordPress is vulnerable to arbitrary file uploads due to missing file type validation in the kalrav_upload...",
+        "attack_type": "RCE",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-13374",
+        "sourceIdentifier": "security@wordfence.com",
+        "published": "2026-01-24T08:16:05.173",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The Kalrav AI Agent plugin for WordPress is vulnerable to arbitrary file uploads due to missing file type validation in the kalrav_upload_file AJAX action in all versions up to, and including, 2.3.3. This makes it possible for unauthenticated attackers to upload arbitrary files on the affected site's server which may make remote code execution possible."
+          },
+          {
+            "lang": "es",
+            "value": "El plugin Kalrav AI Agent para WordPress es vulnerable a la carga arbitraria de archivos debido a la falta de validación del tipo de archivo en la acción AJAX kalrav_upload_file en todas las versiones hasta la 2.3.3, inclusive. Esto permite a atacantes no autenticados cargar archivos arbitrarios en el servidor del sitio afectado, lo que podría posibilitar la ejecución remota de código."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security@wordfence.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-434"
+              }
+            ],
+            "source": "security@wordfence.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/d0n601/CVE-2025-13374",
+            "source": "security@wordfence.com"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/kalrav-ai-agent/tags/2.3.3/kalrav-ai-agent.php#L967",
+            "source": "security@wordfence.com"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/kalrav-ai-agent/trunk/kalrav-ai-agent.php#L967",
+            "source": "security@wordfence.com"
+          },
+          {
+            "url": "https://ryankozak.com/posts/cve-2025-13374",
+            "source": "security@wordfence.com"
+          },
+          {
+            "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/5dc8feae-fc89-4152-b9b2-2b70e6ccb30b?source=cve",
+            "source": "security@wordfence.com"
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 4
+    },
+    {
+      "cve_id": "CVE-2026-22583",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-01-24",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-01-24",
+        "description": "Improper Neutralization of Argument Delimiters in a Command ('Argument Injection') vulnerability in Salesforce Marketing Cloud Engagement (CloudPagesUrl module) allows Web Services Protocol Manipulation. This issue affects Marketing Cloud Engagement: before January 21st, 2026.",
+        "title": "salesforce marketing_cloud_engagement",
+        "vendor": "salesforce",
+        "product": "marketing_cloud_engagement",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2026-22583",
+        "sourceIdentifier": "security@salesforce.com",
+        "published": "2026-01-24T01:15:50.060",
+        "lastModified": "2026-02-12T16:12:21.877",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Improper Neutralization of Argument Delimiters in a Command ('Argument Injection') vulnerability in Salesforce Marketing Cloud Engagement (CloudPagesUrl module) allows Web Services Protocol Manipulation. This issue affects Marketing Cloud Engagement: before January 21st, 2026."
+          },
+          {
+            "lang": "es",
+            "value": "Vulnerabilidad de Neutralización Inadecuada de Delimitadores de Argumentos en un Comando ('Inyección de Argumentos') en Salesforce Marketing Cloud Engagement (módulo CloudPagesUrl) permite la Manipulación del Protocolo de Servicios Web. Este problema afecta a Marketing Cloud Engagement: antes del 21 de enero de 2026."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-88"
+              }
+            ],
+            "source": "security@salesforce.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:salesforce:marketing_cloud_engagement:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "5A41CCDE-A5EA-45D6-A009-A6908459C453",
+                    "versionEndExcluding": "2026-01-21"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://help.salesforce.com/s/articleView?id=005299346&type=1",
+            "source": "security@salesforce.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 5
+    },
+    {
+      "cve_id": "CVE-2026-22585",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-01-24",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-01-24",
+        "description": "Use of a Broken or Risky Cryptographic Algorithm vulnerability in Salesforce Marketing Cloud Engagement (CloudPages, Forward to a Friend, Profile Center, Subscription Center, Unsub Center, View As Webpage modules) allows Web Services Protocol Manipulation. This issue affects Marketing Cloud Engagement: before January 21st, 2026.",
+        "title": "salesforce marketing_cloud_engagement",
+        "vendor": "salesforce",
+        "product": "marketing_cloud_engagement",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2026-22585",
+        "sourceIdentifier": "security@salesforce.com",
+        "published": "2026-01-24T01:15:50.167",
+        "lastModified": "2026-02-12T16:08:29.020",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Use of a Broken or Risky Cryptographic Algorithm vulnerability in Salesforce Marketing Cloud Engagement (CloudPages, Forward to a Friend, Profile Center, Subscription Center, Unsub Center, View As Webpage modules) allows Web Services Protocol Manipulation. This issue affects Marketing Cloud Engagement: before January 21st, 2026."
+          },
+          {
+            "lang": "es",
+            "value": "Uso de una vulnerabilidad de Algoritmo Criptográfico Roto o Arriesgado en Salesforce Marketing Cloud Engagement (módulos CloudPages, Reenviar a un Amigo, Centro de Perfil, Centro de Suscripción, Centro de Anulación de Suscripción, Ver como Página Web) permite la Manipulación del Protocolo de Servicios Web. Este problema afecta a Marketing Cloud Engagement: antes del 21 de enero de 2026."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-327"
+              }
+            ],
+            "source": "security@salesforce.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:salesforce:marketing_cloud_engagement:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "5A41CCDE-A5EA-45D6-A009-A6908459C453",
+                    "versionEndExcluding": "2026-01-21"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://help.salesforce.com/s/articleView?id=005299346&type=1",
+            "source": "security@salesforce.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 6
+    },
+    {
+      "cve_id": "CVE-2026-22586",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-01-24",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-01-24",
+        "description": "Hard-coded Cryptographic Key vulnerability in Salesforce Marketing Cloud Engagement (CloudPages, Forward to a Friend, Profile Center, Subscription Center, Unsub Center, View As Webpage modules) allows Web Services Protocol Manipulation. This issue affects Marketing Cloud Engagement: before January 21st, 2026.",
+        "title": "salesforce marketing_cloud_engagement",
+        "vendor": "salesforce",
+        "product": "marketing_cloud_engagement",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2026-22586",
+        "sourceIdentifier": "security@salesforce.com",
+        "published": "2026-01-24T01:15:50.283",
+        "lastModified": "2026-05-15T20:25:13.027",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Hard-coded Cryptographic Key vulnerability in Salesforce Marketing Cloud Engagement (CloudPages, Forward to a Friend, Profile Center, Subscription Center, Unsub Center, View As Webpage modules) allows Web Services Protocol Manipulation. This issue affects Marketing Cloud Engagement: before January 21st, 2026."
+          },
+          {
+            "lang": "es",
+            "value": "Vulnerabilidad de clave criptográfica codificada de forma rígida en Salesforce Marketing Cloud Engagement (módulos CloudPages, Forward to a Friend, Profile Center, Subscription Center, Unsub Center, View As Webpage) permite la manipulación del protocolo de servicios web. Este problema afecta a Marketing Cloud Engagement: antes del 21 de enero de 2026."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-321"
+              }
+            ],
+            "source": "security@salesforce.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:salesforce:marketing_cloud_engagement:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "5A41CCDE-A5EA-45D6-A009-A6908459C453",
+                    "versionEndExcluding": "2026-01-21"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://help.salesforce.com/s/articleView?id=005299346&type=1",
+            "source": "security@salesforce.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 7
+    },
+    {
+      "cve_id": "CVE-2026-24399",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-01-24",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-01-24",
+        "description": "ChatterMate is a no-code AI chatbot agent framework. In versions 1.0.8 and below, the chatbot accepts and executes malicious HTML/JavaScript payloads when supplied as chat input. Specifically, an <iframe> payload containing a javascript: URI can be processed and executed in the browser context. This allows access to sensitive client-side data such as localStorage tokens and cookies, resulting in client-side injection. This issue has been fixed in version 1.0.9.",
+        "title": "chattermate chattermate",
+        "vendor": "chattermate",
+        "product": "chattermate",
+        "cvss_max": 9.3
+      },
+      "cve": {
+        "id": "CVE-2026-24399",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2026-01-24T01:15:50.393",
+        "lastModified": "2026-02-12T16:05:57.580",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "ChatterMate is a no-code AI chatbot agent framework. In versions 1.0.8 and below, the chatbot accepts and executes malicious HTML/JavaScript payloads when supplied as chat input. Specifically, an <iframe> payload containing a javascript: URI can be processed and executed in the browser context. This allows access to sensitive client-side data such as localStorage tokens and cookies, resulting in client-side injection. This issue has been fixed in version 1.0.9."
+          },
+          {
+            "lang": "es",
+            "value": "ChatterMate es un framework de agente de chatbot de IA sin código. En las versiones 1.0.8 e inferiores, el chatbot acepta y ejecuta cargas útiles maliciosas de HTML/JavaScript cuando se proporcionan como entrada de chat. Específicamente, una carga útil de  que contiene una URI de javascript: puede ser procesada y ejecutada en el contexto del navegador. Esto permite el acceso a datos sensibles del lado del cliente, como tokens de localStorage y cookies, lo que resulta en una inyección del lado del cliente. Este problema ha sido solucionado en la versión 1.0.9."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:N",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 5.8
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N",
+                "baseScore": 5.4,
+                "baseSeverity": "MEDIUM"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 2.3,
+              "impactScore": 2.7
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-79"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:chattermate:chattermate:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "0A56F451-616D-4BCC-8D6D-BFC3D82FB697",
+                    "versionEndExcluding": "1.0.9"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/chattermate/chattermate.chat/commit/ff3398031abb97ae28546eaf993fed3619eaffdd",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://github.com/chattermate/chattermate.chat/releases/tag/v1.0.9",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Product",
+              "Release Notes"
+            ]
+          },
+          {
+            "url": "https://github.com/chattermate/chattermate.chat/security/advisories/GHSA-72p3-w95w-q3j4",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Exploit",
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 8
+    }
+  ],
+  "source": "https://www.cvelogic.com/threat-intelligence/2026-01-24"
+}

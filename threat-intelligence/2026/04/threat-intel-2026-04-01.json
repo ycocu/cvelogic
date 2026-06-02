@@ -1,0 +1,2161 @@
+{
+  "schema_version": "2.2",
+  "generated_at": "2026-06-02T07:34:49Z",
+  "day": "2026-04-01",
+  "window": {
+    "utc_start": "2026-04-01",
+    "utc_end": "2026-04-01",
+    "days": 1
+  },
+  "summary": {
+    "brief": "Google Dawn added to CISA KEV — confirmed in-the-wild exploitation. · Microsoft Win32k — exploitation likelihood rose sharply (EPSS 28% → 54% · rising (+26%)). · 10 new critical disclosures — review patch status on exposed services.",
+    "bullets": [
+      "Google Dawn added to CISA KEV — confirmed in-the-wild exploitation.",
+      "Microsoft Win32k — exploitation likelihood rose sharply (EPSS 28% → 54% · rising (+26%)).",
+      "10 new critical disclosures — review patch status on exposed services."
+    ],
+    "counts": {
+      "cves": 14,
+      "kev": 1,
+      "exploit": 0,
+      "epss": 3,
+      "cvss": 10,
+      "patch": 0
+    }
+  },
+  "cves": [
+    {
+      "cve_id": "CVE-2026-5281",
+      "signal_types": [
+        "KEV"
+      ],
+      "signals": {
+        "kev": {
+          "date_added": "2026-04-01"
+        },
+        "exploit": null,
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-04-01",
+        "description": "Use after free in Dawn in Google Chrome prior to 146.0.7680.178 allowed a remote attacker who had compromised the renderer process to execute arbitrary code via a crafted HTML page. (Chromium security severity: High)",
+        "title": "Google Dawn Use-After-Free Vulnerability",
+        "vendor": "google",
+        "product": "chrome",
+        "attack_type": "Use-After-Free",
+        "cvss_max": 8.8
+      },
+      "cve": {
+        "id": "CVE-2026-5281",
+        "sourceIdentifier": "chrome-cve-admin@google.com",
+        "published": "2026-04-01T05:16:01.440",
+        "lastModified": "2026-04-02T13:16:01.903",
+        "vulnStatus": "Analyzed",
+        "cisaExploitAdd": "2026-04-01",
+        "cisaActionDue": "2026-04-15",
+        "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+        "cisaVulnerabilityName": "Google Dawn Use-After-Free Vulnerability",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Use after free in Dawn in Google Chrome prior to 146.0.7680.178 allowed a remote attacker who had compromised the renderer process to execute arbitrary code via a crafted HTML page. (Chromium security severity: High)"
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+                "baseScore": 8.8,
+                "baseSeverity": "HIGH"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-416"
+              }
+            ],
+            "source": "chrome-cve-admin@google.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:google:chrome:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "55B0324F-7911-403B-8235-D71996B55DFB",
+                    "versionEndExcluding": "146.0.7680.177"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:macos:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "387021A0-AF36-463C-A605-32EA7DAC172E"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "703AF700-7A70-47E2-BC3A-7FD03B3CA9C1"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "A2572D17-1DE6-457B-99CC-64AFD54487EA"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://chromereleases.googleblog.com/2026/03/stable-channel-update-for-desktop_31.html",
+            "source": "chrome-cve-admin@google.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://issues.chromium.org/issues/491518608",
+            "source": "chrome-cve-admin@google.com",
+            "tags": [
+              "Issue Tracking",
+              "Permissions Required"
+            ]
+          },
+          {
+            "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-5281",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "US Government Resource"
+            ]
+          }
+        ]
+      },
+      "risk_score": 88,
+      "rank": 1
+    },
+    {
+      "cve_id": "CVE-2021-28310",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 0.2782,
+            "score_date": "2026-02-18"
+          },
+          "current": {
+            "score": 0.53955,
+            "score_date": "2026-04-01"
+          },
+          "delta": 0.26135
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2021-04-13",
+        "description": "Win32k Elevation of Privilege Vulnerability",
+        "title": "Microsoft Win32k Privilege Escalation Vulnerability",
+        "vendor": "microsoft",
+        "product": "windows_10_1803",
+        "attack_type": "Privilege Escalation",
+        "cvss_max": 7.8
+      },
+      "cve": {
+        "id": "CVE-2021-28310",
+        "sourceIdentifier": "secure@microsoft.com",
+        "published": "2021-04-13T20:15:16.267",
+        "lastModified": "2025-10-30T19:55:23.683",
+        "vulnStatus": "Analyzed",
+        "cisaExploitAdd": "2021-11-03",
+        "cisaActionDue": "2021-11-17",
+        "cisaRequiredAction": "Apply updates per vendor instructions.",
+        "cisaVulnerabilityName": "Microsoft Win32k Privilege Escalation Vulnerability",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Win32k Elevation of Privilege Vulnerability"
+          },
+          {
+            "lang": "es",
+            "value": "Vulnerabilidad de elevación de privilegios de Win32k. Este ID de CVE es diferente de CVE-2021-27072"
+          }
+        ],
+        "metrics": {
+          "cvssMetricV2": [
+            {
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:L/AC:L/Au:N/C:P/I:P/A:P",
+                "baseScore": 4.6,
+                "baseSeverity": "MEDIUM"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "baseSeverity": "MEDIUM",
+              "exploitabilityScore": 3.9,
+              "impactScore": 6.4
+            }
+          ],
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 7.8,
+                "baseSeverity": "HIGH"
+              },
+              "source": "secure@microsoft.com",
+              "type": "Secondary",
+              "exploitabilityScore": 1.8,
+              "impactScore": 5.9
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 7.8,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Secondary",
+              "exploitabilityScore": 1.8,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-787"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          },
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-787"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_10_1803:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "00345596-E9E0-4096-8DC6-0212F4747A13"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_10_1809:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "2E332666-2E03-468E-BC30-299816D6E8ED"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_10_1909:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "A1B570A8-ED1A-46B6-B8AB-064445F8FC4C"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_10_2004:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "D4DBE5B2-AE10-4251-BCDA-DC5EDEE6EE67"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_10_20h2:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "6AFD13A6-A390-4400-9029-2F4058CA17E2"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_server_1909:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "ADE7E7B1-64AC-4986-A50B-0918A42C05BB"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_server_2004:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "62224791-644C-4D1F-AD77-56B16CF27630"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_server_2019:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "DB79EE26-FC32-417D-A49C-A1A63165A968"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_server_20h2:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "84F9B6B1-4FEE-4D4B-B35F-B07822CCD669"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2021-28310",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Patch",
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2021-28310",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "US Government Resource"
+            ]
+          }
+        ]
+      },
+      "risk_score": 83,
+      "rank": 2
+    },
+    {
+      "cve_id": "CVE-2026-34569",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-04-01",
+          "previous_max": null,
+          "current_max": 9.9
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-04-01",
+        "description": "CI4MS is a CodeIgniter 4-based CMS skeleton that delivers a production-ready, modular architecture with RBAC authorization and theme support. Prior to version 0.31.0.0, the application fails to properly sanitize user-controlled input when creating or editing blog categories. An attacker can inject a malicious JavaScript payload into the category title field, which is then stored server-side. This stored payload is later rendered unsafely across public-facing blog category pages, administrative interfaces, and blog post views without proper output encoding, leading to stored cross-site scripting (XSS). This issue has been patched in version 0.31.0.0.",
+        "title": "ci4-cms-erp ci4ms privilege escalation",
+        "vendor": "ci4-cms-erp",
+        "product": "ci4ms",
+        "attack_type": "privilege escalation",
+        "cvss_max": 9.9
+      },
+      "cve": {
+        "id": "CVE-2026-34569",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2026-04-01T22:16:20.717",
+        "lastModified": "2026-04-06T16:35:35.977",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "CI4MS is a CodeIgniter 4-based CMS skeleton that delivers a production-ready, modular architecture with RBAC authorization and theme support. Prior to version 0.31.0.0, the application fails to properly sanitize user-controlled input when creating or editing blog categories. An attacker can inject a malicious JavaScript payload into the category title field, which is then stored server-side. This stored payload is later rendered unsafely across public-facing blog category pages, administrative interfaces, and blog post views without proper output encoding, leading to stored cross-site scripting (XSS). This issue has been patched in version 0.31.0.0."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+                "baseScore": 9.9,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.1,
+              "impactScore": 6.0
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:H",
+                "baseScore": 9.0,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 2.3,
+              "impactScore": 6.0
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-79"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:ci4-cms-erp:ci4ms:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "805F6B8A-9324-4CA4-BADE-439CC15DA14C",
+                    "versionEndExcluding": "0.31.0.0"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/ci4-cms-erp/ci4ms/releases/tag/0.31.0.0",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Release Notes"
+            ]
+          },
+          {
+            "url": "https://github.com/ci4-cms-erp/ci4ms/security/advisories/GHSA-fhrf-q333-82fm",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Exploit",
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 3
+    },
+    {
+      "cve_id": "CVE-2010-1797",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 0.48438,
+            "score_date": "2025-08-11"
+          },
+          "current": {
+            "score": 0.5972,
+            "score_date": "2026-04-01"
+          },
+          "delta": 0.11282
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2010-08-16",
+        "description": "Multiple stack-based buffer overflows in the cff_decoder_parse_charstrings function in the CFF Type2 CharStrings interpreter in cff/cffgload.c in FreeType before 2.4.2, as used in Apple iOS before 4.0.2 on the iPhone and iPod touch and before 3.2.2 on the iPad, allow remote attackers to execute arbitrary code or cause a denial of service (memory corruption) via crafted CFF opcodes in embedded fonts in a PDF document, as demonstrated by JailbreakMe. NOTE: some of these details are obtained from third party information.",
+        "title": "apple iphone_os Buffer Overflow",
+        "vendor": "apple",
+        "product": "iphone_os",
+        "attack_type": "Buffer Overflow",
+        "cvss_max": 9.3
+      },
+      "cve": {
+        "id": "CVE-2010-1797",
+        "sourceIdentifier": "product-security@apple.com",
+        "published": "2010-08-16T18:39:40.403",
+        "lastModified": "2026-04-29T01:13:23.040",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Multiple stack-based buffer overflows in the cff_decoder_parse_charstrings function in the CFF Type2 CharStrings interpreter in cff/cffgload.c in FreeType before 2.4.2, as used in Apple iOS before 4.0.2 on the iPhone and iPod touch and before 3.2.2 on the iPad, allow remote attackers to execute arbitrary code or cause a denial of service (memory corruption) via crafted CFF opcodes in embedded fonts in a PDF document, as demonstrated by JailbreakMe. NOTE: some of these details are obtained from third party information."
+          },
+          {
+            "lang": "es",
+            "value": "Múltiples desbordamientos de búfer en la región ?stack de la memoria en la función cff_decoder_parse_charstrings en el intérprete CFF Type2 CharStrings en el archivo cff/cffgload.c en FreeType anterior a versión  2.4.2, tal y como es usado en iOS de Apple anterior a versión  4.0.2 en el iPhone y iPod touch y anterior a versión 3.2.2 en el iPad, permite a los atacantes remotos ejecutar código arbitrario o causar una denegación de servicio (corrupción de memoria) por medio de códigos CFF  especialmente diseñados en fuentes insertadas en un documento PDF, como es demostrado por JailbreakMe. NOTA: algunos de estos detalles son obtenidos de información de terceros."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV2": [
+            {
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:M/Au:N/C:C/I:C/A:C",
+                "baseScore": 9.3,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "baseSeverity": "HIGH",
+              "exploitabilityScore": 8.6,
+              "impactScore": 10.0
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-119"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:iphone_os:1.0.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "A7B6D035-38A9-4C0B-9A9D-CAE3BF1CA56D"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:iphone_os:1.0.1:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "0C5B94E7-2C24-4913-B65E-8D8A0DE2B80B"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:iphone_os:1.0.1:-:iphone:*:*:*:*:*",
+                    "matchCriteriaId": "B669868B-F358-4D5B-9D64-4A462F261553"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:iphone_os:1.0.2:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "E28FB0CB-D636-4F85-B5F7-70EC30053925"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:iphone_os:1.0.2:-:iphone:*:*:*:*:*",
+                    "matchCriteriaId": "A14B31DE-AA3D-4FA2-A4F4-0A6A51AFA7FE"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:iphone_os:1.1.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "9EC16D1C-065A-4D1A-BA6E-528A71DF65CC"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:iphone_os:1.1.0:-:iphone:*:*:*:*:*",
+                    "matchCriteriaId": "4261E5C1-DC93-437E-B84F-A30380AFDC40"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:iphone_os:1.1.0:-:ipodtouch:*:*:*:*:*",
+                    "matchCriteriaId": "079BB54C-25FD-4B26-B171-368911960F76"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:iphone_os:1.1.1:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "27319629-171F-42AA-A95F-2D71F78097D0"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:iphone_os:1.1.1:-:iphone:*:*:*:*:*",
+                    "matchCriteriaId": "DF292FED-19A4-4031-9B1F-151C0146F3B6"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:iphone_os:1.1.2:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "4F7AEFAB-7BB0-40D8-8BA5-71B374EB69DB"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:iphone_os:1.1.2:-:iphone:*:*:*:*:*",
+                    "matchCriteriaId": "5183082C-556F-479F-9FC1-42B59BBB840B"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:iphone_os:1.1.2:-:ipodtouch:*:*:*:*:*",
+                    "matchCriteriaId": "AAC3FBF0-F128-412D-9FD5-13BB2EB92DD7"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:iphone_os:1.1.3:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "297F9438-0F04-4128-94A8-A504B600929E"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:iphone_os:1.1.3:-:iphone:*:*:*:*:*",
+                    "matchCriteriaId": "2FFCFEA4-C5E2-4C46-B8C3-ADCDBA4B85EF"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:iphone_os:1.1.3:-:ipodtouch:*:*:*:*:*",
+                    "matchCriteriaId": "7E7AA027-8CF9-49BD-A000-82880E41D622"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:iphone_os:1.1.4:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "F8618621-F871-4531-9F6C-7D60F2BF8B75"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:iphone_os:1.1.4:-:iphone:*:*:*:*:*",
+                    "matchCriteriaId": "4FA51920-223B-4DF4-802C-188F5A8B0563"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:iphone_os:1.1.4:-:ipodtouch:*:*:*:*:*",
+                    "matchCriteriaId": "4385635D-46F2-4642-9C78-1346DC120492"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:iphone_os:1.1.5:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "824DED2D-FA1D-46FC-8252-6E25546DAE29"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:iphone_os:1.1.5:-:iphone:*:*:*:*:*",
+                    "matchCriteriaId": "2C63C36E-1997-4F44-80AD-E665CE46A278"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:iphone_os:1.1.5:-:ipodtouch:*:*:*:*:*",
+                    "matchCriteriaId": "20DAE911-C037-4F10-82A3-EF42D5FB71D8"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:iphone_os:2.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "1641DDFA-3BF1-467F-8EC3-98114FF9F07B"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:iphone_os:2.0.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "DF40CDA4-4716-4815-9ED0-093FE266734C"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:iphone_os:2.0.0:-:iphone:*:*:*:*:*",
+                    "matchCriteriaId": "02BFDD6F-B9C3-42BB-A84A-828193FAA137"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:iphone_os:2.0.0:-:ipodtouch:*:*:*:*:*",
+                    "matchCriteriaId": "0A66D6DC-9A48-4BD6-9E01-0D9FF388457C"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:iphone_os:2.0.1:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "D61644E2-7AF5-48EF-B3D5-59C7B2AD1A58"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:iphone_os:2.0.1:-:iphone:*:*:*:*:*",
+                    "matchCriteriaId": "CFD4325B-A86A-4C1B-930F-56C17FB6281D"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:iphone_os:2.0.1:-:ipodtouch:*:*:*:*:*",
+                    "matchCriteriaId": "C59B8C50-BF5D-4E9A-8E5B-99B34E974B5A"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:iphone_os:2.0.2:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "3D06D54D-97FD-49FD-B251-CC86FBA68CA6"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:iphone_os:2.0.2:-:iphone:*:*:*:*:*",
+                    "matchCriteriaId": "2904DEFA-7769-43DB-B3D0-B552AE8F06A6"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:iphone_os:2.0.2:-:ipodtouch:*:*:*:*:*",
+                    "matchCriteriaId": "D4CE4199-BBF5-4F42-8BBC-BD946079C912"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:iphone_os:2.1:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "25A5D868-0016-44AB-80E6-E5DF91F15455"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:iphone_os:2.1:-:iphone:*:*:*:*:*",
+                    "matchCriteriaId": "0AD5106E-CD7C-4952-A9B1-5F72D99276E6"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:iphone_os:2.1:-:ipodtouch:*:*:*:*:*",
+                    "matchCriteriaId": "34346F55-4972-427B-8F96-780FA91DB95D"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:iphone_os:2.1.1:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "4C14EEA4-6E35-4EBE-9A43-8F6D69318BA0"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:iphone_os:2.2:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "B15E90AE-2E15-4BC2-B0B8-AFA2B1297B03"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:iphone_os:2.2:-:iphone:*:*:*:*:*",
+                    "matchCriteriaId": "B7235341-983F-4578-98DC-39BC278A7556"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:iphone_os:2.2.1:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "4E0C0A8D-3DDD-437A-BB3D-50FAEAF6C440"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:iphone_os:2.2.1:-:iphone:*:*:*:*:*",
+                    "matchCriteriaId": "BA5C2D75-4019-45EB-8AF9-A850B5349507"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:iphone_os:2.2.1:-:ipodtouch:*:*:*:*:*",
+                    "matchCriteriaId": "AD136376-331D-494F-9D12-7E631546E8CB"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:iphone_os:3.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "863383DA-0BC6-4A96-835A-A96128EC0202"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:iphone_os:3.0:-:iphone:*:*:*:*:*",
+                    "matchCriteriaId": "A066B59B-D5C8-4AA8-9CC7-5D34F4AB88AA"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:iphone_os:3.0:-:ipodtouch:*:*:*:*:*",
+                    "matchCriteriaId": "F07B3FE7-96B3-493A-A230-5642BA11FBDA"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:iphone_os:3.0.1:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "2CFF5BE7-2BF6-48CE-B74B-B1A05383C10F"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:iphone_os:3.0.1:-:ipodtouch:*:*:*:*:*",
+                    "matchCriteriaId": "9FB0870F-82CF-4C97-BDC6-F0C4BBE7462D"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:iphone_os:3.1:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "51D3BE2B-5A01-4AD4-A436-0056B50A535D"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:iphone_os:3.1:-:iphone:*:*:*:*:*",
+                    "matchCriteriaId": "E357722F-4976-4E47-BFB5-709480BAE267"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:iphone_os:3.1:-:ipodtouch:*:*:*:*:*",
+                    "matchCriteriaId": "F43A6FEC-ECA9-44A4-AD00-FDC6F3990DC0"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:iphone_os:3.1.2:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "9A20F171-79FE-43B9-8309-B18341639FA1"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:iphone_os:3.1.2:-:iphone:*:*:*:*:*",
+                    "matchCriteriaId": "7CA92907-90C9-4BD6-8EE8-8FA6298C3D0F"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:iphone_os:3.1.2:-:ipodtouch:*:*:*:*:*",
+                    "matchCriteriaId": "52283848-67CC-4E4B-A849-1225F2BCBD9F"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:iphone_os:3.1.3:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "126EF22D-29BC-4366-97BC-B261311E6251"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:iphone_os:3.1.3:-:iphone:*:*:*:*:*",
+                    "matchCriteriaId": "220590DA-2B6A-4FC9-B456-3053EED9D96E"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:iphone_os:3.2:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "3B3DD7B3-DA4C-4B0A-A94E-6BF66B358B7D"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:iphone_os:3.2:-:iphone:*:*:*:*:*",
+                    "matchCriteriaId": "3FE3CDE8-6497-445E-A845-8A1C2A4EDEB1"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:iphone_os:3.2:-:ipodtouch:*:*:*:*:*",
+                    "matchCriteriaId": "9E4D3134-28BC-4C30-A9B0-559338FBBDFD"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:iphone_os:3.2.1:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "3A939B80-0AD0-48AF-81A7-370716F56639"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:iphone_os:3.2.1:-:ipad:*:*:*:*:*",
+                    "matchCriteriaId": "98C41674-370B-4CF0-817B-3843D93A10DA"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:iphone_os:4.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "12E22AF0-2B66-425A-A1EE-4F0E3B0433E7"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:iphone_os:4.0:-:iphone:*:*:*:*:*",
+                    "matchCriteriaId": "954CDDCB-AC22-448D-8ECA-CFA4DBA1BC27"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:iphone_os:4.0:-:ipodtouch:*:*:*:*:*",
+                    "matchCriteriaId": "54FECD66-4216-43FC-9959-B8EA9545449C"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:iphone_os:4.0.1:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "BB34ECBE-33E8-40E1-936B-7800D2525AE6"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:iphone_os:4.0.1:-:iphone:*:*:*:*:*",
+                    "matchCriteriaId": "ECE983F6-A597-4581-A254-80396B54F2D5"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:iphone_os:4.0.1:-:ipodtouch:*:*:*:*:*",
+                    "matchCriteriaId": "586C0CB3-98E5-4CB3-8F23-27F01233D6C4"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "http://freetype.sourceforge.net/index2.html#release-freetype-2.4.2",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://git.savannah.gnu.org/cgit/freetype/freetype2.git/commit/?id=018f5c27813dd7eef4648fe254632ecea0c85a50",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://git.savannah.gnu.org/cgit/freetype/freetype2.git/commit/?id=11d65e8a1f1f14e56148fd991965424d9bd1cdbc",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://lists.apple.com/archives/security-announce/2010//Aug/msg00000.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://lists.apple.com/archives/security-announce/2010//Aug/msg00001.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "http://osvdb.org/66828",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://secunia.com/advisories/40807",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "http://secunia.com/advisories/40816",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "http://secunia.com/advisories/40982",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "http://secunia.com/advisories/48951",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://sourceforge.net/projects/freetype/files/freetype2/2.4.2/NEWS/view",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://support.apple.com/kb/HT4291",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "http://support.apple.com/kb/HT4292",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "http://www.exploit-db.com/exploits/14538",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit"
+            ]
+          },
+          {
+            "url": "http://www.f-secure.com/weblog/archives/00002002.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://www.securityfocus.com/bid/42151",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit"
+            ]
+          },
+          {
+            "url": "http://www.ubuntu.com/usn/USN-972-1",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://www.vupen.com/english/advisories/2010/2018",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "http://www.vupen.com/english/advisories/2010/2106",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://bugs.launchpad.net/ubuntu/maverick/+source/freetype/+bug/617019",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "https://bugzilla.redhat.com/show_bug.cgi?id=621144",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "https://exchange.xforce.ibmcloud.com/vulnerabilities/60856",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          }
+        ]
+      },
+      "risk_score": 83,
+      "rank": 4
+    },
+    {
+      "cve_id": "CVE-2014-9357",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 0.24607,
+            "score_date": "2026-03-09"
+          },
+          "current": {
+            "score": 0.36182,
+            "score_date": "2026-04-01"
+          },
+          "delta": 0.11575
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2014-12-16",
+        "description": "Docker 1.3.2 allows remote attackers to execute arbitrary code with root privileges via a crafted (1) image or (2) build in a Dockerfile in an LZMA (.xz) archive, related to the chroot for archive extraction.",
+        "title": "docker docker privilege escalation",
+        "vendor": "docker",
+        "product": "docker",
+        "attack_type": "privilege escalation",
+        "cvss_max": 10.0
+      },
+      "cve": {
+        "id": "CVE-2014-9357",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2014-12-16T18:59:15.950",
+        "lastModified": "2026-05-06T22:30:45.220",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Docker 1.3.2 allows remote attackers to execute arbitrary code with root privileges via a crafted (1) image or (2) build in a Dockerfile in an LZMA (.xz) archive, related to the chroot for archive extraction."
+          },
+          {
+            "lang": "es",
+            "value": "Docker 1.3.2 permite a atacantes remotos ejecutar código arbitrario con privilegios root a través de (1) una imagen manipulada o (2) un build manipulado en in fichero Docker en un archivo LZMA (.xz), relacionado con el chroot para la extracción de archivos."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV2": [
+            {
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+                "baseScore": 10.0,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "baseSeverity": "HIGH",
+              "exploitabilityScore": 10.0,
+              "impactScore": 10.0
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-264"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:docker:docker:1.3.2:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "4B6B6AB7-1ABB-4CD7-9C34-621263595589"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "http://www.securityfocus.com/archive/1/534215/100/0/threaded",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "https://groups.google.com/forum/#%21msg/docker-user/nFAz-B-n4Bw/0wr3wvLsnUwJ",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          }
+        ]
+      },
+      "risk_score": 85,
+      "rank": 5
+    },
+    {
+      "cve_id": "CVE-2026-34559",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-04-01",
+          "previous_max": null,
+          "current_max": 9.1
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-04-01",
+        "description": "CI4MS is a CodeIgniter 4-based CMS skeleton that delivers a production-ready, modular architecture with RBAC authorization and theme support. Prior to version 0.31.0.0, the application fails to properly sanitize user-controlled input when creating or editing blog tags. An attacker can inject a malicious JavaScript payload into the tag name field, which is then stored server-side. This stored payload is later rendered unsafely across public tag pages and administrative interfaces without proper output encoding, leading to stored cross-site scripting (XSS). This issue has been patched in version 0.31.0.0.",
+        "title": "ci4-cms-erp ci4ms privilege escalation",
+        "vendor": "ci4-cms-erp",
+        "product": "ci4ms",
+        "attack_type": "privilege escalation",
+        "cvss_max": 9.1
+      },
+      "cve": {
+        "id": "CVE-2026-34559",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2026-04-01T22:16:18.780",
+        "lastModified": "2026-04-13T18:02:00.033",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "CI4MS is a CodeIgniter 4-based CMS skeleton that delivers a production-ready, modular architecture with RBAC authorization and theme support. Prior to version 0.31.0.0, the application fails to properly sanitize user-controlled input when creating or editing blog tags. An attacker can inject a malicious JavaScript payload into the tag name field, which is then stored server-side. This stored payload is later rendered unsafely across public tag pages and administrative interfaces without proper output encoding, leading to stored cross-site scripting (XSS). This issue has been patched in version 0.31.0.0."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:L/A:L",
+                "baseScore": 9.1,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.1,
+              "impactScore": 5.3
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:H",
+                "baseScore": 9.0,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 2.3,
+              "impactScore": 6.0
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-79"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:ci4-cms-erp:ci4ms:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "805F6B8A-9324-4CA4-BADE-439CC15DA14C",
+                    "versionEndExcluding": "0.31.0.0"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/ci4-cms-erp/ci4ms/releases/tag/0.31.0.0",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Release Notes"
+            ]
+          },
+          {
+            "url": "https://github.com/ci4-cms-erp/ci4ms/security/advisories/GHSA-4333-387x-w245",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Exploit",
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 6
+    },
+    {
+      "cve_id": "CVE-2026-34560",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-04-01",
+          "previous_max": null,
+          "current_max": 9.1
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-04-01",
+        "description": "CI4MS is a CodeIgniter 4-based CMS skeleton that delivers a production-ready, modular architecture with RBAC authorization and theme support. Prior to version 0.31.0.0, the application renders user-controlled input unsafely within the logs interface. If any stored XSS payload exists within logged data, it is rendered without proper output encoding. This issue becomes a Blind XSS scenario because the attacker does not see immediate execution. Instead, the payload is stored within application logs and only executes later when an administrator views the logs page. This issue has been patched in version 0.31.0.0.",
+        "title": "ci4-cms-erp ci4ms cross-site scripting",
+        "vendor": "ci4-cms-erp",
+        "product": "ci4ms",
+        "attack_type": "cross-site scripting",
+        "cvss_max": 9.1
+      },
+      "cve": {
+        "id": "CVE-2026-34560",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2026-04-01T22:16:19.333",
+        "lastModified": "2026-04-13T18:00:22.750",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "CI4MS is a CodeIgniter 4-based CMS skeleton that delivers a production-ready, modular architecture with RBAC authorization and theme support. Prior to version 0.31.0.0, the application renders user-controlled input unsafely within the logs interface. If any stored XSS payload exists within logged data, it is rendered without proper output encoding. This issue becomes a Blind XSS scenario because the attacker does not see immediate execution. Instead, the payload is stored within application logs and only executes later when an administrator views the logs page. This issue has been patched in version 0.31.0.0."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:L/A:L",
+                "baseScore": 9.1,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.1,
+              "impactScore": 5.3
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:H",
+                "baseScore": 9.0,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 2.3,
+              "impactScore": 6.0
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-79"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:ci4-cms-erp:ci4ms:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "805F6B8A-9324-4CA4-BADE-439CC15DA14C",
+                    "versionEndExcluding": "0.31.0.0"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/ci4-cms-erp/ci4ms/releases/tag/0.31.0.0",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Release Notes"
+            ]
+          },
+          {
+            "url": "https://github.com/ci4-cms-erp/ci4ms/security/advisories/GHSA-r4v5-rwr2-q7r4",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Exploit",
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 7
+    },
+    {
+      "cve_id": "CVE-2026-34563",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-04-01",
+          "previous_max": null,
+          "current_max": 9.1
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-04-01",
+        "description": "CI4MS is a CodeIgniter 4-based CMS skeleton that delivers a production-ready, modular architecture with RBAC authorization and theme support. Prior to version 0.31.0.0, the application fails to properly sanitize user-controlled input when handling backup uploads and processing backup metadata. An attacker can inject a malicious JavaScript payload into the backup filename via the uploaded xss.sql, which uses SQL functionality to insert the XSS payload server-side. This stored payload is later rendered unsafely in multiple backup management views without proper output encoding, leading to stored blind cross-site scripting (Blind XSS). This issue has been patched in version 0.31.0.0.",
+        "title": "ci4-cms-erp ci4ms cross-site scripting",
+        "vendor": "ci4-cms-erp",
+        "product": "ci4ms",
+        "attack_type": "cross-site scripting",
+        "cvss_max": 9.1
+      },
+      "cve": {
+        "id": "CVE-2026-34563",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2026-04-01T22:16:19.800",
+        "lastModified": "2026-04-07T21:33:51.717",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "CI4MS is a CodeIgniter 4-based CMS skeleton that delivers a production-ready, modular architecture with RBAC authorization and theme support. Prior to version 0.31.0.0, the application fails to properly sanitize user-controlled input when handling backup uploads and processing backup metadata. An attacker can inject a malicious JavaScript payload into the backup filename via the uploaded xss.sql, which uses SQL functionality to insert the XSS payload server-side. This stored payload is later rendered unsafely in multiple backup management views without proper output encoding, leading to stored blind cross-site scripting (Blind XSS). This issue has been patched in version 0.31.0.0."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:L/A:L",
+                "baseScore": 9.1,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.1,
+              "impactScore": 5.3
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:H",
+                "baseScore": 9.0,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 2.3,
+              "impactScore": 6.0
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-79"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:ci4-cms-erp:ci4ms:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "805F6B8A-9324-4CA4-BADE-439CC15DA14C",
+                    "versionEndExcluding": "0.31.0.0"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/ci4-cms-erp/ci4ms/releases/tag/0.31.0.0",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Release Notes"
+            ]
+          },
+          {
+            "url": "https://github.com/ci4-cms-erp/ci4ms/security/advisories/GHSA-85m8-g393-jcxf",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Exploit",
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 8
+    },
+    {
+      "cve_id": "CVE-2026-34564",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-04-01",
+          "previous_max": null,
+          "current_max": 9.1
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-04-01",
+        "description": "CI4MS is a CodeIgniter 4-based CMS skeleton that delivers a production-ready, modular architecture with RBAC authorization and theme support. Prior to version 0.31.0.0, the application fails to properly sanitize user-controlled input when adding Pages to navigation menus through the Menu Management functionality. Page-related data selected via the Pages section is stored server-side and rendered without proper output encoding. This stored payload is later rendered unsafely within administrative interfaces and public-facing navigation menus, leading to stored DOM-based cross-site scripting (XSS). This issue has been patched in version 0.31.0.0.",
+        "title": "ci4-cms-erp ci4ms privilege escalation",
+        "vendor": "ci4-cms-erp",
+        "product": "ci4ms",
+        "attack_type": "privilege escalation",
+        "cvss_max": 9.1
+      },
+      "cve": {
+        "id": "CVE-2026-34564",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2026-04-01T22:16:19.950",
+        "lastModified": "2026-04-07T21:29:34.323",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "CI4MS is a CodeIgniter 4-based CMS skeleton that delivers a production-ready, modular architecture with RBAC authorization and theme support. Prior to version 0.31.0.0, the application fails to properly sanitize user-controlled input when adding Pages to navigation menus through the Menu Management functionality. Page-related data selected via the Pages section is stored server-side and rendered without proper output encoding. This stored payload is later rendered unsafely within administrative interfaces and public-facing navigation menus, leading to stored DOM-based cross-site scripting (XSS). This issue has been patched in version 0.31.0.0."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:L/A:L",
+                "baseScore": 9.1,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.1,
+              "impactScore": 5.3
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:H",
+                "baseScore": 9.0,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 2.3,
+              "impactScore": 6.0
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-79"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:ci4-cms-erp:ci4ms:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "805F6B8A-9324-4CA4-BADE-439CC15DA14C",
+                    "versionEndExcluding": "0.31.0.0"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/ci4-cms-erp/ci4ms/releases/tag/0.31.0.0",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Release Notes"
+            ]
+          },
+          {
+            "url": "https://github.com/ci4-cms-erp/ci4ms/security/advisories/GHSA-g4pp-fhgf-8653",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Exploit",
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 9
+    },
+    {
+      "cve_id": "CVE-2026-34565",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-04-01",
+          "previous_max": null,
+          "current_max": 9.1
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-04-01",
+        "description": "CI4MS is a CodeIgniter 4-based CMS skeleton that delivers a production-ready, modular architecture with RBAC authorization and theme support. Prior to version 0.31.0.0, the application fails to properly sanitize user-controlled input when adding Posts to navigation menus through the Menu Management functionality. Post-related data selected via the Posts section is stored server-side and rendered without proper output encoding. These stored values are later rendered unsafely within administrative dashboards and public-facing navigation menus, resulting in stored DOM-based cross-site scripting (XSS). This issue has been patched in version 0.31.0.0.",
+        "title": "ci4-cms-erp ci4ms privilege escalation",
+        "vendor": "ci4-cms-erp",
+        "product": "ci4ms",
+        "attack_type": "privilege escalation",
+        "cvss_max": 9.1
+      },
+      "cve": {
+        "id": "CVE-2026-34565",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2026-04-01T22:16:20.107",
+        "lastModified": "2026-04-06T16:43:31.467",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "CI4MS is a CodeIgniter 4-based CMS skeleton that delivers a production-ready, modular architecture with RBAC authorization and theme support. Prior to version 0.31.0.0, the application fails to properly sanitize user-controlled input when adding Posts to navigation menus through the Menu Management functionality. Post-related data selected via the Posts section is stored server-side and rendered without proper output encoding. These stored values are later rendered unsafely within administrative dashboards and public-facing navigation menus, resulting in stored DOM-based cross-site scripting (XSS). This issue has been patched in version 0.31.0.0."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:L/A:L",
+                "baseScore": 9.1,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.1,
+              "impactScore": 5.3
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:H",
+                "baseScore": 9.0,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 2.3,
+              "impactScore": 6.0
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-79"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:ci4-cms-erp:ci4ms:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "805F6B8A-9324-4CA4-BADE-439CC15DA14C",
+                    "versionEndExcluding": "0.31.0.0"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/ci4-cms-erp/ci4ms/releases/tag/0.31.0.0",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Release Notes"
+            ]
+          },
+          {
+            "url": "https://github.com/ci4-cms-erp/ci4ms/security/advisories/GHSA-xgh5-w62m-8mpr",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Exploit",
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 10
+    },
+    {
+      "cve_id": "CVE-2026-34566",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-04-01",
+          "previous_max": null,
+          "current_max": 9.1
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-04-01",
+        "description": "CI4MS is a CodeIgniter 4-based CMS skeleton that delivers a production-ready, modular architecture with RBAC authorization and theme support. Prior to version 0.31.0.0, the application fails to properly sanitize user-controlled input within the Page Management functionality when creating or editing pages. Multiple input fields accept attacker-controlled JavaScript payloads that are stored server-side. These stored values are later rendered without proper output encoding across administrative page lists and public-facing page views, leading to stored DOM-based cross-site scripting (XSS). This issue has been patched in version 0.31.0.0.",
+        "title": "ci4-cms-erp ci4ms privilege escalation",
+        "vendor": "ci4-cms-erp",
+        "product": "ci4ms",
+        "attack_type": "privilege escalation",
+        "cvss_max": 9.1
+      },
+      "cve": {
+        "id": "CVE-2026-34566",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2026-04-01T22:16:20.263",
+        "lastModified": "2026-04-06T16:42:22.200",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "CI4MS is a CodeIgniter 4-based CMS skeleton that delivers a production-ready, modular architecture with RBAC authorization and theme support. Prior to version 0.31.0.0, the application fails to properly sanitize user-controlled input within the Page Management functionality when creating or editing pages. Multiple input fields accept attacker-controlled JavaScript payloads that are stored server-side. These stored values are later rendered without proper output encoding across administrative page lists and public-facing page views, leading to stored DOM-based cross-site scripting (XSS). This issue has been patched in version 0.31.0.0."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:L/A:L",
+                "baseScore": 9.1,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.1,
+              "impactScore": 5.3
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:H",
+                "baseScore": 9.0,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 2.3,
+              "impactScore": 6.0
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-79"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:ci4-cms-erp:ci4ms:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "805F6B8A-9324-4CA4-BADE-439CC15DA14C",
+                    "versionEndExcluding": "0.31.0.0"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/ci4-cms-erp/ci4ms/releases/tag/0.31.0.0",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Release Notes"
+            ]
+          },
+          {
+            "url": "https://github.com/ci4-cms-erp/ci4ms/security/advisories/GHSA-458r-h248-29c5",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Exploit",
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 11
+    },
+    {
+      "cve_id": "CVE-2026-34567",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-04-01",
+          "previous_max": null,
+          "current_max": 9.1
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-04-01",
+        "description": "CI4MS is a CodeIgniter 4-based CMS skeleton that delivers a production-ready, modular architecture with RBAC authorization and theme support. Prior to version 0.31.0.0, the application fails to properly sanitize user-controlled input when creating or editing blog posts within the Categories section. An attacker can inject a malicious JavaScript payload into the Categories content, which is then stored server-side. This stored payload is later rendered unsafely when the Categories are viewed via blog posts, without proper output encoding, leading to stored cross-site scripting (XSS). This issue has been patched in version 0.31.0.0.",
+        "title": "ci4-cms-erp ci4ms privilege escalation",
+        "vendor": "ci4-cms-erp",
+        "product": "ci4ms",
+        "attack_type": "privilege escalation",
+        "cvss_max": 9.1
+      },
+      "cve": {
+        "id": "CVE-2026-34567",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2026-04-01T22:16:20.420",
+        "lastModified": "2026-04-06T16:41:42.780",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "CI4MS is a CodeIgniter 4-based CMS skeleton that delivers a production-ready, modular architecture with RBAC authorization and theme support. Prior to version 0.31.0.0, the application fails to properly sanitize user-controlled input when creating or editing blog posts within the Categories section. An attacker can inject a malicious JavaScript payload into the Categories content, which is then stored server-side. This stored payload is later rendered unsafely when the Categories are viewed via blog posts, without proper output encoding, leading to stored cross-site scripting (XSS). This issue has been patched in version 0.31.0.0."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:L/A:L",
+                "baseScore": 9.1,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.1,
+              "impactScore": 5.3
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:H",
+                "baseScore": 9.0,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 2.3,
+              "impactScore": 6.0
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-79"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:ci4-cms-erp:ci4ms:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "805F6B8A-9324-4CA4-BADE-439CC15DA14C",
+                    "versionEndExcluding": "0.31.0.0"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/ci4-cms-erp/ci4ms/releases/tag/0.31.0.0",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Release Notes"
+            ]
+          },
+          {
+            "url": "https://github.com/ci4-cms-erp/ci4ms/security/advisories/GHSA-r33w-c82v-x5v7",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Exploit",
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 12
+    },
+    {
+      "cve_id": "CVE-2026-34568",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-04-01",
+          "previous_max": null,
+          "current_max": 9.1
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-04-01",
+        "description": "CI4MS is a CodeIgniter 4-based CMS skeleton that delivers a production-ready, modular architecture with RBAC authorization and theme support. Prior to version 0.31.0.0, the application fails to properly sanitize user-controlled input when creating or editing blog posts. An attacker can inject a malicious JavaScript payload into blog post content, which is then stored server-side. This stored payload is later rendered unsafely in multiple application views without proper output encoding, leading to stored cross-site scripting (XSS). This issue has been patched in version 0.31.0.0.",
+        "title": "ci4-cms-erp ci4ms privilege escalation",
+        "vendor": "ci4-cms-erp",
+        "product": "ci4ms",
+        "attack_type": "privilege escalation",
+        "cvss_max": 9.1
+      },
+      "cve": {
+        "id": "CVE-2026-34568",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2026-04-01T22:16:20.570",
+        "lastModified": "2026-04-06T16:49:31.050",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "CI4MS is a CodeIgniter 4-based CMS skeleton that delivers a production-ready, modular architecture with RBAC authorization and theme support. Prior to version 0.31.0.0, the application fails to properly sanitize user-controlled input when creating or editing blog posts. An attacker can inject a malicious JavaScript payload into blog post content, which is then stored server-side. This stored payload is later rendered unsafely in multiple application views without proper output encoding, leading to stored cross-site scripting (XSS). This issue has been patched in version 0.31.0.0."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:L/A:L",
+                "baseScore": 9.1,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.1,
+              "impactScore": 5.3
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:H",
+                "baseScore": 9.0,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 2.3,
+              "impactScore": 6.0
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-79"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:ci4-cms-erp:ci4ms:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "805F6B8A-9324-4CA4-BADE-439CC15DA14C",
+                    "versionEndExcluding": "0.31.0.0"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/ci4-cms-erp/ci4ms/releases/tag/0.31.0.0",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Release Notes"
+            ]
+          },
+          {
+            "url": "https://github.com/ci4-cms-erp/ci4ms/security/advisories/GHSA-x7wh-g25g-53vg",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Exploit",
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 13
+    },
+    {
+      "cve_id": "CVE-2026-34571",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-04-01",
+          "previous_max": null,
+          "current_max": 9.9
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-04-01",
+        "description": "CI4MS is a CodeIgniter 4-based CMS skeleton that delivers a production-ready, modular architecture with RBAC authorization and theme support. Prior to version 0.31.0.0, a Stored Cross-Site Scripting (Stored XSS) vulnerability exists in the backend user management functionality. The application fails to properly sanitize user-controlled input before rendering it in the administrative interface, allowing attackers to inject persistent JavaScript code. This results in automatic execution whenever backend users access the affected page, enabling session hijacking, privilege escalation, and full administrative account compromise. This issue has been patched in version 0.31.0.0.",
+        "title": "ci4-cms-erp ci4ms XSS",
+        "vendor": "ci4-cms-erp",
+        "product": "ci4ms",
+        "attack_type": "XSS",
+        "cvss_max": 9.9
+      },
+      "cve": {
+        "id": "CVE-2026-34571",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2026-04-01T22:16:21.030",
+        "lastModified": "2026-04-06T16:33:14.173",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "CI4MS is a CodeIgniter 4-based CMS skeleton that delivers a production-ready, modular architecture with RBAC authorization and theme support. Prior to version 0.31.0.0, a Stored Cross-Site Scripting (Stored XSS) vulnerability exists in the backend user management functionality. The application fails to properly sanitize user-controlled input before rendering it in the administrative interface, allowing attackers to inject persistent JavaScript code. This results in automatic execution whenever backend users access the affected page, enabling session hijacking, privilege escalation, and full administrative account compromise. This issue has been patched in version 0.31.0.0."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+                "baseScore": 9.9,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.1,
+              "impactScore": 6.0
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:H",
+                "baseScore": 9.0,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 2.3,
+              "impactScore": 6.0
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-79"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:ci4-cms-erp:ci4ms:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "805F6B8A-9324-4CA4-BADE-439CC15DA14C",
+                    "versionEndExcluding": "0.31.0.0"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/ci4-cms-erp/ci4ms/releases/tag/0.31.0.0",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Release Notes"
+            ]
+          },
+          {
+            "url": "https://github.com/ci4-cms-erp/ci4ms/security/advisories/GHSA-fc4p-p49v-r948",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Exploit",
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 14
+    }
+  ],
+  "source": "https://www.cvelogic.com/threat-intelligence/2026-04-01"
+}

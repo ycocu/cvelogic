@@ -1,0 +1,1255 @@
+{
+  "schema_version": "2.2",
+  "generated_at": "2026-06-02T07:33:02Z",
+  "day": "2025-07-10",
+  "window": {
+    "utc_start": "2025-07-10",
+    "utc_end": "2025-07-10",
+    "days": 1
+  },
+  "summary": {
+    "brief": "Citrix NetScaler ADC And Gateway added to CISA KEV — confirmed in-the-wild exploitation. · 10 new critical disclosures — review patch status on exposed services.",
+    "bullets": [
+      "Citrix NetScaler ADC And Gateway added to CISA KEV — confirmed in-the-wild exploitation.",
+      "10 new critical disclosures — review patch status on exposed services."
+    ],
+    "counts": {
+      "cves": 11,
+      "kev": 1,
+      "exploit": 0,
+      "epss": 0,
+      "cvss": 10,
+      "patch": 0
+    }
+  },
+  "cves": [
+    {
+      "cve_id": "CVE-2025-5777",
+      "signal_types": [
+        "KEV"
+      ],
+      "signals": {
+        "kev": {
+          "date_added": "2025-07-10"
+        },
+        "exploit": null,
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-06-17",
+        "description": "Insufficient input validation leading to memory overread when the NetScaler is configured as a Gateway (VPN virtual server, ICA Proxy, CVPN, RDP Proxy) OR AAA virtual server",
+        "title": "Citrix NetScaler ADC and Gateway Out-of-Bounds Read Vulnerability",
+        "vendor": "citrix",
+        "product": "netscaler_application_delivery_controller",
+        "attack_type": "Out-of-Bounds Write",
+        "cvss_max": 9.3
+      },
+      "cve": {
+        "id": "CVE-2025-5777",
+        "sourceIdentifier": "secure@citrix.com",
+        "published": "2025-06-17T13:15:21.523",
+        "lastModified": "2025-10-30T20:10:26.470",
+        "vulnStatus": "Analyzed",
+        "cisaExploitAdd": "2025-07-10",
+        "cisaActionDue": "2025-07-11",
+        "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+        "cisaVulnerabilityName": "Citrix NetScaler ADC and Gateway Out-of-Bounds Read Vulnerability",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Insufficient input validation leading to memory overread when the NetScaler is configured as a Gateway (VPN virtual server, ICA Proxy, CVPN, RDP Proxy) OR AAA virtual server"
+          },
+          {
+            "lang": "es",
+            "value": "Validación de entrada insuficiente que provoca una sobrelectura de memoria en la interfaz de administración de NetScaler, NetScaler ADC y NetScaler Gateway"
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+                "baseScore": 7.5,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 3.6
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:L/SI:L/SA:L/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "secure@citrix.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-125"
+              }
+            ],
+            "source": "secure@citrix.com"
+          },
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-908"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          },
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-457"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:citrix:netscaler_application_delivery_controller:*:*:*:*:fips:*:*:*",
+                    "matchCriteriaId": "D907BEC2-6930-4989-A6E1-847B4763BB12",
+                    "versionStartIncluding": "12.1",
+                    "versionEndExcluding": "12.1-55.328"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:citrix:netscaler_application_delivery_controller:*:*:*:*:fips:*:*:*",
+                    "matchCriteriaId": "7AF5A6EE-84A9-42AA-BC4B-7C3367D08CAF",
+                    "versionStartIncluding": "13.1",
+                    "versionEndExcluding": "13.1-37.235"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:citrix:netscaler_application_delivery_controller:*:*:*:*:ndcpp:*:*:*",
+                    "matchCriteriaId": "E219F46B-FCBE-4DA2-9094-6ED128E8AF66",
+                    "versionStartIncluding": "13.1",
+                    "versionEndExcluding": "13.1-37.235"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:citrix:netscaler_application_delivery_controller:*:*:*:*:-:*:*:*",
+                    "matchCriteriaId": "48A64F62-2A5A-40CB-A507-A48497BD749A",
+                    "versionStartIncluding": "13.1",
+                    "versionEndExcluding": "13.1-58.32"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:citrix:netscaler_application_delivery_controller:*:*:*:*:-:*:*:*",
+                    "matchCriteriaId": "6484AA47-81F8-4EE6-9F33-96DEFE2F66E1",
+                    "versionStartIncluding": "14.1",
+                    "versionEndExcluding": "14.1-43.56"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:citrix:netscaler_gateway:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "2C86D66F-888F-4519-B700-9ADC4EE6913C",
+                    "versionStartIncluding": "13.1",
+                    "versionEndExcluding": "13.1-58.32"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:citrix:netscaler_gateway:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "D4E61FAA-9EAB-4F9B-887F-C5DC0DA0C633",
+                    "versionStartIncluding": "14.1",
+                    "versionEndExcluding": "14.1-43.56"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://support.citrix.com/support-home/kbsearch/article?articleNumber=CTX693420",
+            "source": "secure@citrix.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://citrixbleed.com",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Broken Link",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://horizon3.ai/attack-research/attack-blogs/cve-2025-5777-citrixbleed-2-write-up-maybe/",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://labs.watchtowr.com/how-much-more-must-we-bleed-citrix-netscaler-memory-disclosure-citrixbleed-2-cve-2025-5777/",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.bleepingcomputer.com/news/security/cisa-tags-citrix-bleed-2-as-exploited-gives-agencies-a-day-to-patch/",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Press/Media Coverage",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.netscaler.com/blog/news/netscaler-critical-security-updates-for-cve-2025-6543-and-cve-2025-5777/",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.theregister.com/2025/07/10/cisa_citrixbleed_kev/",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Press/Media Coverage"
+            ]
+          },
+          {
+            "url": "https://doublepulsar.com/citrixbleed-2-exploitation-started-mid-june-how-to-spot-it-f3106392aa71",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://reliaquest.com/blog/threat-spotlight-citrix-bleed-2-vulnerability-in-netscaler-adc-gateway-devices/",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2025-5777",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "US Government Resource"
+            ]
+          }
+        ]
+      },
+      "risk_score": 88,
+      "rank": 1
+    },
+    {
+      "cve_id": "CVE-2025-47812",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-07-10",
+          "previous_max": null,
+          "current_max": 10.0
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-07-10",
+        "description": "In Wing FTP Server before 7.4.4. the user and admin web interfaces mishandle '\\0' bytes, ultimately allowing injection of arbitrary Lua code into user session files. This can be used to execute arbitrary system commands with the privileges of the FTP service (root or SYSTEM by default). This is thus a remote code execution vulnerability that guarantees a total server compromise. This is also exploitable via anonymous FTP accounts.",
+        "title": "Wing FTP Server Improper Neutralization of Null Byte or NUL Character Vulnerability",
+        "vendor": "wftpserver",
+        "product": "wing_ftp_server",
+        "attack_type": "RCE",
+        "cvss_max": 10.0
+      },
+      "cve": {
+        "id": "CVE-2025-47812",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2025-07-10T17:15:47.210",
+        "lastModified": "2025-11-05T19:26:31.650",
+        "vulnStatus": "Analyzed",
+        "cisaExploitAdd": "2025-07-14",
+        "cisaActionDue": "2025-08-04",
+        "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+        "cisaVulnerabilityName": "Wing FTP Server Improper Neutralization of Null Byte or NUL Character Vulnerability",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "In Wing FTP Server before 7.4.4. the user and admin web interfaces mishandle '\\0' bytes, ultimately allowing injection of arbitrary Lua code into user session files. This can be used to execute arbitrary system commands with the privileges of the FTP service (root or SYSTEM by default). This is thus a remote code execution vulnerability that guarantees a total server compromise. This is also exploitable via anonymous FTP accounts."
+          },
+          {
+            "lang": "es",
+            "value": "En Wing FTP Server anterior a la versión 7.4.4, las interfaces web de usuario y administrador gestionan incorrectamente los bytes '\\0', lo que permite la inyección de código Lua arbitrario en los archivos de sesión del usuario. Esto puede usarse para ejecutar comandos de sistema arbitrarios con los privilegios del servicio FTP (root o SYSTEM por defecto). Por lo tanto, se trata de una vulnerabilidad de ejecución remota de código que garantiza la vulneración total del servidor. Esto también es explotable mediante cuentas FTP anónimas."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+                "baseScore": 10.0,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "cve@mitre.org",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 6.0
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-158"
+              }
+            ],
+            "source": "cve@mitre.org"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:wftpserver:wing_ftp_server:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "34AF9E83-291C-40B0-AE69-34C9B59A5D03",
+                    "versionEndExcluding": "7.4.4"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://www.rcesecurity.com/2025/06/what-the-null-wing-ftp-server-rce-cve-2025-47812/",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.vicarius.io/vsociety/posts/cve-2025-47812-detection-script-remote-code-execution-vulnerability-in-wing-ftp-server",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.vicarius.io/vsociety/posts/cve-2025-47812-mitigation-script-remote-code-execution-vulnerability-in-wing-ftp-server",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Mitigation",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.wftpserver.com",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Product"
+            ]
+          },
+          {
+            "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2025-47812",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "US Government Resource"
+            ]
+          },
+          {
+            "url": "https://www.huntress.com/blog/wing-ftp-server-remote-code-execution-cve-2025-47812-exploited-in-wild",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 2
+    },
+    {
+      "cve_id": "CVE-2025-2523",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-07-10",
+          "previous_max": null,
+          "current_max": 9.4
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-07-10",
+        "description": "The Honeywell Experion PKS \n\n and OneWireless WDM \n\ncontains an Integer Underflow \n\nvulnerability \n\nin the component Control Data Access (CDA). An attacker could potentially exploit this vulnerability, leading to a Communication Channel Manipulation, which could result in a failure during subtraction allowing remote code execution.\n\n\n\nHoneywell recommends updating to the most recent version of \n\nHoneywell Experion PKS:520.2 TCU9 HF1 and 530.1 TCU3 HF1 and OneWireless: 322.5 and 331.1.\n\n\n\nThe affected Experion PKS products are C300 PCNT02, C300 PCNT05, FIM4, FIM8, UOC, CN100, HCA, C300PM, and C200E.  The Experion PKS versions affected are from 520.1 through 520.2 TCU9 and from 530 through 530 TCU3. The OneWireless WDM affected versions are 322.1 through 322.4 and 330.1 through 330.3.",
+        "title": "The Honeywell Experion PKS and OneWireless WDM contains an Integer Underflow vulnerability in the component Control Data Access (CDA).",
+        "attack_type": "RCE",
+        "cvss_max": 9.4
+      },
+      "cve": {
+        "id": "CVE-2025-2523",
+        "sourceIdentifier": "psirt@honeywell.com",
+        "published": "2025-07-10T21:15:27.520",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The Honeywell Experion PKS \n\n and OneWireless WDM \n\ncontains an Integer Underflow \n\nvulnerability \n\nin the component Control Data Access (CDA). An attacker could potentially exploit this vulnerability, leading to a Communication Channel Manipulation, which could result in a failure during subtraction allowing remote code execution.\n\n\n\nHoneywell recommends updating to the most recent version of \n\nHoneywell Experion PKS:520.2 TCU9 HF1 and 530.1 TCU3 HF1 and OneWireless: 322.5 and 331.1.\n\n\n\nThe affected Experion PKS products are C300 PCNT02, C300 PCNT05, FIM4, FIM8, UOC, CN100, HCA, C300PM, and C200E.  The Experion PKS versions affected are from 520.1 through 520.2 TCU9 and from 530 through 530 TCU3. The OneWireless WDM affected versions are 322.1 through 322.4 and 330.1 through 330.3."
+          },
+          {
+            "lang": "es",
+            "value": "Honeywell Experion PKS y OneWireless WDM presentan una vulnerabilidad de subdesbordamiento de enteros en el componente Control Data Access (CDA). Un atacante podría explotar esta vulnerabilidad, lo que provocaría una manipulación del canal de comunicación, lo que podría provocar un fallo durante la resta, lo que permitiría la ejecución remota de código. Honeywell recomienda actualizar a la versión más reciente de Honeywell Experion PKS: 520.2 TCU9 HF1 y 530.1 TCU3 HF1, y OneWireless: 322.5 y 331.1. Los productos Experion PKS afectados son C300 PCNT02, C300 PCNT05, FIM4, FIM8, UOC, CN100, HCA, C300PM y C200E. Las versiones de Experion PKS afectadas son de la 520.1 a la 520.2 TCU9 y de la 530 a la 530 TCU3. Las versiones afectadas de OneWireless WDM son 322.1 a 322.4 y 330.1 a 330.3."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:H/A:H",
+                "baseScore": 9.4,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "psirt@honeywell.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.5
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-191"
+              }
+            ],
+            "source": "psirt@honeywell.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://process.honeywell.com/",
+            "source": "psirt@honeywell.com"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 3
+    },
+    {
+      "cve_id": "CVE-2025-23048",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-07-10",
+          "previous_max": null,
+          "current_max": 9.1
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-07-10",
+        "description": "In some mod_ssl configurations on Apache HTTP Server 2.4.35 through to 2.4.63, an access control bypass by trusted clients is possible using TLS 1.3 session resumption.\n\nConfigurations are affected when mod_ssl is configured for multiple virtual hosts, with each restricted to a different set of trusted client certificates (for example with a different SSLCACertificateFile/Path setting). In such a case, a client trusted to access one virtual host may be able to access another virtual host, if SSLStrictSNIVHostCheck is not enabled in either virtual host.",
+        "title": "apache http_server",
+        "vendor": "apache",
+        "product": "http_server",
+        "cvss_max": 9.1
+      },
+      "cve": {
+        "id": "CVE-2025-23048",
+        "sourceIdentifier": "security@apache.org",
+        "published": "2025-07-10T17:15:46.553",
+        "lastModified": "2025-11-04T22:16:06.920",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "In some mod_ssl configurations on Apache HTTP Server 2.4.35 through to 2.4.63, an access control bypass by trusted clients is possible using TLS 1.3 session resumption.\n\nConfigurations are affected when mod_ssl is configured for multiple virtual hosts, with each restricted to a different set of trusted client certificates (for example with a different SSLCACertificateFile/Path setting). In such a case, a client trusted to access one virtual host may be able to access another virtual host, if SSLStrictSNIVHostCheck is not enabled in either virtual host."
+          },
+          {
+            "lang": "es",
+            "value": "En algunas configuraciones de mod_ssl en Apache HTTP Server (versión 2.4.35 a 2.4.63), es posible que los clientes de confianza omitan el control de acceso mediante la reanudación de sesión TLS 1.3. Las configuraciones se ven afectadas cuando mod_ssl se configura para varios hosts virtuales, cada uno restringido a un conjunto diferente de certificados de cliente de confianza (por ejemplo, con una configuración SSLCACertificateFile/Path diferente). En tal caso, un cliente con acceso de confianza a un host virtual podría acceder a otro si SSLStrictSNIVHostCheck no está habilitado en ninguno de los hosts virtuales."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+                "baseScore": 9.1,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.2
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-284"
+              }
+            ],
+            "source": "security@apache.org"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:apache:http_server:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "9F21E49A-F8C0-4FEB-BC09-4F4D9F6C5BA0",
+                    "versionStartIncluding": "2.4.35",
+                    "versionEndExcluding": "2.4.64"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://httpd.apache.org/security/vulnerabilities_24.html",
+            "source": "security@apache.org",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "http://www.openwall.com/lists/oss-security/2025/07/10/2",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://www.openwall.com/lists/oss-security/2025/07/10/8",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "https://lists.debian.org/debian-lts-announce/2025/08/msg00009.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 4
+    },
+    {
+      "cve_id": "CVE-2025-34095",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-07-10",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-07-10",
+        "description": "An OS command injection vulnerability exists in Mako Server versions 2.5 and 2.6, specifically within the tutorial interface provided by the examples/save.lsp endpoint. An unauthenticated attacker can send a crafted PUT request containing arbitrary Lua os.execute() code, which is then persisted on disk and triggered via a subsequent GET request to examples/manage.lsp. This allows remote command execution on the underlying operating system, impacting both Windows and Unix-based deployments.",
+        "title": "An OS command injection vulnerability exists in Mako Server versions 2.5 and 2.6, specifically within the tutorial interface provided by...",
+        "attack_type": "Command Injection",
+        "cvss_max": 9.3
+      },
+      "cve": {
+        "id": "CVE-2025-34095",
+        "sourceIdentifier": "disclosure@vulncheck.com",
+        "published": "2025-07-10T20:15:24.953",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "An OS command injection vulnerability exists in Mako Server versions 2.5 and 2.6, specifically within the tutorial interface provided by the examples/save.lsp endpoint. An unauthenticated attacker can send a crafted PUT request containing arbitrary Lua os.execute() code, which is then persisted on disk and triggered via a subsequent GET request to examples/manage.lsp. This allows remote command execution on the underlying operating system, impacting both Windows and Unix-based deployments."
+          },
+          {
+            "lang": "es",
+            "value": "Existe una vulnerabilidad de inyección de comandos del sistema operativo en las versiones 2.5 y 2.6 de Mako Server, específicamente en la interfaz del tutorial proporcionada por el endpoint examples/save.lsp. Un atacante no autenticado puede enviar una solicitud PUT manipulada que contenga código Lua os.execute() arbitrario, que posteriormente se almacena en el disco y se activa mediante una solicitud GET posterior a examples/manage.lsp. Esto permite la ejecución remota de comandos en el sistema operativo subyacente, lo que afecta tanto a las implementaciones basadas en Windows como en Unix."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-78"
+              }
+            ],
+            "source": "disclosure@vulncheck.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://raw.githubusercontent.com/rapid7/metasploit-framework/master/modules/exploits/multi/http/makoserver_cmd_exec.rb",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://vulncheck/advisories/mako-server-rce",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://www.exploit-db.com/exploits/43132",
+            "source": "disclosure@vulncheck.com"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 5
+    },
+    {
+      "cve_id": "CVE-2025-34096",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-07-10",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-07-10",
+        "description": "A stack-based buffer overflow vulnerability exists in Easy File Sharing HTTP Server version 7.2. The flaw is triggered when a crafted POST request is sent to the /sendemail.ghp endpoint containing an overly long Email parameter. The application fails to properly validate the length of this field, resulting in a memory corruption condition. An unauthenticated remote attacker can exploit this to execute arbitrary code with the privileges of the server process.",
+        "title": "A stack-based buffer overflow vulnerability exists in Easy File Sharing HTTP Server version 7.2.",
+        "attack_type": "Buffer Overflow",
+        "cvss_max": 9.3
+      },
+      "cve": {
+        "id": "CVE-2025-34096",
+        "sourceIdentifier": "disclosure@vulncheck.com",
+        "published": "2025-07-10T20:15:25.110",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A stack-based buffer overflow vulnerability exists in Easy File Sharing HTTP Server version 7.2. The flaw is triggered when a crafted POST request is sent to the /sendemail.ghp endpoint containing an overly long Email parameter. The application fails to properly validate the length of this field, resulting in a memory corruption condition. An unauthenticated remote attacker can exploit this to execute arbitrary code with the privileges of the server process."
+          },
+          {
+            "lang": "es",
+            "value": "Existe una vulnerabilidad de desbordamiento de búfer en la pila en Easy File Sharing HTTP Server versión 7.2. La falla se activa cuando se envía una solicitud POST manipulada al endpoint /sendemail.ghp que contiene un parámetro de correo electrónico demasiado largo. La aplicación no valida correctamente la longitud de este campo, lo que provoca una corrupción de memoria. Un atacante remoto no autenticado puede aprovechar esto para ejecutar código arbitrario con los privilegios del proceso del servidor."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-119"
+              }
+            ],
+            "source": "disclosure@vulncheck.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://raw.githubusercontent.com/rapid7/metasploit-framework/master/modules/exploits/windows/http/easyfilesharing_post.rb",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://vulncheck/advisories/easy-file-sharing-http-server-buffer-overflow",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://www.exploit-db.com/exploits/42186",
+            "source": "disclosure@vulncheck.com"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 6
+    },
+    {
+      "cve_id": "CVE-2025-34099",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-07-10",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-07-10",
+        "description": "An unauthenticated command injection vulnerability exists in VICIdial versions 2.9 RC1 through 2.13 RC1, within the vicidial_sales_viewer.php component when password encryption is enabled (a non-default configuration). The application improperly passes the HTTP Basic Authentication password directly to a call to exec() without adequate sanitation. This allows remote attackers to inject and execute arbitrary operating system commands as the web server user. NOTE: This vulnerability was mitigated in 2017.",
+        "title": "An unauthenticated command injection vulnerability exists in VICIdial versions 2.9 RC1 through 2.13 RC1, within the vicidial_sales_viewer...",
+        "attack_type": "Command Injection",
+        "cvss_max": 9.3
+      },
+      "cve": {
+        "id": "CVE-2025-34099",
+        "sourceIdentifier": "disclosure@vulncheck.com",
+        "published": "2025-07-10T20:15:25.563",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "An unauthenticated command injection vulnerability exists in VICIdial versions 2.9 RC1 through 2.13 RC1, within the vicidial_sales_viewer.php component when password encryption is enabled (a non-default configuration). The application improperly passes the HTTP Basic Authentication password directly to a call to exec() without adequate sanitation. This allows remote attackers to inject and execute arbitrary operating system commands as the web server user. NOTE: This vulnerability was mitigated in 2017."
+          },
+          {
+            "lang": "es",
+            "value": "Existe una vulnerabilidad de inyección de comandos no autenticados en las versiones 2.9 RC1 a 2.13 RC1 de VICIdial, dentro del componente vicidial_sales_viewer.php cuando el cifrado de contraseña está habilitado (una configuración no predeterminada). La aplicación pasa incorrectamente la contraseña de autenticación básica HTTP directamente a una llamada a exec() sin la debida autorización. Esto permite a atacantes remotos inyectar y ejecutar comandos arbitrarios del sistema operativo como si fueran el usuario del servidor web."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-20"
+              },
+              {
+                "lang": "en",
+                "value": "CWE-78"
+              }
+            ],
+            "source": "disclosure@vulncheck.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://raw.githubusercontent.com/rapid7/metasploit-framework/master/modules/exploits/unix/webapp/vicidial_user_authorization_unauth_cmd_exec.rb",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://vulncheck.com/advisories/vicidial-unauth-command-injection",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://www.exploit-db.com/exploits/42370",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://www.vicidial.org/VICIDIALmantis/view.php?id=1016",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 7
+    },
+    {
+      "cve_id": "CVE-2025-34100",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-07-10",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-07-10",
+        "description": "An unrestricted file upload vulnerability exists in BuilderEngine 3.5.0 via the integration of the elFinder 2.0 file manager and its use of the jQuery File Upload plugin. The plugin fails to properly validate or restrict file types or locations during upload operations, allowing an attacker to upload a malicious .php file and subsequently execute arbitrary PHP code on the server under the context of the web server process. While the root vulnerability lies within the jQuery File Upload component, BuilderEngine’s improper integration and lack of access controls expose this functionality to unauthenticated users, resulting in full remote code execution.",
+        "title": "An unrestricted file upload vulnerability exists in BuilderEngine 3.5.0 via the integration of the elFinder 2.0 file manager and its use...",
+        "cvss_max": 9.3
+      },
+      "cve": {
+        "id": "CVE-2025-34100",
+        "sourceIdentifier": "disclosure@vulncheck.com",
+        "published": "2025-07-10T20:15:25.710",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "An unrestricted file upload vulnerability exists in BuilderEngine 3.5.0 via the integration of the elFinder 2.0 file manager and its use of the jQuery File Upload plugin. The plugin fails to properly validate or restrict file types or locations during upload operations, allowing an attacker to upload a malicious .php file and subsequently execute arbitrary PHP code on the server under the context of the web server process. While the root vulnerability lies within the jQuery File Upload component, BuilderEngine’s improper integration and lack of access controls expose this functionality to unauthenticated users, resulting in full remote code execution."
+          },
+          {
+            "lang": "es",
+            "value": "Existe una vulnerabilidad de carga de archivos sin restricciones en BuilderEngine 3.5.0 debido a la integración del gestor de archivos elFinder 2.0 y su uso del complemento jQuery File Upload. El complemento no valida ni restringe correctamente los tipos o ubicaciones de los archivos durante las operaciones de carga, lo que permite a un atacante cargar un archivo .php malicioso y, posteriormente, ejecutar código PHP arbitrario en el servidor, en el contexto del proceso del servidor web. Si bien la vulnerabilidad principal reside en el componente jQuery File Upload, la integración incorrecta de BuilderEngine y la falta de controles de acceso exponen esta funcionalidad a usuarios no autenticados, lo que resulta en la ejecución remota completa de código."
+          }
+        ],
+        "cveTags": [
+          {
+            "sourceIdentifier": "disclosure@vulncheck.com",
+            "tags": [
+              "unsupported-when-assigned"
+            ]
+          }
+        ],
+        "metrics": {
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-20"
+              },
+              {
+                "lang": "en",
+                "value": "CWE-306"
+              },
+              {
+                "lang": "en",
+                "value": "CWE-434"
+              }
+            ],
+            "source": "disclosure@vulncheck.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://raw.githubusercontent.com/rapid7/metasploit-framework/master/modules/exploits/multi/http/builderengine_upload_exec.rb",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://support.alertlogic.com/hc/en-us/articles/115004703183-BuilderEngine-Content-Management-System-CMS-elFinder-2-0-Arbitrary-File-Upload",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://vulncheck.com/advisories/builder-engine-unauthenticated-arbitrary-file-upload",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://www.exploit-db.com/exploits/40390",
+            "source": "disclosure@vulncheck.com"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 8
+    },
+    {
+      "cve_id": "CVE-2025-34101",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-07-10",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-07-10",
+        "description": "An unauthenticated command injection vulnerability exists in Serviio Media Server versions 1.4 through 1.8 on Windows, in the /rest/action API endpoint exposed by the console component (default port 23423). The checkStreamUrl method accepts a VIDEO parameter that is passed unsanitized to a call to cmd.exe, enabling arbitrary command execution under the privileges of the web server. No authentication is required to exploit this issue, as the REST API is exposed by default and lacks access controls.",
+        "title": "An unauthenticated command injection vulnerability exists in Serviio Media Server versions 1.4 through 1.8 on Windows, in the /rest/actio...",
+        "attack_type": "Command Injection",
+        "cvss_max": 9.3
+      },
+      "cve": {
+        "id": "CVE-2025-34101",
+        "sourceIdentifier": "disclosure@vulncheck.com",
+        "published": "2025-07-10T20:15:25.877",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "An unauthenticated command injection vulnerability exists in Serviio Media Server versions 1.4 through 1.8 on Windows, in the /rest/action API endpoint exposed by the console component (default port 23423). The checkStreamUrl method accepts a VIDEO parameter that is passed unsanitized to a call to cmd.exe, enabling arbitrary command execution under the privileges of the web server. No authentication is required to exploit this issue, as the REST API is exposed by default and lacks access controls."
+          },
+          {
+            "lang": "es",
+            "value": "Existe una vulnerabilidad de inyección de comandos no autenticados en Serviio Media Server, versiones 1.4 a 1.8, en Windows, en el endpoint de la API /rest/action expuesto por el componente de consola (puerto predeterminado 23423). El método checkStreamUrl acepta un parámetro VIDEO que se pasa sin depurar a una llamada a cmd.exe, lo que permite la ejecución arbitraria de comandos con los privilegios del servidor web. No se requiere autenticación para explotar este problema, ya que la API REST está expuesta por defecto y carece de controles de acceso."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-20"
+              },
+              {
+                "lang": "en",
+                "value": "CWE-78"
+              },
+              {
+                "lang": "en",
+                "value": "CWE-306"
+              }
+            ],
+            "source": "disclosure@vulncheck.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://fortiguard.fortinet.com/encyclopedia/ips/44042",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://packetstorm.news/files/id/142387",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://raw.githubusercontent.com/rapid7/metasploit-framework/master/modules/exploits/windows/http/serviio_checkstreamurl_cmd_exec.rb",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://vulncheck.com/advisories/serviio-media-server-unauthenticated-command-injection",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://www.exploit-db.com/exploits/42023",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://www.zeroscience.mk/en/vulnerabilities/ZSL-2017-5408.php",
+            "source": "disclosure@vulncheck.com"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 9
+    },
+    {
+      "cve_id": "CVE-2025-34102",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-07-10",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-07-10",
+        "description": "A remote code execution vulnerability exists in CryptoLog (PHP version, discontinued since 2009) due to a chained exploitation of SQL injection and command injection vulnerabilities. An unauthenticated attacker can gain shell access as the web server user by first exploiting a SQL injection flaw in login.php to bypass authentication, followed by command injection in logshares_ajax.php to execute arbitrary operating system commands.\n\n\nThe login bypass is achieved by submitting crafted SQL via the user POST parameter. Once authenticated, the attacker can abuse the lsid POST parameter in the logshares_ajax.php endpoint to inject and execute a command using $(...) syntax, resulting in code execution under the web context.\n\n\nThis exploitation path does not exist in the ASP.NET version of CryptoLog released since 2009.",
+        "title": "A remote code execution vulnerability exists in CryptoLog (PHP version, discontinued since 2009) due to a chained exploitation of SQL inj...",
+        "attack_type": "RCE",
+        "cvss_max": 9.3
+      },
+      "cve": {
+        "id": "CVE-2025-34102",
+        "sourceIdentifier": "disclosure@vulncheck.com",
+        "published": "2025-07-10T20:15:26.030",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A remote code execution vulnerability exists in CryptoLog (PHP version, discontinued since 2009) due to a chained exploitation of SQL injection and command injection vulnerabilities. An unauthenticated attacker can gain shell access as the web server user by first exploiting a SQL injection flaw in login.php to bypass authentication, followed by command injection in logshares_ajax.php to execute arbitrary operating system commands.\n\n\nThe login bypass is achieved by submitting crafted SQL via the user POST parameter. Once authenticated, the attacker can abuse the lsid POST parameter in the logshares_ajax.php endpoint to inject and execute a command using $(...) syntax, resulting in code execution under the web context.\n\n\nThis exploitation path does not exist in the ASP.NET version of CryptoLog released since 2009."
+          },
+          {
+            "lang": "es",
+            "value": "Existe una vulnerabilidad de ejecución remota de código en CryptoLog (versión PHP, descontinuada desde 2009) debido a la explotación encadenada de vulnerabilidades de inyección SQL e inyección de comandos. Un atacante no autenticado puede obtener acceso al shell como usuario del servidor web explotando primero una falla de inyección SQL en login.php para eludir la autenticación, y luego inyectando comandos en logshares_ajax.php para ejecutar comandos arbitrarios del sistema operativo. La omisión del inicio de sesión se logra enviando SQL manipulado mediante el parámetro POST del usuario. Una vez autenticado, el atacante puede abusar del parámetro POST lsid en el endpoint logshares_ajax.php para inyectar y ejecutar un comando con la sintaxis $(...), lo que resulta en la ejecución de código en el contexto web. Esta forma de explotación no existe en la versión ASP.NET de CryptoLog publicada desde 2009."
+          }
+        ],
+        "cveTags": [
+          {
+            "sourceIdentifier": "disclosure@vulncheck.com",
+            "tags": [
+              "unsupported-when-assigned"
+            ]
+          }
+        ],
+        "metrics": {
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-20"
+              },
+              {
+                "lang": "en",
+                "value": "CWE-78"
+              },
+              {
+                "lang": "en",
+                "value": "CWE-89"
+              },
+              {
+                "lang": "en",
+                "value": "CWE-306"
+              }
+            ],
+            "source": "disclosure@vulncheck.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://pentest.blog/advisory-cryptolog-unauthenticated-remote-code-execution/",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://raw.githubusercontent.com/rapid7/metasploit-framework/master/modules/exploits/linux/http/crypttech_cryptolog_login_exec.rb",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://vulncheck/advisories/cryptolog-unauthenticated-rce",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://www.exploit-db.com/exploits/41980",
+            "source": "disclosure@vulncheck.com"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 10
+    },
+    {
+      "cve_id": "CVE-2025-53371",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-07-10",
+          "previous_max": null,
+          "current_max": 9.1
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-07-10",
+        "description": "DiscordNotifications is an extension for MediaWiki that sends notifications of actions in your Wiki to a Discord channel. DiscordNotifications allows sending requests via curl and file_get_contents to arbitrary URLs set via $wgDiscordIncomingWebhookUrl and $wgDiscordAdditionalIncomingWebhookUrls. This allows for DOS by causing the server to read large files. SSRF is also possible if there are internal unprotected APIs that can be accessed using HTTP POST requests, which could also possibly lead to RCE. This vulnerability is fixed in commit 1f20d850cbcce5b15951c7c6127b87b927a5415e.",
+        "title": "DiscordNotifications is an extension for MediaWiki that sends notifications of actions in your Wiki to a Discord channel.",
+        "attack_type": "SSRF",
+        "cvss_max": 9.1
+      },
+      "cve": {
+        "id": "CVE-2025-53371",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2025-07-10T18:15:24.280",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "DiscordNotifications is an extension for MediaWiki that sends notifications of actions in your Wiki to a Discord channel. DiscordNotifications allows sending requests via curl and file_get_contents to arbitrary URLs set via $wgDiscordIncomingWebhookUrl and $wgDiscordAdditionalIncomingWebhookUrls. This allows for DOS by causing the server to read large files. SSRF is also possible if there are internal unprotected APIs that can be accessed using HTTP POST requests, which could also possibly lead to RCE. This vulnerability is fixed in commit 1f20d850cbcce5b15951c7c6127b87b927a5415e."
+          },
+          {
+            "lang": "es",
+            "value": "DiscordNotifications es una extensión para MediaWiki que envía notificaciones de acciones en tu wiki a un canal de Discord. DiscordNotifications permite enviar solicitudes mediante curl y file_get_contents a URLs arbitrarias configuradas mediante $wgDiscordIncomingWebhookUrl y $wgDiscordAdditionalIncomingWebhookUrls. Esto permite ataques de denegación de servicio (DOS) al obligar al servidor a leer archivos grandes. SSRF también es posible si existen API internas sin protección a las que se puede acceder mediante solicitudes HTTP POST, lo que podría provocar un RCE. Esta vulnerabilidad está corregida en el commit 1f20d850cbcce5b15951c7c6127b87b927a5415e."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:H",
+                "baseScore": 9.1,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.1,
+              "impactScore": 5.3
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-400"
+              },
+              {
+                "lang": "en",
+                "value": "CWE-918"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/miraheze/DiscordNotifications/commit/1f20d850cbcce5b15951c7c6127b87b927a5415e",
+            "source": "security-advisories@github.com"
+          },
+          {
+            "url": "https://github.com/miraheze/DiscordNotifications/security/advisories/GHSA-gvfx-p3h5-qf65",
+            "source": "security-advisories@github.com"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 11
+    }
+  ],
+  "source": "https://www.cvelogic.com/threat-intelligence/2025-07-10"
+}

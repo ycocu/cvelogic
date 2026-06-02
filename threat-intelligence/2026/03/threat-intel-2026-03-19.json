@@ -1,0 +1,1917 @@
+{
+  "schema_version": "2.2",
+  "generated_at": "2026-06-02T07:34:41Z",
+  "day": "2026-03-19",
+  "window": {
+    "utc_start": "2026-03-19",
+    "utc_end": "2026-03-19",
+    "days": 1
+  },
+  "summary": {
+    "brief": "Cisco Secure Firewall Management Center (FMC) added to CISA KEV — confirmed in-the-wild exploitation. · Debian Linux — exploitation likelihood rose sharply (EPSS 20% → 45% · rising (+25%)). · 10 new critical disclosures — review patch status on exposed services.",
+    "bullets": [
+      "Cisco Secure Firewall Management Center (FMC) added to CISA KEV — confirmed in-the-wild exploitation.",
+      "Debian Linux — exploitation likelihood rose sharply (EPSS 20% → 45% · rising (+25%)).",
+      "10 new critical disclosures — review patch status on exposed services."
+    ],
+    "counts": {
+      "cves": 12,
+      "kev": 1,
+      "exploit": 0,
+      "epss": 1,
+      "cvss": 10,
+      "patch": 0
+    }
+  },
+  "cves": [
+    {
+      "cve_id": "CVE-2026-20131",
+      "signal_types": [
+        "KEV"
+      ],
+      "signals": {
+        "kev": {
+          "date_added": "2026-03-19"
+        },
+        "exploit": null,
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-03-04",
+        "description": "A vulnerability in the web-based management interface of Cisco Secure Firewall Management Center (FMC) Software could allow an unauthenticated, remote attacker to execute arbitrary Java code as root&nbsp;on an affected device.\r\n\r\nThis vulnerability is due to insecure deserialization of a user-supplied Java byte stream. An attacker could exploit this vulnerability by sending a crafted serialized Java object to the web-based management interface of an affected device. A successful exploit could allow the attacker to execute arbitrary code on the device and elevate privileges to root.\r\nNote: If the FMC management interface does not have public internet access, the attack surface that is associated with this vulnerability is reduced.",
+        "title": "Cisco Secure Firewall Management Center (FMC) Software and Cisco Security Cloud Control (SCC) Firewall Management Deserialization of Untrusted Data Vulnerability",
+        "vendor": "cisco",
+        "product": "secure_firewall_management_center",
+        "attack_type": "Deserialization",
+        "cvss_max": 10.0
+      },
+      "cve": {
+        "id": "CVE-2026-20131",
+        "sourceIdentifier": "psirt@cisco.com",
+        "published": "2026-03-04T18:16:27.153",
+        "lastModified": "2026-03-25T17:39:46.247",
+        "vulnStatus": "Analyzed",
+        "cisaExploitAdd": "2026-03-19",
+        "cisaActionDue": "2026-03-22",
+        "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+        "cisaVulnerabilityName": "Cisco Secure Firewall Management Center (FMC) Software and Cisco Security Cloud Control (SCC) Firewall Management Deserialization of Untrusted Data Vulnerability",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A vulnerability in the web-based management interface of Cisco Secure Firewall Management Center (FMC) Software could allow an unauthenticated, remote attacker to execute arbitrary Java code as root&nbsp;on an affected device.\r\n\r\nThis vulnerability is due to insecure deserialization of a user-supplied Java byte stream. An attacker could exploit this vulnerability by sending a crafted serialized Java object to the web-based management interface of an affected device. A successful exploit could allow the attacker to execute arbitrary code on the device and elevate privileges to root.\r\nNote: If the FMC management interface does not have public internet access, the attack surface that is associated with this vulnerability is reduced."
+          },
+          {
+            "lang": "es",
+            "value": "Una vulnerabilidad en la interfaz de gestión basada en web del software Cisco Secure Firewall Management Center (FMC) podría permitir a un atacante remoto no autenticado ejecutar código Java arbitrario como root en un dispositivo afectado.\nEsta vulnerabilidad se debe a la deserialización insegura de un flujo de bytes Java proporcionado por el usuario. Un atacante podría explotar esta vulnerabilidad enviando un objeto Java serializado diseñado a la interfaz de gestión basada en web de un dispositivo afectado. Un exploit exitoso podría permitir al atacante ejecutar código arbitrario en el dispositivo y elevar privilegios a root.\nNota: Si la interfaz de gestión de FMC no tiene acceso público a internet, la superficie de ataque asociada con esta vulnerabilidad se reduce."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+                "baseScore": 10.0,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "psirt@cisco.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 6.0
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-502"
+              }
+            ],
+            "source": "psirt@cisco.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:6.4.0.13:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "E0780AD6-4F38-4400-AA63-E41879F74B68"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:6.4.0.14:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "86BA5BA6-1F79-4C89-A3F4-A56E2B664AED"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:6.4.0.15:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "52C7994F-AA17-467B-919E-A49F0CC9DB47"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:6.4.0.16:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "9F007F6B-1EAA-468C-8159-78B020DF1E58"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:6.4.0.17:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "C9053FDE-A6BE-4535-AE36-A323F8B7ACA4"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:6.4.0.18:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "6E255975-F952-43AB-A577-B8D331DDB3AB"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:7.0.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "DFA94312-376E-4785-888F-3C07612E1DF7"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:7.0.0.1:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "29E73FBF-2579-4660-AFFA-7F9607004226"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:7.0.1:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "87FAAFFB-0589-441B-8289-8B8A6E18F705"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:7.0.1.1:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "73B92119-793D-4A43-A056-24DB6826E759"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:7.0.2:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "093A0BC2-037C-463F-AFC5-EF11C2954EAD"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:7.0.2.1:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "C4F434FC-CAA4-4DBB-8094-C4ECC28B31E7"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:7.0.3:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "68C70BB3-33B3-4E7E-99D5-FF76D4ED96AE"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:7.0.4:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "B881B8DF-A96D-4B64-B98A-71F0D3388641"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:7.0.5:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "F6A97625-D39C-42D5-89E4-415A868A0972"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:7.0.6:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "5E4D83B4-9697-4071-AC9F-7ADC86A6B529"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:7.0.6.1:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "8F81F708-ACED-4E42-8CA9-116B5C4F5141"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:7.0.6.2:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "3C86116B-8475-40A0-A507-D4A7947F5F2C"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:7.0.6.3:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "B98BFDB6-0884-4A5B-B2F6-102AE22665C9"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:7.0.7:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "44D21149-BF7B-4188-A336-49AA5683BDC1"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:7.0.8:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "708A721E-11D2-4E9B-9F11-5B82F3FA742C"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:7.0.8.1:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "943BDA7B-0E37-4914-B7B2-EDFD58FAF653"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:7.1.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "A58A2DA5-3EE7-408D-AAFA-82330F0325B2"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:7.1.0.1:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "7FA98EEC-2059-4CA9-92F1-72C1E0BB7EC6"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:7.1.0.2:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "F4C51EE7-866B-410C-B75E-EF260D5062B0"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:7.1.0.3:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "5F1FFD07-B874-4D3C-8E2C-9A204F1E994E"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:7.2.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "FB5ACB9E-86AF-4EC1-9F36-A202429CD0F4"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:7.2.0.1:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "AD1E4527-AAE2-4DA9-AFDA-6375839F7843"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:7.2.1:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "2F0AF047-EAE9-4C77-BCEF-5CB26F84C742"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:7.2.2:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "2ED03874-4071-4382-8A46-8B3A59E601FF"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:7.2.3:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "BF84E043-DF3C-4A95-8FDA-B0FDCD795377"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:7.2.3.1:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "B9498087-9642-4A86-B3EE-1513C55A86E2"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:7.2.4:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "36C229AB-2851-48D4-815A-63AAB4462A24"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:7.2.4.1:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "6DA4BCFC-8237-4F5C-9863-523EE7D8619B"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:7.2.5:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "07693A92-7D84-45A1-ACD6-D83AE41D504B"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:7.2.5.1:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "2C78050A-A5FB-427B-BF0D-0353B240A4FF"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:7.2.5.2:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "85E76AE7-12AC-4419-AE66-43730B173B4E"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:7.2.6:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "4D803EC9-26EE-4799-A435-C782C92739CF"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:7.2.7:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "6EEF87CD-2335-4886-A65C-4E33775AEC52"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:7.2.8:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "953EB81A-1B53-4A57-9F59-D4A7D37E657E"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:7.2.8.1:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "1CB534BC-3E4D-4484-AFD0-69524B1F07F9"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:7.2.9:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "D6514BF0-5A21-4C3A-9D9D-49677D7A2409"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:7.2.10:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "B291AF23-55FF-4F9A-87AC-76AA3BB3562F"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:7.2.10.1:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "4170B357-C086-483A-BC6C-CB1391FA5831"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:7.2.10.2:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "0B72005B-FBF0-4B0D-975B-178B511598B1"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:7.3.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "5D401072-6709-4921-8918-720F28D61E24"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:7.3.1:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "C0EA3467-4205-4C41-AF24-689330F7396B"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:7.3.1.1:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "9BE94E38-5F29-4AE1-8129-7F7582C2CC75"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:7.3.1.2:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "FEF603AD-D69B-4DD8-A7F4-6BEFD355EF29"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:7.4.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "D6BD1665-7824-4D98-A930-432CBDA4EAD5"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:7.4.1:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "F8056E69-22FA-4935-A576-916805D90C62"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:7.4.1.1:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "6A80BBBE-DB5E-460A-8621-6E28D2BD6E44"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:7.4.2:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "2B33F953-FEF3-4C46-A12A-2A42D8339D6E"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:7.4.2.1:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "B2C8DF03-2280-48B8-AC1E-4AAA31A36BDC"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:7.4.2.2:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "A3CCC30D-FC39-4F59-B338-6753F6094387"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:7.4.2.3:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "DDE484EB-FFFF-4DBA-8C45-77635BEBCE32"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:7.4.2.4:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "C663EDB2-E632-4915-BF37-EEE22FF26ED4"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:7.4.3:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "30F378A2-E599-44E7-B81F-845D84E0FDE8"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:7.4.4:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "366D966F-B60E-46B9-AD0C-D0C0692C984F"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:7.4.5:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "3A3E6840-7B1E-45F8-9527-3DB66A9267EF"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:7.6.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "FCBDBC61-B4B4-462F-B039-8F5C1B189AE2"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:7.6.1:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "73CB0C9D-263A-439C-BAF9-87D1EFE50184"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:7.6.2:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "DE58474E-D8D8-468D-9866-8C67607181E0"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:7.6.2.1:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "29F91F5E-7049-400A-9C39-B20A639DD61D"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:7.6.3:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "D71C054A-63FF-4858-A044-03FA72DA2C8D"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:7.6.4:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "388E9714-FCB6-41DD-A5C4-19E73AF2FBCC"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:7.7.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "5BBDBCE8-CD5E-48BD-B61B-A36376C5A585"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:7.7.10:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "D098596D-8156-4130-9180-A48D2ECB0910"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:7.7.10.1:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "34649064-8BCE-4A61-BA3A-17CBC4690C7E"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:7.7.11:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "9CE3E9B1-4817-4734-9EE9-E16698D3F709"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:secure_firewall_management_center:10.0.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "05AE4609-A851-4B64-8506-117B0F92F7A9"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-fmc-rce-NKhnULJh",
+            "source": "psirt@cisco.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://aws.amazon.com/blogs/security/amazon-threat-intelligence-teams-identify-interlock-ransomware-campaign-targeting-enterprise-firewalls/",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Technical Description"
+            ]
+          },
+          {
+            "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-20131",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "US Government Resource"
+            ]
+          }
+        ]
+      },
+      "risk_score": 88,
+      "rank": 1
+    },
+    {
+      "cve_id": "CVE-2020-25681",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 0.20274,
+            "score_date": "2025-12-28"
+          },
+          "current": {
+            "score": 0.45359,
+            "score_date": "2026-03-19"
+          },
+          "delta": 0.25085
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2021-01-20",
+        "description": "A flaw was found in dnsmasq before version 2.83. A heap-based buffer overflow was discovered in the way RRSets are sorted before validating with DNSSEC data. An attacker on the network, who can forge DNS replies such as that they are accepted as valid, could use this flaw to cause a buffer overflow with arbitrary data in a heap memory segment, possibly executing code on the machine. The highest threat from this vulnerability is to data confidentiality and integrity as well as system availability.",
+        "title": "debian debian_linux Buffer Overflow",
+        "vendor": "thekelleys",
+        "product": "dnsmasq",
+        "attack_type": "Buffer Overflow",
+        "cvss_max": 8.3
+      },
+      "cve": {
+        "id": "CVE-2020-25681",
+        "sourceIdentifier": "secalert@redhat.com",
+        "published": "2021-01-20T17:15:12.843",
+        "lastModified": "2025-11-04T20:15:56.797",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A flaw was found in dnsmasq before version 2.83. A heap-based buffer overflow was discovered in the way RRSets are sorted before validating with DNSSEC data. An attacker on the network, who can forge DNS replies such as that they are accepted as valid, could use this flaw to cause a buffer overflow with arbitrary data in a heap memory segment, possibly executing code on the machine. The highest threat from this vulnerability is to data confidentiality and integrity as well as system availability."
+          },
+          {
+            "lang": "es",
+            "value": "Se encontró un fallo en dnsmasq versiones anteriores a 2.83.&#xa0;Se detectó un desbordamiento del búfer en la región heap de la memoria en la manera en que se clasifican los RRSets antes de validarlos con los datos de DNSSEC.&#xa0;Un atacante en la red, que puede falsificar respuestas DNS tal que son aceptadas como válidas, podría usar este fallo para causar un desbordamiento del búfer con datos arbitrarios en un segmento de la memoria de la pila, posiblemente ejecutando código en la máquina.&#xa0;La mayor amenaza de esta vulnerabilidad es la confidencialidad e integridad de los datos, así como la disponibilidad del sistema"
+          }
+        ],
+        "metrics": {
+          "cvssMetricV2": [
+            {
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:M/Au:N/C:P/I:P/A:C",
+                "baseScore": 8.3,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "baseSeverity": "HIGH",
+              "exploitabilityScore": 8.6,
+              "impactScore": 8.5
+            }
+          ],
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 8.1,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 2.2,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-122"
+              }
+            ],
+            "source": "secalert@redhat.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:thekelleys:dnsmasq:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "F38115DF-0F5C-442D-83D4-1125AAB4E2B7",
+                    "versionEndExcluding": "2.83"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:fedoraproject:fedora:32:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "36D96259-24BD-44E2-96D9-78CE1D41F956"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:fedoraproject:fedora:33:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "E460AA51-FCDA-46B9-AE97-E6676AA5E194"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:debian:debian_linux:9.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "DEECE5FC-CACF-4496-A3E7-164736409252"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:debian:debian_linux:10.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "07B237A9-69A3-4A9C-9DA0-4E06BD37AE73"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1881875",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Issue Tracking",
+              "Patch",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://lists.debian.org/debian-lts-announce/2021/03/msg00027.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Mailing List",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/QGB7HL3OWHTLEPSMLDGOMXQKG3KM2QME/",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/WYW3IR6APUSKOYKL5FT3ACTIHWHGQY32/",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "https://security.gentoo.org/glsa/202101-17",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.debian.org/security/2021/dsa-4844",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.jsof-tech.com/disclosures/dnspooq/",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.kb.cert.org/vuls/id/434904",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          }
+        ]
+      },
+      "risk_score": 83,
+      "rank": 2
+    },
+    {
+      "cve_id": "CVE-2026-32169",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-03-19",
+          "previous_max": null,
+          "current_max": 10.0
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-03-19",
+        "description": "Server-side request forgery (ssrf) in Azure Cloud Shell allows an unauthorized attacker to elevate privileges over a network.",
+        "title": "microsoft azure_cloud_shell SSRF",
+        "vendor": "microsoft",
+        "product": "azure_cloud_shell",
+        "attack_type": "SSRF",
+        "cvss_max": 10.0
+      },
+      "cve": {
+        "id": "CVE-2026-32169",
+        "sourceIdentifier": "secure@microsoft.com",
+        "published": "2026-03-19T21:17:10.233",
+        "lastModified": "2026-04-14T17:14:41.383",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Server-side request forgery (ssrf) in Azure Cloud Shell allows an unauthorized attacker to elevate privileges over a network."
+          },
+          {
+            "lang": "es",
+            "value": "Falsificación de petición del lado del servidor (SSRF) en Azure Cloud Shell permite a un atacante no autorizado elevar privilegios sobre una red."
+          }
+        ],
+        "cveTags": [
+          {
+            "sourceIdentifier": "secure@microsoft.com",
+            "tags": [
+              "exclusively-hosted-service"
+            ]
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+                "baseScore": 10.0,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "secure@microsoft.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 6.0
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-918"
+              }
+            ],
+            "source": "secure@microsoft.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:microsoft:azure_cloud_shell:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "37711447-A959-4A77-B367-99BD19AC726A"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-32169",
+            "source": "secure@microsoft.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 3
+    },
+    {
+      "cve_id": "CVE-2026-22732",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-03-19",
+          "previous_max": null,
+          "current_max": 9.1
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-03-19",
+        "description": "When applications specify HTTP response headers for servlet applications using Spring Security, there is the possibility that the HTTP Headers will not be written. \nThis issue affects Spring Security Servlet applications using lazy (default) writing of HTTP Headers:\n\n: from 5.7.0 through 5.7.21, from 5.8.0 through 5.8.23, from 6.3.0 through 6.3.14, from 6.4.0 through 6.4.14, from 6.5.0 through 6.5.8, from 7.0.0 through 7.0.3.",
+        "title": "vmware spring_security",
+        "vendor": "vmware",
+        "product": "spring_security",
+        "cvss_max": 9.1
+      },
+      "cve": {
+        "id": "CVE-2026-22732",
+        "sourceIdentifier": "security@vmware.com",
+        "published": "2026-03-19T23:16:41.253",
+        "lastModified": "2026-04-16T04:29:24.503",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "When applications specify HTTP response headers for servlet applications using Spring Security, there is the possibility that the HTTP Headers will not be written. \nThis issue affects Spring Security Servlet applications using lazy (default) writing of HTTP Headers:\n\n: from 5.7.0 through 5.7.21, from 5.8.0 through 5.8.23, from 6.3.0 through 6.3.14, from 6.4.0 through 6.4.14, from 6.5.0 through 6.5.8, from 7.0.0 through 7.0.3."
+          },
+          {
+            "lang": "es",
+            "value": "Cuando las aplicaciones especifican encabezados de respuesta HTTP para aplicaciones servlet que utilizan Spring Security, existe la posibilidad de que los encabezados HTTP no se escriban. Este problema afecta a Spring Security: desde 5.7.0 hasta 5.7.21, desde 5.8.0 hasta 5.8.23, desde 6.3.0 hasta 6.3.14, desde 6.4.0 hasta 6.4.14, desde 6.5.0 hasta 6.5.8, desde 7.0.0 hasta 7.0.3."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+                "baseScore": 9.1,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security@vmware.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.2
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-425"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vmware:spring_security:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "A26C5B8B-290A-4D96-B6CB-DD80AFC1FC69",
+                    "versionEndExcluding": "5.7.22"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vmware:spring_security:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "F2BEA7DD-1479-498E-8920-64CFF6470836",
+                    "versionStartIncluding": "5.8.0",
+                    "versionEndExcluding": "5.8.24"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vmware:spring_security:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "66AC616D-9661-4913-8278-F1E49CF4F869",
+                    "versionStartIncluding": "6.3.0",
+                    "versionEndExcluding": "6.3.15"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vmware:spring_security:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "979904B0-FAB8-4153-840F-BFCAAC608FA9",
+                    "versionStartIncluding": "6.4.0",
+                    "versionEndExcluding": "6.4.15"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vmware:spring_security:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "519BA551-813A-4757-82CB-6CED8FF97801",
+                    "versionStartIncluding": "6.5.0",
+                    "versionEndExcluding": "6.5.9"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vmware:spring_security:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "B92F3249-AA17-4A34-938C-89E0E2A9A87A",
+                    "versionStartIncluding": "7.0.0",
+                    "versionEndExcluding": "7.0.4"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://spring.io/security/cve-2026-22732",
+            "source": "security@vmware.com",
+            "tags": [
+              "Vendor Advisory",
+              "Exploit"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 4
+    },
+    {
+      "cve_id": "CVE-2026-29103",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-03-19",
+          "previous_max": null,
+          "current_max": 9.1
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-03-19",
+        "description": "SuiteCRM is an open-source, enterprise-ready Customer Relationship Management (CRM) software application. A Critical Remote Code Execution (RCE) vulnerability exists in SuiteCRM 7.15.0 and 8.9.2, allowing authenticated administrators to execute arbitrary system commands. This vulnerability is a direct Patch Bypass of CVE-2024-49774. Although the vendor attempted to fix the issue in version 7.14.5, the underlying flaw in ModuleScanner.php regarding PHP token parsing remains. The scanner incorrectly resets its internal state ($checkFunction flag) when encountering any single-character token (such as =, ., or ;). This allows attackers to hide dangerous function calls (e.g., system(), exec()) using variable assignments or string concatenation, completely evading the MLP security controls. Versions 7.15.1 and 8.9.3 patch the issue.",
+        "title": "suitecrm suitecrm RCE",
+        "vendor": "suitecrm",
+        "product": "suitecrm",
+        "attack_type": "RCE",
+        "cvss_max": 9.1
+      },
+      "cve": {
+        "id": "CVE-2026-29103",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2026-03-19T23:16:42.970",
+        "lastModified": "2026-03-24T14:23:34.037",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "SuiteCRM is an open-source, enterprise-ready Customer Relationship Management (CRM) software application. A Critical Remote Code Execution (RCE) vulnerability exists in SuiteCRM 7.15.0 and 8.9.2, allowing authenticated administrators to execute arbitrary system commands. This vulnerability is a direct Patch Bypass of CVE-2024-49774. Although the vendor attempted to fix the issue in version 7.14.5, the underlying flaw in ModuleScanner.php regarding PHP token parsing remains. The scanner incorrectly resets its internal state ($checkFunction flag) when encountering any single-character token (such as =, ., or ;). This allows attackers to hide dangerous function calls (e.g., system(), exec()) using variable assignments or string concatenation, completely evading the MLP security controls. Versions 7.15.1 and 8.9.3 patch the issue."
+          },
+          {
+            "lang": "es",
+            "value": "SuiteCRM es una aplicación de software de gestión de relaciones con el cliente (CRM) de código abierto y lista para empresas. Una vulnerabilidad crítica de ejecución remota de código (RCE) existe en SuiteCRM 7.15.0 y 8.9.2, permitiendo a administradores autenticados ejecutar comandos de sistema arbitrarios. Esta vulnerabilidad es un bypass directo del parche de CVE-2024-49774. Aunque el proveedor intentó solucionar el problema en la versión 7.14.5, la falla subyacente en ModuleScanner.php con respecto al análisis de tokens de PHP persiste. El escáner restablece incorrectamente su estado interno (bandera $checkFunction) al encontrar cualquier token de un solo carácter (como =, ., o ;). Esto permite a los atacantes ocultar llamadas a funciones peligrosas (por ejemplo, system(), exec()) utilizando asignaciones de variables o concatenación de cadenas, evadiendo completamente los controles de seguridad de MLP. Las versiones 7.15.1 y 8.9.3 parchean el problema."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
+                "baseScore": 9.1,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary",
+              "exploitabilityScore": 2.3,
+              "impactScore": 6.0
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 7.2,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 1.2,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-94"
+              },
+              {
+                "lang": "en",
+                "value": "CWE-358"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:suitecrm:suitecrm:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "73648654-E7F6-47CF-8E01-19BBFF737C99",
+                    "versionEndExcluding": "7.15.1"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:suitecrm:suitecrm:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "C7E15DD3-A934-40A2-8B43-ABCCBB53CBCF",
+                    "versionStartIncluding": "8.0.0",
+                    "versionEndExcluding": "8.9.3"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://docs.suitecrm.com/admin/releases/7.15.x",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Release Notes"
+            ]
+          },
+          {
+            "url": "https://github.com/SuiteCRM/SuiteCRM/security/advisories/GHSA-5jjq-9qch-9rg7",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 5
+    },
+    {
+      "cve_id": "CVE-2026-30871",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-03-19",
+          "previous_max": null,
+          "current_max": 9.5
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-03-19",
+        "description": "OpenWrt Project is a Linux operating system targeting embedded devices. In versions prior to 24.10.6 and 25.12.1, the mdns daemon has a Stack-based Buffer Overflow vulnerability in the parse_question function. The issue is  triggered by PTR queries for reverse DNS domains (.in-addr.arpa and .ip6.arpa). DNS packets received on UDP port 5353 are expanded by dn_expand into an 8096-byte global buffer (name_buffer), which is then copied via an unbounded strcpy into a fixed 256-byte stack buffer when handling TYPE_PTR queries. The overflow is possible because dn_expand converts non-printable ASCII bytes (e.g., 0x01) into multi-character octal representations (e.g., \\001), significantly inflating the expanded name beyond the stack buffer's capacity. A crafted DNS packet can exploit this expansion behavior to overflow the stack buffer, making the vulnerability reachable through normal multicast DNS packet processing. This issue has been fixed in versions 24.10.6 and 25.12.1.",
+        "title": "openwrt openwrt Buffer Overflow",
+        "vendor": "openwrt",
+        "product": "openwrt",
+        "attack_type": "Buffer Overflow",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2026-30871",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2026-03-19T22:16:31.633",
+        "lastModified": "2026-03-24T14:07:06.507",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "OpenWrt Project is a Linux operating system targeting embedded devices. In versions prior to 24.10.6 and 25.12.1, the mdns daemon has a Stack-based Buffer Overflow vulnerability in the parse_question function. The issue is  triggered by PTR queries for reverse DNS domains (.in-addr.arpa and .ip6.arpa). DNS packets received on UDP port 5353 are expanded by dn_expand into an 8096-byte global buffer (name_buffer), which is then copied via an unbounded strcpy into a fixed 256-byte stack buffer when handling TYPE_PTR queries. The overflow is possible because dn_expand converts non-printable ASCII bytes (e.g., 0x01) into multi-character octal representations (e.g., \\001), significantly inflating the expanded name beyond the stack buffer's capacity. A crafted DNS packet can exploit this expansion behavior to overflow the stack buffer, making the vulnerability reachable through normal multicast DNS packet processing. This issue has been fixed in versions 24.10.6 and 25.12.1."
+          },
+          {
+            "lang": "es",
+            "value": "El Proyecto OpenWrt es un sistema operativo Linux dirigido a dispositivos embebidos. En versiones anteriores a la 24.10.6 y 25.12.1, el demonio mdns tiene una vulnerabilidad de desbordamiento de búfer basado en pila en la función parse_question. El problema se activa por consultas PTR para dominios DNS inversos (.in-addr.arpa y .ip6.arpa). Los paquetes DNS recibidos en el puerto UDP 5353 son expandidos por dn_expand en un búfer global de 8096 bytes (name_buffer), que luego se copia mediante un strcpy sin límites en un búfer de pila fijo de 256 bytes al manejar consultas TYPE_PTR. El desbordamiento es posible porque dn_expand convierte bytes ASCII no imprimibles (p. ej., 0x01) en representaciones octales de múltiples caracteres (p. ej., \\001), inflando significativamente el nombre expandido más allá de la capacidad del búfer de pila. Un paquete DNS manipulado puede explotar este comportamiento de expansión para desbordar el búfer de pila, haciendo que la vulnerabilidad sea alcanzable a través del procesamiento normal de paquetes DNS multicast. Este problema ha sido corregido en las versiones 24.10.6 y 25.12.1."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:H/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.5,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-121"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:openwrt:openwrt:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "12B5818C-BB4D-4486-9C53-7FCA8EF2EDA8",
+                    "versionEndExcluding": "24.10.6"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:openwrt:openwrt:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "061FA3CA-10C0-4EF2-8566-E623964CAE79",
+                    "versionStartIncluding": "25.12.0",
+                    "versionEndExcluding": "25.12.1"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/openwrt/openwrt/releases/tag/v24.10.6",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Release Notes"
+            ]
+          },
+          {
+            "url": "https://github.com/openwrt/openwrt/releases/tag/v25.12.1",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Release Notes"
+            ]
+          },
+          {
+            "url": "https://github.com/openwrt/openwrt/security/advisories/GHSA-7c3j-f7w2-p8f6",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 6
+    },
+    {
+      "cve_id": "CVE-2026-30872",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-03-19",
+          "previous_max": null,
+          "current_max": 9.5
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-03-19",
+        "description": "OpenWrt Project is a Linux operating system targeting embedded devices. In versions prior to 24.10.6 and 25.12.1, the mdns daemon has a Stack-based Buffer Overflow vulnerability in the match_ipv6_addresses function, triggered when processing PTR queries for IPv6 reverse DNS domains (.ip6.arpa) received via multicast DNS on UDP port 5353. During processing, the domain name from name_buffer is copied via strcpy into a fixed 256-byte stack buffer, and then the reverse IPv6 request is extracted into a buffer of only 46 bytes (INET6_ADDRSTRLEN). Because the length of the data is never validated before this extraction, an attacker can supply input larger than 46 bytes, causing an out-of-bounds write. This allows a specially crafted DNS query to overflow the stack buffer in match_ipv6_addresses, potentially enabling remote code execution. This issue has been fixed in versions 24.10.6 and 25.12.1.",
+        "title": "openwrt openwrt Buffer Overflow",
+        "vendor": "openwrt",
+        "product": "openwrt",
+        "attack_type": "Buffer Overflow",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2026-30872",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2026-03-19T22:16:31.797",
+        "lastModified": "2026-03-24T14:05:07.653",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "OpenWrt Project is a Linux operating system targeting embedded devices. In versions prior to 24.10.6 and 25.12.1, the mdns daemon has a Stack-based Buffer Overflow vulnerability in the match_ipv6_addresses function, triggered when processing PTR queries for IPv6 reverse DNS domains (.ip6.arpa) received via multicast DNS on UDP port 5353. During processing, the domain name from name_buffer is copied via strcpy into a fixed 256-byte stack buffer, and then the reverse IPv6 request is extracted into a buffer of only 46 bytes (INET6_ADDRSTRLEN). Because the length of the data is never validated before this extraction, an attacker can supply input larger than 46 bytes, causing an out-of-bounds write. This allows a specially crafted DNS query to overflow the stack buffer in match_ipv6_addresses, potentially enabling remote code execution. This issue has been fixed in versions 24.10.6 and 25.12.1."
+          },
+          {
+            "lang": "es",
+            "value": "Proyecto OpenWrt es un sistema operativo Linux dirigido a dispositivos embebidos. En versiones anteriores a la 24.10.6 y 25.12.1, el demonio mdns tiene una vulnerabilidad de desbordamiento de búfer basado en pila en la función match_ipv6_addresses, que se activa al procesar consultas PTR para dominios DNS inversos IPv6 (.ip6.arpa) recibidas a través de DNS multicast en el puerto UDP 5353. Durante el procesamiento, el nombre de dominio de name_buffer se copia mediante strcpy en un búfer de pila fijo de 256 bytes, y luego la solicitud IPv6 inversa se extrae en un búfer de solo 46 bytes (INET6_ADDRSTRLEN). Debido a que la longitud de los datos nunca se valida antes de esta extracción, un atacante puede proporcionar una entrada mayor de 46 bytes, causando una escritura fuera de límites. Esto permite que una consulta DNS especialmente diseñada desborde el búfer de pila en match_ipv6_addresses, lo que podría permitir la ejecución remota de código. Este problema ha sido corregido en las versiones 24.10.6 y 25.12.1."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:H/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.5,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-121"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:openwrt:openwrt:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "12B5818C-BB4D-4486-9C53-7FCA8EF2EDA8",
+                    "versionEndExcluding": "24.10.6"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:openwrt:openwrt:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "061FA3CA-10C0-4EF2-8566-E623964CAE79",
+                    "versionStartIncluding": "25.12.0",
+                    "versionEndExcluding": "25.12.1"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/openwrt/openwrt/releases/tag/v24.10.6",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Release Notes"
+            ]
+          },
+          {
+            "url": "https://github.com/openwrt/openwrt/releases/tag/v25.12.1",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Release Notes"
+            ]
+          },
+          {
+            "url": "https://github.com/openwrt/openwrt/security/advisories/GHSA-mpgh-v658-jqv5",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 7
+    },
+    {
+      "cve_id": "CVE-2026-32038",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-03-19",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-03-19",
+        "description": "OpenClaw before 2026.2.24 contains a sandbox network isolation bypass vulnerability that allows trusted operators to join another container's network namespace. Attackers can configure the docker.network parameter with container:<id> values to reach services in target container namespaces and bypass network hardening controls.",
+        "title": "openclaw openclaw",
+        "vendor": "openclaw",
+        "product": "openclaw",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2026-32038",
+        "sourceIdentifier": "disclosure@vulncheck.com",
+        "published": "2026-03-19T22:16:39.997",
+        "lastModified": "2026-03-23T17:18:25.310",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "OpenClaw before 2026.2.24 contains a sandbox network isolation bypass vulnerability that allows trusted operators to join another container's network namespace. Attackers can configure the docker.network parameter with container:<id> values to reach services in target container namespaces and bypass network hardening controls."
+          },
+          {
+            "lang": "es",
+            "value": "OpenClaw anterior a 2026.2.24 contiene una vulnerabilidad de omisión de aislamiento de red de sandbox que permite a operadores de confianza unirse al espacio de nombres de red de otro contenedor. Los atacantes pueden configurar el parámetro docker.network con valores container: para alcanzar servicios en espacios de nombres de contenedores objetivo y omitir los controles de endurecimiento de la red."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:H/A:H",
+                "baseScore": 9.0,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 2.2,
+              "impactScore": 6.0
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-284"
+              }
+            ],
+            "source": "disclosure@vulncheck.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:openclaw:openclaw:*:*:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "673E4DE2-44C4-485D-8BDF-6DEEB32C1A98",
+                    "versionEndExcluding": "2026.2.24"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-ww6v-v748-x7g9",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://www.vulncheck.com/advisories/openclaw-sandbox-network-isolation-bypass-via-docker-network-container-parameter",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 8
+    },
+    {
+      "cve_id": "CVE-2026-32191",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-03-19",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-03-19",
+        "description": "Improper neutralization of special elements used in an os command ('os command injection') in Microsoft Bing Images allows an unauthorized attacker to execute code over a network.",
+        "title": "microsoft bing_images Command Injection",
+        "vendor": "microsoft",
+        "product": "bing_images",
+        "attack_type": "Command Injection",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2026-32191",
+        "sourceIdentifier": "secure@microsoft.com",
+        "published": "2026-03-19T21:17:10.400",
+        "lastModified": "2026-04-14T16:35:56.453",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Improper neutralization of special elements used in an os command ('os command injection') in Microsoft Bing Images allows an unauthorized attacker to execute code over a network."
+          },
+          {
+            "lang": "es",
+            "value": "Neutralización incorrecta de elementos especiales utilizados en un comando de sistema operativo ('inyección de comandos de sistema operativo') en Microsoft Bing Images permite a un atacante no autorizado ejecutar código a través de una red."
+          }
+        ],
+        "cveTags": [
+          {
+            "sourceIdentifier": "secure@microsoft.com",
+            "tags": [
+              "exclusively-hosted-service"
+            ]
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "secure@microsoft.com",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-78"
+              }
+            ],
+            "source": "secure@microsoft.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:microsoft:bing_images:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "5B3D4053-7DAF-4AB9-86E8-33D45C8EF86B"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-32191",
+            "source": "secure@microsoft.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 9
+    },
+    {
+      "cve_id": "CVE-2026-32194",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-03-19",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-03-19",
+        "description": "Improper neutralization of special elements used in a command ('command injection') in Microsoft Bing Images allows an unauthorized attacker to execute code over a network.",
+        "title": "microsoft bing_images Command Injection",
+        "vendor": "microsoft",
+        "product": "bing_images",
+        "attack_type": "Command Injection",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2026-32194",
+        "sourceIdentifier": "secure@microsoft.com",
+        "published": "2026-03-19T22:16:41.130",
+        "lastModified": "2026-04-14T16:35:28.323",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Improper neutralization of special elements used in a command ('command injection') in Microsoft Bing Images allows an unauthorized attacker to execute code over a network."
+          },
+          {
+            "lang": "es",
+            "value": "Neutralización incorrecta de elementos especiales utilizados en un comando ('inyección de comandos') en Microsoft Bing Images permite a un atacante no autorizado ejecutar código a través de una red."
+          }
+        ],
+        "cveTags": [
+          {
+            "sourceIdentifier": "secure@microsoft.com",
+            "tags": [
+              "exclusively-hosted-service"
+            ]
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "secure@microsoft.com",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-77"
+              }
+            ],
+            "source": "secure@microsoft.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:microsoft:bing_images:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "5B3D4053-7DAF-4AB9-86E8-33D45C8EF86B"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-32194",
+            "source": "secure@microsoft.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 10
+    },
+    {
+      "cve_id": "CVE-2026-32754",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-03-19",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-03-19",
+        "description": "FreeScout is a free help desk and shared inbox built with PHP's Laravel framework. Versions 1.8.208 and below are vulnerable to Stored Cross-Site Scripting (XSS) through FreeScout's email notification templates. Incoming email bodies are stored in the database without sanitization and rendered unescaped in outgoing email notifications using Blade's raw output syntax {!! $thread->body !!}. An unauthenticated attacker can exploit this vulnerability by simply sending an email, and when opened by any subscribed agent or admin as part of their normal workflow, enabling universal HTML injection (phishing, tracking) and, in vulnerable email clients, JavaScript execution (session hijacking, credential theft, account takeover) affecting all recipients simultaneously. This issue has been fixed in version 1.8.209.",
+        "title": "freescout freescout XSS",
+        "vendor": "freescout",
+        "product": "freescout",
+        "attack_type": "XSS",
+        "cvss_max": 9.3
+      },
+      "cve": {
+        "id": "CVE-2026-32754",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2026-03-19T22:16:41.997",
+        "lastModified": "2026-03-23T19:14:38.140",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "FreeScout is a free help desk and shared inbox built with PHP's Laravel framework. Versions 1.8.208 and below are vulnerable to Stored Cross-Site Scripting (XSS) through FreeScout's email notification templates. Incoming email bodies are stored in the database without sanitization and rendered unescaped in outgoing email notifications using Blade's raw output syntax {!! $thread->body !!}. An unauthenticated attacker can exploit this vulnerability by simply sending an email, and when opened by any subscribed agent or admin as part of their normal workflow, enabling universal HTML injection (phishing, tracking) and, in vulnerable email clients, JavaScript execution (session hijacking, credential theft, account takeover) affecting all recipients simultaneously. This issue has been fixed in version 1.8.209."
+          },
+          {
+            "lang": "es",
+            "value": "FreeScout es una mesa de ayuda gratuita y una bandeja de entrada compartida construida con el framework Laravel de PHP. Las versiones 1.8.208 e inferiores son vulnerables a Cross-Site Scripting Almacenado (XSS) a través de las plantillas de notificación por correo electrónico de FreeScout. Los cuerpos de los correos electrónicos entrantes se almacenan en la base de datos sin sanitización y se renderizan sin escapar en las notificaciones de correo electrónico salientes utilizando la sintaxis de salida sin procesar de Blade {!! $thread-&gt;body !!}. Un atacante no autenticado puede explotar esta vulnerabilidad simplemente enviando un correo electrónico, y cuando es abierto por cualquier agente o administrador suscrito como parte de su flujo de trabajo normal, permitiendo la inyección universal de HTML (phishing, seguimiento) y, en clientes de correo electrónico vulnerables, la ejecución de JavaScript (secuestro de sesión, robo de credenciales, toma de control de cuenta) afectando a todos los destinatarios simultáneamente. Este problema ha sido solucionado en la versión 1.8.209."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:N",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 5.8
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:N",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 5.8
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-79"
+              },
+              {
+                "lang": "en",
+                "value": "CWE-116"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:freescout:freescout:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "FA447A4F-F76D-4D18-85E7-18B185572113",
+                    "versionEndExcluding": "1.8.209"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/freescout-help-desk/freescout/commit/3329379db38a86cf7069b0709061b95a7d38985b",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://github.com/freescout-help-desk/freescout/releases/tag/1.8.209",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Product",
+              "Release Notes"
+            ]
+          },
+          {
+            "url": "https://github.com/freescout-help-desk/freescout/security/advisories/GHSA-56h2-5556-r6mg",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Exploit",
+              "Mitigation",
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 11
+    },
+    {
+      "cve_id": "CVE-2026-4428",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-03-19",
+          "previous_max": null,
+          "current_max": 9.1
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-03-19",
+        "description": "A logic error in CRL distribution point validation in AWS-LC before 1.71.0 causes partitioned CRLs to be incorrectly rejected as out of scope, which allows  a revoked certificate to bypass certificate revocation checks.\n\nTo remediate this issue, users should upgrade to AWS-LC 1.71.0 or AWS-LC-FIPS-3.3.0.",
+        "title": "A logic error in CRL distribution point validation in AWS-LC before 1.71.0 causes partitioned CRLs to be incorrectly rejected as out of s...",
+        "cvss_max": 9.1
+      },
+      "cve": {
+        "id": "CVE-2026-4428",
+        "sourceIdentifier": "ff89ba41-3aa1-4d27-914a-91399e9639e5",
+        "published": "2026-03-19T21:17:14.170",
+        "lastModified": "2026-03-20T13:39:46.493",
+        "vulnStatus": "Awaiting Analysis",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A logic error in CRL distribution point validation in AWS-LC before 1.71.0 causes partitioned CRLs to be incorrectly rejected as out of scope, which allows  a revoked certificate to bypass certificate revocation checks.\n\nTo remediate this issue, users should upgrade to AWS-LC 1.71.0 or AWS-LC-FIPS-3.3.0."
+          },
+          {
+            "lang": "es",
+            "value": "Un error lógico en la validación del punto de distribución de CRL en AWS-LC anterior a 1.71.0 provoca que las CRL particionadas sean rechazadas incorrectamente por estar fuera de alcance, lo que permite que un certificado revocado eluda las comprobaciones de revocación de certificados.\n\nPara remediar este problema, los usuarios deben actualizar a AWS-LC 1.71.0 o AWS-LC-FIPS-3.3.0."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N",
+                "baseScore": 7.4,
+                "baseSeverity": "HIGH"
+              },
+              "source": "ff89ba41-3aa1-4d27-914a-91399e9639e5",
+              "type": "Secondary",
+              "exploitabilityScore": 2.2,
+              "impactScore": 5.2
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:N/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.1,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "ff89ba41-3aa1-4d27-914a-91399e9639e5",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-299"
+              }
+            ],
+            "source": "ff89ba41-3aa1-4d27-914a-91399e9639e5"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://aws.amazon.com/security/security-bulletins/2026-010-AWS/",
+            "source": "ff89ba41-3aa1-4d27-914a-91399e9639e5"
+          },
+          {
+            "url": "https://github.com/aws/aws-lc/releases/tag/v1.71.0",
+            "source": "ff89ba41-3aa1-4d27-914a-91399e9639e5"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 12
+    }
+  ],
+  "source": "https://www.cvelogic.com/threat-intelligence/2026-03-19"
+}

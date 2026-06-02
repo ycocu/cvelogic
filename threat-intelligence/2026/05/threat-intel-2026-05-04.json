@@ -1,0 +1,2057 @@
+{
+  "schema_version": "2.2",
+  "generated_at": "2026-06-02T07:03:56Z",
+  "day": "2026-05-04",
+  "window": {
+    "utc_start": "2026-05-04",
+    "utc_end": "2026-05-04",
+    "days": 1
+  },
+  "summary": {
+    "brief": "Linux Kernel: public exploit or PoC linked (Use-After-Free) · Etherpad Lite — exploitation likelihood rose sharply (EPSS 60% → 77% · rising (+17%)). · 10 new critical disclosures — review patch status on exposed services.",
+    "bullets": [
+      "Linux Kernel: public exploit or PoC linked (Use-After-Free)",
+      "Etherpad Lite — exploitation likelihood rose sharply (EPSS 60% → 77% · rising (+17%)).",
+      "10 new critical disclosures — review patch status on exposed services."
+    ],
+    "counts": {
+      "cves": 18,
+      "kev": 0,
+      "exploit": 6,
+      "epss": 2,
+      "cvss": 10,
+      "patch": 0
+    }
+  },
+  "cves": [
+    {
+      "cve_id": "CVE-2025-60690",
+      "signal_types": [
+        "EXP"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": {
+          "ref_published": "2026-05-04"
+        },
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-11-13",
+        "description": "A stack-based buffer overflow exists in the get_merge_ipaddr function of the httpd binary on Linksys E1200 v2 routers (Firmware E1200_v2.0.11.001_us.tar.gz). The function concatenates up to four user-supplied CGI parameters matching <parameter>_0~3 into a fixed-size buffer (a2) without bounds checking. Remote attackers can exploit this vulnerability via specially crafted HTTP requests to execute arbitrary code or cause denial of service without authentication.",
+        "title": "linksys e1200_firmware Buffer Overflow",
+        "vendor": "linksys",
+        "product": "e1200_firmware",
+        "attack_type": "Buffer Overflow",
+        "cvss_max": 8.8
+      },
+      "cve": {
+        "id": "CVE-2025-60690",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2025-11-13T17:15:48.980",
+        "lastModified": "2026-03-17T16:16:18.367",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A stack-based buffer overflow exists in the get_merge_ipaddr function of the httpd binary on Linksys E1200 v2 routers (Firmware E1200_v2.0.11.001_us.tar.gz). The function concatenates up to four user-supplied CGI parameters matching <parameter>_0~3 into a fixed-size buffer (a2) without bounds checking. Remote attackers can exploit this vulnerability via specially crafted HTTP requests to execute arbitrary code or cause denial of service without authentication."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 8.8,
+                "baseSeverity": "HIGH"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-121"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linksys:e1200_firmware:2.0.11.001:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "2461F974-2121-490C-A6CD-18B006070679"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:linksys:e1200:2:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "4B14B800-5FCA-4E2B-A42B-EBE6EEC8FBB1"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "http://linksys.com",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Product"
+            ]
+          },
+          {
+            "url": "https://github.com/Jarrettgohxz/CVE-research/tree/main/Linksys/E1200-V2/CVE-2025-60690",
+            "source": "cve@mitre.org"
+          },
+          {
+            "url": "https://github.com/yifan20020708/SGTaint-0-day/blob/main/Linksys/Linksys-E1200/CVE-2025-60690.md",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.linksys.com/",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Product"
+            ]
+          }
+        ]
+      },
+      "risk_score": 78,
+      "rank": 1
+    },
+    {
+      "cve_id": "CVE-2026-21250",
+      "signal_types": [
+        "EXP"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": {
+          "ref_published": "2026-05-04"
+        },
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-02-10",
+        "description": "Untrusted pointer dereference in Windows HTTP.sys allows an authorized attacker to elevate privileges locally.",
+        "title": "microsoft windows_11_24h2 privilege escalation",
+        "vendor": "microsoft",
+        "product": "windows_11_24h2",
+        "attack_type": "privilege escalation",
+        "cvss_max": 7.8
+      },
+      "cve": {
+        "id": "CVE-2026-21250",
+        "sourceIdentifier": "secure@microsoft.com",
+        "published": "2026-02-10T18:16:26.670",
+        "lastModified": "2026-02-11T19:49:34.573",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Untrusted pointer dereference in Windows HTTP.sys allows an authorized attacker to elevate privileges locally."
+          },
+          {
+            "lang": "es",
+            "value": "Desreferencia de puntero no confiable en Windows HTTP.sys permite a un atacante autorizado elevar privilegios localmente."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 7.8,
+                "baseSeverity": "HIGH"
+              },
+              "source": "secure@microsoft.com",
+              "type": "Secondary",
+              "exploitabilityScore": 1.8,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-822"
+              }
+            ],
+            "source": "secure@microsoft.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_11_24h2:*:*:*:*:*:*:arm64:*",
+                    "matchCriteriaId": "B08450A0-0F7E-4A05-8989-900221992766",
+                    "versionEndExcluding": "10.0.26100.7781"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_11_24h2:*:*:*:*:*:*:x64:*",
+                    "matchCriteriaId": "9D30B348-DAE7-43EC-85FA-38E1715258A9",
+                    "versionEndExcluding": "10.0.26100.7781"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_11_25h2:*:*:*:*:*:*:arm64:*",
+                    "matchCriteriaId": "8F23FFCF-9C69-4D27-AF21-D09A6041AA3A",
+                    "versionEndExcluding": "10.0.26200.7781"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_11_25h2:*:*:*:*:*:*:x64:*",
+                    "matchCriteriaId": "D1D93202-BDDB-438F-934E-1FE904B3651B",
+                    "versionEndExcluding": "10.0.26200.7781"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_server_2022_23h2:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "F0EA3C51-C3FE-494A-92D9-D3B1C301CB54",
+                    "versionEndExcluding": "10.0.25398.2149"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_server_2025:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "33AF95F4-504F-40EF-9F64-5D6F7B40114F",
+                    "versionEndExcluding": "10.0.26100.32313"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-21250",
+            "source": "secure@microsoft.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 78,
+      "rank": 2
+    },
+    {
+      "cve_id": "CVE-2018-9845",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 0.60183,
+            "score_date": "2026-01-19"
+          },
+          "current": {
+            "score": 0.7723,
+            "score_date": "2026-05-04"
+          },
+          "delta": 0.17047
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2018-04-29",
+        "description": "Etherpad Lite before 1.6.4 is exploitable for admin access.",
+        "title": "etherpad etherpad_lite",
+        "vendor": "etherpad",
+        "product": "etherpad_lite",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2018-9845",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2018-04-29T18:29:00.223",
+        "lastModified": "2024-11-21T04:15:47.760",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Etherpad Lite before 1.6.4 is exploitable for admin access."
+          },
+          {
+            "lang": "es",
+            "value": "Etherpad Lite en versiones anteriores a la 1.6.4 es explotable para acceso de administrador."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV2": [
+            {
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+                "baseScore": 7.5,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "baseSeverity": "HIGH",
+              "exploitabilityScore": 10.0,
+              "impactScore": 6.4
+            }
+          ],
+          "cvssMetricV30": [
+            {
+              "cvssData": {
+                "version": "3.0",
+                "vectorString": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-178"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:etherpad:etherpad_lite:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "2DF30927-E1BF-44A1-A2ED-A7A81F662DF2",
+                    "versionEndExcluding": "1.6.4"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/ether/etherpad-lite/blob/develop/CHANGELOG.md",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/ether/etherpad-lite/commit/ffe24c3dd93efc73e0cbf924db9a0cc40be9511b",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Patch",
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 86,
+      "rank": 3
+    },
+    {
+      "cve_id": "CVE-2017-8734",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 0.58143,
+            "score_date": "2026-03-17"
+          },
+          "current": {
+            "score": 0.70045,
+            "score_date": "2026-05-04"
+          },
+          "delta": 0.11902
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2017-09-13",
+        "description": "Microsoft Edge in Microsoft Windows 10 Gold, 1511, 1607, 1703, and Windows Server 2016 allows an attacker to execute arbitrary code in the context of the current user, due to the way that Microsoft Edge accesses objects in memory, aka \"Microsoft Edge Memory Corruption Vulnerability\". This CVE ID is unique from CVE-2017-8731, CVE-2017-8751, and CVE-2017-11766.",
+        "title": "microsoft edge Memory Corruption",
+        "vendor": "microsoft",
+        "product": "edge",
+        "attack_type": "Memory Corruption",
+        "cvss_max": 7.6
+      },
+      "cve": {
+        "id": "CVE-2017-8734",
+        "sourceIdentifier": "secure@microsoft.com",
+        "published": "2017-09-13T01:29:11.333",
+        "lastModified": "2026-05-13T00:24:29.033",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Microsoft Edge in Microsoft Windows 10 Gold, 1511, 1607, 1703, and Windows Server 2016 allows an attacker to execute arbitrary code in the context of the current user, due to the way that Microsoft Edge accesses objects in memory, aka \"Microsoft Edge Memory Corruption Vulnerability\". This CVE ID is unique from CVE-2017-8731, CVE-2017-8751, and CVE-2017-11766."
+          },
+          {
+            "lang": "es",
+            "value": "Microsoft Edge en Microsoft Windows 10 Gold, 1511, 1607, 1703 y Windows Server 2016 permite a un atacante ejecutar código arbitrario en el contexto del usuario actual por la manera en la que Microsoft Edge accede a los objetos en la memoria. Esto también se conoce como \"Microsoft Edge Memory Corruption Vulnerability\". El ID de este CVE es distinto a CVE-2017-8731, CVE-2017-8751 y CVE-2017-11766."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV2": [
+            {
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:H/Au:N/C:C/I:C/A:C",
+                "baseScore": 7.6,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "baseSeverity": "HIGH",
+              "exploitabilityScore": 4.9,
+              "impactScore": 10.0
+            }
+          ],
+          "cvssMetricV30": [
+            {
+              "cvssData": {
+                "version": "3.0",
+                "vectorString": "CVSS:3.0/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H",
+                "baseScore": 7.5,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 1.6,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-119"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:microsoft:edge:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "8BD5B232-95EA-4F8E-8C7D-7976877AD243"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_10:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "21540673-614A-4D40-8BD7-3F07723803B0"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_10:1511:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "232581CC-130A-4C62-A7E9-2EC9A9364D53"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_10:1607:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "E01A4CCA-4C43-46E0-90E6-3E4DBFBACD64"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_10:1703:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "AEE2E768-0F45-46E1-B6D7-087917109D98"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_server_2016:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "AF6437F9-6631-49D3-A6C2-62329E278E31"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "http://www.securityfocus.com/bid/100738",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory",
+              "VDB Entry"
+            ]
+          },
+          {
+            "url": "http://www.securitytracker.com/id/1039326",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory",
+              "VDB Entry"
+            ]
+          },
+          {
+            "url": "https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2017-8734",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Patch",
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://www.exploit-db.com/exploits/42759/",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory",
+              "VDB Entry"
+            ]
+          }
+        ]
+      },
+      "risk_score": 82,
+      "rank": 4
+    },
+    {
+      "cve_id": "CVE-2025-40271",
+      "signal_types": [
+        "EXP"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": {
+          "ref_published": "2026-05-04"
+        },
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-12-06",
+        "description": "In the Linux kernel, the following vulnerability has been resolved:\n\nfs/proc: fix uaf in proc_readdir_de()\n\nPde is erased from subdir rbtree through rb_erase(), but not set the node\nto EMPTY, which may result in uaf access.  We should use RB_CLEAR_NODE()\nset the erased node to EMPTY, then pde_subdir_next() will return NULL to\navoid uaf access.\n\nWe found an uaf issue while using stress-ng testing, need to run testcase\ngetdent and tun in the same time.  The steps of the issue is as follows:\n\n1) use getdent to traverse dir /proc/pid/net/dev_snmp6/, and current\n   pde is tun3;\n\n2) in the [time windows] unregister netdevice tun3 and tun2, and erase\n   them from rbtree.  erase tun3 first, and then erase tun2.  the\n   pde(tun2) will be released to slab;\n\n3) continue to getdent process, then pde_subdir_next() will return\n   pde(tun2) which is released, it will case uaf access.\n\nCPU 0                                      |    CPU 1\n-------------------------------------------------------------------------\ntraverse dir /proc/pid/net/dev_snmp6/      |   unregister_netdevice(tun->dev)   //tun3 tun2\nsys_getdents64()                           |\n  iterate_dir()                            |\n    proc_readdir()                         |\n      proc_readdir_de()                    |     snmp6_unregister_dev()\n        pde_get(de);                       |       proc_remove()\n        read_unlock(&proc_subdir_lock);    |         remove_proc_subtree()\n                                           |           write_lock(&proc_subdir_lock);\n        [time window]                      |           rb_erase(&root->subdir_node, &parent->subdir);\n                                           |           write_unlock(&proc_subdir_lock);\n        read_lock(&proc_subdir_lock);      |\n        next = pde_subdir_next(de);        |\n        pde_put(de);                       |\n        de = next;    //UAF                |\n\nrbtree of dev_snmp6\n                        |\n                    pde(tun3)\n                     /    \\\n                  NULL  pde(tun2)",
+        "title": "In the Linux kernel, the following vulnerability has been resolved: fs/proc: fix uaf in proc_readdir_de() Pde is erased from subdir rbtre..."
+      },
+      "cve": {
+        "id": "CVE-2025-40271",
+        "sourceIdentifier": "416baaa9-dc9f-4396-8d5f-8c081fb06d67",
+        "published": "2025-12-06T22:15:54.737",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "In the Linux kernel, the following vulnerability has been resolved:\n\nfs/proc: fix uaf in proc_readdir_de()\n\nPde is erased from subdir rbtree through rb_erase(), but not set the node\nto EMPTY, which may result in uaf access.  We should use RB_CLEAR_NODE()\nset the erased node to EMPTY, then pde_subdir_next() will return NULL to\navoid uaf access.\n\nWe found an uaf issue while using stress-ng testing, need to run testcase\ngetdent and tun in the same time.  The steps of the issue is as follows:\n\n1) use getdent to traverse dir /proc/pid/net/dev_snmp6/, and current\n   pde is tun3;\n\n2) in the [time windows] unregister netdevice tun3 and tun2, and erase\n   them from rbtree.  erase tun3 first, and then erase tun2.  the\n   pde(tun2) will be released to slab;\n\n3) continue to getdent process, then pde_subdir_next() will return\n   pde(tun2) which is released, it will case uaf access.\n\nCPU 0                                      |    CPU 1\n-------------------------------------------------------------------------\ntraverse dir /proc/pid/net/dev_snmp6/      |   unregister_netdevice(tun->dev)   //tun3 tun2\nsys_getdents64()                           |\n  iterate_dir()                            |\n    proc_readdir()                         |\n      proc_readdir_de()                    |     snmp6_unregister_dev()\n        pde_get(de);                       |       proc_remove()\n        read_unlock(&proc_subdir_lock);    |         remove_proc_subtree()\n                                           |           write_lock(&proc_subdir_lock);\n        [time window]                      |           rb_erase(&root->subdir_node, &parent->subdir);\n                                           |           write_unlock(&proc_subdir_lock);\n        read_lock(&proc_subdir_lock);      |\n        next = pde_subdir_next(de);        |\n        pde_put(de);                       |\n        de = next;    //UAF                |\n\nrbtree of dev_snmp6\n                        |\n                    pde(tun3)\n                     /    \\\n                  NULL  pde(tun2)"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://git.kernel.org/stable/c/03de7ff197a3d0e17d0d5c58fdac99a63cba8110",
+            "source": "416baaa9-dc9f-4396-8d5f-8c081fb06d67"
+          },
+          {
+            "url": "https://git.kernel.org/stable/c/1d1596d68a6f11d28f677eedf6cf5b17dbfeb491",
+            "source": "416baaa9-dc9f-4396-8d5f-8c081fb06d67"
+          },
+          {
+            "url": "https://git.kernel.org/stable/c/4cba73c4c89219beef7685a47374bf88b1022369",
+            "source": "416baaa9-dc9f-4396-8d5f-8c081fb06d67"
+          },
+          {
+            "url": "https://git.kernel.org/stable/c/623bb26127fb581a741e880e1e1a47d79aecb6f8",
+            "source": "416baaa9-dc9f-4396-8d5f-8c081fb06d67"
+          },
+          {
+            "url": "https://git.kernel.org/stable/c/67272c11f379d9aa5e0f6b16286b9d89b3f76046",
+            "source": "416baaa9-dc9f-4396-8d5f-8c081fb06d67"
+          },
+          {
+            "url": "https://git.kernel.org/stable/c/6f2482745e510ae1dacc9b090194b9c5f918d774",
+            "source": "416baaa9-dc9f-4396-8d5f-8c081fb06d67"
+          },
+          {
+            "url": "https://git.kernel.org/stable/c/895b4c0c79b092d732544011c3cecaf7322c36a1",
+            "source": "416baaa9-dc9f-4396-8d5f-8c081fb06d67"
+          },
+          {
+            "url": "https://git.kernel.org/stable/c/c81d0385500446efe48c305bbb83d47f2ae23a50",
+            "source": "416baaa9-dc9f-4396-8d5f-8c081fb06d67"
+          }
+        ]
+      },
+      "risk_score": 78,
+      "rank": 5
+    },
+    {
+      "cve_id": "CVE-2025-68930",
+      "signal_types": [
+        "EXP"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": {
+          "ref_published": "2026-05-04"
+        },
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-02-23",
+        "description": "Versions of the Traccar open-source GPS tracking system up to and including 6.11.1 contain a Cross-Site WebSocket Hijacking (CSWSH) vulnerability in the `/api/socket` endpoint. The application fails to validate the `Origin` header during the WebSocket handshake. This allows a remote attacker to bypass the Same Origin Policy (SOP) and establish a full-duplex WebSocket connection using a legitimate user's credentials (JSESSIONID). As of time of publication, it is unclear whether a fix is available.",
+        "title": "traccar traccar",
+        "vendor": "traccar",
+        "product": "traccar",
+        "cvss_max": 7.1
+      },
+      "cve": {
+        "id": "CVE-2025-68930",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2026-02-23T21:19:08.500",
+        "lastModified": "2026-02-26T16:30:45.903",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Versions of the Traccar open-source GPS tracking system up to and including 6.11.1 contain a Cross-Site WebSocket Hijacking (CSWSH) vulnerability in the `/api/socket` endpoint. The application fails to validate the `Origin` header during the WebSocket handshake. This allows a remote attacker to bypass the Same Origin Policy (SOP) and establish a full-duplex WebSocket connection using a legitimate user's credentials (JSESSIONID). As of time of publication, it is unclear whether a fix is available."
+          },
+          {
+            "lang": "es",
+            "value": "Las versiones del sistema de seguimiento GPS de código abierto Traccar hasta la 6.11.1 inclusive contienen una vulnerabilidad de Secuestro de WebSocket entre Sitios (CSWSH) en el endpoint `/api/socket`. La aplicación no valida el encabezado 'Origin' durante el handshake de WebSocket. Esto permite a un atacante remoto eludir la Política del Mismo Origen (SOP) y establecer una conexión WebSocket full-duplex utilizando las credenciales de un usuario legítimo (JSESSIONID). En el momento de la publicación, no está claro si hay una solución disponible."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:L/A:N",
+                "baseScore": 7.1,
+                "baseSeverity": "HIGH"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 4.2
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N",
+                "baseScore": 6.5,
+                "baseSeverity": "MEDIUM"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 3.6
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-1385"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:traccar:traccar:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "76FAA1A2-2E75-4EAC-A7FA-BD790B7986A6",
+                    "versionEndIncluding": "6.11.1"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/traccar/traccar/security/advisories/GHSA-69x6-wcx2-vghp",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Vendor Advisory",
+              "Exploit",
+              "Mitigation"
+            ]
+          }
+        ]
+      },
+      "risk_score": 78,
+      "rank": 6
+    },
+    {
+      "cve_id": "CVE-2026-23231",
+      "signal_types": [
+        "EXP"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": {
+          "ref_published": "2026-05-04"
+        },
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-03-04",
+        "description": "In the Linux kernel, the following vulnerability has been resolved:\n\nnetfilter: nf_tables: fix use-after-free in nf_tables_addchain()\n\nnf_tables_addchain() publishes the chain to table->chains via\nlist_add_tail_rcu() (in nft_chain_add()) before registering hooks.\nIf nf_tables_register_hook() then fails, the error path calls\nnft_chain_del() (list_del_rcu()) followed by nf_tables_chain_destroy()\nwith no RCU grace period in between.\n\nThis creates two use-after-free conditions:\n\n 1) Control-plane: nf_tables_dump_chains() traverses table->chains\n    under rcu_read_lock(). A concurrent dump can still be walking\n    the chain when the error path frees it.\n\n 2) Packet path: for NFPROTO_INET, nf_register_net_hook() briefly\n    installs the IPv4 hook before IPv6 registration fails.  Packets\n    entering nft_do_chain() via the transient IPv4 hook can still be\n    dereferencing chain->blob_gen_X when the error path frees the\n    chain.\n\nAdd synchronize_rcu() between nft_chain_del() and the chain destroy\nso that all RCU readers -- both dump threads and in-flight packet\nevaluation -- have finished before the chain is freed.",
+        "title": "linux linux_kernel Use-After-Free",
+        "vendor": "linux",
+        "product": "linux_kernel",
+        "attack_type": "Use-After-Free",
+        "cvss_max": 7.8
+      },
+      "cve": {
+        "id": "CVE-2026-23231",
+        "sourceIdentifier": "416baaa9-dc9f-4396-8d5f-8c081fb06d67",
+        "published": "2026-03-04T13:15:58.137",
+        "lastModified": "2026-04-02T15:16:24.693",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "In the Linux kernel, the following vulnerability has been resolved:\n\nnetfilter: nf_tables: fix use-after-free in nf_tables_addchain()\n\nnf_tables_addchain() publishes the chain to table->chains via\nlist_add_tail_rcu() (in nft_chain_add()) before registering hooks.\nIf nf_tables_register_hook() then fails, the error path calls\nnft_chain_del() (list_del_rcu()) followed by nf_tables_chain_destroy()\nwith no RCU grace period in between.\n\nThis creates two use-after-free conditions:\n\n 1) Control-plane: nf_tables_dump_chains() traverses table->chains\n    under rcu_read_lock(). A concurrent dump can still be walking\n    the chain when the error path frees it.\n\n 2) Packet path: for NFPROTO_INET, nf_register_net_hook() briefly\n    installs the IPv4 hook before IPv6 registration fails.  Packets\n    entering nft_do_chain() via the transient IPv4 hook can still be\n    dereferencing chain->blob_gen_X when the error path frees the\n    chain.\n\nAdd synchronize_rcu() between nft_chain_del() and the chain destroy\nso that all RCU readers -- both dump threads and in-flight packet\nevaluation -- have finished before the chain is freed."
+          },
+          {
+            "lang": "es",
+            "value": "En el kernel de Linux, la siguiente vulnerabilidad ha sido resuelta:\n\nnetfilter: nf_tables: corrige uso después de liberación en nf_tables_addchain()\n\nnf_tables_addchain() publica la cadena en table-&gt;chains a través de list_add_tail_rcu() (en nft_chain_add()) antes de registrar los ganchos. Si nf_tables_register_hook() falla entonces, la ruta de error llama a nft_chain_del() (list_del_rcu()) seguido de nf_tables_chain_destroy() sin un período de gracia RCU intermedio.\n\nEsto crea dos condiciones de uso después de liberación:\n\n1) Plano de control: nf_tables_dump_chains() recorre table-&gt;chains bajo rcu_read_lock(). Un volcado concurrente aún puede estar recorriendo la cadena cuando la ruta de error la libera.\n\n2) Ruta de paquetes: para NFPROTO_INET, nf_register_net_hook() instala brevemente el gancho IPv4 antes de que falle el registro de IPv6. Los paquetes que entran en nft_do_chain() a través del gancho IPv4 transitorio aún pueden estar desreferenciando chain-&gt;blob_gen_X cuando la ruta de error libera la cadena.\n\nAñadir synchronize_rcu() entre nft_chain_del() y la destrucción de la cadena para que todos los lectores RCU -- tanto los hilos de volcado como la evaluación de paquetes en curso -- hayan terminado antes de que la cadena sea liberada."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 7.8,
+                "baseSeverity": "HIGH"
+              },
+              "source": "416baaa9-dc9f-4396-8d5f-8c081fb06d67",
+              "type": "Secondary",
+              "exploitabilityScore": 1.8,
+              "impactScore": 5.9
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 7.8,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 1.8,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-416"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "E51277CF-00C8-4E26-BC0E-6A90823CCC3E",
+                    "versionStartIncluding": "3.16",
+                    "versionEndExcluding": "6.1.165"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "851E9353-6C09-4CC9-877E-E09DB164A3C2",
+                    "versionStartIncluding": "6.2",
+                    "versionEndExcluding": "6.6.128"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "BCE16369-98ED-41CF-8995-DFDC10B288D2",
+                    "versionStartIncluding": "6.7",
+                    "versionEndExcluding": "6.12.75"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "BF463CB7-1F58-4607-B847-77ED23E4B9B7",
+                    "versionStartIncluding": "6.13",
+                    "versionEndExcluding": "6.18.14"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "672A3E79-EC03-479D-8503-361DFBDC8092",
+                    "versionStartIncluding": "6.19",
+                    "versionEndExcluding": "6.19.4"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://git.kernel.org/stable/c/2a6586ecfa4ce1413daaafee250d2590e05f1a33",
+            "source": "416baaa9-dc9f-4396-8d5f-8c081fb06d67",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://git.kernel.org/stable/c/2f9a4ffeb763aec822f8ff3d1e82202d27d46d4b",
+            "source": "416baaa9-dc9f-4396-8d5f-8c081fb06d67",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://git.kernel.org/stable/c/7017745068a9068904e1e7a1b170a5785647cc81",
+            "source": "416baaa9-dc9f-4396-8d5f-8c081fb06d67",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://git.kernel.org/stable/c/71e99ee20fc3f662555118cf1159443250647533",
+            "source": "416baaa9-dc9f-4396-8d5f-8c081fb06d67",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://git.kernel.org/stable/c/dbd0af8083dd201f07c49110b2ee93710abdff28",
+            "source": "416baaa9-dc9f-4396-8d5f-8c081fb06d67",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://git.kernel.org/stable/c/f3fe58ce37926a10115ede527d59b91bcc05400a",
+            "source": "416baaa9-dc9f-4396-8d5f-8c081fb06d67",
+            "tags": [
+              "Patch"
+            ]
+          }
+        ]
+      },
+      "risk_score": 78,
+      "rank": 7
+    },
+    {
+      "cve_id": "CVE-2026-27483",
+      "signal_types": [
+        "EXP"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": {
+          "ref_published": "2026-05-04"
+        },
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-02-24",
+        "description": "MindsDB is a platform for building artificial intelligence from enterprise data. Prior to version 25.9.1.1, there is a path traversal vulnerability in Mindsdb's /api/files interface, which an authenticated attacker can exploit to achieve remote command execution. The vulnerability exists in the \"Upload File\" module, which corresponds to the API endpoint /api/files. Since the multipart file upload does not perform security checks on the uploaded file path, an attacker can perform path traversal by using `../` sequences in the filename field. The file write operation occurs before calling clear_filename and save_file, meaning there is no filtering of filenames or file types, allowing arbitrary content to be written to any path on the server. Version 25.9.1.1 patches the issue.",
+        "title": "mindsdb mindsdb Path Traversal",
+        "vendor": "mindsdb",
+        "product": "mindsdb",
+        "attack_type": "Path Traversal",
+        "cvss_max": 8.8
+      },
+      "cve": {
+        "id": "CVE-2026-27483",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2026-02-24T15:21:38.060",
+        "lastModified": "2026-02-26T15:35:44.480",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "MindsDB is a platform for building artificial intelligence from enterprise data. Prior to version 25.9.1.1, there is a path traversal vulnerability in Mindsdb's /api/files interface, which an authenticated attacker can exploit to achieve remote command execution. The vulnerability exists in the \"Upload File\" module, which corresponds to the API endpoint /api/files. Since the multipart file upload does not perform security checks on the uploaded file path, an attacker can perform path traversal by using `../` sequences in the filename field. The file write operation occurs before calling clear_filename and save_file, meaning there is no filtering of filenames or file types, allowing arbitrary content to be written to any path on the server. Version 25.9.1.1 patches the issue."
+          },
+          {
+            "lang": "es",
+            "value": "MindsDB es una plataforma para construir inteligencia artificial a partir de datos empresariales. Antes de la versión 25.9.1.1, existe una vulnerabilidad de salto de ruta en la interfaz /api/files de MindsDB, que un atacante autenticado puede explotar para lograr la ejecución remota de comandos. La vulnerabilidad existe en el módulo 'Cargar archivo', que corresponde al endpoint de la API /api/files. Dado que la carga de archivos multipart no realiza comprobaciones de seguridad en la ruta del archivo cargado, un atacante puede realizar un salto de ruta mediante el uso de secuencias '../' en el campo del nombre de archivo. La operación de escritura de archivos ocurre antes de llamar a clear_filename y save_file, lo que significa que no hay filtrado de nombres de archivo o tipos de archivo, permitiendo que se escriba contenido arbitrario en cualquier ruta del servidor. La versión 25.9.1.1 corrige el problema."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 8.8,
+                "baseSeverity": "HIGH"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-22"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:mindsdb:mindsdb:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "DF40BEB1-6A28-403A-8AC1-6488A2EF402D",
+                    "versionEndExcluding": "25.9.1.1"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/mindsdb/mindsdb/commit/87a44bdb2b97f963e18f10a068e1a1e2690505ef",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://github.com/mindsdb/mindsdb/releases/tag/v25.9.1.1",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Product",
+              "Release Notes"
+            ]
+          },
+          {
+            "url": "https://github.com/mindsdb/mindsdb/security/advisories/GHSA-4894-xqv6-vrfq",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Exploit",
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 78,
+      "rank": 8
+    },
+    {
+      "cve_id": "CVE-2026-41922",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-05-04",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-05-04",
+        "description": "WDR201A WiFi Extender (HW V2.1, FW LFMZX28040922V1.02) contains an OS command injection vulnerability in the wireless.cgi binary that allows unauthenticated remote attackers to execute arbitrary shell commands by injecting malicious input into the sz11gChannel or PIN POST parameters. Attackers can exploit unsanitized parameter handling in the set_wifi_basic and set_wifi_do_wps functions to achieve remote code execution without authentication.",
+        "title": "WDR201A WiFi Extender (HW V2.1, FW LFMZX28040922V1.02) contains an OS command injection vulnerability in the wireless.cgi binary that all...",
+        "attack_type": "Command Injection",
+        "cvss_max": 9.3
+      },
+      "cve": {
+        "id": "CVE-2026-41922",
+        "sourceIdentifier": "disclosure@vulncheck.com",
+        "published": "2026-05-04T20:16:18.860",
+        "lastModified": "2026-05-26T14:16:36.380",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "WDR201A WiFi Extender (HW V2.1, FW LFMZX28040922V1.02) contains an OS command injection vulnerability in the wireless.cgi binary that allows unauthenticated remote attackers to execute arbitrary shell commands by injecting malicious input into the sz11gChannel or PIN POST parameters. Attackers can exploit unsanitized parameter handling in the set_wifi_basic and set_wifi_do_wps functions to achieve remote code execution without authentication."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-78"
+              }
+            ],
+            "source": "disclosure@vulncheck.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://mstreet97.github.io/security-research/iot/vulnerability-disclosure/ai-assisted-research/cybersecurity/cve/2026/05/04/Teaching_the_Machine_Where_to_Look.html",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://www.made-in-china.com/showroom/yeapook/#:~:text=Established%20in%202015.%2CDistrict%2C%20Shenzhen%2C%20Guangdong%2C%20China",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://www.vulncheck.com/advisories/wdr201a-wifi-extender-os-command-injection-via-wireless-cgi",
+            "source": "disclosure@vulncheck.com"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 9
+    },
+    {
+      "cve_id": "CVE-2026-41923",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-05-04",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-05-04",
+        "description": "WDR201A WiFi Extender (HW V2.1, FW LFMZX28040922V1.02) contains an OS command injection vulnerability in the internet.cgi binary that allows unauthenticated remote attackers to execute arbitrary shell commands by injecting malicious input into the gateway POST parameter. Attackers can exploit unsanitized parameter concatenation in the set_add_routing function to inject shell commands that are executed via popen() with partial output reflected in the HTTP response.",
+        "title": "WDR201A WiFi Extender (HW V2.1, FW LFMZX28040922V1.02) contains an OS command injection vulnerability in the internet.cgi binary that all...",
+        "attack_type": "Command Injection",
+        "cvss_max": 9.3
+      },
+      "cve": {
+        "id": "CVE-2026-41923",
+        "sourceIdentifier": "disclosure@vulncheck.com",
+        "published": "2026-05-04T20:16:19.017",
+        "lastModified": "2026-05-05T19:47:31.297",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "WDR201A WiFi Extender (HW V2.1, FW LFMZX28040922V1.02) contains an OS command injection vulnerability in the internet.cgi binary that allows unauthenticated remote attackers to execute arbitrary shell commands by injecting malicious input into the gateway POST parameter. Attackers can exploit unsanitized parameter concatenation in the set_add_routing function to inject shell commands that are executed via popen() with partial output reflected in the HTTP response."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-78"
+              }
+            ],
+            "source": "disclosure@vulncheck.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://mstreet97.github.io/security-research/iot/vulnerability-disclosure/ai-assisted-research/cybersecurity/cve/2026/05/04/Teaching_the_Machine_Where_to_Look.html",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://www.made-in-china.com/showroom/yeapook/#:~:text=Established%20in%202015.%2CDistrict%2C%20Shenzhen%2C%20Guangdong%2C%20China",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://www.vulncheck.com/advisories/wdr201a-wifi-extender-os-command-injection-via-internet-cgi",
+            "source": "disclosure@vulncheck.com"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 10
+    },
+    {
+      "cve_id": "CVE-2026-41924",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-05-04",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-05-04",
+        "description": "WDR201A WiFi Extender (HW V2.1, FW LFMZX28040922V1.02) contains an OS command injection vulnerability in the makeRequest.cgi binary that allows unauthenticated remote attackers to execute arbitrary shell commands by injecting malicious input into the set_time or StartSniffer functions. Attackers can craft a POST request with specially crafted ampersand-delimited parameters to bypass input sanitization and execute commands with a maximum length of 31 bytes through the date command or channel parameter processing.",
+        "title": "WDR201A WiFi Extender (HW V2.1, FW LFMZX28040922V1.02) contains an OS command injection vulnerability in the makeRequest.cgi binary that...",
+        "attack_type": "Command Injection",
+        "cvss_max": 9.3
+      },
+      "cve": {
+        "id": "CVE-2026-41924",
+        "sourceIdentifier": "disclosure@vulncheck.com",
+        "published": "2026-05-04T20:16:19.153",
+        "lastModified": "2026-05-05T19:47:31.297",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "WDR201A WiFi Extender (HW V2.1, FW LFMZX28040922V1.02) contains an OS command injection vulnerability in the makeRequest.cgi binary that allows unauthenticated remote attackers to execute arbitrary shell commands by injecting malicious input into the set_time or StartSniffer functions. Attackers can craft a POST request with specially crafted ampersand-delimited parameters to bypass input sanitization and execute commands with a maximum length of 31 bytes through the date command or channel parameter processing."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-78"
+              }
+            ],
+            "source": "disclosure@vulncheck.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://mstreet97.github.io/security-research/iot/vulnerability-disclosure/ai-assisted-research/cybersecurity/cve/2026/05/04/Teaching_the_Machine_Where_to_Look.html",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://www.made-in-china.com/showroom/yeapook/#:~:text=Established%20in%202015.%2CDistrict%2C%20Shenzhen%2C%20Guangdong%2C%20China",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://www.vulncheck.com/advisories/wdr201a-wifi-extender-os-command-injection-via-makerequest-cgi",
+            "source": "disclosure@vulncheck.com"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 11
+    },
+    {
+      "cve_id": "CVE-2026-41925",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-05-04",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-05-04",
+        "description": "WDR201A WiFi Extender (HW V2.1, FW LFMZX28040922V1.02) contains an OS command injection vulnerability in the adm.cgi binary's reboot_time function that allows unauthenticated remote attackers to execute arbitrary shell commands by injecting malicious input into the reboot_time POST parameter. Attackers can send a crafted request with shell metacharacters in the reboot_time parameter when reboot_enabled=1 to achieve remote code execution.",
+        "title": "WDR201A WiFi Extender (HW V2.1, FW LFMZX28040922V1.02) contains an OS command injection vulnerability in the adm.cgi binary's reboot_time...",
+        "attack_type": "Command Injection",
+        "cvss_max": 9.3
+      },
+      "cve": {
+        "id": "CVE-2026-41925",
+        "sourceIdentifier": "disclosure@vulncheck.com",
+        "published": "2026-05-04T20:16:19.300",
+        "lastModified": "2026-05-05T19:47:31.297",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "WDR201A WiFi Extender (HW V2.1, FW LFMZX28040922V1.02) contains an OS command injection vulnerability in the adm.cgi binary's reboot_time function that allows unauthenticated remote attackers to execute arbitrary shell commands by injecting malicious input into the reboot_time POST parameter. Attackers can send a crafted request with shell metacharacters in the reboot_time parameter when reboot_enabled=1 to achieve remote code execution."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-78"
+              }
+            ],
+            "source": "disclosure@vulncheck.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://mstreet97.github.io/security-research/iot/vulnerability-disclosure/ai-assisted-research/cybersecurity/cve/2026/05/04/Teaching_the_Machine_Where_to_Look.html",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://www.made-in-china.com/showroom/yeapook/#:~:text=Established%20in%202015.%2CDistrict%2C%20Shenzhen%2C%20Guangdong%2C%20China",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://www.vulncheck.com/advisories/wdr201a-wifi-extender-os-command-injection-via-adm-cgi-reboot-time",
+            "source": "disclosure@vulncheck.com"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 12
+    },
+    {
+      "cve_id": "CVE-2026-41926",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-05-04",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-05-04",
+        "description": "WDR201A WiFi Extender (HW V2.1, FW LFMZX28040922V1.02) contains an OS command injection vulnerability in the firewall.cgi binary across five request handlers that apply insufficient input validation. Attackers can inject arbitrary shell commands through vulnerable parameters like websURLFilter, websHostFilter, portForward, singlePortForward, and ipportFilter using subshell syntax or unfiltered parameters, with payloads persisting in NVRAM and re-executing on every subsequent firewall.cgi request.",
+        "title": "WDR201A WiFi Extender (HW V2.1, FW LFMZX28040922V1.02) contains an OS command injection vulnerability in the firewall.cgi binary across f...",
+        "attack_type": "Command Injection",
+        "cvss_max": 9.3
+      },
+      "cve": {
+        "id": "CVE-2026-41926",
+        "sourceIdentifier": "disclosure@vulncheck.com",
+        "published": "2026-05-04T20:16:19.450",
+        "lastModified": "2026-05-05T19:47:31.297",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "WDR201A WiFi Extender (HW V2.1, FW LFMZX28040922V1.02) contains an OS command injection vulnerability in the firewall.cgi binary across five request handlers that apply insufficient input validation. Attackers can inject arbitrary shell commands through vulnerable parameters like websURLFilter, websHostFilter, portForward, singlePortForward, and ipportFilter using subshell syntax or unfiltered parameters, with payloads persisting in NVRAM and re-executing on every subsequent firewall.cgi request."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-78"
+              }
+            ],
+            "source": "disclosure@vulncheck.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://mstreet97.github.io/security-research/iot/vulnerability-disclosure/ai-assisted-research/cybersecurity/cve/2026/05/04/Teaching_the_Machine_Where_to_Look.html",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://www.made-in-china.com/showroom/yeapook/#:~:text=Established%20in%202015.%2CDistrict%2C%20Shenzhen%2C%20Guangdong%2C%20China",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://www.vulncheck.com/advisories/wdr201a-wifi-extender-os-command-injection-via-firewall-cgi",
+            "source": "disclosure@vulncheck.com"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 13
+    },
+    {
+      "cve_id": "CVE-2026-42088",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-05-04",
+          "previous_max": null,
+          "current_max": 9.6
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-05-04",
+        "description": "OpenC3 COSMOS provides the functionality needed to send commands to and receive data from one or more embedded systems. Prior to version 7.0.0-rc3, the Script Runner widget allows users to execute Python and Ruby scripts directly from the openc3-COSMOS-script-runner-api container. Because all the docker containers share a network, users can execute specially crafted scripts to bypass the API permissions check and perform administrative actions, including reading and modifying data inside the Redis database, which can be used to read secrets and change COSMOS settings, as well as read and write to the buckets service, which holds configuration, log, and plugin files. These actions are normally only available from the Admin Console or with administrative privileges. Any user with permission to create and run scripts can connect to any service in the docker network. This issue has been patched in version 7.0.0-rc3.",
+        "title": "openc3 cosmos",
+        "vendor": "openc3",
+        "product": "cosmos",
+        "cvss_max": 9.6
+      },
+      "cve": {
+        "id": "CVE-2026-42088",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2026-05-04T18:16:31.007",
+        "lastModified": "2026-05-13T20:47:46.973",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "OpenC3 COSMOS provides the functionality needed to send commands to and receive data from one or more embedded systems. Prior to version 7.0.0-rc3, the Script Runner widget allows users to execute Python and Ruby scripts directly from the openc3-COSMOS-script-runner-api container. Because all the docker containers share a network, users can execute specially crafted scripts to bypass the API permissions check and perform administrative actions, including reading and modifying data inside the Redis database, which can be used to read secrets and change COSMOS settings, as well as read and write to the buckets service, which holds configuration, log, and plugin files. These actions are normally only available from the Admin Console or with administrative privileges. Any user with permission to create and run scripts can connect to any service in the docker network. This issue has been patched in version 7.0.0-rc3."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:N",
+                "baseScore": 9.6,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.1,
+              "impactScore": 5.8
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
+                "baseScore": 8.1,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 5.2
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-250"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:openc3:cosmos:*:*:*:*:open_source:*:*:*",
+                    "matchCriteriaId": "286B983F-D46F-46E4-8EEA-FFA6506A005B",
+                    "versionEndExcluding": "7.0.0"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:openc3:cosmos:7.0.0:rc1:*:*:open_source:*:*:*",
+                    "matchCriteriaId": "38B72355-49A3-4D2F-BFDB-EE53C9E2C7AD"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:openc3:cosmos:7.0.0:rc2:*:*:open_source:*:*:*",
+                    "matchCriteriaId": "13E3A0EA-1085-4505-80BB-C0B133EC3498"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/OpenC3/cosmos/releases/tag/v7.0.0",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Release Notes"
+            ]
+          },
+          {
+            "url": "https://github.com/OpenC3/cosmos/releases/tag/v7.0.0-rc3",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Release Notes"
+            ]
+          },
+          {
+            "url": "https://github.com/OpenC3/cosmos/security/advisories/GHSA-2wvh-87g2-89hr",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Exploit",
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 14
+    },
+    {
+      "cve_id": "CVE-2026-42231",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-05-04",
+          "previous_max": null,
+          "current_max": 9.4
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-05-04",
+        "description": "n8n is an open source workflow automation platform. Prior to versions 1.123.32, 2.17.4, and 2.18.1, a flaw in the xml2js library used to parse XML request bodies in n8n's webhook handler allowed prototype pollution via a crafted XML payload. An authenticated user with permission to create or modify workflows could exploit this to pollute the JavaScript object prototype and, by chaining the pollution with the Git node's SSH operations, achieve remote code execution on the n8n host. This issue has been patched in versions 1.123.32, 2.17.4, and 2.18.1.",
+        "title": "n8n n8n",
+        "vendor": "n8n",
+        "product": "n8n",
+        "cvss_max": 9.4
+      },
+      "cve": {
+        "id": "CVE-2026-42231",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2026-05-04T19:16:05.417",
+        "lastModified": "2026-05-06T17:14:03.970",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "n8n is an open source workflow automation platform. Prior to versions 1.123.32, 2.17.4, and 2.18.1, a flaw in the xml2js library used to parse XML request bodies in n8n's webhook handler allowed prototype pollution via a crafted XML payload. An authenticated user with permission to create or modify workflows could exploit this to pollute the JavaScript object prototype and, by chaining the pollution with the Git node's SSH operations, achieve remote code execution on the n8n host. This issue has been patched in versions 1.123.32, 2.17.4, and 2.18.1."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 8.8,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.4,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-1321"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:n8n:n8n:*:*:*:*:enterprise:node.js:*:*",
+                    "matchCriteriaId": "A074B1B0-1C40-4969-A3D2-F4E86B4BAED3",
+                    "versionEndExcluding": "1.123.32"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:n8n:n8n:*:*:*:*:enterprise:node.js:*:*",
+                    "matchCriteriaId": "F00CA27A-4FD7-45A8-BE8D-DABFAD902806",
+                    "versionStartIncluding": "2.17.0",
+                    "versionEndExcluding": "2.17.4"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:n8n:n8n:2.18.0:*:*:*:enterprise:node.js:*:*",
+                    "matchCriteriaId": "D4858098-0175-4680-B6C9-C19CEB451DBA"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/n8n-io/n8n/security/advisories/GHSA-q5f4-99jv-pgg5",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 15
+    },
+    {
+      "cve_id": "CVE-2026-42232",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-05-04",
+          "previous_max": null,
+          "current_max": 9.4
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-05-04",
+        "description": "n8n is an open source workflow automation platform. Prior to versions 1.123.32, 2.17.4, and 2.18.1, an authenticated user with permission to create or modify workflows could achieve global prototype pollution via the XML Node leading to RCE when combined with other nodes exploiting the prototype pollution. This issue has been patched in versions 1.123.32, 2.17.4, and 2.18.1.",
+        "title": "n8n n8n RCE",
+        "vendor": "n8n",
+        "product": "n8n",
+        "attack_type": "RCE",
+        "cvss_max": 9.4
+      },
+      "cve": {
+        "id": "CVE-2026-42232",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2026-05-04T19:16:05.610",
+        "lastModified": "2026-05-06T17:15:28.223",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "n8n is an open source workflow automation platform. Prior to versions 1.123.32, 2.17.4, and 2.18.1, an authenticated user with permission to create or modify workflows could achieve global prototype pollution via the XML Node leading to RCE when combined with other nodes exploiting the prototype pollution. This issue has been patched in versions 1.123.32, 2.17.4, and 2.18.1."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 8.8,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:L/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.4,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-1321"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:n8n:n8n:*:*:*:*:enterprise:node.js:*:*",
+                    "matchCriteriaId": "A074B1B0-1C40-4969-A3D2-F4E86B4BAED3",
+                    "versionEndExcluding": "1.123.32"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:n8n:n8n:*:*:*:*:enterprise:node.js:*:*",
+                    "matchCriteriaId": "F00CA27A-4FD7-45A8-BE8D-DABFAD902806",
+                    "versionStartIncluding": "2.17.0",
+                    "versionEndExcluding": "2.17.4"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:n8n:n8n:2.18.0:*:*:*:enterprise:node.js:*:*",
+                    "matchCriteriaId": "D4858098-0175-4680-B6C9-C19CEB451DBA"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/n8n-io/n8n/security/advisories/GHSA-hqr4-h3xv-9m3r",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 16
+    },
+    {
+      "cve_id": "CVE-2026-42238",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-05-04",
+          "previous_max": null,
+          "current_max": 9.0
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-05-04",
+        "description": "Nginx UI is a web user interface for the Nginx web server. Prior to version 2.3.8, nginx-ui exposes a backup restore endpoint (POST /api/restore) that is completely unauthenticated during the first 10 minutes after process startup on any fresh installation. An unauthenticated remote attacker can upload a crafted backup archive that overwrites the application's configuration file (app.ini) and SQLite database. Because the attacker controls the restored app.ini, they can inject an arbitrary OS command into the TestConfigCmd setting. After the application automatically restarts to apply the restored config, a single follow-up request triggers that command as the user running nginx-ui — typically root in Docker deployments. This issue has been patched in version 2.3.8.",
+        "title": "nginxui nginx_ui",
+        "vendor": "nginxui",
+        "product": "nginx_ui",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2026-42238",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2026-05-04T21:16:32.707",
+        "lastModified": "2026-05-06T14:45:44.013",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Nginx UI is a web user interface for the Nginx web server. Prior to version 2.3.8, nginx-ui exposes a backup restore endpoint (POST /api/restore) that is completely unauthenticated during the first 10 minutes after process startup on any fresh installation. An unauthenticated remote attacker can upload a crafted backup archive that overwrites the application's configuration file (app.ini) and SQLite database. Because the attacker controls the restored app.ini, they can inject an arbitrary OS command into the TestConfigCmd setting. After the application automatically restarts to apply the restored config, a single follow-up request triggers that command as the user running nginx-ui — typically root in Docker deployments. This issue has been patched in version 2.3.8."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:P/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.0,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-94"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nginxui:nginx_ui:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "FB1A4031-FD2F-49D7-8021-128BA057C4FA",
+                    "versionEndExcluding": "2.3.8"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/0xJacky/nginx-ui/releases/tag/v2.3.8",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Release Notes"
+            ]
+          },
+          {
+            "url": "https://github.com/0xJacky/nginx-ui/security/advisories/GHSA-4pvg-prr3-9cxr",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Exploit",
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 17
+    },
+    {
+      "cve_id": "CVE-2026-42796",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-05-04",
+          "previous_max": null,
+          "current_max": 9.2
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-05-04",
+        "description": "Arelle before 2.39.10 contains an unauthenticated remote code execution vulnerability in the /rest/configure REST endpoint that accepts a plugins query parameter and forwards it to the plugin manager without authentication or authorization. Attackers can supply a URL to a malicious Python file through the plugins parameter, causing the Arelle webserver to download and execute the attacker-controlled code within the Arelle process with its privileges.",
+        "title": "workiva arelle RCE",
+        "vendor": "workiva",
+        "product": "arelle",
+        "attack_type": "RCE",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2026-42796",
+        "sourceIdentifier": "disclosure@vulncheck.com",
+        "published": "2026-05-04T18:16:32.520",
+        "lastModified": "2026-05-27T18:54:25.937",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Arelle before 2.39.10 contains an unauthenticated remote code execution vulnerability in the /rest/configure REST endpoint that accepts a plugins query parameter and forwards it to the plugin manager without authentication or authorization. Attackers can supply a URL to a malicious Python file through the plugins parameter, causing the Arelle webserver to download and execute the attacker-controlled code within the Arelle process with its privileges."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.2,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-306"
+              }
+            ],
+            "source": "disclosure@vulncheck.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:workiva:arelle:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "9E072549-C39B-4895-B145-6F5D89378E7C",
+                    "versionEndExcluding": "2.39.10"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/Arelle/Arelle/pull/2320",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Issue Tracking",
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://github.com/Arelle/Arelle/releases/tag/2.39.10",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Release Notes"
+            ]
+          },
+          {
+            "url": "https://www.vulncheck.com/advisories/arelle-unauthenticated-rce-via-rest-configure",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 18
+    }
+  ],
+  "source": "https://www.cvelogic.com/threat-intelligence/2026-05-04"
+}

@@ -1,0 +1,1028 @@
+{
+  "schema_version": "2.2",
+  "generated_at": "2026-06-02T07:32:56Z",
+  "day": "2025-06-23",
+  "window": {
+    "utc_start": "2025-06-23",
+    "utc_end": "2025-06-23",
+    "days": 1
+  },
+  "summary": {
+    "brief": "10 new critical disclosures — review patch status on exposed services.",
+    "bullets": [
+      "10 new critical disclosures — review patch status on exposed services."
+    ],
+    "counts": {
+      "cves": 10,
+      "kev": 0,
+      "exploit": 0,
+      "epss": 0,
+      "cvss": 10,
+      "patch": 0
+    }
+  },
+  "cves": [
+    {
+      "cve_id": "CVE-2025-2828",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-06-23",
+          "previous_max": null,
+          "current_max": 10.0
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-06-23",
+        "description": "A Server-Side Request Forgery (SSRF) vulnerability exists in the RequestsToolkit component of the langchain-community package (specifically, langchain_community.agent_toolkits.openapi.toolkit.RequestsToolkit) in langchain-ai/langchain version 0.0.27. This vulnerability occurs because the toolkit does not enforce restrictions on requests to remote internet addresses, allowing it to also access local addresses. As a result, an attacker could exploit this flaw to perform port scans, access local services, retrieve instance metadata from cloud environments (e.g., Azure, AWS), and interact with servers on the local network. This issue has been fixed in version 0.0.28.",
+        "title": "langchain langchain SSRF",
+        "vendor": "langchain",
+        "product": "langchain",
+        "attack_type": "SSRF",
+        "cvss_max": 10.0
+      },
+      "cve": {
+        "id": "CVE-2025-2828",
+        "sourceIdentifier": "security@huntr.dev",
+        "published": "2025-06-23T21:15:25.210",
+        "lastModified": "2025-07-16T19:46:41.933",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A Server-Side Request Forgery (SSRF) vulnerability exists in the RequestsToolkit component of the langchain-community package (specifically, langchain_community.agent_toolkits.openapi.toolkit.RequestsToolkit) in langchain-ai/langchain version 0.0.27. This vulnerability occurs because the toolkit does not enforce restrictions on requests to remote internet addresses, allowing it to also access local addresses. As a result, an attacker could exploit this flaw to perform port scans, access local services, retrieve instance metadata from cloud environments (e.g., Azure, AWS), and interact with servers on the local network. This issue has been fixed in version 0.0.28."
+          },
+          {
+            "lang": "es",
+            "value": "Existe una vulnerabilidad de Server-Side Request Forgery (SSRF) en el componente RequestsToolkit del paquete langchain-community (en concreto, langchain_community.agent_toolkits.openapi.toolkit.RequestsToolkit) en la versión 0.0.27 de langchain-ai/langchain. Esta vulnerabilidad se debe a que el kit de herramientas no impone restricciones a las solicitudes a direcciones de internet remotas, lo que le permite acceder también a direcciones locales. Por lo tanto, un atacante podría explotar esta vulnerabilidad para realizar escaneos de puertos, acceder a servicios locales, recuperar metadatos de instancias de entornos en la nube (p. ej., Azure, AWS) e interactuar con servidores de la red local. Este problema se ha corregido en la versión 0.0.28."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV30": [
+            {
+              "cvssData": {
+                "version": "3.0",
+                "vectorString": "CVSS:3.0/AV:N/AC:L/PR:H/UI:R/S:C/C:H/I:H/A:H",
+                "baseScore": 8.4,
+                "baseSeverity": "HIGH"
+              },
+              "source": "security@huntr.dev",
+              "type": "Secondary",
+              "exploitabilityScore": 1.7,
+              "impactScore": 6.0
+            }
+          ],
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+                "baseScore": 10.0,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 6.0
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-918"
+              }
+            ],
+            "source": "security@huntr.dev"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:langchain:langchain:*:*:*:*:community:*:*:*",
+                    "matchCriteriaId": "70F7E7BB-6417-4B87-997A-F2028B53849F",
+                    "versionEndExcluding": "0.0.28"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/langchain-ai/langchain/commit/e188d4ecb085d4561a0be3c583d26aa9c2c3283f",
+            "source": "security@huntr.dev",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://huntr.com/bounties/8f771040-7f34-420a-b96b-5b93d4a99afc",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 1
+    },
+    {
+      "cve_id": "CVE-2025-52562",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-06-23",
+          "previous_max": null,
+          "current_max": 10.0
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-06-23",
+        "description": "Convoy is a KVM server management panel for hosting businesses. In versions 3.9.0-rc3 to before 4.4.1, there is a directory traversal vulnerability in the LocaleController component of Performave Convoy. An unauthenticated remote attacker can exploit this vulnerability by sending a specially crafted HTTP request with malicious locale and namespace parameters. This allows the attacker to include and execute arbitrary PHP files on the server. This issue has been patched in version 4.4.1. A temporary workaround involves implementing strict Web Application Firewall (WAF) rules to incoming requests targeting the vulnerable endpoints.",
+        "title": "Convoy is a KVM server management panel for hosting businesses.",
+        "attack_type": "Directory Traversal",
+        "cvss_max": 10.0
+      },
+      "cve": {
+        "id": "CVE-2025-52562",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2025-06-23T21:15:26.710",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Convoy is a KVM server management panel for hosting businesses. In versions 3.9.0-rc3 to before 4.4.1, there is a directory traversal vulnerability in the LocaleController component of Performave Convoy. An unauthenticated remote attacker can exploit this vulnerability by sending a specially crafted HTTP request with malicious locale and namespace parameters. This allows the attacker to include and execute arbitrary PHP files on the server. This issue has been patched in version 4.4.1. A temporary workaround involves implementing strict Web Application Firewall (WAF) rules to incoming requests targeting the vulnerable endpoints."
+          },
+          {
+            "lang": "es",
+            "value": "Convoy es un panel de administración de servidores KVM para empresas de hosting. En las versiones 3.9.0-rc3 y anteriores a la 4.4.1, existe una vulnerabilidad de navegación de directorios en el componente LocaleController de Performave Convoy. Un atacante remoto no autenticado puede explotar esta vulnerabilidad enviando una solicitud HTTP especialmente manipulada con parámetros de configuración regional y de espacio de nombres maliciosos. Esto permite al atacante incluir y ejecutar archivos PHP arbitrarios en el servidor. Este problema se ha corregido en la versión 4.4.1. Una solución temporal consiste en implementar reglas estrictas de firewall de aplicaciones web (WAF) para las solicitudes entrantes dirigidas a los endpoints vulnerables."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+                "baseScore": 10.0,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 6.0
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-22"
+              },
+              {
+                "lang": "en",
+                "value": "CWE-98"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/ConvoyPanel/panel/commit/f8d6202f3e4912b65dbd9f80ba625576944ab36c",
+            "source": "security-advisories@github.com"
+          },
+          {
+            "url": "https://github.com/ConvoyPanel/panel/security/advisories/GHSA-43g3-qpwq-hfgg",
+            "source": "security-advisories@github.com"
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 2
+    },
+    {
+      "cve_id": "CVE-2023-47031",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-06-23",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-06-23",
+        "description": "An issue in NCR Terminal Handler v.1.5.1 allows a remote attacker to escalate privileges via a crafted POST request to the grantRolesToUsers, grantRolesToGroups, and grantRolesToOrganization SOAP API component.",
+        "title": "ncr terminal_handler privilege escalation",
+        "vendor": "ncr",
+        "product": "terminal_handler",
+        "attack_type": "privilege escalation",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2023-47031",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2025-06-23T17:15:27.313",
+        "lastModified": "2025-06-25T13:13:50.157",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "An issue in NCR Terminal Handler v.1.5.1 allows a remote attacker to escalate privileges via a crafted POST request to the grantRolesToUsers, grantRolesToGroups, and grantRolesToOrganization SOAP API component."
+          },
+          {
+            "lang": "es",
+            "value": "Un problema en NCR Terminal Handler v.1.5.1 permite que un atacante remoto escale privilegios a través de una solicitud POST manipulada para el componente API SOAP grantRolesToUsers, grantRolesToGroups y grantRolesToOrganization."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-284"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:ncr:terminal_handler:1.5.1:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "C686A54F-A590-4FA1-AAE0-AA9D0682CD09"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "http://ncr.com",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Product"
+            ]
+          },
+          {
+            "url": "http://terminal.com",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Broken Link"
+            ]
+          },
+          {
+            "url": "https://drive.google.com/file/d/1f9riw_seicV9MB7pRQJFY-8voxkW8ZYH/view?usp=sharing",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Permissions Required"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 3
+    },
+    {
+      "cve_id": "CVE-2023-47029",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-06-23",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-06-23",
+        "description": "An issue in NCR Terminal Handler v.1.5.1 allows a remote attacker to execute arbitrary code and obtain sensitive information via a crafted POST request to the UserService component",
+        "title": "ncr terminal_handler",
+        "vendor": "ncr",
+        "product": "terminal_handler",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2023-47029",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2025-06-23T18:15:20.630",
+        "lastModified": "2025-07-02T19:06:22.507",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "An issue in NCR Terminal Handler v.1.5.1 allows a remote attacker to execute arbitrary code and obtain sensitive information via a crafted POST request to the UserService component"
+          },
+          {
+            "lang": "es",
+            "value": "Un problema en NCR Terminal Handler v.1.5.1 permite que un atacante remoto ejecute código arbitrario y obtenga información confidencial a través de una solicitud POST manipulada para el componente UserService."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-200"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:ncr:terminal_handler:1.5.1:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "C686A54F-A590-4FA1-AAE0-AA9D0682CD09"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://drive.google.com/file/d/1oX5uKnWGiYMaBxnBuqPiOA53XLxv1Ef4/view?usp=sharing",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Permissions Required"
+            ]
+          },
+          {
+            "url": "https://github.com/pwahba/cve-research/blob/main/CVE-2023-47029/CVE-2023-47029.md",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 4
+    },
+    {
+      "cve_id": "CVE-2023-47030",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-06-23",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-06-23",
+        "description": "An issue in NCR Terminal Handler v.1.5.1 allows a remote attacker to execute arbitrary code and obtain sensitive information via a GET request to a UserService SOAP API endpoint to validate if a user exists.",
+        "title": "ncr terminal_handler",
+        "vendor": "ncr",
+        "product": "terminal_handler",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2023-47030",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2025-06-23T20:15:27.740",
+        "lastModified": "2025-06-25T12:50:37.217",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "An issue in NCR Terminal Handler v.1.5.1 allows a remote attacker to execute arbitrary code and obtain sensitive information via a GET request to a UserService SOAP API endpoint to validate if a user exists."
+          },
+          {
+            "lang": "es",
+            "value": "Un problema en NCR Terminal Handler v.1.5.1 permite a un atacante remoto ejecutar código arbitrario y obtener información confidencial a través de una solicitud GET a un endpoint de API SOAP UserService para validar si un usuario existe."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-94"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:ncr:terminal_handler:1.5.1:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "C686A54F-A590-4FA1-AAE0-AA9D0682CD09"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://drive.google.com/file/d/1ujUcB8XEs78WwWzs8cmD-u1Twqi10yEh/view?usp=sharing",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Permissions Required"
+            ]
+          },
+          {
+            "url": "https://github.com/pwahba/cve-research/blob/main/CVE-2023-47030/CVE-2023-47030.md",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 5
+    },
+    {
+      "cve_id": "CVE-2023-47032",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-06-23",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-06-23",
+        "description": "Password Vulnerability in NCR Terminal Handler v.1.5.1 allows a remote attacker to execute arbitrary code via a crafted script to the UserService SOAP API function.",
+        "title": "ncr terminal_handler",
+        "vendor": "ncr",
+        "product": "terminal_handler",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2023-47032",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2025-06-23T16:15:23.920",
+        "lastModified": "2025-06-25T13:32:01.277",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Password Vulnerability in NCR Terminal Handler v.1.5.1 allows a remote attacker to execute arbitrary code via a crafted script to the UserService SOAP API function."
+          },
+          {
+            "lang": "es",
+            "value": "La vulnerabilidad de contraseña en NCR Terminal Handler v.1.5.1 permite a un atacante remoto ejecutar código arbitrario a través de un script manipulado para la función de API SOAP UserService."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-94"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:ncr:terminal_handler:1.5.1:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "C686A54F-A590-4FA1-AAE0-AA9D0682CD09"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://drive.google.com/file/d/1rTKc2nxEc40VTItJiJ9moZ5VrHG3xQuj/view?usp=sharing",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Permissions Required"
+            ]
+          },
+          {
+            "url": "https://github.com/pwahba/cve-research/blob/main/CVE-2023-47032/CVE-2023-47032.md",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 6
+    },
+    {
+      "cve_id": "CVE-2023-47295",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-06-23",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-06-23",
+        "description": "A CSV injection vulnerability in NCR Terminal Handler v1.5.1 allows attackers to execute arbitrary commands via injecting a crafted payload into any text field that accepts strings.",
+        "title": "ncr terminal_handler",
+        "vendor": "ncr",
+        "product": "terminal_handler",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2023-47295",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2025-06-23T16:15:24.623",
+        "lastModified": "2025-06-25T13:30:08.523",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A CSV injection vulnerability in NCR Terminal Handler v1.5.1 allows attackers to execute arbitrary commands via injecting a crafted payload into any text field that accepts strings."
+          },
+          {
+            "lang": "es",
+            "value": "Una vulnerabilidad de inyección CSV en NCR Terminal Handler v1.5.1 permite a los atacantes ejecutar comandos arbitrarios mediante la inyección de un payload manipulado en cualquier campo de texto que acepte cadenas."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-1236"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:ncr:terminal_handler:1.5.1:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "C686A54F-A590-4FA1-AAE0-AA9D0682CD09"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://drive.google.com/file/d/14uldfUpLRIc-NfHiUco0ja-ZiF0MazGA/view?usp=sharing",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Permissions Required"
+            ]
+          },
+          {
+            "url": "https://github.com/pwahba/cve-research/blob/main/CVE-2023-47295/CVE-2023-47295.md",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 7
+    },
+    {
+      "cve_id": "CVE-2025-46101",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-06-23",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-06-23",
+        "description": "SQL Injection vulnerability in Beakon Software Beakon Learning Management System Sharable Content Object Reference Model (SCORM) version before 5.4.3 allows a remote attacker to obtain sensitive information via the ks parameter in json_scorm.php file",
+        "title": "beakon learning_management_system_sharable_content_object_reference_model SQL Injection",
+        "vendor": "beakon",
+        "product": "learning_management_system_sharable_content_object_reference_model",
+        "attack_type": "SQL Injection",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-46101",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2025-06-23T15:15:27.793",
+        "lastModified": "2025-10-16T20:58:56.213",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "SQL Injection vulnerability in Beakon Software Beakon Learning Management System Sharable Content Object Reference Model (SCORM) version before 5.4.3 allows a remote attacker to obtain sensitive information via the ks parameter in json_scorm.php file"
+          },
+          {
+            "lang": "es",
+            "value": "Una vulnerabilidad de inyección SQL en Beakon Software Beakon Learning Management System Sharable Content Object Reference Model (SCORM) versión anterior a la 5.4.3, permite que un atacante remoto obtenga información confidencial a través del parámetro ks en el archivo json_scorm.php."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-89"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:beakon:learning_management_system_sharable_content_object_reference_model:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "EAEF1A4B-3DED-4A86-A341-A7D7544FE35E",
+                    "versionEndExcluding": "5.4.3"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://packetstorm.news/files/id/200942/",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 8
+    },
+    {
+      "cve_id": "CVE-2025-6545",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-06-23",
+          "previous_max": null,
+          "current_max": 9.1
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-06-23",
+        "description": "Improper Input Validation vulnerability in pbkdf2 allows Signature Spoofing by Improper Validation. This vulnerability is associated with program files lib/to-buffer.Js.\n\nThis issue affects pbkdf2: from 3.0.10 through 3.1.2.",
+        "title": "Improper Input Validation vulnerability in pbkdf2 allows Signature Spoofing by Improper Validation.",
+        "cvss_max": 9.1
+      },
+      "cve": {
+        "id": "CVE-2025-6545",
+        "sourceIdentifier": "7ffcee3d-2c14-4c3e-b844-86c6a321a158",
+        "published": "2025-06-23T19:15:25.220",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Improper Input Validation vulnerability in pbkdf2 allows Signature Spoofing by Improper Validation. This vulnerability is associated with program files lib/to-buffer.Js.\n\nThis issue affects pbkdf2: from 3.0.10 through 3.1.2."
+          },
+          {
+            "lang": "es",
+            "value": "La vulnerabilidad de validación de entrada incorrecta en pbkdf2 permite la suplantación de firma mediante validación incorrecta. Esta vulnerabilidad está asociada con los archivos de programa lib/to-buffer.Js. Este problema afecta a pbkdf2 desde la versión 3.0.10 hasta la 3.1.2."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:L/VI:H/VA:N/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.1,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "7ffcee3d-2c14-4c3e-b844-86c6a321a158",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-20"
+              }
+            ],
+            "source": "7ffcee3d-2c14-4c3e-b844-86c6a321a158"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/browserify/pbkdf2/commit/9699045c37a07f8319cfb8d44e2ff4252d7a7078",
+            "source": "7ffcee3d-2c14-4c3e-b844-86c6a321a158"
+          },
+          {
+            "url": "https://github.com/browserify/pbkdf2/commit/e3102a8cd4830a3ac85cd0dd011cc002fdde33bb",
+            "source": "7ffcee3d-2c14-4c3e-b844-86c6a321a158"
+          },
+          {
+            "url": "https://github.com/browserify/pbkdf2/security/advisories/GHSA-h7cp-r72f-jxh6",
+            "source": "7ffcee3d-2c14-4c3e-b844-86c6a321a158"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 9
+    },
+    {
+      "cve_id": "CVE-2025-6547",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-06-23",
+          "previous_max": null,
+          "current_max": 9.1
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-06-23",
+        "description": "Improper Input Validation vulnerability in pbkdf2 allows Signature Spoofing by Improper Validation.This issue affects pbkdf2: <=3.1.2.",
+        "title": "Improper Input Validation vulnerability in pbkdf2 allows Signature Spoofing by Improper Validation.This issue affects pbkdf2: <=3.1.2.",
+        "cvss_max": 9.1
+      },
+      "cve": {
+        "id": "CVE-2025-6547",
+        "sourceIdentifier": "7ffcee3d-2c14-4c3e-b844-86c6a321a158",
+        "published": "2025-06-23T19:15:25.390",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Improper Input Validation vulnerability in pbkdf2 allows Signature Spoofing by Improper Validation.This issue affects pbkdf2: <=3.1.2."
+          },
+          {
+            "lang": "es",
+            "value": "La vulnerabilidad de validación de entrada incorrecta en pbkdf2 permite la suplantación de firma mediante una validación incorrecta. Este problema afecta a pbkdf2: &lt;=3.1.2."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:N/VC:N/VI:H/VA:N/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.1,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "7ffcee3d-2c14-4c3e-b844-86c6a321a158",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-20"
+              }
+            ],
+            "source": "7ffcee3d-2c14-4c3e-b844-86c6a321a158"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/browserify/pbkdf2/commit/e3102a8cd4830a3ac85cd0dd011cc002fdde33bb",
+            "source": "7ffcee3d-2c14-4c3e-b844-86c6a321a158"
+          },
+          {
+            "url": "https://github.com/browserify/pbkdf2/security/advisories/GHSA-v62p-rq8g-8h59",
+            "source": "7ffcee3d-2c14-4c3e-b844-86c6a321a158"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 10
+    }
+  ],
+  "source": "https://www.cvelogic.com/threat-intelligence/2025-06-23"
+}

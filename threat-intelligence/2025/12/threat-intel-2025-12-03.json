@@ -1,0 +1,3618 @@
+{
+  "schema_version": "2.2",
+  "generated_at": "2026-06-02T07:33:54Z",
+  "day": "2025-12-03",
+  "window": {
+    "utc_start": "2025-12-03",
+    "utc_end": "2025-12-03",
+    "days": 1
+  },
+  "summary": {
+    "brief": "OpenPLC ScadaBR added to CISA KEV — confirmed in-the-wild exploitation. · Djangoproject Django: public exploit or PoC linked (SQL Injection) · WordPress plugin RCE/exploit activity: 3 CVEs flagged today. · Wpdevart Poll\\, Survey\\, Questionnaire And Voting System — exploitation likelihood rose sharply (EPSS 55% → 73% · rising (+17%)).",
+    "bullets": [
+      "OpenPLC ScadaBR added to CISA KEV — confirmed in-the-wild exploitation.",
+      "Djangoproject Django: public exploit or PoC linked (SQL Injection)",
+      "WordPress plugin RCE/exploit activity: 3 CVEs flagged today.",
+      "Wpdevart Poll\\, Survey\\, Questionnaire And Voting System — exploitation likelihood rose sharply (EPSS 55% → 73% · rising (+17%)).",
+      "10 new critical disclosures — review patch status on exposed services."
+    ],
+    "counts": {
+      "cves": 25,
+      "kev": 1,
+      "exploit": 13,
+      "epss": 1,
+      "cvss": 10,
+      "patch": 0
+    }
+  },
+  "cves": [
+    {
+      "cve_id": "CVE-2021-26828",
+      "signal_types": [
+        "KEV"
+      ],
+      "signals": {
+        "kev": {
+          "date_added": "2025-12-03"
+        },
+        "exploit": null,
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2021-06-11",
+        "description": "OpenPLC ScadaBR through 0.9.1 on Linux and through 1.12.4 on Windows allows remote authenticated users to upload and execute arbitrary JSP files via view_edit.shtm.",
+        "title": "OpenPLC ScadaBR Unrestricted Upload of File with Dangerous Type Vulnerability",
+        "vendor": "scadabr",
+        "product": "scadabr",
+        "cvss_max": 8.8
+      },
+      "cve": {
+        "id": "CVE-2021-26828",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2021-06-11T12:15:12.017",
+        "lastModified": "2025-12-04T14:47:47.693",
+        "vulnStatus": "Analyzed",
+        "cisaExploitAdd": "2025-12-03",
+        "cisaActionDue": "2025-12-24",
+        "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+        "cisaVulnerabilityName": "OpenPLC ScadaBR Unrestricted Upload of File with Dangerous Type Vulnerability",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "OpenPLC ScadaBR through 0.9.1 on Linux and through 1.12.4 on Windows allows remote authenticated users to upload and execute arbitrary JSP files via view_edit.shtm."
+          },
+          {
+            "lang": "es",
+            "value": "OpenPLC ScadaBR versiones hasta 0.9.1 en Linux y versiones hasta 1.12.4 en Windows permite a usuarios remotos autenticados cargar y ejecutar archivos JSP arbitrarios por medio del archivo view_edit.shtm"
+          }
+        ],
+        "metrics": {
+          "cvssMetricV2": [
+            {
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:L/Au:S/C:P/I:P/A:P",
+                "baseScore": 6.5,
+                "baseSeverity": "MEDIUM"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "baseSeverity": "MEDIUM",
+              "exploitabilityScore": 8.0,
+              "impactScore": 6.4
+            }
+          ],
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 8.8,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 5.9
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 8.8,
+                "baseSeverity": "HIGH"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-434"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          },
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-434"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:scadabr:scadabr:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "DE4BEBE0-2A0C-4B10-8E00-732DA4BDD6BB",
+                    "versionEndIncluding": "0.9.1"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "703AF700-7A70-47E2-BC3A-7FD03B3CA9C1"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:scadabr:scadabr:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "EDADC64F-C764-48A3-8AF4-CE3AF50B6F1F",
+                    "versionEndIncluding": "1.12.4"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "A2572D17-1DE6-457B-99CC-64AFD54487EA"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "http://forum.scadabr.com.br/t/report-falhas-de-seguranca-em-versoes-do-scadabr/3615/4",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Broken Link",
+              "Exploit",
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "http://packetstormsecurity.com/files/162564/ScadaBR-1.0-1.1CE-Linux-Shell-Upload.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://youtu.be/k1teIStQr1A",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/SCADA-LTS/Scada-LTS/pull/2174",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Issue Tracking",
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2021-26828",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "US Government Resource"
+            ]
+          }
+        ]
+      },
+      "risk_score": 88,
+      "rank": 1
+    },
+    {
+      "cve_id": "CVE-2017-15734",
+      "signal_types": [
+        "EXP"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": {
+          "ref_published": "2025-12-03"
+        },
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2017-10-22",
+        "description": "In phpMyFAQ before 2.9.9, there is Cross-Site Request Forgery (CSRF) in admin/stat.main.php.",
+        "title": "phpmyfaq phpmyfaq CSRF",
+        "vendor": "phpmyfaq",
+        "product": "phpmyfaq",
+        "attack_type": "CSRF",
+        "cvss_max": 8.8
+      },
+      "cve": {
+        "id": "CVE-2017-15734",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2017-10-22T18:29:00.557",
+        "lastModified": "2026-05-13T00:24:29.033",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "In phpMyFAQ before 2.9.9, there is Cross-Site Request Forgery (CSRF) in admin/stat.main.php."
+          },
+          {
+            "lang": "es",
+            "value": "En phpMyFAQ en versiones anteriores a la 2.9.9 hay Cross-Site Request Forgery (CSRF) en admin/stat.main.php."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV2": [
+            {
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+                "baseScore": 6.8,
+                "baseSeverity": "MEDIUM"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "baseSeverity": "MEDIUM",
+              "exploitabilityScore": 8.6,
+              "impactScore": 6.4
+            }
+          ],
+          "cvssMetricV30": [
+            {
+              "cvssData": {
+                "version": "3.0",
+                "vectorString": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+                "baseScore": 8.8,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-352"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:phpmyfaq:phpmyfaq:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "1D0B1C07-83F7-4DB0-976C-51483D7DF516",
+                    "versionEndIncluding": "2.9.8"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/thorsten/phpMyFAQ/commit/fa26c52384b010edaf60c525ae5b040f05da9f77",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Patch",
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 78,
+      "rank": 2
+    },
+    {
+      "cve_id": "CVE-2021-24442",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 0.55023,
+            "score_date": "2025-11-29"
+          },
+          "current": {
+            "score": 0.72516,
+            "score_date": "2025-12-03"
+          },
+          "delta": 0.17493
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2021-07-12",
+        "description": "The Poll, Survey, Questionnaire and Voting system WordPress plugin before 1.5.3 did not sanitise, escape or validate the date_answers[] POST parameter before using it in a SQL statement when sending a Poll result, allowing unauthenticated users to perform SQL Injection attacks",
+        "title": "wpdevart poll\\,_survey\\,_questionnaire_and_voting_system SQL Injection",
+        "vendor": "wpdevart",
+        "product": "poll\\,_survey\\,_questionnaire_and_voting_system",
+        "attack_type": "SQL Injection",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2021-24442",
+        "sourceIdentifier": "contact@wpscan.com",
+        "published": "2021-07-12T20:15:09.777",
+        "lastModified": "2024-11-21T05:53:04.950",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The Poll, Survey, Questionnaire and Voting system WordPress plugin before 1.5.3 did not sanitise, escape or validate the date_answers[] POST parameter before using it in a SQL statement when sending a Poll result, allowing unauthenticated users to perform SQL Injection attacks"
+          },
+          {
+            "lang": "es",
+            "value": "El plugin Poll, Survey, Questionnaire and Voting system de WordPress, versiones anteriores a 1.5.3 no saneaba, escapaba o comprobaba el parámetro POST date_answers[] antes de usarlo en una sentencia SQL cuando se envía el resultado de una encuesta, permitiendo a usuarios no autenticados llevar a cabo ataques de inyección SQL"
+          }
+        ],
+        "metrics": {
+          "cvssMetricV2": [
+            {
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+                "baseScore": 7.5,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "baseSeverity": "HIGH",
+              "exploitabilityScore": 10.0,
+              "impactScore": 6.4
+            }
+          ],
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-89"
+              }
+            ],
+            "source": "contact@wpscan.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:wpdevart:poll\\,_survey\\,_questionnaire_and_voting_system:*:*:*:*:*:wordpress:*:*",
+                    "matchCriteriaId": "FB14ADD2-E93C-4BE4-9ACA-BD57CCE3A041",
+                    "versionEndExcluding": "1.5.3"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://wpscan.com/vulnerability/7376666e-9b2a-4239-b11f-8544435b444a",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.in-spired.xyz/wpdevart-polls-blind-sql-injection/",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 86,
+      "rank": 3
+    },
+    {
+      "cve_id": "CVE-2017-15735",
+      "signal_types": [
+        "EXP"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": {
+          "ref_published": "2025-12-03"
+        },
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2017-10-22",
+        "description": "In phpMyFAQ before 2.9.9, there is Cross-Site Request Forgery (CSRF) for modifying a glossary.",
+        "title": "phpmyfaq phpmyfaq CSRF",
+        "vendor": "phpmyfaq",
+        "product": "phpmyfaq",
+        "attack_type": "CSRF",
+        "cvss_max": 8.8
+      },
+      "cve": {
+        "id": "CVE-2017-15735",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2017-10-22T18:29:00.590",
+        "lastModified": "2026-05-13T00:24:29.033",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "In phpMyFAQ before 2.9.9, there is Cross-Site Request Forgery (CSRF) for modifying a glossary."
+          },
+          {
+            "lang": "es",
+            "value": "En phpMyFAQ en versiones anteriores a la 2.9.9 hay Cross-Site Request Forgery (CSRF) al modificar un glosario."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV2": [
+            {
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+                "baseScore": 6.8,
+                "baseSeverity": "MEDIUM"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "baseSeverity": "MEDIUM",
+              "exploitabilityScore": 8.6,
+              "impactScore": 6.4
+            }
+          ],
+          "cvssMetricV30": [
+            {
+              "cvssData": {
+                "version": "3.0",
+                "vectorString": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+                "baseScore": 8.8,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-352"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:phpmyfaq:phpmyfaq:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "1D0B1C07-83F7-4DB0-976C-51483D7DF516",
+                    "versionEndIncluding": "2.9.8"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/thorsten/phpMyFAQ/commit/867618110feb836e168435548d6c2cbb7c65eda3",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Patch",
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 78,
+      "rank": 4
+    },
+    {
+      "cve_id": "CVE-2017-15808",
+      "signal_types": [
+        "EXP"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": {
+          "ref_published": "2025-12-03"
+        },
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2017-10-23",
+        "description": "In phpMyFaq before 2.9.9, there is CSRF in admin/ajax.config.php.",
+        "title": "phpmyfaq phpmyfaq CSRF",
+        "vendor": "phpmyfaq",
+        "product": "phpmyfaq",
+        "attack_type": "CSRF",
+        "cvss_max": 8.8
+      },
+      "cve": {
+        "id": "CVE-2017-15808",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2017-10-23T17:29:00.487",
+        "lastModified": "2026-05-13T00:24:29.033",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "In phpMyFaq before 2.9.9, there is CSRF in admin/ajax.config.php."
+          },
+          {
+            "lang": "es",
+            "value": "En phpMyFaq en versiones anteriores a la 2.9.9, existe Cross-Site Request Forgery (CSRF) en admin/ajax.config.php."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV2": [
+            {
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+                "baseScore": 6.8,
+                "baseSeverity": "MEDIUM"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "baseSeverity": "MEDIUM",
+              "exploitabilityScore": 8.6,
+              "impactScore": 6.4
+            }
+          ],
+          "cvssMetricV30": [
+            {
+              "cvssData": {
+                "version": "3.0",
+                "vectorString": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+                "baseScore": 8.8,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-352"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:phpmyfaq:phpmyfaq:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "1D0B1C07-83F7-4DB0-976C-51483D7DF516",
+                    "versionEndIncluding": "2.9.8"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/MarkLee131/awesome-web-pocs/blob/main/CVE-2017-15808.md",
+            "source": "cve@mitre.org"
+          },
+          {
+            "url": "https://github.com/thorsten/phpMyFAQ/commit/a249b4645fb86f6a9fbe5d2344ab1cbdb906b75c",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Issue Tracking",
+              "Patch",
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 78,
+      "rank": 5
+    },
+    {
+      "cve_id": "CVE-2017-6478",
+      "signal_types": [
+        "EXP"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": {
+          "ref_published": "2025-12-03"
+        },
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2017-03-05",
+        "description": "paintballrefjosh/MaNGOSWebV4 before 4.0.8 is vulnerable to a reflected XSS in install/index.php (step parameter).",
+        "title": "mangoswebv4_project mangoswebv4 cross-site scripting",
+        "vendor": "mangoswebv4_project",
+        "product": "mangoswebv4",
+        "attack_type": "cross-site scripting",
+        "cvss_max": 6.1
+      },
+      "cve": {
+        "id": "CVE-2017-6478",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2017-03-05T20:59:00.213",
+        "lastModified": "2026-05-13T00:24:29.033",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "paintballrefjosh/MaNGOSWebV4 before 4.0.8 is vulnerable to a reflected XSS in install/index.php (step parameter)."
+          },
+          {
+            "lang": "es",
+            "value": "paintballrefjosh/MaNGOSWebV4 en versiones anteriores a 4.0.8 es vulnerable a un XSS reflejado en install/index.php (parámetro step)."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV2": [
+            {
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:M/Au:N/C:N/I:P/A:N",
+                "baseScore": 4.3,
+                "baseSeverity": "MEDIUM"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "baseSeverity": "MEDIUM",
+              "exploitabilityScore": 8.6,
+              "impactScore": 2.9
+            }
+          ],
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+                "baseScore": 6.1,
+                "baseSeverity": "MEDIUM"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 2.7
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-79"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:mangoswebv4_project:mangoswebv4:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "C6931F29-FE51-4E52-9205-9FE8BEA2B011",
+                    "versionEndExcluding": "4.0.8"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "http://www.securityfocus.com/bid/96584",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory",
+              "VDB Entry"
+            ]
+          },
+          {
+            "url": "https://github.com/MarkLee131/awesome-web-pocs/blob/main/CVE-2017-6478.md",
+            "source": "cve@mitre.org"
+          },
+          {
+            "url": "https://github.com/paintballrefjosh/MaNGOSWebV4/issues/15",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit",
+              "Patch",
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/paintballrefjosh/MaNGOSWebV4/releases/tag/4.0.8",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Patch",
+              "Release Notes",
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 78,
+      "rank": 6
+    },
+    {
+      "cve_id": "CVE-2018-25080",
+      "signal_types": [
+        "EXP"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": {
+          "ref_published": "2025-12-03"
+        },
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2023-02-04",
+        "description": "A vulnerability, which was classified as problematic, has been found in MobileDetect 2.8.31. This issue affects the function initLayoutType of the file examples/session_example.php of the component Example. The manipulation of the argument $_SERVER['PHP_SELF'] leads to cross site scripting. The attack may be initiated remotely. The exploit has been disclosed to the public and may be used. Upgrading to version 2.8.32 is able to address this issue. The identifier of the patch is 31818a441b095bdc4838602dbb17b8377d1e5cce. It is recommended to upgrade the affected component. The identifier VDB-220061 was assigned to this vulnerability.",
+        "title": "mobiledetect mobiledetect cross-site scripting",
+        "vendor": "mobiledetect",
+        "product": "mobiledetect",
+        "attack_type": "cross-site scripting",
+        "cvss_max": 6.1
+      },
+      "cve": {
+        "id": "CVE-2018-25080",
+        "sourceIdentifier": "cna@vuldb.com",
+        "published": "2023-02-04T08:15:07.607",
+        "lastModified": "2025-04-16T15:15:44.680",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A vulnerability, which was classified as problematic, has been found in MobileDetect 2.8.31. This issue affects the function initLayoutType of the file examples/session_example.php of the component Example. The manipulation of the argument $_SERVER['PHP_SELF'] leads to cross site scripting. The attack may be initiated remotely. The exploit has been disclosed to the public and may be used. Upgrading to version 2.8.32 is able to address this issue. The identifier of the patch is 31818a441b095bdc4838602dbb17b8377d1e5cce. It is recommended to upgrade the affected component. The identifier VDB-220061 was assigned to this vulnerability."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV2": [
+            {
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:L/Au:S/C:N/I:P/A:N",
+                "baseScore": 4.0,
+                "baseSeverity": "MEDIUM"
+              },
+              "source": "cna@vuldb.com",
+              "type": "Secondary",
+              "baseSeverity": "MEDIUM",
+              "exploitabilityScore": 8.0,
+              "impactScore": 2.9
+            }
+          ],
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:N/I:L/A:N",
+                "baseScore": 3.5,
+                "baseSeverity": "LOW"
+              },
+              "source": "cna@vuldb.com",
+              "type": "Secondary",
+              "exploitabilityScore": 2.1,
+              "impactScore": 1.4
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+                "baseScore": 6.1,
+                "baseSeverity": "MEDIUM"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 2.7
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-79"
+              }
+            ],
+            "source": "cna@vuldb.com"
+          },
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-79"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:mobiledetect:mobiledetect:2.8.31:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "B868C5CA-D4E1-4DFB-A980-D0844C05286F"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/serbanghita/Mobile-Detect/commit/31818a441b095bdc4838602dbb17b8377d1e5cce",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://github.com/serbanghita/Mobile-Detect/pull/741",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Issue Tracking",
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://github.com/serbanghita/Mobile-Detect/releases/tag/2.8.32",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Release Notes"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/?ctiid.220061",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Permissions Required",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/?id.220061",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Permissions Required",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/MarkLee131/awesome-web-pocs/blob/main/CVE-2018-25080.md",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          }
+        ]
+      },
+      "risk_score": 78,
+      "rank": 7
+    },
+    {
+      "cve_id": "CVE-2019-16693",
+      "signal_types": [
+        "EXP"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": {
+          "ref_published": "2025-12-03"
+        },
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2019-09-22",
+        "description": "phpIPAM 1.4 allows SQL injection via the app/admin/custom-fields/order.php table parameter when action=add is used.",
+        "title": "phpipam phpipam SQL Injection",
+        "vendor": "phpipam",
+        "product": "phpipam",
+        "attack_type": "SQL Injection",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2019-16693",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2019-09-22T15:15:13.890",
+        "lastModified": "2025-04-16T15:15:44.933",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "phpIPAM 1.4 allows SQL injection via the app/admin/custom-fields/order.php table parameter when action=add is used."
+          },
+          {
+            "lang": "es",
+            "value": "phpIPAM versión 1.4, permite una inyección SQL por medio del parámetro table del archivo app/admin/custom-fields/order.php cuando es usado action=add."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV2": [
+            {
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+                "baseScore": 7.5,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "baseSeverity": "HIGH",
+              "exploitabilityScore": 10.0,
+              "impactScore": 6.4
+            }
+          ],
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-89"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:phpipam:phpipam:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "5CE82745-8135-4737-967A-BCFE1EBF5353",
+                    "versionEndIncluding": "1.4"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/MarkLee131/awesome-web-pocs/blob/main/CVE-2019-16693.md",
+            "source": "cve@mitre.org"
+          },
+          {
+            "url": "https://github.com/phpipam/phpipam/issues/2738",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit",
+              "Issue Tracking",
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 78,
+      "rank": 8
+    },
+    {
+      "cve_id": "CVE-2019-25024",
+      "signal_types": [
+        "EXP"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": {
+          "ref_published": "2025-12-03"
+        },
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2021-02-19",
+        "description": "OpenRepeater (ORP) before 2.2 allows unauthenticated command injection via shell metacharacters in the functions/ajax_system.php post_service parameter.",
+        "title": "alleghenycreative openrepeater Command Injection",
+        "vendor": "alleghenycreative",
+        "product": "openrepeater",
+        "attack_type": "Command Injection",
+        "cvss_max": 10.0
+      },
+      "cve": {
+        "id": "CVE-2019-25024",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2021-02-19T04:15:12.160",
+        "lastModified": "2025-04-16T15:15:45.070",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "OpenRepeater (ORP) before 2.2 allows unauthenticated command injection via shell metacharacters in the functions/ajax_system.php post_service parameter."
+          },
+          {
+            "lang": "es",
+            "value": "OpenRepeater (ORP) versiones anteriores a 2.2, permite una inyección de comandos no autenticados por medio de metacaracteres de shell en el parámetro post_service en el archivo functions/ajax_system.php"
+          }
+        ],
+        "metrics": {
+          "cvssMetricV2": [
+            {
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+                "baseScore": 10.0,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "baseSeverity": "HIGH",
+              "exploitabilityScore": 10.0,
+              "impactScore": 10.0
+            }
+          ],
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-78"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:alleghenycreative:openrepeater:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "F6B59951-2604-493B-9D6C-FC3805305E0D",
+                    "versionEndExcluding": "2.2"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/MarkLee131/awesome-web-pocs/blob/main/CVE-2019-25024.md",
+            "source": "cve@mitre.org"
+          },
+          {
+            "url": "https://github.com/OpenRepeater/openrepeater/issues/66",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/codexlynx/CVE-2019-25024",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 78,
+      "rank": 9
+    },
+    {
+      "cve_id": "CVE-2020-15716",
+      "signal_types": [
+        "EXP"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": {
+          "ref_published": "2025-12-03"
+        },
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2020-07-15",
+        "description": "RosarioSIS 6.7.2 is vulnerable to XSS, caused by improper validation of user-supplied input by the Preferences.php script. A remote attacker could exploit this vulnerability using the tab parameter in a crafted URL.",
+        "title": "rosariosis rosariosis cross-site scripting",
+        "vendor": "rosariosis",
+        "product": "rosariosis",
+        "attack_type": "cross-site scripting",
+        "cvss_max": 6.1
+      },
+      "cve": {
+        "id": "CVE-2020-15716",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2020-07-15T19:15:12.163",
+        "lastModified": "2025-04-16T15:15:45.380",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "RosarioSIS 6.7.2 is vulnerable to XSS, caused by improper validation of user-supplied input by the Preferences.php script. A remote attacker could exploit this vulnerability using the tab parameter in a crafted URL."
+          },
+          {
+            "lang": "es",
+            "value": "RosarioSIS versión 6.7.2, es vulnerable a un ataque de tipo XSS, causado por una comprobación inapropiada de la entrada suministrada por el usuario mediante el script Preferences.php. Un atacante remoto podría explotar esta vulnerabilidad usando el parámetro tab en una URL diseñada"
+          }
+        ],
+        "metrics": {
+          "cvssMetricV2": [
+            {
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:M/Au:N/C:N/I:P/A:N",
+                "baseScore": 4.3,
+                "baseSeverity": "MEDIUM"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "baseSeverity": "MEDIUM",
+              "exploitabilityScore": 8.6,
+              "impactScore": 2.9
+            }
+          ],
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+                "baseScore": 6.1,
+                "baseSeverity": "MEDIUM"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 2.7
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-79"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:rosariosis:rosariosis:6.7.2:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "4A870F8E-3082-421C-A701-75D43DD6276C"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://exchange.xforce.ibmcloud.com/vulnerabilities/184942",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory",
+              "VDB Entry"
+            ]
+          },
+          {
+            "url": "https://github.com/MarkLee131/awesome-web-pocs/blob/main/CVE-2020-15716.md",
+            "source": "cve@mitre.org"
+          },
+          {
+            "url": "https://gitlab.com/francoisjacquet/rosariosis/-/blob/mobile/CHANGES.md",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Release Notes",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://gitlab.com/francoisjacquet/rosariosis/-/commit/89ae9de732024e3a2e99262aa98b400a1aa6975a",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Patch",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://gitlab.com/francoisjacquet/rosariosis/-/issues/291",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Broken Link"
+            ]
+          },
+          {
+            "url": "https://gitlab.com/francoisjacquet/rosariosis/-/tags/v6.8-beta",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 78,
+      "rank": 10
+    },
+    {
+      "cve_id": "CVE-2020-15718",
+      "signal_types": [
+        "EXP"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": {
+          "ref_published": "2025-12-03"
+        },
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2020-07-15",
+        "description": "RosarioSIS 6.7.2 is vulnerable to XSS, caused by improper validation of user-supplied input by the PrintSchedules.php script. A remote attacker could exploit this vulnerability using the include_inactive parameter in a crafted URL.",
+        "title": "rosariosis rosariosis cross-site scripting",
+        "vendor": "rosariosis",
+        "product": "rosariosis",
+        "attack_type": "cross-site scripting",
+        "cvss_max": 6.1
+      },
+      "cve": {
+        "id": "CVE-2020-15718",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2020-07-15T20:15:13.570",
+        "lastModified": "2025-04-16T15:15:45.540",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "RosarioSIS 6.7.2 is vulnerable to XSS, caused by improper validation of user-supplied input by the PrintSchedules.php script. A remote attacker could exploit this vulnerability using the include_inactive parameter in a crafted URL."
+          },
+          {
+            "lang": "es",
+            "value": "RosarioSIS versiones 6.7.2, es vulnerable a un ataque de tipo XSS, causado por una comprobación inapropiada de la entrada suministrada por el usuario mediante el script PrintSchedules.php. Un atacante remoto podría explotar esta vulnerabilidad usando el parámetro include_inactive en una URL diseñada"
+          }
+        ],
+        "metrics": {
+          "cvssMetricV2": [
+            {
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:M/Au:N/C:N/I:P/A:N",
+                "baseScore": 4.3,
+                "baseSeverity": "MEDIUM"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "baseSeverity": "MEDIUM",
+              "exploitabilityScore": 8.6,
+              "impactScore": 2.9
+            }
+          ],
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+                "baseScore": 6.1,
+                "baseSeverity": "MEDIUM"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 2.7
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-79"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:rosariosis:rosariosis:6.7.2:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "4A870F8E-3082-421C-A701-75D43DD6276C"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://exchange.xforce.ibmcloud.com/vulnerabilities/184944",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory",
+              "VDB Entry"
+            ]
+          },
+          {
+            "url": "https://github.com/MarkLee131/awesome-web-pocs/blob/main/CVE-2020-15718.md",
+            "source": "cve@mitre.org"
+          },
+          {
+            "url": "https://gitlab.com/francoisjacquet/rosariosis/-/blob/mobile/CHANGES.md",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Release Notes",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://gitlab.com/francoisjacquet/rosariosis/-/commit/89ae9de732024e3a2e99262aa98b400a1aa6975a",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Patch",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://gitlab.com/francoisjacquet/rosariosis/-/issues/291",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Broken Link"
+            ]
+          },
+          {
+            "url": "https://gitlab.com/francoisjacquet/rosariosis/-/tags/v6.8-beta",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 78,
+      "rank": 11
+    },
+    {
+      "cve_id": "CVE-2020-20969",
+      "signal_types": [
+        "EXP"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": {
+          "ref_published": "2025-12-03"
+        },
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2023-06-20",
+        "description": "File Upload vulnerability in PluckCMS v.4.7.10 allows a remote attacker to execute arbitrary code via the trashcan_restoreitem.php file.",
+        "title": "pluck-cms pluck",
+        "vendor": "pluck-cms",
+        "product": "pluck",
+        "cvss_max": 7.2
+      },
+      "cve": {
+        "id": "CVE-2020-20969",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2023-06-20T15:15:10.900",
+        "lastModified": "2025-04-16T15:15:45.677",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "File Upload vulnerability in PluckCMS v.4.7.10 allows a remote attacker to execute arbitrary code via the trashcan_restoreitem.php file."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 7.2,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 1.2,
+              "impactScore": 5.9
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 7.2,
+                "baseSeverity": "HIGH"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 1.2,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-434"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          },
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-434"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:pluck-cms:pluck:4.7.10:-:*:*:*:*:*:*",
+                    "matchCriteriaId": "00EE308A-BD13-4E84-BB56-D890CB35E07A"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/MarkLee131/awesome-web-pocs/blob/main/CVE-2020-20969.md",
+            "source": "cve@mitre.org"
+          },
+          {
+            "url": "https://github.com/pluck-cms/pluck/issues/86",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit",
+              "Issue Tracking",
+              "Patch"
+            ]
+          }
+        ]
+      },
+      "risk_score": 78,
+      "rank": 12
+    },
+    {
+      "cve_id": "CVE-2020-5504",
+      "signal_types": [
+        "EXP"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": {
+          "ref_published": "2025-12-03"
+        },
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2020-01-09",
+        "description": "In phpMyAdmin 4 before 4.9.4 and 5 before 5.0.1, SQL injection exists in the user accounts page. A malicious user could inject custom SQL in place of their own username when creating queries to this page. An attacker must have a valid MySQL account to access the server.",
+        "title": "debian debian_linux SQL Injection",
+        "vendor": "phpmyadmin",
+        "product": "phpmyadmin",
+        "attack_type": "SQL Injection",
+        "cvss_max": 8.8
+      },
+      "cve": {
+        "id": "CVE-2020-5504",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2020-01-09T22:15:13.863",
+        "lastModified": "2025-04-16T15:15:46.240",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "In phpMyAdmin 4 before 4.9.4 and 5 before 5.0.1, SQL injection exists in the user accounts page. A malicious user could inject custom SQL in place of their own username when creating queries to this page. An attacker must have a valid MySQL account to access the server."
+          },
+          {
+            "lang": "es",
+            "value": "En phpMyAdmin versiones 4 anteriores a 4.9.4 y versiones  5 anteriores a 5.0.1, una inyección SQL se presenta en la página de cuentas de usuario. Un usuario malicioso podría inyectar SQL personalizado en lugar de su propio nombre de usuario cuando crea consultas en esta página. Un atacante necesita tener una cuenta MySQL válida para acceder al servidor."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV2": [
+            {
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:L/Au:S/C:P/I:P/A:P",
+                "baseScore": 6.5,
+                "baseSeverity": "MEDIUM"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "baseSeverity": "MEDIUM",
+              "exploitabilityScore": 8.0,
+              "impactScore": 6.4
+            }
+          ],
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 8.8,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-89"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:phpmyadmin:phpmyadmin:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "A0C08FCF-E9D9-4889-A7B3-E44D990B09C9",
+                    "versionStartIncluding": "4.0.0",
+                    "versionEndExcluding": "4.9.4"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:phpmyadmin:phpmyadmin:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "98CE1E76-7BF6-4CE0-BF18-DCA1116CCB15",
+                    "versionStartIncluding": "5.0.0",
+                    "versionEndExcluding": "5.0.1"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:suse:suse_linux_enterprise_server:12:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "9C649194-B8C2-49F7-A819-C635EE584ABF"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:debian:debian_linux:8.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "C11E6FB0-C8C0-4527-9AA0-CB9B316F8F43"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "http://lists.opensuse.org/opensuse-security-announce/2020-01/msg00024.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Mailing List",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://cybersecurityworks.com/zerodays/cve-2020-5504-phpmyadmin.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/MarkLee131/awesome-web-pocs/blob/main/CVE-2020-5504.md",
+            "source": "cve@mitre.org"
+          },
+          {
+            "url": "https://lists.debian.org/debian-lts-announce/2020/01/msg00011.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Mailing List",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.phpmyadmin.net/security/PMASA-2020-1/",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Patch",
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 78,
+      "rank": 13
+    },
+    {
+      "cve_id": "CVE-2021-40617",
+      "signal_types": [
+        "EXP"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": {
+          "ref_published": "2025-12-03"
+        },
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2021-10-11",
+        "description": "An SQL Injection vulnerability exists in openSIS Community Edition version 8.0 via ForgotPassUserName.php.",
+        "title": "os4ed opensis SQL Injection",
+        "vendor": "os4ed",
+        "product": "opensis",
+        "attack_type": "SQL Injection",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2021-40617",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2021-10-11T19:15:07.667",
+        "lastModified": "2025-04-16T15:15:46.750",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "An SQL Injection vulnerability exists in openSIS Community Edition version 8.0 via ForgotPassUserName.php."
+          },
+          {
+            "lang": "es",
+            "value": "Se presenta una vulnerabilidad de inyección SQL en openSIS Community Edition versión 8.0, por medio del archivo ForgotPassUserName.php"
+          }
+        ],
+        "metrics": {
+          "cvssMetricV2": [
+            {
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+                "baseScore": 7.5,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "baseSeverity": "HIGH",
+              "exploitabilityScore": 10.0,
+              "impactScore": 6.4
+            }
+          ],
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-89"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:os4ed:opensis:8.0:*:*:*:community:*:*:*",
+                    "matchCriteriaId": "7159D18F-0406-4CBE-B985-FD2E8A5F07C9"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/MarkLee131/awesome-web-pocs/blob/main/CVE-2021-40617.md",
+            "source": "cve@mitre.org"
+          },
+          {
+            "url": "https://github.com/OS4ED/openSIS-Classic/issues/192",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit",
+              "Issue Tracking",
+              "Mitigation",
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 78,
+      "rank": 14
+    },
+    {
+      "cve_id": "CVE-2024-32641",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-12-03",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-12-03",
+        "description": "Masa CMS is an open source Enterprise Content Management platform. Masa CMS versions prior to 7.2.8, 7.3.13, and 7.4.6 are vulnerable to remote code execution. The vulnerability exists in the addParam function, which accepts user input via the criteria parameter. This input is subsequently evaluated by setDynamicContent, allowing an unauthenticated attacker to execute arbitrary code via the m tag. The vulnerability is patched in versions 7.2.8, 7.3.13, and 7.4.6.",
+        "title": "masacms masacms RCE",
+        "vendor": "masacms",
+        "product": "masacms",
+        "attack_type": "RCE",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2024-32641",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2025-12-03T17:15:48.220",
+        "lastModified": "2025-12-05T14:47:50.093",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Masa CMS is an open source Enterprise Content Management platform. Masa CMS versions prior to 7.2.8, 7.3.13, and 7.4.6 are vulnerable to remote code execution. The vulnerability exists in the addParam function, which accepts user input via the criteria parameter. This input is subsequently evaluated by setDynamicContent, allowing an unauthenticated attacker to execute arbitrary code via the m tag. The vulnerability is patched in versions 7.2.8, 7.3.13, and 7.4.6."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-94"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:masacms:masacms:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "82A74C33-3407-498A-9444-4A451E5968FE",
+                    "versionEndExcluding": "7.2.8"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:masacms:masacms:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "45C4FA2D-DCEF-4991-B21D-C2BAC3A9DF5C",
+                    "versionStartIncluding": "7.3",
+                    "versionEndExcluding": "7.3.13"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:masacms:masacms:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "ED61DA62-94D4-4081-923F-2674CFC7945A",
+                    "versionStartIncluding": "7.4.0",
+                    "versionEndExcluding": "7.4.6"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/MasaCMS/MasaCMS/commit/fb27f822fe426496af71205fa35208e58823fcf6",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://github.com/MasaCMS/MasaCMS/security/advisories/GHSA-cj9g-v5mq-qrjm",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Exploit",
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 15
+    },
+    {
+      "cve_id": "CVE-2025-13342",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-12-03",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-12-03",
+        "description": "The Frontend Admin by DynamiApps plugin for WordPress is vulnerable to unauthorized modification of arbitrary WordPress options in all versions up to, and including, 3.28.20. This is due to insufficient capability checks and input validation in the ActionOptions::run() save handler. This makes it possible for unauthenticated attackers to modify critical WordPress options such as users_can_register, default_role, and admin_email via submitting crafted form data to public frontend forms.",
+        "title": "The Frontend Admin by DynamiApps plugin for WordPress is vulnerable to unauthorized modification of arbitrary WordPress options in all ve...",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-13342",
+        "sourceIdentifier": "security@wordfence.com",
+        "published": "2025-12-03T13:16:02.007",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The Frontend Admin by DynamiApps plugin for WordPress is vulnerable to unauthorized modification of arbitrary WordPress options in all versions up to, and including, 3.28.20. This is due to insufficient capability checks and input validation in the ActionOptions::run() save handler. This makes it possible for unauthenticated attackers to modify critical WordPress options such as users_can_register, default_role, and admin_email via submitting crafted form data to public frontend forms."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security@wordfence.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-862"
+              }
+            ],
+            "source": "security@wordfence.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://plugins.trac.wordpress.org/changeset/3400432/acf-frontend-form-element",
+            "source": "security@wordfence.com"
+          },
+          {
+            "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/613f2035-3061-429b-b218-83805287e4f3?source=cve",
+            "source": "security@wordfence.com"
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 16
+    },
+    {
+      "cve_id": "CVE-2025-13390",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-12-03",
+          "previous_max": null,
+          "current_max": 10.0
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-12-03",
+        "description": "The WP Directory Kit plugin for WordPress is vulnerable to authentication bypass in all versions up to, and including, 1.4.4 due to incorrect implementation of the authentication algorithm in the \"wdk_generate_auto_login_link\" function. This is due to the feature using a cryptographically weak token generation mechanism. This makes it possible for unauthenticated attackers to gain administrative access and achieve full site takeover via the auto-login endpoint with a predictable token.",
+        "title": "wpdirectorykit wp_directory_kit Auth Bypass",
+        "vendor": "wpdirectorykit",
+        "product": "wp_directory_kit",
+        "attack_type": "Auth Bypass",
+        "cvss_max": 10.0
+      },
+      "cve": {
+        "id": "CVE-2025-13390",
+        "sourceIdentifier": "security@wordfence.com",
+        "published": "2025-12-03T14:15:48.280",
+        "lastModified": "2025-12-16T21:17:39.083",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The WP Directory Kit plugin for WordPress is vulnerable to authentication bypass in all versions up to, and including, 1.4.4 due to incorrect implementation of the authentication algorithm in the \"wdk_generate_auto_login_link\" function. This is due to the feature using a cryptographically weak token generation mechanism. This makes it possible for unauthenticated attackers to gain administrative access and achieve full site takeover via the auto-login endpoint with a predictable token."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+                "baseScore": 10.0,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security@wordfence.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 6.0
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-303"
+              }
+            ],
+            "source": "security@wordfence.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:wpdirectorykit:wp_directory_kit:*:*:*:*:*:wordpress:*:*",
+                    "matchCriteriaId": "000C72F0-7DA8-40EC-B33F-6C87223D41EF",
+                    "versionEndIncluding": "1.4.4"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/d0n601/CVE-2025-13390",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/changeset/3400599/wpdirectorykit/",
+            "source": "security@wordfence.com",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://ryankozak.com/posts/cve-2025-13390/",
+            "source": "security@wordfence.com",
+            "tags": [
+              "Exploit"
+            ]
+          },
+          {
+            "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/6598d171-e68c-4d2f-9cd1-f1574fa90433?source=cve",
+            "source": "security@wordfence.com",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 17
+    },
+    {
+      "cve_id": "CVE-2025-13486",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-12-03",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-12-03",
+        "description": "The Advanced Custom Fields: Extended plugin for WordPress is vulnerable to Remote Code Execution in versions 0.9.0.5 through 0.9.1.1 via the prepare_form() function. This is due to the function accepting user input and then passing that through call_user_func_array(). This makes it possible for unauthenticated attackers to execute arbitrary code on the server, which can be leveraged to inject backdoors or create new administrative user accounts.",
+        "title": "The Advanced Custom Fields: Extended plugin for WordPress is vulnerable to Remote Code Execution in versions 0.9.0.5 through 0.9.1.1 via...",
+        "attack_type": "RCE",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-13486",
+        "sourceIdentifier": "security@wordfence.com",
+        "published": "2025-12-03T07:16:02.840",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The Advanced Custom Fields: Extended plugin for WordPress is vulnerable to Remote Code Execution in versions 0.9.0.5 through 0.9.1.1 via the prepare_form() function. This is due to the function accepting user input and then passing that through call_user_func_array(). This makes it possible for unauthenticated attackers to execute arbitrary code on the server, which can be leveraged to inject backdoors or create new administrative user accounts."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security@wordfence.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-94"
+              }
+            ],
+            "source": "security@wordfence.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://plugins.trac.wordpress.org/changeset/3400134/acf-extended",
+            "source": "security@wordfence.com"
+          },
+          {
+            "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/c508cb73-53e6-4ebe-b3d0-285908b722c9?source=cve",
+            "source": "security@wordfence.com"
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 18
+    },
+    {
+      "cve_id": "CVE-2025-34319",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-12-03",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-12-03",
+        "description": "TOTOLINK N300RT wireless router firmware versions prior to V3.4.0-B20250430 (discovered in V2.1.8-B20201030.1539) contain an OS command injection vulnerability in the Boa formWsc handling functionality. An unauthenticated attacker can send specially crafted requests to trigger command execution via the targetAPSsid request parameter.",
+        "title": "TOTOLINK N300RT wireless router firmware versions prior to V3.4.0-B20250430 (discovered in V2.1.8-B20201030.1539) contain an OS command i...",
+        "attack_type": "Command Injection",
+        "cvss_max": 9.3
+      },
+      "cve": {
+        "id": "CVE-2025-34319",
+        "sourceIdentifier": "disclosure@vulncheck.com",
+        "published": "2025-12-03T17:15:51.840",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "TOTOLINK N300RT wireless router firmware versions prior to V3.4.0-B20250430 (discovered in V2.1.8-B20201030.1539) contain an OS command injection vulnerability in the Boa formWsc handling functionality. An unauthenticated attacker can send specially crafted requests to trigger command execution via the targetAPSsid request parameter."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-78"
+              }
+            ],
+            "source": "disclosure@vulncheck.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://totolink.tw/support_view/N300RT",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://www.totolink.net/home/menu/detail/menu_listtpl/download/id/154/ids/36.html",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://www.vulncheck.com/advisories/totolink-n300rt-boa-formwsc-rce",
+            "source": "disclosure@vulncheck.com"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 19
+    },
+    {
+      "cve_id": "CVE-2025-55182",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-12-03",
+          "previous_max": null,
+          "current_max": 10.0
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-12-03",
+        "description": "A pre-authentication remote code execution vulnerability exists in React Server Components versions 19.0.0, 19.1.0, 19.1.1, and 19.2.0 including the following packages: react-server-dom-parcel, react-server-dom-turbopack, and react-server-dom-webpack. The vulnerable code unsafely deserializes payloads from HTTP requests to Server Function endpoints.",
+        "title": "Meta React Server Components Remote Code Execution Vulnerability",
+        "vendor": "facebook",
+        "product": "react",
+        "attack_type": "RCE",
+        "cvss_max": 10.0
+      },
+      "cve": {
+        "id": "CVE-2025-55182",
+        "sourceIdentifier": "cve-assign@fb.com",
+        "published": "2025-12-03T16:15:56.463",
+        "lastModified": "2025-12-10T02:00:02.557",
+        "vulnStatus": "Analyzed",
+        "cisaExploitAdd": "2025-12-05",
+        "cisaActionDue": "2025-12-12",
+        "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+        "cisaVulnerabilityName": "Meta React Server Components Remote Code Execution Vulnerability",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A pre-authentication remote code execution vulnerability exists in React Server Components versions 19.0.0, 19.1.0, 19.1.1, and 19.2.0 including the following packages: react-server-dom-parcel, react-server-dom-turbopack, and react-server-dom-webpack. The vulnerable code unsafely deserializes payloads from HTTP requests to Server Function endpoints."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+                "baseScore": 10.0,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "cve-assign@fb.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 6.0
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-502"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:facebook:react:19.0.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "C66E1B0F-8C3F-4D27-9F46-B6EC78D8C60B"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:facebook:react:19.1.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "C6C1C3E2-542D-4001-BFA9-6CF5A038971D"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:facebook:react:19.1.1:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "A0907E1C-E2D2-44A4-AA46-CE80BCA4E015"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:facebook:react:19.2.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "0030B5E1-E79E-4C48-B500-91747FE2751D"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:*:*:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "FC2BCD83-CC87-4CDC-AD9B-2055912A8463",
+                    "versionStartIncluding": "15.0.0",
+                    "versionEndExcluding": "15.0.5"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:*:*:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "C5E767D4-E46F-4CA6-A22F-4D0671B9B102",
+                    "versionStartIncluding": "15.1.0",
+                    "versionEndExcluding": "15.1.9"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:*:*:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "5EFB6CB7-4A4F-464A-A1D8-62B50DF0B4BA",
+                    "versionStartIncluding": "15.2.0",
+                    "versionEndExcluding": "15.2.6"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:*:*:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "83AF54D7-410D-42B4-853A-8A1973636542",
+                    "versionStartIncluding": "15.3.0",
+                    "versionEndExcluding": "15.3.6"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:*:*:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "3D666EA7-BDAE-4E67-A331-B7403C3AA482",
+                    "versionStartIncluding": "15.4.0",
+                    "versionEndExcluding": "15.4.8"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:*:*:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "E666ECDA-7A29-4D3D-AC40-357F044AD595",
+                    "versionStartIncluding": "15.5.0",
+                    "versionEndExcluding": "15.5.7"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:*:*:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "CF65554E-4BF0-4344-AE7F-9E09E34E084F",
+                    "versionStartIncluding": "16.0.0",
+                    "versionEndExcluding": "16.0.7"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:14.3.0:canary77:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "B209A306-CE1A-448D-8653-7627302399B7"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:14.3.0:canary78:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "D1DCAC23-7ED0-456B-8AE2-57689199F708"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:14.3.0:canary79:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "8B35D612-AC2A-4697-934F-372E4D5EE3F4"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:14.3.0:canary80:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "A06D2291-5D89-4B76-99E0-52505634A63B"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:14.3.0:canary81:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "8F01F07A-79F7-4F4B-8E3A-9C7D93C83A63"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:14.3.0:canary82:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "9EDA2864-F94B-48EB-98F3-FDBFCECCC4A8"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:14.3.0:canary83:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "4828BEE0-E891-491B-903D-A50B0E37273C"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:14.3.0:canary84:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "55723BB4-E62B-4034-A434-485FE0E6BAF5"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:14.3.0:canary85:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "19F55784-CC11-4024-9A42-EFEEF7B2366F"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:14.3.0:canary86:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "1D694B0A-9BCF-49C8-A787-B0AFE51C7DC5"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:14.3.0:canary87:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "C91F9508-E18D-4928-9DF5-DE2DDBEC56D3"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:15.6.0:-:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "3ED7F693-8012-4F88-BC71-CF108E20664A"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:15.6.0:canary0:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "40EE98AC-754A-4FD9-B51A-9E2674584FD9"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:15.6.0:canary1:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "13B41C54-AF21-4637-A852-F997635B4E83"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:15.6.0:canary10:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "91B41697-2D70-488D-A5C3-CB9D435560CA"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:15.6.0:canary11:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "7D43DB84-7BCF-429B-849A-7189EC1922D0"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:15.6.0:canary12:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "CEC2346B-8DBD-4D53-9866-CFBDD3AACEF2"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:15.6.0:canary13:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "2BC95097-8CA6-42FE-98D7-F968E37C11B7"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:15.6.0:canary14:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "4F8FA85C-1200-4FD2-B5D7-906300748BD4"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:15.6.0:canary15:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "5D0B177B-2A31-48E9-81C7-1024E2452486"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:15.6.0:canary16:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "7CCA01F3-3A14-4450-8A68-B1DA22C685B7"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:15.6.0:canary17:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "1AB351AE-8C29-4E67-8699-0AAC6B3383E2"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:15.6.0:canary18:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "14A34D9D-5FA2-434B-836E-3CE63D716CCB"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:15.6.0:canary19:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "E8440F05-F32B-4D40-90B7-04BF22107D86"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:15.6.0:canary2:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "FB6C6F6D-1EC0-4BD9-97A4-CFDE70DF0C43"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:15.6.0:canary20:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "6189BD4C-A3E2-451B-96B2-FF01250E946D"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:15.6.0:canary21:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "389EE453-8B07-45DD-BE9C-277C9C5CB156"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:15.6.0:canary22:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "BA4D4638-4734-4B16-87AA-EF4B5D2DDD7A"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:15.6.0:canary23:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "D54A2E63-6E0C-4E17-86A8-459B0A7EE00B"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:15.6.0:canary24:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "E6136F0A-3010-4BAD-811B-D047CF5E6F64"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:15.6.0:canary25:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "525EFA40-B14B-47E9-8FBD-45721A802DB6"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:15.6.0:canary26:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "69142944-1EC0-4F94-862E-FA7F2E101101"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:15.6.0:canary27:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "30016C06-372D-4F98-84A8-0732CA054970"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:15.6.0:canary28:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "E1536E2B-84EC-46A3-9B6F-026364A9D927"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:15.6.0:canary29:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "5E6F1F60-30E2-407C-8152-EEEB7EFE24CB"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:15.6.0:canary3:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "3C907301-2C8F-465B-8134-94130E29F5DB"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:15.6.0:canary30:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "E81C89FD-40CB-471E-9967-90ACDCF79373"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:15.6.0:canary31:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "55E8AEEC-A686-49D6-B298-AEE4E838E769"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:15.6.0:canary32:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "CB0618EC-6A0B-4AC3-BF6D-E51AC84C4E15"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:15.6.0:canary33:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "7B27F133-8EB4-4761-A706-DF42D4EB55F6"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:15.6.0:canary34:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "BF975472-B7E7-4AC8-B834-DA19897A4894"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:15.6.0:canary35:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "48A82613-F3FD-4E89-8E4A-F3F05A616171"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:15.6.0:canary36:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "0D42CA1F-7C21-47C1-8A9C-1015286FCBE2"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:15.6.0:canary37:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "7C83A4EF-B96F-40EC-BA1F-FE1370AF78AC"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:15.6.0:canary38:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "C151FDAB-DE34-4A7E-9762-6E99386798BF"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:15.6.0:canary39:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "53025212-05F0-41FE-81F8-023B1784BB8C"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:15.6.0:canary4:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "68EAC2B9-32A5-4721-BB35-16D519CD1BBC"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:15.6.0:canary40:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "7411EF71-CBEB-4127-935F-3C732A1E22AC"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:15.6.0:canary41:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "0C4B8930-1B65-4894-AFA8-C323AA7A8292"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:15.6.0:canary42:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "B4977345-BD8C-41C7-9DD7-1E41D6CC6438"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:15.6.0:canary43:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "EFE030A4-5B14-4C2D-B953-E80C98FB26EE"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:15.6.0:canary44:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "9F616FD4-83BF-4A9A-AFFD-0D3E2544DC7E"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:15.6.0:canary45:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "00512630-8B88-43B0-9ED3-2B33C64CC9A9"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:15.6.0:canary46:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "A88EEF11-C7DA-4E2D-A030-FC177E696557"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:15.6.0:canary47:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "BE8453D9-7275-4A5F-8732-F05662FFF2E8"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:15.6.0:canary48:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "E306B896-9BBB-424B-8D99-7A1A79AEFE9D"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:15.6.0:canary49:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "ACA87B86-33D5-4BEA-A13D-EEB4922D511E"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:15.6.0:canary5:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "77AA0D23-B101-445C-A260-ED3152A93D17"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:15.6.0:canary50:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "7D7DCCF7-FC83-4767-A0C2-C84A8B14F93B"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:15.6.0:canary51:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "FD397568-7F1F-4153-AF08-B22D4D3B45F9"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:15.6.0:canary52:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "984416EF-B121-40CE-B3AD-E22A06BB5844"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:15.6.0:canary53:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "C4B58652-EE24-43CF-8ABE-4A01B2C9938C"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:15.6.0:canary54:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "8090CF73-AEA7-43FC-A960-321BED3B1682"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:15.6.0:canary55:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "823164E5-609D-4F24-86A5-E25618FE86A7"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:15.6.0:canary56:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "E13CD688-63C3-4FFA-9D13-696005F0C155"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:15.6.0:canary57:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "B397B18C-8A7A-4766-9A68-98B26E190A4A"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:15.6.0:canary6:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "2DB345E3-BAD0-497E-93AE-5E4DC669C192"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:15.6.0:canary7:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "840FEB19-2C66-4004-A488-B90219F8AC05"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:15.6.0:canary8:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "C260F966-73D7-43F3-A329-8C558A695821"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:15.6.0:canary9:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "28130A79-39B5-43E8-A690-C8E9C62483F8"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:16.0.0:-:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "5E8548AB-D9E8-4E65-AF24-9F9021F99834"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://react.dev/blog/2025/12/03/critical-security-vulnerability-in-react-server-components",
+            "source": "cve-assign@fb.com",
+            "tags": [
+              "Patch",
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://www.facebook.com/security/advisories/cve-2025-55182",
+            "source": "cve-assign@fb.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "http://www.openwall.com/lists/oss-security/2025/12/03/4",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Mailing List",
+              "Patch",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://news.ycombinator.com/item?id=46136026",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Issue Tracking"
+            ]
+          },
+          {
+            "url": "https://aws.amazon.com/blogs/security/china-nexus-cyber-threat-groups-rapidly-exploit-react2shell-vulnerability-cve-2025-55182/",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2025-55182",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "US Government Resource"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 20
+    },
+    {
+      "cve_id": "CVE-2025-64055",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-12-03",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-12-03",
+        "description": "An issue was discovered in Fanvil x210 V2 2.12.20 allowing unauthenticated attackers on the local network to access administrative functions of the device (e.g. file upload, firmware update, reboot...) via a crafted authentication bypass.",
+        "title": "fanvil x210_firmware Auth Bypass",
+        "vendor": "fanvil",
+        "product": "x210_firmware",
+        "attack_type": "Auth Bypass",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-64055",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2025-12-03T21:15:52.813",
+        "lastModified": "2026-01-09T02:18:23.843",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "An issue was discovered in Fanvil x210 V2 2.12.20 allowing unauthenticated attackers on the local network to access administrative functions of the device (e.g. file upload, firmware update, reboot...) via a crafted authentication bypass."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-287"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:fanvil:x210_firmware:2.12.20:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "B5339CEB-DD13-43D9-9DBB-F58EA2EDC47D"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:fanvil:x210:2.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "826351F9-626E-4EA9-9634-9E04B462AF4A"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "http://fanvil.com",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Product"
+            ]
+          },
+          {
+            "url": "https://github.com/SpikeReply/advisories/blob/main/cve/fanvil/cve-2025-64055.md",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 21
+    },
+    {
+      "cve_id": "CVE-2025-64459",
+      "signal_types": [
+        "EXP"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": {
+          "ref_published": "2025-12-03"
+        },
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-11-05",
+        "description": "An issue was discovered in 5.1 before 5.1.14, 4.2 before 4.2.26, and 5.2 before 5.2.8.\nThe methods `QuerySet.filter()`, `QuerySet.exclude()`, and `QuerySet.get()`, and the class `Q()`, are subject to SQL injection when using a suitably crafted dictionary, with dictionary expansion, as the `_connector` argument.\nEarlier, unsupported Django series (such as 5.0.x, 4.1.x, and 3.2.x) were not evaluated and may also be affected.\nDjango would like to thank cyberstan for reporting this issue.",
+        "title": "djangoproject django SQL Injection",
+        "vendor": "djangoproject",
+        "product": "django",
+        "attack_type": "SQL Injection",
+        "cvss_max": 9.1
+      },
+      "cve": {
+        "id": "CVE-2025-64459",
+        "sourceIdentifier": "6a34fbeb-21d4-45e7-8e0a-62b95bc12c92",
+        "published": "2025-11-05T15:15:41.080",
+        "lastModified": "2025-11-10T18:25:59.883",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "An issue was discovered in 5.1 before 5.1.14, 4.2 before 4.2.26, and 5.2 before 5.2.8.\nThe methods `QuerySet.filter()`, `QuerySet.exclude()`, and `QuerySet.get()`, and the class `Q()`, are subject to SQL injection when using a suitably crafted dictionary, with dictionary expansion, as the `_connector` argument.\nEarlier, unsupported Django series (such as 5.0.x, 4.1.x, and 3.2.x) were not evaluated and may also be affected.\nDjango would like to thank cyberstan for reporting this issue."
+          },
+          {
+            "lang": "es",
+            "value": "Se descubrió un problema en 5.1 anterior a 5.1.14, 4.2 anterior a 4.2.26 y 5.2 anterior a 5.2.8. Los métodos 'QuerySet.filter()', 'QuerySet.exclude()' y 'QuerySet.get()', y la clase 'Q()', están sujetos a inyección SQL cuando se utiliza un diccionario adecuadamente diseñado, con expansión de diccionario, como argumento '_connector'. Series anteriores de Django sin soporte (como 5.0.x, 4.1.x y 3.2.x) no fueron evaluadas y también pueden verse afectadas. Django desea agradecer a cyberstan por informar de este problema."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+                "baseScore": 9.1,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.2
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-89"
+              }
+            ],
+            "source": "6a34fbeb-21d4-45e7-8e0a-62b95bc12c92"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:djangoproject:django:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "5FC7EBE0-A60A-4083-9FB7-E4ADCD2B5F37",
+                    "versionStartIncluding": "4.2",
+                    "versionEndExcluding": "4.2.26"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:djangoproject:django:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "9F3A5471-02DB-428E-815E-516057A901FF",
+                    "versionStartIncluding": "5.1",
+                    "versionEndExcluding": "5.1.14"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:djangoproject:django:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "F56E9016-F93A-4DAE-8070-D3A4909F00A4",
+                    "versionStartIncluding": "5.2",
+                    "versionEndExcluding": "5.2.8"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://docs.djangoproject.com/en/dev/releases/security/",
+            "source": "6a34fbeb-21d4-45e7-8e0a-62b95bc12c92",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://groups.google.com/g/django-announce",
+            "source": "6a34fbeb-21d4-45e7-8e0a-62b95bc12c92",
+            "tags": [
+              "Mailing List"
+            ]
+          },
+          {
+            "url": "https://www.djangoproject.com/weblog/2025/nov/05/security-releases/",
+            "source": "6a34fbeb-21d4-45e7-8e0a-62b95bc12c92",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://shivasurya.me/security/django/2025/11/07/django-sql-injection-CVE-2025-64459.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 78,
+      "rank": 22
+    },
+    {
+      "cve_id": "CVE-2025-65267",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-12-03",
+          "previous_max": null,
+          "current_max": 9.0
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-12-03",
+        "description": "In ERPNext v15.83.2 and Frappe Framework v15.86.0, improper validation of uploaded SVG avatar images allows attackers to embed malicious JavaScript. The payload executes when an administrator clicks the image link to view the avatar, resulting in stored cross-site scripting (XSS). Successful exploitation may lead to account takeover, privilege escalation, or full compromise of the affected ERPNext instance.",
+        "title": "frappe erpnext Privilege Escalation",
+        "vendor": "frappe",
+        "product": "erpnext",
+        "attack_type": "Privilege Escalation",
+        "cvss_max": 9.0
+      },
+      "cve": {
+        "id": "CVE-2025-65267",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2025-12-03T15:15:55.103",
+        "lastModified": "2025-12-05T18:35:19.883",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "In ERPNext v15.83.2 and Frappe Framework v15.86.0, improper validation of uploaded SVG avatar images allows attackers to embed malicious JavaScript. The payload executes when an administrator clicks the image link to view the avatar, resulting in stored cross-site scripting (XSS). Successful exploitation may lead to account takeover, privilege escalation, or full compromise of the affected ERPNext instance."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:H",
+                "baseScore": 9.0,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 2.3,
+              "impactScore": 6.0
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-79"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:frappe:erpnext:15.83.2:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "E8938912-6E20-4913-A21C-321B5C9D9EE8"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:frappe:frappe:15.86.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "B5DC3F26-8D6D-4530-857A-A7D72CE5A711"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/PhDg1410/CVE/tree/main/CVE-2025-65267",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/frappe/erpnext",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Product"
+            ]
+          },
+          {
+            "url": "https://github.com/frappe/frappe",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Product"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 23
+    },
+    {
+      "cve_id": "CVE-2025-66222",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-12-03",
+          "previous_max": null,
+          "current_max": 9.6
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-12-03",
+        "description": "DeepChat is a smart assistant uses artificial intelligence. In 0.5.0 and earlier, there is a Stored Cross-Site Scripting (XSS) vulnerability in the Mermaid diagram renderer allows an attacker to execute arbitrary JavaScript within the application context. By leveraging the exposed Electron IPC bridge, this XSS can be escalated to Remote Code Execution (RCE) by registering and starting a malicious MCP (Model Context Protocol) server.",
+        "title": "thinkinai deepchat RCE",
+        "vendor": "thinkinai",
+        "product": "deepchat",
+        "attack_type": "RCE",
+        "cvss_max": 9.6
+      },
+      "cve": {
+        "id": "CVE-2025-66222",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2025-12-03T19:15:58.237",
+        "lastModified": "2025-12-05T15:37:59.973",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "DeepChat is a smart assistant uses artificial intelligence. In 0.5.0 and earlier, there is a Stored Cross-Site Scripting (XSS) vulnerability in the Mermaid diagram renderer allows an attacker to execute arbitrary JavaScript within the application context. By leveraging the exposed Electron IPC bridge, this XSS can be escalated to Remote Code Execution (RCE) by registering and starting a malicious MCP (Model Context Protocol) server."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H",
+                "baseScore": 9.6,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 6.0
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H",
+                "baseScore": 9.6,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 6.0
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-94"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          },
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-79"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:thinkinai:deepchat:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "5FF85743-6B7D-45B0-96AC-FF0875064030",
+                    "versionEndIncluding": "0.5.0"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/ThinkInAIXYZ/deepchat/commit/371ca7b42e3685aee6e3f0c61e85277ed1ff4db7",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://github.com/ThinkInAIXYZ/deepchat/security/advisories/GHSA-v8v5-c872-mf8r",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Exploit",
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 24
+    },
+    {
+      "cve_id": "CVE-2025-66489",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-12-03",
+          "previous_max": null,
+          "current_max": 9.9
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-12-03",
+        "description": "Cal.com is open-source scheduling software. Prior to 5.9.8, A flaw in the login credentials provider allows an attacker to bypass password verification when a TOTP code is provided, potentially gaining unauthorized access to user accounts. This issue exists due to problematic conditional logic in the authentication flow. This vulnerability is fixed in 5.9.8.",
+        "title": "cal cal.com",
+        "vendor": "cal",
+        "product": "cal.com",
+        "cvss_max": 9.9
+      },
+      "cve": {
+        "id": "CVE-2025-66489",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2025-12-03T20:16:27.057",
+        "lastModified": "2026-02-13T16:03:36.057",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Cal.com is open-source scheduling software. Prior to 5.9.8, A flaw in the login credentials provider allows an attacker to bypass password verification when a TOTP code is provided, potentially gaining unauthorized access to user accounts. This issue exists due to problematic conditional logic in the authentication flow. This vulnerability is fixed in 5.9.8."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.9,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-303"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cal:cal.com:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "97D8E07A-0C42-4AD4-8270-3929F5A4D472",
+                    "versionEndExcluding": "5.9.8"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/calcom/cal.com/security/advisories/GHSA-9r3w-4j8q-pw98",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Third Party Advisory",
+              "Exploit"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 25
+    }
+  ],
+  "source": "https://www.cvelogic.com/threat-intelligence/2025-12-03"
+}
