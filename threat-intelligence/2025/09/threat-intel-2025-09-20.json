@@ -1,0 +1,230 @@
+{
+  "schema_version": "2.2",
+  "generated_at": "2026-06-02T07:33:27Z",
+  "day": "2025-09-20",
+  "window": {
+    "utc_start": "2025-09-20",
+    "utc_end": "2025-09-20",
+    "days": 1
+  },
+  "summary": {
+    "brief": "Open Newsletter — exploitation likelihood rose sharply (EPSS 9.4% → 26% · rising (+17%)).",
+    "bullets": [
+      "Open Newsletter — exploitation likelihood rose sharply (EPSS 9.4% → 26% · rising (+17%))."
+    ],
+    "counts": {
+      "cves": 2,
+      "kev": 0,
+      "exploit": 0,
+      "epss": 1,
+      "cvss": 1,
+      "patch": 0
+    }
+  },
+  "cves": [
+    {
+      "cve_id": "CVE-2006-6785",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 0.09408,
+            "score_date": "2025-08-16"
+          },
+          "current": {
+            "score": 0.26385,
+            "score_date": "2025-09-20"
+          },
+          "delta": 0.16977
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2006-12-28",
+        "description": "The (1) settings.php and (2) subscribers.php scripts in Open Newsletter 2.5 and earlier do not exit when authentication fails, which allows remote attackers to perform unauthorized administrative actions, or execute arbitrary code in conjunction with another vulnerability.",
+        "title": "open_newsletter open_newsletter",
+        "vendor": "open_newsletter",
+        "product": "open_newsletter",
+        "cvss_max": 7.5
+      },
+      "cve": {
+        "id": "CVE-2006-6785",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2006-12-28T00:28:00.000",
+        "lastModified": "2026-04-23T00:35:47.467",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The (1) settings.php and (2) subscribers.php scripts in Open Newsletter 2.5 and earlier do not exit when authentication fails, which allows remote attackers to perform unauthorized administrative actions, or execute arbitrary code in conjunction with another vulnerability."
+          },
+          {
+            "lang": "es",
+            "value": "Las secuencias de comandos (1) settings.php y (2) subscribers.php en Open Newsletter 2.5 y anteriores no terminan cuando la autenticación falla, lo que permite a atacantes remotos ejecutar acciones administrativas no autorizadas, o ejecutar código de su elección en conjunción con otra vulnerabilidad."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV2": [
+            {
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+                "baseScore": 7.5,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "baseSeverity": "HIGH",
+              "exploitabilityScore": 10.0,
+              "impactScore": 6.4
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "NVD-CWE-Other"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:open_newsletter:open_newsletter:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "F62158FA-3A2E-483F-A037-5846A40BE9DB",
+                    "versionEndIncluding": "2.5"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:open_newsletter:open_newsletter:2.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "AECC88D1-1290-46B9-BCC4-CD070B7486D0"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "http://secunia.com/advisories/23476",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://www.securityfocus.com/bid/21775",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit"
+            ]
+          },
+          {
+            "url": "https://www.exploit-db.com/exploits/2981",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          }
+        ]
+      },
+      "risk_score": 82,
+      "rank": 1
+    },
+    {
+      "cve_id": "CVE-2025-40925",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-09-20",
+          "previous_max": null,
+          "current_max": 9.1
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-09-20",
+        "description": "Starch versions 0.14 and earlier generate session ids insecurely.\n\nThe default session id generator returns a SHA-1 hash seeded with a counter, the epoch time, the built-in rand function, the PID, and internal Perl reference addresses. The PID will come from a small set of numbers, and the epoch time may be guessed, if it is not leaked from the HTTP Date header. The built-in rand function is unsuitable for cryptographic usage.\n\nPredicable session ids could allow an attacker to gain access to systems.",
+        "title": "Starch versions 0.14 and earlier generate session ids insecurely.",
+        "cvss_max": 9.1
+      },
+      "cve": {
+        "id": "CVE-2025-40925",
+        "sourceIdentifier": "9b29abf9-4ab0-4765-b253-1875cd9b441e",
+        "published": "2025-09-20T13:15:34.920",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Starch versions 0.14 and earlier generate session ids insecurely.\n\nThe default session id generator returns a SHA-1 hash seeded with a counter, the epoch time, the built-in rand function, the PID, and internal Perl reference addresses. The PID will come from a small set of numbers, and the epoch time may be guessed, if it is not leaked from the HTTP Date header. The built-in rand function is unsuitable for cryptographic usage.\n\nPredicable session ids could allow an attacker to gain access to systems."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+                "baseScore": 9.1,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.2
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-338"
+              },
+              {
+                "lang": "en",
+                "value": "CWE-340"
+              }
+            ],
+            "source": "9b29abf9-4ab0-4765-b253-1875cd9b441e"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/bluefeet/Starch/commit/5573449e64e0660f7ee209d1eab5881d4ccbee3b.patch",
+            "source": "9b29abf9-4ab0-4765-b253-1875cd9b441e"
+          },
+          {
+            "url": "https://github.com/bluefeet/Starch/pull/5",
+            "source": "9b29abf9-4ab0-4765-b253-1875cd9b441e"
+          },
+          {
+            "url": "https://metacpan.org/dist/Starch/source/lib/Starch/Manager.pm",
+            "source": "9b29abf9-4ab0-4765-b253-1875cd9b441e"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 2
+    }
+  ],
+  "source": "https://www.cvelogic.com/threat-intelligence/2025-09-20"
+}

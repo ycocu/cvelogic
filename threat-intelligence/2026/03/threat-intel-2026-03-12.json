@@ -1,0 +1,1566 @@
+{
+  "schema_version": "2.2",
+  "generated_at": "2026-06-02T07:34:37Z",
+  "day": "2026-03-12",
+  "window": {
+    "utc_start": "2026-03-12",
+    "utc_end": "2026-03-12",
+    "days": 1
+  },
+  "summary": {
+    "brief": "74cms — exploitation likelihood rose sharply (EPSS 48% → 62% · rising (+14%)). · 10 new critical disclosures — review patch status on exposed services.",
+    "bullets": [
+      "74cms — exploitation likelihood rose sharply (EPSS 48% → 62% · rising (+14%)).",
+      "10 new critical disclosures — review patch status on exposed services."
+    ],
+    "counts": {
+      "cves": 11,
+      "kev": 0,
+      "exploit": 0,
+      "epss": 1,
+      "cvss": 10,
+      "patch": 0
+    }
+  },
+  "cves": [
+    {
+      "cve_id": "CVE-2020-29279",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 0.47864,
+            "score_date": "2026-01-19"
+          },
+          "current": {
+            "score": 0.62162,
+            "score_date": "2026-03-12"
+          },
+          "delta": 0.14298
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2020-12-02",
+        "description": "PHP remote file inclusion in the assign_resume_tpl method in Application/Common/Controller/BaseController.class.php in 74CMS before 6.0.48 allows remote code execution.",
+        "title": "74cms 74cms RCE",
+        "vendor": "74cms",
+        "product": "74cms",
+        "attack_type": "RCE",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2020-29279",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2020-12-02T22:15:10.353",
+        "lastModified": "2024-11-21T05:23:51.460",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "PHP remote file inclusion in the assign_resume_tpl method in Application/Common/Controller/BaseController.class.php in 74CMS before 6.0.48 allows remote code execution."
+          },
+          {
+            "lang": "es",
+            "value": "Una inclusión de archivos remotos PHP en el método assign_resume_tpl en el archivo Application/Common/Controller/BaseController.class.php en 74CMS versiones anteriores a 6.0.48, permite una ejecución de código remota"
+          }
+        ],
+        "metrics": {
+          "cvssMetricV2": [
+            {
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+                "baseScore": 7.5,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "baseSeverity": "HIGH",
+              "exploitabilityScore": 10.0,
+              "impactScore": 6.4
+            }
+          ],
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "NVD-CWE-noinfo"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:74cms:74cms:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "D1D50DDA-1D9E-41EB-AD11-E6EFFB9BD329",
+                    "versionEndExcluding": "6.0.48"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "http://www.74cms.com/news/show-2497.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit",
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/BigTiger2020/74CMS/blob/main/README.md",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 86,
+      "rank": 1
+    },
+    {
+      "cve_id": "CVE-2026-3611",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-03-12",
+          "previous_max": null,
+          "current_max": 10.0
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-03-12",
+        "description": "The Honeywell IQ4x building management controller, exposes its full web-based HMI without authentication in its factory-default configuration. With no user module configured, security is disabled by design and the system operates under a System Guest (level 100) context, granting read/write privileges to any party able to reach the HTTP interface. Authentication controls are only enforced after a web user is created via U.htm, which dynamically enables the user module. Because this function is accessible prior to authentication, a remote user can create a new account with administrative read/write permissions enabling the user module and imposing authentication under attacker-controlled credentials. This action can effectively lock legitimate operators out of local and web-based configuration and administration.",
+        "title": "The Honeywell IQ4x building management controller, exposes its full web-based HMI without authentication in its factory-default configura...",
+        "attack_type": "privilege escalation",
+        "cvss_max": 10.0
+      },
+      "cve": {
+        "id": "CVE-2026-3611",
+        "sourceIdentifier": "ics-cert@hq.dhs.gov",
+        "published": "2026-03-12T21:16:27.693",
+        "lastModified": "2026-03-13T20:06:54.667",
+        "vulnStatus": "Awaiting Analysis",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The Honeywell IQ4x building management controller, exposes its full web-based HMI without authentication in its factory-default configuration. With no user module configured, security is disabled by design and the system operates under a System Guest (level 100) context, granting read/write privileges to any party able to reach the HTTP interface. Authentication controls are only enforced after a web user is created via U.htm, which dynamically enables the user module. Because this function is accessible prior to authentication, a remote user can create a new account with administrative read/write permissions enabling the user module and imposing authentication under attacker-controlled credentials. This action can effectively lock legitimate operators out of local and web-based configuration and administration."
+          },
+          {
+            "lang": "es",
+            "value": "El controlador de gestión de edificios Honeywell IQ4x expone su HMI completo basado en web sin autenticación en su configuración predeterminada de fábrica. Al no tener ningún módulo de usuario configurado, la seguridad está deshabilitada por diseño y el sistema opera bajo un contexto de Invitado del Sistema (nivel 100), otorgando privilegios de lectura/escritura a cualquier parte capaz de alcanzar la interfaz HTTP. Los controles de autenticación solo se aplican después de que se crea un usuario web a través de U.htm, lo que habilita dinámicamente el módulo de usuario. Debido a que esta función es accesible antes de la autenticación, un usuario remoto puede crear una nueva cuenta con permisos administrativos de lectura/escritura, habilitando el módulo de usuario e imponiendo la autenticación bajo credenciales controladas por el atacante. Esta acción puede bloquear eficazmente a los operadores legítimos de la configuración y administración local y basada en web."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+                "baseScore": 10.0,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "ics-cert@hq.dhs.gov",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 6.0
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 10.0,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "ics-cert@hq.dhs.gov",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-306"
+              }
+            ],
+            "source": "ics-cert@hq.dhs.gov"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/cisagov/CSAF/blob/develop/csaf_files/OT/white/2026/icsa-26-069-03.json",
+            "source": "ics-cert@hq.dhs.gov"
+          },
+          {
+            "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-069-03",
+            "source": "ics-cert@hq.dhs.gov"
+          },
+          {
+            "url": "https://www.honeywell.com/us/en/contact",
+            "source": "ics-cert@hq.dhs.gov"
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 2
+    },
+    {
+      "cve_id": "CVE-2025-70245",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-03-12",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-03-12",
+        "description": "Stack buffer overflow vulnerability in D-Link DIR-513 v1.10 via the curTime parameter to goform/formSetWizardSelectMode.",
+        "title": "dlink dir-513_firmware Buffer Overflow",
+        "vendor": "dlink",
+        "product": "dir-513_firmware",
+        "attack_type": "Buffer Overflow",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-70245",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2026-03-12T19:16:15.803",
+        "lastModified": "2026-03-13T19:53:53.807",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Stack buffer overflow vulnerability in D-Link DIR-513 v1.10 via the curTime parameter to goform/formSetWizardSelectMode."
+          },
+          {
+            "lang": "es",
+            "value": "Vulnerabilidad de desbordamiento de búfer de pila en D-Link DIR-513 v1.10 a través del parámetro curTime a goform/formSetWizardSelectMode."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                "baseScore": 7.5,
+                "baseSeverity": "HIGH"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 3.6
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-787"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          },
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-121"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:dlink:dir-513_firmware:1.10:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "3DF100F1-CDF4-4B41-B19F-D576B72DC3CD"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:dlink:dir-513:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "0BA55B8A-4781-4004-B936-0F212C1A6316"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/akuma-QAQ/CVEreport/tree/main/D-link/CVE-2025-70245",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.dlink.com.cn/techsupport/ProductInfo.aspx?m=DIR-513",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Product"
+            ]
+          },
+          {
+            "url": "https://www.dlink.com/en/security-bulletin/",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 3
+    },
+    {
+      "cve_id": "CVE-2026-26793",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-03-12",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-03-12",
+        "description": "GL-iNet GL-AR300M16 v4.3.11 was discovered to contain a command injection vulnerability via the set_config function. This vulnerability allows attackers to execute arbitrary commands via a crafted input.",
+        "title": "gl-inet ar300m16_firmware Command Injection",
+        "vendor": "gl-inet",
+        "product": "ar300m16_firmware",
+        "attack_type": "Command Injection",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2026-26793",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2026-03-12T19:16:16.073",
+        "lastModified": "2026-03-13T16:02:22.993",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "GL-iNet GL-AR300M16 v4.3.11 was discovered to contain a command injection vulnerability via the set_config function. This vulnerability allows attackers to execute arbitrary commands via a crafted input."
+          },
+          {
+            "lang": "es",
+            "value": "GL-iNet GL-AR300M16 v4.3.11 se descubrió que contenía una vulnerabilidad de inyección de comandos a través de la función set_config. Esta vulnerabilidad permite a los atacantes ejecutar comandos arbitrarios a través de una entrada manipulada."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-77"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:gl-inet:ar300m16_firmware:4.3.11:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "FD9AA29E-C1C0-4F18-AB85-DA8285B74EE3"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:gl-inet:ar300m16:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "FA3E349B-C40F-4DE6-B977-CF677B2F9814"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/sezangel/IOT-vul/tree/main/GL-iNet/GL-AR300M16/set_config",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 4
+    },
+    {
+      "cve_id": "CVE-2026-26795",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-03-12",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-03-12",
+        "description": "GL-iNet GL-AR300M16 v4.3.11 was discovered to contain a command injection vulnerability via the module parameter in the M.get_system_log function. This vulnerability allows attackers to execute arbitrary commands via a crafted input.",
+        "title": "gl-inet ar300m16_firmware Command Injection",
+        "vendor": "gl-inet",
+        "product": "ar300m16_firmware",
+        "attack_type": "Command Injection",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2026-26795",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2026-03-12T18:16:23.070",
+        "lastModified": "2026-03-16T14:18:27.577",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "GL-iNet GL-AR300M16 v4.3.11 was discovered to contain a command injection vulnerability via the module parameter in the M.get_system_log function. This vulnerability allows attackers to execute arbitrary commands via a crafted input."
+          },
+          {
+            "lang": "es",
+            "value": "Se descubrió que GL-iNet GL-AR300M16 v4.3.11 contenía una vulnerabilidad de inyección de comandos a través del parámetro module en la función M.get_system_log. Esta vulnerabilidad permite a los atacantes ejecutar comandos arbitrarios mediante una entrada manipulada."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-77"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          },
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-77"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:gl-inet:ar300m16_firmware:4.3.11:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "FD9AA29E-C1C0-4F18-AB85-DA8285B74EE3"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:gl-inet:ar300m16:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "FA3E349B-C40F-4DE6-B977-CF677B2F9814"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/sezangel/IOT-vul/tree/main/GL-iNet/GL-AR300M16/logread--get_system_log",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 5
+    },
+    {
+      "cve_id": "CVE-2026-28252",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-03-12",
+          "previous_max": null,
+          "current_max": 9.2
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-03-12",
+        "description": "A Use of a Broken or Risky Cryptographic Algorithm vulnerability in Trane Tracer SC, Tracer SC+, and Tracer Concierge could allow an attacker to bypass authentication and gain root-level access to the device.",
+        "title": "trane tracer_concierge",
+        "vendor": "trane",
+        "product": "tracer_sc_firmware",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2026-28252",
+        "sourceIdentifier": "ics-cert@hq.dhs.gov",
+        "published": "2026-03-12T18:16:23.190",
+        "lastModified": "2026-03-27T16:22:41.620",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A Use of a Broken or Risky Cryptographic Algorithm vulnerability in Trane Tracer SC, Tracer SC+, and Tracer Concierge could allow an attacker to bypass authentication and gain root-level access to the device."
+          },
+          {
+            "lang": "es",
+            "value": "Una vulnerabilidad de uso de algoritmo criptográfico roto o arriesgado en Trane Tracer SC, Tracer SC+ y Tracer Concierge podría permitir a un atacante eludir la autenticación y obtener acceso a nivel de root al dispositivo."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.2,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "ics-cert@hq.dhs.gov",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-327"
+              }
+            ],
+            "source": "ics-cert@hq.dhs.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:trane:tracer_sc_firmware:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "BBD8A909-6B7C-43B6-A3A0-FD48BD3D2C18",
+                    "versionEndIncluding": "4.4"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:trane:tracer_sc_firmware:4.4:service_pack1:*:*:*:*:*:*",
+                    "matchCriteriaId": "43AD695C-9ACA-4BC4-9450-54B0A3D29B54"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:trane:tracer_sc_firmware:4.4:service_pack2:*:*:*:*:*:*",
+                    "matchCriteriaId": "B38311B5-C8E8-4677-9EB5-1FF5A4913ED8"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:trane:tracer_sc_firmware:4.4:service_pack3:*:*:*:*:*:*",
+                    "matchCriteriaId": "85891146-8A17-4745-8909-97F0999E7973"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:trane:tracer_sc_firmware:4.4:service_pack4:*:*:*:*:*:*",
+                    "matchCriteriaId": "9F2D9C28-3AA6-44BF-A10A-E07B291B9A7E"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:trane:tracer_sc_firmware:4.4:service_pack5:*:*:*:*:*:*",
+                    "matchCriteriaId": "55728992-1027-4127-9373-B387D895135A"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:trane:tracer_sc_firmware:4.4:service_pack6:*:*:*:*:*:*",
+                    "matchCriteriaId": "1E07D9C2-BD89-4819-8F51-C4E8F3D46678"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:trane:tracer_sc:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "8588A8A1-256D-4A24-9911-B0EE946F34EE"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:trane:tracer_sc\\+_firmware:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "ED7923B0-A1FF-4A1E-839A-004FBE838730",
+                    "versionEndExcluding": "6.3.2310"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:trane:tracer_sc\\+:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "0B249F8B-02B1-45F6-886F-6AA76CBBFFFC"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:trane:tracer_concierge:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "E29DD1A7-FA40-440B-8B63-10939823234B",
+                    "versionEndExcluding": "6.3.2310"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-071-01",
+            "source": "ics-cert@hq.dhs.gov",
+            "tags": [
+              "Third Party Advisory",
+              "US Government Resource"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 6
+    },
+    {
+      "cve_id": "CVE-2026-32137",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-03-12",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-03-12",
+        "description": "Dataease is an open source data visualization analysis tool. Prior to 2.10.20, The table parameter for /de2api/datasource/previewData is directly concatenated into the SQL statement without any filtering or parameterization. Since tableName is a user-controllable string, attackers can inject malicious SQL statements by constructing malicious table names. This vulnerability is fixed in 2.10.20.",
+        "title": "dataease dataease SQL injection",
+        "vendor": "dataease",
+        "product": "dataease",
+        "attack_type": "SQL injection",
+        "cvss_max": 9.3
+      },
+      "cve": {
+        "id": "CVE-2026-32137",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2026-03-12T18:16:25.257",
+        "lastModified": "2026-03-13T16:03:02.080",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Dataease is an open source data visualization analysis tool. Prior to 2.10.20, The table parameter for /de2api/datasource/previewData is directly concatenated into the SQL statement without any filtering or parameterization. Since tableName is a user-controllable string, attackers can inject malicious SQL statements by constructing malicious table names. This vulnerability is fixed in 2.10.20."
+          },
+          {
+            "lang": "es",
+            "value": "Dataease es una herramienta de análisis de visualización de datos de código abierto. Antes de la 2.10.20, el parámetro table para /de2api/datasource/previewData se concatena directamente en la sentencia SQL sin ningún tipo de filtrado o parametrización. Dado que tableName es una cadena controlable por el usuario, los atacantes pueden inyectar sentencias SQL maliciosas construyendo nombres de tabla maliciosos. Esta vulnerabilidad se corrigió en la 2.10.20."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 8.8,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-89"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:dataease:dataease:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "788CE210-A4A2-469E-B250-E5B1A46FA2CD",
+                    "versionEndExcluding": "2.10.20"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/dataease/dataease/security/advisories/GHSA-vgm2-269h-8624",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Exploit",
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 7
+    },
+    {
+      "cve_id": "CVE-2026-32140",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-03-12",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-03-12",
+        "description": "Dataease is an open source data visualization analysis tool. Prior to 2.10.20, By controlling the IniFile parameter, an attacker can force the JDBC driver to load an attacker-controlled configuration file. This configuration file can inject dangerous JDBC properties, leading to remote code execution. The Redshift JDBC driver execution flow reaches a method named getJdbcIniFile. The getJdbcIniFile method implements an aggressive automatic configuration file discovery mechanism. If not explicitly restricted, it searches for a file named rsjdbc.ini. In a JDBC URL context, users can explicitly specify the configuration file via URL parameters, which allows arbitrary files on the server to be loaded as JDBC configuration files. Within the Redshift JDBC driver properties, the parameter IniFile is explicitly supported and used to load an external configuration file. This vulnerability is fixed in 2.10.20.",
+        "title": "dataease dataease RCE",
+        "vendor": "dataease",
+        "product": "dataease",
+        "attack_type": "RCE",
+        "cvss_max": 9.3
+      },
+      "cve": {
+        "id": "CVE-2026-32140",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2026-03-12T18:16:25.573",
+        "lastModified": "2026-03-13T19:54:40.230",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Dataease is an open source data visualization analysis tool. Prior to 2.10.20, By controlling the IniFile parameter, an attacker can force the JDBC driver to load an attacker-controlled configuration file. This configuration file can inject dangerous JDBC properties, leading to remote code execution. The Redshift JDBC driver execution flow reaches a method named getJdbcIniFile. The getJdbcIniFile method implements an aggressive automatic configuration file discovery mechanism. If not explicitly restricted, it searches for a file named rsjdbc.ini. In a JDBC URL context, users can explicitly specify the configuration file via URL parameters, which allows arbitrary files on the server to be loaded as JDBC configuration files. Within the Redshift JDBC driver properties, the parameter IniFile is explicitly supported and used to load an external configuration file. This vulnerability is fixed in 2.10.20."
+          },
+          {
+            "lang": "es",
+            "value": "Dataease es una herramienta de análisis de visualización de datos de código abierto. Anterior a la versión 2.10.20, al controlar el parámetro IniFile, un atacante puede forzar al controlador JDBC a cargar un archivo de configuración controlado por el atacante. Este archivo de configuración puede inyectar propiedades JDBC peligrosas, lo que lleva a la ejecución remota de código. El flujo de ejecución del controlador JDBC de Redshift alcanza un método llamado getJdbcIniFile. El método getJdbcIniFile implementa un mecanismo agresivo de descubrimiento automático de archivos de configuración. Si no se restringe explícitamente, busca un archivo llamado rsjdbc.ini. En un contexto de URL JDBC, los usuarios pueden especificar explícitamente el archivo de configuración a través de parámetros de URL, lo que permite que archivos arbitrarios en el servidor se carguen como archivos de configuración JDBC. Dentro de las propiedades del controlador JDBC de Redshift, el parámetro IniFile es explícitamente compatible y se utiliza para cargar un archivo de configuración externo. Esta vulnerabilidad se corrige en la versión 2.10.20."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 8.8,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-22"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:dataease:dataease:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "788CE210-A4A2-469E-B250-E5B1A46FA2CD",
+                    "versionEndExcluding": "2.10.20"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/dataease/dataease/security/advisories/GHSA-jc9q-3jfw-mch4",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Exploit",
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 8
+    },
+    {
+      "cve_id": "CVE-2026-32242",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-03-12",
+          "previous_max": null,
+          "current_max": 9.1
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-03-12",
+        "description": "Parse Server is an open source backend that can be deployed to any infrastructure that can run Node.js. Prior to 9.6.0-alpha.11 and 8.6.37, Parse Server's built-in OAuth2 auth adapter exports a singleton instance that is reused directly across all OAuth2 provider configurations. Under concurrent authentication requests for different OAuth2 providers, one provider's token validation may execute using another provider's configuration, potentially allowing a token that should be rejected by one provider to be accepted because it is validated against a different provider's policy. Deployments that configure multiple OAuth2 providers via the oauth2: true flag are affected. This vulnerability is fixed in 9.6.0-alpha.11 and 8.6.37.",
+        "title": "parseplatform parse-server",
+        "vendor": "parseplatform",
+        "product": "parse-server",
+        "cvss_max": 9.1
+      },
+      "cve": {
+        "id": "CVE-2026-32242",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2026-03-12T19:16:19.230",
+        "lastModified": "2026-03-13T16:57:55.797",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Parse Server is an open source backend that can be deployed to any infrastructure that can run Node.js. Prior to 9.6.0-alpha.11 and 8.6.37, Parse Server's built-in OAuth2 auth adapter exports a singleton instance that is reused directly across all OAuth2 provider configurations. Under concurrent authentication requests for different OAuth2 providers, one provider's token validation may execute using another provider's configuration, potentially allowing a token that should be rejected by one provider to be accepted because it is validated against a different provider's policy. Deployments that configure multiple OAuth2 providers via the oauth2: true flag are affected. This vulnerability is fixed in 9.6.0-alpha.11 and 8.6.37."
+          },
+          {
+            "lang": "es",
+            "value": "Parse Server es un backend de código abierto que puede ser desplegado en cualquier infraestructura que pueda ejecutar Node.js. Antes de 9.6.0-alpha.11 y 8.6.37, el adaptador de autenticación OAuth2 integrado de Parse Server exporta una instancia singleton que se reutiliza directamente en todas las configuraciones de proveedor OAuth2. Bajo solicitudes de autenticación concurrentes para diferentes proveedores OAuth2, la validación de token de un proveedor puede ejecutarse utilizando la configuración de otro proveedor, permitiendo potencialmente que un token que debería ser rechazado por un proveedor sea aceptado porque se valida contra la política de un proveedor diferente. Las implementaciones que configuran múltiples proveedores OAuth2 a través del flag oauth2: true se ven afectadas. Esta vulnerabilidad está corregida en 9.6.0-alpha.11 y 8.6.37."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N",
+                "baseScore": 7.4,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 2.2,
+              "impactScore": 5.2
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:N/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.1,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-362"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:parseplatform:parse-server:*:*:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "26D5EC5A-CBD8-4879-9F52-58CD634C6953",
+                    "versionEndExcluding": "8.6.37"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:parseplatform:parse-server:*:*:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "1BAC01F8-0899-482C-8D91-64671BF2859A",
+                    "versionStartIncluding": "9.0.0",
+                    "versionEndExcluding": "9.6.0"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:parseplatform:parse-server:9.6.0:alpha1:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "BBED261F-CA1B-44BC-9C3A-37378590EFEE"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:parseplatform:parse-server:9.6.0:alpha10:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "418338C9-6AEC-492C-ACA4-9B3C0AAE149C"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:parseplatform:parse-server:9.6.0:alpha2:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "EDC98AF7-8620-4A25-9BE5-623672599677"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:parseplatform:parse-server:9.6.0:alpha3:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "DF340605-8CC8-4543-9F5D-E8602D258CED"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:parseplatform:parse-server:9.6.0:alpha4:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "A052DFCA-EDCC-43D7-82C7-E5311F6F7687"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:parseplatform:parse-server:9.6.0:alpha5:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "12B11714-B961-4330-B241-FC5AF94FDBE8"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:parseplatform:parse-server:9.6.0:alpha6:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "37A7C42B-4986-4BB6-BB27-0324A9AA1CFF"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:parseplatform:parse-server:9.6.0:alpha7:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "C793834B-64B4-4DE9-BD7D-79B52C30C34E"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:parseplatform:parse-server:9.6.0:alpha8:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "7AD455C8-88BE-4A0A-B33D-3A7811FFB753"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:parseplatform:parse-server:9.6.0:alpha9:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "26C475A2-997C-4C3A-8CB6-04AB3534BBC3"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/parse-community/parse-server/releases/tag/8.6.37",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Product",
+              "Release Notes"
+            ]
+          },
+          {
+            "url": "https://github.com/parse-community/parse-server/releases/tag/9.6.0-alpha.11",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Product",
+              "Release Notes"
+            ]
+          },
+          {
+            "url": "https://github.com/parse-community/parse-server/security/advisories/GHSA-2cjm-2gwv-m892",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Patch",
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 9
+    },
+    {
+      "cve_id": "CVE-2026-32248",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-03-12",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-03-12",
+        "description": "Parse Server is an open source backend that can be deployed to any infrastructure that can run Node.js. Prior to 9.6.0-alpha.12 and 8.6.38, an unauthenticated attacker can take over any user account that was created with an authentication provider that does not validate the format of the user identifier (e.g. anonymous authentication). By sending a crafted login request, the attacker can cause the server to perform a pattern-matching query instead of an exact-match lookup, allowing the attacker to match an existing user and obtain a valid session token for that user's account. Both MongoDB and PostgreSQL database backends are affected. Any Parse Server deployment that allows anonymous authentication (enabled by default) is vulnerable. This vulnerability is fixed in 9.6.0-alpha.12 and 8.6.38.",
+        "title": "parseplatform parse-server",
+        "vendor": "parseplatform",
+        "product": "parse-server",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2026-32248",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2026-03-12T20:16:05.357",
+        "lastModified": "2026-03-13T19:00:34.193",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Parse Server is an open source backend that can be deployed to any infrastructure that can run Node.js. Prior to 9.6.0-alpha.12 and 8.6.38, an unauthenticated attacker can take over any user account that was created with an authentication provider that does not validate the format of the user identifier (e.g. anonymous authentication). By sending a crafted login request, the attacker can cause the server to perform a pattern-matching query instead of an exact-match lookup, allowing the attacker to match an existing user and obtain a valid session token for that user's account. Both MongoDB and PostgreSQL database backends are affected. Any Parse Server deployment that allows anonymous authentication (enabled by default) is vulnerable. This vulnerability is fixed in 9.6.0-alpha.12 and 8.6.38."
+          },
+          {
+            "lang": "es",
+            "value": "Parse Server es un backend de código abierto que puede ser desplegado en cualquier infraestructura que pueda ejecutar Node.js. Antes de 9.6.0-alpha.12 y 8.6.38, un atacante no autenticado puede tomar el control de cualquier cuenta de usuario que fue creada con un proveedor de autenticación que no valida el formato del identificador de usuario (p. ej., autenticación anónima). Al enviar una solicitud de inicio de sesión manipulada, el atacante puede hacer que el servidor realice una consulta de coincidencia de patrones en lugar de una búsqueda de coincidencia exacta, permitiendo al atacante hacer coincidir un usuario existente y obtener un token de sesión válido para la cuenta de ese usuario. Ambos backends de base de datos MongoDB y PostgreSQL están afectados. Cualquier despliegue de Parse Server que permite la autenticación anónima (habilitada por defecto) es vulnerable. Esta vulnerabilidad está corregida en 9.6.0-alpha.12 y 8.6.38."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-943"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:parseplatform:parse-server:*:*:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "69370958-2667-4F7E-BE2B-184AADD5C811",
+                    "versionEndExcluding": "8.6.38"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:parseplatform:parse-server:*:*:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "1BAC01F8-0899-482C-8D91-64671BF2859A",
+                    "versionStartIncluding": "9.0.0",
+                    "versionEndExcluding": "9.6.0"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:parseplatform:parse-server:9.6.0:alpha1:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "BBED261F-CA1B-44BC-9C3A-37378590EFEE"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:parseplatform:parse-server:9.6.0:alpha10:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "418338C9-6AEC-492C-ACA4-9B3C0AAE149C"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:parseplatform:parse-server:9.6.0:alpha11:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "808B6482-BF8E-407D-8462-E757657CC323"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:parseplatform:parse-server:9.6.0:alpha2:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "EDC98AF7-8620-4A25-9BE5-623672599677"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:parseplatform:parse-server:9.6.0:alpha3:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "DF340605-8CC8-4543-9F5D-E8602D258CED"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:parseplatform:parse-server:9.6.0:alpha4:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "A052DFCA-EDCC-43D7-82C7-E5311F6F7687"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:parseplatform:parse-server:9.6.0:alpha5:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "12B11714-B961-4330-B241-FC5AF94FDBE8"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:parseplatform:parse-server:9.6.0:alpha6:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "37A7C42B-4986-4BB6-BB27-0324A9AA1CFF"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:parseplatform:parse-server:9.6.0:alpha7:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "C793834B-64B4-4DE9-BD7D-79B52C30C34E"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:parseplatform:parse-server:9.6.0:alpha8:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "7AD455C8-88BE-4A0A-B33D-3A7811FFB753"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:parseplatform:parse-server:9.6.0:alpha9:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "26C475A2-997C-4C3A-8CB6-04AB3534BBC3"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/parse-community/parse-server/releases/tag/8.6.38",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Release Notes"
+            ]
+          },
+          {
+            "url": "https://github.com/parse-community/parse-server/releases/tag/9.6.0-alpha.12",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Release Notes"
+            ]
+          },
+          {
+            "url": "https://github.com/parse-community/parse-server/security/advisories/GHSA-5fw2-8jcv-xh87",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 10
+    },
+    {
+      "cve_id": "CVE-2026-32251",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-03-12",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-03-12",
+        "description": "Tolgee is an open-source localization platform. Prior to 3.166.3, the XML parsers used for importing Android XML resources (.xml) and .resx files don't disable external entity processing. An authenticated user who can import translation files into a project can exploit this to read arbitrary files from the server and make server-side requests to internal services. This vulnerability is fixed in 3.166.3.",
+        "title": "tolgee tolgee",
+        "vendor": "tolgee",
+        "product": "tolgee",
+        "cvss_max": 9.3
+      },
+      "cve": {
+        "id": "CVE-2026-32251",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2026-03-12T20:16:05.697",
+        "lastModified": "2026-03-20T15:57:42.580",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Tolgee is an open-source localization platform. Prior to 3.166.3, the XML parsers used for importing Android XML resources (.xml) and .resx files don't disable external entity processing. An authenticated user who can import translation files into a project can exploit this to read arbitrary files from the server and make server-side requests to internal services. This vulnerability is fixed in 3.166.3."
+          },
+          {
+            "lang": "es",
+            "value": "Tolgee es una plataforma de localización de código abierto. Antes de la versión 3.166.3, los analizadores XML utilizados para importar recursos XML de Android (.xml) y archivos .resx no deshabilitaban el procesamiento de entidades externas. Un usuario autenticado que puede importar archivos de traducción a un proyecto puede explotar esto para leer archivos arbitrarios del servidor y realizar solicitudes del lado del servidor a servicios internos. Esta vulnerabilidad está corregida en la versión 3.166.3."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+                "baseScore": 6.5,
+                "baseSeverity": "MEDIUM"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 3.6
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:H/SI:H/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-611"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:tolgee:tolgee:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "C9D93C1F-8DF0-40F2-B821-1CB81ED2FDA2",
+                    "versionEndExcluding": "3.166.3"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/tolgee/tolgee-platform/commit/7c71d5a849c9984a8c5c55b121992417442a47a5",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://github.com/tolgee/tolgee-platform/releases/tag/v3.166.3",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Release Notes"
+            ]
+          },
+          {
+            "url": "https://github.com/tolgee/tolgee-platform/security/advisories/GHSA-rcvv-64pq-vxfx",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Exploit",
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 11
+    }
+  ],
+  "source": "https://www.cvelogic.com/threat-intelligence/2026-03-12"
+}

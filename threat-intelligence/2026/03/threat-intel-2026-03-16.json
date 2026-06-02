@@ -1,0 +1,1174 @@
+{
+  "schema_version": "2.2",
+  "generated_at": "2026-06-02T07:34:39Z",
+  "day": "2026-03-16",
+  "window": {
+    "utc_start": "2026-03-16",
+    "utc_end": "2026-03-16",
+    "days": 1
+  },
+  "summary": {
+    "brief": "Wing FTP Server added to CISA KEV — confirmed in-the-wild exploitation. · 10 new critical disclosures — review patch status on exposed services.",
+    "bullets": [
+      "Wing FTP Server added to CISA KEV — confirmed in-the-wild exploitation.",
+      "10 new critical disclosures — review patch status on exposed services."
+    ],
+    "counts": {
+      "cves": 11,
+      "kev": 1,
+      "exploit": 0,
+      "epss": 0,
+      "cvss": 10,
+      "patch": 0
+    }
+  },
+  "cves": [
+    {
+      "cve_id": "CVE-2025-47813",
+      "signal_types": [
+        "KEV"
+      ],
+      "signals": {
+        "kev": {
+          "date_added": "2026-03-16"
+        },
+        "exploit": null,
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-07-10",
+        "description": "loginok.html in Wing FTP Server before 7.4.4 discloses the full local installation path of the application when using a long value in the UID cookie.",
+        "title": "Wing FTP Server Information Disclosure Vulnerability",
+        "vendor": "wftpserver",
+        "product": "wing_ftp_server",
+        "attack_type": "Info Disclosure",
+        "cvss_max": 4.3
+      },
+      "cve": {
+        "id": "CVE-2025-47813",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2025-07-10T17:15:47.403",
+        "lastModified": "2026-03-16T20:20:49.217",
+        "vulnStatus": "Analyzed",
+        "cisaExploitAdd": "2026-03-16",
+        "cisaActionDue": "2026-03-30",
+        "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+        "cisaVulnerabilityName": "Wing FTP Server Information Disclosure Vulnerability",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "loginok.html in Wing FTP Server before 7.4.4 discloses the full local installation path of the application when using a long value in the UID cookie."
+          },
+          {
+            "lang": "es",
+            "value": "loginok.html en Wing FTP Server anterior a 7.4.4 revela la ruta de instalación local completa de la aplicación cuando se utiliza un valor largo en la cookie UID."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N",
+                "baseScore": 4.3,
+                "baseSeverity": "MEDIUM"
+              },
+              "source": "cve@mitre.org",
+              "type": "Secondary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 1.4
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-209"
+              }
+            ],
+            "source": "cve@mitre.org"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:wftpserver:wing_ftp_server:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "34AF9E83-291C-40B0-AE69-34C9B59A5D03",
+                    "versionEndExcluding": "7.4.4"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/MrTuxracer/advisories/blob/master/CVEs/CVE-2025-47813.txt",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.rcesecurity.com/2025/06/what-the-null-wing-ftp-server-rce-cve-2025-47812/",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.wftpserver.com",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Product"
+            ]
+          },
+          {
+            "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2025-47813",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "US Government Resource"
+            ]
+          }
+        ]
+      },
+      "risk_score": 88,
+      "rank": 1
+    },
+    {
+      "cve_id": "CVE-2026-32621",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-03-16",
+          "previous_max": null,
+          "current_max": 9.9
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-03-16",
+        "description": "Apollo Federation is an architecture for declaratively composing APIs into a unified graph. Prior to 2.9.6, 2.10.5, 2.11.6, 2.12.3, and 2.13.2, a vulnerability exists in query plan execution within the gateway that may allow pollution of Object.prototype in certain scenarios. A malicious client may be able to pollute Object.prototype in gateway directly by crafting operations with field aliases and/or variable names that target prototype-inheritable properties. Alternatively, if a subgraph were to be compromised by a malicious actor, they may be able to pollute Object.prototype in gateway by crafting JSON response payloads that target prototype-inheritable properties. This vulnerability is fixed in 2.9.6, 2.10.5, 2.11.6, 2.12.3, and 2.13.2.",
+        "title": "Apollo Federation is an architecture for declaratively composing APIs into a unified graph.",
+        "cvss_max": 9.9
+      },
+      "cve": {
+        "id": "CVE-2026-32621",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2026-03-16T14:19:39.797",
+        "lastModified": "2026-03-16T14:53:07.390",
+        "vulnStatus": "Awaiting Analysis",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Apollo Federation is an architecture for declaratively composing APIs into a unified graph. Prior to 2.9.6, 2.10.5, 2.11.6, 2.12.3, and 2.13.2, a vulnerability exists in query plan execution within the gateway that may allow pollution of Object.prototype in certain scenarios. A malicious client may be able to pollute Object.prototype in gateway directly by crafting operations with field aliases and/or variable names that target prototype-inheritable properties. Alternatively, if a subgraph were to be compromised by a malicious actor, they may be able to pollute Object.prototype in gateway by crafting JSON response payloads that target prototype-inheritable properties. This vulnerability is fixed in 2.9.6, 2.10.5, 2.11.6, 2.12.3, and 2.13.2."
+          },
+          {
+            "lang": "es",
+            "value": "Apollo Federation es una arquitectura para componer declarativamente APIs en un grafo unificado. Antes de 2.9.6, 2.10.5, 2.11.6, 2.12.3 y 2.13.2, existe una vulnerabilidad en la ejecución del plan de consulta dentro del gateway que puede permitir la contaminación de Object.prototype en ciertos escenarios. Un cliente malicioso puede ser capaz de contaminar Object.prototype en el gateway directamente elaborando operaciones con alias de campo y/o nombres de variables que apuntan a propiedades heredables del prototipo. Alternativamente, si un subgrafo fuera comprometido por un actor malicioso, podrían ser capaces de contaminar Object.prototype en el gateway elaborando cargas útiles de respuesta JSON que apuntan a propiedades heredables del prototipo. Esta vulnerabilidad está corregida en 2.9.6, 2.10.5, 2.11.6, 2.12.3 y 2.13.2."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:L",
+                "baseScore": 9.9,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.1,
+              "impactScore": 6.0
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-1321"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/apollographql/federation/security/advisories/GHSA-pfjj-6f4p-rvmh",
+            "source": "security-advisories@github.com"
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 2
+    },
+    {
+      "cve_id": "CVE-2025-69809",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-03-16",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-03-16",
+        "description": "A write-what-where condition in p2r3 Bareiron commit 8e4d40 allows unauthenticated attackers to write arbitrary values to memory, enabling arbitrary code execution via a crafted packet.",
+        "title": "p2r3 bareiron RCE",
+        "vendor": "p2r3",
+        "product": "bareiron",
+        "attack_type": "RCE",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-69809",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2026-03-16T19:16:14.960",
+        "lastModified": "2026-04-27T18:41:17.600",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A write-what-where condition in p2r3 Bareiron commit 8e4d40 allows unauthenticated attackers to write arbitrary values to memory, enabling arbitrary code execution via a crafted packet."
+          },
+          {
+            "lang": "es",
+            "value": "Una condición de escritura-qué-dónde en el commit 8e4d40 de p2r3 Bareiron permite a atacantes no autenticados escribir valores arbitrarios en la memoria, lo que posibilita la ejecución de código arbitrario mediante un paquete manipulado."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-123"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:p2r3:bareiron:2025-09-16:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "44DB8E6D-705C-45AA-B014-C2911724CF92"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/p2r3/bareiron",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Product"
+            ]
+          },
+          {
+            "url": "https://github.com/vmpr0be/bareiron-vr/blob/main/CVE-2025-69809.md",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 3
+    },
+    {
+      "cve_id": "CVE-2025-62319",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-03-16",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-03-16",
+        "description": "Boolean-Based SQL Injection is a type of blind SQL injection where an attacker manipulates SQL queries by injecting Boolean conditions (TRUE or FALSE) into application input fields. Instead of returning database errors or visible data, the application responds differently depending on whether the injected condition evaluates to true or false. This allows an attacker to inject arbitrary SQL into backend configuration queries executed within the application.",
+        "title": "Boolean-Based SQL Injection is a type of blind SQL injection where an attacker manipulates SQL queries by injecting Boolean conditions (T...",
+        "attack_type": "SQL Injection",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-62319",
+        "sourceIdentifier": "psirt@hcl.com",
+        "published": "2026-03-16T16:16:13.167",
+        "lastModified": "2026-03-17T14:20:01.670",
+        "vulnStatus": "Awaiting Analysis",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Boolean-Based SQL Injection is a type of blind SQL injection where an attacker manipulates SQL queries by injecting Boolean conditions (TRUE or FALSE) into application input fields. Instead of returning database errors or visible data, the application responds differently depending on whether the injected condition evaluates to true or false. This allows an attacker to inject arbitrary SQL into backend configuration queries executed within the application."
+          },
+          {
+            "lang": "es",
+            "value": "La Inyección SQL Basada en Booleanos es un tipo de inyección SQL ciega donde un atacante manipula consultas SQL inyectando condiciones booleanas (VERDADERO o FALSO) en campos de entrada de la aplicación. En lugar de devolver errores de la base de datos o datos visibles, la aplicación responde de manera diferente dependiendo de si la condición inyectada se evalúa como verdadera o falsa. Esto permite a un atacante inyectar SQL arbitrario en consultas de configuración de backend ejecutadas dentro de la aplicación."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "psirt@hcl.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-89"
+              }
+            ],
+            "source": "psirt@hcl.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://support.hcl-software.com/csm?id=kb_article&sysparm_article=KB0129410",
+            "source": "psirt@hcl.com"
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 4
+    },
+    {
+      "cve_id": "CVE-2025-69808",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-03-16",
+          "previous_max": null,
+          "current_max": 9.1
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-03-16",
+        "description": "An out-of-bounds memory access (OOB) in p2r3 Bareiron commit 8e4d40 allows unauthenticated attackers to access sensitive information and cause a Denial of Service (DoS) via supplying a crafted packet.",
+        "title": "p2r3 bareiron DoS",
+        "vendor": "p2r3",
+        "product": "bareiron",
+        "attack_type": "DoS",
+        "cvss_max": 9.1
+      },
+      "cve": {
+        "id": "CVE-2025-69808",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2026-03-16T19:16:14.850",
+        "lastModified": "2026-04-27T18:41:00.170",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "An out-of-bounds memory access (OOB) in p2r3 Bareiron commit 8e4d40 allows unauthenticated attackers to access sensitive information and cause a Denial of Service (DoS) via supplying a crafted packet."
+          },
+          {
+            "lang": "es",
+            "value": "Un acceso a memoria fuera de límites (OOB) en p2r3 Bareiron commit 8e4d40 permite a atacantes no autenticados acceder a información sensible y causar una denegación de servicio (DoS) mediante el suministro de un paquete manipulado."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:H",
+                "baseScore": 9.1,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.2
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-125"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:p2r3:bareiron:2025-09-16:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "44DB8E6D-705C-45AA-B014-C2911724CF92"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/p2r3/bareiron/",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Product"
+            ]
+          },
+          {
+            "url": "https://github.com/vmpr0be/bareiron-vr/blob/main/CVE-2025-69808.md",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 5
+    },
+    {
+      "cve_id": "CVE-2025-69902",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-03-16",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-03-16",
+        "description": "A command injection vulnerability in the minimal_wrapper.py component of kubectl-mcp-server v1.2.0 allows attackers to execute arbitrary commands via injecting arbitrary shell metacharacters.",
+        "title": "A command injection vulnerability in the minimal_wrapper.py component of kubectl-mcp-server v1.2.0 allows attackers to execute arbitrary...",
+        "attack_type": "Command Injection",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-69902",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2026-03-16T21:16:17.700",
+        "lastModified": "2026-04-27T19:18:46.690",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A command injection vulnerability in the minimal_wrapper.py component of kubectl-mcp-server v1.2.0 allows attackers to execute arbitrary commands via injecting arbitrary shell metacharacters."
+          },
+          {
+            "lang": "es",
+            "value": "Una vulnerabilidad de inyección de comandos en el componente minimal_wrapper.py de kubectl-mcp-server v1.2.0 permite a los atacantes ejecutar comandos arbitrarios mediante la inyección de metacaracteres de shell arbitrarios."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-94"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://asec.ahnlab.com/ko/92922/",
+            "source": "cve@mitre.org"
+          },
+          {
+            "url": "https://github.com/rohitg00/kubectl-mcp-server",
+            "source": "cve@mitre.org"
+          },
+          {
+            "url": "https://github.com/rohitg00/kubectl-mcp-server/blob/main/kubectl_mcp_tool/minimal_wrapper.py",
+            "source": "cve@mitre.org"
+          },
+          {
+            "url": "https://pypi.org/project/kubectl-mcp-tool",
+            "source": "cve@mitre.org"
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 6
+    },
+    {
+      "cve_id": "CVE-2026-23489",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-03-16",
+          "previous_max": null,
+          "current_max": 9.1
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-03-16",
+        "description": "Fields is a GLPI plugin that allows users to add custom fields on GLPI items forms. Prior to version 1.23.3, it is possible to execute arbitrary PHP code from users that are allowed to create dropdowns. This issue has been patched in version 1.23.3.",
+        "title": "teclib-edition fields",
+        "vendor": "teclib-edition",
+        "product": "fields",
+        "cvss_max": 9.1
+      },
+      "cve": {
+        "id": "CVE-2026-23489",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2026-03-16T18:16:06.800",
+        "lastModified": "2026-03-18T13:57:05.093",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Fields is a GLPI plugin that allows users to add custom fields on GLPI items forms. Prior to version 1.23.3, it is possible to execute arbitrary PHP code from users that are allowed to create dropdowns. This issue has been patched in version 1.23.3."
+          },
+          {
+            "lang": "es",
+            "value": "Fields es un plugin de GLPI que permite a los usuarios añadir campos personalizados en los formularios de elementos de GLPI. Antes de la versión 1.23.3, es posible ejecutar código PHP arbitrario por parte de usuarios que tienen permiso para crear desplegables. Este problema ha sido parcheado en la versión 1.23.3."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
+                "baseScore": 9.1,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary",
+              "exploitabilityScore": 2.3,
+              "impactScore": 6.0
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-20"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:teclib-edition:fields:*:*:*:*:*:glpi:*:*",
+                    "matchCriteriaId": "D8D41280-4949-46CA-94DE-B0A44A836D0E",
+                    "versionEndExcluding": "1.23.3"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/pluginsGLPI/fields/releases/tag/1.23.3",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Product",
+              "Release Notes"
+            ]
+          },
+          {
+            "url": "https://github.com/pluginsGLPI/fields/security/advisories/GHSA-rj7q-mmx9-fhq7",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 7
+    },
+    {
+      "cve_id": "CVE-2026-27962",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-03-16",
+          "previous_max": null,
+          "current_max": 9.1
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-03-16",
+        "description": "Authlib is a Python library which builds OAuth and OpenID Connect servers. Prior to version 1.6.9, a JWK Header Injection vulnerability in authlib's JWS implementation allows an unauthenticated attacker to forge arbitrary JWT tokens that pass signature verification. When key=None is passed to any JWS deserialization function, the library extracts and uses the cryptographic key embedded in the attacker-controlled JWT jwk header field. An attacker can sign a token with their own private key, embed the matching public key in the header, and have the server accept the forged token as cryptographically valid — bypassing authentication and authorization entirely. This issue has been patched in version 1.6.9.",
+        "title": "authlib authlib Deserialization",
+        "vendor": "authlib",
+        "product": "authlib",
+        "attack_type": "Deserialization",
+        "cvss_max": 9.1
+      },
+      "cve": {
+        "id": "CVE-2026-27962",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2026-03-16T18:16:07.383",
+        "lastModified": "2026-03-17T20:46:48.053",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Authlib is a Python library which builds OAuth and OpenID Connect servers. Prior to version 1.6.9, a JWK Header Injection vulnerability in authlib's JWS implementation allows an unauthenticated attacker to forge arbitrary JWT tokens that pass signature verification. When key=None is passed to any JWS deserialization function, the library extracts and uses the cryptographic key embedded in the attacker-controlled JWT jwk header field. An attacker can sign a token with their own private key, embed the matching public key in the header, and have the server accept the forged token as cryptographically valid — bypassing authentication and authorization entirely. This issue has been patched in version 1.6.9."
+          },
+          {
+            "lang": "es",
+            "value": "Authlib es una biblioteca de Python que construye servidores OAuth y OpenID Connect. Antes de la versión 1.6.9, una vulnerabilidad de inyección de encabezado JWK en la implementación JWS de authlib permite a un atacante no autenticado falsificar tokens JWT arbitrarios que pasan la verificación de firma. Cuando se pasa key=None a cualquier función de deserialización JWS, la biblioteca extrae y utiliza la clave criptográfica incrustada en el campo de encabezado jwk del JWT controlado por el atacante. Un atacante puede firmar un token con su propia clave privada, incrustar la clave pública correspondiente en el encabezado y hacer que el servidor acepte el token falsificado como criptográficamente válido — eludiendo la autenticación y la autorización por completo. Este problema ha sido parcheado en la versión 1.6.9."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+                "baseScore": 9.1,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.2
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-347"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:authlib:authlib:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "8C677FEC-2094-49D8-ABAB-F740B6F83D38",
+                    "versionEndExcluding": "1.6.9"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/authlib/authlib/commit/a5d4b2d4c9e46bfa11c82f85fdc2bcc0b50ae681",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://github.com/authlib/authlib/releases/tag/v1.6.9",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Product",
+              "Release Notes"
+            ]
+          },
+          {
+            "url": "https://github.com/authlib/authlib/security/advisories/GHSA-wvwj-cvrp-7pv5",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Exploit",
+              "Mitigation",
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 8
+    },
+    {
+      "cve_id": "CVE-2026-28430",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-03-16",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-03-16",
+        "description": "Chamilo LMS is a learning management system. Prior to version 1.11.34, there is an unauthenticated SQL injection vulnerability which allows remote attackers to execute arbitrary SQL commands via the custom_dates parameter. By chaining this with a predictable legacy password reset mechanism, an attacker can achieve full administrative account takeover without any prior credentials. The vulnerability also exposes the entire database, including PII and system configurations. This issue has been patched in version 1.11.34.",
+        "title": "chamilo chamilo_lms SQL Injection",
+        "vendor": "chamilo",
+        "product": "chamilo_lms",
+        "attack_type": "SQL Injection",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2026-28430",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2026-03-16T20:16:17.957",
+        "lastModified": "2026-03-17T18:53:49.153",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Chamilo LMS is a learning management system. Prior to version 1.11.34, there is an unauthenticated SQL injection vulnerability which allows remote attackers to execute arbitrary SQL commands via the custom_dates parameter. By chaining this with a predictable legacy password reset mechanism, an attacker can achieve full administrative account takeover without any prior credentials. The vulnerability also exposes the entire database, including PII and system configurations. This issue has been patched in version 1.11.34."
+          },
+          {
+            "lang": "es",
+            "value": "Chamilo LMS es un sistema de gestión del aprendizaje. Antes de la versión 1.11.34, existe una vulnerabilidad de inyección SQL no autenticada que permite a atacantes remotos ejecutar comandos SQL arbitrarios a través del parámetro custom_dates. Al encadenar esto con un mecanismo predecible de restablecimiento de contraseña heredado, un atacante puede lograr una toma de control completa de la cuenta administrativa sin credenciales previas. La vulnerabilidad también expone toda la base de datos, incluyendo PII y configuraciones del sistema. Este problema ha sido parcheado en la versión 1.11.34."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-89"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:chamilo:chamilo_lms:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "BF6714C4-3D58-43BF-A32C-6D436DB93E01",
+                    "versionEndExcluding": "1.11.34"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/chamilo/chamilo-lms/releases/tag/v1.11.34",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Product",
+              "Release Notes"
+            ]
+          },
+          {
+            "url": "https://github.com/chamilo/chamilo-lms/security/advisories/GHSA-84gw-qjw9-v8jv",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 9
+    },
+    {
+      "cve_id": "CVE-2026-32626",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-03-16",
+          "previous_max": null,
+          "current_max": 9.6
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-03-16",
+        "description": "AnythingLLM is an application that turns pieces of content into context that any LLM can use as references during chatting. In 1.11.1 and earlier, AnythingLLM Desktop contains a Streaming Phase XSS vulnerability in the chat rendering pipeline that escalates to Remote Code Execution on the host OS due to insecure Electron configuration. This works with default settings and requires no user interaction beyond normal chat usage. The custom markdown-it image renderer in frontend/src/utils/chat/markdown.js interpolates token.content directly into the alt attribute without HTML entity escaping. The PromptReply component renders this output via dangerouslySetInnerHTML without DOMPurify sanitization — unlike HistoricalMessage which correctly applies DOMPurify.sanitize().",
+        "title": "mintplexlabs anythingllm RCE",
+        "vendor": "mintplexlabs",
+        "product": "anythingllm",
+        "attack_type": "RCE",
+        "cvss_max": 9.6
+      },
+      "cve": {
+        "id": "CVE-2026-32626",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2026-03-16T14:19:40.033",
+        "lastModified": "2026-03-16T20:34:47.637",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "AnythingLLM is an application that turns pieces of content into context that any LLM can use as references during chatting. In 1.11.1 and earlier, AnythingLLM Desktop contains a Streaming Phase XSS vulnerability in the chat rendering pipeline that escalates to Remote Code Execution on the host OS due to insecure Electron configuration. This works with default settings and requires no user interaction beyond normal chat usage. The custom markdown-it image renderer in frontend/src/utils/chat/markdown.js interpolates token.content directly into the alt attribute without HTML entity escaping. The PromptReply component renders this output via dangerouslySetInnerHTML without DOMPurify sanitization — unlike HistoricalMessage which correctly applies DOMPurify.sanitize()."
+          },
+          {
+            "lang": "es",
+            "value": "AnythingLLM es una aplicación que convierte fragmentos de contenido en contexto que cualquier LLM puede usar como referencias durante el chat. En la versión 1.11.1 y anteriores, AnythingLLM Desktop contiene una vulnerabilidad XSS de fase de streaming en la canalización de renderizado del chat que escala a ejecución remota de código en el sistema operativo anfitrión debido a una configuración insegura de Electron. Esto funciona con la configuración predeterminada y no requiere interacción del usuario más allá del uso normal del chat. El renderizador de imágenes personalizado de markdown-it en frontend/src/utils/chat/markdown.js interpola token.content directamente en el atributo alt sin escape de entidades HTML. El componente PromptReply renderiza esta salida a través de dangerouslySetInnerHTML sin la sanitización de DOMPurify, a diferencia de HistoricalMessage, que aplica correctamente DOMPurify.sanitize()."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H",
+                "baseScore": 9.6,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 6.0
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-79"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:mintplexlabs:anythingllm:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "384FD8C3-E046-493C-9996-8E3042229081",
+                    "versionEndIncluding": "1.11.1"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/Mintplex-Labs/anything-llm/commit/9e2d144dc8be6fab29f560f5bcdaa9ef7dbb4214",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://github.com/Mintplex-Labs/anything-llm/security/advisories/GHSA-rrmw-2j6x-4mf2",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Exploit",
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 10
+    },
+    {
+      "cve_id": "CVE-2026-4177",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-03-16",
+          "previous_max": null,
+          "current_max": 9.1
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-03-16",
+        "description": "YAML::Syck versions through 1.36 for Perl has several potential security vulnerabilities including a high-severity heap buffer overflow in the YAML emitter.\n\nThe heap overflow occurs when class names exceed the initial 512-byte allocation.\n\nThe base64 decoder could read past the buffer end on trailing newlines.\n\nstrtok mutated n->type_id in place, corrupting shared node data.\n\nA memory leak occurred in syck_hdlr_add_anchor when a node already had an anchor. The incoming anchor string 'a' was leaked on early return.",
+        "title": "toddr yaml::syck Buffer Overflow",
+        "vendor": "toddr",
+        "product": "yaml\\",
+        "attack_type": "Buffer Overflow",
+        "cvss_max": 9.1
+      },
+      "cve": {
+        "id": "CVE-2026-4177",
+        "sourceIdentifier": "9b29abf9-4ab0-4765-b253-1875cd9b441e",
+        "published": "2026-03-16T23:16:21.543",
+        "lastModified": "2026-03-23T18:17:31.370",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "YAML::Syck versions through 1.36 for Perl has several potential security vulnerabilities including a high-severity heap buffer overflow in the YAML emitter.\n\nThe heap overflow occurs when class names exceed the initial 512-byte allocation.\n\nThe base64 decoder could read past the buffer end on trailing newlines.\n\nstrtok mutated n->type_id in place, corrupting shared node data.\n\nA memory leak occurred in syck_hdlr_add_anchor when a node already had an anchor. The incoming anchor string 'a' was leaked on early return."
+          },
+          {
+            "lang": "es",
+            "value": "Las versiones de YAML::Syck hasta la 1.36 para Perl tienen varias vulnerabilidades de seguridad potenciales, incluyendo un desbordamiento de búfer de montículo de alta gravedad en el emisor YAML.\n\nEl desbordamiento de montículo ocurre cuando los nombres de clase exceden la asignación inicial de 512 bytes.\n\nEl decodificador base64 podría leer más allá del final del búfer en saltos de línea finales.\n\nstrtok mutó n-&gt;type_id in situ, corrompiendo datos de nodo compartidos.\n\nSe produjo una fuga de memoria en syck_hdlr_add_anchor cuando un nodo ya tenía un ancla. La cadena de ancla entrante 'a' se filtró en el retorno anticipado."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:H",
+                "baseScore": 9.1,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.2
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-122"
+              }
+            ],
+            "source": "9b29abf9-4ab0-4765-b253-1875cd9b441e"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:toddr:yaml\\:\\:syck:*:*:*:*:*:perl:*:*",
+                    "matchCriteriaId": "618F919B-87EA-4A0F-9798-D29206FA3022",
+                    "versionEndExcluding": "1.37"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/cpan-authors/YAML-Syck/commit/e8844a31c8cf0052914b198fc784ed4e6b8ae69e.patch",
+            "source": "9b29abf9-4ab0-4765-b253-1875cd9b441e",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://metacpan.org/release/TODDR/YAML-Syck-1.37_01/changes#L21",
+            "source": "9b29abf9-4ab0-4765-b253-1875cd9b441e",
+            "tags": [
+              "Release Notes"
+            ]
+          },
+          {
+            "url": "http://www.openwall.com/lists/oss-security/2026/03/16/6",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Mailing List",
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 11
+    }
+  ],
+  "source": "https://www.cvelogic.com/threat-intelligence/2026-03-16"
+}

@@ -1,0 +1,1866 @@
+{
+  "schema_version": "2.2",
+  "generated_at": "2026-06-02T07:34:38Z",
+  "day": "2026-03-13",
+  "window": {
+    "utc_start": "2026-03-13",
+    "utc_end": "2026-03-13",
+    "days": 1
+  },
+  "summary": {
+    "brief": "Google Skia: 2 CVEs added to CISA KEV today. · Gaztek Ghttp — exploitation likelihood rose sharply (EPSS 12% → 31% · rising (+19%)). · 10 new critical disclosures — review patch status on exposed services.",
+    "bullets": [
+      "Google Skia: 2 CVEs added to CISA KEV today.",
+      "Gaztek Ghttp — exploitation likelihood rose sharply (EPSS 12% → 31% · rising (+19%)).",
+      "10 new critical disclosures — review patch status on exposed services."
+    ],
+    "counts": {
+      "cves": 16,
+      "kev": 2,
+      "exploit": 0,
+      "epss": 4,
+      "cvss": 10,
+      "patch": 0
+    }
+  },
+  "cves": [
+    {
+      "cve_id": "CVE-2026-3909",
+      "signal_types": [
+        "KEV"
+      ],
+      "signals": {
+        "kev": {
+          "date_added": "2026-03-13"
+        },
+        "exploit": null,
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-03-13",
+        "description": "Out of bounds write in Skia in Google Chrome prior to 146.0.7680.75 allowed a remote attacker to perform out of bounds memory access via a crafted HTML page. (Chromium security severity: High)",
+        "title": "Google Skia Out-of-Bounds Write Vulnerability",
+        "vendor": "google",
+        "product": "chrome",
+        "attack_type": "Out-of-Bounds Write",
+        "cvss_max": 8.8
+      },
+      "cve": {
+        "id": "CVE-2026-3909",
+        "sourceIdentifier": "chrome-cve-admin@google.com",
+        "published": "2026-03-13T19:55:11.170",
+        "lastModified": "2026-03-25T14:05:38.743",
+        "vulnStatus": "Analyzed",
+        "cisaExploitAdd": "2026-03-13",
+        "cisaActionDue": "2026-03-27",
+        "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+        "cisaVulnerabilityName": "Google Skia Out-of-Bounds Write Vulnerability",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Out of bounds write in Skia in Google Chrome prior to 146.0.7680.75 allowed a remote attacker to perform out of bounds memory access via a crafted HTML page. (Chromium security severity: High)"
+          },
+          {
+            "lang": "es",
+            "value": "Escritura fuera de límites en Skia en Google Chrome anterior a 146.0.7680.75 permitió a un atacante remoto realizar acceso a memoria fuera de límites a través de una página HTML manipulada. (Gravedad de seguridad de Chromium: Alta)"
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+                "baseScore": 8.8,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 5.9
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+                "baseScore": 8.8,
+                "baseSeverity": "HIGH"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-787"
+              }
+            ],
+            "source": "chrome-cve-admin@google.com"
+          },
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-787"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:google:chrome:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "3203F586-1DC8-4200-B4CC-ABD37E51775C",
+                    "versionEndExcluding": "146.0.7680.80"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:macos:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "387021A0-AF36-463C-A605-32EA7DAC172E"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "703AF700-7A70-47E2-BC3A-7FD03B3CA9C1"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "A2572D17-1DE6-457B-99CC-64AFD54487EA"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://chromereleases.googleblog.com/2026/03/stable-channel-update-for-desktop_13.html",
+            "source": "chrome-cve-admin@google.com",
+            "tags": [
+              "Release Notes",
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://issues.chromium.org/issues/491421267",
+            "source": "chrome-cve-admin@google.com",
+            "tags": [
+              "Permissions Required"
+            ]
+          },
+          {
+            "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-3909",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "US Government Resource"
+            ]
+          }
+        ]
+      },
+      "risk_score": 88,
+      "rank": 1
+    },
+    {
+      "cve_id": "CVE-2001-0820",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 0.12349,
+            "score_date": "2025-07-01"
+          },
+          "current": {
+            "score": 0.31289,
+            "score_date": "2026-03-13"
+          },
+          "delta": 0.1894
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2001-12-06",
+        "description": "Buffer overflows in GazTek ghttpd 1.4 allows a remote attacker to execute arbitrary code via long arguments that are passed to (1) the Log function in util.c, or (2) serveconnection in protocol.c.",
+        "title": "gaztek ghttp Buffer Overflow",
+        "vendor": "gaztek",
+        "product": "ghttp",
+        "attack_type": "Buffer Overflow",
+        "cvss_max": 7.5
+      },
+      "cve": {
+        "id": "CVE-2001-0820",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2001-12-06T05:00:00.000",
+        "lastModified": "2026-04-16T00:27:16.627",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Buffer overflows in GazTek ghttpd 1.4 allows a remote attacker to execute arbitrary code via long arguments that are passed to (1) the Log function in util.c, or (2) serveconnection in protocol.c."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV2": [
+            {
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+                "baseScore": 7.5,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "baseSeverity": "HIGH",
+              "exploitabilityScore": 10.0,
+              "impactScore": 6.4
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "NVD-CWE-Other"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:gaztek:ghttp:1.4:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "54129B65-8A3B-47BB-9ACE-17A6FEC88FBE"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "http://marc.info/?l=bugtraq&m=99279182704674&w=2",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://marc.info/?l=bugtraq&m=99406263214417&w=2",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://www.securityfocus.com/bid/2879",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit",
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "http://www.securityfocus.com/bid/2965",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "https://exchange.xforce.ibmcloud.com/vulnerabilities/6702",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          }
+        ]
+      },
+      "risk_score": 82,
+      "rank": 2
+    },
+    {
+      "cve_id": "CVE-2026-26954",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-03-13",
+          "previous_max": null,
+          "current_max": 10.0
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-03-13",
+        "description": "SandboxJS is a JavaScript sandboxing library. Prior to 0.8.34, it is possible to obtain arrays containing Function, which allows escaping the sandbox. Given an array containing Function, and Object.fromEntries, it is possible to construct {[p]: Function} where p is any constructible property. This vulnerability is fixed in 0.8.34.",
+        "title": "nyariv sandboxjs",
+        "vendor": "nyariv",
+        "product": "sandboxjs",
+        "cvss_max": 10.0
+      },
+      "cve": {
+        "id": "CVE-2026-26954",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2026-03-13T19:54:31.143",
+        "lastModified": "2026-03-17T20:13:06.470",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "SandboxJS is a JavaScript sandboxing library. Prior to 0.8.34, it is possible to obtain arrays containing Function, which allows escaping the sandbox. Given an array containing Function, and Object.fromEntries, it is possible to construct {[p]: Function} where p is any constructible property. This vulnerability is fixed in 0.8.34."
+          },
+          {
+            "lang": "es",
+            "value": "SandboxJS es una biblioteca de sandboxing de JavaScript. Antes de 0.8.34, es posible obtener arrays que contienen Function, lo que permite escapar del sandbox. Dado un array que contiene Function, y Object.fromEntries, es posible construir {[p]: Function} donde p es cualquier propiedad construible. Esta vulnerabilidad se corrige en la versión 0.8.34."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+                "baseScore": 10.0,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 6.0
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-94"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nyariv:sandboxjs:*:*:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "21637BCD-7C1B-48F0-836C-399CD3946F7D",
+                    "versionEndExcluding": "0.8.34"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/nyariv/SandboxJS/security/advisories/GHSA-6r9f-759j-hjgv",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Vendor Advisory",
+              "Exploit"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 3
+    },
+    {
+      "cve_id": "CVE-2003-1396",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 0.04168,
+            "score_date": "2025-11-13"
+          },
+          "current": {
+            "score": 0.15615,
+            "score_date": "2026-03-13"
+          },
+          "delta": 0.11447
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2003-12-31",
+        "description": "Heap-based buffer overflow in Opera 6.05 through 7.10 allows remote attackers to cause a denial of service (crash) and possibly execute arbitrary code via a filename with a long extension.",
+        "title": "opera opera_browser Buffer Overflow",
+        "vendor": "opera",
+        "product": "opera_browser",
+        "attack_type": "Buffer Overflow",
+        "cvss_max": 6.8
+      },
+      "cve": {
+        "id": "CVE-2003-1396",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2003-12-31T05:00:00.000",
+        "lastModified": "2026-04-16T00:27:16.627",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Heap-based buffer overflow in Opera 6.05 through 7.10 allows remote attackers to cause a denial of service (crash) and possibly execute arbitrary code via a filename with a long extension."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV2": [
+            {
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+                "baseScore": 6.8,
+                "baseSeverity": "MEDIUM"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "baseSeverity": "MEDIUM",
+              "exploitabilityScore": 8.6,
+              "impactScore": 6.4
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-787"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:opera:opera_browser:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "9B08BC07-11D0-4A71-ACF5-0018EE7D71D6",
+                    "versionStartIncluding": "6.0",
+                    "versionEndIncluding": "7.10"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "http://archives.neohapsis.com/archives/bugtraq/2003-04/0346.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Broken Link",
+              "Exploit"
+            ]
+          },
+          {
+            "url": "http://www.securityfocus.com/bid/7450",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Broken Link",
+              "Patch",
+              "Third Party Advisory",
+              "VDB Entry"
+            ]
+          },
+          {
+            "url": "https://exchange.xforce.ibmcloud.com/vulnerabilities/11894",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory",
+              "VDB Entry"
+            ]
+          }
+        ]
+      },
+      "risk_score": 80,
+      "rank": 4
+    },
+    {
+      "cve_id": "CVE-2017-8869",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 0.22935,
+            "score_date": "2025-11-21"
+          },
+          "current": {
+            "score": 0.3536,
+            "score_date": "2026-03-13"
+          },
+          "delta": 0.12425
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2017-07-27",
+        "description": "Buffer overflow in MediaCoder 0.8.48.5888 allows remote attackers to execute arbitrary code via a crafted .m3u file.",
+        "title": "mediacoder mediacoder Buffer Overflow",
+        "vendor": "mediacoder",
+        "product": "mediacoder",
+        "attack_type": "Buffer Overflow",
+        "cvss_max": 7.8
+      },
+      "cve": {
+        "id": "CVE-2017-8869",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2017-07-27T13:29:00.173",
+        "lastModified": "2026-05-13T00:24:29.033",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Buffer overflow in MediaCoder 0.8.48.5888 allows remote attackers to execute arbitrary code via a crafted .m3u file."
+          },
+          {
+            "lang": "es",
+            "value": "Un desbordamiento de búfer en MediaCoder versión 0.8.48.5888, permite a los atacantes remotos ejecutar código arbitrario por medio de un archivo .m3u creado."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV2": [
+            {
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+                "baseScore": 6.8,
+                "baseSeverity": "MEDIUM"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "baseSeverity": "MEDIUM",
+              "exploitabilityScore": 8.6,
+              "impactScore": 6.4
+            }
+          ],
+          "cvssMetricV30": [
+            {
+              "cvssData": {
+                "version": "3.0",
+                "vectorString": "CVSS:3.0/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+                "baseScore": 7.8,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 1.8,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-119"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:mediacoder:mediacoder:0.8.48.5888:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "5113EC16-3A87-45F1-82B7-958830794E3B"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://www.exploit-db.com/exploits/42384/",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory",
+              "VDB Entry"
+            ]
+          }
+        ]
+      },
+      "risk_score": 83,
+      "rank": 5
+    },
+    {
+      "cve_id": "CVE-2019-19245",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 0.09739,
+            "score_date": "2025-11-21"
+          },
+          "current": {
+            "score": 0.21097,
+            "score_date": "2026-03-13"
+          },
+          "delta": 0.11358
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2019-12-02",
+        "description": "NAPC Xinet Elegant 6 Asset Library 6.1.655 allows Pre-Authentication SQL Injection via the /elegant6/login LoginForm[username] field when double quotes are used.",
+        "title": "napc xinet_elegant_6_asset_library SQL Injection",
+        "vendor": "napc",
+        "product": "xinet_elegant_6_asset_library",
+        "attack_type": "SQL Injection",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2019-19245",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2019-12-02T14:15:10.943",
+        "lastModified": "2025-02-02T10:15:28.720",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "NAPC Xinet Elegant 6 Asset Library 6.1.655 allows Pre-Authentication SQL Injection via the /elegant6/login LoginForm[username] field when double quotes are used."
+          },
+          {
+            "lang": "es",
+            "value": "NAPC Xinet Elegant 6 Asset Library versión 6.1.655, permite una Inyección SQL Previa a la Autenticación por medio del campo /elegant6/login LoginForm[username] cuando son usadas comillas dobles."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV2": [
+            {
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+                "baseScore": 7.5,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "baseSeverity": "HIGH",
+              "exploitabilityScore": 10.0,
+              "impactScore": 6.4
+            }
+          ],
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-89"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:napc:xinet_elegant_6_asset_library:6.1.655:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "D5D9F530-58BC-4FB1-97E6-C736BC257882"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "http://hyp3rlinx.altervista.org",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://packetstormsecurity.com/files/155505/Xinet-Elegant-6-Asset-Library-Web-Interface-6.1.655-SQL-Injection.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory",
+              "VDB Entry"
+            ]
+          },
+          {
+            "url": "http://seclists.org/fulldisclosure/2025/Feb/0",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          }
+        ]
+      },
+      "risk_score": 84,
+      "rank": 6
+    },
+    {
+      "cve_id": "CVE-2026-25823",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-03-13",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-03-13",
+        "description": "HMS Networks Ewon Flexy with firmware before 15.0s4, Cosy+ with firmware 22.xx before 22.1s6, and Cosy+ with firmware 23.xx before 23.0s3 have a stack buffer overflow that leads to a Denial of Service, which can also be exploited to achieve Unauthenticated Remote Code Execution.",
+        "title": "HMS Networks Ewon Flexy with firmware before 15.0s4, Cosy+ with firmware 22.xx before 22.1s6, and Cosy+ with firmware 23.xx before 23.0s3...",
+        "attack_type": "RCE",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2026-25823",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2026-03-13T19:54:27.790",
+        "lastModified": "2026-04-27T19:18:46.690",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "HMS Networks Ewon Flexy with firmware before 15.0s4, Cosy+ with firmware 22.xx before 22.1s6, and Cosy+ with firmware 23.xx before 23.0s3 have a stack buffer overflow that leads to a Denial of Service, which can also be exploited to achieve Unauthenticated Remote Code Execution."
+          },
+          {
+            "lang": "es",
+            "value": "HMS Networks Ewon Flexy con firmware anterior a 15.0s4, Cosy+ con firmware 22.xx anterior a 22.1s6, y Cosy+ con firmware 23.xx anterior a 23.0s3 tienen un desbordamiento de búfer de pila que conduce a una denegación de servicio, que también puede ser explotado para lograr la ejecución remota de código no autenticado."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-121"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://hmsnetworks.blob.core.windows.net/nlw/docs/default-source/products/cybersecurity/security-advisory/hms-security-advisory-2026-03-09-001---ewon-several-flexy-and-cosy--vulnerabilities.pdf?sfvrsn=f7c027b8_13",
+            "source": "cve@mitre.org"
+          },
+          {
+            "url": "https://www.hms-networks.com/p/flexy20500-00ma-ewon-flexy-205",
+            "source": "cve@mitre.org"
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 7
+    },
+    {
+      "cve_id": "CVE-2026-31806",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-03-13",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-03-13",
+        "description": "FreeRDP is a free implementation of the Remote Desktop Protocol. Prior to 3.24.0,  the gdi_surface_bits() function processes SURFACE_BITS_COMMAND messages sent by the RDP server. When the command is handled using NSCodec, the bmp.width and bmp.height values provided by the server are not properly validated against the actual desktop dimensions. A malicious RDP server can supply crafted bmp.width and bmp.height values that exceed the expected surface size. Because these values are used during bitmap decoding and memory operations without proper bounds checking, this can lead to a heap buffer overflow. Since the attacker can also control the associated pixel data transmitted by the server, the overflow may be exploitable to overwrite adjacent heap memory. This vulnerability is fixed in 3.24.0.",
+        "title": "freerdp freerdp",
+        "vendor": "freerdp",
+        "product": "freerdp",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2026-31806",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2026-03-13T19:54:36.300",
+        "lastModified": "2026-03-17T14:27:20.100",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "FreeRDP is a free implementation of the Remote Desktop Protocol. Prior to 3.24.0,  the gdi_surface_bits() function processes SURFACE_BITS_COMMAND messages sent by the RDP server. When the command is handled using NSCodec, the bmp.width and bmp.height values provided by the server are not properly validated against the actual desktop dimensions. A malicious RDP server can supply crafted bmp.width and bmp.height values that exceed the expected surface size. Because these values are used during bitmap decoding and memory operations without proper bounds checking, this can lead to a heap buffer overflow. Since the attacker can also control the associated pixel data transmitted by the server, the overflow may be exploitable to overwrite adjacent heap memory. This vulnerability is fixed in 3.24.0."
+          },
+          {
+            "lang": "es",
+            "value": "FreeRDP es una implementación gratuita del Protocolo de Escritorio Remoto. Antes de la versión 3.24.0, la función gdi_surface_bits() procesa los mensajes SURFACE_BITS_COMMAND enviados por el servidor RDP. Cuando el comando se maneja usando NSCodec, los valores bmp.width y bmp.height proporcionados por el servidor no se validan correctamente contra las dimensiones reales del escritorio. Un servidor RDP malicioso puede proporcionar valores bmp.width y bmp.height manipulados que exceden el tamaño de superficie esperado. Debido a que estos valores se utilizan durante la decodificación de mapas de bits y las operaciones de memoria sin una verificación de límites adecuada, esto puede conducir a un desbordamiento de búfer de pila. Dado que el atacante también puede controlar los datos de píxeles asociados transmitidos por el servidor, el desbordamiento puede ser explotable para sobrescribir memoria de pila adyacente. Esta vulnerabilidad está corregida en la versión 3.24.0."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-122"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:freerdp:freerdp:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "97FCA262-35C3-4B6B-A321-15CE780FCA20",
+                    "versionEndExcluding": "3.24.0"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/FreeRDP/FreeRDP/commit/83d9aedea278a74af3e490ff5eeb889c016dbb2b",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://github.com/FreeRDP/FreeRDP/security/advisories/GHSA-rrqm-46rj-cmx2",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Exploit",
+              "Patch",
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 8
+    },
+    {
+      "cve_id": "CVE-2026-31886",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-03-13",
+          "previous_max": null,
+          "current_max": 9.1
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-03-13",
+        "description": "Dagu is a workflow engine with a built-in Web user interface. Prior to 2.2.4, the dagRunId request field accepted by the inline DAG execution endpoints is passed directly into filepath.Join to construct a temporary directory path without any format validation. Go's filepath.Join resolves .. segments lexically, so a caller can supply a value such as \"..\" to redirect the computed directory outside the intended /tmp/<name>/<id> path. A deferred cleanup function that calls os.RemoveAll on that directory then runs unconditionally when the HTTP handler returns, deleting whatever directory the traversal resolved to. With dagRunId set to \"..\", the resolved directory is the system temporary directory (/tmp on Linux). On non-root deployments, os.RemoveAll(\"/tmp\") removes all files in /tmp owned by the dagu process user, disrupting every concurrent dagu run that has live temp files. On root or Docker deployments, the call removes the entire contents of /tmp, causing a system-wide denial of service. This vulnerability is fixed in 2.2.4.",
+        "title": "dagu dagu",
+        "vendor": "dagu",
+        "product": "dagu",
+        "cvss_max": 9.1
+      },
+      "cve": {
+        "id": "CVE-2026-31886",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2026-03-13T19:54:37.690",
+        "lastModified": "2026-03-18T15:24:15.453",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Dagu is a workflow engine with a built-in Web user interface. Prior to 2.2.4, the dagRunId request field accepted by the inline DAG execution endpoints is passed directly into filepath.Join to construct a temporary directory path without any format validation. Go's filepath.Join resolves .. segments lexically, so a caller can supply a value such as \"..\" to redirect the computed directory outside the intended /tmp/<name>/<id> path. A deferred cleanup function that calls os.RemoveAll on that directory then runs unconditionally when the HTTP handler returns, deleting whatever directory the traversal resolved to. With dagRunId set to \"..\", the resolved directory is the system temporary directory (/tmp on Linux). On non-root deployments, os.RemoveAll(\"/tmp\") removes all files in /tmp owned by the dagu process user, disrupting every concurrent dagu run that has live temp files. On root or Docker deployments, the call removes the entire contents of /tmp, causing a system-wide denial of service. This vulnerability is fixed in 2.2.4."
+          },
+          {
+            "lang": "es",
+            "value": "Dagu es un motor de flujo de trabajo con una interfaz de usuario web integrada. Antes de la versión 2.2.4, el campo de solicitud dagRunId aceptado por los puntos finales de ejecución de DAG en línea se pasa directamente a filepath.Join para construir una ruta de directorio temporal sin ninguna validación de formato. filepath.Join de Go resuelve los segmentos '..' léxicamente, por lo que un llamador puede proporcionar un valor como '..' para redirigir el directorio calculado fuera de la ruta prevista /tmp//. Una función de limpieza diferida que llama a os.RemoveAll en ese directorio se ejecuta incondicionalmente cuando el gestor HTTP regresa, eliminando cualquier directorio al que se resolvió el recorrido. Con dagRunId establecido en '..', el directorio resuelto es el directorio temporal del sistema (/tmp en Linux). En despliegues sin privilegios de root, os.RemoveAll('/tmp') elimina todos los archivos en /tmp propiedad del usuario del proceso dagu, interrumpiendo cada ejecución concurrente de dagu que tiene archivos temporales activos. En despliegues con privilegios de root o Docker, la llamada elimina todo el contenido de /tmp, causando una denegación de servicio a nivel de sistema. Esta vulnerabilidad se corrige en la versión 2.2.4."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:H",
+                "baseScore": 9.1,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.1,
+              "impactScore": 5.3
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:H",
+                "baseScore": 7.6,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 4.7
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-22"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:dagu:dagu:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "681DF7E8-8500-4F63-8E04-FC8AB4CAFD3A",
+                    "versionEndExcluding": "2.2.4"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/dagu-org/dagu/commit/12c2e5395bd9331d49ca103593edfd0db39c4f38",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://github.com/dagu-org/dagu/security/advisories/GHSA-m4q3-457p-hh2x",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Exploit",
+              "Mitigation",
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 9
+    },
+    {
+      "cve_id": "CVE-2026-32301",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-03-13",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-03-13",
+        "description": "Centrifugo is an open-source scalable real-time messaging server. Prior to 6.7.0, Centrifugo is vulnerable to Server-Side Request Forgery (SSRF) when configured with a dynamic JWKS endpoint URL using template variables (e.g. {{tenant}}). An unauthenticated attacker can craft a JWT with a malicious iss or aud claim value that gets interpolated into the JWKS fetch URL before the token signature is verified, causing Centrifugo to make an outbound HTTP request to an attacker-controlled destination. This vulnerability is fixed in 6.7.0.",
+        "title": "centrifugal centrifugo SSRF",
+        "vendor": "centrifugal",
+        "product": "centrifugo",
+        "attack_type": "SSRF",
+        "cvss_max": 9.3
+      },
+      "cve": {
+        "id": "CVE-2026-32301",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2026-03-13T19:54:41.477",
+        "lastModified": "2026-03-18T18:02:29.327",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Centrifugo is an open-source scalable real-time messaging server. Prior to 6.7.0, Centrifugo is vulnerable to Server-Side Request Forgery (SSRF) when configured with a dynamic JWKS endpoint URL using template variables (e.g. {{tenant}}). An unauthenticated attacker can craft a JWT with a malicious iss or aud claim value that gets interpolated into the JWKS fetch URL before the token signature is verified, causing Centrifugo to make an outbound HTTP request to an attacker-controlled destination. This vulnerability is fixed in 6.7.0."
+          },
+          {
+            "lang": "es",
+            "value": "Centrifugo es un servidor de mensajería en tiempo real escalable de código abierto. Antes de la versión 6.7.0, Centrifugo es vulnerable a la falsificación de petición del lado del servidor (SSRF) cuando se configura con una URL de endpoint JWKS dinámica utilizando variables de plantilla (p. ej., {{tenant}}). Un atacante no autenticado puede crear un JWT con un valor de reclamación 'iss' o 'aud' malicioso que se interpola en la URL de obtención de JWKS antes de que se verifique la firma del token, lo que hace que Centrifugo realice una petición HTTP saliente a un destino controlado por el atacante. Esta vulnerabilidad se corrige en la versión 6.7.0."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:L/A:N",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 4.7
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-918"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:centrifugal:centrifugo:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "FFE4B883-6865-417B-B19A-92020BB6F2BB",
+                    "versionEndExcluding": "6.7.0"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/centrifugal/centrifugo/security/advisories/GHSA-j77h-rr39-c552",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Exploit",
+              "Mitigation",
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 10
+    },
+    {
+      "cve_id": "CVE-2026-32304",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-03-13",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-03-13",
+        "description": "Locutus brings stdlibs of other programming languages to JavaScript for educational purposes. Prior to 3.0.14, the create_function(args, code) function passes both parameters directly to the Function constructor without any sanitization, allowing arbitrary code execution. This is distinct from CVE-2026-29091 which was call_user_func_array using eval() in v2.x. This finding affects create_function using new Function() in v3.x. This vulnerability is fixed in 3.0.14.",
+        "title": "locutus locutus RCE",
+        "vendor": "locutus",
+        "product": "locutus",
+        "attack_type": "RCE",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2026-32304",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2026-03-13T19:54:41.830",
+        "lastModified": "2026-03-19T13:48:33.690",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Locutus brings stdlibs of other programming languages to JavaScript for educational purposes. Prior to 3.0.14, the create_function(args, code) function passes both parameters directly to the Function constructor without any sanitization, allowing arbitrary code execution. This is distinct from CVE-2026-29091 which was call_user_func_array using eval() in v2.x. This finding affects create_function using new Function() in v3.x. This vulnerability is fixed in 3.0.14."
+          },
+          {
+            "lang": "es",
+            "value": "Locutus trae bibliotecas estándar de otros lenguajes de programación a JavaScript con fines educativos. Antes de la versión 3.0.14, la función create_function(args, code) pasa ambos parámetros directamente al constructor Function sin ninguna sanitización, permitiendo la ejecución de código arbitrario. Esto es distinto de CVE-2026-29091, que era call_user_func_array usando eval() en v2.x. Este hallazgo afecta a create_function usando new Function() en v3.x. Esta vulnerabilidad está corregida en 3.0.14."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-94"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:locutus:locutus:*:*:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "96DC0599-8FE6-45BD-AE3C-A76DE784C161",
+                    "versionEndExcluding": "3.0.14"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/locutusjs/locutus/releases/tag/v3.0.14",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Product",
+              "Release Notes"
+            ]
+          },
+          {
+            "url": "https://github.com/locutusjs/locutus/security/advisories/GHSA-vh9h-29pq-r5m8",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Exploit",
+              "Mitigation",
+              "Patch",
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 11
+    },
+    {
+      "cve_id": "CVE-2026-32306",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-03-13",
+          "previous_max": null,
+          "current_max": 9.9
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-03-13",
+        "description": "OneUptime is a solution for monitoring and managing online services. Prior to 10.0.23, the telemetry aggregation API accepts user-controlled aggregationType, aggregateColumnName, and aggregationTimestampColumnName parameters and interpolates them directly into ClickHouse SQL queries via the .append() method (documented as \"trusted SQL\"). There is no allowlist, no parameterized query binding, and no input validation. An authenticated user can inject arbitrary SQL into ClickHouse, enabling full database read (including telemetry data from all tenants), data modification, and potential remote code execution via ClickHouse table functions. This vulnerability is fixed in 10.0.23.",
+        "title": "hackerbay oneuptime SQL injection",
+        "vendor": "hackerbay",
+        "product": "oneuptime",
+        "attack_type": "SQL injection",
+        "cvss_max": 9.9
+      },
+      "cve": {
+        "id": "CVE-2026-32306",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2026-03-13T19:54:42.000",
+        "lastModified": "2026-03-17T20:08:56.733",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "OneUptime is a solution for monitoring and managing online services. Prior to 10.0.23, the telemetry aggregation API accepts user-controlled aggregationType, aggregateColumnName, and aggregationTimestampColumnName parameters and interpolates them directly into ClickHouse SQL queries via the .append() method (documented as \"trusted SQL\"). There is no allowlist, no parameterized query binding, and no input validation. An authenticated user can inject arbitrary SQL into ClickHouse, enabling full database read (including telemetry data from all tenants), data modification, and potential remote code execution via ClickHouse table functions. This vulnerability is fixed in 10.0.23."
+          },
+          {
+            "lang": "es",
+            "value": "OneUptime es una solución para monitorear y gestionar servicios en línea. Antes de la 10.0.23, la API de agregación de telemetría acepta los parámetros controlados por el usuario aggregationType, aggregateColumnName y aggregationTimestampColumnName y los interpola directamente en las consultas SQL de ClickHouse a través del método .append() (documentado como 'SQL de confianza'). No hay lista blanca, no hay enlace de consulta parametrizada y no hay validación de entrada. Un usuario autenticado puede inyectar SQL arbitrario en ClickHouse, lo que permite la lectura completa de la base de datos (incluidos los datos de telemetría de todos los inquilinos), la modificación de datos y la potencial ejecución remota de código a través de funciones de tabla de ClickHouse. Esta vulnerabilidad está corregida en la 10.0.23."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+                "baseScore": 9.9,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.1,
+              "impactScore": 6.0
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-89"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:hackerbay:oneuptime:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "AF2F89C2-1AB8-4611-9B0B-A4CFA02C807E",
+                    "versionEndExcluding": "10.0.23"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/OneUptime/oneuptime/security/advisories/GHSA-p5g2-jm85-8g35",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Exploit",
+              "Mitigation",
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 12
+    },
+    {
+      "cve_id": "CVE-2026-32367",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-03-13",
+          "previous_max": null,
+          "current_max": 9.1
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-03-13",
+        "description": "Improper Control of Generation of Code ('Code Injection') vulnerability in Yannick Lefebvre Modal Dialog modal-dialog allows Remote Code Inclusion.This issue affects Modal Dialog: from n/a through <= 3.5.16.",
+        "title": "Improper Control of Generation of Code ('Code Injection') vulnerability in Yannick Lefebvre Modal Dialog modal-dialog allows Remote Code...",
+        "cvss_max": 9.1
+      },
+      "cve": {
+        "id": "CVE-2026-32367",
+        "sourceIdentifier": "audit@patchstack.com",
+        "published": "2026-03-13T19:54:50.897",
+        "lastModified": "2026-04-22T21:30:26.497",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Improper Control of Generation of Code ('Code Injection') vulnerability in Yannick Lefebvre Modal Dialog modal-dialog allows Remote Code Inclusion.This issue affects Modal Dialog: from n/a through <= 3.5.16."
+          },
+          {
+            "lang": "es",
+            "value": "Control Inadecuado de la Generación de Código ('Inyección de Código') vulnerabilidad en Yannick Lefebvre Modal Dialog modal-dialog permite la Inclusión Remota de Código. Este problema afecta a Modal Dialog: desde n/a hasta &lt;= 3.5.16."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
+                "baseScore": 9.1,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 2.3,
+              "impactScore": 6.0
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-94"
+              }
+            ],
+            "source": "audit@patchstack.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://patchstack.com/database/Wordpress/Plugin/modal-dialog/vulnerability/wordpress-modal-dialog-plugin-3-5-16-remote-code-execution-rce-vulnerability?_s_id=cve",
+            "source": "audit@patchstack.com"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 13
+    },
+    {
+      "cve_id": "CVE-2026-32746",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-03-13",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-03-13",
+        "description": "telnetd in GNU inetutils through 2.7 allows an out-of-bounds write in the LINEMODE SLC (Set Local Characters) suboption handler because add_slc does not check whether the buffer is full.",
+        "title": "gnu inetutils Out-of-Bounds Write",
+        "vendor": "gnu",
+        "product": "inetutils",
+        "attack_type": "Out-of-Bounds Write",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2026-32746",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2026-03-13T19:55:10.147",
+        "lastModified": "2026-05-05T18:15:51.730",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "telnetd in GNU inetutils through 2.7 allows an out-of-bounds write in the LINEMODE SLC (Set Local Characters) suboption handler because add_slc does not check whether the buffer is full."
+          },
+          {
+            "lang": "es",
+            "value": "telnetd en GNU inetutils hasta 2.7 permite una escritura fuera de límites en el gestor de la subopción LINEMODE SLC (Set Local Characters) porque add_slc no verifica si el búfer está lleno."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "cve@mitre.org",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-120"
+              }
+            ],
+            "source": "cve@mitre.org"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:gnu:inetutils:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "6381CFAE-9A10-40ED-BC93-1DB55CB44327",
+                    "versionEndIncluding": "2.7"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://lists.gnu.org/archive/html/bug-inetutils/2026-03/msg00031.html",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Exploit",
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://www.openwall.com/lists/oss-security/2026/03/12/4",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Mailing List",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "http://www.openwall.com/lists/oss-security/2026/03/14/1",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Mailing List",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/watchtowrlabs/watchtowr-vs-telnetd-CVE-2026-32746",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 14
+    },
+    {
+      "cve_id": "CVE-2026-3891",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-03-13",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-03-13",
+        "description": "The Pix for WooCommerce plugin for WordPress is vulnerable to arbitrary file uploads due to missing capability check and missing file type validation in the 'lkn_pix_for_woocommerce_c6_save_settings' function in all versions up to, and including, 1.5.0. This makes it possible for unauthenticated attackers to upload arbitrary files on the affected site's server which may make remote code execution possible.",
+        "title": "The Pix for WooCommerce plugin for WordPress is vulnerable to arbitrary file uploads due to missing capability check and missing file typ...",
+        "attack_type": "RCE",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2026-3891",
+        "sourceIdentifier": "security@wordfence.com",
+        "published": "2026-03-13T19:55:10.983",
+        "lastModified": "2026-04-22T21:30:26.497",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The Pix for WooCommerce plugin for WordPress is vulnerable to arbitrary file uploads due to missing capability check and missing file type validation in the 'lkn_pix_for_woocommerce_c6_save_settings' function in all versions up to, and including, 1.5.0. This makes it possible for unauthenticated attackers to upload arbitrary files on the affected site's server which may make remote code execution possible."
+          },
+          {
+            "lang": "es",
+            "value": "El plugin Pix for WooCommerce para WordPress es vulnerable a la carga arbitraria de archivos debido a la falta de verificación de capacidades y la falta de validación del tipo de archivo en la función 'lkn_pix_for_woocommerce_c6_save_settings' en todas las versiones hasta la 1.5.0, inclusive. Esto permite a atacantes no autenticados cargar archivos arbitrarios en el servidor del sitio afectado, lo que podría posibilitar la ejecución remota de código."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security@wordfence.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-434"
+              }
+            ],
+            "source": "security@wordfence.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/payment-gateway-pix-for-woocommerce/tags/1.4.0/Includes/LknPaymentPixForWoocommercePixC6.php#L694",
+            "source": "security@wordfence.com"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/changeset/3480639/payment-gateway-pix-for-woocommerce#file56",
+            "source": "security@wordfence.com"
+          },
+          {
+            "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/20188fd3-c330-4c76-912b-72731e14c450?source=cve",
+            "source": "security@wordfence.com"
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 15
+    },
+    {
+      "cve_id": "CVE-2026-3910",
+      "signal_types": [
+        "KEV"
+      ],
+      "signals": {
+        "kev": {
+          "date_added": "2026-03-13"
+        },
+        "exploit": null,
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-03-13",
+        "description": "Inappropriate implementation in V8 in Google Chrome prior to 146.0.7680.75 allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security severity: High)",
+        "title": "Google Chromium V8 Improper Restriction of Operations Within the Bounds of a Memory Buffer Vulnerability",
+        "vendor": "google",
+        "product": "chrome",
+        "cvss_max": 8.8
+      },
+      "cve": {
+        "id": "CVE-2026-3910",
+        "sourceIdentifier": "chrome-cve-admin@google.com",
+        "published": "2026-03-13T19:55:11.363",
+        "lastModified": "2026-03-13T22:00:01.403",
+        "vulnStatus": "Analyzed",
+        "cisaExploitAdd": "2026-03-13",
+        "cisaActionDue": "2026-03-27",
+        "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+        "cisaVulnerabilityName": "Google Chromium V8 Improper Restriction of Operations Within the Bounds of a Memory Buffer Vulnerability",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Inappropriate implementation in V8 in Google Chrome prior to 146.0.7680.75 allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security severity: High)"
+          },
+          {
+            "lang": "es",
+            "value": "Implementación inapropiada en V8 en Google Chrome anterior a 146.0.7680.75 permitió a un atacante remoto ejecutar código arbitrario dentro de una sandbox a través de una página HTML diseñada específicamente. (Gravedad de seguridad de Chromium: Alta)"
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+                "baseScore": 8.8,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 5.9
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+                "baseScore": 8.8,
+                "baseSeverity": "HIGH"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-94"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          },
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-119"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:google:chrome:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "13F45C9E-6FFA-4A7C-AACB-CF14FF6FC0E1",
+                    "versionEndExcluding": "146.0.7680.75"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:macos:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "387021A0-AF36-463C-A605-32EA7DAC172E"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "703AF700-7A70-47E2-BC3A-7FD03B3CA9C1"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "A2572D17-1DE6-457B-99CC-64AFD54487EA"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://chromereleases.googleblog.com/2026/03/stable-channel-update-for-desktop_12.html",
+            "source": "chrome-cve-admin@google.com",
+            "tags": [
+              "Vendor Advisory",
+              "Release Notes"
+            ]
+          },
+          {
+            "url": "https://issues.chromium.org/issues/491410818",
+            "source": "chrome-cve-admin@google.com",
+            "tags": [
+              "Permissions Required"
+            ]
+          },
+          {
+            "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-3910",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "US Government Resource"
+            ]
+          }
+        ]
+      },
+      "risk_score": 88,
+      "rank": 16
+    }
+  ],
+  "source": "https://www.cvelogic.com/threat-intelligence/2026-03-13"
+}

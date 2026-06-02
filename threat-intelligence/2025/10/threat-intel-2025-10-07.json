@@ -1,0 +1,1018 @@
+{
+  "schema_version": "2.2",
+  "generated_at": "2026-06-02T07:33:33Z",
+  "day": "2025-10-07",
+  "window": {
+    "utc_start": "2025-10-07",
+    "utc_end": "2025-10-07",
+    "days": 1
+  },
+  "summary": {
+    "brief": "Synacor Zimbra Collaboration Suite (ZCS) added to CISA KEV — confirmed in-the-wild exploitation. · Zte Zxhn H108n R1a Firmware — exploitation likelihood rose sharply (EPSS 17% → 35% · rising (+18%)). · 5 new critical disclosures — review patch status on exposed services.",
+    "bullets": [
+      "Synacor Zimbra Collaboration Suite (ZCS) added to CISA KEV — confirmed in-the-wild exploitation.",
+      "Zte Zxhn H108n R1a Firmware — exploitation likelihood rose sharply (EPSS 17% → 35% · rising (+18%)).",
+      "5 new critical disclosures — review patch status on exposed services."
+    ],
+    "counts": {
+      "cves": 7,
+      "kev": 1,
+      "exploit": 0,
+      "epss": 1,
+      "cvss": 5,
+      "patch": 0
+    }
+  },
+  "cves": [
+    {
+      "cve_id": "CVE-2025-27915",
+      "signal_types": [
+        "KEV"
+      ],
+      "signals": {
+        "kev": {
+          "date_added": "2025-10-07"
+        },
+        "exploit": null,
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-03-12",
+        "description": "An issue was discovered in Zimbra Collaboration (ZCS) 9.0 and 10.0 and 10.1. A stored cross-site scripting (XSS) vulnerability exists in the Classic Web Client due to insufficient sanitization of HTML content in ICS files. When a user views an e-mail message containing a malicious ICS entry, its embedded JavaScript executes via an ontoggle event inside a <details> tag. This allows an attacker to run arbitrary JavaScript within the victim's session, potentially leading to unauthorized actions such as setting e-mail filters to redirect messages to an attacker-controlled address. As a result, an attacker can perform unauthorized actions on the victim's account, including e-mail redirection and data exfiltration.",
+        "title": "Synacor Zimbra Collaboration Suite (ZCS) Cross-site Scripting Vulnerability",
+        "vendor": "synacor",
+        "product": "zimbra_collaboration_suite",
+        "attack_type": "XSS",
+        "cvss_max": 5.4
+      },
+      "cve": {
+        "id": "CVE-2025-27915",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2025-03-12T15:15:39.900",
+        "lastModified": "2025-11-04T16:45:11.053",
+        "vulnStatus": "Analyzed",
+        "cisaExploitAdd": "2025-10-07",
+        "cisaActionDue": "2025-10-28",
+        "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+        "cisaVulnerabilityName": "Synacor Zimbra Collaboration Suite (ZCS) Cross-site Scripting Vulnerability",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "An issue was discovered in Zimbra Collaboration (ZCS) 9.0 and 10.0 and 10.1. A stored cross-site scripting (XSS) vulnerability exists in the Classic Web Client due to insufficient sanitization of HTML content in ICS files. When a user views an e-mail message containing a malicious ICS entry, its embedded JavaScript executes via an ontoggle event inside a <details> tag. This allows an attacker to run arbitrary JavaScript within the victim's session, potentially leading to unauthorized actions such as setting e-mail filters to redirect messages to an attacker-controlled address. As a result, an attacker can perform unauthorized actions on the victim's account, including e-mail redirection and data exfiltration."
+          },
+          {
+            "lang": "es",
+            "value": "Se descubrió un problema en Zimbra Collaboration (ZCS) 9.0, 10.0 y 10.1. Existe una vulnerabilidad de cross site scripting (XSS) almacenado en el cliente web clásico debido a una depuración insuficiente del contenido HTML en los archivos ICS. Cuando un usuario visualiza un mensaje de correo electrónico que contiene una entrada ICS maliciosa, su JavaScript incrustado se ejecuta mediante un evento ontoggle dentro de una etiqueta . Esto permite a un atacante ejecutar JavaScript arbitrario en la sesión de la víctima, lo que podría provocar acciones no autorizadas, como configurar filtros de correo electrónico para redirigir los mensajes a una dirección controlada por el atacante. Como resultado, un atacante puede realizar acciones no autorizadas en la cuenta de la víctima, como la redirección de correo electrónico y la exfiltración de datos."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N",
+                "baseScore": 5.4,
+                "baseSeverity": "MEDIUM"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 2.3,
+              "impactScore": 2.7
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-79"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "7F7A8D86-7352-45D1-A809-D19FCC4A4ED0",
+                    "versionStartIncluding": "10.0.0",
+                    "versionEndExcluding": "10.0.13"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "CD5597BA-6D2C-4E3A-AA67-0F29DA04CA76",
+                    "versionStartIncluding": "10.1.0",
+                    "versionEndExcluding": "10.1.5"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:9.0.0:-:*:*:*:*:*:*",
+                    "matchCriteriaId": "32AFCE22-5ADA-4FF7-A165-5EC12B325DEF"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:9.0.0:p1:*:*:*:*:*:*",
+                    "matchCriteriaId": "D3577FE6-F1F4-4555-8D27-84D6DE731EA3"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:9.0.0:p10:*:*:*:*:*:*",
+                    "matchCriteriaId": "931BD98E-1A5F-4634-945B-BDD7D2FAA8B0"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:9.0.0:p11:*:*:*:*:*:*",
+                    "matchCriteriaId": "2E7C0A57-A887-4D29-B601-4275313F46B3"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:9.0.0:p12:*:*:*:*:*:*",
+                    "matchCriteriaId": "B7248B91-D136-4DD5-A631-737E4C220A02"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:9.0.0:p13:*:*:*:*:*:*",
+                    "matchCriteriaId": "494F6FD4-36ED-4E40-8336-7F077FA80FA8"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:9.0.0:p14:*:*:*:*:*:*",
+                    "matchCriteriaId": "9DF8C0CE-A71D-4BB1-83FB-1EA5ED77E0C9"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:9.0.0:p15:*:*:*:*:*:*",
+                    "matchCriteriaId": "E0648498-2EE5-4B68-8360-ED5914285356"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:9.0.0:p16:*:*:*:*:*:*",
+                    "matchCriteriaId": "24282FF8-548B-415B-95CA-1EFD404D21D3"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:9.0.0:p17:*:*:*:*:*:*",
+                    "matchCriteriaId": "ACFDF2D9-ED72-4969-AA3B-E8D48CB1922D"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:9.0.0:p18:*:*:*:*:*:*",
+                    "matchCriteriaId": "2B7D0A8B-7A72-4C1A-85F2-BE336CA47E0B"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:9.0.0:p19:*:*:*:*:*:*",
+                    "matchCriteriaId": "019AFC34-289E-4A01-B08B-A5807F7F909A"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:9.0.0:p2:*:*:*:*:*:*",
+                    "matchCriteriaId": "7E7B3976-DA6F-4285-93E6-2328006F7F4D"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:9.0.0:p20:*:*:*:*:*:*",
+                    "matchCriteriaId": "062E586F-0E02-45A6-93AD-895048FC2D4C"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:9.0.0:p21:*:*:*:*:*:*",
+                    "matchCriteriaId": "3EE37BEE-4BDB-4E62-8DE3-98CF74DFBE01"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:9.0.0:p22:*:*:*:*:*:*",
+                    "matchCriteriaId": "ADF51BCA-37DD-4642-B201-74A6D1A545FF"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:9.0.0:p23:*:*:*:*:*:*",
+                    "matchCriteriaId": "39611F3D-A898-4C35-8915-3334CDFB78E5"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:9.0.0:p24:*:*:*:*:*:*",
+                    "matchCriteriaId": "40AB56B7-7222-4C44-A271-45DFE3673F72"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:9.0.0:p24.1:*:*:*:*:*:*",
+                    "matchCriteriaId": "2AE8F501-4528-4F15-AE50-D4F11FB462DE"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:9.0.0:p25:*:*:*:*:*:*",
+                    "matchCriteriaId": "AB9E054B-7790-4E74-A771-40BF6EC71610"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:9.0.0:p26:*:*:*:*:*:*",
+                    "matchCriteriaId": "DD924E57-C77B-430B-A615-537BB39CEA9C"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:9.0.0:p27:*:*:*:*:*:*",
+                    "matchCriteriaId": "F43F4AC0-7C82-4CF4-B0C7-3A4C567BC985"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:9.0.0:p28:*:*:*:*:*:*",
+                    "matchCriteriaId": "7991F602-41D7-4377-B888-D66A467EAD67"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:9.0.0:p29:*:*:*:*:*:*",
+                    "matchCriteriaId": "2193FCA2-1AE3-497D-B0ED-5B89727410E3"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:9.0.0:p3:*:*:*:*:*:*",
+                    "matchCriteriaId": "FA310AFA-492D-4A6C-A7F6-740E82CB6E57"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:9.0.0:p30:*:*:*:*:*:*",
+                    "matchCriteriaId": "FF95618B-0BFB-403C-83BE-C97879FC866D"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:9.0.0:p31:*:*:*:*:*:*",
+                    "matchCriteriaId": "A82346A9-9CC2-4B91-BA2F-A815AAA92A7F"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:9.0.0:p32:*:*:*:*:*:*",
+                    "matchCriteriaId": "2E800348-E139-418D-910B-7B3A9E1E721C"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:9.0.0:p33:*:*:*:*:*:*",
+                    "matchCriteriaId": "C7DE1A7E-573B-42F3-B0A4-D2E676954FE0"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:9.0.0:p34:*:*:*:*:*:*",
+                    "matchCriteriaId": "E60BC1D0-8552-4E6B-B2C5-96038448C238"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:9.0.0:p35:*:*:*:*:*:*",
+                    "matchCriteriaId": "3924251E-13B0-420E-8080-D3312C3D54AF"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:9.0.0:p36:*:*:*:*:*:*",
+                    "matchCriteriaId": "AEBE75F9-A494-4C78-927A-EA564BDCCE0B"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:9.0.0:p37:*:*:*:*:*:*",
+                    "matchCriteriaId": "900BECBA-7FDB-4E35-9603-29706FB87BD2"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:9.0.0:p38:*:*:*:*:*:*",
+                    "matchCriteriaId": "5024FD58-A3ED-43B1-83EF-F4570C2573BA"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:9.0.0:p39:*:*:*:*:*:*",
+                    "matchCriteriaId": "3CC9D046-4EB4-4608-8AB7-B60AC330A770"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:9.0.0:p4:*:*:*:*:*:*",
+                    "matchCriteriaId": "2AF337B5-B296-449B-8848-7636EC7C46C5"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:9.0.0:p40:*:*:*:*:*:*",
+                    "matchCriteriaId": "A4535EC5-74D5-41E8-95F1-5C033ADB043E"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:9.0.0:p41:*:*:*:*:*:*",
+                    "matchCriteriaId": "408E1BFD-16AA-458C-B040-04870522FEBD"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:9.0.0:p42:*:*:*:*:*:*",
+                    "matchCriteriaId": "205B2CDC-6423-4FD9-9FD0-847ADEB64003"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:9.0.0:p43:*:*:*:*:*:*",
+                    "matchCriteriaId": "CAE21C69-F080-4CE2-A39E-BF3509FB2005"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:9.0.0:p5:*:*:*:*:*:*",
+                    "matchCriteriaId": "52232ACA-C158-48C8-A0DB-7689040CB8FB"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:9.0.0:p6:*:*:*:*:*:*",
+                    "matchCriteriaId": "3B4D0040-86D0-46C3-8A9A-3DD12138B9ED"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:9.0.0:p7:*:*:*:*:*:*",
+                    "matchCriteriaId": "D2BB9BC7-078D-4E08-88E4-9432D74CA9BA"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:9.0.0:p8:*:*:*:*:*:*",
+                    "matchCriteriaId": "F04D4B77-D386-4BC8-8169-9846693F6F11"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:synacor:zimbra_collaboration_suite:9.0.0:p9:*:*:*:*:*:*",
+                    "matchCriteriaId": "992370FA-F171-4FB3-9C1C-58AC37038CE4"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://wiki.zimbra.com/wiki/Security_Center",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Release Notes"
+            ]
+          },
+          {
+            "url": "https://wiki.zimbra.com/wiki/Zimbra_Releases/10.0.13#Security_Fixes",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Release Notes"
+            ]
+          },
+          {
+            "url": "https://wiki.zimbra.com/wiki/Zimbra_Releases/10.1.5#Security_Fixes",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Release Notes"
+            ]
+          },
+          {
+            "url": "https://wiki.zimbra.com/wiki/Zimbra_Releases/9.0.0/P44#Security_Fixes",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Release Notes"
+            ]
+          },
+          {
+            "url": "https://strikeready.com/blog/0day-ics-attack-in-the-wild/",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2025-27915",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "US Government Resource"
+            ]
+          }
+        ]
+      },
+      "risk_score": 88,
+      "rank": 1
+    },
+    {
+      "cve_id": "CVE-2015-7248",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 0.17232,
+            "score_date": "2025-03-30"
+          },
+          "current": {
+            "score": 0.35407,
+            "score_date": "2025-10-07"
+          },
+          "delta": 0.18175
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2015-12-30",
+        "description": "ZTE ZXHN H108N R1A devices before ZTE.bhs.ZXHNH108NR1A.k_PE allow remote attackers to discover usernames and password hashes by reading the cgi-bin/webproc HTML source code, a different vulnerability than CVE-2015-8703.",
+        "title": "zte zxhn_h108n_r1a_firmware",
+        "vendor": "zte",
+        "product": "zxhn_h108n_r1a_firmware",
+        "cvss_max": 7.5
+      },
+      "cve": {
+        "id": "CVE-2015-7248",
+        "sourceIdentifier": "cret@cert.org",
+        "published": "2015-12-30T05:59:01.287",
+        "lastModified": "2026-05-06T22:30:45.220",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "ZTE ZXHN H108N R1A devices before ZTE.bhs.ZXHNH108NR1A.k_PE allow remote attackers to discover usernames and password hashes by reading the cgi-bin/webproc HTML source code, a different vulnerability than CVE-2015-8703."
+          },
+          {
+            "lang": "es",
+            "value": "Dispositivos ZTE ZXHN H108N R1A en versiones anteriores a ZTE.bhs.ZXHNH108NR1A.k_PE permite a atacantes remotos descubrir nombres de usuario y hashes de contraseñas leyendo el código fuente HTML cgi-bin/webproc, una vulnerabilidad diferente a CVE-2015-8703."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV2": [
+            {
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:L/Au:N/C:P/I:N/A:N",
+                "baseScore": 5.0,
+                "baseSeverity": "MEDIUM"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "baseSeverity": "MEDIUM",
+              "exploitabilityScore": 10.0,
+              "impactScore": 2.9
+            }
+          ],
+          "cvssMetricV30": [
+            {
+              "cvssData": {
+                "version": "3.0",
+                "vectorString": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+                "baseScore": 7.5,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 3.6
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-200"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:zte:zxhn_h108n_r1a_firmware:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "B3F8294C-E254-4328-8884-C27B9F880D01",
+                    "versionEndIncluding": "zte.bhs.zxhnh108nr1a.h_pe"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:zte:zxhn_h108n_r1a:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "5A0A9215-1F66-4A0B-BF01-0064769F6812"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "http://www.securityfocus.com/bid/77421",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "https://www.exploit-db.com/exploits/38773/",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "https://www.kb.cert.org/vuls/id/391604",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory",
+              "US Government Resource"
+            ]
+          },
+          {
+            "url": "https://www.kb.cert.org/vuls/id/BLUU-9ZDJWA",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory",
+              "US Government Resource"
+            ]
+          }
+        ]
+      },
+      "risk_score": 82,
+      "rank": 2
+    },
+    {
+      "cve_id": "CVE-2025-44823",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-10-07",
+          "previous_max": null,
+          "current_max": 9.9
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-10-07",
+        "description": "Nagios Log Server before 2024R1.3.2 allows authenticated users to retrieve cleartext administrative API keys via a /nagioslogserver/index.php/api/system/get_users call. This is GL:NLS#475.",
+        "title": "nagios log_server",
+        "vendor": "nagios",
+        "product": "log_server",
+        "cvss_max": 9.9
+      },
+      "cve": {
+        "id": "CVE-2025-44823",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2025-10-07T20:15:35.070",
+        "lastModified": "2025-11-06T16:41:01.823",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Nagios Log Server before 2024R1.3.2 allows authenticated users to retrieve cleartext administrative API keys via a /nagioslogserver/index.php/api/system/get_users call. This is GL:NLS#475."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+                "baseScore": 9.9,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "cve@mitre.org",
+              "type": "Secondary",
+              "exploitabilityScore": 3.1,
+              "impactScore": 6.0
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 8.8,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-497"
+              }
+            ],
+            "source": "cve@mitre.org"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nagios:log_server:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "87E74637-713C-4DD7-B97E-2F247B7B12B1",
+                    "versionEndExcluding": "2024"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nagios:log_server:2024:r1:*:*:*:*:*:*",
+                    "matchCriteriaId": "B93D415C-B2C0-42CE-B9B3-29C29A3DCC16"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nagios:log_server:2024:r1.0.1:*:*:*:*:*:*",
+                    "matchCriteriaId": "997B64B5-A3F2-4D0E-B05E-CCA76D598C18"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nagios:log_server:2024:r1.0.2:*:*:*:*:*:*",
+                    "matchCriteriaId": "D20F6746-83DD-49AE-8C3D-AF2FFB47A89E"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nagios:log_server:2024:r1.1:*:*:*:*:*:*",
+                    "matchCriteriaId": "5EF32AF5-19EA-495A-AB28-F78F33DDEC3F"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nagios:log_server:2024:r1.2:*:*:*:*:*:*",
+                    "matchCriteriaId": "4C26DE7A-37AA-4570-81C1-2E0C1A9026F7"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nagios:log_server:2024:r1.3:*:*:*:*:*:*",
+                    "matchCriteriaId": "52C22468-A773-49C8-81AD-9B76C26BFFD1"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nagios:log_server:2024:r1.3.1:*:*:*:*:*:*",
+                    "matchCriteriaId": "7CEC223A-A3EE-4C51-8B71-E19C73B9215C"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://www.exploit-db.com/exploits/52177",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Exploit",
+              "VDB Entry"
+            ]
+          },
+          {
+            "url": "https://www.nagios.com/changelog/#log-server",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Release Notes"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 3
+    },
+    {
+      "cve_id": "CVE-2025-0603",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-10-07",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-10-07",
+        "description": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in Callvision Healthcare Callvision Emergency Code allows SQL Injection, Blind SQL Injection.This issue affects Callvision Emergency Code: before V3.0.",
+        "title": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in Callvision Healthcare Callvision Em...",
+        "attack_type": "SQL Injection",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-0603",
+        "sourceIdentifier": "iletisim@usom.gov.tr",
+        "published": "2025-10-07T12:15:38.710",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in Callvision Healthcare Callvision Emergency Code allows SQL Injection, Blind SQL Injection.This issue affects Callvision Emergency Code: before V3.0."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "iletisim@usom.gov.tr",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-89"
+              }
+            ],
+            "source": "iletisim@usom.gov.tr"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://www.usom.gov.tr/bildirim/tr-25-0320",
+            "source": "iletisim@usom.gov.tr"
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 4
+    },
+    {
+      "cve_id": "CVE-2025-11462",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-10-07",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-10-07",
+        "description": "Improper Link Resolution Before File Access in the AWS VPN Client for macOS versions 1.3.2- 5.2.0 allows a local user to execute code with elevated privileges. Insufficient validation checks on the log destination directory during log rotation could allow a non-administrator user to create a symlink from a client log file to a privileged location. On log rotation, this could lead to code execution with root privileges if the user made crafted API calls which injected arbitrary code into the log file. We recommend users upgrade to AWS VPN Client for macOS 5.2.1 or the latest version.",
+        "title": "Improper Link Resolution Before File Access in the AWS VPN Client for macOS versions 1.3.2- 5.2.0 allows a local user to execute code wit...",
+        "attack_type": "Code Execution",
+        "cvss_max": 9.3
+      },
+      "cve": {
+        "id": "CVE-2025-11462",
+        "sourceIdentifier": "ff89ba41-3aa1-4d27-914a-91399e9639e5",
+        "published": "2025-10-07T20:15:33.590",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Improper Link Resolution Before File Access in the AWS VPN Client for macOS versions 1.3.2- 5.2.0 allows a local user to execute code with elevated privileges. Insufficient validation checks on the log destination directory during log rotation could allow a non-administrator user to create a symlink from a client log file to a privileged location. On log rotation, this could lead to code execution with root privileges if the user made crafted API calls which injected arbitrary code into the log file. We recommend users upgrade to AWS VPN Client for macOS 5.2.1 or the latest version."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 7.8,
+                "baseSeverity": "HIGH"
+              },
+              "source": "ff89ba41-3aa1-4d27-914a-91399e9639e5",
+              "type": "Secondary",
+              "exploitabilityScore": 1.8,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "ff89ba41-3aa1-4d27-914a-91399e9639e5",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-59"
+              }
+            ],
+            "source": "ff89ba41-3aa1-4d27-914a-91399e9639e5"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://aws.amazon.com/security/security-bulletins/AWS-2025-020/",
+            "source": "ff89ba41-3aa1-4d27-914a-91399e9639e5"
+          },
+          {
+            "url": "https://docs.aws.amazon.com/vpn/latest/clientvpn-user/client-vpn-connect-macos-release-notes.html",
+            "source": "ff89ba41-3aa1-4d27-914a-91399e9639e5"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 5
+    },
+    {
+      "cve_id": "CVE-2025-3450",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-10-07",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-10-07",
+        "description": "An Improper Resource Locking vulnerability in the SDM component of B&R Automation Runtime versions before 6.3 and before Q4.93 may allow an unauthenticated network-based attacker to delete data causing denial of service conditions.",
+        "title": "An Improper Resource Locking vulnerability in the SDM component of B&R Automation Runtime versions before 6.3 and before Q4.93 may allow...",
+        "attack_type": "DoS",
+        "cvss_max": 10.0
+      },
+      "cve": {
+        "id": "CVE-2025-3450",
+        "sourceIdentifier": "cybersecurity@ch.abb.com",
+        "published": "2025-10-07T18:15:59.327",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "An Improper Resource Locking vulnerability in the SDM component of B&R Automation Runtime versions before 6.3 and before Q4.93 may allow an unauthenticated network-based attacker to delete data causing denial of service conditions."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:N/I:H/A:H",
+                "baseScore": 10.0,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "cybersecurity@ch.abb.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.8
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:H/VA:H/SC:N/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "cybersecurity@ch.abb.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-413"
+              }
+            ],
+            "source": "cybersecurity@ch.abb.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://www.br-automation.com/fileadmin/SA25P002-f6a69e61.pdf",
+            "source": "cybersecurity@ch.abb.com"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 6
+    },
+    {
+      "cve_id": "CVE-2025-52021",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-10-07",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-10-07",
+        "description": "A SQL Injection vulnerability exists in the edit_product.php file of PuneethReddyHC Online Shopping System Advanced 1.0. The product_id GET parameter is unsafely passed to a SQL query without proper validation or parameterization.",
+        "title": "A SQL Injection vulnerability exists in the edit_product.php file of PuneethReddyHC Online Shopping System Advanced 1.0.",
+        "attack_type": "SQL Injection",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-52021",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2025-10-07T17:15:33.570",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A SQL Injection vulnerability exists in the edit_product.php file of PuneethReddyHC Online Shopping System Advanced 1.0. The product_id GET parameter is unsafely passed to a SQL query without proper validation or parameterization."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-89"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://gist.github.com/hafizgemilang/c953d16c1459458667132e93359f3d6c",
+            "source": "cve@mitre.org"
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 7
+    }
+  ],
+  "source": "https://www.cvelogic.com/threat-intelligence/2025-10-07"
+}

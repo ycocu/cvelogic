@@ -1,0 +1,1656 @@
+{
+  "schema_version": "2.2",
+  "generated_at": "2026-06-02T07:34:47Z",
+  "day": "2026-03-29",
+  "window": {
+    "utc_start": "2026-03-29",
+    "utc_end": "2026-03-29",
+    "days": 1
+  },
+  "summary": {
+    "brief": "Sas\\/intrnet — exploitation likelihood rose sharply (EPSS 55% → 74% · rising (+19%)). · 8 new critical disclosures — review patch status on exposed services.",
+    "bullets": [
+      "Sas\\/intrnet — exploitation likelihood rose sharply (EPSS 55% → 74% · rising (+19%)).",
+      "8 new critical disclosures — review patch status on exposed services."
+    ],
+    "counts": {
+      "cves": 12,
+      "kev": 0,
+      "exploit": 0,
+      "epss": 4,
+      "cvss": 8,
+      "patch": 0
+    }
+  },
+  "cves": [
+    {
+      "cve_id": "CVE-2021-41569",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 0.5477,
+            "score_date": "2025-11-21"
+          },
+          "current": {
+            "score": 0.7377,
+            "score_date": "2026-03-29"
+          },
+          "delta": 0.19
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2021-11-19",
+        "description": "SAS/Intrnet 9.4 build 1520 and earlier allows Local File Inclusion. The samples library (included by default) in the appstart.sas file, allows end-users of the application to access the sample.webcsf1.sas program, which contains user-controlled macro variables that are passed to the DS2CSF macro. Users can escape the context of the configured user-controllable variable and append additional functions native to the macro but not included as variables within the library. This includes a function that retrieves files from the host OS.",
+        "title": "sas sas\\/intrnet",
+        "vendor": "sas",
+        "product": "sas\\/intrnet",
+        "cvss_max": 7.5
+      },
+      "cve": {
+        "id": "CVE-2021-41569",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2021-11-19T18:15:09.677",
+        "lastModified": "2024-11-21T06:26:26.863",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "SAS/Intrnet 9.4 build 1520 and earlier allows Local File Inclusion. The samples library (included by default) in the appstart.sas file, allows end-users of the application to access the sample.webcsf1.sas program, which contains user-controlled macro variables that are passed to the DS2CSF macro. Users can escape the context of the configured user-controllable variable and append additional functions native to the macro but not included as variables within the library. This includes a function that retrieves files from the host OS."
+          },
+          {
+            "lang": "es",
+            "value": "SAS/Intrnet versión 9.4 build 1520 y anteriores permiten una Inclusión de Archivos Locales. La biblioteca de muestras (incluida por defecto) en el archivo appstart.sas, permite a usuarios finales de la aplicación acceder al programa sample.webcsf1.sas, que contiene variables de macro controladas por el usuario que son pasadas a la macro DS2CSF. Los usuarios pueden escapar del contexto de la variable configurada controlada por el usuario y añadir funciones adicionales nativas de la macro pero no incluidas como variables dentro de la biblioteca. Esto incluye una función que recupera archivos del sistema operativo anfitrión"
+          }
+        ],
+        "metrics": {
+          "cvssMetricV2": [
+            {
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:L/Au:N/C:P/I:N/A:N",
+                "baseScore": 5.0,
+                "baseSeverity": "MEDIUM"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "baseSeverity": "MEDIUM",
+              "exploitabilityScore": 10.0,
+              "impactScore": 2.9
+            }
+          ],
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+                "baseScore": 7.5,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 3.6
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-829"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:sas:sas\\/intrnet:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "CBF39665-A79B-468D-9B94-D6C5F447698A",
+                    "versionEndExcluding": "9.4"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:sas:sas\\/intrnet:9.4:-:*:*:*:*:*:*",
+                    "matchCriteriaId": "8C3C8715-1108-47CF-8FD4-A64CA38EE71E"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:sas:sas\\/intrnet:9.4:build1520:*:*:*:*:*:*",
+                    "matchCriteriaId": "61A27A40-4F4B-4B15-B754-247316B3783C"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://support.sas.com/kb/68/641.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://www.mindpointgroup.com/blog/high-risk-vulnerability-discovery-localfileinclusion-sas",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 82,
+      "rank": 1
+    },
+    {
+      "cve_id": "CVE-2021-41460",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 0.2834,
+            "score_date": "2025-11-21"
+          },
+          "current": {
+            "score": 0.44712,
+            "score_date": "2026-03-29"
+          },
+          "delta": 0.16372
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2022-06-28",
+        "description": "ECShop 4.1.0 has SQL injection vulnerability, which can be exploited by attackers to obtain sensitive information.",
+        "title": "shopex ecshop SQL Injection",
+        "vendor": "shopex",
+        "product": "ecshop",
+        "attack_type": "SQL Injection",
+        "cvss_max": 7.5
+      },
+      "cve": {
+        "id": "CVE-2021-41460",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2022-06-28T13:15:10.030",
+        "lastModified": "2024-11-21T06:26:17.100",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "ECShop 4.1.0 has SQL injection vulnerability, which can be exploited by attackers to obtain sensitive information."
+          },
+          {
+            "lang": "es",
+            "value": "ECShop versión 4.1.0, presenta una vulnerabilidad de inyección SQL, que puede ser explotada por atacantes para obtener información confidencial"
+          }
+        ],
+        "metrics": {
+          "cvssMetricV2": [
+            {
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:L/Au:N/C:P/I:N/A:N",
+                "baseScore": 5.0,
+                "baseSeverity": "MEDIUM"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "baseSeverity": "MEDIUM",
+              "exploitabilityScore": 10.0,
+              "impactScore": 2.9
+            }
+          ],
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+                "baseScore": 7.5,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 3.6
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-89"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:shopex:ecshop:4.1.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "29247B82-96F2-4751-828B-973AB5E4F008"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://www.cnvd.org.cn/flaw/show/CNVD-2020-58823",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory",
+              "VDB Entry"
+            ]
+          }
+        ]
+      },
+      "risk_score": 82,
+      "rank": 2
+    },
+    {
+      "cve_id": "CVE-2026-0558",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-03-29",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-03-29",
+        "description": "A vulnerability in parisneo/lollms, up to and including version 2.2.0, allows unauthenticated users to upload and process files through the `/api/files/extract-text` endpoint. This endpoint does not enforce authentication, unlike other file-related endpoints, and lacks the `Depends(get_current_active_user)` dependency. This issue can lead to denial of service (DoS) through resource exhaustion, information disclosure, and violation of the application's documented security policies.",
+        "title": "lollms lollms DoS",
+        "vendor": "lollms",
+        "product": "lollms",
+        "attack_type": "DoS",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2026-0558",
+        "sourceIdentifier": "security@huntr.dev",
+        "published": "2026-03-29T18:16:13.250",
+        "lastModified": "2026-03-31T19:45:54.220",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A vulnerability in parisneo/lollms, up to and including version 2.2.0, allows unauthenticated users to upload and process files through the `/api/files/extract-text` endpoint. This endpoint does not enforce authentication, unlike other file-related endpoints, and lacks the `Depends(get_current_active_user)` dependency. This issue can lead to denial of service (DoS) through resource exhaustion, information disclosure, and violation of the application's documented security policies."
+          },
+          {
+            "lang": "es",
+            "value": "Una vulnerabilidad en parisneo/lollms, hasta la versión 2.2.0 inclusive, permite a usuarios no autenticados subir y procesar archivos a través del endpoint `/api/files/extract-text`. Este endpoint no aplica autenticación, a diferencia de otros endpoints relacionados con archivos, y carece de la dependencia `Depends(get_current_active_user)`. Este problema puede conducir a denegación de servicio (DoS) mediante el agotamiento de recursos, revelación de información y la violación de las políticas de seguridad documentadas de la aplicación."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV30": [
+            {
+              "cvssData": {
+                "version": "3.0",
+                "vectorString": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+                "baseScore": 7.5,
+                "baseSeverity": "HIGH"
+              },
+              "source": "security@huntr.dev",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 3.6
+            }
+          ],
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-287"
+              }
+            ],
+            "source": "security@huntr.dev"
+          },
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "NVD-CWE-noinfo"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:lollms:lollms:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "7118851E-5C3C-499B-BBB5-0327B7FD85AF",
+                    "versionEndIncluding": "2.1.0"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/parisneo/lollms/commit/a6625dc83786ff21d109b0d545ca61b770607ef3",
+            "source": "security@huntr.dev",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://huntr.com/bounties/0a722001-89ce-4c91-b6a6-a55ee5ba2113",
+            "source": "security@huntr.dev",
+            "tags": [
+              "Exploit",
+              "Issue Tracking",
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 3
+    },
+    {
+      "cve_id": "CVE-2020-25206",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 0.19349,
+            "score_date": "2026-02-25"
+          },
+          "current": {
+            "score": 0.29594,
+            "score_date": "2026-03-29"
+          },
+          "delta": 0.10245
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2021-07-20",
+        "description": "The web console for Mimosa B5, B5c, and C5x firmware through 2.8.0.2 allows authenticated command injection in the Throughput, WANStats, PhyStats, and QosStats API classes. An attacker with access to a web console account may execute operating system commands on affected devices by sending crafted POST requests to the affected endpoints (/core/api/calls/Throughput.php, /core/api/calls/WANStats.php, /core/api/calls/PhyStats.php, /core/api/calls/QosStats.php). This results in the complete takeover of the vulnerable device. This vulnerability does not occur in the older 1.5.x firmware versions.",
+        "title": "mimosa b5_firmware Command Injection",
+        "vendor": "mimosa",
+        "product": "b5_firmware",
+        "attack_type": "Command Injection",
+        "cvss_max": 9.0
+      },
+      "cve": {
+        "id": "CVE-2020-25206",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2021-07-20T19:15:09.600",
+        "lastModified": "2024-11-21T05:17:38.813",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The web console for Mimosa B5, B5c, and C5x firmware through 2.8.0.2 allows authenticated command injection in the Throughput, WANStats, PhyStats, and QosStats API classes. An attacker with access to a web console account may execute operating system commands on affected devices by sending crafted POST requests to the affected endpoints (/core/api/calls/Throughput.php, /core/api/calls/WANStats.php, /core/api/calls/PhyStats.php, /core/api/calls/QosStats.php). This results in the complete takeover of the vulnerable device. This vulnerability does not occur in the older 1.5.x firmware versions."
+          },
+          {
+            "lang": "es",
+            "value": "La consola web para el firmware Mimosa B5, B5c y C5x versiones hasta 2.8.0.2, permite una inyección de comandos autenticados en las clases API Throughput, WANStats, PhyStats y QosStats. Un atacante con acceso a una cuenta de consola web puede ejecutar comandos del sistema operativo en los dispositivos afectados mediante el envío de peticiones POST diseñadas a los endpoints afectados (/core/api/calls/Throughput.php, /core/api/calls/WANStats.php, /core/api/calls/PhyStats.php, /core/api/calls/QosStats.php). El resultado es la toma completa del dispositivo vulnerable. Esta vulnerabilidad no ocurre en las versiones de firmware 1.5.x más antiguas"
+          }
+        ],
+        "metrics": {
+          "cvssMetricV2": [
+            {
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:L/Au:S/C:C/I:C/A:C",
+                "baseScore": 9.0,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "baseSeverity": "HIGH",
+              "exploitabilityScore": 8.0,
+              "impactScore": 10.0
+            }
+          ],
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 7.2,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 1.2,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-78"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:mimosa:b5_firmware:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "E81EF07E-1DEE-454B-B022-48311817322C",
+                    "versionStartIncluding": "1.5.2",
+                    "versionEndIncluding": "2.8.0.3"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:mimosa:b5:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "AB6E4730-E018-43B4-827B-6266EECF81A8"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:mimosa:b5c_firmware:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "9283F1EB-BE6D-4F53-8398-5C2F3EED9B17",
+                    "versionStartIncluding": "1.5.2",
+                    "versionEndExcluding": "2.8.1.0"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:mimosa:b5c:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "B92406E6-A9B4-4070-B307-C341F770EF43"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:mimosa:c5c_firmware:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "405AFB9E-9503-49A5-9705-12990599A79B",
+                    "versionStartIncluding": "1.5.2",
+                    "versionEndExcluding": "2.8.1.0"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:mimosa:c5c:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "B2435693-7699-4432-BC83-F31D967E181F"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://cwe.mitre.org/data/definitions/78.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://labs.f-secure.com/advisories/",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://labs.f-secure.com/advisories/mimosa-ptp-devices-multiple-vulnerabilities/",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 79,
+      "rank": 4
+    },
+    {
+      "cve_id": "CVE-2022-24082",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 0.31462,
+            "score_date": "2025-11-21"
+          },
+          "current": {
+            "score": 0.45577,
+            "score_date": "2026-03-29"
+          },
+          "delta": 0.14115
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2022-07-19",
+        "description": "If an on-premise installation of the Pega Platform is configured with the port for the JMX interface exposed to the Internet and port filtering is not properly configured, then it may be possible to upload serialized payloads to attack the underlying system. This does not affect systems running on PegaCloud due to its design and architecture.",
+        "title": "pega infinity",
+        "vendor": "pega",
+        "product": "infinity",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2022-24082",
+        "sourceIdentifier": "security@pega.com",
+        "published": "2022-07-19T15:15:08.487",
+        "lastModified": "2024-11-21T06:49:46.687",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "If an on-premise installation of the Pega Platform is configured with the port for the JMX interface exposed to the Internet and port filtering is not properly configured, then it may be possible to upload serialized payloads to attack the underlying system. This does not affect systems running on PegaCloud due to its design and architecture."
+          },
+          {
+            "lang": "es",
+            "value": "Si una instalación local de Pega Platform está configurada con el puerto de la interfaz JMX expuesto a Internet y el filtrado de puertos no está configurado apropiadamente, puede ser posible cargar cargas útiles serializadas para atacar el sistema subyacente. Esto no afecta a sistemas que son ejecutados en PegaCloud debido a su diseño y arquitectura."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV30": [
+            {
+              "cvssData": {
+                "version": "3.0",
+                "vectorString": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security@pega.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-502"
+              }
+            ],
+            "source": "security@pega.com"
+          },
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-502"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:pega:infinity:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "9AA500E7-CE8A-4943-B747-F3C69A6507D5",
+                    "versionStartIncluding": "8.1.0",
+                    "versionEndExcluding": "8.7.3"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "http://packetstormsecurity.com/files/169480/Pega-Platform-8.7.3-Remote-Code-Execution.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory",
+              "VDB Entry"
+            ]
+          },
+          {
+            "url": "https://support.pega.com/support-doc/pega-security-advisory-b22-vulnerability-%E2%80%93-hotfix-matrix-0",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 86,
+      "rank": 5
+    },
+    {
+      "cve_id": "CVE-2026-32915",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-03-29",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-03-29",
+        "description": "OpenClaw before 2026.3.11 contains a sandbox boundary bypass vulnerability allowing leaf subagents to access the subagents control surface and resolve against parent requester scope instead of their own session tree. A low-privilege sandboxed leaf worker can steer or kill sibling runs and cause execution with broader tool policies by exploiting insufficient authorization checks on subagent control requests.",
+        "title": "openclaw openclaw privilege escalation",
+        "vendor": "openclaw",
+        "product": "openclaw",
+        "attack_type": "privilege escalation",
+        "cvss_max": 9.3
+      },
+      "cve": {
+        "id": "CVE-2026-32915",
+        "sourceIdentifier": "disclosure@vulncheck.com",
+        "published": "2026-03-29T13:16:59.973",
+        "lastModified": "2026-03-31T18:10:23.680",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "OpenClaw before 2026.3.11 contains a sandbox boundary bypass vulnerability allowing leaf subagents to access the subagents control surface and resolve against parent requester scope instead of their own session tree. A low-privilege sandboxed leaf worker can steer or kill sibling runs and cause execution with broader tool policies by exploiting insufficient authorization checks on subagent control requests."
+          },
+          {
+            "lang": "es",
+            "value": "OpenClaw anterior a 2026.3.11 contiene una vulnerabilidad de bypass de límite de sandbox que permite a los subagentes hoja acceder a la superficie de control de los subagentes y resolver contra el alcance del solicitante padre en lugar de su propio árbol de sesión. Un trabajador hoja en sandbox con bajos privilegios puede dirigir o terminar ejecuciones hermanas y causar la ejecución con políticas de herramientas más amplias al explotar comprobaciones de autorización insuficientes en las solicitudes de control de subagentes."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+                "baseScore": 8.8,
+                "baseSeverity": "HIGH"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Primary",
+              "exploitabilityScore": 2.0,
+              "impactScore": 6.0
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-863"
+              }
+            ],
+            "source": "disclosure@vulncheck.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:openclaw:openclaw:*:*:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "4B01F0B5-B0CB-462E-A546-2BA2CACD83D5",
+                    "versionEndExcluding": "2026.3.11"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-4w7m-58cg-cmff",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://www.vulncheck.com/advisories/openclaw-sandbox-boundary-bypass-via-subagent-control-surface",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 6
+    },
+    {
+      "cve_id": "CVE-2026-32918",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-03-29",
+          "previous_max": null,
+          "current_max": 9.2
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-03-29",
+        "description": "OpenClaw before 2026.3.11 contains a session sandbox escape vulnerability in the session_status tool that allows sandboxed subagents to access parent or sibling session state. Attackers can supply arbitrary sessionKey values to read or modify session data outside their sandbox scope, including persisted model overrides.",
+        "title": "openclaw openclaw",
+        "vendor": "openclaw",
+        "product": "openclaw",
+        "cvss_max": 9.2
+      },
+      "cve": {
+        "id": "CVE-2026-32918",
+        "sourceIdentifier": "disclosure@vulncheck.com",
+        "published": "2026-03-29T13:17:00.173",
+        "lastModified": "2026-03-31T18:09:19.123",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "OpenClaw before 2026.3.11 contains a session sandbox escape vulnerability in the session_status tool that allows sandboxed subagents to access parent or sibling session state. Attackers can supply arbitrary sessionKey values to read or modify session data outside their sandbox scope, including persisted model overrides."
+          },
+          {
+            "lang": "es",
+            "value": "OpenClaw anterior a 2026.3.11 contiene una vulnerabilidad de escape de sandbox de sesión en la herramienta session_status que permite a los subagentes en sandbox acceder al estado de sesión padre o hermano. Los atacantes pueden proporcionar valores arbitrarios de sessionKey para leer o modificar datos de sesión fuera de su ámbito de sandbox, incluyendo anulaciones de modelo persistidas."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:N",
+                "baseScore": 8.4,
+                "baseSeverity": "HIGH"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Primary",
+              "exploitabilityScore": 2.0,
+              "impactScore": 5.8
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:N/SC:H/SI:H/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.2,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-863"
+              }
+            ],
+            "source": "disclosure@vulncheck.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:openclaw:openclaw:*:*:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "4B01F0B5-B0CB-462E-A546-2BA2CACD83D5",
+                    "versionEndExcluding": "2026.3.11"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-wcxr-59v9-rxr8",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://www.vulncheck.com/advisories/openclaw-session-sandbox-escape-via-session-status-tool",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 7
+    },
+    {
+      "cve_id": "CVE-2026-32922",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-03-29",
+          "previous_max": null,
+          "current_max": 9.4
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-03-29",
+        "description": "OpenClaw before 2026.3.11 contains a privilege escalation vulnerability in device.token.rotate that allows callers with operator.pairing scope to mint tokens with broader scopes by failing to constrain newly minted scopes to the caller's current scope set. Attackers can obtain operator.admin tokens for paired devices and achieve remote code execution on connected nodes via system.run or gain unauthorized gateway-admin access.",
+        "title": "openclaw openclaw RCE",
+        "vendor": "openclaw",
+        "product": "openclaw",
+        "attack_type": "RCE",
+        "cvss_max": 9.9
+      },
+      "cve": {
+        "id": "CVE-2026-32922",
+        "sourceIdentifier": "disclosure@vulncheck.com",
+        "published": "2026-03-29T13:17:00.573",
+        "lastModified": "2026-03-31T18:02:26.860",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "OpenClaw before 2026.3.11 contains a privilege escalation vulnerability in device.token.rotate that allows callers with operator.pairing scope to mint tokens with broader scopes by failing to constrain newly minted scopes to the caller's current scope set. Attackers can obtain operator.admin tokens for paired devices and achieve remote code execution on connected nodes via system.run or gain unauthorized gateway-admin access."
+          },
+          {
+            "lang": "es",
+            "value": "OpenClaw anterior a 2026.3.11 contiene una vulnerabilidad de escalada de privilegios en device.token.rotate que permite a los llamadores con alcance operator.pairing acuñar tokens con alcances más amplios al no restringir los alcances recién acuñados al conjunto de alcances actual del llamador. Los atacantes pueden obtener tokens operator.admin para dispositivos emparejados y lograr ejecución remota de código en nodos conectados a través de system.run u obtener acceso no autorizado de gateway-admin."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+                "baseScore": 9.9,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Primary",
+              "exploitabilityScore": 3.1,
+              "impactScore": 6.0
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.4,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-266"
+              }
+            ],
+            "source": "disclosure@vulncheck.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:openclaw:openclaw:*:*:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "4B01F0B5-B0CB-462E-A546-2BA2CACD83D5",
+                    "versionEndExcluding": "2026.3.11"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-4jpw-hj22-2xmc",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://www.vulncheck.com/advisories/openclaw-privilege-escalation-via-unvalidated-scope-in-device-token-rotate",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 8
+    },
+    {
+      "cve_id": "CVE-2026-32978",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-03-29",
+          "previous_max": null,
+          "current_max": 9.4
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-03-29",
+        "description": "OpenClaw before 2026.3.11 contains an approval integrity vulnerability where system.run approvals fail to bind mutable file operands for certain script runners like tsx and jiti. Attackers can obtain approval for benign script commands, rewrite referenced scripts on disk, and execute modified code under the approved run context.",
+        "title": "openclaw openclaw",
+        "vendor": "openclaw",
+        "product": "openclaw",
+        "cvss_max": 9.4
+      },
+      "cve": {
+        "id": "CVE-2026-32978",
+        "sourceIdentifier": "disclosure@vulncheck.com",
+        "published": "2026-03-29T13:17:01.963",
+        "lastModified": "2026-03-30T17:15:43.657",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "OpenClaw before 2026.3.11 contains an approval integrity vulnerability where system.run approvals fail to bind mutable file operands for certain script runners like tsx and jiti. Attackers can obtain approval for benign script commands, rewrite referenced scripts on disk, and execute modified code under the approved run context."
+          },
+          {
+            "lang": "es",
+            "value": "OpenClaw anterior a 2026.3.11 contiene una vulnerabilidad de integridad de aprobación donde las aprobaciones de system.run no logran vincular operandos de archivo mutables para ciertos ejecutores de scripts como tsx y jiti. Los atacantes pueden obtener aprobación para comandos de script benignos, reescribir scripts referenciados en disco y ejecutar código modificado bajo el contexto de ejecución aprobado."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:C/C:H/I:H/A:H",
+                "baseScore": 8.0,
+                "baseSeverity": "HIGH"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary",
+              "exploitabilityScore": 1.3,
+              "impactScore": 6.0
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 7.5,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 1.6,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:P/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.4,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-863"
+              }
+            ],
+            "source": "disclosure@vulncheck.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:openclaw:openclaw:*:*:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "4B01F0B5-B0CB-462E-A546-2BA2CACD83D5",
+                    "versionEndExcluding": "2026.3.11"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-qc36-x95h-7j53",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Mitigation",
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://www.vulncheck.com/advisories/openclaw-approval-bypass-via-unrecognized-script-runners",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 9
+    },
+    {
+      "cve_id": "CVE-2026-32987",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-03-29",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-03-29",
+        "description": "OpenClaw before 2026.3.13 allows bootstrap setup codes to be replayed during device pairing verification in src/infra/device-bootstrap.ts. Attackers can verify a valid bootstrap code multiple times before approval to escalate pending pairing scopes, including privilege escalation to operator.admin.",
+        "title": "openclaw openclaw Privilege Escalation",
+        "vendor": "openclaw",
+        "product": "openclaw",
+        "attack_type": "Privilege Escalation",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2026-32987",
+        "sourceIdentifier": "disclosure@vulncheck.com",
+        "published": "2026-03-29T13:17:02.563",
+        "lastModified": "2026-03-31T17:53:28.313",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "OpenClaw before 2026.3.13 allows bootstrap setup codes to be replayed during device pairing verification in src/infra/device-bootstrap.ts. Attackers can verify a valid bootstrap code multiple times before approval to escalate pending pairing scopes, including privilege escalation to operator.admin."
+          },
+          {
+            "lang": "es",
+            "value": "OpenClaw anterior a 2026.3.13 permite que los códigos de configuración de arranque sean reproducidos durante la verificación de emparejamiento de dispositivos en src/infra/device-bootstrap.ts. Los atacantes pueden verificar un código de arranque válido varias veces antes de la aprobación para escalar ámbitos de emparejamiento pendientes, incluyendo escalada de privilegios a operator.admin."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-294"
+              }
+            ],
+            "source": "disclosure@vulncheck.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:openclaw:openclaw:*:*:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "70DEDAA7-16AC-4833-ADD0-540DD4A0B1CB",
+                    "versionEndExcluding": "2026.3.13"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/openclaw/openclaw/commit/1803d16d5cec970c54b0e1ac46b31b1cbade335c",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-63f5-hhc7-cx6p",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://www.vulncheck.com/advisories/openclaw-bootstrap-setup-code-replay-via-device-pairing",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 10
+    },
+    {
+      "cve_id": "CVE-2026-4176",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-03-29",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-03-29",
+        "description": "Perl versions from 5.9.4 before 5.40.4-RC1, from 5.41.0 before 5.42.2-RC1, from 5.43.0 before 5.43.9 contain a vulnerable version of Compress::Raw::Zlib.\n\nCompress::Raw::Zlib is included in the Perl package as a dual-life core module, and is vulnerable to CVE-2026-3381 due to a vendored version of zlib which has several vulnerabilities, including CVE-2026-27171. The bundled Compress::Raw::Zlib was updated to version 2.221 in Perl blead commit c75ae9cc164205e1b6d6dbd57bd2c65c8593fe94.",
+        "title": "perl perl",
+        "vendor": "perl",
+        "product": "perl",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2026-4176",
+        "sourceIdentifier": "9b29abf9-4ab0-4765-b253-1875cd9b441e",
+        "published": "2026-03-29T21:16:15.717",
+        "lastModified": "2026-04-22T17:31:45.770",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Perl versions from 5.9.4 before 5.40.4-RC1, from 5.41.0 before 5.42.2-RC1, from 5.43.0 before 5.43.9 contain a vulnerable version of Compress::Raw::Zlib.\n\nCompress::Raw::Zlib is included in the Perl package as a dual-life core module, and is vulnerable to CVE-2026-3381 due to a vendored version of zlib which has several vulnerabilities, including CVE-2026-27171. The bundled Compress::Raw::Zlib was updated to version 2.221 in Perl blead commit c75ae9cc164205e1b6d6dbd57bd2c65c8593fe94."
+          },
+          {
+            "lang": "es",
+            "value": "Las versiones de Perl desde la 5.9.4 anteriores a la 5.40.4-RC1, desde la 5.41.0 anteriores a la 5.42.2-RC1, y desde la 5.43.0 anteriores a la 5.43.9 contienen una versión vulnerable de Compress::Raw::Zlib.\n\nCompress::Raw::Zlib está incluido en el paquete de Perl como un módulo central de doble vida, y es vulnerable a CVE-2026-3381 debido a una versión empaquetada de zlib que tiene varias vulnerabilidades, incluyendo CVE-2026-27171. El Compress::Raw::Zlib empaquetado fue actualizado a la versión 2.221 en el commit de Perl blead c75ae9cc164205e1b6d6dbd57bd2c65c8593fe94."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "NVD-CWE-Other"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:perl:perl:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "CB7DC630-9F3F-404F-9759-882BFCC79961",
+                    "versionStartIncluding": "5.9.4",
+                    "versionEndExcluding": "5.40.4"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:perl:perl:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "19F3A1E9-F479-4537-AA41-6800D49A3A68",
+                    "versionStartIncluding": "5.41.0",
+                    "versionEndExcluding": "5.42.2"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:perl:perl:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "A21CB5D2-7B78-485A-A6E8-5C2BBAE99334",
+                    "versionStartIncluding": "5.43.0",
+                    "versionEndExcluding": "5.43.9"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/Perl/perl5/commit/c75ae9cc164205e1b6d6dbd57bd2c65c8593fe94",
+            "source": "9b29abf9-4ab0-4765-b253-1875cd9b441e",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://lists.security.metacpan.org/cve-announce/msg/37638919/",
+            "source": "9b29abf9-4ab0-4765-b253-1875cd9b441e",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://metacpan.org/release/PMQS/Compress-Raw-Zlib-2.221/source/Changes",
+            "source": "9b29abf9-4ab0-4765-b253-1875cd9b441e",
+            "tags": [
+              "Release Notes"
+            ]
+          },
+          {
+            "url": "https://metacpan.org/release/SHAY/perl-5.40.4/changes",
+            "source": "9b29abf9-4ab0-4765-b253-1875cd9b441e",
+            "tags": [
+              "Release Notes"
+            ]
+          },
+          {
+            "url": "https://metacpan.org/release/SHAY/perl-5.42.2/changes",
+            "source": "9b29abf9-4ab0-4765-b253-1875cd9b441e",
+            "tags": [
+              "Release Notes"
+            ]
+          },
+          {
+            "url": "https://www.cve.org/CVERecord?id=CVE-2026-3381",
+            "source": "9b29abf9-4ab0-4765-b253-1875cd9b441e",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "http://www.openwall.com/lists/oss-security/2026/03/30/2",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Mailing List",
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 11
+    },
+    {
+      "cve_id": "CVE-2026-4851",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-03-29",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-03-29",
+        "description": "GRID::Machine versions through 0.127 for Perl allows arbitrary code execution via unsafe deserialization.\n\nGRID::Machine provides Remote Procedure Calls (RPC) over SSH for Perl. The client connects to remote hosts to execute code on them. A compromised or malicious remote host can execute arbitrary code back on the client through unsafe deserialization in the RPC protocol.\n\nread_operation() in lib/GRID/Machine/Message.pm deserialises values from the remote side using eval()\n\n  $arg .= '$VAR1';\n  my $val = eval \"no strict; $arg\"; # line 40-41\n\n$arg is raw bytes from the protocol pipe. A compromised remote host can embed arbitrary perl in the Dumper-formatted response:\n\n  $VAR1 = do { system(\"...\"); };\n\nThis executes on the client silently on every RPC call, as the return values remain correct.\n\nThis functionality is by design but the trust requirement for the remote host is not documented in the distribution.",
+        "title": "casiano grid::machine RCE",
+        "vendor": "casiano",
+        "product": "grid\\",
+        "attack_type": "RCE",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2026-4851",
+        "sourceIdentifier": "9b29abf9-4ab0-4765-b253-1875cd9b441e",
+        "published": "2026-03-29T01:15:56.967",
+        "lastModified": "2026-04-01T15:23:23.980",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "GRID::Machine versions through 0.127 for Perl allows arbitrary code execution via unsafe deserialization.\n\nGRID::Machine provides Remote Procedure Calls (RPC) over SSH for Perl. The client connects to remote hosts to execute code on them. A compromised or malicious remote host can execute arbitrary code back on the client through unsafe deserialization in the RPC protocol.\n\nread_operation() in lib/GRID/Machine/Message.pm deserialises values from the remote side using eval()\n\n  $arg .= '$VAR1';\n  my $val = eval \"no strict; $arg\"; # line 40-41\n\n$arg is raw bytes from the protocol pipe. A compromised remote host can embed arbitrary perl in the Dumper-formatted response:\n\n  $VAR1 = do { system(\"...\"); };\n\nThis executes on the client silently on every RPC call, as the return values remain correct.\n\nThis functionality is by design but the trust requirement for the remote host is not documented in the distribution."
+          },
+          {
+            "lang": "es",
+            "value": "Las versiones de GRID::Machine hasta la 0.127 para Perl permiten ejecución de código arbitrario a través de deserialización insegura.\n\nGRID::Machine proporciona Llamadas a Procedimientos Remotos (RPC) sobre SSH para Perl. El cliente se conecta a hosts remotos para ejecutar código en ellos. Un host remoto comprometido o malicioso puede ejecutar código arbitrario de vuelta en el cliente a través de deserialización insegura en el protocolo RPC.\n\nread_operation() en lib/GRID/Machine/Message.pm deserializa valores del lado remoto usando eval()\n\n  $arg .= '$VAR1';\n  my $val = eval \"no strict; $arg\"; # línea 40-41\n\n$arg son bytes en bruto de la tubería del protocolo. Un host remoto comprometido puede incrustar Perl arbitrario en la respuesta con formato Dumper:\n\n  $VAR1 = do { system(\"...\"); };\n\nEsto se ejecuta en el cliente silenciosamente en cada llamada RPC, ya que los valores de retorno permanecen correctos.\n\nEsta funcionalidad es intencional, pero el requisito de confianza para el host remoto no está documentado en la distribución."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-95"
+              },
+              {
+                "lang": "en",
+                "value": "CWE-502"
+              }
+            ],
+            "source": "9b29abf9-4ab0-4765-b253-1875cd9b441e"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:casiano:grid\\:\\:machine:*:*:*:*:*:perl:*:*",
+                    "matchCriteriaId": "B3148991-8DC2-4D2F-8EC2-0DCB0E5B6A63",
+                    "versionEndIncluding": "0.127"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://www.openwall.com/lists/oss-security/2026/03/26/6",
+            "source": "9b29abf9-4ab0-4765-b253-1875cd9b441e",
+            "tags": [
+              "Mailing List"
+            ]
+          },
+          {
+            "url": "http://www.openwall.com/lists/oss-security/2026/03/26/6",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Mailing List"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 12
+    }
+  ],
+  "source": "https://www.cvelogic.com/threat-intelligence/2026-03-29"
+}

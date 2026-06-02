@@ -1,0 +1,1023 @@
+{
+  "schema_version": "2.2",
+  "generated_at": "2026-06-02T07:32:58Z",
+  "day": "2025-06-30",
+  "window": {
+    "utc_start": "2025-06-30",
+    "utc_end": "2025-06-30",
+    "days": 1
+  },
+  "summary": {
+    "brief": "Citrix NetScaler ADC And Gateway added to CISA KEV — confirmed in-the-wild exploitation. · Adobe Bridge — exploitation likelihood rose sharply (EPSS 3.1% → 22% · rising (+19%)). · 3 new critical disclosures — review patch status on exposed services.",
+    "bullets": [
+      "Citrix NetScaler ADC And Gateway added to CISA KEV — confirmed in-the-wild exploitation.",
+      "Adobe Bridge — exploitation likelihood rose sharply (EPSS 3.1% → 22% · rising (+19%)).",
+      "3 new critical disclosures — review patch status on exposed services."
+    ],
+    "counts": {
+      "cves": 6,
+      "kev": 1,
+      "exploit": 0,
+      "epss": 2,
+      "cvss": 3,
+      "patch": 0
+    }
+  },
+  "cves": [
+    {
+      "cve_id": "CVE-2025-6543",
+      "signal_types": [
+        "KEV"
+      ],
+      "signals": {
+        "kev": {
+          "date_added": "2025-06-30"
+        },
+        "exploit": null,
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-06-25",
+        "description": "Memory overflow vulnerability leading to unintended control flow and Denial of Service in NetScaler ADC and NetScaler Gateway when configured as Gateway (VPN virtual server, ICA Proxy, CVPN, RDP Proxy) OR AAA virtual server",
+        "title": "Citrix NetScaler ADC and Gateway Buffer Overflow Vulnerability",
+        "vendor": "citrix",
+        "product": "netscaler_application_delivery_controller",
+        "attack_type": "Buffer Overflow",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-6543",
+        "sourceIdentifier": "secure@citrix.com",
+        "published": "2025-06-25T13:15:27.293",
+        "lastModified": "2025-10-24T13:42:21.210",
+        "vulnStatus": "Analyzed",
+        "cisaExploitAdd": "2025-06-30",
+        "cisaActionDue": "2025-07-21",
+        "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+        "cisaVulnerabilityName": "Citrix NetScaler ADC and Gateway Buffer Overflow Vulnerability",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Memory overflow vulnerability leading to unintended control flow and Denial of Service in NetScaler ADC and NetScaler Gateway when configured as Gateway (VPN virtual server, ICA Proxy, CVPN, RDP Proxy) OR AAA virtual server"
+          },
+          {
+            "lang": "es",
+            "value": "Vulnerabilidad de desbordamiento de memoria que provoca un flujo de control no deseado y una denegación de servicio en NetScaler ADC y NetScaler Gateway cuando se configuran como Gateway (servidor virtual VPN, proxy ICA, CVPN, proxy RDP) O servidor virtual AAA"
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:L/SI:L/SA:L/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.2,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "secure@citrix.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-119"
+              }
+            ],
+            "source": "secure@citrix.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:citrix:netscaler_application_delivery_controller:*:*:*:*:fips:*:*:*",
+                    "matchCriteriaId": "0F079648-790A-4D18-908D-25CA575C5B46",
+                    "versionStartIncluding": "13.1",
+                    "versionEndExcluding": "13.1-37.236"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:citrix:netscaler_application_delivery_controller:*:*:*:*:ndcpp:*:*:*",
+                    "matchCriteriaId": "CF89AD2E-8A0A-43A9-9EEB-83D595576775",
+                    "versionStartIncluding": "13.1",
+                    "versionEndExcluding": "13.1-37.236"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:citrix:netscaler_application_delivery_controller:*:*:*:*:-:*:*:*",
+                    "matchCriteriaId": "355DCB05-54E3-4C13-A74A-B27CE3F10597",
+                    "versionStartIncluding": "13.1",
+                    "versionEndExcluding": "13.1-59.19"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:citrix:netscaler_application_delivery_controller:*:*:*:*:-:*:*:*",
+                    "matchCriteriaId": "4A26624D-7F3F-4FD7-AC50-C9BDCA656F7B",
+                    "versionStartIncluding": "14.1",
+                    "versionEndExcluding": "14.1-47.46"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:citrix:netscaler_gateway:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "598029C6-734C-450C-A7EC-495C72819E88",
+                    "versionStartIncluding": "13.1",
+                    "versionEndExcluding": "13.1-59.19"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:citrix:netscaler_gateway:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "D977C8AE-4B4E-474D-ABD6-F55F054E5B59",
+                    "versionStartIncluding": "14.1",
+                    "versionEndExcluding": "14.1-47.46"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://support.citrix.com/support-home/kbsearch/article?articleNumber=CTX694788",
+            "source": "secure@citrix.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2025-6543",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "US Government Resource"
+            ]
+          }
+        ]
+      },
+      "risk_score": 88,
+      "rank": 1
+    },
+    {
+      "cve_id": "CVE-2022-28849",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 0.03072,
+            "score_date": "2025-06-25"
+          },
+          "current": {
+            "score": 0.22453,
+            "score_date": "2025-06-30"
+          },
+          "delta": 0.19381
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2022-06-15",
+        "description": "Adobe Bridge version 12.0.1 (and earlier versions) is affected by a Use-After-Free vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue requires user interaction in that a victim must open a malicious file.",
+        "title": "adobe bridge RCE",
+        "vendor": "adobe",
+        "product": "bridge",
+        "attack_type": "RCE",
+        "cvss_max": 7.8
+      },
+      "cve": {
+        "id": "CVE-2022-28849",
+        "sourceIdentifier": "psirt@adobe.com",
+        "published": "2022-06-15T20:15:18.533",
+        "lastModified": "2024-11-21T06:58:03.343",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Adobe Bridge version 12.0.1 (and earlier versions) is affected by a Use-After-Free vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue requires user interaction in that a victim must open a malicious file."
+          },
+          {
+            "lang": "es",
+            "value": "Adobe Bridge versión 12.0.1 (y versiones anteriores), está afectada por una vulnerabilidad de tipo Uso de Memoria Previamente Liberada que podría resultar en una ejecución de código arbitrario en el contexto del usuario actual. Es requerida una interacción del usuario para explotar este problema , ya que la víctima debe abrir un archivo malicioso"
+          }
+        ],
+        "metrics": {
+          "cvssMetricV2": [
+            {
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+                "baseScore": 6.8,
+                "baseSeverity": "MEDIUM"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "baseSeverity": "MEDIUM",
+              "exploitabilityScore": 8.6,
+              "impactScore": 6.4
+            }
+          ],
+          "cvssMetricV30": [
+            {
+              "cvssData": {
+                "version": "3.0",
+                "vectorString": "CVSS:3.0/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+                "baseScore": 7.8,
+                "baseSeverity": "HIGH"
+              },
+              "source": "psirt@adobe.com",
+              "type": "Secondary",
+              "exploitabilityScore": 1.8,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+                "baseScore": 7.8,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 1.8,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-416"
+              }
+            ],
+            "source": "psirt@adobe.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:bridge:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "73345931-DC09-4956-91A0-015DB995B68D",
+                    "versionEndIncluding": "12.0.1"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:macos:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "387021A0-AF36-463C-A605-32EA7DAC172E"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "A2572D17-1DE6-457B-99CC-64AFD54487EA"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://helpx.adobe.com/security/products/bridge/apsb22-25.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Patch",
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 83,
+      "rank": 2
+    },
+    {
+      "cve_id": "CVE-2025-45931",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-06-30",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-06-30",
+        "description": "An issue D-Link DIR-816-A2 DIR-816A2_FWv1.10CNB05_R1B011D88210 allows a remote attacker to execute arbitrary code via system() function in the bin/goahead file",
+        "title": "dlink dir-816_firmware",
+        "vendor": "dlink",
+        "product": "dir-816_firmware",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-45931",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2025-06-30T17:15:32.467",
+        "lastModified": "2025-07-08T14:13:39.897",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "An issue D-Link DIR-816-A2 DIR-816A2_FWv1.10CNB05_R1B011D88210 allows a remote attacker to execute arbitrary code via system() function in the bin/goahead file"
+          },
+          {
+            "lang": "es",
+            "value": "Un problema D-Link DIR-816-A2 DIR-816A2_FWv1.10CNB05_R1B011D88210 permite que un atacante remoto ejecute código arbitrario a través de la función system() en el archivo bin/goahead"
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-77"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:dlink:dir-816_firmware:1.10cnb05_r1b011d88210:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "6494A725-3860-4428-A0F3-076605CAF7F2"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:dlink:dir-816:a2:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "1A3AC507-7219-401E-AC60-12D96382E4B7"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "http://d-link.com",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Product"
+            ]
+          },
+          {
+            "url": "http://dir-816-a2.com",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Broken Link"
+            ]
+          },
+          {
+            "url": "https://github.com/Synmac05/CVE-advisories/blob/main/CVE-2025-45931.md",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.dlink.com/en/security-bulletin/",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 3
+    },
+    {
+      "cve_id": "CVE-2015-6125",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 0.44517,
+            "score_date": "2025-03-30"
+          },
+          "current": {
+            "score": 0.59229,
+            "score_date": "2025-06-30"
+          },
+          "delta": 0.14712
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2015-12-09",
+        "description": "Use-after-free vulnerability in the DNS server in Microsoft Windows Server 2008 SP2 and R2 SP1 and Server 2012 Gold and R2 allows remote attackers to execute arbitrary code via crafted requests, aka \"Windows DNS Use After Free Vulnerability.\"",
+        "title": "microsoft windows_server_2008 Use-After-Free",
+        "vendor": "microsoft",
+        "product": "windows_server_2008",
+        "attack_type": "Use-After-Free",
+        "cvss_max": 9.3
+      },
+      "cve": {
+        "id": "CVE-2015-6125",
+        "sourceIdentifier": "secure@microsoft.com",
+        "published": "2015-12-09T11:59:10.190",
+        "lastModified": "2026-05-06T22:30:45.220",
+        "vulnStatus": "Modified",
+        "evaluatorComment": "<a href=\"https://cwe.mitre.org/data/definitions/416.html\">CWE-416: Use After Free</a>",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Use-after-free vulnerability in the DNS server in Microsoft Windows Server 2008 SP2 and R2 SP1 and Server 2012 Gold and R2 allows remote attackers to execute arbitrary code via crafted requests, aka \"Windows DNS Use After Free Vulnerability.\""
+          },
+          {
+            "lang": "es",
+            "value": "Vulnerabilidad de uso después de liberación de memoria en el servidor DNS en Microsoft Windows Server 2008 SP2 y R2 SP1 y Server 2012 Gold y R2 permite a atacantes remotos ejecutar código arbitrario a través de peticiones manipuladas, también conocida como 'Windows DNS Use After Free Vulnerability'."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV2": [
+            {
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:M/Au:N/C:C/I:C/A:C",
+                "baseScore": 9.3,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "baseSeverity": "HIGH",
+              "exploitabilityScore": 8.6,
+              "impactScore": 10.0
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "NVD-CWE-Other"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_server_2008:-:sp2:*:*:*:*:*:*",
+                    "matchCriteriaId": "5F422A8C-2C4E-42C8-B420-E0728037E15C"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_server_2008:r2:sp1:*:*:*:*:*:*",
+                    "matchCriteriaId": "2ACA9287-B475-4AF7-A4DA-A7143CEF9E57"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_server_2012:*:gold:*:*:*:*:*:*",
+                    "matchCriteriaId": "0768220B-DBA8-4F5D-B955-A84960629818"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_server_2012:r2:*:*:*:datacenter:*:*:*",
+                    "matchCriteriaId": "32BCD530-F6E2-4F9B-AD4C-7DF2BED00296"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_server_2012:r2:*:*:*:essentials:*:*:*",
+                    "matchCriteriaId": "A1318333-EF3A-4DBA-8DD7-367BF843F70D"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_server_2012:r2:*:*:*:standard:*:*:*",
+                    "matchCriteriaId": "74B5E7C1-6C1D-4605-91CF-AF105EFA678D"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "http://www.securitytracker.com/id/1034323",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "https://docs.microsoft.com/en-us/security-updates/securitybulletins/2015/ms15-127",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          }
+        ]
+      },
+      "risk_score": 85,
+      "rank": 4
+    },
+    {
+      "cve_id": "CVE-2025-26074",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-06-30",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-06-30",
+        "description": "Orkes Conductor v3.21.11 allows remote attackers to execute arbitrary OS commands through unrestricted access to Java classes.",
+        "title": "Orkes Conductor v3.21.11 allows remote attackers to execute arbitrary OS commands through unrestricted access to Java classes.",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-26074",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2025-06-30T17:15:31.987",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Orkes Conductor v3.21.11 allows remote attackers to execute arbitrary OS commands through unrestricted access to Java classes."
+          },
+          {
+            "lang": "es",
+            "value": "Orkes Conductor v3.21.11 permite a atacantes remotos ejecutar comandos arbitrarios del sistema operativo a través del acceso sin restricciones a las clases Java."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-78"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/conductor-oss/conductor",
+            "source": "cve@mitre.org"
+          },
+          {
+            "url": "https://github.com/conductor-oss/conductor/blob/main/core/src/main/java/com/netflix/conductor/core/events/ScriptEvaluator.java",
+            "source": "cve@mitre.org"
+          },
+          {
+            "url": "https://medium.com/@mrcnry/cve-2025-26074-remote-code-execution-in-conductor-oss-via-inline-javascript-injection-5ce3cb651cfb",
+            "source": "cve@mitre.org"
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 5
+    },
+    {
+      "cve_id": "CVE-2025-32463",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-06-30",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-06-30",
+        "description": "Sudo before 1.9.17p1 allows local users to obtain root access because /etc/nsswitch.conf from a user-controlled directory is used with the --chroot option.",
+        "title": "Sudo Inclusion of Functionality from Untrusted Control Sphere Vulnerability",
+        "vendor": "sudo_project",
+        "product": "sudo",
+        "cvss_max": 9.3
+      },
+      "cve": {
+        "id": "CVE-2025-32463",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2025-06-30T21:15:30.257",
+        "lastModified": "2025-11-05T19:26:48.393",
+        "vulnStatus": "Analyzed",
+        "cisaExploitAdd": "2025-09-29",
+        "cisaActionDue": "2025-10-20",
+        "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+        "cisaVulnerabilityName": "Sudo Inclusion of Functionality from Untrusted Control Sphere Vulnerability",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Sudo before 1.9.17p1 allows local users to obtain root access because /etc/nsswitch.conf from a user-controlled directory is used with the --chroot option."
+          },
+          {
+            "lang": "es",
+            "value": "Sudo anterior a 1.9.17p1 permite a los usuarios locales obtener acceso root porque /etc/nsswitch.conf desde un directorio controlado por el usuario se utiliza con la opción --chroot."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "cve@mitre.org",
+              "type": "Secondary",
+              "exploitabilityScore": 2.5,
+              "impactScore": 6.0
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 7.8,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 1.8,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-829"
+              }
+            ],
+            "source": "cve@mitre.org"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:sudo_project:sudo:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "91CD68ED-9A18-47B6-91E5-C20D2F69AB65",
+                    "versionStartIncluding": "1.9.14",
+                    "versionEndExcluding": "1.9.17"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:sudo_project:sudo:1.9.17:-:*:*:*:*:*:*",
+                    "matchCriteriaId": "B563C690-EE9A-437C-9410-54209F82F827"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:canonical:ubuntu_linux:22.04:*:*:*:lts:*:*:*",
+                    "matchCriteriaId": "359012F1-2C63-415A-88B8-6726A87830DE"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:canonical:ubuntu_linux:24.04:*:*:*:lts:*:*:*",
+                    "matchCriteriaId": "BF90B5A4-6E55-4369-B9D4-E7A061E797D2"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:canonical:ubuntu_linux:24.10:*:*:*:-:*:*:*",
+                    "matchCriteriaId": "418A8B25-A287-4218-A10E-F9345A8E2EB7"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:canonical:ubuntu_linux:25.04:*:*:*:-:*:*:*",
+                    "matchCriteriaId": "6B40C5AB-76D5-44E1-A571-B9A44522C6BE"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:debian:debian_linux:11.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "FA6FEEC2-9F11-4643-8827-749718254FED"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:debian:debian_linux:12.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "46D69DCC-AE4D-4EA5-861C-D60951444C6C"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:debian:debian_linux:13.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "204FC6CC-9DAC-45FB-8A9F-C9C8EDD29D54"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:opensuse:leap:15.6:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "78B4F1C7-A301-4C94-A41C-A51182B83677"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:redhat:enterprise_linux:10.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "D65C2163-CFC2-4ABB-8F4E-CB09CEBD006C"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:suse:linux_enterprise_desktop:15:sp6:*:*:*:*:*:*",
+                    "matchCriteriaId": "B83183BD-A440-4697-8DD8-8A478C428984"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:suse:linux_enterprise_desktop:15:sp7:*:*:*:*:*:*",
+                    "matchCriteriaId": "B4388826-A383-4FBA-819A-363EAF6183DE"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:suse:linux_enterprise_real_time:15.0:sp2:*:*:*:*:*:*",
+                    "matchCriteriaId": "4B0AC584-5E26-4ACE-BC19-9E69A302F238"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:suse:linux_enterprise_real_time:15.0:sp6:*:*:*:*:*:*",
+                    "matchCriteriaId": "E8772290-7B8F-4FF3-8114-0535E84E10F5"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:suse:linux_enterprise_real_time:15.0:sp7:*:*:*:*:*:*",
+                    "matchCriteriaId": "BF782A24-9E6B-4897-9402-37DBCA7A7332"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:suse:linux_enterprise_server_for_sap:12:sp6:*:*:*:*:*:*",
+                    "matchCriteriaId": "44807632-7775-4496-9217-5F5816943D29"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:suse:linux_enterprise_server_for_sap:12:sp7:*:*:*:*:*:*",
+                    "matchCriteriaId": "2F46E618-B5F5-4CA1-8023-8E9C3E1772A2"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://access.redhat.com/security/cve/cve-2025-32463",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://bugs.gentoo.org/show_bug.cgi?id=CVE-2025-32463",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Issue Tracking",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://explore.alas.aws.amazon.com/CVE-2025-32463.html",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://security-tracker.debian.org/tracker/CVE-2025-32463",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://ubuntu.com/security/notices/USN-7604-1",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.openwall.com/lists/oss-security/2025/06/30/3",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.secpod.com/blog/sudo-lpe-vulnerabilities-resolved-what-you-need-to-know-about-cve-2025-32462-and-cve-2025-32463/",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.stratascale.com/vulnerability-alert-CVE-2025-32463-sudo-chroot",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.sudo.ws/releases/changelog/",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Release Notes"
+            ]
+          },
+          {
+            "url": "https://www.sudo.ws/security/advisories/",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://www.sudo.ws/security/advisories/chroot_bug/",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://www.suse.com/security/cve/CVE-2025-32463.html",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.suse.com/support/update/announcement/2025/suse-su-202502177-1/",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.vicarius.io/vsociety/posts/cve-2025-32463-detect-sudo-vulnerability",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.vicarius.io/vsociety/posts/cve-2025-32463-mitigate-sudo-vulnerability",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Mitigation",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://iototsecnews.jp/2025/07/01/linux-sudo-chroot-vulnerability-enables-hackers-to-elevate-privileges-to-root/",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2025-32463",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "US Government Resource"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 6
+    }
+  ],
+  "source": "https://www.cvelogic.com/threat-intelligence/2025-06-30"
+}

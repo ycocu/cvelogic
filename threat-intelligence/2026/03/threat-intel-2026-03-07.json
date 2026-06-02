@@ -1,0 +1,1159 @@
+{
+  "schema_version": "2.2",
+  "generated_at": "2026-06-02T07:34:35Z",
+  "day": "2026-03-07",
+  "window": {
+    "utc_start": "2026-03-07",
+    "utc_end": "2026-03-07",
+    "days": 1
+  },
+  "summary": {
+    "brief": "Openssl — exploitation likelihood rose sharply (EPSS 17% → 32% · rising (+14%)). · 6 new critical disclosures — review patch status on exposed services.",
+    "bullets": [
+      "Openssl — exploitation likelihood rose sharply (EPSS 17% → 32% · rising (+14%)).",
+      "6 new critical disclosures — review patch status on exposed services."
+    ],
+    "counts": {
+      "cves": 7,
+      "kev": 0,
+      "exploit": 0,
+      "epss": 1,
+      "cvss": 6,
+      "patch": 0
+    }
+  },
+  "cves": [
+    {
+      "cve_id": "CVE-2014-3571",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 0.17352,
+            "score_date": "2026-03-04"
+          },
+          "current": {
+            "score": 0.31582,
+            "score_date": "2026-03-07"
+          },
+          "delta": 0.1423
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2015-01-09",
+        "description": "OpenSSL before 0.9.8zd, 1.0.0 before 1.0.0p, and 1.0.1 before 1.0.1k allows remote attackers to cause a denial of service (NULL pointer dereference and application crash) via a crafted DTLS message that is processed with a different read operation for the handshake header than for the handshake body, related to the dtls1_get_record function in d1_pkt.c and the ssl3_read_n function in s3_pkt.c.",
+        "title": "openssl openssl DoS",
+        "vendor": "openssl",
+        "product": "openssl",
+        "attack_type": "DoS",
+        "cvss_max": 5.0
+      },
+      "cve": {
+        "id": "CVE-2014-3571",
+        "sourceIdentifier": "secalert@redhat.com",
+        "published": "2015-01-09T02:59:01.287",
+        "lastModified": "2026-05-06T22:30:45.220",
+        "vulnStatus": "Modified",
+        "evaluatorComment": "<a href=\"http://cwe.mitre.org/data/definitions/476.html\">CWE-476: NULL Pointer Dereference</a>",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "OpenSSL before 0.9.8zd, 1.0.0 before 1.0.0p, and 1.0.1 before 1.0.1k allows remote attackers to cause a denial of service (NULL pointer dereference and application crash) via a crafted DTLS message that is processed with a different read operation for the handshake header than for the handshake body, related to the dtls1_get_record function in d1_pkt.c and the ssl3_read_n function in s3_pkt.c."
+          },
+          {
+            "lang": "es",
+            "value": "OpenSSL anterior a 0.9.8zd, 1.0.0 anterior a 1.0.0p, y 1.0.1 anterior a 1.0.1k permite a atacantes remotos causar una denegación de servicio (referencia a puntero nulo y caída de la aplicación) a través de un mensaje DTLS manipulado que se procesa con un operación diferente de lectura para la cabecera de negociación que la del cuerpo de la negociación, relacionado con la función dtls1_get_record en d1_pkt.c y la función ssl3_read_n en s3_pkt.c."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV2": [
+            {
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+                "baseScore": 5.0,
+                "baseSeverity": "MEDIUM"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "baseSeverity": "MEDIUM",
+              "exploitabilityScore": 10.0,
+              "impactScore": 2.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "NVD-CWE-Other"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:openssl:openssl:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "FCFDFDB8-6939-44E8-8B2D-C84D008AE169",
+                    "versionEndIncluding": "0.9.8zc"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:openssl:openssl:1.0.0a:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "10FF0A06-DA61-4250-B083-67E55E362677"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:openssl:openssl:1.0.0b:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "8A6BA453-C150-4159-B80B-5465EFF83F11"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:openssl:openssl:1.0.0c:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "638A2E69-8AB6-4FEA-852A-FEF16A500C1A"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:openssl:openssl:1.0.0d:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "56C47D3A-B99D-401D-B6B8-1194B2DB4809"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:openssl:openssl:1.0.0e:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "08355B10-E004-4BE6-A5AE-4D428810580B"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:openssl:openssl:1.0.0f:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "738BCFDC-1C49-4774-95AE-E099F707DEF9"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:openssl:openssl:1.0.0g:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "D4B242C0-D27D-4644-AD19-5ACB853C9DC2"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:openssl:openssl:1.0.0h:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "8DC683F2-4346-4E5E-A8D7-67B4F4D7827B"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:openssl:openssl:1.0.0i:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "764B7D38-BC1B-47DB-B1DF-D092BDA4BFCB"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:openssl:openssl:1.0.0j:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "6604E7BE-9F9B-444D-A63A-F65D1CFDF3BF"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:openssl:openssl:1.0.0k:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "132B9217-B0E0-4E3E-9096-162AA28E158E"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:openssl:openssl:1.0.0l:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "7619F9A0-9054-4217-93D1-3EA64876C5B0"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:openssl:openssl:1.0.0m:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "6D82C405-17E2-4DF1-8DF5-315BD5A41595"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:openssl:openssl:1.0.0n:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "4C96806F-4718-4BD3-9102-55A26AA86498"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:openssl:openssl:1.0.0o:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "8A16CD99-AF7F-4931-AD2E-77727BA18FBD"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:openssl:openssl:1.0.1a:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "3A66E6CF-39CF-412E-8EF0-8E10BA21B4A4"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:openssl:openssl:1.0.1b:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "C684FB18-FDDC-4BED-A28C-C23EE6CD0094"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:openssl:openssl:1.0.1c:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "A74A79A7-4FAF-4C81-8622-050008B96AE1"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:openssl:openssl:1.0.1d:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "CEDACCB9-8D61-49EE-9957-9E58BC7BB031"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:openssl:openssl:1.0.1e:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "4993DD56-F9E3-4AC8-AC3E-BF204B950DEC"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:openssl:openssl:1.0.1f:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "E884B241-F9C3-44F8-A420-DE65F5F3D660"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:openssl:openssl:1.0.1g:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "3A383620-B4F7-44A7-85DA-A4FF2E115D80"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:openssl:openssl:1.0.1h:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "5F0C6812-F455-49CF-B29B-9AC00306DA43"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:openssl:openssl:1.0.1i:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "3F2D462C-A1B4-4572-A615-BDE9DC5F1E55"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:openssl:openssl:1.0.1j:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "3703E445-17C0-4C85-A496-A35641C0C8DB"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "http://lists.apple.com/archives/security-announce/2015/Apr/msg00001.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://lists.fedoraproject.org/pipermail/package-announce/2015-January/147938.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://lists.fedoraproject.org/pipermail/package-announce/2015-January/148363.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://lists.opensuse.org/opensuse-security-announce/2015-01/msg00021.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://lists.opensuse.org/opensuse-security-announce/2015-05/msg00026.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://lists.opensuse.org/opensuse-security-announce/2016-03/msg00011.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://marc.info/?l=bugtraq&m=142496179803395&w=2",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://marc.info/?l=bugtraq&m=142496289803847&w=2",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://marc.info/?l=bugtraq&m=142721102728110&w=2",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://marc.info/?l=bugtraq&m=142895206924048&w=2",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://marc.info/?l=bugtraq&m=143748090628601&w=2",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://marc.info/?l=bugtraq&m=144050155601375&w=2",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://marc.info/?l=bugtraq&m=144050205101530&w=2",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://marc.info/?l=bugtraq&m=144050254401665&w=2",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://marc.info/?l=bugtraq&m=144050297101809&w=2",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://rhn.redhat.com/errata/RHSA-2015-0066.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20150310-ssl",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://www.debian.org/security/2015/dsa-3125",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://www.mandriva.com/security/advisories?name=MDVSA-2015:019",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://www.mandriva.com/security/advisories?name=MDVSA-2015:062",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://www.oracle.com/technetwork/security-advisory/cpujul2016-2881720.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://www.oracle.com/technetwork/security-advisory/cpujul2017-3236622.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://www.oracle.com/technetwork/security-advisory/cpuoct2016-2881722.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://www.oracle.com/technetwork/security-advisory/cpuoct2017-3236626.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://www.oracle.com/technetwork/topics/security/bulletinjan2015-2370101.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://www.oracle.com/technetwork/topics/security/cpuapr2015-2365600.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://www.oracle.com/technetwork/topics/security/cpujul2015-2367936.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://www.oracle.com/technetwork/topics/security/cpuoct2015-2367953.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://www.securityfocus.com/bid/71937",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://www.securitytracker.com/id/1033378",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "https://bto.bluecoat.com/security-advisory/sa88",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "https://github.com/openssl/openssl/commit/248385c606620b29ecc96ca9d3603463f879652b",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "https://github.com/openssl/openssl/commit/feba02f3919495e1b960c33ba849e10e77d0785d",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "https://kc.mcafee.com/corporate/index?page=content&id=SB10102",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "https://kc.mcafee.com/corporate/index?page=content&id=SB10108",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "https://support.apple.com/HT204659",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "https://www.openssl.org/news/secadv_20150108.txt",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 78,
+      "rank": 1
+    },
+    {
+      "cve_id": "CVE-2026-30860",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-03-07",
+          "previous_max": null,
+          "current_max": 9.9
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-03-07",
+        "description": "WeKnora is an LLM-powered framework designed for deep document understanding and semantic retrieval. Prior to version 0.2.12, a remote code execution (RCE) vulnerability exists in the application's database query functionality. The validation system fails to recursively inspect child nodes within PostgreSQL array expressions and row expressions, allowing attackers to bypass SQL injection protections. By smuggling dangerous PostgreSQL functions inside these expressions and chaining them with large object operations and library loading capabilities, an unauthenticated attacker can achieve arbitrary code execution on the database server with database user privileges. This issue has been patched in version 0.2.12.",
+        "title": "tencent weknora RCE",
+        "vendor": "tencent",
+        "product": "weknora",
+        "attack_type": "RCE",
+        "cvss_max": 9.9
+      },
+      "cve": {
+        "id": "CVE-2026-30860",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2026-03-07T17:15:53.823",
+        "lastModified": "2026-03-09T17:35:41.243",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "WeKnora is an LLM-powered framework designed for deep document understanding and semantic retrieval. Prior to version 0.2.12, a remote code execution (RCE) vulnerability exists in the application's database query functionality. The validation system fails to recursively inspect child nodes within PostgreSQL array expressions and row expressions, allowing attackers to bypass SQL injection protections. By smuggling dangerous PostgreSQL functions inside these expressions and chaining them with large object operations and library loading capabilities, an unauthenticated attacker can achieve arbitrary code execution on the database server with database user privileges. This issue has been patched in version 0.2.12."
+          },
+          {
+            "lang": "es",
+            "value": "WeKnora es un framework impulsado por LLM diseñado para la comprensión profunda de documentos y la recuperación semántica. Antes de la versión 0.2.12, existe una vulnerabilidad de ejecución remota de código (RCE) en la funcionalidad de consulta de base de datos de la aplicación. El sistema de validación no logra inspeccionar recursivamente los nodos hijos dentro de expresiones de array y expresiones de fila de PostgreSQL, permitiendo a los atacantes eludir las protecciones de inyección SQL. Al introducir funciones peligrosas de PostgreSQL dentro de estas expresiones y encadenándolas con operaciones de objetos grandes y capacidades de carga de bibliotecas, un atacante no autenticado puede lograr ejecución de código arbitrario en el servidor de base de datos con privilegios de usuario de base de datos. Este problema ha sido parcheado en la versión 0.2.12."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+                "baseScore": 9.9,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.1,
+              "impactScore": 6.0
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-89"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:tencent:weknora:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "7B86D061-D1A8-438E-802E-D5408C339349",
+                    "versionEndExcluding": "0.2.12"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/Tencent/WeKnora/security/advisories/GHSA-8w32-6mrw-q5wv",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Exploit",
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 2
+    },
+    {
+      "cve_id": "CVE-2026-30861",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-03-07",
+          "previous_max": null,
+          "current_max": 9.9
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-03-07",
+        "description": "WeKnora is an LLM-powered framework designed for deep document understanding and semantic retrieval. From version 0.2.5 to before version 0.2.10, an unauthenticated remote code execution (RCE) vulnerability exists in the MCP stdio configuration validation. The application allows unrestricted user registration, meaning any attacker can create an account and exploit the command injection flaw. Despite implementing a whitelist for allowed commands (npx, uvx) and blacklists for dangerous arguments and environment variables, the validation can be bypassed using the -p flag with npx node. This allows any attacker to execute arbitrary commands with the application's privileges, leading to complete system compromise. This issue has been patched in version 0.2.10.",
+        "title": "tencent weknora RCE",
+        "vendor": "tencent",
+        "product": "weknora",
+        "attack_type": "RCE",
+        "cvss_max": 9.9
+      },
+      "cve": {
+        "id": "CVE-2026-30861",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2026-03-07T17:15:53.980",
+        "lastModified": "2026-03-09T17:35:56.647",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "WeKnora is an LLM-powered framework designed for deep document understanding and semantic retrieval. From version 0.2.5 to before version 0.2.10, an unauthenticated remote code execution (RCE) vulnerability exists in the MCP stdio configuration validation. The application allows unrestricted user registration, meaning any attacker can create an account and exploit the command injection flaw. Despite implementing a whitelist for allowed commands (npx, uvx) and blacklists for dangerous arguments and environment variables, the validation can be bypassed using the -p flag with npx node. This allows any attacker to execute arbitrary commands with the application's privileges, leading to complete system compromise. This issue has been patched in version 0.2.10."
+          },
+          {
+            "lang": "es",
+            "value": "WeKnora es un framework impulsado por LLM diseñado para la comprensión profunda de documentos y la recuperación semántica. Desde la versión 0.2.5 hasta antes de la versión 0.2.10, existe una vulnerabilidad de ejecución remota de código (RCE) no autenticada en la validación de la configuración stdio de MCP. La aplicación permite el registro de usuarios sin restricciones, lo que significa que cualquier atacante puede crear una cuenta y explotar la falla de inyección de comandos. A pesar de implementar una lista blanca para comandos permitidos (npx, uvx) y listas negras para argumentos peligrosos y variables de entorno, la validación puede ser eludida usando la bandera -p con npx node. Esto permite a cualquier atacante ejecutar comandos arbitrarios con los privilegios de la aplicación, lo que lleva a un compromiso completo del sistema. Este problema ha sido parcheado en la versión 0.2.10."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+                "baseScore": 9.9,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.1,
+              "impactScore": 6.0
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 8.8,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-78"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:tencent:weknora:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "13FE8D37-06C9-4406-AE17-C35A7C66CC0C",
+                    "versionStartIncluding": "0.2.5",
+                    "versionEndExcluding": "0.2.10"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/Tencent/WeKnora/security/advisories/GHSA-r55h-3rwj-hcmg",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Exploit",
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 3
+    },
+    {
+      "cve_id": "CVE-2026-25070",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-03-07",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-03-07",
+        "description": "XikeStor SKS8310-8X Network Switch firmware versions 1.04.B07 and prior contain an OS command injection vulnerability in the /goform/PingTestSet endpoint that allows unauthenticated remote attackers to execute arbitrary operating system commands. Attackers can inject malicious commands through the destIp parameter to achieve remote code execution with root privileges on the network switch.",
+        "title": "seekswan zikestor_sks8310-8x_firmware RCE",
+        "vendor": "seekswan",
+        "product": "zikestor_sks8310-8x_firmware",
+        "attack_type": "RCE",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2026-25070",
+        "sourceIdentifier": "disclosure@vulncheck.com",
+        "published": "2026-03-07T01:15:57.427",
+        "lastModified": "2026-03-12T15:11:20.980",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "XikeStor SKS8310-8X Network Switch firmware versions 1.04.B07 and prior contain an OS command injection vulnerability in the /goform/PingTestSet endpoint that allows unauthenticated remote attackers to execute arbitrary operating system commands. Attackers can inject malicious commands through the destIp parameter to achieve remote code execution with root privileges on the network switch."
+          },
+          {
+            "lang": "es",
+            "value": "Las versiones de firmware 1.04.B07 y anteriores del switch de red XikeStor SKS8310-8X contienen una vulnerabilidad de inyección de comandos del sistema operativo en el endpoint /goform/PingTestSet que permite a atacantes remotos no autenticados ejecutar comandos arbitrarios del sistema operativo. Los atacantes pueden inyectar comandos maliciosos a través del parámetro destIp para lograr la ejecución remota de código con privilegios de root en el switch de red."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-78"
+              }
+            ],
+            "source": "disclosure@vulncheck.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:seekswan:zikestor_sks8310-8x_firmware:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "428F1B0B-87A7-43BB-B927-B9FCCF7DF783",
+                    "versionEndIncluding": "1.04.b07"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:seekswan:zikestor_sks8310-8x:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "5A40072B-67E8-4D29-AC3A-D2BEF0DAF847"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://openwrt.org/toh/xikestor/sks8310-8x?s%5B%5D=xikestor&s%5B%5D=sks8310&s%5B%5D=8x",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Product"
+            ]
+          },
+          {
+            "url": "https://www.aliexpress.com/i/3256808697772710.html",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Product"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 4
+    },
+    {
+      "cve_id": "CVE-2026-29191",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-03-07",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-03-07",
+        "description": "ZITADEL is an open source identity management platform. From version 4.0.0 to 4.11.1, a vulnerability in Zitadel's login V2 interface was discovered that allowed a possible account takeover via XSS in /saml-post Endpoint. This issue has been patched in version 4.12.0.",
+        "title": "zitadel zitadel cross-site scripting",
+        "vendor": "zitadel",
+        "product": "zitadel",
+        "attack_type": "cross-site scripting",
+        "cvss_max": 9.3
+      },
+      "cve": {
+        "id": "CVE-2026-29191",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2026-03-07T15:15:55.557",
+        "lastModified": "2026-03-10T17:55:39.263",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "ZITADEL is an open source identity management platform. From version 4.0.0 to 4.11.1, a vulnerability in Zitadel's login V2 interface was discovered that allowed a possible account takeover via XSS in /saml-post Endpoint. This issue has been patched in version 4.12.0."
+          },
+          {
+            "lang": "es",
+            "value": "ZITADEL es una plataforma de gestión de identidades de código abierto. Desde la versión 4.0.0 hasta la 4.11.1, fue descubierta una vulnerabilidad en la interfaz de inicio de sesión V2 de Zitadel que permitía una posible toma de control de cuenta mediante XSS en el endpoint /saml-post. Este problema ha sido parcheado en la versión 4.12.0."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:N",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 5.8
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-79"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:zitadel:zitadel:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "45902C32-E4BA-459E-80C0-19CBDA6CD5F4",
+                    "versionStartIncluding": "4.0.0",
+                    "versionEndExcluding": "4.12.0"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/zitadel/zitadel/security/advisories/GHSA-pr34-2v5x-6qjq",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Patch",
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 5
+    },
+    {
+      "cve_id": "CVE-2026-30832",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-03-07",
+          "previous_max": null,
+          "current_max": 9.1
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-03-07",
+        "description": "Soft Serve is a self-hostable Git server for the command line. From version 0.6.0 to before version 0.11.4, an authenticated SSH user can force the server to make HTTP requests to internal/private IP addresses by running repo import with a crafted --lfs-endpoint URL. The initial batch request is blind (the response from a metadata endpoint won't parse as valid LFS JSON), but an attacker hosting a fake LFS server can chain this into full read access to internal services by returning download URLs that point at internal targets. This issue has been patched in version 0.11.4.",
+        "title": "charm soft_serve",
+        "vendor": "charm",
+        "product": "soft_serve",
+        "cvss_max": 9.1
+      },
+      "cve": {
+        "id": "CVE-2026-30832",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2026-03-07T16:15:55.893",
+        "lastModified": "2026-03-11T20:36:30.093",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Soft Serve is a self-hostable Git server for the command line. From version 0.6.0 to before version 0.11.4, an authenticated SSH user can force the server to make HTTP requests to internal/private IP addresses by running repo import with a crafted --lfs-endpoint URL. The initial batch request is blind (the response from a metadata endpoint won't parse as valid LFS JSON), but an attacker hosting a fake LFS server can chain this into full read access to internal services by returning download URLs that point at internal targets. This issue has been patched in version 0.11.4."
+          },
+          {
+            "lang": "es",
+            "value": "Soft Serve es un servidor Git autoalojable para la línea de comandos. Desde la versión 0.6.0 hasta antes de la versión 0.11.4, un usuario SSH autenticado puede forzar al servidor a realizar solicitudes HTTP a direcciones IP internas/privadas ejecutando repo import con una URL --lfs-endpoint manipulada. La solicitud de lote inicial es ciega (la respuesta de un endpoint de metadatos no se analizará como JSON LFS válido), pero un atacante que aloja un servidor LFS falso puede encadenar esto en un acceso de lectura completo a servicios internos devolviendo URLs de descarga que apuntan a objetivos internos. Este problema ha sido parcheado en la versión 0.11.4."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:L/A:L",
+                "baseScore": 9.1,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.1,
+              "impactScore": 5.3
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-918"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:charm:soft_serve:*:*:*:*:*:go:*:*",
+                    "matchCriteriaId": "CB2C4B8B-F7D7-4EAA-B2DC-29C17894811B",
+                    "versionStartIncluding": "0.6.0",
+                    "versionEndExcluding": "0.11.4"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/charmbracelet/soft-serve/commit/3ef660098ab37a7950457da8ecc25b516e37ce4e",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://github.com/charmbracelet/soft-serve/releases/tag/v0.11.4",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Product",
+              "Release Notes"
+            ]
+          },
+          {
+            "url": "https://github.com/charmbracelet/soft-serve/security/advisories/GHSA-3fvx-xrxq-8jvv",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Exploit",
+              "Mitigation",
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 6
+    },
+    {
+      "cve_id": "CVE-2026-30863",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-03-07",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-03-07",
+        "description": "Parse Server is an open source backend that can be deployed to any infrastructure that can run Node.js. Prior to versions 8.6.10 and 9.5.0-alpha.11, the Google, Apple, and Facebook authentication adapters use JWT verification to validate identity tokens. When the adapter's audience configuration option is not set (clientId for Google/Apple, appIds for Facebook), JWT verification silently skips audience claim validation. This allows an attacker to use a validly signed JWT issued for a different application to authenticate as any user on the target Parse Server. This issue has been patched in versions 8.6.10 and 9.5.0-alpha.11.",
+        "title": "parseplatform parse-server",
+        "vendor": "parseplatform",
+        "product": "parse-server",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2026-30863",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2026-03-07T17:15:54.137",
+        "lastModified": "2026-03-10T16:50:58.427",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Parse Server is an open source backend that can be deployed to any infrastructure that can run Node.js. Prior to versions 8.6.10 and 9.5.0-alpha.11, the Google, Apple, and Facebook authentication adapters use JWT verification to validate identity tokens. When the adapter's audience configuration option is not set (clientId for Google/Apple, appIds for Facebook), JWT verification silently skips audience claim validation. This allows an attacker to use a validly signed JWT issued for a different application to authenticate as any user on the target Parse Server. This issue has been patched in versions 8.6.10 and 9.5.0-alpha.11."
+          },
+          {
+            "lang": "es",
+            "value": "Parse Server es un backend de código abierto que puede ser desplegado en cualquier infraestructura que pueda ejecutar Node.js. Antes de las versiones 8.6.10 y 9.5.0-alpha.11, los adaptadores de autenticación de Google, Apple y Facebook utilizan la verificación JWT para validar tokens de identidad. Cuando la opción de configuración de audiencia del adaptador no está establecida (clientId para Google/Apple, appIds para Facebook), la verificación JWT omite silenciosamente la validación de la declaración de audiencia. Esto permite a un atacante utilizar un JWT válidamente firmado emitido para una aplicación diferente para autenticarse como cualquier usuario en el Parse Server objetivo. Este problema ha sido parcheado en las versiones 8.6.10 y 9.5.0-alpha.11."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-287"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          },
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-863"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:parseplatform:parse-server:*:*:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "8AB7EA1E-148D-4A8B-AAF4-06FB708291B7",
+                    "versionEndExcluding": "8.6.10"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:parseplatform:parse-server:*:*:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "77A07A2F-C8ED-4D78-A9C0-66AB42F69F38",
+                    "versionStartIncluding": "9.0.0",
+                    "versionEndExcluding": "9.5.0"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:parseplatform:parse-server:9.5.0:alpha1:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "3E9F95CF-EEE1-42FC-904E-321F05E3DE4E"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:parseplatform:parse-server:9.5.0:alpha10:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "18465CD3-DB00-4A7C-99D9-8B841829EEE4"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:parseplatform:parse-server:9.5.0:alpha2:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "5C02D6F0-5A3A-45F5-8A74-F75A8CCAE7DE"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:parseplatform:parse-server:9.5.0:alpha3:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "103C9745-031B-4822-A19C-A61375FBB1AD"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:parseplatform:parse-server:9.5.0:alpha4:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "8D67029D-C1BD-4D46-A84F-C52B4D364268"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:parseplatform:parse-server:9.5.0:alpha5:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "3B10930D-B416-4D9A-BA26-F0AD22BFAE28"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:parseplatform:parse-server:9.5.0:alpha6:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "72794836-5CFB-4928-BB22-D7DE813809B4"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:parseplatform:parse-server:9.5.0:alpha7:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "FA2C4C1E-3AE6-48E0-8B59-80554AE85BB0"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:parseplatform:parse-server:9.5.0:alpha8:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "40C8E499-E5C6-48DD-AE36-B73B2B6ADA67"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:parseplatform:parse-server:9.5.0:alpha9:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "E92B2675-5D49-404B-BEC1-7037D6C1ACD5"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/parse-community/parse-server/security/advisories/GHSA-x6fw-778m-wr9v",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 7
+    }
+  ],
+  "source": "https://www.cvelogic.com/threat-intelligence/2026-03-07"
+}

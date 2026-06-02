@@ -1,0 +1,1580 @@
+{
+  "schema_version": "2.2",
+  "generated_at": "2026-06-02T07:32:54Z",
+  "day": "2025-06-17",
+  "window": {
+    "utc_start": "2025-06-17",
+    "utc_end": "2025-06-17",
+    "days": 1
+  },
+  "summary": {
+    "brief": "Linux Kernel added to CISA KEV — confirmed in-the-wild exploitation. · 10 new critical disclosures — review patch status on exposed services.",
+    "bullets": [
+      "Linux Kernel added to CISA KEV — confirmed in-the-wild exploitation.",
+      "10 new critical disclosures — review patch status on exposed services."
+    ],
+    "counts": {
+      "cves": 11,
+      "kev": 1,
+      "exploit": 0,
+      "epss": 0,
+      "cvss": 10,
+      "patch": 0
+    }
+  },
+  "cves": [
+    {
+      "cve_id": "CVE-2023-0386",
+      "signal_types": [
+        "KEV"
+      ],
+      "signals": {
+        "kev": {
+          "date_added": "2025-06-17"
+        },
+        "exploit": null,
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2023-03-22",
+        "description": "A flaw was found in the Linux kernel, where unauthorized access to the execution of the setuid file with capabilities was found in the Linux kernel’s OverlayFS subsystem in how a user copies a capable file from a nosuid mount into another mount. This uid mapping bug allows a local user to escalate their privileges on the system.",
+        "title": "Linux Kernel Improper Ownership Management Vulnerability",
+        "vendor": "debian",
+        "product": "debian_linux",
+        "attack_type": "privilege escalation",
+        "cvss_max": 7.8
+      },
+      "cve": {
+        "id": "CVE-2023-0386",
+        "sourceIdentifier": "secalert@redhat.com",
+        "published": "2023-03-22T21:15:18.090",
+        "lastModified": "2025-11-04T16:47:21.283",
+        "vulnStatus": "Analyzed",
+        "cisaExploitAdd": "2025-06-17",
+        "cisaActionDue": "2025-07-08",
+        "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+        "cisaVulnerabilityName": "Linux Kernel Improper Ownership Management Vulnerability",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A flaw was found in the Linux kernel, where unauthorized access to the execution of the setuid file with capabilities was found in the Linux kernel’s OverlayFS subsystem in how a user copies a capable file from a nosuid mount into another mount. This uid mapping bug allows a local user to escalate their privileges on the system."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 7.8,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 1.8,
+              "impactScore": 5.9
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 7.8,
+                "baseSeverity": "HIGH"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 1.8,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-282"
+              }
+            ],
+            "source": "secalert@redhat.com"
+          },
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "NVD-CWE-Other"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:debian:debian_linux:10.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "07B237A9-69A3-4A9C-9DA0-4E06BD37AE73"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:netapp:h300s_firmware:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "6770B6C3-732E-4E22-BF1C-2D2FD610061C"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:netapp:h300s:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "9F9C8C20-42EB-4AB5-BD97-212DEB070C43"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:netapp:h500s_firmware:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "7FFF7106-ED78-49BA-9EC5-B889E3685D53"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:netapp:h500s:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "E63D8B0F-006E-4801-BF9D-1C001BBFB4F9"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:netapp:h700s_firmware:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "56409CEC-5A1E-4450-AA42-641E459CC2AF"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:netapp:h700s:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "B06F4839-D16A-4A61-9BB5-55B13F41E47F"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:netapp:h410s_firmware:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "D0B4AD8A-F172-4558-AEC6-FF424BA2D912"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:netapp:h410s:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "8497A4C9-8474-4A62-8331-3FE862ED4098"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:netapp:h410c_firmware:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "234DEFE0-5CE5-4B0A-96B8-5D227CB8ED31"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:netapp:h410c:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "CDDF61B7-EC5C-467C-B710-B89F502CD04F"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:canonical:ubuntu_linux:18.04:*:*:*:lts:*:*:*",
+                    "matchCriteriaId": "23A7C53F-B80F-4E6A-AFA9-58EEA84BE11D"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:canonical:ubuntu_linux:20.04:*:*:*:lts:*:*:*",
+                    "matchCriteriaId": "902B8056-9E37-443B-8905-8AA93E2447FB"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:canonical:ubuntu_linux:22.04:*:*:*:lts:*:*:*",
+                    "matchCriteriaId": "359012F1-2C63-415A-88B8-6726A87830DE"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "91C2E92D-CC25-4FBD-8824-56A148119D7E",
+                    "versionStartIncluding": "5.11",
+                    "versionEndExcluding": "5.15.91"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "ED5B6045-B1D2-4E03-B194-9005A351BCAE",
+                    "versionStartIncluding": "5.16",
+                    "versionEndExcluding": "6.1.9"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:6.2:rc1:*:*:*:*:*:*",
+                    "matchCriteriaId": "FF501633-2F44-4913-A8EE-B021929F49F6"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:6.2:rc2:*:*:*:*:*:*",
+                    "matchCriteriaId": "2BDA597B-CAC1-4DF0-86F0-42E142C654E9"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:6.2:rc3:*:*:*:*:*:*",
+                    "matchCriteriaId": "725C78C9-12CE-406F-ABE8-0813A01D66E8"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:6.2:rc4:*:*:*:*:*:*",
+                    "matchCriteriaId": "A127C155-689C-4F67-B146-44A57F4BFD85"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:6.2:rc5:*:*:*:*:*:*",
+                    "matchCriteriaId": "D34127CC-68F5-4703-A5F6-5006F803E4AE"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "http://packetstormsecurity.com/files/173087/Kernel-Live-Patch-Security-Notice-LSN-0095-1.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=4f11ada10d0a",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Broken Link",
+              "Mailing List",
+              "Patch",
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://lists.debian.org/debian-lts-announce/2023/06/msg00008.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Mailing List",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://lists.debian.org/debian-lts-announce/2024/06/msg00020.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Mailing List",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://security.netapp.com/advisory/ntap-20230420-0004/",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.debian.org/security/2023/dsa-5402",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2023-0386",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "US Government Resource"
+            ]
+          }
+        ]
+      },
+      "risk_score": 88,
+      "rank": 1
+    },
+    {
+      "cve_id": "CVE-2025-49444",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-06-17",
+          "previous_max": null,
+          "current_max": 10.0
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-06-17",
+        "description": "Unrestricted Upload of File with Dangerous Type vulnerability in merkulove Reformer for Elementor reformer-elementor allows Upload a Web Shell to a Web Server.This issue affects Reformer for Elementor: from n/a through <= 1.0.5.",
+        "title": "Unrestricted Upload of File with Dangerous Type vulnerability in merkulove Reformer for Elementor reformer-elementor allows Upload a Web...",
+        "cvss_max": 10.0
+      },
+      "cve": {
+        "id": "CVE-2025-49444",
+        "sourceIdentifier": "audit@patchstack.com",
+        "published": "2025-06-17T15:15:49.127",
+        "lastModified": "2026-04-23T15:31:41.683",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Unrestricted Upload of File with Dangerous Type vulnerability in merkulove Reformer for Elementor reformer-elementor allows Upload a Web Shell to a Web Server.This issue affects Reformer for Elementor: from n/a through <= 1.0.5."
+          },
+          {
+            "lang": "es",
+            "value": "La vulnerabilidad de carga sin restricciones de archivos con tipo peligroso en Merkulove Reformer para Elementor permite subir un shell web a un servidor web. Este problema afecta a Reformer para Elementor desde la versión n/d hasta la 1.0.5."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+                "baseScore": 10.0,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "audit@patchstack.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 6.0
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-434"
+              }
+            ],
+            "source": "audit@patchstack.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://patchstack.com/database/Wordpress/Plugin/reformer-elementor/vulnerability/wordpress-reformer-for-elementor-1-0-5-arbitrary-file-upload-vulnerability?_s_id=cve",
+            "source": "audit@patchstack.com"
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 2
+    },
+    {
+      "cve_id": "CVE-2025-49447",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-06-17",
+          "previous_max": null,
+          "current_max": 10.0
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-06-17",
+        "description": "Unrestricted Upload of File with Dangerous Type vulnerability in Fastw3b LLC FW Food Menu  allows Using Malicious Files. This issue affects FW Food Menu : from n/a through 6.0.0.",
+        "title": "Unrestricted Upload of File with Dangerous Type vulnerability in Fastw3b LLC FW Food Menu allows Using Malicious Files.",
+        "cvss_max": 10.0
+      },
+      "cve": {
+        "id": "CVE-2025-49447",
+        "sourceIdentifier": "audit@patchstack.com",
+        "published": "2025-06-17T15:15:49.273",
+        "lastModified": "2026-04-28T19:33:08.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Unrestricted Upload of File with Dangerous Type vulnerability in Fastw3b LLC FW Food Menu  allows Using Malicious Files. This issue affects FW Food Menu : from n/a through 6.0.0."
+          },
+          {
+            "lang": "es",
+            "value": "La vulnerabilidad de carga sin restricciones de archivos con tipo peligroso en Fastw3b LLC FW Food Menu permite el uso de archivos maliciosos. Este problema afecta a FW Food Menu desde n/d hasta la versión 6.0.0."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+                "baseScore": 10.0,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "audit@patchstack.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 6.0
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-434"
+              }
+            ],
+            "source": "audit@patchstack.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://patchstack.com/database/wordpress/plugin/fw-food-menu/vulnerability/wordpress-fw-food-menu-6-0-0-arbitrary-file-upload-vulnerability?_s_id=cve",
+            "source": "audit@patchstack.com"
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 3
+    },
+    {
+      "cve_id": "CVE-2025-49212",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-06-17",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-06-17",
+        "description": "An insecure deserialization operation in the Trend Micro Endpoint Encryption PolicyServer could lead to a pre-authentication remote code execution on affected installations. Note that this vulnerability is similar to CVE-2025-49220 but is in a different method.",
+        "title": "trendmicro trend_micro_endpoint_encryption RCE",
+        "vendor": "trendmicro",
+        "product": "trend_micro_endpoint_encryption",
+        "attack_type": "RCE",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-49212",
+        "sourceIdentifier": "security@trendmicro.com",
+        "published": "2025-06-17T21:15:38.943",
+        "lastModified": "2025-09-08T21:09:04.560",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "An insecure deserialization operation in the Trend Micro Endpoint Encryption PolicyServer could lead to a pre-authentication remote code execution on affected installations. Note that this vulnerability is similar to CVE-2025-49220 but is in a different method."
+          },
+          {
+            "lang": "es",
+            "value": "Una operación de deserialización insegura en Trend Micro Endpoint Encryption PolicyServer podría provocar la ejecución remota de código antes de la autenticación en las instalaciones afectadas. Tenga en cuenta que esta vulnerabilidad es similar a CVE-2025-49220, pero se presenta con un método diferente."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security@trendmicro.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-477"
+              }
+            ],
+            "source": "security@trendmicro.com"
+          },
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-502"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:trendmicro:trend_micro_endpoint_encryption:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "5216BF2B-BE1D-4763-A65D-73A008727BA6",
+                    "versionEndExcluding": "6.0.0.4013"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "A2572D17-1DE6-457B-99CC-64AFD54487EA"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://success.trendmicro.com/en-US/solution/KA-0019928",
+            "source": "security@trendmicro.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://www.zerodayinitiative.com/advisories/ZDI-25-369/",
+            "source": "security@trendmicro.com",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 4
+    },
+    {
+      "cve_id": "CVE-2025-49213",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-06-17",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-06-17",
+        "description": "An insecure deserialization operation in the Trend Micro Endpoint Encryption PolicyServer could lead to a pre-authentication remote code execution on affected installations. Note that this vulnerability is similar to CVE-2025-49212 but is in a different method.",
+        "title": "trendmicro trend_micro_endpoint_encryption RCE",
+        "vendor": "trendmicro",
+        "product": "trend_micro_endpoint_encryption",
+        "attack_type": "RCE",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-49213",
+        "sourceIdentifier": "security@trendmicro.com",
+        "published": "2025-06-17T21:15:39.063",
+        "lastModified": "2025-09-08T21:09:21.877",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "An insecure deserialization operation in the Trend Micro Endpoint Encryption PolicyServer could lead to a pre-authentication remote code execution on affected installations. Note that this vulnerability is similar to CVE-2025-49212 but is in a different method."
+          },
+          {
+            "lang": "es",
+            "value": "Una operación de deserialización insegura en Trend Micro Endpoint Encryption PolicyServer podría provocar la ejecución remota de código antes de la autenticación en las instalaciones afectadas. Tenga en cuenta que esta vulnerabilidad es similar a CVE-2025-49212, pero se presenta con un método diferente."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security@trendmicro.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-477"
+              }
+            ],
+            "source": "security@trendmicro.com"
+          },
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-502"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:trendmicro:trend_micro_endpoint_encryption:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "5216BF2B-BE1D-4763-A65D-73A008727BA6",
+                    "versionEndExcluding": "6.0.0.4013"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "A2572D17-1DE6-457B-99CC-64AFD54487EA"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://success.trendmicro.com/en-US/solution/KA-0019928",
+            "source": "security@trendmicro.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://www.zerodayinitiative.com/advisories/ZDI-25-370/",
+            "source": "security@trendmicro.com",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 5
+    },
+    {
+      "cve_id": "CVE-2025-49216",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-06-17",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-06-17",
+        "description": "An authentication bypass vulnerability in the Trend Micro Endpoint Encryption PolicyServer could allow an attacker to access key methods as an admin user and modify product configurations on affected installations.",
+        "title": "trendmicro trend_micro_endpoint_encryption Auth Bypass",
+        "vendor": "trendmicro",
+        "product": "trend_micro_endpoint_encryption",
+        "attack_type": "Auth Bypass",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-49216",
+        "sourceIdentifier": "security@trendmicro.com",
+        "published": "2025-06-17T21:15:39.437",
+        "lastModified": "2025-09-08T21:10:36.310",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "An authentication bypass vulnerability in the Trend Micro Endpoint Encryption PolicyServer could allow an attacker to access key methods as an admin user and modify product configurations on affected installations."
+          },
+          {
+            "lang": "es",
+            "value": "Una vulnerabilidad de omisión de autenticación en Trend Micro Endpoint Encryption PolicyServer podría permitir que un atacante acceda a métodos clave como usuario administrador y modifique las configuraciones del producto en las instalaciones afectadas."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security@trendmicro.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-477"
+              }
+            ],
+            "source": "security@trendmicro.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:trendmicro:trend_micro_endpoint_encryption:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "5216BF2B-BE1D-4763-A65D-73A008727BA6",
+                    "versionEndExcluding": "6.0.0.4013"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "A2572D17-1DE6-457B-99CC-64AFD54487EA"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://success.trendmicro.com/en-US/solution/KA-0019928",
+            "source": "security@trendmicro.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://www.zerodayinitiative.com/advisories/ZDI-25-373/",
+            "source": "security@trendmicro.com",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 6
+    },
+    {
+      "cve_id": "CVE-2025-49217",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-06-17",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-06-17",
+        "description": "An insecure deserialization operation in the Trend Micro Endpoint Encryption PolicyServer could lead to a pre-authentication remote code execution on affected installations. Note that this vulnerability is similar to CVE-2025-49213 but is in a different method.",
+        "title": "trendmicro trend_micro_endpoint_encryption RCE",
+        "vendor": "trendmicro",
+        "product": "trend_micro_endpoint_encryption",
+        "attack_type": "RCE",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-49217",
+        "sourceIdentifier": "security@trendmicro.com",
+        "published": "2025-06-17T21:15:39.553",
+        "lastModified": "2025-09-08T21:10:49.183",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "An insecure deserialization operation in the Trend Micro Endpoint Encryption PolicyServer could lead to a pre-authentication remote code execution on affected installations. Note that this vulnerability is similar to CVE-2025-49213 but is in a different method."
+          },
+          {
+            "lang": "es",
+            "value": "Una operación de deserialización insegura en Trend Micro Endpoint Encryption PolicyServer podría provocar la ejecución remota de código antes de la autenticación en las instalaciones afectadas. Tenga en cuenta que esta vulnerabilidad es similar a CVE-2025-49213, pero se presenta con un método diferente."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security@trendmicro.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-477"
+              }
+            ],
+            "source": "security@trendmicro.com"
+          },
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-502"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:trendmicro:trend_micro_endpoint_encryption:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "5216BF2B-BE1D-4763-A65D-73A008727BA6",
+                    "versionEndExcluding": "6.0.0.4013"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "A2572D17-1DE6-457B-99CC-64AFD54487EA"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://success.trendmicro.com/en-US/solution/KA-0019928",
+            "source": "security@trendmicro.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://www.zerodayinitiative.com/advisories/ZDI-25-374/",
+            "source": "security@trendmicro.com",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 7
+    },
+    {
+      "cve_id": "CVE-2025-49219",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-06-17",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-06-17",
+        "description": "An insecure deserialization operation in Trend Micro Apex Central below versions 8.0.7007 could lead to a pre-authentication remote code execution on affected installations. Note that this vulnerability is similar to CVE-2025-49220 but is in a different method.",
+        "title": "trendmicro apex_central RCE",
+        "vendor": "trendmicro",
+        "product": "apex_central",
+        "attack_type": "RCE",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-49219",
+        "sourceIdentifier": "security@trendmicro.com",
+        "published": "2025-06-17T18:15:26.903",
+        "lastModified": "2025-09-08T21:06:23.910",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "An insecure deserialization operation in Trend Micro Apex Central below versions 8.0.7007 could lead to a pre-authentication remote code execution on affected installations. Note that this vulnerability is similar to CVE-2025-49220 but is in a different method."
+          },
+          {
+            "lang": "es",
+            "value": "Una operación de deserialización insegura en Trend Micro Apex Central (versiones anteriores a la 8.0.7007) podría provocar la ejecución remota de código antes de la autenticación en las instalaciones afectadas. Tenga en cuenta que esta vulnerabilidad es similar a CVE-2025-49220, pero se presenta con un método diferente."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security@trendmicro.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-477"
+              }
+            ],
+            "source": "security@trendmicro.com"
+          },
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-502"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:trendmicro:apex_central:2019:-:*:*:-:*:*:*",
+                    "matchCriteriaId": "664A5F5B-7494-4ADF-9028-CA5DC84AF91A"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:trendmicro:apex_central:2019:build_3752:*:*:-:*:*:*",
+                    "matchCriteriaId": "316E50F7-A9DA-4B67-9ECC-C8D50116BA07"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:trendmicro:apex_central:2019:build_5158:*:*:-:*:*:*",
+                    "matchCriteriaId": "8FBF6D0D-D68E-4DB2-B4DE-D4157FEE54F2"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:trendmicro:apex_central:2019:build_6016:*:*:-:*:*:*",
+                    "matchCriteriaId": "4B11EE47-757F-4A7D-806A-01C956535F4E"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:trendmicro:apex_central:2019:build_6288:*:*:-:*:*:*",
+                    "matchCriteriaId": "FB8D4938-783C-4954-95C0-BD26162330A6"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:trendmicro:apex_central:2019:build_6394:*:*:-:*:*:*",
+                    "matchCriteriaId": "8FFFED78-5927-4529-B74C-BF988108EC0C"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:trendmicro:apex_central:2019:build_6481:*:*:-:*:*:*",
+                    "matchCriteriaId": "D919B553-6CBD-4211-A507-CD930D485852"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:trendmicro:apex_central:2019:build_6511:*:*:-:*:*:*",
+                    "matchCriteriaId": "F30EC7A8-6E0D-40CE-9691-90F438F1F03B"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:trendmicro:apex_central:2019:build_6571:*:*:-:*:*:*",
+                    "matchCriteriaId": "F905E86D-E3D9-4E54-B2A6-01753043A9F4"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:trendmicro:apex_central:2019:build_6658:*:*:-:*:*:*",
+                    "matchCriteriaId": "231493F7-3804-4123-BE1E-ABC3AC46DAAF"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:trendmicro:apex_central:2019:build_6660:*:*:-:*:*:*",
+                    "matchCriteriaId": "983C3666-DF36-4C30-BD70-669734D28475"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:trendmicro:apex_central:2019:build_6890:*:*:-:*:*:*",
+                    "matchCriteriaId": "2EFB9449-DB07-4F75-AB53-23F2B721C0CE"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:trendmicro:apex_central:2019:build_6955:*:*:-:*:*:*",
+                    "matchCriteriaId": "8F586BF3-DD53-4243-8A9F-18D0599E9397"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "A2572D17-1DE6-457B-99CC-64AFD54487EA"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://success.trendmicro.com/en-US/solution/KA-0019926",
+            "source": "security@trendmicro.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://www.zerodayinitiative.com/advisories/ZDI-25-366/",
+            "source": "security@trendmicro.com",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 8
+    },
+    {
+      "cve_id": "CVE-2025-49220",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-06-17",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-06-17",
+        "description": "An insecure deserialization operation in Trend Micro Apex Central below version 8.0.7007 could lead to a pre-authentication remote code execution on affected installations. Note that this vulnerability is similar to CVE-2025-49219 but is in a different method.",
+        "title": "trendmicro apex_central RCE",
+        "vendor": "trendmicro",
+        "product": "apex_central",
+        "attack_type": "RCE",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-49220",
+        "sourceIdentifier": "security@trendmicro.com",
+        "published": "2025-06-17T18:15:27.033",
+        "lastModified": "2025-09-08T21:06:21.787",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "An insecure deserialization operation in Trend Micro Apex Central below version 8.0.7007 could lead to a pre-authentication remote code execution on affected installations. Note that this vulnerability is similar to CVE-2025-49219 but is in a different method."
+          },
+          {
+            "lang": "es",
+            "value": "Una operación de deserialización insegura en Trend Micro Apex Central (versión anterior a la 8.0.7007) podría provocar la ejecución remota de código antes de la autenticación en las instalaciones afectadas. Tenga en cuenta que esta vulnerabilidad es similar a CVE-2025-49219, pero se presenta con un método diferente."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security@trendmicro.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-477"
+              }
+            ],
+            "source": "security@trendmicro.com"
+          },
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-502"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:trendmicro:apex_central:2019:-:*:*:-:*:*:*",
+                    "matchCriteriaId": "664A5F5B-7494-4ADF-9028-CA5DC84AF91A"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:trendmicro:apex_central:2019:build_3752:*:*:-:*:*:*",
+                    "matchCriteriaId": "316E50F7-A9DA-4B67-9ECC-C8D50116BA07"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:trendmicro:apex_central:2019:build_5158:*:*:-:*:*:*",
+                    "matchCriteriaId": "8FBF6D0D-D68E-4DB2-B4DE-D4157FEE54F2"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:trendmicro:apex_central:2019:build_6016:*:*:-:*:*:*",
+                    "matchCriteriaId": "4B11EE47-757F-4A7D-806A-01C956535F4E"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:trendmicro:apex_central:2019:build_6288:*:*:-:*:*:*",
+                    "matchCriteriaId": "FB8D4938-783C-4954-95C0-BD26162330A6"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:trendmicro:apex_central:2019:build_6394:*:*:-:*:*:*",
+                    "matchCriteriaId": "8FFFED78-5927-4529-B74C-BF988108EC0C"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:trendmicro:apex_central:2019:build_6481:*:*:-:*:*:*",
+                    "matchCriteriaId": "D919B553-6CBD-4211-A507-CD930D485852"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:trendmicro:apex_central:2019:build_6511:*:*:-:*:*:*",
+                    "matchCriteriaId": "F30EC7A8-6E0D-40CE-9691-90F438F1F03B"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:trendmicro:apex_central:2019:build_6571:*:*:-:*:*:*",
+                    "matchCriteriaId": "F905E86D-E3D9-4E54-B2A6-01753043A9F4"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:trendmicro:apex_central:2019:build_6658:*:*:-:*:*:*",
+                    "matchCriteriaId": "231493F7-3804-4123-BE1E-ABC3AC46DAAF"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:trendmicro:apex_central:2019:build_6660:*:*:-:*:*:*",
+                    "matchCriteriaId": "983C3666-DF36-4C30-BD70-669734D28475"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:trendmicro:apex_central:2019:build_6890:*:*:-:*:*:*",
+                    "matchCriteriaId": "2EFB9449-DB07-4F75-AB53-23F2B721C0CE"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:trendmicro:apex_central:2019:build_6955:*:*:-:*:*:*",
+                    "matchCriteriaId": "8F586BF3-DD53-4243-8A9F-18D0599E9397"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "A2572D17-1DE6-457B-99CC-64AFD54487EA"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://success.trendmicro.com/en-US/solution/KA-0019926",
+            "source": "security@trendmicro.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://www.zerodayinitiative.com/advisories/ZDI-25-367/",
+            "source": "security@trendmicro.com",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 9
+    },
+    {
+      "cve_id": "CVE-2025-49452",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-06-17",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-06-17",
+        "description": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in Adrian Ladó PostaPanduri postapanduri allows SQL Injection.This issue affects PostaPanduri: from n/a through <= 2.1.3.",
+        "title": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in Adrian Ladó PostaPanduri postapandu...",
+        "attack_type": "SQL Injection",
+        "cvss_max": 9.3
+      },
+      "cve": {
+        "id": "CVE-2025-49452",
+        "sourceIdentifier": "audit@patchstack.com",
+        "published": "2025-06-17T15:15:49.573",
+        "lastModified": "2026-04-23T15:31:42.600",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in Adrian Ladó PostaPanduri postapanduri allows SQL Injection.This issue affects PostaPanduri: from n/a through <= 2.1.3."
+          },
+          {
+            "lang": "es",
+            "value": "La vulnerabilidad de neutralización incorrecta de elementos especiales utilizados en un comando SQL ('Inyección SQL') en Adrian Ladó PostaPanduri permite la inyección SQL. Este problema afecta a PostaPanduri desde n/d hasta la versión 2.1.3."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:L",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "audit@patchstack.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 4.7
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-89"
+              }
+            ],
+            "source": "audit@patchstack.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://patchstack.com/database/Wordpress/Plugin/postapanduri/vulnerability/wordpress-postapanduri-2-1-3-sql-injection-vulnerability?_s_id=cve",
+            "source": "audit@patchstack.com"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 10
+    },
+    {
+      "cve_id": "CVE-2025-49825",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-06-17",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-06-17",
+        "description": "Teleport provides connectivity, authentication, access controls and audit for infrastructure. Community Edition versions before and including 17.5.1 are vulnerable to remote authentication bypass. At time of posting, there is no available open-source patch.",
+        "title": "Teleport provides connectivity, authentication, access controls and audit for infrastructure.",
+        "attack_type": "Auth Bypass",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-49825",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2025-06-17T22:15:49.917",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Teleport provides connectivity, authentication, access controls and audit for infrastructure. Community Edition versions before and including 17.5.1 are vulnerable to remote authentication bypass. At time of posting, there is no available open-source patch."
+          },
+          {
+            "lang": "es",
+            "value": "Teleport proporciona conectividad, autenticación, controles de acceso y auditoría para la infraestructura. Las versiones de Community Edition anteriores a la 17.5.1 (incluida) son vulnerables a la omisión de la autenticación remota. Al momento de la publicación, no hay un parche de código abierto disponible."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-863"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/gravitational/teleport/security/advisories/GHSA-8cqv-pj7f-pwpc",
+            "source": "security-advisories@github.com"
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 11
+    }
+  ],
+  "source": "https://www.cvelogic.com/threat-intelligence/2025-06-17"
+}

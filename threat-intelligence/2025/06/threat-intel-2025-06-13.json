@@ -1,0 +1,2167 @@
+{
+  "schema_version": "2.2",
+  "generated_at": "2026-06-02T07:32:52Z",
+  "day": "2025-06-13",
+  "window": {
+    "utc_start": "2025-06-13",
+    "utc_end": "2025-06-13",
+    "days": 1
+  },
+  "summary": {
+    "brief": "Freefloat Ftp Server: public exploit or PoC linked (Buffer Overflow) · Microsoft Windows 2003 Server — exploitation likelihood rose sharply (EPSS 8.0% → 31% · rising (+23%)). · 10 new critical disclosures — review patch status on exposed services.",
+    "bullets": [
+      "Freefloat Ftp Server: public exploit or PoC linked (Buffer Overflow)",
+      "Microsoft Windows 2003 Server — exploitation likelihood rose sharply (EPSS 8.0% → 31% · rising (+23%)).",
+      "10 new critical disclosures — review patch status on exposed services."
+    ],
+    "counts": {
+      "cves": 14,
+      "kev": 0,
+      "exploit": 3,
+      "epss": 1,
+      "cvss": 10,
+      "patch": 0
+    }
+  },
+  "cves": [
+    {
+      "cve_id": "CVE-2025-49113",
+      "signal_types": [
+        "EXP"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": {
+          "ref_published": "2025-06-13"
+        },
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-06-02",
+        "description": "Roundcube Webmail before 1.5.10 and 1.6.x before 1.6.11 allows remote code execution by authenticated users because the _from parameter in a URL is not validated in program/actions/settings/upload.php, leading to PHP Object Deserialization.",
+        "title": "RoundCube Webmail Deserialization of Untrusted Data Vulnerability",
+        "vendor": "roundcube",
+        "product": "webmail",
+        "attack_type": "RCE",
+        "cvss_max": 9.9
+      },
+      "cve": {
+        "id": "CVE-2025-49113",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2025-06-02T05:15:53.420",
+        "lastModified": "2026-02-23T13:24:21.387",
+        "vulnStatus": "Analyzed",
+        "cisaExploitAdd": "2026-02-20",
+        "cisaActionDue": "2026-03-13",
+        "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+        "cisaVulnerabilityName": "RoundCube Webmail Deserialization of Untrusted Data Vulnerability",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Roundcube Webmail before 1.5.10 and 1.6.x before 1.6.11 allows remote code execution by authenticated users because the _from parameter in a URL is not validated in program/actions/settings/upload.php, leading to PHP Object Deserialization."
+          },
+          {
+            "lang": "es",
+            "value": "Roundcube Webmail anterior a 1.5.10 y 1.6.x anterior a 1.6.11 permite la ejecución remota de código por parte de usuarios autenticados porque el parámetro _from en una URL no está validado en program/actions/settings/upload.php, lo que lleva a la deserialización de objetos PHP."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+                "baseScore": 9.9,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "cve@mitre.org",
+              "type": "Secondary",
+              "exploitabilityScore": 3.1,
+              "impactScore": 6.0
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 8.8,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-502"
+              }
+            ],
+            "source": "cve@mitre.org"
+          },
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-502"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:roundcube:webmail:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "AAD2AF8E-DC67-45E3-ABC2-872B771C88C5",
+                    "versionEndExcluding": "1.5.10"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:roundcube:webmail:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "5DA16DB4-CE88-4E84-BBD6-2A749FFDA43D",
+                    "versionStartIncluding": "1.6.0",
+                    "versionEndExcluding": "1.6.11"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:debian:debian_linux:11.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "FA6FEEC2-9F11-4643-8827-749718254FED"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://fearsoff.org/research/roundcube",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/roundcube/roundcubemail/commit/0376f69e958a8fef7f6f09e352c541b4e7729c4d",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://github.com/roundcube/roundcubemail/commit/7408f31379666124a39f9cb1018f62bc5e2dc695",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://github.com/roundcube/roundcubemail/commit/c50a07d88ca38f018a0f4a0b008e9a1deb32637e",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://github.com/roundcube/roundcubemail/pull/9865",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Issue Tracking"
+            ]
+          },
+          {
+            "url": "https://github.com/roundcube/roundcubemail/releases/tag/1.5.10",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Release Notes"
+            ]
+          },
+          {
+            "url": "https://github.com/roundcube/roundcubemail/releases/tag/1.6.11",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Release Notes"
+            ]
+          },
+          {
+            "url": "https://roundcube.net/news/2025/06/01/security-updates-1.6.11-and-1.5.10",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://www.vicarius.io/vsociety/posts/cve-2025-49113-roundcube-mitigation-script",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Exploit",
+              "Mitigation",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.vicarius.io/vsociety/posts/cve-2025-49113-roundcube-vulnerability-detection",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Exploit",
+              "Mitigation",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "http://www.openwall.com/lists/oss-security/2025/06/02/3",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Mailing List",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://lists.debian.org/debian-lts-announce/2025/06/msg00008.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Mailing List",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2025-49113",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "US Government Resource"
+            ]
+          }
+        ]
+      },
+      "risk_score": 78,
+      "rank": 1
+    },
+    {
+      "cve_id": "CVE-2025-5548",
+      "signal_types": [
+        "EXP"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": {
+          "ref_published": "2025-06-13"
+        },
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-06-04",
+        "description": "A vulnerability, which was classified as critical, was found in FreeFloat FTP Server 1.0. Affected is an unknown function of the component NOOP Command Handler. The manipulation leads to buffer overflow. It is possible to launch the attack remotely. The exploit has been disclosed to the public and may be used.",
+        "title": "freefloat freefloat_ftp_server Buffer Overflow",
+        "vendor": "freefloat",
+        "product": "freefloat_ftp_server",
+        "attack_type": "Buffer Overflow",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-5548",
+        "sourceIdentifier": "cna@vuldb.com",
+        "published": "2025-06-04T01:15:19.873",
+        "lastModified": "2025-06-24T15:21:00.730",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A vulnerability, which was classified as critical, was found in FreeFloat FTP Server 1.0. Affected is an unknown function of the component NOOP Command Handler. The manipulation leads to buffer overflow. It is possible to launch the attack remotely. The exploit has been disclosed to the public and may be used."
+          },
+          {
+            "lang": "es",
+            "value": "Se encontró una vulnerabilidad clasificada como crítica en FreeFloat FTP Server 1.0. Se ve afectada una función desconocida del componente NOOP Command Handler. La manipulación provoca un desbordamiento del búfer. Es posible ejecutar el ataque de forma remota. Se ha hecho público el exploit y puede que sea utilizado."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV2": [
+            {
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+                "baseScore": 7.5,
+                "baseSeverity": "HIGH"
+              },
+              "source": "cna@vuldb.com",
+              "type": "Secondary",
+              "baseSeverity": "HIGH",
+              "exploitabilityScore": 10.0,
+              "impactScore": 6.4
+            }
+          ],
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+                "baseScore": 7.3,
+                "baseSeverity": "HIGH"
+              },
+              "source": "cna@vuldb.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 3.4
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 6.9,
+                "baseSeverity": "MEDIUM"
+              },
+              "source": "cna@vuldb.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-119"
+              },
+              {
+                "lang": "en",
+                "value": "CWE-120"
+              }
+            ],
+            "source": "cna@vuldb.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:freefloat:freefloat_ftp_server:1.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "A9C3D4BD-07C8-4E11-8B6C-6CBBA66F0725"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://fitoxs.com/exploit/exploit-181bb9e57fbeedb99be8435f014d23b3d936df3ff95db127e57d6832dc48df8f.txt",
+            "source": "cna@vuldb.com",
+            "tags": [
+              "Exploit"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/?ctiid.310998",
+            "source": "cna@vuldb.com",
+            "tags": [
+              "Permissions Required",
+              "VDB Entry"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/?id.310998",
+            "source": "cna@vuldb.com",
+            "tags": [
+              "Third Party Advisory",
+              "VDB Entry"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/?submit.586982",
+            "source": "cna@vuldb.com",
+            "tags": [
+              "Third Party Advisory",
+              "VDB Entry"
+            ]
+          }
+        ]
+      },
+      "risk_score": 78,
+      "rank": 2
+    },
+    {
+      "cve_id": "CVE-2003-0839",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 0.07998,
+            "score_date": "2025-03-30"
+          },
+          "current": {
+            "score": 0.31319,
+            "score_date": "2025-06-13"
+          },
+          "delta": 0.23321
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2003-11-17",
+        "description": "Directory traversal vulnerability in the \"Shell Folders\" capability in Microsoft Windows Server 2003 allows remote attackers to read arbitrary files via .. (dot dot) sequences in a \"shell:\" link.",
+        "title": "microsoft windows_2003_server Directory Traversal",
+        "vendor": "microsoft",
+        "product": "windows_2003_server",
+        "attack_type": "Directory Traversal",
+        "cvss_max": 5.0
+      },
+      "cve": {
+        "id": "CVE-2003-0839",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2003-11-17T05:00:00.000",
+        "lastModified": "2026-04-16T00:27:16.627",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Directory traversal vulnerability in the \"Shell Folders\" capability in Microsoft Windows Server 2003 allows remote attackers to read arbitrary files via .. (dot dot) sequences in a \"shell:\" link."
+          },
+          {
+            "lang": "es",
+            "value": "Vulnerabilidad de atravesamiento de directorios en la capacidad de \"Shell Folders\" en Microsoft Windows Server 2003 permite a atacantes remotos leer ficheros arbitrarios mediante secuencias .. (punto punto) en un enlace \"shell:\""
+          }
+        ],
+        "metrics": {
+          "cvssMetricV2": [
+            {
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:L/Au:N/C:P/I:N/A:N",
+                "baseScore": 5.0,
+                "baseSeverity": "MEDIUM"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "baseSeverity": "MEDIUM",
+              "exploitabilityScore": 10.0,
+              "impactScore": 2.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "NVD-CWE-Other"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_2003_server:r2:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "4E7FD818-322D-4089-A644-360C33943D29"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "http://marc.info/?l=bugtraq&m=106563075612028&w=2",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://www.geocities.co.jp/SiliconValley/1667/advisory08e.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          }
+        ]
+      },
+      "risk_score": 78,
+      "rank": 3
+    },
+    {
+      "cve_id": "CVE-2025-24071",
+      "signal_types": [
+        "EXP"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": {
+          "ref_published": "2025-06-13"
+        },
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-03-11",
+        "description": "Exposure of sensitive information to an unauthorized actor in Windows File Explorer allows an unauthorized attacker to perform spoofing over a network.",
+        "title": "microsoft windows_10_1507",
+        "vendor": "microsoft",
+        "product": "windows_10_1507",
+        "cvss_max": 6.5
+      },
+      "cve": {
+        "id": "CVE-2025-24071",
+        "sourceIdentifier": "secure@microsoft.com",
+        "published": "2025-03-11T17:16:29.867",
+        "lastModified": "2025-07-03T13:23:25.997",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Exposure of sensitive information to an unauthorized actor in Windows File Explorer allows an unauthorized attacker to perform spoofing over a network."
+          },
+          {
+            "lang": "es",
+            "value": "La exposición de información confidencial a un actor no autorizado en el explorador de archivos de Windows permite que un atacante no autorizado realice suplantación de identidad a través de una red."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N",
+                "baseScore": 6.5,
+                "baseSeverity": "MEDIUM"
+              },
+              "source": "secure@microsoft.com",
+              "type": "Secondary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 3.6
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-200"
+              }
+            ],
+            "source": "secure@microsoft.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_10_1507:*:*:*:*:*:*:x64:*",
+                    "matchCriteriaId": "6997DE6E-CBAD-4690-A68C-8F10E477DCC2",
+                    "versionEndExcluding": "10.0.10240.20947"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_10_1507:*:*:*:*:*:*:x86:*",
+                    "matchCriteriaId": "3CBCF6D9-5085-473C-82F5-98BC246A9C4C",
+                    "versionEndExcluding": "10.0.10240.20947"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_10_1607:*:*:*:*:*:*:x64:*",
+                    "matchCriteriaId": "0CF0E174-4692-4AA3-B72E-12E73A1BDBE5",
+                    "versionEndExcluding": "10.0.14393.7876"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_10_1607:*:*:*:*:*:*:x86:*",
+                    "matchCriteriaId": "340EF5F8-D4F5-4AD8-9D80-1DEC2F376BE5",
+                    "versionEndExcluding": "10.0.14393.7876"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_10_1809:*:*:*:*:*:*:x64:*",
+                    "matchCriteriaId": "67C8DCD7-90C4-431F-BD03-FDFDE170E748",
+                    "versionEndExcluding": "10.0.17763.7009"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_10_1809:*:*:*:*:*:*:x86:*",
+                    "matchCriteriaId": "05169574-28AB-4E42-B3DE-710574BB1AD3",
+                    "versionEndExcluding": "10.0.17763.7009"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_11_23h2:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "77DC7D9D-F85F-41B4-A944-D27B388A1157",
+                    "versionEndExcluding": "10.0.22631.5039"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_11_24h2:*:*:*:*:*:*:arm64:*",
+                    "matchCriteriaId": "37ACC628-E175-4240-8166-C45995518331",
+                    "versionEndExcluding": "10.0.26100.3476"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_11_24h2:*:*:*:*:*:*:x64:*",
+                    "matchCriteriaId": "71D7DCBF-A571-4A16-8F32-FE24150917C0",
+                    "versionEndExcluding": "10.0.26100.3476"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_server_2012:r2:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "DB18C4CE-5917-401E-ACF7-2747084FD36E"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_server_2016:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "C7610CDB-A02B-4C62-B17F-6DCE2B3DE4F0",
+                    "versionEndExcluding": "10.0.14393.7876"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_server_2019:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "D271422D-A29F-4DBF-BF72-BCD90E393A5A",
+                    "versionEndExcluding": "10.0.17763.7009"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_server_2022:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "C1426FF0-A402-4149-9F2B-0FA3CEB4BB5B",
+                    "versionEndExcluding": "10.0.20348.3328"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_server_2022_23h2:*:*:*:*:*:*:x64:*",
+                    "matchCriteriaId": "96046A7B-76A1-4DCF-AEA5-25344D37E492",
+                    "versionEndExcluding": "10.0.25398.1486"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_server_2025:*:*:*:*:*:*:x64:*",
+                    "matchCriteriaId": "DFE44B43-DB8C-46E0-8344-C22ED7406A50",
+                    "versionEndExcluding": "10.0.26100.3476"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-24071",
+            "source": "secure@microsoft.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://www.vicarius.io/vsociety/posts/cve-2025-24071-spoofing-vulnerability-in-microsoft-windows-file-explorer-detection-scrip",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.vicarius.io/vsociety/posts/cve-2025-24071-spoofing-vulnerability-in-microsoft-windows-file-explorer-mitigation-script",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Mitigation",
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 78,
+      "rank": 4
+    },
+    {
+      "cve_id": "CVE-2025-28384",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-06-13",
+          "previous_max": null,
+          "current_max": 9.1
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-06-13",
+        "description": "An issue in the /script-api/scripts/ endpoint of OpenC3 COSMOS before 6.1.0 allows attackers to execute a directory traversal.",
+        "title": "openc3 cosmos Directory Traversal",
+        "vendor": "openc3",
+        "product": "cosmos",
+        "attack_type": "Directory Traversal",
+        "cvss_max": 9.1
+      },
+      "cve": {
+        "id": "CVE-2025-28384",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2025-06-13T14:15:20.590",
+        "lastModified": "2025-10-27T16:15:39.347",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "An issue in the /script-api/scripts/ endpoint of OpenC3 COSMOS before 6.1.0 allows attackers to execute a directory traversal."
+          },
+          {
+            "lang": "es",
+            "value": "Un problema en el endpoint /script-api/scripts/ de OpenC3 COSMOS 6.0.0 permite a los atacantes ejecutar un directory traversal."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+                "baseScore": 9.1,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.2
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-22"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:openc3:cosmos:6.0.0:*:*:*:enterprise:*:*:*",
+                    "matchCriteriaId": "9690AE92-0F94-4490-9F63-5AA20ED6E609"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:openc3:cosmos:6.0.0:*:*:*:open_source:*:*:*",
+                    "matchCriteriaId": "7248EE06-0D64-4126-8FF4-E22F7E071753"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/OpenC3/cosmos/pull/1828",
+            "source": "cve@mitre.org"
+          },
+          {
+            "url": "https://github.com/OpenC3/cosmos/pull/1828/commits/fc7e11310a7cdf9f1939886e1b29009db4d4b718",
+            "source": "cve@mitre.org"
+          },
+          {
+            "url": "https://github.com/OpenC3/cosmos/releases/tag/v6.1.0",
+            "source": "cve@mitre.org"
+          },
+          {
+            "url": "https://openc3.com/",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Product"
+            ]
+          },
+          {
+            "url": "https://visionspace.com/openc3-cosmos-a-security-assessment-of-an-open-source-mission-framework/",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Exploit",
+              "Mitigation",
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 5
+    },
+    {
+      "cve_id": "CVE-2025-28386",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-06-13",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-06-13",
+        "description": "A remote code execution (RCE) vulnerability in the Plugin Management component of OpenC3 COSMOS v6.0.0 allows attackers to execute arbitrary code via uploading a crafted .txt file.",
+        "title": "openc3 cosmos RCE",
+        "vendor": "openc3",
+        "product": "cosmos",
+        "attack_type": "RCE",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-28386",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2025-06-13T14:15:20.713",
+        "lastModified": "2025-06-23T14:06:04.657",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A remote code execution (RCE) vulnerability in the Plugin Management component of OpenC3 COSMOS v6.0.0 allows attackers to execute arbitrary code via uploading a crafted .txt file."
+          },
+          {
+            "lang": "es",
+            "value": "Una vulnerabilidad de ejecución remota de código (RCE) en el componente de administración de complementos de OpenC3 COSMOS v6.0.0 permite a los atacantes ejecutar código arbitrario mediante la carga de un archivo .txt manipulado."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-94"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:openc3:cosmos:6.0.0:*:*:*:enterprise:*:*:*",
+                    "matchCriteriaId": "9690AE92-0F94-4490-9F63-5AA20ED6E609"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:openc3:cosmos:6.0.0:*:*:*:open_source:*:*:*",
+                    "matchCriteriaId": "7248EE06-0D64-4126-8FF4-E22F7E071753"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://openc3.com/",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Product"
+            ]
+          },
+          {
+            "url": "https://visionspace.com/openc3-cosmos-a-security-assessment-of-an-open-source-mission-framework/",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Exploit",
+              "Mitigation",
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 6
+    },
+    {
+      "cve_id": "CVE-2025-28388",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-06-13",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-06-13",
+        "description": "OpenC3 COSMOS before v6.0.2 was discovered to contain hardcoded credentials for the Service Account.",
+        "title": "openc3 cosmos",
+        "vendor": "openc3",
+        "product": "cosmos",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-28388",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2025-06-13T14:15:20.883",
+        "lastModified": "2025-10-27T16:15:39.513",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "OpenC3 COSMOS before v6.0.2 was discovered to contain hardcoded credentials for the Service Account."
+          },
+          {
+            "lang": "es",
+            "value": "Se descubrió que OpenC3 COSMOS v6.0.0 contenía credenciales codificadas para la cuenta de servicio."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-798"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:openc3:cosmos:6.0.0:*:*:*:enterprise:*:*:*",
+                    "matchCriteriaId": "9690AE92-0F94-4490-9F63-5AA20ED6E609"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:openc3:cosmos:6.0.0:*:*:*:open_source:*:*:*",
+                    "matchCriteriaId": "7248EE06-0D64-4126-8FF4-E22F7E071753"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/OpenC3/cosmos/pull/1816",
+            "source": "cve@mitre.org"
+          },
+          {
+            "url": "https://github.com/OpenC3/cosmos/pull/1816/commits/195974a019f375f7c5a35f48e4151babb40649ac",
+            "source": "cve@mitre.org"
+          },
+          {
+            "url": "https://github.com/OpenC3/cosmos/releases/tag/v6.0.2",
+            "source": "cve@mitre.org"
+          },
+          {
+            "url": "https://openc3.com/",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Product"
+            ]
+          },
+          {
+            "url": "https://visionspace.com/openc3-cosmos-a-security-assessment-of-an-open-source-mission-framework/",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Exploit",
+              "Mitigation",
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 7
+    },
+    {
+      "cve_id": "CVE-2025-28389",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-06-13",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-06-13",
+        "description": "Weak password requirements in OpenC3 COSMOS v6.0.0 allow attackers to bypass authentication via a brute force attack.",
+        "title": "openc3 cosmos",
+        "vendor": "openc3",
+        "product": "cosmos",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-28389",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2025-06-13T14:15:21.010",
+        "lastModified": "2025-06-17T19:42:06.507",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Weak password requirements in OpenC3 COSMOS v6.0.0 allow attackers to bypass authentication via a brute force attack."
+          },
+          {
+            "lang": "es",
+            "value": "Los requisitos de contraseña débiles en OpenC3 COSMOS v6.0.0 permiten a los atacantes eludir la autenticación mediante un ataque de fuerza bruta."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-521"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:openc3:cosmos:6.0.0:*:*:*:enterprise:*:*:*",
+                    "matchCriteriaId": "9690AE92-0F94-4490-9F63-5AA20ED6E609"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:openc3:cosmos:6.0.0:*:*:*:open_source:*:*:*",
+                    "matchCriteriaId": "7248EE06-0D64-4126-8FF4-E22F7E071753"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://openc3.com/",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Product"
+            ]
+          },
+          {
+            "url": "https://visionspace.com/openc3-cosmos-a-security-assessment-of-an-open-source-mission-framework/",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Exploit",
+              "Mitigation",
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 8
+    },
+    {
+      "cve_id": "CVE-2025-45987",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-06-13",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-06-13",
+        "description": "Blink routers BL-WR9000 V2.4.9 , BL-AC2100_AZ3 V1.0.4, BL-X10_AC8 v1.0.5 , BL-LTE300 v1.2.3, BL-F1200_AT1 v1.0.0, BL-X26_AC8 v1.2.8, BLAC450M_AE4 v4.0.0 and BL-X26_DA3 v1.2.7 were discovered to contain multiple command injection vulnerabilities via the dns1 and dns2 parameters in the bs_SetDNSInfo function.",
+        "title": "b-link bl-ac2100_az3_firmware Command Injection",
+        "vendor": "b-link",
+        "product": "bl-wr9000_firmware",
+        "attack_type": "Command Injection",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-45987",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2025-06-13T12:15:34.280",
+        "lastModified": "2025-07-10T12:16:05.020",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Blink routers BL-WR9000 V2.4.9 , BL-AC2100_AZ3 V1.0.4, BL-X10_AC8 v1.0.5 , BL-LTE300 v1.2.3, BL-F1200_AT1 v1.0.0, BL-X26_AC8 v1.2.8, BLAC450M_AE4 v4.0.0 and BL-X26_DA3 v1.2.7 were discovered to contain multiple command injection vulnerabilities via the dns1 and dns2 parameters in the bs_SetDNSInfo function."
+          },
+          {
+            "lang": "es",
+            "value": "Se descubrió que los enrutadores Blink BL-WR9000 V2.4.9, BL-AC2100_AZ3 V1.0.4, BL-X10_AC8 v1.0.5, BL-LTE300 v1.2.3, BL-F1200_AT1 v1.0.0, BL-X26_AC8 v1.2.8, BLAC450M_AE4 v4.0.0 y BL-X26_DA3 v1.2.7 contenían múltiples vulnerabilidades de inyección de comandos a través de los parámetros dns1 y dns2 en la función bs_SetDNSInfo."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-77"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:b-link:bl-wr9000_firmware:2.4.9:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "0D1A3280-9C15-4961-8C69-9ECE34528FDB"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:b-link:bl-wr9000:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "2D5ADB0D-6D03-448A-A0F3-7C238A20AF46"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:b-link:bl-ac2100_az3_firmware:1.0.4:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "05E31365-4655-4B8D-9B75-AE70292C12C3"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:b-link:bl-ac2100_az3:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "3B134A86-F380-4BE4-9CEC-5CBAE046CF8B"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:b-link:bl-lte300_firmware:1.2.3:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "8907D058-539D-44B8-BC30-EC137B4C6841"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:b-link:bl-lte300:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "4CD2D0EC-F71B-4CD6-8013-EDCDE49B6BC9"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:b-link:bl-f1200_at1_firmware:1.0.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "3DD8A5B3-0FF1-4512-9AEB-68A801956085"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:b-link:bl-f1200_at1:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "9391FA6B-40EF-4A53-9B38-3F5EA0611970"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:b-link:bl-x26_ac8_firmware:1.2.8:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "FCE90D05-D32B-4C52-917C-024FB4814751"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:b-link:bl-x26_ac8:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "A13AD09A-4BF0-49B9-AB05-439D34413C81"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:b-link:blac450m_ae4_firmware:4.0.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "5422B990-7572-42A1-89C4-D8FEEEC066ED"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:b-link:blac450m_ae4:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "A469F008-B95F-480C-A677-43E6D448FEEB"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:b-link:bl-x26_da3_firmware:1.2.7:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "D3D8F5C4-F1A2-4E88-A795-DEAC4E77B3C1"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:b-link:bl-x26_da3:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "1C8F576A-7D13-4311-9FDD-9BFB4E5705D8"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/glkfc/IoT-Vulnerability/blob/main/LB-LINK/LB-LINK_dns1%20Unauthorized%20command%20injection/The%20LB-LINK_dns1%20command%20is%20used%20to%20inject%20the%20information.md",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Exploit"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 9
+    },
+    {
+      "cve_id": "CVE-2025-45988",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-06-13",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-06-13",
+        "description": "Blink routers BL-WR9000 V2.4.9 , BL-AC2100_AZ3 V1.0.4, BL-X10_AC8 v1.0.5 , BL-LTE300 v1.2.3, BL-F1200_AT1 v1.0.0, BL-X26_AC8 v1.2.8, BLAC450M_AE4 v4.0.0 and BL-X26_DA3 v1.2.7 were discovered to contain multiple command injection vulnerabilities via the cmd parameter in the bs_SetCmd function.",
+        "title": "b-link bl-ac1900_firmware Command Injection",
+        "vendor": "b-link",
+        "product": "bl-wr9000_firmware",
+        "attack_type": "Command Injection",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-45988",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2025-06-13T12:15:34.403",
+        "lastModified": "2025-07-10T12:16:15.107",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Blink routers BL-WR9000 V2.4.9 , BL-AC2100_AZ3 V1.0.4, BL-X10_AC8 v1.0.5 , BL-LTE300 v1.2.3, BL-F1200_AT1 v1.0.0, BL-X26_AC8 v1.2.8, BLAC450M_AE4 v4.0.0 and BL-X26_DA3 v1.2.7 were discovered to contain multiple command injection vulnerabilities via the cmd parameter in the bs_SetCmd function."
+          },
+          {
+            "lang": "es",
+            "value": "Se descubrió que los enrutadores Blink BL-WR9000 V2.4.9, BL-AC2100_AZ3 V1.0.4, BL-X10_AC8 v1.0.5, BL-LTE300 v1.2.3, BL-F1200_AT1 v1.0.0, BL-X26_AC8 v1.2.8, BLAC450M_AE4 v4.0.0 y BL-X26_DA3 v1.2.7 contenían múltiples vulnerabilidades de inyección de comandos a través del parámetro cmd en la función bs_SetCmd."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-77"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:b-link:bl-wr9000_firmware:2.4.9:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "0D1A3280-9C15-4961-8C69-9ECE34528FDB"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:b-link:bl-wr9000:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "2D5ADB0D-6D03-448A-A0F3-7C238A20AF46"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:b-link:bl-ac1900_firmware:1.0.2:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "BE554304-8F2B-40A1-98CB-DE641B4CCE61"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:b-link:bl-ac1900:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "2C5CA5E8-C497-475E-B0CE-6F54B6E9BFA8"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:b-link:bl-ac2100_az3_firmware:1.0.4:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "05E31365-4655-4B8D-9B75-AE70292C12C3"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:b-link:bl-ac2100_az3:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "3B134A86-F380-4BE4-9CEC-5CBAE046CF8B"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:b-link:bl-x10_ac8_firmware:1.0.5:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "AAA6D548-72E1-435B-8EDB-50C1C258CE9C"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:b-link:bl-x10_ac8:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "B153FF75-DDAF-4B43-8D54-C8211C607C2C"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:b-link:bl-lte300_firmware:1.2.3:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "8907D058-539D-44B8-BC30-EC137B4C6841"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:b-link:bl-lte300:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "4CD2D0EC-F71B-4CD6-8013-EDCDE49B6BC9"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:b-link:bl-f1200_at1_firmware:1.0.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "3DD8A5B3-0FF1-4512-9AEB-68A801956085"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:b-link:bl-f1200_at1:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "9391FA6B-40EF-4A53-9B38-3F5EA0611970"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:b-link:bl-x26_ac8_firmware:1.2.8:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "FCE90D05-D32B-4C52-917C-024FB4814751"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:b-link:bl-x26_ac8:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "A13AD09A-4BF0-49B9-AB05-439D34413C81"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:b-link:blac450m_ae4_firmware:4.0.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "5422B990-7572-42A1-89C4-D8FEEEC066ED"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:b-link:blac450m_ae4:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "A469F008-B95F-480C-A677-43E6D448FEEB"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:b-link:bl-x26_da3_firmware:1.2.7:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "D3D8F5C4-F1A2-4E88-A795-DEAC4E77B3C1"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:b-link:bl-x26_da3:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "1C8F576A-7D13-4311-9FDD-9BFB4E5705D8"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/glkfc/IoT-Vulnerability/blob/main/LB-LINK/LB-LINK_cmd%20Indicates%20the%20unauthorized%20command%20injection/The%20LB-LINK_cmd%20command%20is%20used%20to%20inject%20information.md",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Exploit"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 10
+    },
+    {
+      "cve_id": "CVE-2025-46060",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-06-13",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-06-13",
+        "description": "Buffer Overflow vulnerability in TOTOLINK N600R v4.3.0cu.7866_B2022506 allows a remote attacker to execute arbitrary code via the UPLOAD_FILENAME component",
+        "title": "totolink n600r_firmware Buffer Overflow",
+        "vendor": "totolink",
+        "product": "n600r_firmware",
+        "attack_type": "Buffer Overflow",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-46060",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2025-06-13T13:15:21.187",
+        "lastModified": "2025-06-16T14:58:41.900",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Buffer Overflow vulnerability in TOTOLINK N600R v4.3.0cu.7866_B2022506 allows a remote attacker to execute arbitrary code via the UPLOAD_FILENAME component"
+          },
+          {
+            "lang": "es",
+            "value": "La vulnerabilidad de desbordamiento de búfer en TOTOLINK N600R v4.3.0cu.7866_B2022506 permite que un atacante remoto ejecute código arbitrario a través del componente UPLOAD_FILENAME"
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-120"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:totolink:n600r_firmware:4.3.0cu.7866_b2022506:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "E310D0FF-48C8-46E5-9EBF-3B98DCCF302C"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:totolink:n600r:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "601C2FBE-B584-40B9-BBD7-7BF2A14CA694"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "http://totolink.com",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Product"
+            ]
+          },
+          {
+            "url": "https://github.com/Luanruy/qax",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/Luanruy/qax/blob/main/CVE-2025-46060_Info.md",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 11
+    },
+    {
+      "cve_id": "CVE-2025-49596",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-06-13",
+          "previous_max": null,
+          "current_max": 9.4
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-06-13",
+        "description": "The MCP inspector is a developer tool for testing and debugging MCP servers. Versions of MCP Inspector below 0.14.1 are vulnerable to remote code execution due to lack of authentication between the Inspector client and proxy, allowing unauthenticated requests to launch MCP commands over stdio. Users should immediately upgrade to version 0.14.1 or later to address these vulnerabilities.",
+        "title": "The MCP inspector is a developer tool for testing and debugging MCP servers.",
+        "attack_type": "RCE",
+        "cvss_max": 9.4
+      },
+      "cve": {
+        "id": "CVE-2025-49596",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2025-06-13T20:15:23.133",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The MCP inspector is a developer tool for testing and debugging MCP servers. Versions of MCP Inspector below 0.14.1 are vulnerable to remote code execution due to lack of authentication between the Inspector client and proxy, allowing unauthenticated requests to launch MCP commands over stdio. Users should immediately upgrade to version 0.14.1 or later to address these vulnerabilities."
+          },
+          {
+            "lang": "es",
+            "value": "MCP Inspector es una herramienta para desarrolladores que permite probar y depurar servidores MCP. Las versiones de MCP Inspector anteriores a la 0.14.1 son vulnerables a la ejecución remota de código debido a la falta de autenticación entre el cliente Inspector y el proxy, lo que permite que solicitudes no autenticadas ejecuten comandos MCP a través de stdio. Los usuarios deben actualizar inmediatamente a la versión 0.14.1 o posterior para solucionar estas vulnerabilidades."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.4,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-306"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/modelcontextprotocol/inspector/commit/50df0e1ec488f3983740b4d28d2a968f12eb8979",
+            "source": "security-advisories@github.com"
+          },
+          {
+            "url": "https://github.com/modelcontextprotocol/inspector/security/advisories/GHSA-7f8r-222p-6f5g",
+            "source": "security-advisories@github.com"
+          },
+          {
+            "url": "https://thenewstack.io/mcp-vulnerability-exposes-the-ai-untrusted-code-crisis",
+            "source": "security-advisories@github.com"
+          },
+          {
+            "url": "https://www.oligo.security/blog/critical-rce-vulnerability-in-anthropic-mcp-inspector-cve-2025-49596",
+            "source": "security-advisories@github.com"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 12
+    },
+    {
+      "cve_id": "CVE-2025-6029",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-06-13",
+          "previous_max": null,
+          "current_max": 9.4
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-06-13",
+        "description": "Use of fixed learning codes, one code to lock the car and the other code to unlock it, the Key Fob Transmitter in KIA-branded Aftermarket Generic Smart  Keyless Entry System, primarily distributed in Ecuador, which allows a replay attack.\n\nManufacture is unknown at the time of release.  CVE Record will be updated once this is clarified.",
+        "title": "Use of fixed learning codes, one code to lock the car and the other code to unlock it, the Key Fob Transmitter in KIA-branded Aftermarket...",
+        "cvss_max": 9.4
+      },
+      "cve": {
+        "id": "CVE-2025-6029",
+        "sourceIdentifier": "cve@asrg.io",
+        "published": "2025-06-13T15:15:21.430",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Use of fixed learning codes, one code to lock the car and the other code to unlock it, the Key Fob Transmitter in KIA-branded Aftermarket Generic Smart  Keyless Entry System, primarily distributed in Ecuador, which allows a replay attack.\n\nManufacture is unknown at the time of release.  CVE Record will be updated once this is clarified."
+          },
+          {
+            "lang": "es",
+            "value": "Uso de códigos de aprendizaje fijos, uno para bloquear el vehículo y otro para desbloquearlo, en el transmisor de llavero del sistema de entrada sin llave inteligente genérico de posventa de KIA, distribuido principalmente en Ecuador, lo que permite un ataque de repetición. Se desconoce el fabricante al momento de su publicación. El registro CVE se actualizará una vez que se aclare esta cuestión."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:A/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:N/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.4,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "cve@asrg.io",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-294"
+              },
+              {
+                "lang": "en",
+                "value": "CWE-307"
+              }
+            ],
+            "source": "cve@asrg.io"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://asrg.io/security-advisories/cve-2025-6029-kia-branded-aftermarket-generic-smart-keyless-entry-system-replay-attack/",
+            "source": "cve@asrg.io"
+          },
+          {
+            "url": "https://revers3everything.com/unlocking-thousands-of-cars-by-exploiting-learning-codes-from-key-fobs/",
+            "source": "cve@asrg.io"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 13
+    },
+    {
+      "cve_id": "CVE-2025-6030",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-06-13",
+          "previous_max": null,
+          "current_max": 9.4
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-06-13",
+        "description": "Use of fixed learning codes, one code to lock the car and the other code to unlock it, in the Key Fob Transmitter in Cyclone Matrix TRF Smart  Keyless Entry System, which allows a replay attack.\n\nResearch was completed on the 2024 KIA Soluto.  Attack confirmed on other KIA Models in Ecuador.",
+        "title": "Use of fixed learning codes, one code to lock the car and the other code to unlock it, in the Key Fob Transmitter in Cyclone Matrix TRF S...",
+        "cvss_max": 9.4
+      },
+      "cve": {
+        "id": "CVE-2025-6030",
+        "sourceIdentifier": "cve@asrg.io",
+        "published": "2025-06-13T15:15:21.600",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Use of fixed learning codes, one code to lock the car and the other code to unlock it, in the Key Fob Transmitter in Cyclone Matrix TRF Smart  Keyless Entry System, which allows a replay attack.\n\nResearch was completed on the 2024 KIA Soluto.  Attack confirmed on other KIA Models in Ecuador."
+          },
+          {
+            "lang": "es",
+            "value": "Uso de códigos de aprendizaje fijos, uno para bloquear el vehículo y otro para desbloquearlo, en el transmisor de llavero del sistema de entrada sin llave inteligente Cyclone Matrix TRF, lo que permite un ataque repetido. Se realizó una investigación en el KIA Soluto 2024. Se confirmó el ataque en otros modelos de KIA en Ecuador."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:A/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:N/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.4,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "cve@asrg.io",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-294"
+              },
+              {
+                "lang": "en",
+                "value": "CWE-307"
+              }
+            ],
+            "source": "cve@asrg.io"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://asrg.io/security-advisories/cve-2025-6030-autoeastern-smart-keyless-entry-system-replay-attack/",
+            "source": "cve@asrg.io"
+          },
+          {
+            "url": "https://revers3everything.com/unlocking-thousands-of-cars-by-exploiting-learning-codes-from-key-fobs/",
+            "source": "cve@asrg.io"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 14
+    }
+  ],
+  "source": "https://www.cvelogic.com/threat-intelligence/2025-06-13"
+}

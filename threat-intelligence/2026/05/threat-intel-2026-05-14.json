@@ -1,0 +1,1869 @@
+{
+  "schema_version": "2.2",
+  "generated_at": "2026-06-02T07:04:00Z",
+  "day": "2026-05-14",
+  "window": {
+    "utc_start": "2026-05-14",
+    "utc_end": "2026-05-14",
+    "days": 1
+  },
+  "summary": {
+    "brief": "Cisco Catalyst SD-WAN added to CISA KEV — confirmed in-the-wild exploitation. · Epati Antikor Next Generation Firewall: public exploit or PoC linked (Auth Bypass) · Microsoft Internet Explorer — exploitation likelihood rose sharply (EPSS 28% → 47% · rising (+18%)). · 10 new critical disclosures — review patch status on exposed services.",
+    "bullets": [
+      "Cisco Catalyst SD-WAN added to CISA KEV — confirmed in-the-wild exploitation.",
+      "Epati Antikor Next Generation Firewall: public exploit or PoC linked (Auth Bypass)",
+      "Microsoft Internet Explorer — exploitation likelihood rose sharply (EPSS 28% → 47% · rising (+18%)).",
+      "10 new critical disclosures — review patch status on exposed services."
+    ],
+    "counts": {
+      "cves": 17,
+      "kev": 1,
+      "exploit": 3,
+      "epss": 3,
+      "cvss": 10,
+      "patch": 0
+    }
+  },
+  "cves": [
+    {
+      "cve_id": "CVE-2026-20182",
+      "signal_types": [
+        "KEV"
+      ],
+      "signals": {
+        "kev": {
+          "date_added": "2026-05-14"
+        },
+        "exploit": null,
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-05-14",
+        "description": "May 2026: This security advisory provides the details and fix information for a vulnerability that was discovered and fixed after the  was disclosed in February 2026. This new advisory is for a new vulnerability in the control connection handshaking. The  section of this advisory includes Show Control Connections guidance to help with system checks.&nbsp;\r\n\r\nA vulnerability in the peering authentication in Cisco Catalyst SD-WAN Controller, formerly SD-WAN vSmart, and Cisco Catalyst SD-WAN Manager, formerly SD-WAN vManage, could allow an unauthenticated, remote attacker to bypass authentication and obtain administrative privileges on an affected system.\r\nThis vulnerability exists because the peering authentication mechanism in an affected system is not working properly. An attacker could exploit this vulnerability by sending crafted requests to the affected system. A successful exploit could allow the attacker to log in to an affected Cisco Catalyst SD-WAN Controller as an internal, high-privileged, non-root user account. Using this account, the attacker could access NETCONF, which would then allow the attacker to manipulate network configuration for the SD-WAN fabric.",
+        "title": "Cisco Catalyst SD-WAN Controller Authentication Bypass Vulnerability",
+        "vendor": "cisco",
+        "product": "catalyst_sd-wan_manager",
+        "attack_type": "Auth Bypass",
+        "cvss_max": 10.0
+      },
+      "cve": {
+        "id": "CVE-2026-20182",
+        "sourceIdentifier": "psirt@cisco.com",
+        "published": "2026-05-14T17:16:19.387",
+        "lastModified": "2026-05-15T12:45:53.990",
+        "vulnStatus": "Analyzed",
+        "cisaExploitAdd": "2026-05-14",
+        "cisaActionDue": "2026-05-17",
+        "cisaRequiredAction": "Please adhere to CISA’s guidelines to assess exposure and mitigate risks associated with Cisco SD-WAN devices as outlined in CISA’s Emergency Directive 26-03 (URL listed below in Notes) and CISA’s Hunt & Hardening Guidance for Cisco SD-WAN Devices (URL listed below in Notes). Adhere to the applicable BOD 22-01 guidance for cloud services or discontinue use of the product if mitigations are not available.",
+        "cisaVulnerabilityName": "Cisco Catalyst SD-WAN Controller Authentication Bypass Vulnerability",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "May 2026: This security advisory provides the details and fix information for a vulnerability that was discovered and fixed after the  was disclosed in February 2026. This new advisory is for a new vulnerability in the control connection handshaking. The  section of this advisory includes Show Control Connections guidance to help with system checks.&nbsp;\r\n\r\nA vulnerability in the peering authentication in Cisco Catalyst SD-WAN Controller, formerly SD-WAN vSmart, and Cisco Catalyst SD-WAN Manager, formerly SD-WAN vManage, could allow an unauthenticated, remote attacker to bypass authentication and obtain administrative privileges on an affected system.\r\nThis vulnerability exists because the peering authentication mechanism in an affected system is not working properly. An attacker could exploit this vulnerability by sending crafted requests to the affected system. A successful exploit could allow the attacker to log in to an affected Cisco Catalyst SD-WAN Controller as an internal, high-privileged, non-root user account. Using this account, the attacker could access NETCONF, which would then allow the attacker to manipulate network configuration for the SD-WAN fabric."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+                "baseScore": 10.0,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "psirt@cisco.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 6.0
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-287"
+              }
+            ],
+            "source": "psirt@cisco.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:catalyst_sd-wan_manager:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "5021D679-E23A-4D7F-B3B6-D664634A639C",
+                    "versionEndExcluding": "20.9.9.1"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:catalyst_sd-wan_manager:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "26022018-2273-4589-BE4F-AD92DA31CB58",
+                    "versionStartIncluding": "20.10",
+                    "versionEndExcluding": "20.12.5.4"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:catalyst_sd-wan_manager:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "FDA5CA36-86B6-443D-B772-37A5901F3E83",
+                    "versionStartIncluding": "20.12.6",
+                    "versionEndExcluding": "20.12.6.2"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:catalyst_sd-wan_manager:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "32A83687-B363-476B-89EF-B35C82575237",
+                    "versionStartIncluding": "20.13",
+                    "versionEndExcluding": "20.15.4.4"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:catalyst_sd-wan_manager:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "709D0805-4B76-46A0-82D3-93C89926B389",
+                    "versionStartIncluding": "20.15.5",
+                    "versionEndExcluding": "20.15.5.2"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:catalyst_sd-wan_manager:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "BB6A9216-3D47-4B33-B502-72B99859992E",
+                    "versionStartIncluding": "20.16",
+                    "versionEndExcluding": "20.18.2.2"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:catalyst_sd-wan_manager:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "C34C0AB2-3E8E-4B12-BEA2-446F8F248B9A",
+                    "versionStartIncluding": "26.1",
+                    "versionEndExcluding": "26.1.1.1"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:catalyst_sd-wan_manager:20.12.7:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "6A03BCEF-DC25-488D-91D3-0A16F3B872E3"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:sd-wan_vsmart_controller:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "0824EC8B-3153-4298-8570-C115A95FCCF1",
+                    "versionEndExcluding": "20.9.9.1"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:sd-wan_vsmart_controller:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "86D90EAF-0EB3-4412-8D15-14F5151E36FA",
+                    "versionStartIncluding": "20.10",
+                    "versionEndExcluding": "20.12.5.4"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:sd-wan_vsmart_controller:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "CAA36394-30A2-4668-AF03-1C596D8AC2E0",
+                    "versionStartIncluding": "20.12.6",
+                    "versionEndExcluding": "20.12.6.2"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:sd-wan_vsmart_controller:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "EEC9B48C-3149-4662-9DD4-DC4ACE4460E3",
+                    "versionStartIncluding": "20.13",
+                    "versionEndExcluding": "20.15.4.4"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:sd-wan_vsmart_controller:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "9E964DF6-E2FB-4305-9AD6-42904FC4FE9A",
+                    "versionStartIncluding": "20.15.5",
+                    "versionEndExcluding": "20.15.5.2"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:sd-wan_vsmart_controller:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "4D40D018-E4EB-4CC8-A2B0-F8E1DA2E3350",
+                    "versionStartIncluding": "20.16",
+                    "versionEndExcluding": "20.18.2.2"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:sd-wan_vsmart_controller:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "788140A2-0378-487E-9C9A-84080C9BC7A5",
+                    "versionStartIncluding": "26.1",
+                    "versionEndExcluding": "26.1.1.1"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:sd-wan_vsmart_controller:20.12.7:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "0F4FFF4B-5C26-4014-A9B2-EE342F3FE3C8"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-sdwan-rpa-EHchtZk",
+            "source": "psirt@cisco.com",
+            "tags": [
+              "Not Applicable"
+            ]
+          },
+          {
+            "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-sdwan-rpa2-v69WY2SW",
+            "source": "psirt@cisco.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-20182",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "US Government Resource"
+            ]
+          }
+        ]
+      },
+      "risk_score": 88,
+      "rank": 1
+    },
+    {
+      "cve_id": "CVE-2026-25994",
+      "signal_types": [
+        "EXP"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": {
+          "ref_published": "2026-05-14"
+        },
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-02-11",
+        "description": "PJSIP is a free and open source multimedia communication library written in C. In 2.16 and earlier, a buffer overflow vulnerability exists in PJNATH ICE Session when processing credentials with excessively long usernames.",
+        "title": "pjsip pjsip Buffer Overflow",
+        "vendor": "pjsip",
+        "product": "pjsip",
+        "attack_type": "Buffer Overflow",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2026-25994",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2026-02-11T21:16:20.813",
+        "lastModified": "2026-02-19T19:23:29.843",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "PJSIP is a free and open source multimedia communication library written in C. In 2.16 and earlier, a buffer overflow vulnerability exists in PJNATH ICE Session when processing credentials with excessively long usernames."
+          },
+          {
+            "lang": "es",
+            "value": "PJSIP es una librería de comunicación multimedia de código abierto y gratuita escrita en C. En 2.16 y versiones anteriores, existe una vulnerabilidad de desbordamiento de búfer en la sesión ICE de PJNATH al procesar credenciales con nombres de usuario excesivamente largos."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:U/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 8.1,
+                "baseSeverity": "HIGH"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-120"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:pjsip:pjsip:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "3290D5C6-704B-4F73-A5DB-2DB205F3CDBE",
+                    "versionEndIncluding": "2.16"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/pjsip/pjproject/commit/063b3a155f163cc5a9a1df2c56b6720fd3a0dbb0",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://github.com/pjsip/pjproject/security/advisories/GHSA-j29p-pvh2-pvqp",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Patch",
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 78,
+      "rank": 2
+    },
+    {
+      "cve_id": "CVE-2020-1062",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 0.28378,
+            "score_date": "2026-01-15"
+          },
+          "current": {
+            "score": 0.46787,
+            "score_date": "2026-05-14"
+          },
+          "delta": 0.18409
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2020-05-21",
+        "description": "A remote code execution vulnerability exists when Internet Explorer improperly accesses objects in memory, aka 'Internet Explorer Memory Corruption Vulnerability'. This CVE ID is unique from CVE-2020-1092.",
+        "title": "microsoft internet_explorer RCE",
+        "vendor": "microsoft",
+        "product": "internet_explorer",
+        "attack_type": "RCE",
+        "cvss_max": 7.6
+      },
+      "cve": {
+        "id": "CVE-2020-1062",
+        "sourceIdentifier": "secure@microsoft.com",
+        "published": "2020-05-21T23:15:12.507",
+        "lastModified": "2024-11-21T05:09:40.100",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A remote code execution vulnerability exists when Internet Explorer improperly accesses objects in memory, aka 'Internet Explorer Memory Corruption Vulnerability'. This CVE ID is unique from CVE-2020-1092."
+          },
+          {
+            "lang": "es",
+            "value": "Existe una vulnerabilidad de ejecución de código remota cuando Internet Explorer accede inapropiadamente a objetos en memoria, también se conoce como \"Internet Explorer Memory Corruption Vulnerability\". Este ID de CVE es diferente de CVE-2020-1092."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV2": [
+            {
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:H/Au:N/C:C/I:C/A:C",
+                "baseScore": 7.6,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "baseSeverity": "HIGH",
+              "exploitabilityScore": 4.9,
+              "impactScore": 10.0
+            }
+          ],
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H",
+                "baseScore": 7.5,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 1.6,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-787"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:microsoft:internet_explorer:9:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "C043EDDD-41BF-4718-BDCF-158BBBDB6360"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_server_2008:-:sp2:*:*:*:*:*:*",
+                    "matchCriteriaId": "5F422A8C-2C4E-42C8-B420-E0728037E15C"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:microsoft:internet_explorer:11:-:*:*:*:*:*:*",
+                    "matchCriteriaId": "D7809F78-8D56-4925-A8F9-4119B973A667"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_10:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "21540673-614A-4D40-8BD7-3F07723803B0"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_10:1607:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "E01A4CCA-4C43-46E0-90E6-3E4DBFBACD64"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_10:1709:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "83B14968-3985-43C3-ACE5-8307196EFAE3"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_10:1803:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "7CB85C75-4D35-480E-843D-60579EC75FCB"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_10:1809:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "6B8F3DD2-A145-4AF1-8545-CC42892DA3D1"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_10:1903:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "3FB5CDAE-C713-4D9D-9D6A-2C2E8924A4BB"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_10:1909:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "E9273B95-20ED-4547-B0A8-95AD15B30372"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_7:-:sp1:*:*:*:*:*:*",
+                    "matchCriteriaId": "C2B1C231-DE19-4B8F-A4AA-5B3A65276E46"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_8.1:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "E93068DB-549B-45AB-8E5C-00EB5D8B5CF8"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_rt_8.1:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "C6CE5198-C498-4672-AF4C-77AB4BE06C5C"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_server_2008:r2:sp1:*:*:*:*:x64:*",
+                    "matchCriteriaId": "AF07A81D-12E5-4B1D-BFF9-C8D08C32FF4F"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_server_2012:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "A7DF96F8-BA6A-4780-9CA3-F719B3F81074"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_server_2012:r2:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "DB18C4CE-5917-401E-ACF7-2747084FD36E"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_server_2016:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "041FF8BA-0B12-4A1F-B4BF-9C4F33B7C1E7"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_server_2019:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "DB79EE26-FC32-417D-A49C-A1A63165A968"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2020-1062",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Patch",
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 82,
+      "rank": 3
+    },
+    {
+      "cve_id": "CVE-2011-4532",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 0.0314,
+            "score_date": "2026-04-27"
+          },
+          "current": {
+            "score": 0.19229,
+            "score_date": "2026-05-14"
+          },
+          "delta": 0.16089
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2012-01-08",
+        "description": "Absolute path traversal vulnerability in the ALMListView.ALMListCtrl ActiveX control in almaxcx.dll in the graphical user interface in Siemens Automation License Manager (ALM) 2.0 through 5.1+SP1+Upd2 allows remote attackers to overwrite arbitrary files via the Save method.",
+        "title": "siemens automation_license_manager Path Traversal",
+        "vendor": "siemens",
+        "product": "automation_license_manager",
+        "attack_type": "Path Traversal",
+        "cvss_max": 5.0
+      },
+      "cve": {
+        "id": "CVE-2011-4532",
+        "sourceIdentifier": "cret@cert.org",
+        "published": "2012-01-08T20:55:01.343",
+        "lastModified": "2026-04-29T01:13:23.040",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Absolute path traversal vulnerability in the ALMListView.ALMListCtrl ActiveX control in almaxcx.dll in the graphical user interface in Siemens Automation License Manager (ALM) 2.0 through 5.1+SP1+Upd2 allows remote attackers to overwrite arbitrary files via the Save method."
+          },
+          {
+            "lang": "es",
+            "value": "Vulnerabilidad de salto de directorio absoluto en el control ActiveX ALMListView.ALMListCtrl de almaxcx.dll del interfaz gráfico de usuario de Siemens Automation License Manager (ALM) 2.0 hasta la 5.1+SP1+Upd2 permite a atacantes remotos sobreescribir archivos arbitrarios a través del método \"Save\"."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV2": [
+            {
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:L/Au:N/C:N/I:P/A:N",
+                "baseScore": 5.0,
+                "baseSeverity": "MEDIUM"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "baseSeverity": "MEDIUM",
+              "exploitabilityScore": 10.0,
+              "impactScore": 2.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-22"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:siemens:automation_license_manager:*:sp1:*:*:*:*:*:*",
+                    "matchCriteriaId": "1FAAF066-5BCA-4368-94D6-EA4E5E9954EB",
+                    "versionEndIncluding": "5.1"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "http://aluigi.altervista.org/adv/almsrvx_1-adv.txt",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://support.automation.siemens.com/WW/llisapi.dll/57252401?func=ll&objId=57252401&objAction=csView&nodeid0=17323948&lang=en&siteid=cseus&aktprim=0&extranet=standard&viewreg=WW&load=content",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "http://support.automation.siemens.com/WW/view/en/114358",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://www.us-cert.gov/control_systems/pdf/ICSA-11-361-01.pdf",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "US Government Resource"
+            ]
+          }
+        ]
+      },
+      "risk_score": 78,
+      "rank": 4
+    },
+    {
+      "cve_id": "CVE-2024-23535",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 0.48209,
+            "score_date": "2026-01-06"
+          },
+          "current": {
+            "score": 0.6178,
+            "score_date": "2026-05-14"
+          },
+          "delta": 0.13571
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2024-04-19",
+        "description": "A Path Traversal vulnerability in web component of Ivanti Avalanche before 6.4.3 allows a remote authenticated attacker to execute arbitrary commands as SYSTEM.",
+        "title": "ivanti avalanche Path Traversal",
+        "vendor": "ivanti",
+        "product": "avalanche",
+        "attack_type": "Path Traversal",
+        "cvss_max": 8.8
+      },
+      "cve": {
+        "id": "CVE-2024-23535",
+        "sourceIdentifier": "support@hackerone.com",
+        "published": "2024-04-19T02:15:08.300",
+        "lastModified": "2025-05-06T18:28:37.263",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A Path Traversal vulnerability in web component of Ivanti Avalanche before 6.4.3 allows a remote authenticated attacker to execute arbitrary commands as SYSTEM."
+          },
+          {
+            "lang": "es",
+            "value": "Una vulnerabilidad de Path Traversal en el componente web de Ivanti Avalanche anterior a 6.4.3 permite a un atacante remoto autenticado ejecutar comandos arbitrarios como SYSTEM."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV30": [
+            {
+              "cvssData": {
+                "version": "3.0",
+                "vectorString": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 8.8,
+                "baseSeverity": "HIGH"
+              },
+              "source": "support@hackerone.com",
+              "type": "Secondary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 8.8,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-22"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:ivanti:avalanche:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "BA272C74-8C77-482D-A85E-EBC9436C1697",
+                    "versionEndExcluding": "6.4.3.528"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://forums.ivanti.com/s/article/Avalanche-6-4-3-Security-Hardening-and-CVEs-addressed?language=en_US",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 84,
+      "rank": 5
+    },
+    {
+      "cve_id": "CVE-2026-2624",
+      "signal_types": [
+        "EXP"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": {
+          "ref_published": "2026-05-14"
+        },
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-02-25",
+        "description": "Missing Authentication for Critical Function vulnerability in ePati Cyber ​​Security Technologies Inc. Antikor Next Generation Firewall (NGFW) allows Authentication Bypass.This issue affects Antikor Next Generation Firewall (NGFW): from v.2.0.1298 before v.2.0.1301.",
+        "title": "epati antikor_next_generation_firewall Auth Bypass",
+        "vendor": "epati",
+        "product": "antikor_next_generation_firewall",
+        "attack_type": "Auth Bypass",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2026-2624",
+        "sourceIdentifier": "iletisim@usom.gov.tr",
+        "published": "2026-02-25T13:16:05.373",
+        "lastModified": "2026-02-26T17:29:01.797",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Missing Authentication for Critical Function vulnerability in ePati Cyber ​​Security Technologies Inc. Antikor Next Generation Firewall (NGFW) allows Authentication Bypass.This issue affects Antikor Next Generation Firewall (NGFW): from v.2.0.1298 before v.2.0.1301."
+          },
+          {
+            "lang": "es",
+            "value": "Vulnerabilidad de autenticación faltante para función crítica en el Cortafuegos de Próxima Generación (NGFW) Antikor de ePati Cyber ??Security Technologies Inc. permite la omisión de autenticación. Este problema afecta al Cortafuegos de Próxima Generación (NGFW) Antikor: desde la v.2.0.1298 anterior a la v.2.0.1301."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "iletisim@usom.gov.tr",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-306"
+              }
+            ],
+            "source": "iletisim@usom.gov.tr"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:epati:antikor_next_generation_firewall:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "959FF153-E879-419E-B290-FC7014AA1D6A",
+                    "versionStartIncluding": "2.0.1298",
+                    "versionEndExcluding": "2.0.1301"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://www.usom.gov.tr/bildirim/tr-26-0082",
+            "source": "iletisim@usom.gov.tr",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 78,
+      "rank": 6
+    },
+    {
+      "cve_id": "CVE-2026-4257",
+      "signal_types": [
+        "EXP"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": {
+          "ref_published": "2026-05-14"
+        },
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-03-30",
+        "description": "The Contact Form by Supsystic plugin for WordPress is vulnerable to Server-Side Template Injection (SSTI) leading to Remote Code Execution (RCE) in all versions up to, and including, 1.7.36. This is due to the plugin using the Twig `Twig_Loader_String` template engine without sandboxing, combined with the `cfsPreFill` prefill functionality that allows unauthenticated users to inject arbitrary Twig expressions into form field values via GET parameters. This makes it possible for unauthenticated attackers to execute arbitrary PHP functions and OS commands on the server by leveraging Twig's `registerUndefinedFilterCallback()` method to register arbitrary PHP callbacks.",
+        "title": "The Contact Form by Supsystic plugin for WordPress is vulnerable to Server-Side Template Injection (SSTI) leading to Remote Code Executio...",
+        "attack_type": "RCE",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2026-4257",
+        "sourceIdentifier": "security@wordfence.com",
+        "published": "2026-03-30T22:16:20.313",
+        "lastModified": "2026-04-24T18:11:16.583",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The Contact Form by Supsystic plugin for WordPress is vulnerable to Server-Side Template Injection (SSTI) leading to Remote Code Execution (RCE) in all versions up to, and including, 1.7.36. This is due to the plugin using the Twig `Twig_Loader_String` template engine without sandboxing, combined with the `cfsPreFill` prefill functionality that allows unauthenticated users to inject arbitrary Twig expressions into form field values via GET parameters. This makes it possible for unauthenticated attackers to execute arbitrary PHP functions and OS commands on the server by leveraging Twig's `registerUndefinedFilterCallback()` method to register arbitrary PHP callbacks."
+          },
+          {
+            "lang": "es",
+            "value": "El plugin Contact Form by Supsystic para WordPress es vulnerable a la inyección de plantillas del lado del servidor (SSTI) lo que lleva a la ejecución remota de código (RCE) en todas las versiones hasta la 1.7.36, inclusive. Esto se debe a que el plugin utiliza el motor de plantillas Twig 'Twig_Loader_String' sin sandboxing, combinado con la funcionalidad de precarga 'cfsPreFill' que permite a los usuarios no autenticados inyectar expresiones Twig arbitrarias en los valores de los campos del formulario a través de parámetros GET. Esto hace posible que atacantes no autenticados ejecuten funciones PHP y comandos del sistema operativo arbitrarios en el servidor aprovechando el método 'registerUndefinedFilterCallback()' de Twig para registrar retrollamadas PHP arbitrarias."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security@wordfence.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-94"
+              }
+            ],
+            "source": "security@wordfence.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/contact-form-by-supsystic/tags/1.7.36/modules/forms/views/forms.php#L323",
+            "source": "security@wordfence.com"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/changeset/3491826/contact-form-by-supsystic",
+            "source": "security@wordfence.com"
+          },
+          {
+            "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/415c9658-bfb2-453b-a697-c63c08b0ca61?source=cve",
+            "source": "security@wordfence.com"
+          }
+        ]
+      },
+      "risk_score": 78,
+      "rank": 7
+    },
+    {
+      "cve_id": "CVE-2026-44212",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-05-14",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-05-14",
+        "description": "PrestaShop is an open source e-commerce web application. Prior to 8.2.6 and 9.1.1, there is a stored Cross-Site Scripting (XSS) vulnerability in the PrestaShop back-office Customer Service view. An unauthenticated attacker can submit the public Contact Us form with a malicious email address. The payload is stored in the database and executed when a back-office employee opens the affected customer thread, enabling session hijacking and full back-office takeover. This vulnerability is fixed in 8.2.6 and 9.1.1.",
+        "title": "PrestaShop is an open source e-commerce web application.",
+        "attack_type": "XSS",
+        "cvss_max": 9.3
+      },
+      "cve": {
+        "id": "CVE-2026-44212",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2026-05-14T21:16:46.540",
+        "lastModified": "2026-05-15T14:30:03.170",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "PrestaShop is an open source e-commerce web application. Prior to 8.2.6 and 9.1.1, there is a stored Cross-Site Scripting (XSS) vulnerability in the PrestaShop back-office Customer Service view. An unauthenticated attacker can submit the public Contact Us form with a malicious email address. The payload is stored in the database and executed when a back-office employee opens the affected customer thread, enabling session hijacking and full back-office takeover. This vulnerability is fixed in 8.2.6 and 9.1.1."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:N",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 5.8
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-79"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/PrestaShop/PrestaShop/security/advisories/GHSA-w9f3-qc75-qgx9",
+            "source": "security-advisories@github.com"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 8
+    },
+    {
+      "cve_id": "CVE-2026-44523",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-05-14",
+          "previous_max": null,
+          "current_max": 10.0
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-05-14",
+        "description": "Note Mark is an open-source note-taking application. Prior to 0.19.4, no minimum length or entropy is enforced on the JWT_SECRET configuration value. The application accepts any base64-decodable secret regardless of size, including secrets as short as 1 byte. This vulnerability is fixed in 0.19.4.",
+        "title": "Note Mark is an open-source note-taking application.",
+        "cvss_max": 10.0
+      },
+      "cve": {
+        "id": "CVE-2026-44523",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2026-05-14T19:16:37.470",
+        "lastModified": "2026-05-15T15:16:52.960",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Note Mark is an open-source note-taking application. Prior to 0.19.4, no minimum length or entropy is enforced on the JWT_SECRET configuration value. The application accepts any base64-decodable secret regardless of size, including secrets as short as 1 byte. This vulnerability is fixed in 0.19.4."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:N",
+                "baseScore": 10.0,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.8
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-326"
+              },
+              {
+                "lang": "en",
+                "value": "CWE-345"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/enchant97/note-mark/security/advisories/GHSA-q6mh-rqwh-g786",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 9
+    },
+    {
+      "cve_id": "CVE-2026-44588",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-05-14",
+          "previous_max": null,
+          "current_max": 9.4
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-05-14",
+        "description": "SiYuan is an open-source personal knowledge management system. Prior to 3.7.0,  he tooltip mouseover handler in app/src/block/popover.ts reads aria-label via getAttribute and passes it through decodeURIComponent before assigning to messageElement.innerHTML in app/src/dialog/tooltip.ts:41. The encoder used at the producer side, escapeAriaLabel in app/src/util/escape.ts:19-25, only handles HTML special characters (\", ', <, literal &lt;) — it leaves %XX URL-escapes untouched. So a doc title containing %3Cimg src=x onerror=...%3E round-trips through escapeAriaLabel and the HTML attribute layer unmodified. Then decodeURIComponent on the consumer side converts %3C to a literal < character (a real <, NOT a character reference). When that string is assigned to innerHTML, the HTML5 tokenizer enters TagOpenState on the literal <, parses the <img> element, and the onerror handler fires. Because the renderer runs with nodeIntegration: true, contextIsolation: false, webSecurity: false (app/electron/main.js:407-411), require('child_process') is reachable from the injected handler, escalating to arbitrary code execution.This vulnerability is fixed in 3.7.0.",
+        "title": "SiYuan is an open-source personal knowledge management system.",
+        "cvss_max": 9.4
+      },
+      "cve": {
+        "id": "CVE-2026-44588",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2026-05-14T19:16:37.867",
+        "lastModified": "2026-05-15T15:16:53.200",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "SiYuan is an open-source personal knowledge management system. Prior to 3.7.0,  he tooltip mouseover handler in app/src/block/popover.ts reads aria-label via getAttribute and passes it through decodeURIComponent before assigning to messageElement.innerHTML in app/src/dialog/tooltip.ts:41. The encoder used at the producer side, escapeAriaLabel in app/src/util/escape.ts:19-25, only handles HTML special characters (\", ', <, literal &lt;) — it leaves %XX URL-escapes untouched. So a doc title containing %3Cimg src=x onerror=...%3E round-trips through escapeAriaLabel and the HTML attribute layer unmodified. Then decodeURIComponent on the consumer side converts %3C to a literal < character (a real <, NOT a character reference). When that string is assigned to innerHTML, the HTML5 tokenizer enters TagOpenState on the literal <, parses the <img> element, and the onerror handler fires. Because the renderer runs with nodeIntegration: true, contextIsolation: false, webSecurity: false (app/electron/main.js:407-411), require('child_process') is reachable from the injected handler, escalating to arbitrary code execution.This vulnerability is fixed in 3.7.0."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:A/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.4,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-79"
+              },
+              {
+                "lang": "en",
+                "value": "CWE-116"
+              },
+              {
+                "lang": "en",
+                "value": "CWE-1188"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/siyuan-note/siyuan/security/advisories/GHSA-25rp-h46x-2hjm",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 10
+    },
+    {
+      "cve_id": "CVE-2026-44592",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-05-14",
+          "previous_max": null,
+          "current_max": 9.4
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-05-14",
+        "description": "Gradient is a nix-based continuous integration system. In 1.1.0, when GRADIENT_DISCOVERABLE=true (the default, and the NixOS module default), anyone who can reach /proto can register as a worker without any credentials by sending a fresh, never-registered worker UUID. The resulting session has PeerAuth::Open, i.e. it sees jobs from every organisation, and can immediately NarPush/NarUploaded arbitrary store paths into nar_storage and the cached_path table. This vulnerability is fixed in 1.1.1.",
+        "title": "Gradient is a nix-based continuous integration system.",
+        "cvss_max": 9.4
+      },
+      "cve": {
+        "id": "CVE-2026-44592",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2026-05-14T19:16:38.147",
+        "lastModified": "2026-05-15T14:44:49.877",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Gradient is a nix-based continuous integration system. In 1.1.0, when GRADIENT_DISCOVERABLE=true (the default, and the NixOS module default), anyone who can reach /proto can register as a worker without any credentials by sending a fresh, never-registered worker UUID. The resulting session has PeerAuth::Open, i.e. it sees jobs from every organisation, and can immediately NarPush/NarUploaded arbitrary store paths into nar_storage and the cached_path table. This vulnerability is fixed in 1.1.1."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:H/A:H",
+                "baseScore": 9.4,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.5
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-306"
+              },
+              {
+                "lang": "en",
+                "value": "CWE-345"
+              },
+              {
+                "lang": "en",
+                "value": "CWE-862"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/wavelens/gradient/security/advisories/GHSA-49w6-gf3p-96m2",
+            "source": "security-advisories@github.com"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 11
+    },
+    {
+      "cve_id": "CVE-2026-44666",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-05-14",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-05-14",
+        "description": "HRConvert2 is a self-hosted, drag-and-drop & nosql file conversion server & share tool. Prior to 3.3.8, the sanitizeString() function in convertCore.php is missing backtick (`) and tab (\\t) from its strip list. User input then reaches shell_exec(), where the shell interprets these characters and commands within filenames execute. This vulnerability is fixed in 3.3.8.",
+        "title": "HRConvert2 is a self-hosted, drag-and-drop & nosql file conversion server & share tool.",
+        "cvss_max": 9.3
+      },
+      "cve": {
+        "id": "CVE-2026-44666",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2026-05-14T21:16:47.370",
+        "lastModified": "2026-05-15T15:16:53.630",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "HRConvert2 is a self-hosted, drag-and-drop & nosql file conversion server & share tool. Prior to 3.3.8, the sanitizeString() function in convertCore.php is missing backtick (`) and tab (\\t) from its strip list. User input then reaches shell_exec(), where the shell interprets these characters and commands within filenames execute. This vulnerability is fixed in 3.3.8."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:L/SI:L/SA:L/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-78"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/zelon88/HRConvert2/releases/tag/v3.3.8",
+            "source": "security-advisories@github.com"
+          },
+          {
+            "url": "https://github.com/zelon88/HRConvert2/security/advisories/GHSA-f74g-4wj8-j35h",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 12
+    },
+    {
+      "cve_id": "CVE-2026-44670",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-05-14",
+          "previous_max": null,
+          "current_max": 9.4
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-05-14",
+        "description": "SiYuan is an open-source personal knowledge management system. Prior to 3.7.0, the kernel stores Attribute View (AV / database) names without any HTML escape, then a render template uses raw strings.ReplaceAll(tpl, \"${avName}\", nodeAvName) to embed the name in HTML before pushing to all clients via WebSocket. Three independent client paths (render.ts:120 → outerHTML, Title.ts:401 → innerHTML, transaction.ts:559 → innerHTML) consume the value without escaping. Because the main BrowserWindow runs nodeIntegration:true, contextIsolation:false, webSecurity:false (app/electron/main.js:407-411), HTML injection in the renderer becomes Node.js code execution. This vulnerability is fixed in 3.7.0.",
+        "title": "SiYuan is an open-source personal knowledge management system.",
+        "cvss_max": 9.4
+      },
+      "cve": {
+        "id": "CVE-2026-44670",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2026-05-14T19:16:38.437",
+        "lastModified": "2026-05-15T15:16:53.737",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "SiYuan is an open-source personal knowledge management system. Prior to 3.7.0, the kernel stores Attribute View (AV / database) names without any HTML escape, then a render template uses raw strings.ReplaceAll(tpl, \"${avName}\", nodeAvName) to embed the name in HTML before pushing to all clients via WebSocket. Three independent client paths (render.ts:120 → outerHTML, Title.ts:401 → innerHTML, transaction.ts:559 → innerHTML) consume the value without escaping. Because the main BrowserWindow runs nodeIntegration:true, contextIsolation:false, webSecurity:false (app/electron/main.js:407-411), HTML injection in the renderer becomes Node.js code execution. This vulnerability is fixed in 3.7.0."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.4,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-79"
+              },
+              {
+                "lang": "en",
+                "value": "CWE-94"
+              },
+              {
+                "lang": "en",
+                "value": "CWE-1188"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/siyuan-note/siyuan/security/advisories/GHSA-2h64-c999-c9r6",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 13
+    },
+    {
+      "cve_id": "CVE-2026-45375",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-05-14",
+          "previous_max": null,
+          "current_max": 9.0
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-05-14",
+        "description": "SiYuan is an open-source personal knowledge management system. Prior to 3.7.0, SiYuan's Bazaar (community marketplace) renders the name and version fields of a package's plugin.json (and the equivalent theme.json / template.json / widget.json / icon.json) into the Settings → Marketplace UI without HTML escaping. The kernel-side helper sanitizePackageDisplayStrings in kernel/bazaar/package.go HTML-escapes only Author, DisplayName, and Description — Name and Version flow through to the renderer raw. The frontend at app/src/config/bazaar.ts substitutes them into HTML template strings via ${item.preferredName} / ${data.name} / v${data.version} and assigns the result to innerHTML. As a consequence, malicious HTML in either field is parsed and executed when a user opens the marketplace tab. This vulnerability is fixed in 3.7.0.",
+        "title": "SiYuan is an open-source personal knowledge management system.",
+        "cvss_max": 9.0
+      },
+      "cve": {
+        "id": "CVE-2026-45375",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2026-05-14T19:16:39.030",
+        "lastModified": "2026-05-16T01:16:17.333",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "SiYuan is an open-source personal knowledge management system. Prior to 3.7.0, SiYuan's Bazaar (community marketplace) renders the name and version fields of a package's plugin.json (and the equivalent theme.json / template.json / widget.json / icon.json) into the Settings → Marketplace UI without HTML escaping. The kernel-side helper sanitizePackageDisplayStrings in kernel/bazaar/package.go HTML-escapes only Author, DisplayName, and Description — Name and Version flow through to the renderer raw. The frontend at app/src/config/bazaar.ts substitutes them into HTML template strings via ${item.preferredName} / ${data.name} / v${data.version} and assigns the result to innerHTML. As a consequence, malicious HTML in either field is parsed and executed when a user opens the marketplace tab. This vulnerability is fixed in 3.7.0."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:H",
+                "baseScore": 9.0,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary",
+              "exploitabilityScore": 2.3,
+              "impactScore": 6.0
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-79"
+              },
+              {
+                "lang": "en",
+                "value": "CWE-116"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/siyuan-note/siyuan/security/advisories/GHSA-27qc-m5gf-jv5r",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 14
+    },
+    {
+      "cve_id": "CVE-2026-8511",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-05-14",
+          "previous_max": null,
+          "current_max": 9.6
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-05-14",
+        "description": "Use after free in UI in Google Chrome prior to 148.0.7778.168 allowed a remote attacker to potentially perform a sandbox escape via a crafted HTML page. (Chromium security severity: Critical)",
+        "title": "google chrome",
+        "vendor": "google",
+        "product": "chrome",
+        "cvss_max": 9.6
+      },
+      "cve": {
+        "id": "CVE-2026-8511",
+        "sourceIdentifier": "chrome-cve-admin@google.com",
+        "published": "2026-05-14T20:17:11.707",
+        "lastModified": "2026-05-18T18:34:17.750",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Use after free in UI in Google Chrome prior to 148.0.7778.168 allowed a remote attacker to potentially perform a sandbox escape via a crafted HTML page. (Chromium security severity: Critical)"
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H",
+                "baseScore": 9.6,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 6.0
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-416"
+              }
+            ],
+            "source": "chrome-cve-admin@google.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:google:chrome:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "86EDE1E0-DF74-4867-802F-A9C2112DD560",
+                    "versionEndExcluding": "148.0.7778.168"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:macos:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "387021A0-AF36-463C-A605-32EA7DAC172E"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "703AF700-7A70-47E2-BC3A-7FD03B3CA9C1"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "A2572D17-1DE6-457B-99CC-64AFD54487EA"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://chromereleases.googleblog.com/2026/05/stable-channel-update-for-desktop_12.html",
+            "source": "chrome-cve-admin@google.com",
+            "tags": [
+              "Product",
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://issues.chromium.org/issues/495108488",
+            "source": "chrome-cve-admin@google.com",
+            "tags": [
+              "Permissions Required"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 15
+    },
+    {
+      "cve_id": "CVE-2026-8580",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-05-14",
+          "previous_max": null,
+          "current_max": 9.6
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-05-14",
+        "description": "Use after free in Mojo in Google Chrome prior to 148.0.7778.168 allowed a remote attacker to potentially perform a sandbox escape via a crafted HTML page. (Chromium security severity: Medium)",
+        "title": "google chrome",
+        "vendor": "google",
+        "product": "chrome",
+        "cvss_max": 9.6
+      },
+      "cve": {
+        "id": "CVE-2026-8580",
+        "sourceIdentifier": "chrome-cve-admin@google.com",
+        "published": "2026-05-14T20:17:20.367",
+        "lastModified": "2026-05-19T15:18:41.387",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Use after free in Mojo in Google Chrome prior to 148.0.7778.168 allowed a remote attacker to potentially perform a sandbox escape via a crafted HTML page. (Chromium security severity: Medium)"
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H",
+                "baseScore": 9.6,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 6.0
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-416"
+              }
+            ],
+            "source": "chrome-cve-admin@google.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:google:chrome:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "86EDE1E0-DF74-4867-802F-A9C2112DD560",
+                    "versionEndExcluding": "148.0.7778.168"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://chromereleases.googleblog.com/2026/05/stable-channel-update-for-desktop_12.html",
+            "source": "chrome-cve-admin@google.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://issues.chromium.org/issues/496639647",
+            "source": "chrome-cve-admin@google.com",
+            "tags": [
+              "Permissions Required"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 16
+    },
+    {
+      "cve_id": "CVE-2026-8634",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-05-14",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-05-14",
+        "description": "Crabbox prior to v0.12.0 contains an environment variable exposure vulnerability that allows attackers with access to a malicious or compromised repository to forward local secrets such as API tokens, cloud credentials, and broker tokens into the remote command environment. Attackers can exploit overly permissive environment variable allowlisting in repo-local Crabbox configuration to serialize sensitive environment variables into remote command execution, exposing credentials to the remote environment.",
+        "title": "Crabbox prior to v0.12.0 contains an environment variable exposure vulnerability that allows attackers with access to a malicious or comp...",
+        "cvss_max": 9.3
+      },
+      "cve": {
+        "id": "CVE-2026-8634",
+        "sourceIdentifier": "disclosure@vulncheck.com",
+        "published": "2026-05-14T20:17:21.717",
+        "lastModified": "2026-05-15T15:16:56.913",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Crabbox prior to v0.12.0 contains an environment variable exposure vulnerability that allows attackers with access to a malicious or compromised repository to forward local secrets such as API tokens, cloud credentials, and broker tokens into the remote command environment. Attackers can exploit overly permissive environment variable allowlisting in repo-local Crabbox configuration to serialize sensitive environment variables into remote command execution, exposing credentials to the remote environment."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+                "baseScore": 9.1,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.2
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-94"
+              }
+            ],
+            "source": "disclosure@vulncheck.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/openclaw/crabbox/commit/eaae40ae4ce009e60633f16f7f19600c74557f6f",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://github.com/openclaw/crabbox/pull/78",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          },
+          {
+            "url": "https://github.com/openclaw/crabbox/releases/tag/v0.12.0",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://www.vulncheck.com/advisories/crabbox-environment-variable-information-disclosure",
+            "source": "disclosure@vulncheck.com"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 17
+    }
+  ],
+  "source": "https://www.cvelogic.com/threat-intelligence/2026-05-14"
+}

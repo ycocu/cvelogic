@@ -1,0 +1,461 @@
+{
+  "schema_version": "2.2",
+  "generated_at": "2026-06-02T07:34:26Z",
+  "day": "2026-02-16",
+  "window": {
+    "utc_start": "2026-02-16",
+    "utc_end": "2026-02-16",
+    "days": 1
+  },
+  "summary": {
+    "brief": "4 new critical disclosures — review patch status on exposed services.",
+    "bullets": [
+      "4 new critical disclosures — review patch status on exposed services."
+    ],
+    "counts": {
+      "cves": 4,
+      "kev": 0,
+      "exploit": 0,
+      "epss": 0,
+      "cvss": 4,
+      "patch": 0
+    }
+  },
+  "cves": [
+    {
+      "cve_id": "CVE-2026-2577",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-02-16",
+          "previous_max": null,
+          "current_max": 10.0
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-02-16",
+        "description": "The WhatsApp bridge component in Nanobot binds the WebSocket server to all network interfaces (0.0.0.0) on port 3001 by default and does not require authentication for incoming connections. An unauthenticated remote attacker with network access to the bridge can connect to the WebSocket server to hijack the WhatsApp session. This allows the attacker to send messages on behalf of the user, intercept all incoming messages and media in real-time, and capture authentication QR codes.",
+        "title": "The WhatsApp bridge component in Nanobot binds the WebSocket server to all network interfaces (0.0.0.0) on port 3001 by default and does...",
+        "cvss_max": 10.0
+      },
+      "cve": {
+        "id": "CVE-2026-2577",
+        "sourceIdentifier": "vulnreport@tenable.com",
+        "published": "2026-02-16T10:16:08.827",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The WhatsApp bridge component in Nanobot binds the WebSocket server to all network interfaces (0.0.0.0) on port 3001 by default and does not require authentication for incoming connections. An unauthenticated remote attacker with network access to the bridge can connect to the WebSocket server to hijack the WhatsApp session. This allows the attacker to send messages on behalf of the user, intercept all incoming messages and media in real-time, and capture authentication QR codes."
+          },
+          {
+            "lang": "es",
+            "value": "El componente de puente de WhatsApp en Nanobot enlaza el servidor WebSocket a todas las interfaces de red (0.0.0.0) en el puerto 3001 por defecto y no requiere autenticación para las conexiones entrantes. Un atacante remoto no autenticado con acceso de red al puente puede conectarse al servidor WebSocket para secuestrar la sesión de WhatsApp. Esto permite al atacante enviar mensajes en nombre del usuario, interceptar todos los mensajes y medios entrantes en tiempo real, y capturar códigos QR de autenticación."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:N",
+                "baseScore": 10.0,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "vulnreport@tenable.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.8
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-306"
+              }
+            ],
+            "source": "vulnreport@tenable.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/HKUDS/nanobot/releases/tag/v0.1.3.post7",
+            "source": "vulnreport@tenable.com"
+          },
+          {
+            "url": "https://www.tenable.com/security/research/tra-2026-09",
+            "source": "vulnreport@tenable.com"
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 1
+    },
+    {
+      "cve_id": "CVE-2025-15578",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-02-16",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-02-16",
+        "description": "Maypole versions from 2.10 through 2.13 for Perl generates session ids insecurely. The session id is seeded with the system time (which is available from HTTP response headers), a call to the built-in rand() function, and the PID.",
+        "title": "teejay maypole",
+        "vendor": "teejay",
+        "product": "maypole",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-15578",
+        "sourceIdentifier": "9b29abf9-4ab0-4765-b253-1875cd9b441e",
+        "published": "2026-02-16T22:22:40.557",
+        "lastModified": "2026-03-10T15:07:31.793",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Maypole versions from 2.10 through 2.13 for Perl generates session ids insecurely. The session id is seeded with the system time (which is available from HTTP response headers), a call to the built-in rand() function, and the PID."
+          },
+          {
+            "lang": "es",
+            "value": "Las versiones de Maypole de la 2.10 a la 2.13 para Perl generan identificadores de sesión de forma insegura. El identificador de sesión se inicializa con la hora del sistema (que está disponible en los encabezados de respuesta HTTP), una llamada a la función rand() incorporada y el PID."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-338"
+              }
+            ],
+            "source": "9b29abf9-4ab0-4765-b253-1875cd9b441e"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:teejay:maypole:*:*:*:*:*:perl:*:*",
+                    "matchCriteriaId": "ED195057-9CB0-44A6-97C0-BD0767582057",
+                    "versionStartIncluding": "2.10",
+                    "versionEndIncluding": "2.13"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:teejay:maypole:2.111:*:*:*:*:perl:*:*",
+                    "matchCriteriaId": "D7F6B5FF-1CE1-44FC-BBB4-AA2410D05778"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:teejay:maypole:2.121:*:*:*:*:perl:*:*",
+                    "matchCriteriaId": "AF245BCC-BD47-4117-B7AC-D73DF9DE1ABA"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://metacpan.org/dist/Maypole/source/lib/Maypole/Session.pm#L43",
+            "source": "9b29abf9-4ab0-4765-b253-1875cd9b441e",
+            "tags": [
+              "Issue Tracking"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 2
+    },
+    {
+      "cve_id": "CVE-2026-2439",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-02-16",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-02-16",
+        "description": "Concierge::Sessions versions from 0.8.1 before 0.8.5 for Perl generate insecure session ids. The generate_session_id function in Concierge::Sessions::Base defaults to using the uuidgen command to generate a UUID, with a fallback to using Perl's built-in rand function. Neither of these methods are secure, and attackers are able to guess session_ids that can grant them access to systems. Specifically,\n\n  *  There is no warning when uuidgen fails. The software can be quietly using the fallback rand() function with no warnings if the command fails for any reason.\n  *  The uuidgen command will generate a time-based UUID if the system does not have a high-quality random number source, because the call does not explicitly specify the --random option. Note that the system time is shared in HTTP responses.\n  *  UUIDs are identifiers whose mere possession grants access, as per RFC 9562.\n  *  The output of the built-in rand() function is predictable and unsuitable for security applications.",
+        "title": "bva concierge::sessions",
+        "vendor": "bva",
+        "product": "concierge\\",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2026-2439",
+        "sourceIdentifier": "9b29abf9-4ab0-4765-b253-1875cd9b441e",
+        "published": "2026-02-16T22:22:41.470",
+        "lastModified": "2026-03-10T18:12:46.927",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Concierge::Sessions versions from 0.8.1 before 0.8.5 for Perl generate insecure session ids. The generate_session_id function in Concierge::Sessions::Base defaults to using the uuidgen command to generate a UUID, with a fallback to using Perl's built-in rand function. Neither of these methods are secure, and attackers are able to guess session_ids that can grant them access to systems. Specifically,\n\n  *  There is no warning when uuidgen fails. The software can be quietly using the fallback rand() function with no warnings if the command fails for any reason.\n  *  The uuidgen command will generate a time-based UUID if the system does not have a high-quality random number source, because the call does not explicitly specify the --random option. Note that the system time is shared in HTTP responses.\n  *  UUIDs are identifiers whose mere possession grants access, as per RFC 9562.\n  *  The output of the built-in rand() function is predictable and unsuitable for security applications."
+          },
+          {
+            "lang": "es",
+            "value": "Las versiones de Concierge::Sessions desde la 0.8.1 anteriores a la 0.8.5 para Perl generan identificadores de sesión inseguros. La función generate_session_id en Concierge::Sessions::Base por defecto utiliza el comando uuidgen para generar un UUID, con un mecanismo de respaldo que usa la función rand incorporada de Perl. Ninguno de estos métodos es seguro, y los atacantes pueden adivinar los identificadores de sesión que pueden otorgarles acceso a los sistemas. Específicamente,\n\n  * No hay ninguna advertencia cuando uuidgen falla. El software puede estar utilizando silenciosamente la función de respaldo rand() sin advertencias si el comando falla por cualquier motivo.\n  * El comando uuidgen generará un UUID basado en el tiempo si el sistema no tiene una fuente de números aleatorios de alta calidad, porque la llamada no especifica explícitamente la opción --random. Tenga en cuenta que la hora del sistema se comparte en las respuestas HTTP.\n  * Los UUID son identificadores cuya mera posesión otorga acceso, según la RFC 9562.\n  * La salida de la función rand() incorporada es predecible e inadecuada para aplicaciones de seguridad."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-338"
+              },
+              {
+                "lang": "en",
+                "value": "CWE-340"
+              }
+            ],
+            "source": "9b29abf9-4ab0-4765-b253-1875cd9b441e"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:bva:concierge\\:\\:sessions:*:*:*:*:*:perl:*:*",
+                    "matchCriteriaId": "CDB9F71D-07E7-4EF3-8C7A-BF35F9175DB9",
+                    "versionStartIncluding": "0.8.1",
+                    "versionEndExcluding": "0.8.5"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/bwva/Concierge-Sessions/commit/20bb28e92e8fba307c4ff8264701c215be65e73b",
+            "source": "9b29abf9-4ab0-4765-b253-1875cd9b441e",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://metacpan.org/release/BVA/Concierge-Sessions-v0.8.4/diff/BVA/Concierge-Sessions-v0.8.5#lib/Concierge/Sessions/Base.pm",
+            "source": "9b29abf9-4ab0-4765-b253-1875cd9b441e",
+            "tags": [
+              "Product",
+              "Release Notes"
+            ]
+          },
+          {
+            "url": "https://perldoc.perl.org/5.42.0/functions/rand",
+            "source": "9b29abf9-4ab0-4765-b253-1875cd9b441e",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://security.metacpan.org/docs/guides/random-data-for-security.html",
+            "source": "9b29abf9-4ab0-4765-b253-1875cd9b441e",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.rfc-editor.org/rfc/rfc9562.html#name-security-considerations",
+            "source": "9b29abf9-4ab0-4765-b253-1875cd9b441e",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 3
+    },
+    {
+      "cve_id": "CVE-2026-2564",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-02-16",
+          "previous_max": null,
+          "current_max": 9.2
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-02-16",
+        "description": "A security flaw has been discovered in Intelbras VIP 3260 Z IA 2.840.00IB005.0.T. Affected by this vulnerability is an unknown functionality of the file /OutsideCmd. The manipulation results in weak password recovery. It is possible to launch the attack remotely. Attacks of this nature are highly complex. The exploitation appears to be difficult. It is recommended to upgrade the affected component.",
+        "title": "A security flaw has been discovered in Intelbras VIP 3260 Z IA 2.840.00IB005.0.T.",
+        "cvss_max": 9.2
+      },
+      "cve": {
+        "id": "CVE-2026-2564",
+        "sourceIdentifier": "cna@vuldb.com",
+        "published": "2026-02-16T17:18:09.150",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A security flaw has been discovered in Intelbras VIP 3260 Z IA 2.840.00IB005.0.T. Affected by this vulnerability is an unknown functionality of the file /OutsideCmd. The manipulation results in weak password recovery. It is possible to launch the attack remotely. Attacks of this nature are highly complex. The exploitation appears to be difficult. It is recommended to upgrade the affected component."
+          },
+          {
+            "lang": "es",
+            "value": "Una falla de seguridad ha sido descubierta en Intelbras VIP 3260 Z IA 2.840.00IB005.0.T. Afectada por esta vulnerabilidad es una funcionalidad desconocida del archivo /OutsideCmd. La manipulación resulta en recuperación de contraseña débil. Es posible lanzar el ataque remotamente. Ataques de esta naturaleza son altamente complejos. La explotación parece ser difícil. Se recomienda actualizar el componente afectado."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV2": [
+            {
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:H/Au:N/C:C/I:C/A:C",
+                "baseScore": 7.6,
+                "baseSeverity": "HIGH"
+              },
+              "source": "cna@vuldb.com",
+              "type": "Secondary",
+              "baseSeverity": "HIGH",
+              "exploitabilityScore": 4.9,
+              "impactScore": 10.0
+            }
+          ],
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 8.1,
+                "baseSeverity": "HIGH"
+              },
+              "source": "cna@vuldb.com",
+              "type": "Primary",
+              "exploitabilityScore": 2.2,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:H/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.2,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "cna@vuldb.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-640"
+              }
+            ],
+            "source": "cna@vuldb.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://vuldb.com/?ctiid.346171",
+            "source": "cna@vuldb.com"
+          },
+          {
+            "url": "https://vuldb.com/?id.346171",
+            "source": "cna@vuldb.com"
+          },
+          {
+            "url": "https://vuldb.com/?submit.741776",
+            "source": "cna@vuldb.com"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 4
+    }
+  ],
+  "source": "https://www.cvelogic.com/threat-intelligence/2026-02-16"
+}

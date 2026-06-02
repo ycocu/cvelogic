@@ -1,0 +1,1289 @@
+{
+  "schema_version": "2.2",
+  "generated_at": "2026-06-02T07:33:26Z",
+  "day": "2025-09-19",
+  "window": {
+    "utc_start": "2025-09-19",
+    "utc_end": "2025-09-19",
+    "days": 1
+  },
+  "summary": {
+    "brief": "10 new critical disclosures — review patch status on exposed services.",
+    "bullets": [
+      "10 new critical disclosures — review patch status on exposed services."
+    ],
+    "counts": {
+      "cves": 10,
+      "kev": 0,
+      "exploit": 0,
+      "epss": 0,
+      "cvss": 10,
+      "patch": 0
+    }
+  },
+  "cves": [
+    {
+      "cve_id": "CVE-2025-34205",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-09-19",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-09-19",
+        "description": "Vasion Print (formerly PrinterLogic) Virtual Appliance Host versions prior to 22.0.843 and Application prior to 20.0.1923 (VA and SaaS deployments) contains dangerous PHP dead code present in multiple Docker-hosted PHP instances. A script named /var/www/app/resetroot.php (found in several containers) lacks authentication checks and, when executed, performs a SQL update that sets the database administrator username to 'root' and its password hash to the SHA-512 hash of the string 'password'. Separately, commented-out code in /var/www/app/lib/common/oses.php would unserialize session data (unserialize($_SESSION['osdata']))—a pattern that can enable remote code execution if re-enabled or reached with attacker-controlled serialized data. An attacker able to reach the resetroot.php endpoint can trivially reset the MySQL root password and obtain full database control; combined with deserialization issues this can lead to full remote code execution and system compromise. This vulnerability has been identified by the vendor as: V-2023-003 — Dead / Insecure PHP Code.",
+        "title": "vasion virtual_appliance_application SQL injection",
+        "vendor": "vasion",
+        "product": "virtual_appliance_application",
+        "attack_type": "SQL injection",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-34205",
+        "sourceIdentifier": "disclosure@vulncheck.com",
+        "published": "2025-09-19T19:15:41.470",
+        "lastModified": "2025-10-02T22:15:37.383",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Vasion Print (formerly PrinterLogic) Virtual Appliance Host versions prior to 22.0.843 and Application prior to 20.0.1923 (VA and SaaS deployments) contains dangerous PHP dead code present in multiple Docker-hosted PHP instances. A script named /var/www/app/resetroot.php (found in several containers) lacks authentication checks and, when executed, performs a SQL update that sets the database administrator username to 'root' and its password hash to the SHA-512 hash of the string 'password'. Separately, commented-out code in /var/www/app/lib/common/oses.php would unserialize session data (unserialize($_SESSION['osdata']))—a pattern that can enable remote code execution if re-enabled or reached with attacker-controlled serialized data. An attacker able to reach the resetroot.php endpoint can trivially reset the MySQL root password and obtain full database control; combined with deserialization issues this can lead to full remote code execution and system compromise. This vulnerability has been identified by the vendor as: V-2023-003 — Dead / Insecure PHP Code."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-561"
+              }
+            ],
+            "source": "disclosure@vulncheck.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vasion:virtual_appliance_application:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "396ACE24-02E9-419D-96C5-D2EE7AE6A963",
+                    "versionEndExcluding": "20.0.1923"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vasion:virtual_appliance_host:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "00B835B0-D67C-443E-A8D0-740F031A99DC",
+                    "versionEndExcluding": "22.0.843"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://help.printerlogic.com/saas/Print/Security/Security-Bulletins.htm",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://help.printerlogic.com/va/Print/Security/Security-Bulletins.htm",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://pierrekim.github.io/blog/2025-04-08-vasion-printerlogic-83-vulnerabilities.html#va-dead-code",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.vulncheck.com/advisories/vasion-print-printerlogic-dangerous-php-dead-code-enables-rce",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 1
+    },
+    {
+      "cve_id": "CVE-2025-34192",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-09-19",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-09-19",
+        "description": "Vasion Print (formerly PrinterLogic) Virtual Appliance Host versions prior to 22.0.893 and Application versions prior to 20.0.2140 (macOS/Linux client deployments) are built against OpenSSL 1.0.2h-fips (released May 2016), which has been end-of-life since 2019 and is no longer supported by the OpenSSL project. Continued use of this outdated cryptographic library exposes deployments to known vulnerabilities that are no longer patched, weakening the overall security posture. Affected daemons may emit deprecation warnings and rely on cryptographic components with unresolved security flaws, potentially enabling attackers to exploit weaknesses in TLS/SSL processing or cryptographic operations. This vulnerability has been identified by the vendor as: V-2023-021 — Out-of-Date OpenSSL Library.",
+        "title": "vasion virtual_appliance_application",
+        "vendor": "vasion",
+        "product": "virtual_appliance_application",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-34192",
+        "sourceIdentifier": "disclosure@vulncheck.com",
+        "published": "2025-09-19T19:15:39.663",
+        "lastModified": "2025-10-02T22:15:36.300",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Vasion Print (formerly PrinterLogic) Virtual Appliance Host versions prior to 22.0.893 and Application versions prior to 20.0.2140 (macOS/Linux client deployments) are built against OpenSSL 1.0.2h-fips (released May 2016), which has been end-of-life since 2019 and is no longer supported by the OpenSSL project. Continued use of this outdated cryptographic library exposes deployments to known vulnerabilities that are no longer patched, weakening the overall security posture. Affected daemons may emit deprecation warnings and rely on cryptographic components with unresolved security flaws, potentially enabling attackers to exploit weaknesses in TLS/SSL processing or cryptographic operations. This vulnerability has been identified by the vendor as: V-2023-021 — Out-of-Date OpenSSL Library."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-1104"
+              }
+            ],
+            "source": "disclosure@vulncheck.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vasion:virtual_appliance_application:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "8FC9ACA5-4F78-4BB3-BE31-9F61115B6243",
+                    "versionEndExcluding": "20.0.2140"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vasion:virtual_appliance_host:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "22B2EC36-CC37-4128-97F1-5BC1018B35AD",
+                    "versionEndExcluding": "22.0.893"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:macos:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "387021A0-AF36-463C-A605-32EA7DAC172E"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "703AF700-7A70-47E2-BC3A-7FD03B3CA9C1"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://help.printerlogic.com/saas/Print/Security/Security-Bulletins.htm",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://help.printerlogic.com/va/Print/Security/Security-Bulletins.htm",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://pierrekim.github.io/blog/2025-04-08-vasion-printerlogic-83-vulnerabilities.html#mac-outdated-openssl",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.vulncheck.com/advisories/vasion-print-printerlogic-usage-of-outdated-and-unsupported-openssl-version",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 2
+    },
+    {
+      "cve_id": "CVE-2025-34198",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-09-19",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-09-19",
+        "description": "Vasion Print (formerly PrinterLogic) Virtual Appliance Host versions prior to 22.0.951 and Application prior to 20.0.2368 (VA and SaaS deployments) contain shared, hardcoded SSH host private keys in the appliance image. The same private host keys (RSA, ECDSA, and ED25519) are present across installations, rather than being uniquely generated per appliance. An attacker who obtains these private keys (for example from one compromised appliance image or another installation) can impersonate the appliance, decrypt or intercept SSH connections to appliances that use the same keys, and perform man-in-the-middle or impersonation attacks against administrative SSH sessions. This vulnerability has been identified by the vendor as: V-2024-011 — Hardcoded SSH Host Key.",
+        "title": "vasion virtual_appliance_application",
+        "vendor": "vasion",
+        "product": "virtual_appliance_application",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-34198",
+        "sourceIdentifier": "disclosure@vulncheck.com",
+        "published": "2025-09-19T19:15:40.420",
+        "lastModified": "2025-10-02T22:15:36.847",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Vasion Print (formerly PrinterLogic) Virtual Appliance Host versions prior to 22.0.951 and Application prior to 20.0.2368 (VA and SaaS deployments) contain shared, hardcoded SSH host private keys in the appliance image. The same private host keys (RSA, ECDSA, and ED25519) are present across installations, rather than being uniquely generated per appliance. An attacker who obtains these private keys (for example from one compromised appliance image or another installation) can impersonate the appliance, decrypt or intercept SSH connections to appliances that use the same keys, and perform man-in-the-middle or impersonation attacks against administrative SSH sessions. This vulnerability has been identified by the vendor as: V-2024-011 — Hardcoded SSH Host Key."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-798"
+              }
+            ],
+            "source": "disclosure@vulncheck.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vasion:virtual_appliance_application:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "A3A95236-3A67-4CA7-9E5D-3F0251842924",
+                    "versionEndExcluding": "20.0.2368"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vasion:virtual_appliance_host:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "6EE3C3C7-C89A-417D-8389-491AF9A76E20",
+                    "versionEndExcluding": "22.0.951"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://help.printerlogic.com/saas/Print/Security/Security-Bulletins.htm",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://help.printerlogic.com/va/Print/Security/Security-Bulletins.htm",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://pierrekim.github.io/blog/2025-04-08-vasion-printerlogic-83-vulnerabilities.html#va-hardcoded-ssh-keys",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.vulncheck.com/advisories/vasion-print-printerlogic-shared-hardcoded-ssh-host-private-keys-in-appliance-image",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 3
+    },
+    {
+      "cve_id": "CVE-2022-4980",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-09-19",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-09-19",
+        "description": "General Bytes Crypto Application Server (CAS) beginning with version 20201208 prior to 20220531.38 (backport) and 20220725.22 (mainline) contains an authentication bypass in the admin web interface. An unauthenticated attacker could invoke the same URL used by the product's default-installation / first-admin creation page and create a new administrative account remotely. By gaining admin privileges, the attacker can change the ATM configuration resulting in redirected funds. Public vendor advisories and multiple independent writeups describe the vulnerability as a call to the page used for initial/default installation / first administration user creation; General Bytes has not publicly published the exact endpoint/parameter name. The issue was actively exploited in the wild against cloud-hosted and standalone CAS deployments (scanning exposed CAS instances on ports 7777/443), and publicly acknowledged by the General Bytes in September 2022.",
+        "title": "General Bytes Crypto Application Server (CAS) beginning with version 20201208 prior to 20220531.38 (backport) and 20220725.22 (mainline)...",
+        "attack_type": "Auth Bypass",
+        "cvss_max": 9.3
+      },
+      "cve": {
+        "id": "CVE-2022-4980",
+        "sourceIdentifier": "disclosure@vulncheck.com",
+        "published": "2025-09-19T19:15:37.983",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "General Bytes Crypto Application Server (CAS) beginning with version 20201208 prior to 20220531.38 (backport) and 20220725.22 (mainline) contains an authentication bypass in the admin web interface. An unauthenticated attacker could invoke the same URL used by the product's default-installation / first-admin creation page and create a new administrative account remotely. By gaining admin privileges, the attacker can change the ATM configuration resulting in redirected funds. Public vendor advisories and multiple independent writeups describe the vulnerability as a call to the page used for initial/default installation / first administration user creation; General Bytes has not publicly published the exact endpoint/parameter name. The issue was actively exploited in the wild against cloud-hosted and standalone CAS deployments (scanning exposed CAS instances on ports 7777/443), and publicly acknowledged by the General Bytes in September 2022."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-306"
+              }
+            ],
+            "source": "disclosure@vulncheck.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://generalbytes.atlassian.net/wiki/spaces/ESD/pages/2785509377/Security%2BIncident%2B",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://news.sophos.com/en-us/2022/08/23/bitcoin-atms-leeched-by-attackers-who-created-fake-admin-accounts/",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://thehackernews.com/2022/08/hackers-stole-crypto-from-bitcoin-atms.html",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://www.halborn.com/blog/post/explained-the-general-bytes-bitcoin-atm-hack-august-2022",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://www.incibe.es/en/incibe-cert/publications/cybersecurity-highlights/0day-vulnerability-exploited-general-bytes",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://www.vulncheck.com/advisories/general-bytes-cas-unauth-creation-of-admin-account-via-default-installation-first-admin-page",
+            "source": "disclosure@vulncheck.com"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 4
+    },
+    {
+      "cve_id": "CVE-2024-13990",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-09-19",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-09-19",
+        "description": "MicroWorld eScan AV's update mechanism failed to ensure authenticity and integrity of updates: update packages were delivered and accepted without robust cryptographic verification. As a result, an on-path attacker could perform a man-in-the-middle (MitM) attack and substitute malicious update payloads for legitimate ones. The eScan AV client accepted these substituted packages and executed or loaded their components (including sideloaded DLLs and Java/installer payloads), enabling remote code execution on affected systems. MicroWorld eScan confirmed remediation of the update mechanism on 2023-07-31 but versioning details are unavailable. NOTE: MicroWorld eScan disputes the characterization in third-party reports, stating the issue relates to 2018–2019 and that controls were implemented then.",
+        "title": "MicroWorld eScan AV's update mechanism failed to ensure authenticity and integrity of updates: update packages were delivered and accepte...",
+        "cvss_max": 9.3
+      },
+      "cve": {
+        "id": "CVE-2024-13990",
+        "sourceIdentifier": "disclosure@vulncheck.com",
+        "published": "2025-09-19T19:15:38.170",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "MicroWorld eScan AV's update mechanism failed to ensure authenticity and integrity of updates: update packages were delivered and accepted without robust cryptographic verification. As a result, an on-path attacker could perform a man-in-the-middle (MitM) attack and substitute malicious update payloads for legitimate ones. The eScan AV client accepted these substituted packages and executed or loaded their components (including sideloaded DLLs and Java/installer payloads), enabling remote code execution on affected systems. MicroWorld eScan confirmed remediation of the update mechanism on 2023-07-31 but versioning details are unavailable. NOTE: MicroWorld eScan disputes the characterization in third-party reports, stating the issue relates to 2018–2019 and that controls were implemented then."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-295"
+              },
+              {
+                "lang": "en",
+                "value": "CWE-347"
+              }
+            ],
+            "source": "disclosure@vulncheck.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://arstechnica.com/security/2024/04/hackers-infect-users-of-antivirus-service-that-delivered-updates-over-http/",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://blog.avast.com/leading-the-charge-against-guptiminer",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://securityaffairs.com/162228/breaking-news/escan-antivirus-mitm-attack.html",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://thehackernews.com/2024/04/escan-antivirus-update-mechanism.html",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://www.bleepingcomputer.com/news/security/hackers-hijack-antivirus-updates-to-drop-guptiminer-malware/",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://www.escanav.com/en/about-us/eScan-update-advisory.asp",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://www.gendigital.com/blog/insights/research/guptiminer-hijacking-antivirus-updates-for-distributing-backdoors-and-casual-mining",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://www.vulncheck.com/advisories/microworld-escan-av-insecure-update-mechanism-allows-mitm-replacement-of-updates",
+            "source": "disclosure@vulncheck.com"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 5
+    },
+    {
+      "cve_id": "CVE-2025-34199",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-09-19",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-09-19",
+        "description": "Vasion Print (formerly PrinterLogic) Virtual Appliance Host versions prior to 22.0.1049 and Application versions prior to 20.0.2786 (VA and SaaS deployments) contain insecure defaults and code patterns that disable TLS/SSL certificate verification for communications to printers and internal microservices. In multiple places, the application sets libcurl/PHP transport options such that CURLOPT_SSL_VERIFYHOST and CURLOPT_SSL_VERIFYPEER are effectively disabled, and environment variables (for example API_*_VERIFYSSL=false) are used to turn off verification for gateway and microservice endpoints. As a result, the client accepts TLS connections without validating server certificates (and, in some cases, uses clear-text HTTP), permitting on-path attackers to perform man-in-the-middle (MitM) attacks. An attacker able to intercept network traffic between the product and printers or microservices can eavesdrop on and modify sensitive data (including print jobs, configuration, and authentication tokens), inject malicious payloads, or disrupt service. This vulnerability has been identified by the vendor as: V-2024-024 — Insecure Communication to Printers & Microservices.",
+        "title": "vasion virtual_appliance_application",
+        "vendor": "vasion",
+        "product": "virtual_appliance_application",
+        "cvss_max": 9.3
+      },
+      "cve": {
+        "id": "CVE-2025-34199",
+        "sourceIdentifier": "disclosure@vulncheck.com",
+        "published": "2025-09-19T19:15:40.580",
+        "lastModified": "2025-11-25T15:15:51.467",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Vasion Print (formerly PrinterLogic) Virtual Appliance Host versions prior to 22.0.1049 and Application versions prior to 20.0.2786 (VA and SaaS deployments) contain insecure defaults and code patterns that disable TLS/SSL certificate verification for communications to printers and internal microservices. In multiple places, the application sets libcurl/PHP transport options such that CURLOPT_SSL_VERIFYHOST and CURLOPT_SSL_VERIFYPEER are effectively disabled, and environment variables (for example API_*_VERIFYSSL=false) are used to turn off verification for gateway and microservice endpoints. As a result, the client accepts TLS connections without validating server certificates (and, in some cases, uses clear-text HTTP), permitting on-path attackers to perform man-in-the-middle (MitM) attacks. An attacker able to intercept network traffic between the product and printers or microservices can eavesdrop on and modify sensitive data (including print jobs, configuration, and authentication tokens), inject malicious payloads, or disrupt service. This vulnerability has been identified by the vendor as: V-2024-024 — Insecure Communication to Printers & Microservices."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 8.1,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 2.2,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-295"
+              }
+            ],
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-295"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vasion:virtual_appliance_application:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "6218C3CF-F2F8-4F59-A73B-9B44D849FA88",
+                    "versionEndExcluding": "20.0.2786"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vasion:virtual_appliance_host:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "B358DBD3-900F-493B-BA70-242AB668C665",
+                    "versionEndExcluding": "22.0.1049"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://help.printerlogic.com/saas/Print/Security/Security-Bulletins.htm",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://help.printerlogic.com/va/Print/Security/Security-Bulletins.htm",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://pierrekim.github.io/blog/2025-04-08-vasion-printerlogic-83-vulnerabilities.html#va-insecure-communications",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.vulncheck.com/advisories/vasion-print-printerlogic-insecure-ssl-verification-allows-mitm-attacks",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 6
+    },
+    {
+      "cve_id": "CVE-2025-34203",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-09-19",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-09-19",
+        "description": "Vasion Print (formerly PrinterLogic) Virtual Appliance Host versions prior to 22.0.1002 and Application versions prior to 20.0.2614 (VA and SaaS deployments) contain multiple Docker containers that include outdated, end-of-life, unsupported, or otherwise vulnerable third-party components (examples: Nginx 1.17.x, OpenSSL 1.1.1d, various EOL Alpine/Debian/Ubuntu base images, and EOL Laravel/PHP libraries). These components are present across many container images and increase the product's attack surface, enabling exploitation chains when leveraged by an attacker. Multiple distinct EOL versions and unpatched libraries across containers; Nginx binaries date from 2019 in several images and Laravel versions observed include EOL releases (for example Laravel 5.5.x, 5.7.x, 5.8.x). This vulnerability has been identified by the vendor as: V-2024-014 — Outdated Dependencies.",
+        "title": "vasion virtual_appliance_application",
+        "vendor": "vasion",
+        "product": "virtual_appliance_application",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-34203",
+        "sourceIdentifier": "disclosure@vulncheck.com",
+        "published": "2025-09-19T19:15:41.187",
+        "lastModified": "2025-10-02T22:15:37.257",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Vasion Print (formerly PrinterLogic) Virtual Appliance Host versions prior to 22.0.1002 and Application versions prior to 20.0.2614 (VA and SaaS deployments) contain multiple Docker containers that include outdated, end-of-life, unsupported, or otherwise vulnerable third-party components (examples: Nginx 1.17.x, OpenSSL 1.1.1d, various EOL Alpine/Debian/Ubuntu base images, and EOL Laravel/PHP libraries). These components are present across many container images and increase the product's attack surface, enabling exploitation chains when leveraged by an attacker. Multiple distinct EOL versions and unpatched libraries across containers; Nginx binaries date from 2019 in several images and Laravel versions observed include EOL releases (for example Laravel 5.5.x, 5.7.x, 5.8.x). This vulnerability has been identified by the vendor as: V-2024-014 — Outdated Dependencies."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "NVD-CWE-noinfo"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vasion:virtual_appliance_application:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "C6EE2B20-48F8-4FE7-91E0-52422CE8973C",
+                    "versionEndExcluding": "20.0.2614"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vasion:virtual_appliance_host:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "AFCD8913-3F99-4CF3-B18D-D95750B555DF",
+                    "versionEndExcluding": "22.0.1002"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://help.printerlogic.com/saas/Print/Security/Security-Bulletins.htm",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://help.printerlogic.com/va/Print/Security/Security-Bulletins.htm",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://pierrekim.github.io/blog/2025-04-08-vasion-printerlogic-83-vulnerabilities.html#va-outdated-components",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.vulncheck.com/advisories/vasion-print-printerlogic-use-of-outdated-eol-vulnerable-third-party-components",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 7
+    },
+    {
+      "cve_id": "CVE-2025-34206",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-09-19",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-09-19",
+        "description": "Vasion Print (formerly PrinterLogic) Virtual Appliance Host and Application (VA and SaaS deployments) mount host configuration and secret material under /var/www/efs_storage into many Docker containers with overly-permissive filesystem permissions. Files such as secrets.env, GPG-encrypted blobs in .secrets, MySQL client keys, and application session files are accessible from multiple containers. An attacker who controls or reaches any container can read or modify these artifacts, leading to credential theft, RCE via Laravel APP_KEY, Portainer takeover, and full compromise.",
+        "title": "vasion virtual_appliance_application",
+        "vendor": "vasion",
+        "product": "virtual_appliance_application",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-34206",
+        "sourceIdentifier": "disclosure@vulncheck.com",
+        "published": "2025-09-19T19:15:41.623",
+        "lastModified": "2025-09-24T18:46:15.250",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Vasion Print (formerly PrinterLogic) Virtual Appliance Host and Application (VA and SaaS deployments) mount host configuration and secret material under /var/www/efs_storage into many Docker containers with overly-permissive filesystem permissions. Files such as secrets.env, GPG-encrypted blobs in .secrets, MySQL client keys, and application session files are accessible from multiple containers. An attacker who controls or reaches any container can read or modify these artifacts, leading to credential theft, RCE via Laravel APP_KEY, Portainer takeover, and full compromise."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-312"
+              },
+              {
+                "lang": "en",
+                "value": "CWE-732"
+              }
+            ],
+            "source": "disclosure@vulncheck.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vasion:virtual_appliance_application:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "452CABC4-2EC6-416A-B0EB-4CA8194AB823"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vasion:virtual_appliance_host:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "EC5493A1-4AB1-43DD-A1F1-A99D9439B884"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://help.printerlogic.com/saas/Print/Security/Security-Bulletins.htm",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://help.printerlogic.com/va/Print/Security/Security-Bulletins.htm",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://pierrekim.github.io/blog/2025-04-08-vasion-printerlogic-83-vulnerabilities.html#va-insecure-security-architecture",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.vulncheck.com/advisories/vasion-print-printerlogic-insecure-shared-storage-permissions",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 8
+    },
+    {
+      "cve_id": "CVE-2025-48703",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-09-19",
+          "previous_max": null,
+          "current_max": 9.0
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-09-19",
+        "description": "CWP (aka Control Web Panel or CentOS Web Panel) before 0.9.8.1205 allows unauthenticated remote code execution via shell metacharacters in the t_total parameter in a filemanager changePerm request. A valid non-root username must be known.",
+        "title": "CWP Control Web Panel OS Command Injection Vulnerability",
+        "vendor": "control-webpanel",
+        "product": "webpanel",
+        "attack_type": "RCE",
+        "cvss_max": 9.0
+      },
+      "cve": {
+        "id": "CVE-2025-48703",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2025-09-19T18:15:36.620",
+        "lastModified": "2025-11-05T14:07:33.610",
+        "vulnStatus": "Analyzed",
+        "cisaExploitAdd": "2025-11-04",
+        "cisaActionDue": "2025-11-25",
+        "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+        "cisaVulnerabilityName": "CWP Control Web Panel OS Command Injection Vulnerability",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "CWP (aka Control Web Panel or CentOS Web Panel) before 0.9.8.1205 allows unauthenticated remote code execution via shell metacharacters in the t_total parameter in a filemanager changePerm request. A valid non-root username must be known."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:H/A:H",
+                "baseScore": 9.0,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "cve@mitre.org",
+              "type": "Secondary",
+              "exploitabilityScore": 2.2,
+              "impactScore": 6.0
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-78"
+              }
+            ],
+            "source": "cve@mitre.org"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:control-webpanel:webpanel:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "345C6B1A-2B79-4105-A61C-B65D0AA4A33B",
+                    "versionEndExcluding": "0.9.8.1205"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://fenrisk.com/rce-centos-webpanel",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://control-webpanel.com/changelog",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Release Notes"
+            ]
+          },
+          {
+            "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2025-48703",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "US Government Resource"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 9
+    },
+    {
+      "cve_id": "CVE-2025-57644",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-09-19",
+          "previous_max": null,
+          "current_max": 9.1
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-09-19",
+        "description": "Accela Automation Platform 22.2.3.0.230103 contains multiple vulnerabilities in the Test Script feature. An authenticated administrative user can execute arbitrary Java code on the server, resulting in remote code execution. In addition, improper input validation allows for arbitrary file write and server-side request forgery (SSRF), enabling interaction with internal or external systems. Successful exploitation can lead to full server compromise, unauthorized access to sensitive data, and further network exploitation.",
+        "title": "accela automation_platform RCE",
+        "vendor": "accela",
+        "product": "automation_platform",
+        "attack_type": "RCE",
+        "cvss_max": 9.1
+      },
+      "cve": {
+        "id": "CVE-2025-57644",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2025-09-19T16:15:46.220",
+        "lastModified": "2025-10-17T14:21:55.657",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Accela Automation Platform 22.2.3.0.230103 contains multiple vulnerabilities in the Test Script feature. An authenticated administrative user can execute arbitrary Java code on the server, resulting in remote code execution. In addition, improper input validation allows for arbitrary file write and server-side request forgery (SSRF), enabling interaction with internal or external systems. Successful exploitation can lead to full server compromise, unauthorized access to sensitive data, and further network exploitation."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
+                "baseScore": 9.1,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 2.3,
+              "impactScore": 6.0
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-20"
+              },
+              {
+                "lang": "en",
+                "value": "CWE-22"
+              },
+              {
+                "lang": "en",
+                "value": "CWE-94"
+              },
+              {
+                "lang": "en",
+                "value": "CWE-918"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:accela:automation_platform:22.2.3.0.230103:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "17F0A573-7E3E-44B1-8E3E-8F5BC1664ECE"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://medium.com/@anvarkh/cve-2025-57644-remote-code-execution-ssrf-in-accela-eedc6bc4adfb",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Mitigation",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.accela.com",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Product"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 10
+    }
+  ],
+  "source": "https://www.cvelogic.com/threat-intelligence/2025-09-19"
+}

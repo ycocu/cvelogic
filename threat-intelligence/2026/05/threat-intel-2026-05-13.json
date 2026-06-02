@@ -1,0 +1,1679 @@
+{
+  "schema_version": "2.2",
+  "generated_at": "2026-06-02T07:04:00Z",
+  "day": "2026-05-13",
+  "window": {
+    "utc_start": "2026-05-13",
+    "utc_end": "2026-05-13",
+    "days": 1
+  },
+  "summary": {
+    "brief": "Nicolargo Glances: public exploit or PoC linked · Sudo — exploitation likelihood rose sharply (EPSS 47% → 57% · rising (+10%)). · 10 new critical disclosures — review patch status on exposed services.",
+    "bullets": [
+      "Nicolargo Glances: public exploit or PoC linked",
+      "Sudo — exploitation likelihood rose sharply (EPSS 47% → 57% · rising (+10%)).",
+      "10 new critical disclosures — review patch status on exposed services."
+    ],
+    "counts": {
+      "cves": 15,
+      "kev": 0,
+      "exploit": 4,
+      "epss": 1,
+      "cvss": 10,
+      "patch": 0
+    }
+  },
+  "cves": [
+    {
+      "cve_id": "CVE-2025-58434",
+      "signal_types": [
+        "EXP"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": {
+          "ref_published": "2026-05-13"
+        },
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-09-12",
+        "description": "Flowise is a drag & drop user interface to build a customized large language model flow. In version 3.0.5 and earlier, the `forgot-password` endpoint in Flowise returns sensitive information including a valid password reset `tempToken` without authentication or verification. This enables any attacker to generate a reset token for arbitrary users and directly reset their password, leading to a complete account takeover (ATO). This vulnerability applies to both the cloud service (`cloud.flowiseai.com`) and self-hosted/local Flowise deployments that expose the same API. Commit 9e178d68873eb876073846433a596590d3d9c863 in version 3.0.6 secures password reset endpoints. Several recommended remediation steps are available. Do not return reset tokens or sensitive account details in API responses. Tokens must only be delivered securely via the registered email channel. Ensure `forgot-password` responds with a generic success message regardless of input, to avoid user enumeration. Require strong validation of the `tempToken` (e.g., single-use, short expiry, tied to request origin, validated against email delivery). Apply the same fixes to both cloud and self-hosted/local deployments. Log and monitor password reset requests for suspicious activity. Consider multi-factor verification for sensitive accounts.",
+        "title": "flowiseai flowise",
+        "vendor": "flowiseai",
+        "product": "flowise",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-58434",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2025-09-12T18:15:34.847",
+        "lastModified": "2025-09-20T02:54:59.667",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Flowise is a drag & drop user interface to build a customized large language model flow. In version 3.0.5 and earlier, the `forgot-password` endpoint in Flowise returns sensitive information including a valid password reset `tempToken` without authentication or verification. This enables any attacker to generate a reset token for arbitrary users and directly reset their password, leading to a complete account takeover (ATO). This vulnerability applies to both the cloud service (`cloud.flowiseai.com`) and self-hosted/local Flowise deployments that expose the same API. Commit 9e178d68873eb876073846433a596590d3d9c863 in version 3.0.6 secures password reset endpoints. Several recommended remediation steps are available. Do not return reset tokens or sensitive account details in API responses. Tokens must only be delivered securely via the registered email channel. Ensure `forgot-password` responds with a generic success message regardless of input, to avoid user enumeration. Require strong validation of the `tempToken` (e.g., single-use, short expiry, tied to request origin, validated against email delivery). Apply the same fixes to both cloud and self-hosted/local deployments. Log and monitor password reset requests for suspicious activity. Consider multi-factor verification for sensitive accounts."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-306"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:flowiseai:flowise:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "5DE0B76C-5FFA-40E2-87E1-5C520E387AF0",
+                    "versionEndExcluding": "3.0.6"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/FlowiseAI/Flowise/commit/9e178d68873eb876073846433a596590d3d9c863",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://github.com/FlowiseAI/Flowise/security/advisories/GHSA-wgpv-6j63-x5ph",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Exploit",
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 78,
+      "rank": 1
+    },
+    {
+      "cve_id": "CVE-2026-21876",
+      "signal_types": [
+        "EXP"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": {
+          "ref_published": "2026-05-13"
+        },
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-01-08",
+        "description": "The OWASP core rule set (CRS) is a set of generic attack detection rules for use with compatible web application firewalls. Prior to versions 4.22.0 and 3.3.8, the current rule 922110 has a bug when processing multipart requests with multiple parts. When the first rule in a chain iterates over a collection (like `MULTIPART_PART_HEADERS`), the capture variables (`TX:0`, `TX:1`) get overwritten with each iteration. Only the last captured value is available to the chained rule, which means malicious charsets in earlier parts can be missed if a later part has a legitimate charset. Versions 4.22.0 and 3.3.8 patch the issue.",
+        "title": "owasp owasp_modsecurity_core_rule_set",
+        "vendor": "owasp",
+        "product": "owasp_modsecurity_core_rule_set",
+        "cvss_max": 9.3
+      },
+      "cve": {
+        "id": "CVE-2026-21876",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2026-01-08T14:15:57.087",
+        "lastModified": "2026-04-09T16:16:26.437",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The OWASP core rule set (CRS) is a set of generic attack detection rules for use with compatible web application firewalls. Prior to versions 4.22.0 and 3.3.8, the current rule 922110 has a bug when processing multipart requests with multiple parts. When the first rule in a chain iterates over a collection (like `MULTIPART_PART_HEADERS`), the capture variables (`TX:0`, `TX:1`) get overwritten with each iteration. Only the last captured value is available to the chained rule, which means malicious charsets in earlier parts can be missed if a later part has a legitimate charset. Versions 4.22.0 and 3.3.8 patch the issue."
+          },
+          {
+            "lang": "es",
+            "value": "El conjunto de reglas base de OWASP (CRS) es un conjunto de reglas genéricas de detección de ataques para usar con firewalls de aplicaciones web compatibles. Antes de las versiones 4.22.0 y 3.3.8, la regla actual 922110 tiene un error al procesar solicitudes multipart con múltiples partes. Cuando la primera regla en una cadena itera sobre una colección (como 'MULTIPART_PART_HEADERS'), las variables de captura ('TX:0', 'TX:1') se sobrescriben con cada iteración. Solo el último valor capturado está disponible para la regla encadenada, lo que significa que los conjuntos de caracteres maliciosos en partes anteriores pueden pasarse por alto si una parte posterior tiene un conjunto de caracteres legítimo. Las versiones 4.22.0 y 3.3.8 parchean el problema."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:L/A:N",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 4.7
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
+                "baseScore": 5.3,
+                "baseSeverity": "MEDIUM"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 1.4
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-794"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:owasp:owasp_modsecurity_core_rule_set:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "85E31C8A-3287-4CD7-A3C8-29FB164CB229",
+                    "versionEndExcluding": "3.3.8"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:owasp:owasp_modsecurity_core_rule_set:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "1FCBECBB-D90D-4883-81FF-F5F43C7A926C",
+                    "versionStartIncluding": "4.0.0",
+                    "versionEndExcluding": "4.22.0"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/coreruleset/coreruleset/commit/80d80473abf71bd49bf6d3c1ab221e3c74e4eb83",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://github.com/coreruleset/coreruleset/commit/9917985de09a6cf38b3261faf9105e909d67a7d6",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://github.com/coreruleset/coreruleset/releases/tag/v3.3.8",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Product",
+              "Release Notes"
+            ]
+          },
+          {
+            "url": "https://github.com/coreruleset/coreruleset/releases/tag/v4.22.0",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Product",
+              "Release Notes"
+            ]
+          },
+          {
+            "url": "https://github.com/coreruleset/coreruleset/security/advisories/GHSA-36fv-25j3-r2c5",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Exploit",
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/daytriftnewgen/CVE-2026-21876",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ]
+      },
+      "risk_score": 78,
+      "rank": 2
+    },
+    {
+      "cve_id": "CVE-2025-32463",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 0.46965,
+            "score_date": "2026-05-08"
+          },
+          "current": {
+            "score": 0.57345,
+            "score_date": "2026-05-13"
+          },
+          "delta": 0.1038
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-06-30",
+        "description": "Sudo before 1.9.17p1 allows local users to obtain root access because /etc/nsswitch.conf from a user-controlled directory is used with the --chroot option.",
+        "title": "Sudo Inclusion of Functionality from Untrusted Control Sphere Vulnerability",
+        "vendor": "sudo_project",
+        "product": "sudo",
+        "cvss_max": 9.3
+      },
+      "cve": {
+        "id": "CVE-2025-32463",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2025-06-30T21:15:30.257",
+        "lastModified": "2025-11-05T19:26:48.393",
+        "vulnStatus": "Analyzed",
+        "cisaExploitAdd": "2025-09-29",
+        "cisaActionDue": "2025-10-20",
+        "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+        "cisaVulnerabilityName": "Sudo Inclusion of Functionality from Untrusted Control Sphere Vulnerability",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Sudo before 1.9.17p1 allows local users to obtain root access because /etc/nsswitch.conf from a user-controlled directory is used with the --chroot option."
+          },
+          {
+            "lang": "es",
+            "value": "Sudo anterior a 1.9.17p1 permite a los usuarios locales obtener acceso root porque /etc/nsswitch.conf desde un directorio controlado por el usuario se utiliza con la opción --chroot."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "cve@mitre.org",
+              "type": "Secondary",
+              "exploitabilityScore": 2.5,
+              "impactScore": 6.0
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 7.8,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 1.8,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-829"
+              }
+            ],
+            "source": "cve@mitre.org"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:sudo_project:sudo:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "91CD68ED-9A18-47B6-91E5-C20D2F69AB65",
+                    "versionStartIncluding": "1.9.14",
+                    "versionEndExcluding": "1.9.17"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:sudo_project:sudo:1.9.17:-:*:*:*:*:*:*",
+                    "matchCriteriaId": "B563C690-EE9A-437C-9410-54209F82F827"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:canonical:ubuntu_linux:22.04:*:*:*:lts:*:*:*",
+                    "matchCriteriaId": "359012F1-2C63-415A-88B8-6726A87830DE"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:canonical:ubuntu_linux:24.04:*:*:*:lts:*:*:*",
+                    "matchCriteriaId": "BF90B5A4-6E55-4369-B9D4-E7A061E797D2"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:canonical:ubuntu_linux:24.10:*:*:*:-:*:*:*",
+                    "matchCriteriaId": "418A8B25-A287-4218-A10E-F9345A8E2EB7"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:canonical:ubuntu_linux:25.04:*:*:*:-:*:*:*",
+                    "matchCriteriaId": "6B40C5AB-76D5-44E1-A571-B9A44522C6BE"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:debian:debian_linux:11.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "FA6FEEC2-9F11-4643-8827-749718254FED"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:debian:debian_linux:12.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "46D69DCC-AE4D-4EA5-861C-D60951444C6C"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:debian:debian_linux:13.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "204FC6CC-9DAC-45FB-8A9F-C9C8EDD29D54"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:opensuse:leap:15.6:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "78B4F1C7-A301-4C94-A41C-A51182B83677"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:redhat:enterprise_linux:10.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "D65C2163-CFC2-4ABB-8F4E-CB09CEBD006C"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:suse:linux_enterprise_desktop:15:sp6:*:*:*:*:*:*",
+                    "matchCriteriaId": "B83183BD-A440-4697-8DD8-8A478C428984"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:suse:linux_enterprise_desktop:15:sp7:*:*:*:*:*:*",
+                    "matchCriteriaId": "B4388826-A383-4FBA-819A-363EAF6183DE"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:suse:linux_enterprise_real_time:15.0:sp2:*:*:*:*:*:*",
+                    "matchCriteriaId": "4B0AC584-5E26-4ACE-BC19-9E69A302F238"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:suse:linux_enterprise_real_time:15.0:sp6:*:*:*:*:*:*",
+                    "matchCriteriaId": "E8772290-7B8F-4FF3-8114-0535E84E10F5"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:suse:linux_enterprise_real_time:15.0:sp7:*:*:*:*:*:*",
+                    "matchCriteriaId": "BF782A24-9E6B-4897-9402-37DBCA7A7332"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:suse:linux_enterprise_server_for_sap:12:sp6:*:*:*:*:*:*",
+                    "matchCriteriaId": "44807632-7775-4496-9217-5F5816943D29"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:suse:linux_enterprise_server_for_sap:12:sp7:*:*:*:*:*:*",
+                    "matchCriteriaId": "2F46E618-B5F5-4CA1-8023-8E9C3E1772A2"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://access.redhat.com/security/cve/cve-2025-32463",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://bugs.gentoo.org/show_bug.cgi?id=CVE-2025-32463",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Issue Tracking",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://explore.alas.aws.amazon.com/CVE-2025-32463.html",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://security-tracker.debian.org/tracker/CVE-2025-32463",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://ubuntu.com/security/notices/USN-7604-1",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.openwall.com/lists/oss-security/2025/06/30/3",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.secpod.com/blog/sudo-lpe-vulnerabilities-resolved-what-you-need-to-know-about-cve-2025-32462-and-cve-2025-32463/",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.stratascale.com/vulnerability-alert-CVE-2025-32463-sudo-chroot",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.sudo.ws/releases/changelog/",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Release Notes"
+            ]
+          },
+          {
+            "url": "https://www.sudo.ws/security/advisories/",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://www.sudo.ws/security/advisories/chroot_bug/",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://www.suse.com/security/cve/CVE-2025-32463.html",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.suse.com/support/update/announcement/2025/suse-su-202502177-1/",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.vicarius.io/vsociety/posts/cve-2025-32463-detect-sudo-vulnerability",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.vicarius.io/vsociety/posts/cve-2025-32463-mitigate-sudo-vulnerability",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Mitigation",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://iototsecnews.jp/2025/07/01/linux-sudo-chroot-vulnerability-enables-hackers-to-elevate-privileges-to-root/",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2025-32463",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "US Government Resource"
+            ]
+          }
+        ]
+      },
+      "risk_score": 82,
+      "rank": 3
+    },
+    {
+      "cve_id": "CVE-2025-27851",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-05-13",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-05-13",
+        "description": "The locally served web site on the Garmin WDU (v1 1.4.6 and v2 5.0) allows a cross-site origin WebSocket hijacking attack. Among other uses, the WDU utilizes WebSockets to control settings, including administrative settings. This allows a network attacker to take full control of a WDU. To initiate an exploit of this vulnerability, the victim must (1) be utilizing a web browser on a multihomed host that has local interfaces on the Garmin Marine Network as well as another network, and (2) access a malicious third party website created by the attacker.",
+        "title": "The locally served web site on the Garmin WDU (v1 1.4.6 and v2 5.0) allows a cross-site origin WebSocket hijacking attack.",
+        "cvss_max": 9.3
+      },
+      "cve": {
+        "id": "CVE-2025-27851",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2026-05-13T21:16:41.233",
+        "lastModified": "2026-05-14T17:06:08.693",
+        "vulnStatus": "Awaiting Analysis",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The locally served web site on the Garmin WDU (v1 1.4.6 and v2 5.0) allows a cross-site origin WebSocket hijacking attack. Among other uses, the WDU utilizes WebSockets to control settings, including administrative settings. This allows a network attacker to take full control of a WDU. To initiate an exploit of this vulnerability, the victim must (1) be utilizing a web browser on a multihomed host that has local interfaces on the Garmin Marine Network as well as another network, and (2) access a malicious third party website created by the attacker."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:N",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 5.8
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-352"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://garmin.com",
+            "source": "cve@mitre.org"
+          },
+          {
+            "url": "https://www8.garmin.com/support/ch.jsp?product=010-02642-00",
+            "source": "cve@mitre.org"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 4
+    },
+    {
+      "cve_id": "CVE-2026-0740",
+      "signal_types": [
+        "EXP"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": {
+          "ref_published": "2026-05-13"
+        },
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-04-07",
+        "description": "The Ninja Forms - File Uploads plugin for WordPress is vulnerable to arbitrary file uploads due to missing file type validation in the 'NF_FU_AJAX_Controllers_Uploads::handle_upload' function in all versions up to, and including, 3.3.26. This makes it possible for unauthenticated attackers to upload arbitrary files on the affected site's server which may make remote code execution possible. Note: The vulnerability was partially patched in version 3.3.25 and fully patched in version 3.3.27.",
+        "title": "The Ninja Forms - File Uploads plugin for WordPress is vulnerable to arbitrary file uploads due to missing file type validation in the 'N...",
+        "attack_type": "RCE",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2026-0740",
+        "sourceIdentifier": "security@wordfence.com",
+        "published": "2026-04-07T05:16:06.897",
+        "lastModified": "2026-04-27T19:04:22.650",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The Ninja Forms - File Uploads plugin for WordPress is vulnerable to arbitrary file uploads due to missing file type validation in the 'NF_FU_AJAX_Controllers_Uploads::handle_upload' function in all versions up to, and including, 3.3.26. This makes it possible for unauthenticated attackers to upload arbitrary files on the affected site's server which may make remote code execution possible. Note: The vulnerability was partially patched in version 3.3.25 and fully patched in version 3.3.27."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security@wordfence.com",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-434"
+              }
+            ],
+            "source": "security@wordfence.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://ninjaforms.com/extensions/file-uploads/",
+            "source": "security@wordfence.com"
+          },
+          {
+            "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/0b606ded-ab50-486a-9337-97ee9f452f12?source=cve",
+            "source": "security@wordfence.com"
+          }
+        ]
+      },
+      "risk_score": 78,
+      "rank": 5
+    },
+    {
+      "cve_id": "CVE-2026-33641",
+      "signal_types": [
+        "EXP"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": {
+          "ref_published": "2026-05-13"
+        },
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-04-02",
+        "description": "Glances is an open-source system cross-platform monitoring tool. Prior to version 4.5.3, Glances supports dynamic configuration values in which substrings enclosed in backticks are executed as system commands during configuration parsing. This behavior occurs in Config.get_value() and is implemented without validation or restriction of the executed commands. If an attacker can modify or influence configuration files, arbitrary commands will execute automatically with the privileges of the Glances process during startup or configuration reload. In deployments where Glances runs with elevated privileges (e.g., as a system service), this may lead to privilege escalation. This issue has been patched in version 4.5.3.",
+        "title": "nicolargo glances",
+        "vendor": "nicolargo",
+        "product": "glances",
+        "cvss_max": 7.8
+      },
+      "cve": {
+        "id": "CVE-2026-33641",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2026-04-02T15:16:40.040",
+        "lastModified": "2026-04-07T14:59:46.823",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Glances is an open-source system cross-platform monitoring tool. Prior to version 4.5.3, Glances supports dynamic configuration values in which substrings enclosed in backticks are executed as system commands during configuration parsing. This behavior occurs in Config.get_value() and is implemented without validation or restriction of the executed commands. If an attacker can modify or influence configuration files, arbitrary commands will execute automatically with the privileges of the Glances process during startup or configuration reload. In deployments where Glances runs with elevated privileges (e.g., as a system service), this may lead to privilege escalation. This issue has been patched in version 4.5.3."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 7.8,
+                "baseSeverity": "HIGH"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary",
+              "exploitabilityScore": 1.8,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-78"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nicolargo:glances:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "5D5895A8-B817-4EFE-BA8C-A8A9156139A7",
+                    "versionEndExcluding": "4.5.3"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/nicolargo/glances/commit/358d76a225fc21a9f95d2c4d7e46fafe64a644c6",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://github.com/nicolargo/glances/releases/tag/v4.5.3",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Product",
+              "Release Notes"
+            ]
+          },
+          {
+            "url": "https://github.com/nicolargo/glances/security/advisories/GHSA-qhj7-v7h7-q4c7",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Exploit",
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 78,
+      "rank": 6
+    },
+    {
+      "cve_id": "CVE-2026-44193",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-05-13",
+          "previous_max": null,
+          "current_max": 9.1
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-05-13",
+        "description": "OPNsense is a FreeBSD based firewall and routing platform. Prior to 26.1.7, the XMLRPC method opnsense.restore_config_section fails to sanitize user supplied input leading to Remote Code Execution. This vulnerability is fixed in 26.1.7.",
+        "title": "opnsense opnsense RCE",
+        "vendor": "opnsense",
+        "product": "opnsense",
+        "attack_type": "RCE",
+        "cvss_max": 9.1
+      },
+      "cve": {
+        "id": "CVE-2026-44193",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2026-05-13T22:16:43.533",
+        "lastModified": "2026-05-15T17:30:03.117",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "OPNsense is a FreeBSD based firewall and routing platform. Prior to 26.1.7, the XMLRPC method opnsense.restore_config_section fails to sanitize user supplied input leading to Remote Code Execution. This vulnerability is fixed in 26.1.7."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
+                "baseScore": 9.1,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary",
+              "exploitabilityScore": 2.3,
+              "impactScore": 6.0
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-88"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:opnsense:opnsense:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "56B95741-5F9C-4FA1-A607-456BB4C29944",
+                    "versionEndExcluding": "26.1.7"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/opnsense/core/security/advisories/GHSA-xxp9-93cr-x54p",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Exploit",
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 7
+    },
+    {
+      "cve_id": "CVE-2026-44194",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-05-13",
+          "previous_max": null,
+          "current_max": 9.1
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-05-13",
+        "description": "OPNsense is a FreeBSD based firewall and routing platform. Prior to 26.1.8, an authenticated Remote Code Execution (RCE) vulnerability in the OPNsense core allows a user with user-management privileges to execute arbitrary system commands as root. An attacker can bypass input validation by formatting their malicious payload as a compliant email address, allowing shell commands to reach the underlying operating system. The flaw exists in the local user synchronization flow, within core/src/opnsense/scripts/auth/sync_user.php. This vulnerability is fixed in 26.1.8.",
+        "title": "opnsense opnsense RCE",
+        "vendor": "opnsense",
+        "product": "opnsense",
+        "attack_type": "RCE",
+        "cvss_max": 9.1
+      },
+      "cve": {
+        "id": "CVE-2026-44194",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2026-05-13T22:16:43.673",
+        "lastModified": "2026-05-15T17:19:46.990",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "OPNsense is a FreeBSD based firewall and routing platform. Prior to 26.1.8, an authenticated Remote Code Execution (RCE) vulnerability in the OPNsense core allows a user with user-management privileges to execute arbitrary system commands as root. An attacker can bypass input validation by formatting their malicious payload as a compliant email address, allowing shell commands to reach the underlying operating system. The flaw exists in the local user synchronization flow, within core/src/opnsense/scripts/auth/sync_user.php. This vulnerability is fixed in 26.1.8."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
+                "baseScore": 9.1,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary",
+              "exploitabilityScore": 2.3,
+              "impactScore": 6.0
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-78"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:opnsense:opnsense:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "A0EDE7AC-7C9D-4244-9120-DA3CDB7AAB2C",
+                    "versionEndExcluding": "26.1.8"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/opnsense/core/security/advisories/GHSA-f59w-m967-9rf6",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Exploit",
+              "Mitigation",
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 8
+    },
+    {
+      "cve_id": "CVE-2026-44377",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-05-13",
+          "previous_max": null,
+          "current_max": 9.1
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-05-13",
+        "description": "CubeCart is an ecommerce software solution. Prior to 6.7.0, an Authenticated Server-Side Template Injection (SSTI) vulnerability exists in multiple modules of CubeCart (including Email Templates and Documents). The application unsafely evaluates user-supplied input directly through the Smarty template engine. By leveraging this, an authenticated attacker with administrative privileges can bypass current restrictions and call native PHP functions within the templates, such as readgzfile() to read sensitive configuration files, or error_log() to write a malicious PHP web shell, ultimately achieving Information Disclosure and full Remote Code Execution (RCE). This vulnerability is fixed in 6.7.0.",
+        "title": "CubeCart is an ecommerce software solution.",
+        "attack_type": "privilege escalation",
+        "cvss_max": 9.1
+      },
+      "cve": {
+        "id": "CVE-2026-44377",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2026-05-13T21:16:48.330",
+        "lastModified": "2026-05-14T16:49:18.583",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "CubeCart is an ecommerce software solution. Prior to 6.7.0, an Authenticated Server-Side Template Injection (SSTI) vulnerability exists in multiple modules of CubeCart (including Email Templates and Documents). The application unsafely evaluates user-supplied input directly through the Smarty template engine. By leveraging this, an authenticated attacker with administrative privileges can bypass current restrictions and call native PHP functions within the templates, such as readgzfile() to read sensitive configuration files, or error_log() to write a malicious PHP web shell, ultimately achieving Information Disclosure and full Remote Code Execution (RCE). This vulnerability is fixed in 6.7.0."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
+                "baseScore": 9.1,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary",
+              "exploitabilityScore": 2.3,
+              "impactScore": 6.0
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-94"
+              },
+              {
+                "lang": "en",
+                "value": "CWE-1336"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/cubecart/v6/commit/76d783c8c4d87a8a90dbfef1344a2733e7c6434c",
+            "source": "security-advisories@github.com"
+          },
+          {
+            "url": "https://github.com/cubecart/v6/security/advisories/GHSA-wpjx-g695-qc5j",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 9
+    },
+    {
+      "cve_id": "CVE-2026-44381",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-05-13",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-05-13",
+        "description": "MISP is an open source threat intelligence and sharing platform. Prior to 2.5.37, a SQL injection vulnerability existed in the handling of user-controlled ordering parameters in the event and shadow attribute listing endpoints. The affected code accepted order or sort values from request parameters and incorporated them into database query ordering clauses without sufficient validation of the requested field name. An attacker with access to the affected endpoints could craft a malicious ordering parameter to manipulate the generated SQL query. Depending on database permissions and query context, this could potentially allow unauthorized access to data, modification of query behavior, or other database-level impact. This vulnerability is fixed in 2.5.37.",
+        "title": "misp misp SQL Injection",
+        "vendor": "misp",
+        "product": "misp",
+        "attack_type": "SQL Injection",
+        "cvss_max": 9.3
+      },
+      "cve": {
+        "id": "CVE-2026-44381",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2026-05-13T21:16:48.770",
+        "lastModified": "2026-05-15T17:37:06.157",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "MISP is an open source threat intelligence and sharing platform. Prior to 2.5.37, a SQL injection vulnerability existed in the handling of user-controlled ordering parameters in the event and shadow attribute listing endpoints. The affected code accepted order or sort values from request parameters and incorporated them into database query ordering clauses without sufficient validation of the requested field name. An attacker with access to the affected endpoints could craft a malicious ordering parameter to manipulate the generated SQL query. Depending on database permissions and query context, this could potentially allow unauthorized access to data, modification of query behavior, or other database-level impact. This vulnerability is fixed in 2.5.37."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
+                "baseScore": 5.3,
+                "baseSeverity": "MEDIUM"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 1.4
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-89"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:misp:misp:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "7642E00D-57E6-4888-9369-5C21250ECF56",
+                    "versionEndExcluding": "2.5.37"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/MISP/MISP/security/advisories/GHSA-4cxp-22wm-j6jr",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 10
+    },
+    {
+      "cve_id": "CVE-2026-44442",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-05-13",
+          "previous_max": null,
+          "current_max": 9.9
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-05-13",
+        "description": "ERPNext is a free and open source Enterprise Resource Planning tool. Prior to 16.9.1, certain endpoints failed to enforce proper authorization checks, allowing users to modify data beyond their permitted role. This vulnerability is fixed in 16.9.1.",
+        "title": "frappe erpnext privilege escalation",
+        "vendor": "frappe",
+        "product": "erpnext",
+        "attack_type": "privilege escalation",
+        "cvss_max": 9.9
+      },
+      "cve": {
+        "id": "CVE-2026-44442",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2026-05-13T22:16:45.350",
+        "lastModified": "2026-05-14T20:04:02.837",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "ERPNext is a free and open source Enterprise Resource Planning tool. Prior to 16.9.1, certain endpoints failed to enforce proper authorization checks, allowing users to modify data beyond their permitted role. This vulnerability is fixed in 16.9.1."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+                "baseScore": 9.9,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.1,
+              "impactScore": 6.0
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-862"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:frappe:erpnext:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "566D19AF-E92B-47C1-9676-F2CD5DE6A51B",
+                    "versionEndExcluding": "16.9.1"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/frappe/erpnext/security/advisories/GHSA-cg5w-7g26-p3w9",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 11
+    },
+    {
+      "cve_id": "CVE-2026-45053",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-05-13",
+          "previous_max": null,
+          "current_max": 9.1
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-05-13",
+        "description": "CubeCart is an ecommerce software solution. Prior to 6.7.0, an Authenticated Arbitrary File Upload vulnerability exists in the REST API File Manager endpoint (POST /api/v1/files) of CubeCart. The endpoint allows any holder of an API key with files:rw permission to upload PHP source files into the web-accessible images/source/ directory, where they are executed by the web server. Combined with a path-traversal flaw in the same endpoint's filepath parameter, a single API request writes a webshell anywhere the webserver process can write — including the document root — yielding full Remote Code Execution. This vulnerability is fixed in 6.7.0.",
+        "title": "CubeCart is an ecommerce software solution.",
+        "cvss_max": 9.1
+      },
+      "cve": {
+        "id": "CVE-2026-45053",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2026-05-13T21:16:49.073",
+        "lastModified": "2026-05-15T20:16:48.470",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "CubeCart is an ecommerce software solution. Prior to 6.7.0, an Authenticated Arbitrary File Upload vulnerability exists in the REST API File Manager endpoint (POST /api/v1/files) of CubeCart. The endpoint allows any holder of an API key with files:rw permission to upload PHP source files into the web-accessible images/source/ directory, where they are executed by the web server. Combined with a path-traversal flaw in the same endpoint's filepath parameter, a single API request writes a webshell anywhere the webserver process can write — including the document root — yielding full Remote Code Execution. This vulnerability is fixed in 6.7.0."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
+                "baseScore": 9.1,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary",
+              "exploitabilityScore": 2.3,
+              "impactScore": 6.0
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-434"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/cubecart/v6/security/advisories/GHSA-652f-8c88-25cx",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 12
+    },
+    {
+      "cve_id": "CVE-2026-45158",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-05-13",
+          "previous_max": null,
+          "current_max": 9.1
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-05-13",
+        "description": "OPNsense is a FreeBSD based firewall and routing platform. Prior to 26.1.8, unsanitized user input is passed to the DHCP configuration of the configured interface, which is processed by a shell script, allowing remote code execution as root on the underlying operating system. This vulnerability is fixed in 26.1.8.",
+        "title": "opnsense opnsense RCE",
+        "vendor": "opnsense",
+        "product": "opnsense",
+        "attack_type": "RCE",
+        "cvss_max": 9.1
+      },
+      "cve": {
+        "id": "CVE-2026-45158",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2026-05-13T22:16:46.363",
+        "lastModified": "2026-05-15T16:19:38.600",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "OPNsense is a FreeBSD based firewall and routing platform. Prior to 26.1.8, unsanitized user input is passed to the DHCP configuration of the configured interface, which is processed by a shell script, allowing remote code execution as root on the underlying operating system. This vulnerability is fixed in 26.1.8."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
+                "baseScore": 9.1,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary",
+              "exploitabilityScore": 2.3,
+              "impactScore": 6.0
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-88"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:opnsense:opnsense:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "A0EDE7AC-7C9D-4244-9120-DA3CDB7AAB2C",
+                    "versionEndExcluding": "26.1.8"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/opnsense/core/security/advisories/GHSA-5rx3-w735-74wm",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 13
+    },
+    {
+      "cve_id": "CVE-2026-45714",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-05-13",
+          "previous_max": null,
+          "current_max": 9.1
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-05-13",
+        "description": "CubeCart is an ecommerce software solution. Prior to 6.7.0, an Authenticated Server-Side Template Injection (SSTI) vulnerability exists in multiple modules of CubeCart (including Email Templates, Invoices, Documents, and Contact Forms). The application unsafely evaluates user-supplied input using the Smarty template engine without enabling Smarty Security Policies. This allows any authenticated user with administrative privileges to execute arbitrary operating system commands (RCE) on the server. This vulnerability is fixed in 6.7.0.",
+        "title": "CubeCart is an ecommerce software solution.",
+        "cvss_max": 9.1
+      },
+      "cve": {
+        "id": "CVE-2026-45714",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2026-05-13T21:16:50.020",
+        "lastModified": "2026-05-14T16:49:18.583",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "CubeCart is an ecommerce software solution. Prior to 6.7.0, an Authenticated Server-Side Template Injection (SSTI) vulnerability exists in multiple modules of CubeCart (including Email Templates, Invoices, Documents, and Contact Forms). The application unsafely evaluates user-supplied input using the Smarty template engine without enabling Smarty Security Policies. This allows any authenticated user with administrative privileges to execute arbitrary operating system commands (RCE) on the server. This vulnerability is fixed in 6.7.0."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
+                "baseScore": 9.1,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary",
+              "exploitabilityScore": 2.3,
+              "impactScore": 6.0
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-94"
+              },
+              {
+                "lang": "en",
+                "value": "CWE-1336"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/cubecart/v6/security/advisories/GHSA-pcfr-xgc9-xfv6",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 14
+    },
+    {
+      "cve_id": "CVE-2026-8500",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-05-13",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-05-13",
+        "description": "Web::Passwd versions through 0.03 for Perl is vulnerable to RCE.\n\nWeb::Passwd is a small CGI application for managing htpasswd files using the htpasswd command.\n\nThe user parameter is not validated or escaped, and is used as the last argument on the command line, allowing for command injection.",
+        "title": "Web::Passwd versions through 0.03 for Perl is vulnerable to RCE.",
+        "attack_type": "Command Injection",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2026-8500",
+        "sourceIdentifier": "9b29abf9-4ab0-4765-b253-1875cd9b441e",
+        "published": "2026-05-13T23:16:43.237",
+        "lastModified": "2026-05-14T18:16:51.490",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Web::Passwd versions through 0.03 for Perl is vulnerable to RCE.\n\nWeb::Passwd is a small CGI application for managing htpasswd files using the htpasswd command.\n\nThe user parameter is not validated or escaped, and is used as the last argument on the command line, allowing for command injection."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-78"
+              }
+            ],
+            "source": "9b29abf9-4ab0-4765-b253-1875cd9b441e"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://httpd.apache.org/docs/current/programs/htpasswd.html",
+            "source": "9b29abf9-4ab0-4765-b253-1875cd9b441e"
+          },
+          {
+            "url": "https://metacpan.org/release/EVANK/Web-Passwd-0.03",
+            "source": "9b29abf9-4ab0-4765-b253-1875cd9b441e"
+          },
+          {
+            "url": "http://www.openwall.com/lists/oss-security/2026/05/13/8",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 15
+    }
+  ],
+  "source": "https://www.cvelogic.com/threat-intelligence/2026-05-13"
+}

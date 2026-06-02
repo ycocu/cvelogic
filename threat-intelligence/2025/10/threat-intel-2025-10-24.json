@@ -1,0 +1,1975 @@
+{
+  "schema_version": "2.2",
+  "generated_at": "2026-06-02T07:33:39Z",
+  "day": "2025-10-24",
+  "window": {
+    "utc_start": "2025-10-24",
+    "utc_end": "2025-10-24",
+    "days": 1
+  },
+  "summary": {
+    "brief": "Microsoft Windows added to CISA KEV — confirmed in-the-wild exploitation. · 9 new critical disclosures — review patch status on exposed services.",
+    "bullets": [
+      "Microsoft Windows added to CISA KEV — confirmed in-the-wild exploitation.",
+      "9 new critical disclosures — review patch status on exposed services."
+    ],
+    "counts": {
+      "cves": 11,
+      "kev": 2,
+      "exploit": 0,
+      "epss": 0,
+      "cvss": 9,
+      "patch": 0
+    }
+  },
+  "cves": [
+    {
+      "cve_id": "CVE-2025-59287",
+      "signal_types": [
+        "KEV"
+      ],
+      "signals": {
+        "kev": {
+          "date_added": "2025-10-24"
+        },
+        "exploit": null,
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-10-14",
+        "description": "Deserialization of untrusted data in Windows Server Update Service allows an unauthorized attacker to execute code over a network.",
+        "title": "Microsoft Windows Server Update Service (WSUS) Deserialization of Untrusted Data Vulnerability",
+        "vendor": "microsoft",
+        "product": "windows_server_2012",
+        "attack_type": "Deserialization",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-59287",
+        "sourceIdentifier": "secure@microsoft.com",
+        "published": "2025-10-14T17:16:11.670",
+        "lastModified": "2025-11-12T14:33:19.727",
+        "vulnStatus": "Analyzed",
+        "cisaExploitAdd": "2025-10-24",
+        "cisaActionDue": "2025-11-14",
+        "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+        "cisaVulnerabilityName": "Microsoft Windows Server Update Service (WSUS) Deserialization of Untrusted Data Vulnerability",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Deserialization of untrusted data in Windows Server Update Service allows an unauthorized attacker to execute code over a network."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "secure@microsoft.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-502"
+              }
+            ],
+            "source": "secure@microsoft.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_server_2012:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "A7DF96F8-BA6A-4780-9CA3-F719B3F81074"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_server_2012:r2:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "DB18C4CE-5917-401E-ACF7-2747084FD36E"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_server_2016:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "7200EF9B-2689-4E9E-BE9E-E00836A7D284",
+                    "versionEndExcluding": "10.0.14393.8524"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_server_2019:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "D9DDF9BE-8D0B-4027-B3F7-FFD96438E3EB",
+                    "versionEndExcluding": "10.0.17763.7922"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_server_2022:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "BDAC36D7-54A0-456B-B176-17A0B9E63C7A",
+                    "versionEndExcluding": "10.0.20348.4297"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_server_2022_23h2:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "FBA85BFD-9802-452E-97B1-6380554EF254",
+                    "versionEndExcluding": "10.0.25398.1916"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_server_2025:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "2E5FFF5B-8745-47F6-A0B7-262AA43353BB",
+                    "versionEndExcluding": "10.0.26100.6905"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-59287",
+            "source": "secure@microsoft.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://hawktrace.com/blog/CVE-2025-59287",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.bleepingcomputer.com/news/security/cisa-orders-feds-to-patch-windows-server-wsus-flaw-exploited-in-attacks/",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Press/Media Coverage"
+            ]
+          },
+          {
+            "url": "https://www.vicarius.io/vsociety/posts/cve-2025-59287-detection-script-rce-vulnerability-in-windows-server-update-service",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.vicarius.io/vsociety/posts/cve-2025-59287-mitigation-script-rce-vulnerability-in-windows-server-update-service",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Mitigation",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://gist.github.com/hawktrace/880b54fb9c07ddb028baaae401bd3951",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2025-59287",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Third Party Advisory",
+              "US Government Resource"
+            ]
+          }
+        ]
+      },
+      "risk_score": 88,
+      "rank": 1
+    },
+    {
+      "cve_id": "CVE-2025-12176",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-10-24",
+          "previous_max": null,
+          "current_max": 10.0
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-10-24",
+        "description": "Undocumented administrative accounts were getting created to facilitate access for applications running on board.This issue affects BLU-IC2: through 1.19.5; BLU-IC4: through 1.19.5.",
+        "title": "azure-access blu-ic2_firmware",
+        "vendor": "azure-access",
+        "product": "blu-ic2_firmware",
+        "cvss_max": 10.0
+      },
+      "cve": {
+        "id": "CVE-2025-12176",
+        "sourceIdentifier": "a0340c66-c385-4f8b-991b-3d05f6fd5220",
+        "published": "2025-10-24T16:15:36.617",
+        "lastModified": "2025-11-10T15:05:15.617",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Undocumented administrative accounts were getting created to facilitate access for applications running on board.This issue affects BLU-IC2: through 1.19.5; BLU-IC4: through 1.19.5."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 10.0,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "a0340c66-c385-4f8b-991b-3d05f6fd5220",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-1242"
+              }
+            ],
+            "source": "a0340c66-c385-4f8b-991b-3d05f6fd5220"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:azure-access:blu-ic2_firmware:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "00BF15A1-C965-4601-83E9-8617B86E833A",
+                    "versionEndExcluding": "1.20"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:azure-access:blu-ic2:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "C898C110-6C42-40A0-93FC-B6ED785F23A9"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:azure-access:blu-ic4_firmware:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "6493C6E4-1304-4B28-A6C5-37CE2D1EAE46",
+                    "versionEndExcluding": "1.20"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:azure-access:blu-ic4:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "902CD787-42BF-4565-8CA5-78123E37AA99"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://azure-access.com/security-advisories",
+            "source": "a0340c66-c385-4f8b-991b-3d05f6fd5220",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 2
+    },
+    {
+      "cve_id": "CVE-2025-43995",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-10-24",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-10-24",
+        "description": "Dell Storage Center - Dell Storage Manager, version(s) 20.1.21, contain(s) an Improper Authentication vulnerability. An unauthenticated attacker with remote access could potentially exploit this vulnerability, leading to Protection mechanism bypass. Authentication Bypass in DSM Data Collector. An unauthenticated remote attacker can access APIs exposed by ApiProxy.war in DataCollectorEar.ear by using a special SessionKey and UserId. These userid are special users created in compellentservicesapi for special purposes.",
+        "title": "dell storage_manager Auth Bypass",
+        "vendor": "dell",
+        "product": "storage_manager",
+        "attack_type": "Auth Bypass",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-43995",
+        "sourceIdentifier": "security_alert@emc.com",
+        "published": "2025-10-24T15:15:38.380",
+        "lastModified": "2025-11-04T14:43:05.420",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Dell Storage Center - Dell Storage Manager, version(s) 20.1.21, contain(s) an Improper Authentication vulnerability. An unauthenticated attacker with remote access could potentially exploit this vulnerability, leading to Protection mechanism bypass. Authentication Bypass in DSM Data Collector. An unauthenticated remote attacker can access APIs exposed by ApiProxy.war in DataCollectorEar.ear by using a special SessionKey and UserId. These userid are special users created in compellentservicesapi for special purposes."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security_alert@emc.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-287"
+              }
+            ],
+            "source": "security_alert@emc.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:dell:storage_manager:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "F19B1117-55A1-46EC-A046-BE3B99EC4900",
+                    "versionEndExcluding": "2020"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:dell:storage_manager:2020:r1:*:*:*:*:*:*",
+                    "matchCriteriaId": "567442CC-381B-43A1-ADE9-AE00075021D4"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:dell:storage_manager:2020:r1.10:*:*:*:*:*:*",
+                    "matchCriteriaId": "B978EFB1-877F-4091-A401-F1861229E033"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:dell:storage_manager:2020:r1.2:*:*:*:*:*:*",
+                    "matchCriteriaId": "263E78BD-D8C0-480F-9EED-D5496708CFCD"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:dell:storage_manager:2020:r1.20:*:*:*:*:*:*",
+                    "matchCriteriaId": "1055DB85-9105-44E5-9CEB-509C7F7041FE"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://www.dell.com/support/kbdoc/en-us/000382899/dsa-2025-393-security-update-for-storage-center-dell-storage-manager-vulnerabilities",
+            "source": "security_alert@emc.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 3
+    },
+    {
+      "cve_id": "CVE-2025-11253",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-10-24",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-10-24",
+        "description": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in Aksis Technology Inc. Netty ERP allows SQL Injection.This issue affects Netty ERP: before V.1.1000.",
+        "title": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in Aksis Technology Inc.",
+        "attack_type": "SQL Injection",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-11253",
+        "sourceIdentifier": "iletisim@usom.gov.tr",
+        "published": "2025-10-24T09:15:42.467",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in Aksis Technology Inc. Netty ERP allows SQL Injection.This issue affects Netty ERP: before V.1.1000."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "iletisim@usom.gov.tr",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-89"
+              }
+            ],
+            "source": "iletisim@usom.gov.tr"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://www.usom.gov.tr/bildirim/tr-25-0359",
+            "source": "iletisim@usom.gov.tr"
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 4
+    },
+    {
+      "cve_id": "CVE-2025-54236",
+      "signal_types": [
+        "KEV"
+      ],
+      "signals": {
+        "kev": {
+          "date_added": "2025-10-24"
+        },
+        "exploit": null,
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-09-09",
+        "description": "Adobe Commerce versions 2.4.9-alpha2, 2.4.8-p2, 2.4.7-p7, 2.4.6-p12, 2.4.5-p14, 2.4.4-p15 and earlier are affected by an Improper Input Validation vulnerability. A successful attacker can abuse this to achieve session takeover, increasing the confidentiality, and integrity impact to high. Exploitation of this issue does not require user interaction.",
+        "title": "Adobe Commerce and Magento Improper Input Validation Vulnerability",
+        "vendor": "adobe",
+        "product": "commerce",
+        "cvss_max": 9.1
+      },
+      "cve": {
+        "id": "CVE-2025-54236",
+        "sourceIdentifier": "psirt@adobe.com",
+        "published": "2025-09-09T14:15:46.563",
+        "lastModified": "2026-05-12T22:00:01.607",
+        "vulnStatus": "Analyzed",
+        "cisaExploitAdd": "2025-10-24",
+        "cisaActionDue": "2025-11-14",
+        "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+        "cisaVulnerabilityName": "Adobe Commerce and Magento Improper Input Validation Vulnerability",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Adobe Commerce versions 2.4.9-alpha2, 2.4.8-p2, 2.4.7-p7, 2.4.6-p12, 2.4.5-p14, 2.4.4-p15 and earlier are affected by an Improper Input Validation vulnerability. A successful attacker can abuse this to achieve session takeover, increasing the confidentiality, and integrity impact to high. Exploitation of this issue does not require user interaction."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+                "baseScore": 9.1,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "psirt@adobe.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.2
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-20"
+              }
+            ],
+            "source": "psirt@adobe.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:commerce:2.4.4:-:*:*:*:*:*:*",
+                    "matchCriteriaId": "D258D9EF-94FB-41F0-A7A5-7F66FA7A0055"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:commerce:2.4.4:p1:*:*:*:*:*:*",
+                    "matchCriteriaId": "4E5CF6F0-2388-4D3F-8FE1-43B8AF148564"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:commerce:2.4.4:p10:*:*:*:*:*:*",
+                    "matchCriteriaId": "1C3D7164-1C5F-40BC-9EEC-B0E00CD45808"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:commerce:2.4.4:p11:*:*:*:*:*:*",
+                    "matchCriteriaId": "68AAE162-5957-42AF-BE20-40F341837FAC"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:commerce:2.4.4:p12:*:*:*:*:*:*",
+                    "matchCriteriaId": "D9D01159-3309-4F6B-93B0-2D89DDD33DEE"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:commerce:2.4.4:p13:*:*:*:*:*:*",
+                    "matchCriteriaId": "91736E79-D8E7-4AF2-8E01-A7B4EB8AD6F4"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:commerce:2.4.4:p14:*:*:*:*:*:*",
+                    "matchCriteriaId": "8412C043-64E7-4DFF-A303-13A6FE113BFB"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:commerce:2.4.4:p15:*:*:*:*:*:*",
+                    "matchCriteriaId": "BBDA2BCF-E784-4CF3-B30D-6FF5BEE2055F"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:commerce:2.4.4:p2:*:*:*:*:*:*",
+                    "matchCriteriaId": "D6D6F1A7-ABB5-4EDC-9EA8-98B74518847A"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:commerce:2.4.4:p3:*:*:*:*:*:*",
+                    "matchCriteriaId": "CFEBDDF2-6443-4482-83B2-3CD272CF599F"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:commerce:2.4.4:p4:*:*:*:*:*:*",
+                    "matchCriteriaId": "6661093F-8D22-450F-BC6C-A8894A52E6A9"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:commerce:2.4.4:p5:*:*:*:*:*:*",
+                    "matchCriteriaId": "2515DA6D-2E74-4A05-BD29-FEEF3322BCB6"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:commerce:2.4.4:p6:*:*:*:*:*:*",
+                    "matchCriteriaId": "69A1F1F7-E53C-40F3-B3D9-DC011FC353BF"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:commerce:2.4.4:p7:*:*:*:*:*:*",
+                    "matchCriteriaId": "6A56E96C-6CE5-442C-AA88-F0059B02B5E7"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:commerce:2.4.4:p8:*:*:*:*:*:*",
+                    "matchCriteriaId": "8867F510-201C-4199-8554-53DE156CE669"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:commerce:2.4.4:p9:*:*:*:*:*:*",
+                    "matchCriteriaId": "23988132-DD4E-4968-B6B8-954122F76081"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:commerce:2.4.5:-:*:*:*:*:*:*",
+                    "matchCriteriaId": "9B07F7B2-E915-4EFF-8FFC-91143CEF082E"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:commerce:2.4.5:p1:*:*:*:*:*:*",
+                    "matchCriteriaId": "7F5E9DB6-1386-4274-8270-2FE0F0CAF7FD"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:commerce:2.4.5:p10:*:*:*:*:*:*",
+                    "matchCriteriaId": "5764CC97-C866-415D-A3A1-5B5B9E1C06A6"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:commerce:2.4.5:p11:*:*:*:*:*:*",
+                    "matchCriteriaId": "E82D10D8-2894-4E5B-B47B-F00964DD5CDE"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:commerce:2.4.5:p12:*:*:*:*:*:*",
+                    "matchCriteriaId": "B044F2D9-E888-4852-8A40-DCE688860ED3"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:commerce:2.4.5:p13:*:*:*:*:*:*",
+                    "matchCriteriaId": "6423C754-36F9-4680-9211-60940ED63E79"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:commerce:2.4.5:p14:*:*:*:*:*:*",
+                    "matchCriteriaId": "3472064A-8C79-436B-965A-96834AE8D346"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:commerce:2.4.5:p2:*:*:*:*:*:*",
+                    "matchCriteriaId": "8605E4E6-0F7D-42C8-B35B-2349A0BEFC69"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:commerce:2.4.5:p3:*:*:*:*:*:*",
+                    "matchCriteriaId": "B6318F97-E59A-4425-8DC7-045C78A644F8"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:commerce:2.4.5:p4:*:*:*:*:*:*",
+                    "matchCriteriaId": "324A573E-DBC8-42A0-8CB8-EDD8FBAB7115"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:commerce:2.4.5:p5:*:*:*:*:*:*",
+                    "matchCriteriaId": "54151A00-CFB8-4E6A-8E74-497CB67BF7E2"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:commerce:2.4.5:p6:*:*:*:*:*:*",
+                    "matchCriteriaId": "6DF0E74D-9293-4209-97D1-A3BA13C3DDE9"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:commerce:2.4.5:p7:*:*:*:*:*:*",
+                    "matchCriteriaId": "8922D646-1A97-47ED-91C6-5A426781C98A"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:commerce:2.4.5:p8:*:*:*:*:*:*",
+                    "matchCriteriaId": "952787C6-9BF1-49FB-9824-1236678E1902"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:commerce:2.4.5:p9:*:*:*:*:*:*",
+                    "matchCriteriaId": "898A8679-3C46-4718-9EDF-583ADDFCF2EC"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:commerce:2.4.6:-:*:*:*:*:*:*",
+                    "matchCriteriaId": "7C7AFBB1-F9C9-4BDE-BCEF-94C9F0AC6798"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:commerce:2.4.6:p1:*:*:*:*:*:*",
+                    "matchCriteriaId": "D6086841-C175-46A1-8414-71C6163A0E7A"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:commerce:2.4.6:p10:*:*:*:*:*:*",
+                    "matchCriteriaId": "E57889CC-3E90-46AF-9CD6-3328DD501AD1"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:commerce:2.4.6:p11:*:*:*:*:*:*",
+                    "matchCriteriaId": "47A86566-DE38-4032-947D-B6181F0BC120"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:commerce:2.4.6:p12:*:*:*:*:*:*",
+                    "matchCriteriaId": "B7D1D684-CE7E-4D6D-95B5-1F86A8DB6C66"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:commerce:2.4.6:p2:*:*:*:*:*:*",
+                    "matchCriteriaId": "D2E0DDD1-0F4A-4F96-B25D-40A39A1A535A"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:commerce:2.4.6:p3:*:*:*:*:*:*",
+                    "matchCriteriaId": "A576B1B5-73A2-431E-998F-7E5458B51D6A"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:commerce:2.4.6:p4:*:*:*:*:*:*",
+                    "matchCriteriaId": "0E05F4AC-2A28-47E3-96DE-0E31AF73CD43"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:commerce:2.4.6:p5:*:*:*:*:*:*",
+                    "matchCriteriaId": "3A9A62EE-1649-4815-8EC9-7AEF7949EB2F"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:commerce:2.4.6:p6:*:*:*:*:*:*",
+                    "matchCriteriaId": "E58690F9-FA9C-42A0-B4CD-91FD1197A53E"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:commerce:2.4.6:p7:*:*:*:*:*:*",
+                    "matchCriteriaId": "77D01D8B-1FBC-43CA-90F9-C89D9B4D18F0"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:commerce:2.4.6:p8:*:*:*:*:*:*",
+                    "matchCriteriaId": "8B83729E-80AF-47CE-A70C-32BF83024A40"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:commerce:2.4.6:p9:*:*:*:*:*:*",
+                    "matchCriteriaId": "73D22D42-646D-4955-A6F9-9B7BA63DC0A9"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:commerce:2.4.7:-:*:*:*:*:*:*",
+                    "matchCriteriaId": "B5D04853-0C2F-47DD-A939-3A8F6E22CB7D"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:commerce:2.4.7:b1:*:*:*:*:*:*",
+                    "matchCriteriaId": "6EBB0608-034B-4F07-A59B-9E6A989BA260"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:commerce:2.4.7:b2:*:*:*:*:*:*",
+                    "matchCriteriaId": "B3BF9B08-84E3-4974-9DEB-F4285995D796"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:commerce:2.4.7:beta3:*:*:*:*:*:*",
+                    "matchCriteriaId": "7771BEDB-05E2-430E-B2A2-E2F7574B7114"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:commerce:2.4.7:p1:*:*:*:*:*:*",
+                    "matchCriteriaId": "2E05341A-C70C-4B3D-AF30-9520D6B97D30"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:commerce:2.4.7:p2:*:*:*:*:*:*",
+                    "matchCriteriaId": "4D98B52E-3B59-4327-AC7E-DDBB0ADA08F6"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:commerce:2.4.7:p3:*:*:*:*:*:*",
+                    "matchCriteriaId": "95026AA9-A28B-4D94-BD77-7628429EBA30"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:commerce:2.4.7:p4:*:*:*:*:*:*",
+                    "matchCriteriaId": "83FD1220-7D46-42B2-8110-30A934144572"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:commerce:2.4.7:p5:*:*:*:*:*:*",
+                    "matchCriteriaId": "3F1439CE-8A3B-414A-B974-559209FF480C"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:commerce:2.4.7:p6:*:*:*:*:*:*",
+                    "matchCriteriaId": "13726DEE-FFCB-447B-9FFF-136F132F2C4C"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:commerce:2.4.7:p7:*:*:*:*:*:*",
+                    "matchCriteriaId": "1A9443CE-AE1F-4D66-9C88-5E2E3FD28EE6"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:commerce:2.4.8:-:*:*:*:*:*:*",
+                    "matchCriteriaId": "1EE12F4B-5607-4790-A29B-EE23383BCC1A"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:commerce:2.4.8:beta1:*:*:*:*:*:*",
+                    "matchCriteriaId": "6D05A958-9749-486A-A149-C21647CDCADF"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:commerce:2.4.8:beta2:*:*:*:*:*:*",
+                    "matchCriteriaId": "C9E12B43-AD3E-48A2-9042-5586186CA3BE"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:commerce:2.4.8:p1:*:*:*:*:*:*",
+                    "matchCriteriaId": "C267AF14-7BA8-4D1F-BCD9-BE3ED0DA3D25"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:commerce:2.4.8:p2:*:*:*:*:*:*",
+                    "matchCriteriaId": "B4947C63-CFD9-437B-A09E-A197DCE40095"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:commerce:2.4.9:alpha1:*:*:*:*:*:*",
+                    "matchCriteriaId": "37F32F70-7B2A-4BAB-B3F0-AFF5C04CCDED"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:commerce:2.4.9:alpha2:*:*:*:*:*:*",
+                    "matchCriteriaId": "8B6B7609-6A8E-4154-BC05-2A9099909684"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:commerce_b2b:1.3.3:-:*:*:*:*:*:*",
+                    "matchCriteriaId": "C4667AA3-4CC9-41C0-8E0C-19B0FCE1CF79"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:commerce_b2b:1.3.3:p1:*:*:*:*:*:*",
+                    "matchCriteriaId": "E396FB4F-B20A-4BF9-8FBD-014A0F197F08"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:commerce_b2b:1.3.3:p10:*:*:*:*:*:*",
+                    "matchCriteriaId": "2ADE32D1-2845-4030-BE1F-ECE28189D0F9"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:commerce_b2b:1.3.3:p11:*:*:*:*:*:*",
+                    "matchCriteriaId": "F2E771C9-86C4-455C-98D4-6F4FE7A9A822"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:commerce_b2b:1.3.3:p12:*:*:*:*:*:*",
+                    "matchCriteriaId": "491AB715-F62A-46DB-A56E-055CF7CB7BEF"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:commerce_b2b:1.3.3:p13:*:*:*:*:*:*",
+                    "matchCriteriaId": "6FE364A8-4780-426F-9E8A-284A31FE2623"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:commerce_b2b:1.3.3:p14:*:*:*:*:*:*",
+                    "matchCriteriaId": "F9258027-8A6A-4C6A-BC6F-349B6E03D828"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:commerce_b2b:1.3.3:p15:*:*:*:*:*:*",
+                    "matchCriteriaId": "934C52C7-8751-481E-BAA7-F631C4E31F32"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:commerce_b2b:1.3.3:p2:*:*:*:*:*:*",
+                    "matchCriteriaId": "5677B7E2-FA07-4536-96A9-2C64BEFD3751"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:commerce_b2b:1.3.3:p3:*:*:*:*:*:*",
+                    "matchCriteriaId": "2DCD1522-6E27-474F-9FC6-413409D6AD55"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:commerce_b2b:1.3.3:p4:*:*:*:*:*:*",
+                    "matchCriteriaId": "B7968FCA-CCFD-4222-8FB8-E6E21107944F"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:commerce_b2b:1.3.3:p5:*:*:*:*:*:*",
+                    "matchCriteriaId": "8C175A1F-7814-4C51-A7B7-AD5140F0688F"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:commerce_b2b:1.3.3:p6:*:*:*:*:*:*",
+                    "matchCriteriaId": "E66CBFB3-40C3-474A-A3A3-12135F610814"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:commerce_b2b:1.3.3:p7:*:*:*:*:*:*",
+                    "matchCriteriaId": "F51DFA17-1875-41A9-B141-D89BB6238B3F"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:commerce_b2b:1.3.3:p8:*:*:*:*:*:*",
+                    "matchCriteriaId": "5A4D10EF-9137-4DF5-A5DD-97907E8B4C02"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:commerce_b2b:1.3.3:p9:*:*:*:*:*:*",
+                    "matchCriteriaId": "5CD0DC76-7181-4954-A59E-AB7BB47D0576"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:commerce_b2b:1.3.4:-:*:*:*:*:*:*",
+                    "matchCriteriaId": "1C90C433-6655-4038-9AB3-0304C1AFF360"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:commerce_b2b:1.3.4:p1:*:*:*:*:*:*",
+                    "matchCriteriaId": "374E7EDD-512A-4633-A136-01A656935334"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:commerce_b2b:1.3.4:p10:*:*:*:*:*:*",
+                    "matchCriteriaId": "89BAB227-03E6-4776-ADE4-9D9CB666EFD9"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:commerce_b2b:1.3.4:p11:*:*:*:*:*:*",
+                    "matchCriteriaId": "0E5ACABA-D6D6-4F29-A9DD-5A04A44ABE64"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:commerce_b2b:1.3.4:p12:*:*:*:*:*:*",
+                    "matchCriteriaId": "FA80AFCE-2663-46C0-AEC0-C16C8E675E6A"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:commerce_b2b:1.3.4:p13:*:*:*:*:*:*",
+                    "matchCriteriaId": "EB9955CA-7E7B-40D3-A85D-58BB0D9AC897"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:commerce_b2b:1.3.4:p14:*:*:*:*:*:*",
+                    "matchCriteriaId": "5D0A17AC-D433-47C2-A1AC-88291DCCECCD"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:commerce_b2b:1.3.4:p2:*:*:*:*:*:*",
+                    "matchCriteriaId": "0E9D364A-C858-4160-8B8B-33ECF94796D9"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:commerce_b2b:1.3.4:p3:*:*:*:*:*:*",
+                    "matchCriteriaId": "61559E50-581E-40FF-9FD4-10192ECFCD04"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:commerce_b2b:1.3.4:p4:*:*:*:*:*:*",
+                    "matchCriteriaId": "DE3BFB41-5633-4167-B1EA-9E958BCE9DC2"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:commerce_b2b:1.3.4:p5:*:*:*:*:*:*",
+                    "matchCriteriaId": "F2C525D2-837D-486A-8B38-5634AE2ECE2B"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:commerce_b2b:1.3.4:p6:*:*:*:*:*:*",
+                    "matchCriteriaId": "6F220229-F2DF-4C9D-90A6-8B09F8BE3391"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:commerce_b2b:1.3.4:p7:*:*:*:*:*:*",
+                    "matchCriteriaId": "63AB9506-3F8E-4C2E-A859-2380431C15A6"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:commerce_b2b:1.3.4:p8:*:*:*:*:*:*",
+                    "matchCriteriaId": "51B76658-EA6B-4AC9-9D9C-374C5308D069"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:commerce_b2b:1.3.4:p9:*:*:*:*:*:*",
+                    "matchCriteriaId": "6E94B136-7A2C-47F0-BCE4-6BB8E776A305"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:commerce_b2b:1.4.2:-:*:*:*:*:*:*",
+                    "matchCriteriaId": "15C638A8-EFE0-47DB-B1F9-34093AF0FC17"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:commerce_b2b:1.4.2:p1:*:*:*:*:*:*",
+                    "matchCriteriaId": "CB863404-A9D7-4692-AB43-08945E669928"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:commerce_b2b:1.4.2:p2:*:*:*:*:*:*",
+                    "matchCriteriaId": "D8CFA8F4-D57D-4D0F-88D5-00A72E3AD8DA"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:commerce_b2b:1.4.2:p3:*:*:*:*:*:*",
+                    "matchCriteriaId": "A21F608C-C356-47B8-8FBB-DB28BABFC4C6"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:commerce_b2b:1.4.2:p4:*:*:*:*:*:*",
+                    "matchCriteriaId": "E14195F1-5016-46BE-A614-6FB4E312FC93"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:commerce_b2b:1.4.2:p5:*:*:*:*:*:*",
+                    "matchCriteriaId": "9C360EA8-B18F-4327-90EF-7EED2892BE4F"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:commerce_b2b:1.4.2:p6:*:*:*:*:*:*",
+                    "matchCriteriaId": "500E3A54-D7C7-4887-9EA6-7DF85389A831"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:commerce_b2b:1.4.2:p7:*:*:*:*:*:*",
+                    "matchCriteriaId": "ED6FFC1D-E921-4FF7-9928-015630613FE1"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:commerce_b2b:1.5.2:-:*:*:*:*:*:*",
+                    "matchCriteriaId": "D855D141-7876-4F5A-91BE-6350DD379879"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:commerce_b2b:1.5.2:p1:*:*:*:*:*:*",
+                    "matchCriteriaId": "79CBDF59-EB84-44D3-81CF-5CBF943B411E"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:commerce_b2b:1.5.2:p2:*:*:*:*:*:*",
+                    "matchCriteriaId": "2117B163-D88E-4EB4-AEA7-F27FB732BD48"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:commerce_b2b:1.5.3:alpha1:*:*:*:*:*:*",
+                    "matchCriteriaId": "508EE0EF-D54A-4834-84AB-FFC62040FDAB"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:commerce_b2b:1.5.3:alpha2:*:*:*:*:*:*",
+                    "matchCriteriaId": "4D7C6592-33B0-4586-8178-E8F4EB837B7F"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:magento:2.4.5:-:*:*:open_source:*:*:*",
+                    "matchCriteriaId": "7A41C717-4B9F-4972-ABA3-2294EEC20F3E"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:magento:2.4.5:p1:*:*:open_source:*:*:*",
+                    "matchCriteriaId": "3FA80BBC-2DF2-46E1-84CE-8A899415114E"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:magento:2.4.5:p10:*:*:open_source:*:*:*",
+                    "matchCriteriaId": "783E4AF1-52F3-446B-B003-8079EDA78CBF"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:magento:2.4.5:p11:*:*:open_source:*:*:*",
+                    "matchCriteriaId": "08B7898F-E25A-4D16-A007-6D4543E80C58"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:magento:2.4.5:p12:*:*:open_source:*:*:*",
+                    "matchCriteriaId": "313CB0C1-2E8C-46AC-B72B-AFA9E0A6E064"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:magento:2.4.5:p13:*:*:open_source:*:*:*",
+                    "matchCriteriaId": "E99C1F27-68C9-481F-B01D-8B58B0AFB437"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:magento:2.4.5:p14:*:*:open_source:*:*:*",
+                    "matchCriteriaId": "D4A3F4C7-8784-43BD-A11B-E66872DD8812"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:magento:2.4.5:p2:*:*:open_source:*:*:*",
+                    "matchCriteriaId": "510B1840-AE77-4BDD-9C09-26C64CC8FC81"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:magento:2.4.5:p3:*:*:open_source:*:*:*",
+                    "matchCriteriaId": "FA1EDF58-8384-48C4-A584-54D24F6F7973"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:magento:2.4.5:p4:*:*:open_source:*:*:*",
+                    "matchCriteriaId": "9D2D9715-3A6B-4BE0-B1C5-8D19A683A083"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:magento:2.4.5:p5:*:*:open_source:*:*:*",
+                    "matchCriteriaId": "1C99B578-5DD6-476D-BB75-4DCAD7F79535"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:magento:2.4.5:p6:*:*:open_source:*:*:*",
+                    "matchCriteriaId": "7C1B2897-79A5-4A5B-9137-7A4B6B85AA84"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:magento:2.4.5:p7:*:*:open_source:*:*:*",
+                    "matchCriteriaId": "B9E8299D-FA97-483A-8E1B-BA7B869E467D"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:magento:2.4.5:p8:*:*:open_source:*:*:*",
+                    "matchCriteriaId": "9A1B92EC-E83A-43B3-8F14-5C1A52B579B1"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:magento:2.4.5:p9:*:*:open_source:*:*:*",
+                    "matchCriteriaId": "E5F2B6F1-AE8F-4AEE-9AB3-080976AE48B7"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:magento:2.4.6:-:*:*:open_source:*:*:*",
+                    "matchCriteriaId": "789BD987-9DAD-4EAE-93DE-0E267D54F124"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:magento:2.4.6:p1:*:*:open_source:*:*:*",
+                    "matchCriteriaId": "A3F113C0-00C5-4BC2-B42B-8AE3756252F2"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:magento:2.4.6:p10:*:*:open_source:*:*:*",
+                    "matchCriteriaId": "AE842CC8-7795-4238-B727-0BA2FFFBF62C"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:magento:2.4.6:p11:*:*:open_source:*:*:*",
+                    "matchCriteriaId": "AE724531-422D-4ABB-98F5-2C0B1BBEF031"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:magento:2.4.6:p12:*:*:open_source:*:*:*",
+                    "matchCriteriaId": "BB499397-0E40-45B0-A7E9-BEFCC909DD07"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:magento:2.4.6:p2:*:*:open_source:*:*:*",
+                    "matchCriteriaId": "02592D65-2D2C-460A-A970-8A18F9B156ED"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:magento:2.4.6:p3:*:*:open_source:*:*:*",
+                    "matchCriteriaId": "457B89CF-C75E-4ED6-8603-9C52BA462A9E"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:magento:2.4.6:p4:*:*:open_source:*:*:*",
+                    "matchCriteriaId": "A572A2DC-2DAB-4ABE-8FC2-5AF2340C826F"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:magento:2.4.6:p5:*:*:open_source:*:*:*",
+                    "matchCriteriaId": "2A2DD9C6-BAF5-4DF5-9C14-3478923B2019"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:magento:2.4.6:p6:*:*:open_source:*:*:*",
+                    "matchCriteriaId": "BA9CFC70-24CF-4DFA-AEF9-9B5A9DAF837D"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:magento:2.4.6:p7:*:*:open_source:*:*:*",
+                    "matchCriteriaId": "2AA0B806-ABB8-4C18-9F9C-8291BE208F52"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:magento:2.4.6:p8:*:*:open_source:*:*:*",
+                    "matchCriteriaId": "AA9D4DAB-7567-48D7-BE60-2A10B35CFF27"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:magento:2.4.6:p9:*:*:open_source:*:*:*",
+                    "matchCriteriaId": "A91E797D-63F6-4DE8-869C-AF0133DC6C03"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:magento:2.4.7:-:*:*:open_source:*:*:*",
+                    "matchCriteriaId": "0E06FE04-8844-4409-92D9-4972B47C921B"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:magento:2.4.7:b1:*:*:open_source:*:*:*",
+                    "matchCriteriaId": "99C620F3-40ED-4D7F-B6A1-205E948FD6F5"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:magento:2.4.7:b2:*:*:open_source:*:*:*",
+                    "matchCriteriaId": "FBCFE5FB-FAB7-4BF0-90AE-79F9590FD872"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:magento:2.4.7:beta3:*:*:open_source:*:*:*",
+                    "matchCriteriaId": "7EB4B9C5-513C-4039-8087-5E8880894318"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:magento:2.4.7:p1:*:*:open_source:*:*:*",
+                    "matchCriteriaId": "9C77154A-DBFE-48C3-A274-03075A0DB040"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:magento:2.4.7:p2:*:*:open_source:*:*:*",
+                    "matchCriteriaId": "F5AAC414-623C-444F-9BD5-EE0ACE2B2246"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:magento:2.4.7:p3:*:*:open_source:*:*:*",
+                    "matchCriteriaId": "8292888D-B0B0-4DF3-8719-EA4CDCAB39D1"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:magento:2.4.7:p4:*:*:open_source:*:*:*",
+                    "matchCriteriaId": "9830E074-FDCF-41E9-98C7-10C20424EF4C"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:magento:2.4.7:p5:*:*:open_source:*:*:*",
+                    "matchCriteriaId": "9D0C8648-B39E-47C7-AA5C-3AFED22F8D40"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:magento:2.4.7:p6:*:*:open_source:*:*:*",
+                    "matchCriteriaId": "082F8B60-ECC5-4C55-BBFE-A0C8A3E95590"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:magento:2.4.7:p7:*:*:open_source:*:*:*",
+                    "matchCriteriaId": "A7B83AD4-3134-414A-80E3-106C3C0F975A"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:magento:2.4.8:-:*:*:open_source:*:*:*",
+                    "matchCriteriaId": "00E8284F-10CD-449C-AEF1-688B8287292F"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:magento:2.4.8:beta1:*:*:open_source:*:*:*",
+                    "matchCriteriaId": "59C10C74-FDB1-46EC-8F41-F3AC24AEFB7D"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:magento:2.4.8:beta2:*:*:open_source:*:*:*",
+                    "matchCriteriaId": "2957B390-52C5-48D7-A6D7-709BC76B9C69"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:magento:2.4.8:p1:*:*:open_source:*:*:*",
+                    "matchCriteriaId": "524F64B6-F7F7-4926-884F-E9448636007C"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:magento:2.4.8:p2:*:*:open_source:*:*:*",
+                    "matchCriteriaId": "9F56F919-69B6-4A77-B8CE-F13409542F14"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:magento:2.4.9:alpha1:*:*:open_source:*:*:*",
+                    "matchCriteriaId": "E34849F7-54EE-4E4C-9184-3DE9C30E12AA"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:magento:2.4.9:alpha2:*:*:open_source:*:*:*",
+                    "matchCriteriaId": "4E21DFF0-9F15-44D2-B78A-097BF3ACD752"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://helpx.adobe.com/security/products/magento/apsb25-88.html",
+            "source": "psirt@adobe.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-27397",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://nullsecurityx.codes/cve-2025-54236-sessionreaper-unauthenticated-rce-in-magento",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Broken Link",
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2025-54236",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "US Government Resource"
+            ]
+          }
+        ]
+      },
+      "risk_score": 88,
+      "rank": 5
+    },
+    {
+      "cve_id": "CVE-2025-60548",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-10-24",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-10-24",
+        "description": "D-Link DIR600L Ax FW116WWb01 was discovered to contain a buffer overflow via the curTime parameter in the function formLanSetupRouterSettings.",
+        "title": "dlink dir-600l_firmware Buffer Overflow",
+        "vendor": "dlink",
+        "product": "dir-600l_firmware",
+        "attack_type": "Buffer Overflow",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-60548",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2025-10-24T16:17:45.117",
+        "lastModified": "2025-10-28T02:32:13.937",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "D-Link DIR600L Ax FW116WWb01 was discovered to contain a buffer overflow via the curTime parameter in the function formLanSetupRouterSettings."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-120"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:dlink:dir-600l_firmware:1.16wwb01:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "26C58719-CA17-439C-8A0C-349F6E2BB578"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:dlink:dir-600l:a1:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "F75E7D9C-03BE-4301-AF9E-9929C33F4EEA"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/luckysmallbird/DLINK-DIR600LAx-Vulnerability/blob/main/01-buffer%20overflow-formLanSetupRouterSettings.md",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 6
+    },
+    {
+      "cve_id": "CVE-2025-60553",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-10-24",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-10-24",
+        "description": "D-Link DIR600L Ax FW116WWb01 was discovered to contain a buffer overflow via the curTime parameter in the function formSetWAN_Wizard52.",
+        "title": "dlink dir-600l_firmware Buffer Overflow",
+        "vendor": "dlink",
+        "product": "dir-600l_firmware",
+        "attack_type": "Buffer Overflow",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-60553",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2025-10-24T16:20:07.420",
+        "lastModified": "2025-10-28T02:31:39.963",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "D-Link DIR600L Ax FW116WWb01 was discovered to contain a buffer overflow via the curTime parameter in the function formSetWAN_Wizard52."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-120"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:dlink:dir-600l_firmware:1.16wwb01:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "26C58719-CA17-439C-8A0C-349F6E2BB578"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:dlink:dir-600l:a1:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "F75E7D9C-03BE-4301-AF9E-9929C33F4EEA"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/luckysmallbird/DLINK-DIR600LAx-Vulnerability/blob/main/03-buffer%20overflow-formSetWAN_Wizard52.md",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 7
+    },
+    {
+      "cve_id": "CVE-2025-60554",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-10-24",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-10-24",
+        "description": "D-Link DIR600L Ax FW116WWb01 was discovered to contain a buffer overflow via the curTime parameter in the function formSetEnableWizard.",
+        "title": "dlink dir-600l_firmware Buffer Overflow",
+        "vendor": "dlink",
+        "product": "dir-600l_firmware",
+        "attack_type": "Buffer Overflow",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-60554",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2025-10-24T16:20:35.910",
+        "lastModified": "2025-10-28T02:31:20.300",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "D-Link DIR600L Ax FW116WWb01 was discovered to contain a buffer overflow via the curTime parameter in the function formSetEnableWizard."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-120"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:dlink:dir-600l_firmware:1.16wwb01:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "26C58719-CA17-439C-8A0C-349F6E2BB578"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:dlink:dir-600l:a1:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "F75E7D9C-03BE-4301-AF9E-9929C33F4EEA"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/luckysmallbird/DLINK-DIR600LAx-Vulnerability/blob/main/08-buffer%20overflow-formSetEnableWizard.md",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 8
+    },
+    {
+      "cve_id": "CVE-2025-60803",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-10-24",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-10-24",
+        "description": "Antabot White-Jotter up to commit 9bcadc was discovered to contain an unauthenticated remote code execution (RCE) vulnerability via the component /api/aaa;/../register.",
+        "title": "Antabot White-Jotter up to commit 9bcadc was discovered to contain an unauthenticated remote code execution (RCE) vulnerability via the c...",
+        "attack_type": "RCE",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-60803",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2025-10-24T16:26:38.883",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Antabot White-Jotter up to commit 9bcadc was discovered to contain an unauthenticated remote code execution (RCE) vulnerability via the component /api/aaa;/../register."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-78"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/Antabot/White-Jotter/issues/162",
+            "source": "cve@mitre.org"
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 9
+    },
+    {
+      "cve_id": "CVE-2025-6440",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-10-24",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-10-24",
+        "description": "The WooCommerce Designer Pro plugin for WordPress, used by the Pricom - Printing Company & Design Services WordPress theme, is vulnerable to arbitrary file uploads due to missing file type validation in the 'wcdp_save_canvas_design_ajax' function in all versions up to, and including, 1.9.26. This makes it possible for unauthenticated attackers to upload arbitrary files on the affected site's server which may make remote code execution possible.",
+        "title": "The WooCommerce Designer Pro plugin for WordPress, used by the Pricom - Printing Company & Design Services WordPress theme, is vulnerable...",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-6440",
+        "sourceIdentifier": "security@wordfence.com",
+        "published": "2025-10-24T08:15:34.750",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The WooCommerce Designer Pro plugin for WordPress, used by the Pricom - Printing Company & Design Services WordPress theme, is vulnerable to arbitrary file uploads due to missing file type validation in the 'wcdp_save_canvas_design_ajax' function in all versions up to, and including, 1.9.26. This makes it possible for unauthenticated attackers to upload arbitrary files on the affected site's server which may make remote code execution possible."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security@wordfence.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-434"
+              }
+            ],
+            "source": "security@wordfence.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://codecanyon.net/item/woocommerce-designer-pro-cmyk-card-flyer/22027731",
+            "source": "security@wordfence.com"
+          },
+          {
+            "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/cc2f8da1-7503-45e3-8a7d-0031ce264edf?source=cve",
+            "source": "security@wordfence.com"
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 10
+    },
+    {
+      "cve_id": "CVE-2025-8536",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-10-24",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-10-24",
+        "description": "A SQL injection vulnerability has been identified in DobryCMS. Improper neutralization of input provided by user into language functionality allows for SQL Injection attacks.\n\nThis issue affects older branches of this software.",
+        "title": "A SQL injection vulnerability has been identified in DobryCMS.",
+        "attack_type": "SQL Injection",
+        "cvss_max": 9.3
+      },
+      "cve": {
+        "id": "CVE-2025-8536",
+        "sourceIdentifier": "cvd@cert.pl",
+        "published": "2025-10-24T15:15:41.410",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A SQL injection vulnerability has been identified in DobryCMS. Improper neutralization of input provided by user into language functionality allows for SQL Injection attacks.\n\nThis issue affects older branches of this software."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "cvd@cert.pl",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-89"
+              }
+            ],
+            "source": "cvd@cert.pl"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://cert.pl/posts/2025/10/CVE-2025-8536",
+            "source": "cvd@cert.pl"
+          },
+          {
+            "url": "https://studiofabryka.pl/systemy_cms.html",
+            "source": "cvd@cert.pl"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 11
+    }
+  ],
+  "source": "https://www.cvelogic.com/threat-intelligence/2025-10-24"
+}

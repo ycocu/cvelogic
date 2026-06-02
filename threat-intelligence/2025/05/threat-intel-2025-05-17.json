@@ -1,0 +1,647 @@
+{
+  "schema_version": "2.2",
+  "generated_at": "2026-06-02T07:32:43Z",
+  "day": "2025-05-17",
+  "window": {
+    "utc_start": "2025-05-17",
+    "utc_end": "2025-05-17",
+    "days": 1
+  },
+  "summary": {
+    "brief": "WordPress plugin RCE/exploit activity: 2 CVEs flagged today. · 5 new critical disclosures — review patch status on exposed services.",
+    "bullets": [
+      "WordPress plugin RCE/exploit activity: 2 CVEs flagged today.",
+      "5 new critical disclosures — review patch status on exposed services."
+    ],
+    "counts": {
+      "cves": 5,
+      "kev": 0,
+      "exploit": 0,
+      "epss": 0,
+      "cvss": 5,
+      "patch": 0
+    }
+  },
+  "cves": [
+    {
+      "cve_id": "CVE-2025-4918",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-05-17",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-05-17",
+        "description": "An attacker was able to perform an out-of-bounds read or write on a JavaScript `Promise` object. This vulnerability was fixed in Firefox 138.0.4, Firefox ESR 128.10.1, Firefox ESR 115.23.1, Thunderbird 128.10.2, and Thunderbird 138.0.2.",
+        "title": "mozilla firefox Out-of-Bounds Write",
+        "vendor": "mozilla",
+        "product": "firefox",
+        "attack_type": "Out-of-Bounds Write",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-4918",
+        "sourceIdentifier": "security@mozilla.org",
+        "published": "2025-05-17T22:15:19.563",
+        "lastModified": "2026-04-13T15:17:01.407",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "An attacker was able to perform an out-of-bounds read or write on a JavaScript `Promise` object. This vulnerability was fixed in Firefox 138.0.4, Firefox ESR 128.10.1, Firefox ESR 115.23.1, Thunderbird 128.10.2, and Thunderbird 138.0.2."
+          },
+          {
+            "lang": "es",
+            "value": "Un atacante logró realizar una lectura o escritura fuera de los límites en un objeto \"Promise\" de JavaScript. Esta vulnerabilidad afecta a Firefox (versión anterior a 138.0.4), Firefox ESR (versión anterior a 128.10.1) y Firefox ESR (versión anterior a 115.23.1)."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-125"
+              },
+              {
+                "lang": "en",
+                "value": "CWE-787"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:mozilla:firefox:*:*:*:*:esr:*:*:*",
+                    "matchCriteriaId": "BD156D89-BD24-483A-A355-1B45A0A2E66F",
+                    "versionEndExcluding": "115.23.1"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:mozilla:firefox:*:*:*:*:-:*:*:*",
+                    "matchCriteriaId": "83AE9635-80D1-49DD-B7A5-8E4E235B1C87",
+                    "versionEndExcluding": "138.0.4"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:mozilla:firefox:*:*:*:*:esr:*:*:*",
+                    "matchCriteriaId": "7F2F0DE1-8619-4C18-83B0-46E543AE8E9E",
+                    "versionStartIncluding": "116.0",
+                    "versionEndExcluding": "128.10.1"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:mozilla:thunderbird:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "08FDB838-27AF-43C3-AC02-27C34ED5481A",
+                    "versionEndExcluding": "128.10.2"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:mozilla:thunderbird:*:*:*:*:-:*:*:*",
+                    "matchCriteriaId": "F76ABBB9-7E44-45A0-BEE9-81CD9C0A33ED",
+                    "versionStartIncluding": "138.0",
+                    "versionEndExcluding": "138.0.2"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://bugzilla.mozilla.org/show_bug.cgi?id=1966612",
+            "source": "security@mozilla.org",
+            "tags": [
+              "Permissions Required"
+            ]
+          },
+          {
+            "url": "https://www.mozilla.org/security/advisories/mfsa2025-36/",
+            "source": "security@mozilla.org",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://www.mozilla.org/security/advisories/mfsa2025-37/",
+            "source": "security@mozilla.org",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://www.mozilla.org/security/advisories/mfsa2025-38/",
+            "source": "security@mozilla.org",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://www.mozilla.org/security/advisories/mfsa2025-40/",
+            "source": "security@mozilla.org",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://www.mozilla.org/security/advisories/mfsa2025-41/",
+            "source": "security@mozilla.org",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://lists.debian.org/debian-lts-announce/2025/05/msg00024.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "https://lists.debian.org/debian-lts-announce/2025/05/msg00046.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "https://www.vicarius.io/vsociety/posts/cve-2025-4918-detect-firefox-out-of-bounds-write",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.vicarius.io/vsociety/posts/cve-2025-4918-mitigate-firefox-out-of-bounds-write",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 1
+    },
+    {
+      "cve_id": "CVE-2025-4389",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-05-17",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-05-17",
+        "description": "The Crawlomatic Multipage Scraper Post Generator plugin for WordPress is vulnerable to arbitrary file uploads due to missing file type validation in the crawlomatic_generate_featured_image() function in all versions up to, and including, 2.6.8.1. This makes it possible for unauthenticated attackers to upload arbitrary files on the affected site's server which may make remote code execution possible.",
+        "title": "The Crawlomatic Multipage Scraper Post Generator plugin for WordPress is vulnerable to arbitrary file uploads due to missing file type va...",
+        "attack_type": "RCE",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-4389",
+        "sourceIdentifier": "security@wordfence.com",
+        "published": "2025-05-17T06:15:18.980",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The Crawlomatic Multipage Scraper Post Generator plugin for WordPress is vulnerable to arbitrary file uploads due to missing file type validation in the crawlomatic_generate_featured_image() function in all versions up to, and including, 2.6.8.1. This makes it possible for unauthenticated attackers to upload arbitrary files on the affected site's server which may make remote code execution possible."
+          },
+          {
+            "lang": "es",
+            "value": "El complemento Crawlomatic Multipage Scraper Post Generator para WordPress es vulnerable a la carga de archivos arbitrarios debido a la falta de validación del tipo de archivo en la función crawlomatic_generate_featured_image() en todas las versiones hasta la 2.6.8.1 incluida. Esto permite que atacantes no autenticados carguen archivos arbitrarios en el servidor del sitio afectado, lo que podría posibilitar la ejecución remota de código."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security@wordfence.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-434"
+              }
+            ],
+            "source": "security@wordfence.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://codecanyon.net/item/crawlomatic-multisite-scraper-post-generator-plugin-for-wordpress/20476010",
+            "source": "security@wordfence.com"
+          },
+          {
+            "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/1283e839-8588-4a76-9c1e-61562526166d?source=cve",
+            "source": "security@wordfence.com"
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 2
+    },
+    {
+      "cve_id": "CVE-2025-4391",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-05-17",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-05-17",
+        "description": "The Echo RSS Feed Post Generator plugin for WordPress is vulnerable to arbitrary file uploads due to missing file type validation in the echo_generate_featured_image() function in all versions up to, and including, 5.4.8.1. This makes it possible for unauthenticated attackers to upload arbitrary files on the affected site's server which may make remote code execution possible.",
+        "title": "The Echo RSS Feed Post Generator plugin for WordPress is vulnerable to arbitrary file uploads due to missing file type validation in the...",
+        "attack_type": "RCE",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-4391",
+        "sourceIdentifier": "security@wordfence.com",
+        "published": "2025-05-17T06:15:19.140",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The Echo RSS Feed Post Generator plugin for WordPress is vulnerable to arbitrary file uploads due to missing file type validation in the echo_generate_featured_image() function in all versions up to, and including, 5.4.8.1. This makes it possible for unauthenticated attackers to upload arbitrary files on the affected site's server which may make remote code execution possible."
+          },
+          {
+            "lang": "es",
+            "value": "El complemento Echo RSS Feed Post Generator para WordPress es vulnerable a la carga de archivos arbitrarios debido a la falta de validación del tipo de archivo en la función echo_generate_featured_image() en todas las versiones hasta la 5.4.8.1 incluida. Esto permite que atacantes no autenticados carguen archivos arbitrarios en el servidor del sitio afectado, lo que podría posibilitar la ejecución remota de código."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security@wordfence.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-434"
+              }
+            ],
+            "source": "security@wordfence.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://codecanyon.net/item/echo-rss-feed-post-generator-plugin-for-wordpress/19486974",
+            "source": "security@wordfence.com"
+          },
+          {
+            "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/72de9f64-f3e0-4705-adc1-6c22076b382f?source=cve",
+            "source": "security@wordfence.com"
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 3
+    },
+    {
+      "cve_id": "CVE-2025-47945",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-05-17",
+          "previous_max": null,
+          "current_max": 9.1
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-05-17",
+        "description": "Donetick an open-source app for managing tasks and chores. Prior to version 0.1.44, the application uses JSON Web Tokens (JWT) for authentication, but the signing secret has a weak default value. While the responsibility is left to the system administrator to change it, this approach is inadequate. The vulnerability is proven by existence of the issue in the live version as well. This issue can result in full account takeover of any user. Version 0.1.44 contains a patch.",
+        "title": "donetick donetick",
+        "vendor": "donetick",
+        "product": "donetick",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-47945",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2025-05-17T19:15:46.523",
+        "lastModified": "2025-06-12T16:28:42.797",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Donetick an open-source app for managing tasks and chores. Prior to version 0.1.44, the application uses JSON Web Tokens (JWT) for authentication, but the signing secret has a weak default value. While the responsibility is left to the system administrator to change it, this approach is inadequate. The vulnerability is proven by existence of the issue in the live version as well. This issue can result in full account takeover of any user. Version 0.1.44 contains a patch."
+          },
+          {
+            "lang": "es",
+            "value": "Donetick es una aplicación de código abierto para la gestión de tareas. Antes de la versión 0.1.44, la aplicación utilizaba tokens web JSON (JWT) para la autenticación, pero el secreto de firma tenía un valor predeterminado débil. Si bien el administrador del sistema es responsable de modificarlo, este enfoque es inadecuado. La vulnerabilidad se demuestra por la existencia del problema también en la versión en línea. Este problema puede provocar el robo total de la cuenta de cualquier usuario. La versión 0.1.44 incluye un parche."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+                "baseScore": 9.1,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.2
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-453"
+              },
+              {
+                "lang": "en",
+                "value": "CWE-1188"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          },
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-1188"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:donetick:donetick:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "1721F29D-44CC-44EC-8C7F-77E3A063F83B",
+                    "versionEndExcluding": "0.1.44"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/donetick/donetick/commit/620b897bc0135f6668bb8a5562678104531108eb",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://github.com/donetick/donetick/commit/b9a6e177eefdc605dedbc5320f0d93d6573d1db6",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://github.com/donetick/donetick/security/advisories/GHSA-hjjg-vw4j-986x",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Exploit",
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 4
+    },
+    {
+      "cve_id": "CVE-2025-48187",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-05-17",
+          "previous_max": null,
+          "current_max": 9.1
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-05-17",
+        "description": "RAGFlow through 0.18.1 allows account takeover because it is possible to conduct successful brute-force attacks against email verification codes to perform arbitrary account registration, login, and password reset. Codes are six digits and there is no rate limiting.",
+        "title": "infiniflow ragflow",
+        "vendor": "infiniflow",
+        "product": "ragflow",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-48187",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2025-05-17T13:15:47.750",
+        "lastModified": "2025-06-12T16:29:12.860",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "RAGFlow through 0.18.1 allows account takeover because it is possible to conduct successful brute-force attacks against email verification codes to perform arbitrary account registration, login, and password reset. Codes are six digits and there is no rate limiting."
+          },
+          {
+            "lang": "es",
+            "value": "RAGFlow, hasta la versión 0.18.1, permite el robo de cuentas, ya que es posible realizar ataques de fuerza bruta contra códigos de verificación de correo electrónico para realizar registros, inicios de sesión y restablecimientos de contraseña arbitrarios. Los códigos tienen seis dígitos y no tienen límite de velocidad."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+                "baseScore": 9.1,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "cve@mitre.org",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.2
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-307"
+              }
+            ],
+            "source": "cve@mitre.org"
+          },
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "NVD-CWE-noinfo"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:infiniflow:ragflow:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "0DBC5B6A-6597-43FA-8B39-591F0DF844D2",
+                    "versionEndIncluding": "0.18.1"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/infiniflow/ragflow/commits/main/",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://www.cnblogs.com/qiushuo/p/18881084",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Exploit"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 5
+    }
+  ],
+  "source": "https://www.cvelogic.com/threat-intelligence/2025-05-17"
+}

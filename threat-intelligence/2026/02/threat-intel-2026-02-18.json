@@ -1,0 +1,2436 @@
+{
+  "schema_version": "2.2",
+  "generated_at": "2026-06-02T07:34:27Z",
+  "day": "2026-02-18",
+  "window": {
+    "utc_start": "2026-02-18",
+    "utc_end": "2026-02-18",
+    "days": 1
+  },
+  "summary": {
+    "brief": "Dell RecoverPoint For Virtual Machines (RP4VMs) added to CISA KEV — confirmed in-the-wild exploitation. · Dlink Dir-822\\+ Firmware — exploitation likelihood rose sharply (EPSS 5.4% → 54% · rising (+48%)). · 10 new critical disclosures — review patch status on exposed services.",
+    "bullets": [
+      "Dell RecoverPoint For Virtual Machines (RP4VMs) added to CISA KEV — confirmed in-the-wild exploitation.",
+      "Dlink Dir-822\\+ Firmware — exploitation likelihood rose sharply (EPSS 5.4% → 54% · rising (+48%)).",
+      "10 new critical disclosures — review patch status on exposed services."
+    ],
+    "counts": {
+      "cves": 18,
+      "kev": 2,
+      "exploit": 0,
+      "epss": 6,
+      "cvss": 10,
+      "patch": 0
+    }
+  },
+  "cves": [
+    {
+      "cve_id": "CVE-2021-22175",
+      "signal_types": [
+        "KEV"
+      ],
+      "signals": {
+        "kev": {
+          "date_added": "2026-02-18"
+        },
+        "exploit": null,
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2021-06-11",
+        "description": "When requests to the internal network for webhooks are enabled, a server-side request forgery vulnerability in GitLab affecting all versions starting from 10.5 was possible to exploit for an unauthenticated attacker even on a GitLab instance where registration is disabled",
+        "title": "GitLab Server-Side Request Forgery (SSRF) Vulnerability",
+        "vendor": "gitlab",
+        "product": "gitlab",
+        "attack_type": "SSRF",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2021-22175",
+        "sourceIdentifier": "cve@gitlab.com",
+        "published": "2021-06-11T16:15:09.023",
+        "lastModified": "2026-02-20T02:00:02.830",
+        "vulnStatus": "Analyzed",
+        "cisaExploitAdd": "2026-02-18",
+        "cisaActionDue": "2026-03-11",
+        "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+        "cisaVulnerabilityName": "GitLab Server-Side Request Forgery (SSRF) Vulnerability",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "When requests to the internal network for webhooks are enabled, a server-side request forgery vulnerability in GitLab affecting all versions starting from 10.5 was possible to exploit for an unauthenticated attacker even on a GitLab instance where registration is disabled"
+          },
+          {
+            "lang": "es",
+            "value": "Cuando se habilitan las peticiones a la red interna para los webhooks, una vulnerabilidad de tipo server-side request forgery en GitLab que afecta a todas las versiones desde 10.5, era posible explotar por un atacante no autenticado incluso en una instancia de GitLab en la que el registro está deshabilitado"
+          }
+        ],
+        "metrics": {
+          "cvssMetricV2": [
+            {
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+                "baseScore": 6.8,
+                "baseSeverity": "MEDIUM"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "baseSeverity": "MEDIUM",
+              "exploitabilityScore": 8.6,
+              "impactScore": 6.4
+            }
+          ],
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:N/A:N",
+                "baseScore": 6.8,
+                "baseSeverity": "MEDIUM"
+              },
+              "source": "cve@gitlab.com",
+              "type": "Secondary",
+              "exploitabilityScore": 2.2,
+              "impactScore": 4.0
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-918"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          },
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-918"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:gitlab:gitlab:*:*:*:*:community:*:*:*",
+                    "matchCriteriaId": "DE63DB65-205A-4ED6-8B6C-2B2B33F1E757",
+                    "versionStartIncluding": "10.5.0",
+                    "versionEndExcluding": "13.6.7"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*",
+                    "matchCriteriaId": "C3B65808-C140-43B2-8264-56A1BCE86A86",
+                    "versionStartIncluding": "10.5.0",
+                    "versionEndExcluding": "13.6.7"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:gitlab:gitlab:*:*:*:*:community:*:*:*",
+                    "matchCriteriaId": "4BBAF21A-84DD-4987-B4BE-2A8CAA44210A",
+                    "versionStartIncluding": "13.7.0",
+                    "versionEndExcluding": "13.7.7"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*",
+                    "matchCriteriaId": "9AE735A5-FC67-4B16-B27B-86C51C8771C1",
+                    "versionStartIncluding": "13.7.0",
+                    "versionEndExcluding": "13.7.7"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:gitlab:gitlab:*:*:*:*:community:*:*:*",
+                    "matchCriteriaId": "D3009669-C930-4517-914D-5DB9A0E40B59",
+                    "versionStartIncluding": "13.8.0",
+                    "versionEndExcluding": "13.8.4"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:gitlab:gitlab:*:*:*:*:enterprise:*:*:*",
+                    "matchCriteriaId": "9F7976E8-BDA5-4104-AC3E-38C02CC613A7",
+                    "versionStartIncluding": "13.8.0",
+                    "versionEndExcluding": "13.8.4"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://gitlab.com/gitlab-org/cves/-/blob/master/2021/CVE-2021-22175.json",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://gitlab.com/gitlab-org/gitlab/-/issues/294178",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit",
+              "Issue Tracking",
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://hackerone.com/reports/1059596",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Permissions Required",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2021-22175",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "US Government Resource"
+            ]
+          }
+        ]
+      },
+      "risk_score": 88,
+      "rank": 1
+    },
+    {
+      "cve_id": "CVE-2024-33344",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 0.05381,
+            "score_date": "2025-11-21"
+          },
+          "current": {
+            "score": 0.53688,
+            "score_date": "2026-02-18"
+          },
+          "delta": 0.48307
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2024-04-26",
+        "description": "D-Link DIR-822+ V1.0.5 was found to contain a command injection in ftext function of upload_firmware.cgi, which allows remote attackers to execute arbitrary commands via shell.",
+        "title": "dlink dir-822\\+_firmware Command Injection",
+        "vendor": "dlink",
+        "product": "dir-822\\+_firmware",
+        "attack_type": "Command Injection",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2024-33344",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2024-04-26T18:15:46.467",
+        "lastModified": "2025-05-21T12:51:29.240",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "D-Link DIR-822+ V1.0.5 was found to contain a command injection in ftext function of upload_firmware.cgi, which allows remote attackers to execute arbitrary commands via shell."
+          },
+          {
+            "lang": "es",
+            "value": "Se descubrió que D-Link DIR-822+ V1.0.5 contiene una inyección de comando en la función ftext de upload_firmware.cgi, que permite a atacantes remotos ejecutar comandos arbitrarios a través de shell."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-77"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:dlink:dir-822\\+_firmware:1.05:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "29A96BE3-BB6E-467A-BD5A-0BBD9F1371F4"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:dlink:dir-822\\+:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "F25E1113-0D62-445B-B468-F49C715126F9"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "http://www.dlink.com.cn/techsupport/ProductInfo.aspx?m=DIR-822%2B",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Product"
+            ]
+          },
+          {
+            "url": "https://github.com/n0wstr/IOTVuln/tree/main/DIR-822%2B/UploadFirmware",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 86,
+      "rank": 2
+    },
+    {
+      "cve_id": "CVE-2025-14009",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-02-18",
+          "previous_max": null,
+          "current_max": 10.0
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-02-18",
+        "description": "A critical vulnerability exists in the NLTK downloader component of nltk/nltk, affecting all versions. The _unzip_iter function in nltk/downloader.py uses zipfile.extractall() without performing path validation or security checks. This allows attackers to craft malicious zip packages that, when downloaded and extracted by NLTK, can execute arbitrary code. The vulnerability arises because NLTK assumes all downloaded packages are trusted and extracts them without validation. If a malicious package contains Python files, such as __init__.py, these files are executed automatically upon import, leading to remote code execution. This issue can result in full system compromise, including file system access, network access, and potential persistence mechanisms.",
+        "title": "nltk nltk",
+        "vendor": "nltk",
+        "product": "nltk",
+        "cvss_max": 10.0
+      },
+      "cve": {
+        "id": "CVE-2025-14009",
+        "sourceIdentifier": "security@huntr.dev",
+        "published": "2026-02-18T18:24:19.410",
+        "lastModified": "2026-03-06T21:23:46.287",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A critical vulnerability exists in the NLTK downloader component of nltk/nltk, affecting all versions. The _unzip_iter function in nltk/downloader.py uses zipfile.extractall() without performing path validation or security checks. This allows attackers to craft malicious zip packages that, when downloaded and extracted by NLTK, can execute arbitrary code. The vulnerability arises because NLTK assumes all downloaded packages are trusted and extracts them without validation. If a malicious package contains Python files, such as __init__.py, these files are executed automatically upon import, leading to remote code execution. This issue can result in full system compromise, including file system access, network access, and potential persistence mechanisms."
+          },
+          {
+            "lang": "es",
+            "value": "Una vulnerabilidad crítica existe en el componente de descarga de NLTK de nltk/nltk, que afecta a todas las versiones. La función _unzip_iter en nltk/downloader.py utiliza zipfile.extractall() sin realizar validación de rutas o comprobaciones de seguridad. Esto permite a los atacantes crear paquetes zip maliciosos que, al ser descargados y extraídos por NLTK, pueden ejecutar código arbitrario. La vulnerabilidad surge porque NLTK asume que todos los paquetes descargados son de confianza y los extrae sin validación. Si un paquete malicioso contiene archivos Python, como __init__.py, estos archivos se ejecutan automáticamente al importarlos, lo que lleva a la ejecución remota de código. Este problema puede resultar en un compromiso total del sistema, incluyendo acceso al sistema de archivos, acceso a la red y posibles mecanismos de persistencia."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV30": [
+            {
+              "cvssData": {
+                "version": "3.0",
+                "vectorString": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+                "baseScore": 10.0,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security@huntr.dev",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 6.0
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-94"
+              }
+            ],
+            "source": "security@huntr.dev"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nltk:nltk:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "22061B61-87EB-4006-8152-23CD3514C2AE",
+                    "versionEndExcluding": "3.9.3"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://huntr.com/bounties/49ecbc02-054e-4470-b2e0-b267936cc4e4",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 3
+    },
+    {
+      "cve_id": "CVE-2012-5861",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 0.03685,
+            "score_date": "2025-11-27"
+          },
+          "current": {
+            "score": 0.1381,
+            "score_date": "2026-02-18"
+          },
+          "delta": 0.10125
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2012-11-23",
+        "description": "These Sinapsi devices do not check the validity of the data before \nexecuting queries. By accessing the SQL table of certain pages that do \nnot require authentication within the device, attackers can leak \ninformation from the device. This could allow the attacker to compromise\n confidentiality.",
+        "title": "sinapsitech esolar_duo_photovoltaic_system_monitor SQL injection",
+        "vendor": "sinapsitech",
+        "product": "sinapsi_firmware",
+        "attack_type": "SQL injection",
+        "cvss_max": 7.8
+      },
+      "cve": {
+        "id": "CVE-2012-5861",
+        "sourceIdentifier": "ics-cert@hq.dhs.gov",
+        "published": "2012-11-23T12:09:58.367",
+        "lastModified": "2026-04-29T01:13:23.040",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "These Sinapsi devices do not check the validity of the data before \nexecuting queries. By accessing the SQL table of certain pages that do \nnot require authentication within the device, attackers can leak \ninformation from the device. This could allow the attacker to compromise\n confidentiality."
+          },
+          {
+            "lang": "es",
+            "value": "Vulnerabilidad de inyección SQL en el Sinapsi eSolar Light Photovoltaic System Monitor (también conocido como servidor de gestión Schneider Electric Ezylog photovoltaic SCADA ), Sinapsi eSolar, y Sinapsi eSolar DUO con firmware anterior a v2.0.2870_2.2.12 permite a atacantes remotos ejecutar comandos SQL de su elección a través de (1) el parámetro inverterselect en una acción primo para dettagliinverter.php o (2) el parámetro lingua para changelanguagesession.php."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV2": [
+            {
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:L/Au:N/C:C/I:N/A:N",
+                "baseScore": 7.8,
+                "baseSeverity": "HIGH"
+              },
+              "source": "ics-cert@hq.dhs.gov",
+              "type": "Secondary",
+              "baseSeverity": "HIGH",
+              "exploitabilityScore": 10.0,
+              "impactScore": 6.9
+            },
+            {
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+                "baseScore": 7.5,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "baseSeverity": "HIGH",
+              "exploitabilityScore": 10.0,
+              "impactScore": 6.4
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-89"
+              }
+            ],
+            "source": "ics-cert@hq.dhs.gov"
+          },
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-89"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:sinapsitech:sinapsi_firmware:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "382C527D-16D4-4557-8E68-C4430416DB57",
+                    "versionEndIncluding": "2.0.2870"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:sinapsitech:esolar_duo_photovoltaic_system_monitor:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "BF238DD2-D119-4652-B63B-9321DFB01A90"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:sinapsitech:esolar_light_photovoltaic_system_monitor:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "C00B699F-DE3B-4371-B814-DE54038C60A0"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:sinapsitech:esolar_photovoltaic_system_monitor:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "288B1E9C-52C3-4ACC-807D-F650B850D874"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "http://archives.neohapsis.com/archives/bugtraq/2012-09/0045.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit"
+            ]
+          },
+          {
+            "url": "http://www.exploit-db.com/exploits/21273/",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit"
+            ]
+          },
+          {
+            "url": "http://www.sinapsitech.it/default.asp?active_page_id=78&news_id=88",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "https://exchange.xforce.ibmcloud.com/vulnerabilities/80200",
+            "source": "ics-cert@hq.dhs.gov"
+          },
+          {
+            "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-12-325-01",
+            "source": "ics-cert@hq.dhs.gov"
+          },
+          {
+            "url": "http://www.us-cert.gov/control_systems/pdf/ICSA-12-325-01.pdf",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "US Government Resource"
+            ]
+          },
+          {
+            "url": "https://exchange.xforce.ibmcloud.com/vulnerabilities/80201",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          }
+        ]
+      },
+      "risk_score": 80,
+      "rank": 4
+    },
+    {
+      "cve_id": "CVE-2016-3261",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 0.16642,
+            "score_date": "2026-01-29"
+          },
+          "current": {
+            "score": 0.36666,
+            "score_date": "2026-02-18"
+          },
+          "delta": 0.20024
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2016-07-13",
+        "description": "Microsoft Internet Explorer 11 allows remote attackers to obtain sensitive information via a crafted web site, aka \"Internet Explorer Information Disclosure Vulnerability.\"",
+        "title": "microsoft internet_explorer Info Disclosure",
+        "vendor": "microsoft",
+        "product": "internet_explorer",
+        "attack_type": "Info Disclosure",
+        "cvss_max": 5.3
+      },
+      "cve": {
+        "id": "CVE-2016-3261",
+        "sourceIdentifier": "secure@microsoft.com",
+        "published": "2016-07-13T01:59:22.000",
+        "lastModified": "2026-05-06T22:30:45.220",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Microsoft Internet Explorer 11 allows remote attackers to obtain sensitive information via a crafted web site, aka \"Internet Explorer Information Disclosure Vulnerability.\""
+          },
+          {
+            "lang": "es",
+            "value": "Microsoft Internet Explorer 11 permite a atacantes remotos obtener información sensible a través de un sitio web manipulado, también conocido como \"Internet Explorer Information Disclosure Vulnerability\"."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV2": [
+            {
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:H/Au:N/C:P/I:N/A:N",
+                "baseScore": 2.6,
+                "baseSeverity": "LOW"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "baseSeverity": "LOW",
+              "exploitabilityScore": 4.9,
+              "impactScore": 2.9
+            }
+          ],
+          "cvssMetricV30": [
+            {
+              "cvssData": {
+                "version": "3.0",
+                "vectorString": "CVSS:3.0/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:N/A:N",
+                "baseScore": 5.3,
+                "baseSeverity": "MEDIUM"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 1.6,
+              "impactScore": 3.6
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-200"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:microsoft:internet_explorer:11:-:*:*:*:*:*:*",
+                    "matchCriteriaId": "D7809F78-8D56-4925-A8F9-4119B973A667"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "http://www.securityfocus.com/bid/91575",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://www.securitytracker.com/id/1036283",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "https://docs.microsoft.com/en-us/security-updates/securitybulletins/2016/ms16-084",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          }
+        ]
+      },
+      "risk_score": 79,
+      "rank": 5
+    },
+    {
+      "cve_id": "CVE-2016-3277",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 0.14211,
+            "score_date": "2026-01-29"
+          },
+          "current": {
+            "score": 0.32531,
+            "score_date": "2026-02-18"
+          },
+          "delta": 0.1832
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2016-07-13",
+        "description": "Microsoft Internet Explorer 10 and 11 and Microsoft Edge allow remote attackers to obtain sensitive information via a crafted web site, aka \"Microsoft Browser Information Disclosure Vulnerability.\"",
+        "title": "microsoft edge Info Disclosure",
+        "vendor": "microsoft",
+        "product": "edge",
+        "attack_type": "Info Disclosure",
+        "cvss_max": 5.3
+      },
+      "cve": {
+        "id": "CVE-2016-3277",
+        "sourceIdentifier": "secure@microsoft.com",
+        "published": "2016-07-13T01:59:31.453",
+        "lastModified": "2026-05-06T22:30:45.220",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Microsoft Internet Explorer 10 and 11 and Microsoft Edge allow remote attackers to obtain sensitive information via a crafted web site, aka \"Microsoft Browser Information Disclosure Vulnerability.\""
+          },
+          {
+            "lang": "es",
+            "value": "Microsoft Internet Explorer 10 y 11 y Microsoft Edge permiten a atacantes remotos obtener información sensible a través de un sitio web manipulado, también conocida como \"Microsoft Browser Information Disclosure Vulnerability\"."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV2": [
+            {
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:H/Au:N/C:P/I:N/A:N",
+                "baseScore": 2.6,
+                "baseSeverity": "LOW"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "baseSeverity": "LOW",
+              "exploitabilityScore": 4.9,
+              "impactScore": 2.9
+            }
+          ],
+          "cvssMetricV30": [
+            {
+              "cvssData": {
+                "version": "3.0",
+                "vectorString": "CVSS:3.0/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:N/A:N",
+                "baseScore": 5.3,
+                "baseSeverity": "MEDIUM"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 1.6,
+              "impactScore": 3.6
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-200"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:microsoft:edge:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "77D197D7-57FB-4898-8C70-B19D5F0D5BE0"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:microsoft:internet_explorer:10:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "D5808661-A082-4CBE-808C-B253972487B4"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:microsoft:internet_explorer:11:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "15BAAA8C-7AF1-46CE-9FFB-3A498508A1BF"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "http://www.securityfocus.com/bid/91596",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://www.securitytracker.com/id/1036283",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "https://docs.microsoft.com/en-us/security-updates/securitybulletins/2016/ms16-084",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "https://docs.microsoft.com/en-us/security-updates/securitybulletins/2016/ms16-085",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          }
+        ]
+      },
+      "risk_score": 79,
+      "rank": 6
+    },
+    {
+      "cve_id": "CVE-2019-25362",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-02-18",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-02-18",
+        "description": "WMV to AVI MPEG DVD WMV Convertor 4.6.1217 contains a buffer overflow vulnerability that allows attackers to execute arbitrary code by overwriting the license name and license code fields. Attackers can craft a malicious payload of 6000 bytes to trigger a bind shell on port 4444 by exploiting a stack-based buffer overflow in the application's input handling.",
+        "title": "alloksoft wmv_to_avi_mpeg_dvd_wmv_convertor Buffer Overflow",
+        "vendor": "alloksoft",
+        "product": "wmv_to_avi_mpeg_dvd_wmv_convertor",
+        "attack_type": "Buffer Overflow",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2019-25362",
+        "sourceIdentifier": "disclosure@vulncheck.com",
+        "published": "2026-02-18T22:16:21.903",
+        "lastModified": "2026-02-27T15:17:47.687",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "WMV to AVI MPEG DVD WMV Convertor 4.6.1217 contains a buffer overflow vulnerability that allows attackers to execute arbitrary code by overwriting the license name and license code fields. Attackers can craft a malicious payload of 6000 bytes to trigger a bind shell on port 4444 by exploiting a stack-based buffer overflow in the application's input handling."
+          },
+          {
+            "lang": "es",
+            "value": "WMV to AVI MPEG DVD WMV Convertor 4.6.1217 contiene una vulnerabilidad de desbordamiento de búfer que permite a los atacantes ejecutar código arbitrario sobrescribiendo los campos de nombre de licencia y código de licencia. Los atacantes pueden crear una carga útil maliciosa de 6000 bytes para activar un bind shell en el puerto 4444 explotando un desbordamiento de búfer basado en pila en el manejo de entrada de la aplicación."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-787"
+              }
+            ],
+            "source": "disclosure@vulncheck.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:alloksoft:wmv_to_avi_mpeg_dvd_wmv_convertor:4.6.1217:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "8DDF3DAE-90DA-4DEE-BB48-A3613D511885"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://www.alloksoft.com/",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Not Applicable",
+              "URL Repurposed"
+            ]
+          },
+          {
+            "url": "https://www.alloksoft.com/wmv.htm",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Not Applicable",
+              "URL Repurposed"
+            ]
+          },
+          {
+            "url": "https://www.exploit-db.com/exploits/47563",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Exploit",
+              "VDB Entry"
+            ]
+          },
+          {
+            "url": "https://www.exploit-db.com/exploits/47568",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Exploit",
+              "VDB Entry"
+            ]
+          },
+          {
+            "url": "https://www.vulncheck.com/advisories/wmv-to-avi-mpeg-dvd-wmv-convertor-buffer-overflow",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 7
+    },
+    {
+      "cve_id": "CVE-2019-25364",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-02-18",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-02-18",
+        "description": "MailCarrier 2.51 contains a buffer overflow vulnerability in the POP3 USER command that allows remote attackers to execute arbitrary code. Attackers can send a crafted oversized buffer to the POP3 service, overwriting memory and potentially gaining remote system access.",
+        "title": "tabslab mailcarrier Buffer Overflow",
+        "vendor": "tabslab",
+        "product": "mailcarrier",
+        "attack_type": "Buffer Overflow",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2019-25364",
+        "sourceIdentifier": "disclosure@vulncheck.com",
+        "published": "2026-02-18T22:16:22.260",
+        "lastModified": "2026-02-24T20:41:08.130",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "MailCarrier 2.51 contains a buffer overflow vulnerability in the POP3 USER command that allows remote attackers to execute arbitrary code. Attackers can send a crafted oversized buffer to the POP3 service, overwriting memory and potentially gaining remote system access."
+          },
+          {
+            "lang": "es",
+            "value": "MailCarrier 2.51 contiene una vulnerabilidad de desbordamiento de búfer en el comando POP3 USER que permite a atacantes remotos ejecutar código arbitrario. Los atacantes pueden enviar un búfer sobredimensionado y manipulado al servicio POP3, sobrescribiendo la memoria y potencialmente obteniendo acceso remoto al sistema."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-121"
+              }
+            ],
+            "source": "disclosure@vulncheck.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:tabslab:mailcarrier:2.51:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "3CC3C96F-8B9B-41D9-A99B-CE9BA1E24F47"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://www.exploit-db.com/exploits/47554",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.tabslab.com/",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Product"
+            ]
+          },
+          {
+            "url": "https://www.vulncheck.com/advisories/win-mailcarrier-pop-user-remote-buffer-overflow",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Broken Link"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 8
+    },
+    {
+      "cve_id": "CVE-2024-4325",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 0.4767,
+            "score_date": "2025-11-21"
+          },
+          "current": {
+            "score": 0.65093,
+            "score_date": "2026-02-18"
+          },
+          "delta": 0.17423
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2024-06-06",
+        "description": "A Server-Side Request Forgery (SSRF) vulnerability exists in the gradio-app/gradio version 4.21.0, specifically within the `/queue/join` endpoint and the `save_url_to_cache` function. The vulnerability arises when the `path` value, obtained from the user and expected to be a URL, is used to make an HTTP request without sufficient validation checks. This flaw allows an attacker to send crafted requests that could lead to unauthorized access to the local network or the AWS metadata endpoint, thereby compromising the security of internal servers.",
+        "title": "gradio_project gradio SSRF",
+        "vendor": "gradio_project",
+        "product": "gradio",
+        "attack_type": "SSRF",
+        "cvss_max": 8.6
+      },
+      "cve": {
+        "id": "CVE-2024-4325",
+        "sourceIdentifier": "security@huntr.dev",
+        "published": "2024-06-06T18:15:18.300",
+        "lastModified": "2024-11-21T09:42:37.733",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A Server-Side Request Forgery (SSRF) vulnerability exists in the gradio-app/gradio version 4.21.0, specifically within the `/queue/join` endpoint and the `save_url_to_cache` function. The vulnerability arises when the `path` value, obtained from the user and expected to be a URL, is used to make an HTTP request without sufficient validation checks. This flaw allows an attacker to send crafted requests that could lead to unauthorized access to the local network or the AWS metadata endpoint, thereby compromising the security of internal servers."
+          },
+          {
+            "lang": "es",
+            "value": "Existe una vulnerabilidad de Server-Side Request Forgery (SSRF) en gradio-app/gradio versión 4.21.0, específicamente dentro del endpoint `/queue/join` y la función `save_url_to_cache`. La vulnerabilidad surge cuando el valor de \"ruta\", obtenido del usuario y que se espera que sea una URL, se utiliza para realizar una solicitud HTTP sin suficientes comprobaciones de validación. Esta falla permite a un atacante enviar solicitudes manipuladas que podrían conducir a un acceso no autorizado a la red local o al endpoint de metadatos de AWS, comprometiendo así la seguridad de los servidores internos."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV30": [
+            {
+              "cvssData": {
+                "version": "3.0",
+                "vectorString": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:N",
+                "baseScore": 8.6,
+                "baseSeverity": "HIGH"
+              },
+              "source": "security@huntr.dev",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 4.0
+            }
+          ],
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:N",
+                "baseScore": 8.6,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 4.0
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-918"
+              }
+            ],
+            "source": "security@huntr.dev"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:gradio_project:gradio:*:*:*:*:*:python:*:*",
+                    "matchCriteriaId": "2FBC4B4D-0916-4DB0-A8C6-2F91A26EFF5E",
+                    "versionEndExcluding": "4.41.0"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://huntr.com/bounties/b34f084b-7d14-4f00-bc10-048a3a5aaf88",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 84,
+      "rank": 9
+    },
+    {
+      "cve_id": "CVE-2024-52765",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 0.03869,
+            "score_date": "2026-02-15"
+          },
+          "current": {
+            "score": 0.38573,
+            "score_date": "2026-02-18"
+          },
+          "delta": 0.34704
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2024-11-20",
+        "description": "H3C GR-1800AX MiniGRW1B0V100R007 is vulnerable to remote code execution (RCE) via the aspForm parameter.",
+        "title": "h3c gr-1800ax_firmware RCE",
+        "vendor": "h3c",
+        "product": "gr-1800ax_firmware",
+        "attack_type": "RCE",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2024-52765",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2024-11-20T21:15:08.783",
+        "lastModified": "2025-03-13T14:15:33.100",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "H3C GR-1800AX MiniGRW1B0V100R007 is vulnerable to remote code execution (RCE) via the aspForm parameter."
+          },
+          {
+            "lang": "es",
+            "value": "H3C GR-1800AX MiniGRW1B0V100R007 es vulnerable a la ejecución remota de código (RCE) a través del parámetro aspForm."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "NVD-CWE-noinfo"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          },
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-94"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:h3c:gr-1800ax_firmware:minigrw1b0v100r007:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "E84CC346-F77A-414F-A96B-C4621444B466"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:h3c:gr-1800ax:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "435BF35B-1867-48E5-BC8C-3F868E9B419B"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "http://tjr181.com/2024/11/08/H3C%20GR-1800AX/",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 86,
+      "rank": 10
+    },
+    {
+      "cve_id": "CVE-2025-70150",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-02-18",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-02-18",
+        "description": "CodeAstro Membership Management System 1.0 contains a missing authentication vulnerability in delete_members.php that allows unauthenticated attackers to delete arbitrary member records via the id parameter.",
+        "title": "codeastro membership_management_system",
+        "vendor": "codeastro",
+        "product": "membership_management_system",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-70150",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2026-02-18T18:24:20.040",
+        "lastModified": "2026-02-23T16:13:10.940",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "CodeAstro Membership Management System 1.0 contains a missing authentication vulnerability in delete_members.php that allows unauthenticated attackers to delete arbitrary member records via the id parameter."
+          },
+          {
+            "lang": "es",
+            "value": "El Sistema de Gestión de Membresías CodeAstro 1.0 contiene una vulnerabilidad de autenticación faltante en delete_members.php que permite a atacantes no autenticados eliminar registros de miembros arbitrarios a través del parámetro id."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "cve@mitre.org",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-862"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:codeastro:membership_management_system:1.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "3A341555-1CAF-480B-978A-9AE299540FA3"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://www.phpscriptsonline.com/product/membership-management-software",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Product"
+            ]
+          },
+          {
+            "url": "https://youngkevinn.github.io/posts/CVE-2025-70150-Membership-Unauth-Delete/",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Exploit",
+              "Mitigation",
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 11
+    },
+    {
+      "cve_id": "CVE-2025-70152",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-02-18",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-02-18",
+        "description": "code-projects Community Project Scholars Tracking System 1.0 is vulnerable to SQL Injection in the admin user management endpoints /admin/save_user.php and /admin/update_user.php. These endpoints lack authentication checks and directly concatenate user-supplied POST parameters (firstname, lastname, username, password, user_id) into SQL queries without validation or parameterization.",
+        "title": "fabian scholars_tracking_system SQL Injection",
+        "vendor": "fabian",
+        "product": "scholars_tracking_system",
+        "attack_type": "SQL Injection",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-70152",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2026-02-18T18:24:21.530",
+        "lastModified": "2026-02-23T17:54:31.543",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "code-projects Community Project Scholars Tracking System 1.0 is vulnerable to SQL Injection in the admin user management endpoints /admin/save_user.php and /admin/update_user.php. These endpoints lack authentication checks and directly concatenate user-supplied POST parameters (firstname, lastname, username, password, user_id) into SQL queries without validation or parameterization."
+          },
+          {
+            "lang": "es",
+            "value": "code-projects Community Project Scholars Tracking System 1.0 es vulnerable a inyección SQL en los endpoints de administración de gestión de usuarios /admin/save_user.php y /admin/update_user.php. Estos endpoints carecen de comprobaciones de autenticación y concatenan directamente parámetros POST proporcionados por el usuario (firstname, lastname, username, password, user_id) en consultas SQL sin validación ni parametrización."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "cve@mitre.org",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-89"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:fabian:scholars_tracking_system:1.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "181B8F36-C4C5-4F67-AC1F-79162D790489"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://code-projects.org/scholars-tracking-system-in-php-with-source-code/",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Product"
+            ]
+          },
+          {
+            "url": "https://youngkevinn.github.io/posts/CVE-2025-70152-Scholars-SQLi-Missing-Auth/",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory",
+              "Mitigation"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 12
+    },
+    {
+      "cve_id": "CVE-2026-22769",
+      "signal_types": [
+        "KEV"
+      ],
+      "signals": {
+        "kev": {
+          "date_added": "2026-02-18"
+        },
+        "exploit": null,
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-02-17",
+        "description": "Dell RecoverPoint for Virtual Machines, versions prior to 6.0.3.1 HF1, contain a hardcoded credential vulnerability. This is considered critical as an unauthenticated remote attacker with knowledge of the hardcoded credential could potentially exploit this vulnerability leading to unauthorized access to the underlying operating system and root-level persistence. Dell recommends that customers upgrade or apply one of the remediations as soon as possible.",
+        "title": "Dell RecoverPoint for Virtual Machines (RP4VMs) Use of Hard-coded Credentials Vulnerability",
+        "vendor": "dell",
+        "product": "recoverpoint_for_virtual_machines",
+        "cvss_max": 10.0
+      },
+      "cve": {
+        "id": "CVE-2026-22769",
+        "sourceIdentifier": "security_alert@emc.com",
+        "published": "2026-02-17T20:22:09.800",
+        "lastModified": "2026-02-20T02:00:02.830",
+        "vulnStatus": "Analyzed",
+        "cisaExploitAdd": "2026-02-18",
+        "cisaActionDue": "2026-02-21",
+        "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+        "cisaVulnerabilityName": "Dell RecoverPoint for Virtual Machines (RP4VMs) Use of Hard-coded Credentials Vulnerability",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Dell RecoverPoint for Virtual Machines, versions prior to 6.0.3.1 HF1, contain a hardcoded credential vulnerability. This is considered critical as an unauthenticated remote attacker with knowledge of the hardcoded credential could potentially exploit this vulnerability leading to unauthorized access to the underlying operating system and root-level persistence. Dell recommends that customers upgrade or apply one of the remediations as soon as possible."
+          },
+          {
+            "lang": "es",
+            "value": "Dell RecoverPoint para Máquinas Virtuales, en versiones anteriores a 6.0.3.1 HF1, contiene una vulnerabilidad de credenciales almacenadas en el código. Esto se considera crítico ya que un atacante en remoto no autenticado que conozca la credencial almacenada podría, potencialmente, explotar esta vulnerabilidad, lo que permitiría un acceso no autorizado al sistema operativo subyacente y persistencia a nivel de root. Dell recomienda que los clientes actualicen o apliquen uno de los remedios lo antes posible."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+                "baseScore": 10.0,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security_alert@emc.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 6.0
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+                "baseScore": 10.0,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 6.0
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-798"
+              }
+            ],
+            "source": "security_alert@emc.com"
+          },
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-798"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:dell:recoverpoint_for_virtual_machines:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "CDBD4124-5704-4491-837E-C9F6C3B46602",
+                    "versionEndExcluding": "6.0"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:dell:recoverpoint_for_virtual_machines:6.0:-:*:*:*:*:*:*",
+                    "matchCriteriaId": "D8A90920-381D-4D65-8DDA-A850B1765919"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:dell:recoverpoint_for_virtual_machines:6.0:sp1:*:*:*:*:*:*",
+                    "matchCriteriaId": "DD0ABCD5-9273-4799-A916-3518ED5EBB46"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:dell:recoverpoint_for_virtual_machines:6.0:sp1_p1:*:*:*:*:*:*",
+                    "matchCriteriaId": "800D6F27-0B30-4E0A-94F6-B52367D50761"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:dell:recoverpoint_for_virtual_machines:6.0:sp1_p2:*:*:*:*:*:*",
+                    "matchCriteriaId": "97E4273C-646D-402A-B560-13B1F3024488"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:dell:recoverpoint_for_virtual_machines:6.0:sp2:*:*:*:*:*:*",
+                    "matchCriteriaId": "20C3E4AB-B2BA-40CA-AD59-00F2A56C2107"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:dell:recoverpoint_for_virtual_machines:6.0:sp2_p1:*:*:*:*:*:*",
+                    "matchCriteriaId": "12F25A3A-65DF-4D20-8A94-71A4763CDA38"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:dell:recoverpoint_for_virtual_machines:6.0:sp3:*:*:*:*:*:*",
+                    "matchCriteriaId": "497DD11A-28C7-4211-BB03-2AB916AEA8A3"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:dell:recoverpoint_for_virtual_machines:6.0:sp3_p1:*:*:*:*:*:*",
+                    "matchCriteriaId": "3E357BFB-EF68-4FC7-89A3-233567F41534"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://www.dell.com/support/kbdoc/en-us/000426773/dsa-2026-079",
+            "source": "security_alert@emc.com",
+            "tags": [
+              "Patch",
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://cloud.google.com/blog/topics/threat-intelligence/unc6201-exploiting-dell-recoverpoint-zero-day",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-22769",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "US Government Resource"
+            ]
+          }
+        ]
+      },
+      "risk_score": 88,
+      "rank": 13
+    },
+    {
+      "cve_id": "CVE-2026-23491",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-02-18",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-02-18",
+        "description": "InvoicePlane is a self-hosted open source application for managing invoices, clients, and payments. A path traversal vulnerability exists in the `get_file` method of the `Guest` module's `Get` controller in InvoicePlane up to and including through 1.6.3. The vulnerability allows unauthenticated attackers to read arbitrary files on the server by manipulating the input filename. This leads to the disclosure of sensitive information, including configuration files with database credentials. Version 1.6.4 fixes the issue.",
+        "title": "invoiceplane invoiceplane Path Traversal",
+        "vendor": "invoiceplane",
+        "product": "invoiceplane",
+        "attack_type": "Path Traversal",
+        "cvss_max": 9.3
+      },
+      "cve": {
+        "id": "CVE-2026-23491",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2026-02-18T20:18:35.783",
+        "lastModified": "2026-02-25T17:25:38.747",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "InvoicePlane is a self-hosted open source application for managing invoices, clients, and payments. A path traversal vulnerability exists in the `get_file` method of the `Guest` module's `Get` controller in InvoicePlane up to and including through 1.6.3. The vulnerability allows unauthenticated attackers to read arbitrary files on the server by manipulating the input filename. This leads to the disclosure of sensitive information, including configuration files with database credentials. Version 1.6.4 fixes the issue."
+          },
+          {
+            "lang": "es",
+            "value": "InvoicePlane es una aplicación de código abierto autoalojada para gestionar facturas, clientes y pagos. Existe una vulnerabilidad de salto de ruta en el método 'get_file' del controlador 'Get' del módulo 'Guest' en InvoicePlane hasta la versión 1.6.3 inclusive. La vulnerabilidad permite a atacantes no autenticados leer archivos arbitrarios en el servidor manipulando el nombre de archivo de entrada. Esto lleva a la divulgación de información sensible, incluyendo archivos de configuración con credenciales de base de datos. La versión 1.6.4 soluciona el problema."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+                "baseScore": 7.5,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 3.6
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-22"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:invoiceplane:invoiceplane:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "17C261C3-0A6B-4D07-8370-DD3C71097DE2",
+                    "versionEndExcluding": "1.6.4"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/InvoicePlane/InvoicePlane/commit/add8bb798dde621f886823065ef1841986543c69",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://github.com/InvoicePlane/InvoicePlane/security/advisories/GHSA-88gq-mv54-v3fc",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Exploit",
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 14
+    },
+    {
+      "cve_id": "CVE-2026-25548",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-02-18",
+          "previous_max": null,
+          "current_max": 9.1
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-02-18",
+        "description": "InvoicePlane is a self-hosted open source application for managing invoices, clients, and payments. A critical Remote Code Execution (RCE) vulnerability exists in InvoicePlane 1.7.0 through a chained Local File Inclusion (LFI) and Log Poisoning attack. An authenticated administrator can execute arbitrary system commands on the server by manipulating the `public_invoice_template` setting to include poisoned log files containing PHP code. Version 1.7.1 patches the issue.",
+        "title": "invoiceplane invoiceplane RCE",
+        "vendor": "invoiceplane",
+        "product": "invoiceplane",
+        "attack_type": "RCE",
+        "cvss_max": 9.1
+      },
+      "cve": {
+        "id": "CVE-2026-25548",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2026-02-18T23:16:19.567",
+        "lastModified": "2026-02-20T18:45:32.913",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "InvoicePlane is a self-hosted open source application for managing invoices, clients, and payments. A critical Remote Code Execution (RCE) vulnerability exists in InvoicePlane 1.7.0 through a chained Local File Inclusion (LFI) and Log Poisoning attack. An authenticated administrator can execute arbitrary system commands on the server by manipulating the `public_invoice_template` setting to include poisoned log files containing PHP code. Version 1.7.1 patches the issue."
+          },
+          {
+            "lang": "es",
+            "value": "InvoicePlane es una aplicación de código abierto autoalojada para gestionar facturas, clientes y pagos. Una vulnerabilidad crítica de ejecución remota de código (RCE) existe en InvoicePlane 1.7.0 a través de un ataque encadenado de inclusión local de ficheros (LFI) y envenenamiento de logs. Un administrador autenticado puede ejecutar comandos de sistema arbitrarios en el servidor manipulando la configuración 'public_invoice_template' para incluir ficheros de log envenenados que contienen código PHP. La versión 1.7.1 corrige el problema."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
+                "baseScore": 9.1,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary",
+              "exploitabilityScore": 2.3,
+              "impactScore": 6.0
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-94"
+              },
+              {
+                "lang": "en",
+                "value": "CWE-98"
+              },
+              {
+                "lang": "en",
+                "value": "CWE-117"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:invoiceplane:invoiceplane:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "200F4F45-C04E-4F4E-9DF4-CE8D5ABEDB9F",
+                    "versionEndExcluding": "1.7.1"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/InvoicePlane/InvoicePlane/commit/93622f2df88a860d89bfee56012cabb2942061d6",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://github.com/InvoicePlane/InvoicePlane/security/advisories/GHSA-g6rw-m9mf-33ch",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Exploit",
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 15
+    },
+    {
+      "cve_id": "CVE-2026-27174",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-02-18",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-02-18",
+        "description": "MajorDoMo (aka Major Domestic Module) allows unauthenticated remote code execution via the admin panel's PHP console feature. An include order bug in modules/panel.class.php causes execution to continue past a redirect() call that lacks an exit statement, allowing unauthenticated requests to reach the ajax handler in inc_panel_ajax.php. The console handler within that file passes user-supplied input from GET parameters (via register_globals) directly to eval() without any authentication check. An attacker can execute arbitrary PHP code by sending a crafted GET request to /admin.php with ajax_panel, op, and command parameters.",
+        "title": "mjdm majordomo RCE",
+        "vendor": "mjdm",
+        "product": "majordomo",
+        "attack_type": "RCE",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2026-27174",
+        "sourceIdentifier": "disclosure@vulncheck.com",
+        "published": "2026-02-18T22:16:25.080",
+        "lastModified": "2026-02-20T20:02:36.767",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "MajorDoMo (aka Major Domestic Module) allows unauthenticated remote code execution via the admin panel's PHP console feature. An include order bug in modules/panel.class.php causes execution to continue past a redirect() call that lacks an exit statement, allowing unauthenticated requests to reach the ajax handler in inc_panel_ajax.php. The console handler within that file passes user-supplied input from GET parameters (via register_globals) directly to eval() without any authentication check. An attacker can execute arbitrary PHP code by sending a crafted GET request to /admin.php with ajax_panel, op, and command parameters."
+          },
+          {
+            "lang": "es",
+            "value": "MajorDoMo (también conocido como Major Domestic Module) permite la ejecución remota de código no autenticada a través de la función de consola PHP del panel de administración. Un error de orden de inclusión en modules/panel.class.php provoca que la ejecución continúe más allá de una llamada a redirect() que carece de una declaración exit, permitiendo que las solicitudes no autenticadas lleguen al manejador ajax en inc_panel_ajax.php. El manejador de consola dentro de ese archivo pasa la entrada proporcionada por el usuario desde los parámetros GET (a través de register_globals) directamente a eval() sin ninguna verificación de autenticación. Un atacante puede ejecutar código PHP arbitrario enviando una solicitud GET manipulada a /admin.php con los parámetros ajax_panel, op y command."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-94"
+              }
+            ],
+            "source": "disclosure@vulncheck.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:mjdm:majordomo:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "7008978E-8DE1-4811-958F-3AFB3847B919"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://chocapikk.com/posts/2026/majordomo-revisited/",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Third Party Advisory",
+              "Exploit"
+            ]
+          },
+          {
+            "url": "https://github.com/sergejey/majordomo/pull/1177",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Issue Tracking",
+              "Exploit"
+            ]
+          },
+          {
+            "url": "https://www.vulncheck.com/advisories/majordomo-unauthenticated-remote-code-execution-via-admin-console-eval",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 16
+    },
+    {
+      "cve_id": "CVE-2026-27175",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-02-18",
+          "previous_max": null,
+          "current_max": 9.2
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-02-18",
+        "description": "MajorDoMo (aka Major Domestic Module) is vulnerable to unauthenticated OS command injection via rc/index.php. The $param variable from user input is interpolated into a command string within double quotes without sanitization via escapeshellarg(). The command is inserted into a database queue by safe_exec(), which performs no sanitization. The cycle_execs.php script, which is web-accessible without authentication, retrieves queued commands and passes them directly to exec(). An attacker can exploit a race condition by first triggering cycle_execs.php (which purges the queue and enters a polling loop), then injecting a malicious command via the rc endpoint while the worker is polling. The injected shell metacharacters expand inside double quotes, achieving remote code execution within one second.",
+        "title": "mjdm majordomo Command Injection",
+        "vendor": "mjdm",
+        "product": "majordomo",
+        "attack_type": "Command Injection",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2026-27175",
+        "sourceIdentifier": "disclosure@vulncheck.com",
+        "published": "2026-02-18T22:16:25.263",
+        "lastModified": "2026-02-20T20:02:13.103",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "MajorDoMo (aka Major Domestic Module) is vulnerable to unauthenticated OS command injection via rc/index.php. The $param variable from user input is interpolated into a command string within double quotes without sanitization via escapeshellarg(). The command is inserted into a database queue by safe_exec(), which performs no sanitization. The cycle_execs.php script, which is web-accessible without authentication, retrieves queued commands and passes them directly to exec(). An attacker can exploit a race condition by first triggering cycle_execs.php (which purges the queue and enters a polling loop), then injecting a malicious command via the rc endpoint while the worker is polling. The injected shell metacharacters expand inside double quotes, achieving remote code execution within one second."
+          },
+          {
+            "lang": "es",
+            "value": "MajorDoMo (también conocido como Major Domestic Module) es vulnerable a la inyección de comandos del sistema operativo no autenticada a través de rc/index.php. La variable $param de la entrada del usuario se intercala en una cadena de comandos entre comillas dobles sin saneamiento a través de escapeshellarg(). El comando se inserta en una cola de la base de datos por safe_exec(), que no realiza ningún saneamiento. El script cycle_execs.php, que es accesible por la web sin autenticación, recupera los comandos en cola y los pasa directamente a exec(). Un atacante puede explotar una condición de carrera activando primero cycle_execs.php (que purga la cola y entra en un bucle de sondeo), luego inyectando un comando malicioso a través del punto final rc mientras el trabajador está sondeando. Los metacaracteres de shell inyectados se expanden dentro de las comillas dobles, logrando la ejecución remota de código en un segundo."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.2,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-78"
+              }
+            ],
+            "source": "disclosure@vulncheck.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:mjdm:majordomo:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "7008978E-8DE1-4811-958F-3AFB3847B919"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://chocapikk.com/posts/2026/majordomo-revisited/",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Third Party Advisory",
+              "Exploit"
+            ]
+          },
+          {
+            "url": "https://github.com/sergejey/majordomo/pull/1177",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Issue Tracking",
+              "Exploit"
+            ]
+          },
+          {
+            "url": "https://www.vulncheck.com/advisories/majordomo-command-injection-in-rcindexphp-via-race-condition",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 17
+    },
+    {
+      "cve_id": "CVE-2026-27180",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-02-18",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-02-18",
+        "description": "MajorDoMo (aka Major Domestic Module) is vulnerable to unauthenticated remote code execution through supply chain compromise via update URL poisoning. The saverestore module exposes its admin() method through the /objects/?module=saverestore endpoint without authentication because it uses gr('mode') (which reads directly from $_REQUEST) instead of the framework's $this->mode. An attacker can poison the system update URL via the auto_update_settings mode handler, then trigger the force_update handler to initiate the update chain. The autoUpdateSystem() method fetches an Atom feed from the attacker-controlled URL with trivial validation, downloads a tarball via curl with TLS verification disabled (CURLOPT_SSL_VERIFYPEER set to FALSE), extracts it using exec('tar xzvf ...'), and copies all extracted files to the document root using copyTree(). This allows an attacker to deploy arbitrary PHP files, including webshells, to the webroot with two GET requests.",
+        "title": "mjdm majordomo RCE",
+        "vendor": "mjdm",
+        "product": "majordomo",
+        "attack_type": "RCE",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2026-27180",
+        "sourceIdentifier": "disclosure@vulncheck.com",
+        "published": "2026-02-18T22:16:26.153",
+        "lastModified": "2026-02-20T19:51:21.530",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "MajorDoMo (aka Major Domestic Module) is vulnerable to unauthenticated remote code execution through supply chain compromise via update URL poisoning. The saverestore module exposes its admin() method through the /objects/?module=saverestore endpoint without authentication because it uses gr('mode') (which reads directly from $_REQUEST) instead of the framework's $this->mode. An attacker can poison the system update URL via the auto_update_settings mode handler, then trigger the force_update handler to initiate the update chain. The autoUpdateSystem() method fetches an Atom feed from the attacker-controlled URL with trivial validation, downloads a tarball via curl with TLS verification disabled (CURLOPT_SSL_VERIFYPEER set to FALSE), extracts it using exec('tar xzvf ...'), and copies all extracted files to the document root using copyTree(). This allows an attacker to deploy arbitrary PHP files, including webshells, to the webroot with two GET requests."
+          },
+          {
+            "lang": "es",
+            "value": "MajorDoMo (también conocido como Major Domestic Module) es vulnerable a la ejecución remota de código no autenticada a través de un compromiso de la cadena de suministro mediante el envenenamiento de la URL de actualización. El módulo saverestore expone su método admin() a través del endpoint /objects/?module=saverestore sin autenticación porque usa gr('mode') (que lee directamente de $_REQUEST) en lugar del $this-&gt;mode del framework. Un atacante puede envenenar la URL de actualización del sistema a través del manejador de modo auto_update_settings, y luego activar el manejador force_update para iniciar la cadena de actualización. El método autoUpdateSystem() obtiene un feed Atom de la URL controlada por el atacante con una validación trivial, descarga un tarball vía curl con la verificación TLS deshabilitada (CURLOPT_SSL_VERIFYPEER establecido en FALSE), lo extrae usando exec('tar xzvf ...'), y copia todos los archivos extraídos a la raíz del documento usando copyTree(). Esto permite a un atacante desplegar archivos PHP arbitrarios, incluyendo webshells, en la raíz web con dos solicitudes GET."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-494"
+              }
+            ],
+            "source": "disclosure@vulncheck.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:mjdm:majordomo:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "7008978E-8DE1-4811-958F-3AFB3847B919"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://chocapikk.com/posts/2026/majordomo-revisited/",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/sergejey/majordomo/pull/1177",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Exploit",
+              "Issue Tracking"
+            ]
+          },
+          {
+            "url": "https://www.vulncheck.com/advisories/majordomo-supply-chain-remote-code-execution-via-update-url-poisoning",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 18
+    }
+  ],
+  "source": "https://www.cvelogic.com/threat-intelligence/2026-02-18"
+}

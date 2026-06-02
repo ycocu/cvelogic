@@ -1,0 +1,1766 @@
+{
+  "schema_version": "2.2",
+  "generated_at": "2026-06-02T07:34:49Z",
+  "day": "2026-04-02",
+  "window": {
+    "utc_start": "2026-04-02",
+    "utc_end": "2026-04-02",
+    "days": 1
+  },
+  "summary": {
+    "brief": "TrueConf Client added to CISA KEV — confirmed in-the-wild exploitation. · Themegrill Masteriyo — exploitation likelihood rose sharply (EPSS 32% → 48% · rising (+17%)). · 10 new critical disclosures — review patch status on exposed services.",
+    "bullets": [
+      "TrueConf Client added to CISA KEV — confirmed in-the-wild exploitation.",
+      "Themegrill Masteriyo — exploitation likelihood rose sharply (EPSS 32% → 48% · rising (+17%)).",
+      "10 new critical disclosures — review patch status on exposed services."
+    ],
+    "counts": {
+      "cves": 15,
+      "kev": 1,
+      "exploit": 0,
+      "epss": 4,
+      "cvss": 10,
+      "patch": 0
+    }
+  },
+  "cves": [
+    {
+      "cve_id": "CVE-2026-3502",
+      "signal_types": [
+        "KEV"
+      ],
+      "signals": {
+        "kev": {
+          "date_added": "2026-04-02"
+        },
+        "exploit": null,
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-03-30",
+        "description": "TrueConf Client downloads application update code and applies it without performing verification. An attacker who is able to influence the update delivery path can substitute a tampered update payload. If the payload is executed or installed by the updater, this may result in arbitrary code execution in the context of the updating process or user.",
+        "title": "TrueConf Client Download of Code Without Integrity Check Vulnerability",
+        "vendor": "trueconf",
+        "product": "trueconf",
+        "attack_type": "RCE",
+        "cvss_max": 7.8
+      },
+      "cve": {
+        "id": "CVE-2026-3502",
+        "sourceIdentifier": "cve@checkpoint.com",
+        "published": "2026-03-30T19:16:27.053",
+        "lastModified": "2026-04-03T11:40:57.390",
+        "vulnStatus": "Analyzed",
+        "cisaExploitAdd": "2026-04-02",
+        "cisaActionDue": "2026-04-16",
+        "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+        "cisaVulnerabilityName": "TrueConf Client Download of Code Without Integrity Check Vulnerability",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "TrueConf Client downloads application update code and applies it without performing verification. An attacker who is able to influence the update delivery path can substitute a tampered update payload. If the payload is executed or installed by the updater, this may result in arbitrary code execution in the context of the updating process or user."
+          },
+          {
+            "lang": "es",
+            "value": "TrueConf Client descarga código de actualización de la aplicación y lo aplica sin realizar verificación. Un atacante que es capaz de influir en la ruta de entrega de la actualización puede sustituir una carga útil de actualización manipulada. Si la carga útil es ejecutada o instalada por el actualizador, esto puede resultar en ejecución de código arbitrario en el contexto del proceso de actualización o del usuario."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:A/AC:L/PR:H/UI:R/S:C/C:H/I:H/A:L",
+                "baseScore": 7.8,
+                "baseSeverity": "HIGH"
+              },
+              "source": "cve@checkpoint.com",
+              "type": "Secondary",
+              "exploitabilityScore": 1.2,
+              "impactScore": 6.0
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-494"
+              }
+            ],
+            "source": "cve@checkpoint.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:trueconf:trueconf:*:*:*:*:*:windows:*:*",
+                    "matchCriteriaId": "C61E9BE0-CED2-4518-933B-7538A4E8F890",
+                    "versionEndExcluding": "8.5.3.884"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://trueconf.com/blog/update/trueconf-8-5",
+            "source": "cve@checkpoint.com",
+            "tags": [
+              "Product",
+              "Release Notes"
+            ]
+          },
+          {
+            "url": "https://research.checkpoint.com/2026/operation-truechaos-0-day-exploitation-against-southeast-asian-government-targets/",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-3502",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "US Government Resource"
+            ]
+          }
+        ]
+      },
+      "risk_score": 88,
+      "rank": 1
+    },
+    {
+      "cve_id": "CVE-2024-24882",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 0.31535,
+            "score_date": "2026-01-18"
+          },
+          "current": {
+            "score": 0.48278,
+            "score_date": "2026-04-02"
+          },
+          "delta": 0.16743
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2024-05-17",
+        "description": "Incorrect Privilege Assignment vulnerability in masteriyo Masteriyo - LMS learning-management-system.This issue affects Masteriyo - LMS: from n/a through <= 1.7.2.",
+        "title": "themegrill masteriyo privilege escalation",
+        "vendor": "themegrill",
+        "product": "masteriyo",
+        "attack_type": "privilege escalation",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2024-24882",
+        "sourceIdentifier": "audit@patchstack.com",
+        "published": "2024-05-17T09:15:24.940",
+        "lastModified": "2026-04-29T10:16:31.920",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Incorrect Privilege Assignment vulnerability in masteriyo Masteriyo - LMS learning-management-system.This issue affects Masteriyo - LMS: from n/a through <= 1.7.2."
+          },
+          {
+            "lang": "es",
+            "value": "Una vulnerabilidad de gestión de privilegios incorrecta en Masteriyo LMS permite la escalada de privilegios. Este problema afecta a LMS: desde n/a hasta 1.7.2."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "audit@patchstack.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-266"
+              }
+            ],
+            "source": "audit@patchstack.com"
+          },
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "NVD-CWE-noinfo"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:themegrill:masteriyo:*:*:*:*:free:wordpress:*:*",
+                    "matchCriteriaId": "B33DECEA-AB1D-44FC-BAA4-EDEA53C7B709",
+                    "versionEndExcluding": "1.7.3"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://patchstack.com/database/Wordpress/Plugin/learning-management-system/vulnerability/wordpress-lms-by-masteriyo-plugin-1-7-2-privilege-escalation-vulnerability?_s_id=cve",
+            "source": "audit@patchstack.com"
+          },
+          {
+            "url": "https://patchstack.com/database/vulnerability/learning-management-system/wordpress-lms-by-masteriyo-plugin-1-7-2-privilege-escalation-vulnerability?_s_id=cve",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 86,
+      "rank": 2
+    },
+    {
+      "cve_id": "CVE-2026-34717",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-04-02",
+          "previous_max": null,
+          "current_max": 9.9
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-04-02",
+        "description": "OpenProject is an open-source, web-based project management software. Prior to version 17.2.3, the =n operator in modules/reporting/lib/report/operator.rb:177 embeds user input directly into SQL WHERE clauses without parameterization. This issue has been patched in version 17.2.3.",
+        "title": "openproject openproject SQL injection",
+        "vendor": "openproject",
+        "product": "openproject",
+        "attack_type": "SQL injection",
+        "cvss_max": 9.9
+      },
+      "cve": {
+        "id": "CVE-2026-34717",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2026-04-02T18:16:33.083",
+        "lastModified": "2026-04-21T01:03:32.890",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "OpenProject is an open-source, web-based project management software. Prior to version 17.2.3, the =n operator in modules/reporting/lib/report/operator.rb:177 embeds user input directly into SQL WHERE clauses without parameterization. This issue has been patched in version 17.2.3."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:H/A:H",
+                "baseScore": 9.9,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.1,
+              "impactScore": 6.0
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
+                "baseScore": 8.1,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 5.2
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-89"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:openproject:openproject:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "CE9B1690-0345-439D-A23F-2C4C7CDCA3AF",
+                    "versionEndExcluding": "17.2.3"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/opf/openproject/releases/tag/v17.2.3",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Product",
+              "Release Notes"
+            ]
+          },
+          {
+            "url": "https://github.com/opf/openproject/security/advisories/GHSA-5rrm-6qmq-2364",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Mitigation",
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 3
+    },
+    {
+      "cve_id": "CVE-2022-25226",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 0.69689,
+            "score_date": "2026-04-01"
+          },
+          "current": {
+            "score": 0.81886,
+            "score_date": "2026-04-02"
+          },
+          "delta": 0.12197
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2022-04-18",
+        "description": "ThinVNC version 1.0b1 allows an unauthenticated user to bypass the authentication process via 'http://thin-vnc:8080/cmd?cmd=connect' by obtaining a valid SID without any kind of authentication. It is possible to achieve code execution on the server by sending keyboard or mouse events to the server.",
+        "title": "cybelsoft thinvnc Code Execution",
+        "vendor": "cybelsoft",
+        "product": "thinvnc",
+        "attack_type": "Code Execution",
+        "cvss_max": 10.0
+      },
+      "cve": {
+        "id": "CVE-2022-25226",
+        "sourceIdentifier": "help@fluidattacks.com",
+        "published": "2022-04-18T17:15:16.693",
+        "lastModified": "2024-11-21T06:51:50.393",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "ThinVNC version 1.0b1 allows an unauthenticated user to bypass the authentication process via 'http://thin-vnc:8080/cmd?cmd=connect' by obtaining a valid SID without any kind of authentication. It is possible to achieve code execution on the server by sending keyboard or mouse events to the server."
+          },
+          {
+            "lang": "es",
+            "value": "ThinVNC versión 1.0b1, permite a un usuario no autenticado omitir el proceso de autenticación por medio de \"http://thin-vnc:8080/cmd?cmd=connect\" al obtener un SID válido sin ningún tipo de autenticación. Es posible lograr una ejecución de código en el servidor mediante el envío de eventos de teclado o ratón al servidor"
+          }
+        ],
+        "metrics": {
+          "cvssMetricV2": [
+            {
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+                "baseScore": 7.5,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "baseSeverity": "HIGH",
+              "exploitabilityScore": 10.0,
+              "impactScore": 6.4
+            }
+          ],
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+                "baseScore": 10.0,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 6.0
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "NVD-CWE-Other"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cybelsoft:thinvnc:1.0:b1:*:*:*:*:*:*",
+                    "matchCriteriaId": "78FF286A-9DE2-4B98-B97B-ADCE15C80256"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://fluidattacks.com/advisories/sinatra/",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 86,
+      "rank": 4
+    },
+    {
+      "cve_id": "CVE-2024-14034",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-04-02",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-04-02",
+        "description": "Hirschmann HiEOS devices versions prior to 01.1.00 contain an authentication bypass vulnerability in the HTTP(S) management module that allows unauthenticated remote attackers to gain administrative access by sending specially crafted HTTP(S) requests. Attackers can exploit improper authentication handling to obtain elevated privileges and perform unauthorized actions including configuration download or upload and firmware modification.",
+        "title": "Hirschmann HiEOS devices versions prior to 01.1.00 contain an authentication bypass vulnerability in the HTTP(S) management module that a...",
+        "attack_type": "Auth Bypass",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2024-14034",
+        "sourceIdentifier": "disclosure@vulncheck.com",
+        "published": "2026-04-02T20:16:19.943",
+        "lastModified": "2026-04-03T23:17:01.753",
+        "vulnStatus": "Awaiting Analysis",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Hirschmann HiEOS devices versions prior to 01.1.00 contain an authentication bypass vulnerability in the HTTP(S) management module that allows unauthenticated remote attackers to gain administrative access by sending specially crafted HTTP(S) requests. Attackers can exploit improper authentication handling to obtain elevated privileges and perform unauthorized actions including configuration download or upload and firmware modification."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-287"
+              }
+            ],
+            "source": "disclosure@vulncheck.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://assets.belden.com/m/7ec5c6da25ef288/original/Belden_Security_Bulletin_BSECV-2024-02_1v0.pdf",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://www.vulncheck.com/advisories/hirschmann-hieos-authentication-bypass-via-http-management-module",
+            "source": "disclosure@vulncheck.com"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 5
+    },
+    {
+      "cve_id": "CVE-2024-25228",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 0.43665,
+            "score_date": "2025-11-25"
+          },
+          "current": {
+            "score": 0.57698,
+            "score_date": "2026-04-02"
+          },
+          "delta": 0.14033
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2024-03-14",
+        "description": "Vinchin Backup and Recovery 7.2 and Earlier is vulnerable to Authenticated Remote Code Execution (RCE) via the getVerifydiyResult function in ManoeuvreHandler.class.php.",
+        "title": "vinchin vinchin_backup_and_recovery RCE",
+        "vendor": "vinchin",
+        "product": "vinchin_backup_and_recovery",
+        "attack_type": "RCE",
+        "cvss_max": 8.8
+      },
+      "cve": {
+        "id": "CVE-2024-25228",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2024-03-14T02:15:50.613",
+        "lastModified": "2025-11-04T19:16:58.600",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Vinchin Backup and Recovery 7.2 and Earlier is vulnerable to Authenticated Remote Code Execution (RCE) via the getVerifydiyResult function in ManoeuvreHandler.class.php."
+          },
+          {
+            "lang": "es",
+            "value": "Vinchin Backup and Recovery 7.2 y versiones anteriores son vulnerables a la ejecución remota de código autenticado (RCE) a través de la función getVerifydiyResult en ManoeuvreHandler.class.php."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 8.8,
+                "baseSeverity": "HIGH"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-77"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vinchin:vinchin_backup_and_recovery:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "3891B5A9-CDD6-4BA5-A9E4-D320804835B2",
+                    "versionEndIncluding": "7.2"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://blog.leakix.net/2024/01/vinchin-backup-rce-chain/",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://seclists.org/fulldisclosure/2024/Mar/15",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Mailing List"
+            ]
+          },
+          {
+            "url": "http://seclists.org/fulldisclosure/2024/Mar/15",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          }
+        ]
+      },
+      "risk_score": 84,
+      "rank": 6
+    },
+    {
+      "cve_id": "CVE-2025-15620",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-04-02",
+          "previous_max": null,
+          "current_max": 9.2
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-04-02",
+        "description": "HiOS Switch Platform versions 09.1.00 through 09.4.04 and 10.0.00 through 10.3.00 contain a denial-of-service vulnerability in the web interface that allows remote attackers to reboot the affected device by sending a malicious HTTP GET request to a specific endpoint. Attackers can trigger an uncontrolled reboot condition through crafted HTTP requests to cause service disruption and unavailability of the switch.",
+        "title": "HiOS Switch Platform versions 09.1.00 through 09.4.04 and 10.0.00 through 10.3.00 contain a denial-of-service vulnerability in the web in...",
+        "cvss_max": 9.2
+      },
+      "cve": {
+        "id": "CVE-2025-15620",
+        "sourceIdentifier": "disclosure@vulncheck.com",
+        "published": "2026-04-02T21:16:40.137",
+        "lastModified": "2026-05-26T00:16:48.017",
+        "vulnStatus": "Undergoing Analysis",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "HiOS Switch Platform versions 09.1.00 through 09.4.04 and 10.0.00 through 10.3.00 contain a denial-of-service vulnerability in the web interface that allows remote attackers to reboot the affected device by sending a malicious HTTP GET request to a specific endpoint. Attackers can trigger an uncontrolled reboot condition through crafted HTTP requests to cause service disruption and unavailability of the switch."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:N/I:N/A:H",
+                "baseScore": 8.6,
+                "baseSeverity": "HIGH"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 4.0
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.2,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-306"
+              }
+            ],
+            "source": "disclosure@vulncheck.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://assets.belden.com/m/702a656e81736b04/original/PSIRT-2_Web_Interface_HiOS.pdf",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://www.vulncheck.com/advisories/hios-switch-platform-denial-of-service-via-web-interface",
+            "source": "disclosure@vulncheck.com"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 7
+    },
+    {
+      "cve_id": "CVE-2025-41646",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 0.19045,
+            "score_date": "2026-03-03"
+          },
+          "current": {
+            "score": 0.33838,
+            "score_date": "2026-04-02"
+          },
+          "delta": 0.14793
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-06-06",
+        "description": "An unauthorized remote attacker can bypass the authentication of the affected software package by misusing an incorrect type conversion. This leads to full compromise of the device",
+        "title": "kunbus revpi_status",
+        "vendor": "kunbus",
+        "product": "revpi_status",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-41646",
+        "sourceIdentifier": "info@cert.vde.com",
+        "published": "2025-06-06T15:15:26.183",
+        "lastModified": "2025-06-10T19:29:22.893",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "An unauthorized remote attacker can bypass the authentication of the affected software package by misusing an incorrect type conversion. This leads to full compromise of the device"
+          },
+          {
+            "lang": "es",
+            "value": "Un atacante remoto no autorizado puede eludir la autenticación del paquete de software afectado mediante el uso indebido de una conversión de tipo incorrecta. Esto conlleva la vulnerabilidad total del dispositivo."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "info@cert.vde.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-704"
+              }
+            ],
+            "source": "info@cert.vde.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:kunbus:revpi_status:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "B5AB814D-A49E-4331-93F1-112580C10B44",
+                    "versionEndExcluding": "2.4.6"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://psirt.kunbus.com/.well-known/csaf/white/2025/kunbus-2025-0000003.json",
+            "source": "info@cert.vde.com",
+            "tags": [
+              "Product"
+            ]
+          },
+          {
+            "url": "https://www.kunbus.com/en/productsecurity/Kunbus-2025-0000003",
+            "source": "info@cert.vde.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 86,
+      "rank": 8
+    },
+    {
+      "cve_id": "CVE-2026-33950",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-04-02",
+          "previous_max": null,
+          "current_max": 9.4
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-04-02",
+        "description": "Signal K Server is a server application that runs on a central hub in a boat. Prior to version 2.24.0-beta.4, there is a privilege escalation vulnerability by Admin Role Injection via /enableSecurity. An unauthenticated attacker can gain full Administrator access to the SignalK server at any time, allowing them to modify sensitive vessel routing data, alter server configurations, and access restricted endpoints. This issue has been patched in version 2.24.0-beta.4.",
+        "title": "signalk signal_k_server Privilege Escalation",
+        "vendor": "signalk",
+        "product": "signal_k_server",
+        "attack_type": "Privilege Escalation",
+        "cvss_max": 9.4
+      },
+      "cve": {
+        "id": "CVE-2026-33950",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2026-04-02T17:16:22.993",
+        "lastModified": "2026-04-06T15:04:42.720",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Signal K Server is a server application that runs on a central hub in a boat. Prior to version 2.24.0-beta.4, there is a privilege escalation vulnerability by Admin Role Injection via /enableSecurity. An unauthenticated attacker can gain full Administrator access to the SignalK server at any time, allowing them to modify sensitive vessel routing data, alter server configurations, and access restricted endpoints. This issue has been patched in version 2.24.0-beta.4."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:L",
+                "baseScore": 9.4,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.5
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-285"
+              },
+              {
+                "lang": "en",
+                "value": "CWE-288"
+              },
+              {
+                "lang": "en",
+                "value": "CWE-862"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:signalk:signal_k_server:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "64F9BA25-5552-4477-84F9-83E71B2CA56F",
+                    "versionEndExcluding": "2.24.0"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:signalk:signal_k_server:2.24.0:beta1:*:*:*:*:*:*",
+                    "matchCriteriaId": "2484CB8F-BFFE-4F61-ACE2-A59F1F817F42"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:signalk:signal_k_server:2.24.0:beta2:*:*:*:*:*:*",
+                    "matchCriteriaId": "D5464B6D-9FB4-4D67-B182-A312E3110AEF"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:signalk:signal_k_server:2.24.0:beta3:*:*:*:*:*:*",
+                    "matchCriteriaId": "B521B34B-9F81-46E4-88BB-617A3D8A653E"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/SignalK/signalk-server/releases/tag/v2.24.0-beta.4",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Product",
+              "Release Notes"
+            ]
+          },
+          {
+            "url": "https://github.com/SignalK/signalk-server/security/advisories/GHSA-x8hc-fqv3-7gwf",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Exploit",
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 9
+    },
+    {
+      "cve_id": "CVE-2026-34745",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-04-02",
+          "previous_max": null,
+          "current_max": 9.1
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-04-02",
+        "description": "Fireshare facilitates self-hosted media and link sharing. Prior to version 1.5.3, the fix for CVE-2026-33645 was applied to the authenticated /api/uploadChunked endpoint but was not applied to the unauthenticated /api/uploadChunked/public endpoint in the same file (app/server/fireshare/api.py). An unauthenticated attacker can exploit the checkSum parameter to write arbitrary files with attacker-controlled content to any writable path on the server filesystem. This issue has been patched in version 1.5.3.",
+        "title": "shaneisrael fireshare",
+        "vendor": "shaneisrael",
+        "product": "fireshare",
+        "cvss_max": 9.1
+      },
+      "cve": {
+        "id": "CVE-2026-34745",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2026-04-02T19:21:33.340",
+        "lastModified": "2026-04-03T19:50:08.803",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Fireshare facilitates self-hosted media and link sharing. Prior to version 1.5.3, the fix for CVE-2026-33645 was applied to the authenticated /api/uploadChunked endpoint but was not applied to the unauthenticated /api/uploadChunked/public endpoint in the same file (app/server/fireshare/api.py). An unauthenticated attacker can exploit the checkSum parameter to write arbitrary files with attacker-controlled content to any writable path on the server filesystem. This issue has been patched in version 1.5.3."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:H",
+                "baseScore": 9.1,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.2
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-22"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:shaneisrael:fireshare:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "BD38C642-B601-465E-9D1F-CB73CFF5B954",
+                    "versionEndExcluding": "1.5.3"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/ShaneIsrael/fireshare/commit/b76915607924756e6fa1a5f6c8823c38d611fb24",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://github.com/ShaneIsrael/fireshare/pull/520",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Issue Tracking",
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://github.com/ShaneIsrael/fireshare/releases/tag/v1.5.3",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Release Notes"
+            ]
+          },
+          {
+            "url": "https://github.com/ShaneIsrael/fireshare/security/advisories/GHSA-fvvp-rj8g-c7gc",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Exploit",
+              "Mitigation",
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 10
+    },
+    {
+      "cve_id": "CVE-2026-34758",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-04-02",
+          "previous_max": null,
+          "current_max": 9.1
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-04-02",
+        "description": "OneUptime is an open-source monitoring and observability platform. Prior to version 10.0.42, unauthenticated access to Notification test and Phone Number management endpoints allows SMS/Call/Email/WhatsApp abuse and phone number purchase. This issue has been patched in version 10.0.42.",
+        "title": "hackerbay oneuptime",
+        "vendor": "hackerbay",
+        "product": "oneuptime",
+        "cvss_max": 9.1
+      },
+      "cve": {
+        "id": "CVE-2026-34758",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2026-04-02T19:21:33.670",
+        "lastModified": "2026-04-03T19:52:26.097",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "OneUptime is an open-source monitoring and observability platform. Prior to version 10.0.42, unauthenticated access to Notification test and Phone Number management endpoints allows SMS/Call/Email/WhatsApp abuse and phone number purchase. This issue has been patched in version 10.0.42."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+                "baseScore": 9.1,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.2
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-306"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:hackerbay:oneuptime:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "C6DF2447-080C-4EB9-AA6C-4486A22088FA",
+                    "versionEndExcluding": "10.0.40"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/OneUptime/oneuptime/commit/9adbd04538714740506708d6fa610e433be4d2a4",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://github.com/OneUptime/oneuptime/releases/tag/10.0.42",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Release Notes"
+            ]
+          },
+          {
+            "url": "https://github.com/OneUptime/oneuptime/security/advisories/GHSA-q253-6wcm-h8hp",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Exploit",
+              "Mitigation",
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 11
+    },
+    {
+      "cve_id": "CVE-2026-34759",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-04-02",
+          "previous_max": null,
+          "current_max": 9.2
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-04-02",
+        "description": "OneUptime is an open-source monitoring and observability platform. Prior to version 10.0.42, multiple notification API endpoints are registered without authentication middleware, while sibling endpoints in the same codebase correctly use ClusterKeyAuthorization.isAuthorizedServiceMiddleware. These endpoints are externally reachable via the Nginx proxy at /notification/. Combined with a projectId leak from the public Status Page API, an unauthenticated attacker can purchase phone numbers on the victim's Twilio account and delete all existing alerting numbers. This issue has been patched in version 10.0.42.",
+        "title": "hackerbay oneuptime privilege escalation",
+        "vendor": "hackerbay",
+        "product": "oneuptime",
+        "attack_type": "privilege escalation",
+        "cvss_max": 9.2
+      },
+      "cve": {
+        "id": "CVE-2026-34759",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2026-04-02T19:21:33.833",
+        "lastModified": "2026-04-13T18:45:18.940",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "OneUptime is an open-source monitoring and observability platform. Prior to version 10.0.42, multiple notification API endpoints are registered without authentication middleware, while sibling endpoints in the same codebase correctly use ClusterKeyAuthorization.isAuthorizedServiceMiddleware. These endpoints are externally reachable via the Nginx proxy at /notification/. Combined with a projectId leak from the public Status Page API, an unauthenticated attacker can purchase phone numbers on the victim's Twilio account and delete all existing alerting numbers. This issue has been patched in version 10.0.42."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 8.1,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 2.2,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:H/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.2,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-862"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:hackerbay:oneuptime:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "4F312DCA-BDD5-465F-9848-5CD35CDFC185",
+                    "versionEndExcluding": "10.0.42"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/OneUptime/oneuptime/commit/9adbd04538714740506708d6fa610e433be4d2a4",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://github.com/OneUptime/oneuptime/releases/tag/10.0.42",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Product",
+              "Release Notes"
+            ]
+          },
+          {
+            "url": "https://github.com/OneUptime/oneuptime/security/advisories/GHSA-6wc5-rhvj-cx7f",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Exploit",
+              "Mitigation",
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 12
+    },
+    {
+      "cve_id": "CVE-2026-34838",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-04-02",
+          "previous_max": null,
+          "current_max": 9.9
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-04-02",
+        "description": "Group-Office is an enterprise customer relationship management and groupware tool. Prior to versions 6.8.156, 25.0.90, and 26.0.12, a vulnerability in the AbstractSettingsCollection model leads to insecure deserialization when these settings are loaded. By injecting a serialized FileCookieJar object into a setting string, an authenticated attacker can achieve Arbitrary File Write, leading directly to Remote Code Execution (RCE) on the server. This issue has been patched in versions 6.8.156, 25.0.90, and 26.0.12.",
+        "title": "intermesh group-office Deserialization",
+        "vendor": "intermesh",
+        "product": "group-office",
+        "attack_type": "Deserialization",
+        "cvss_max": 9.9
+      },
+      "cve": {
+        "id": "CVE-2026-34838",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2026-04-02T20:16:28.150",
+        "lastModified": "2026-04-15T17:29:12.483",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Group-Office is an enterprise customer relationship management and groupware tool. Prior to versions 6.8.156, 25.0.90, and 26.0.12, a vulnerability in the AbstractSettingsCollection model leads to insecure deserialization when these settings are loaded. By injecting a serialized FileCookieJar object into a setting string, an authenticated attacker can achieve Arbitrary File Write, leading directly to Remote Code Execution (RCE) on the server. This issue has been patched in versions 6.8.156, 25.0.90, and 26.0.12."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+                "baseScore": 9.9,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.1,
+              "impactScore": 6.0
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-502"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:intermesh:group-office:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "58242448-BF4C-435F-8DAA-FC1F28CD181B",
+                    "versionEndExcluding": "6.8.156"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:intermesh:group-office:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "1CA282F8-C073-4224-B3D0-5F1103FFE93F",
+                    "versionStartIncluding": "25.0.1",
+                    "versionEndExcluding": "25.0.90"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:intermesh:group-office:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "903696F9-950E-4D3F-8F0B-613C6C599F98",
+                    "versionStartIncluding": "26.0.1",
+                    "versionEndExcluding": "26.0.12"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/Intermesh/groupoffice/releases/tag/v25.0.90",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Release Notes"
+            ]
+          },
+          {
+            "url": "https://github.com/Intermesh/groupoffice/releases/tag/v26.0.12",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Release Notes"
+            ]
+          },
+          {
+            "url": "https://github.com/Intermesh/groupoffice/releases/tag/v6.8.156",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Release Notes"
+            ]
+          },
+          {
+            "url": "https://github.com/Intermesh/groupoffice/security/advisories/GHSA-h22j-frrf-5vxq",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 13
+    },
+    {
+      "cve_id": "CVE-2026-34877",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-04-02",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-04-02",
+        "description": "An issue was discovered in Mbed TLS versions from 2.19.0 up to 3.6.5, Mbed TLS 4.0.0. Insufficient protection of serialized SSL context or session structures allows an attacker who can modify the serialized structures to induce memory corruption, leading to arbitrary code execution. This is caused by Incorrect Use of Privileged APIs.",
+        "title": "arm mbed_tls RCE",
+        "vendor": "arm",
+        "product": "mbed_tls",
+        "attack_type": "RCE",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2026-34877",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2026-04-02T17:16:26.927",
+        "lastModified": "2026-04-06T21:06:00.037",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "An issue was discovered in Mbed TLS versions from 2.19.0 up to 3.6.5, Mbed TLS 4.0.0. Insufficient protection of serialized SSL context or session structures allows an attacker who can modify the serialized structures to induce memory corruption, leading to arbitrary code execution. This is caused by Incorrect Use of Privileged APIs."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-250"
+              },
+              {
+                "lang": "en",
+                "value": "CWE-502"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:arm:mbed_tls:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "60B71009-7D02-4B21-AB91-F0B821214B20",
+                    "versionStartIncluding": "2.19.0",
+                    "versionEndExcluding": "3.6.6"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:arm:mbed_tls:4.0.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "8EF688FA-732F-4EAF-BAC6-AC3CDAF19588"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://mbed-tls.readthedocs.io/en/latest/security-advisories/",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://mbed-tls.readthedocs.io/en/latest/security-advisories/mbedtls-security-advisory-2026-03-serialized-data/",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 14
+    },
+    {
+      "cve_id": "CVE-2026-35053",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-04-02",
+          "previous_max": null,
+          "current_max": 9.2
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-04-02",
+        "description": "OneUptime is an open-source monitoring and observability platform. Prior to version 10.0.42, the Worker service's ManualAPI exposes workflow execution endpoints (GET /workflow/manual/run/:workflowId and POST /workflow/manual/run/:workflowId) without any authentication middleware. An attacker who can obtain or guess a workflow ID can trigger arbitrary workflow execution with attacker-controlled input data, enabling JavaScript code execution, notification abuse, and data manipulation. This issue has been patched in version 10.0.42.",
+        "title": "hackerbay oneuptime",
+        "vendor": "hackerbay",
+        "product": "oneuptime",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2026-35053",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2026-04-02T20:16:29.117",
+        "lastModified": "2026-04-13T18:46:50.110",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "OneUptime is an open-source monitoring and observability platform. Prior to version 10.0.42, the Worker service's ManualAPI exposes workflow execution endpoints (GET /workflow/manual/run/:workflowId and POST /workflow/manual/run/:workflowId) without any authentication middleware. An attacker who can obtain or guess a workflow ID can trigger arbitrary workflow execution with attacker-controlled input data, enabling JavaScript code execution, notification abuse, and data manipulation. This issue has been patched in version 10.0.42."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.2,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-306"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:hackerbay:oneuptime:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "4F312DCA-BDD5-465F-9848-5CD35CDFC185",
+                    "versionEndExcluding": "10.0.42"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/OneUptime/oneuptime/releases/tag/10.0.42",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Product",
+              "Release Notes"
+            ]
+          },
+          {
+            "url": "https://github.com/OneUptime/oneuptime/security/advisories/GHSA-6c3w-7xg4-4cf7",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Exploit",
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 15
+    }
+  ],
+  "source": "https://www.cvelogic.com/threat-intelligence/2026-04-02"
+}

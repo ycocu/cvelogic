@@ -1,0 +1,2212 @@
+{
+  "schema_version": "2.2",
+  "generated_at": "2026-06-02T07:32:59Z",
+  "day": "2025-07-02",
+  "window": {
+    "utc_start": "2025-07-02",
+    "utc_end": "2025-07-02",
+    "days": 1
+  },
+  "summary": {
+    "brief": "Google Chromium V8 added to CISA KEV — confirmed in-the-wild exploitation. · Wing FTP Server: public exploit or PoC linked (RCE) · Adobe Acrobat — exploitation likelihood rose sharply (EPSS 7.2% → 26% · rising (+19%)). · 10 new critical disclosures — review patch status on exposed services.",
+    "bullets": [
+      "Google Chromium V8 added to CISA KEV — confirmed in-the-wild exploitation.",
+      "Wing FTP Server: public exploit or PoC linked (RCE)",
+      "Adobe Acrobat — exploitation likelihood rose sharply (EPSS 7.2% → 26% · rising (+19%)).",
+      "10 new critical disclosures — review patch status on exposed services."
+    ],
+    "counts": {
+      "cves": 16,
+      "kev": 1,
+      "exploit": 4,
+      "epss": 1,
+      "cvss": 10,
+      "patch": 0
+    }
+  },
+  "cves": [
+    {
+      "cve_id": "CVE-2025-6554",
+      "signal_types": [
+        "KEV"
+      ],
+      "signals": {
+        "kev": {
+          "date_added": "2025-07-02"
+        },
+        "exploit": null,
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-06-30",
+        "description": "Type confusion in V8 in Google Chrome prior to 138.0.7204.96 allowed a remote attacker to perform arbitrary read/write via a crafted HTML page. (Chromium security severity: High)",
+        "title": "Google Chromium V8 Type Confusion Vulnerability",
+        "vendor": "google",
+        "product": "chrome",
+        "cvss_max": 8.1
+      },
+      "cve": {
+        "id": "CVE-2025-6554",
+        "sourceIdentifier": "chrome-cve-admin@google.com",
+        "published": "2025-06-30T22:15:29.873",
+        "lastModified": "2025-10-24T14:11:20.707",
+        "vulnStatus": "Analyzed",
+        "cisaExploitAdd": "2025-07-02",
+        "cisaActionDue": "2025-07-23",
+        "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+        "cisaVulnerabilityName": "Google Chromium V8 Type Confusion Vulnerability",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Type confusion in V8 in Google Chrome prior to 138.0.7204.96 allowed a remote attacker to perform arbitrary read/write via a crafted HTML page. (Chromium security severity: High)"
+          },
+          {
+            "lang": "es",
+            "value": "Una confusión de tipos en la versión 8 de Google Chrome anterior a la versión 138.0.7204.96 permitía a un atacante remoto realizar operaciones de lectura y escritura arbitrarias a través de una página HTML manipulada. (Severidad de seguridad de Chromium: Alta)"
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N",
+                "baseScore": 8.1,
+                "baseSeverity": "HIGH"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 5.2
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-843"
+              }
+            ],
+            "source": "chrome-cve-admin@google.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:google:chrome:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "5A92F452-E80D-4C80-BE35-7CEC05DC959A",
+                    "versionEndExcluding": "138.0.7204.96"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "A2572D17-1DE6-457B-99CC-64AFD54487EA"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:google:chrome:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "A4D914DA-1710-47F0-BE81-741837318791",
+                    "versionEndExcluding": "138.0.7204.92"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:macos:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "387021A0-AF36-463C-A605-32EA7DAC172E"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "703AF700-7A70-47E2-BC3A-7FD03B3CA9C1"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://chromereleases.googleblog.com/2025/06/stable-channel-update-for-desktop_30.html",
+            "source": "chrome-cve-admin@google.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://issues.chromium.org/issues/427663123",
+            "source": "chrome-cve-admin@google.com",
+            "tags": [
+              "Permissions Required"
+            ]
+          },
+          {
+            "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2025-6554",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "US Government Resource"
+            ]
+          }
+        ]
+      },
+      "risk_score": 88,
+      "rank": 1
+    },
+    {
+      "cve_id": "CVE-2024-39930",
+      "signal_types": [
+        "EXP"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": {
+          "ref_published": "2025-07-02"
+        },
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2024-07-04",
+        "description": "The built-in SSH server of Gogs through 0.13.0 allows argument injection in internal/ssh/ssh.go, leading to remote code execution. Authenticated attackers can exploit this by opening an SSH connection and sending a malicious --split-string env request if the built-in SSH server is activated. Windows installations are unaffected.",
+        "title": "gogs gogs RCE",
+        "vendor": "gogs",
+        "product": "gogs",
+        "attack_type": "RCE",
+        "cvss_max": 9.9
+      },
+      "cve": {
+        "id": "CVE-2024-39930",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2024-07-04T16:15:02.277",
+        "lastModified": "2025-04-11T15:14:27.963",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The built-in SSH server of Gogs through 0.13.0 allows argument injection in internal/ssh/ssh.go, leading to remote code execution. Authenticated attackers can exploit this by opening an SSH connection and sending a malicious --split-string env request if the built-in SSH server is activated. Windows installations are unaffected."
+          },
+          {
+            "lang": "es",
+            "value": "El servidor SSH integrado de Gogs hasta la versión 0.13.0 permite la inyección de argumentos en internal/ssh/ssh.go, lo que lleva a la ejecución remota de código. Los atacantes autenticados pueden aprovechar esto abriendo una conexión SSH y enviando una solicitud env maliciosa de cadena dividida si el servidor SSH integrado está activado. Las instalaciones de Windows no se ven afectadas."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+                "baseScore": 9.9,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "cve@mitre.org",
+              "type": "Secondary",
+              "exploitabilityScore": 3.1,
+              "impactScore": 6.0
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+                "baseScore": 9.9,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.1,
+              "impactScore": 6.0
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-88"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:gogs:gogs:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "5634A605-49DE-459E-ADE6-2E65D89321BD",
+                    "versionEndIncluding": "0.13.0"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/gogs/gogs/releases",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Release Notes"
+            ]
+          },
+          {
+            "url": "https://www.sonarsource.com/blog/securing-developer-tools-unpatched-code-vulnerabilities-in-gogs-1/",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.vicarius.io/vsociety/posts/argument-injection-in-gogs-ssh-server-cve-2024-39930",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 78,
+      "rank": 2
+    },
+    {
+      "cve_id": "CVE-2013-3355",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 0.07213,
+            "score_date": "2025-03-30"
+          },
+          "current": {
+            "score": 0.26105,
+            "score_date": "2025-07-02"
+          },
+          "delta": 0.18892
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2013-09-12",
+        "description": "Adobe Reader and Acrobat before 10.1.8 and 11.x before 11.0.04 on Windows and Mac OS X allow attackers to execute arbitrary code or cause a denial of service (memory corruption) via unspecified vectors, a different vulnerability than CVE-2013-3352 and CVE-2013-3354.",
+        "title": "adobe acrobat DoS",
+        "vendor": "adobe",
+        "product": "acrobat",
+        "attack_type": "DoS",
+        "cvss_max": 10.0
+      },
+      "cve": {
+        "id": "CVE-2013-3355",
+        "sourceIdentifier": "psirt@adobe.com",
+        "published": "2013-09-12T13:28:24.513",
+        "lastModified": "2026-04-29T01:13:23.040",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Adobe Reader and Acrobat before 10.1.8 and 11.x before 11.0.04 on Windows and Mac OS X allow attackers to execute arbitrary code or cause a denial of service (memory corruption) via unspecified vectors, a different vulnerability than CVE-2013-3352 and CVE-2013-3354."
+          },
+          {
+            "lang": "es",
+            "value": "Adobe reader y Acrobat anteriores a 10.1.8 y 11.x anteriores a 11.0.04 en Windows y Mac OS X permite a atacantes ejecutar código a discrección o causar una denegación de servicio (corrupción de memoria) a través de vectores no especificados, una vulnerabilidad diferente a CVE-2013-3352 and CVE-2013-3354."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV2": [
+            {
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+                "baseScore": 10.0,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "baseSeverity": "HIGH",
+              "exploitabilityScore": 10.0,
+              "impactScore": 10.0
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-119"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:acrobat:10.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "B57C5136-7853-478B-A342-6013528B41B4"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:acrobat:10.0:-:pro:*:*:*:*:*",
+                    "matchCriteriaId": "353F77A1-E19C-4126-A10C-5A86B5C36E56"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:acrobat:10.0.1:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "CC1E1EE7-379E-4047-962D-0A311EB0DB1A"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:acrobat:10.0.1:-:pro:*:*:*:*:*",
+                    "matchCriteriaId": "D57B9AEA-000B-49BF-BDBF-1CC7642F837A"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:acrobat:10.0.2:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "C113D6BE-88CD-4670-A0FA-8E78EBAF9A81"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:acrobat:10.0.3:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "E4FC7DF0-7006-4805-9CA3-9A950DAA8D51"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:acrobat:10.1:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "D3CA4B45-E643-4705-9B6C-8598A5357326"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:acrobat:10.1.1:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "ADD314C8-A849-46C6-9ADD-72A2DF4C3219"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:acrobat:10.1.2:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "9EFDECFD-E02F-4545-939B-8C18A0BD82A8"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:acrobat:10.1.3:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "0D1565F5-8627-445B-AC76-662C08F215D5"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:acrobat:10.1.4:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "B10B4387-A6DB-4563-843E-0CF50F6293E0"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:acrobat:10.1.5:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "D917DF13-8582-455E-A8E6-3334F36553A4"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:acrobat:10.1.6:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "04E4C131-8681-4A7E-B4E1-A9E44FBFB29D"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:acrobat:10.1.7:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "50550750-21FF-4814-8DE5-34E1EC8BA205"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:mac_os_x:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "0FF5999A-9D12-4CDD-8DE9-A89C10B2D574"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "2CF61F35-5905-4BA9-AD7E-7DB261D2F256"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:acrobat_reader:11.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "3597B29D-1871-460A-A128-86C6BB777F36"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:acrobat_reader:11.0.1:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "E72C3C61-511E-4977-B029-70277C68E24D"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:acrobat_reader:11.0.2:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "47478166-EE66-4837-A6C0-0A519F9EDD26"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:acrobat_reader:11.0.3:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "C4E8E909-3277-429B-9CB2-973A606BB4A8"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:mac_os_x:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "0FF5999A-9D12-4CDD-8DE9-A89C10B2D574"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "2CF61F35-5905-4BA9-AD7E-7DB261D2F256"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:acrobat_reader:10.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "9731EFE2-A5BE-4389-A92D-DDC573633B6C"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:acrobat_reader:10.0.1:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "F9B4B357-27C7-4926-936C-A100A7AD538B"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:acrobat_reader:10.0.2:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "4DEE3D3B-C94C-4A85-B2C2-E4A72A88F4FD"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:acrobat_reader:10.0.3:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "978027C8-4DF6-4C18-A31D-1ACFBA857E9F"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:acrobat_reader:10.1:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "366E85EF-ED5F-4D4D-9CBE-E69F7248CB2B"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:acrobat_reader:10.1.1:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "56C05D36-1343-4571-9886-E1AE8952E096"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:acrobat_reader:10.1.2:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "5FBE0589-567D-4440-A51F-4EEC0A29DD44"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:acrobat_reader:10.1.3:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "823940EF-8B5F-44B0-8C74-2290A39DD15B"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:acrobat_reader:10.1.4:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "B6944168-B6E8-4267-AE42-6E926B9CCB56"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:acrobat_reader:10.1.5:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "35D7E162-657C-4E1A-B394-80E457B3E366"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:acrobat_reader:10.1.6:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "A2F7EC9A-2CD6-4C75-8D2C-F48F1ACCEFF0"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:acrobat_reader:10.1.7:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "57861404-0F93-4551-AB22-980546216FDF"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:mac_os_x:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "0FF5999A-9D12-4CDD-8DE9-A89C10B2D574"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "2CF61F35-5905-4BA9-AD7E-7DB261D2F256"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:acrobat:11.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "10D5B006-F8CD-4B51-A5B6-A282C95C6C19"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:acrobat:11.0.1:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "51C67ABD-5800-46DD-9E81-2A586698BC90"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:acrobat:11.0.2:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "F9FF4675-A9FF-4B0F-BBC6-D29B6324D27D"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:acrobat:11.0.3:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "76CE9DE1-FFB6-483B-A76C-38819C1407B9"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:mac_os_x:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "0FF5999A-9D12-4CDD-8DE9-A89C10B2D574"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "2CF61F35-5905-4BA9-AD7E-7DB261D2F256"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "http://www.adobe.com/support/security/bulletins/apsb13-22.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Patch",
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://oval.cisecurity.org/repository/search/definition/oval%3Aorg.mitre.oval%3Adef%3A18826",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          }
+        ]
+      },
+      "risk_score": 86,
+      "rank": 3
+    },
+    {
+      "cve_id": "CVE-2024-43425",
+      "signal_types": [
+        "EXP"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": {
+          "ref_published": "2025-07-02"
+        },
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2024-11-07",
+        "description": "A flaw was found in Moodle. Additional restrictions are required to avoid a remote code execution risk in calculated question types. Note: This requires the capability to add/update questions.",
+        "title": "moodle moodle RCE",
+        "vendor": "moodle",
+        "product": "moodle",
+        "attack_type": "RCE",
+        "cvss_max": 8.1
+      },
+      "cve": {
+        "id": "CVE-2024-43425",
+        "sourceIdentifier": "patrick@puiterwijk.org",
+        "published": "2024-11-07T14:15:15.280",
+        "lastModified": "2025-05-01T16:01:21.307",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A flaw was found in Moodle. Additional restrictions are required to avoid a remote code execution risk in calculated question types. Note: This requires the capability to add/update questions."
+          },
+          {
+            "lang": "es",
+            "value": "Se encontró una falla en Moodle. Se requieren restricciones adicionales para evitar el riesgo de ejecución remota de código en los tipos de preguntas calculadas. Nota: Esto requiere la capacidad de agregar o actualizar preguntas."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 8.1,
+                "baseSeverity": "HIGH"
+              },
+              "source": "patrick@puiterwijk.org",
+              "type": "Secondary",
+              "exploitabilityScore": 2.2,
+              "impactScore": 5.9
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 8.1,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 2.2,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-94"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:moodle:moodle:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "E5532931-0BD7-4522-9641-F0455BB030D8",
+                    "versionEndExcluding": "4.1.12"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:moodle:moodle:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "B8D123FB-556C-4602-91CB-ABE6541079F3",
+                    "versionStartIncluding": "4.2.0",
+                    "versionEndExcluding": "4.2.9"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:moodle:moodle:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "FBA8C381-9493-42BD-A5EA-7AADFAB68C5E",
+                    "versionStartIncluding": "4.3.0",
+                    "versionEndExcluding": "4.3.6"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:moodle:moodle:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "277E1058-2F00-45DB-8BFC-2628CCC89981",
+                    "versionStartIncluding": "4.4.0",
+                    "versionEndExcluding": "4.4.2"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2304253",
+            "source": "patrick@puiterwijk.org",
+            "tags": [
+              "Permissions Required"
+            ]
+          },
+          {
+            "url": "https://moodle.org/mod/forum/discuss.php?d=461193",
+            "source": "patrick@puiterwijk.org",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 78,
+      "rank": 4
+    },
+    {
+      "cve_id": "CVE-2025-20309",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-07-02",
+          "previous_max": null,
+          "current_max": 10.0
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-07-02",
+        "description": "A vulnerability in Cisco Unified Communications Manager (Unified CM) and Cisco Unified Communications Manager Session Management Edition (Unified CM SME) could allow an unauthenticated, remote attacker to log in to an affected device using the root account, which has default, static credentials that cannot be changed or deleted.\r\n\r\nThis vulnerability is due to the presence of static user credentials for the root account that are reserved for use during development. An attacker could exploit this vulnerability by using the account to log in to an affected system. A successful exploit could allow the attacker to log in to the affected system and execute arbitrary commands as the root user.",
+        "title": "cisco unified_communications_manager",
+        "vendor": "cisco",
+        "product": "unified_communications_manager",
+        "cvss_max": 10.0
+      },
+      "cve": {
+        "id": "CVE-2025-20309",
+        "sourceIdentifier": "psirt@cisco.com",
+        "published": "2025-07-02T17:15:52.927",
+        "lastModified": "2025-07-03T15:23:28.870",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A vulnerability in Cisco Unified Communications Manager (Unified CM) and Cisco Unified Communications Manager Session Management Edition (Unified CM SME) could allow an unauthenticated, remote attacker to log in to an affected device using the root account, which has default, static credentials that cannot be changed or deleted.\r\n\r\nThis vulnerability is due to the presence of static user credentials for the root account that are reserved for use during development. An attacker could exploit this vulnerability by using the account to log in to an affected system. A successful exploit could allow the attacker to log in to the affected system and execute arbitrary commands as the root user."
+          },
+          {
+            "lang": "es",
+            "value": "Una vulnerabilidad en Cisco Unified Communications Manager (Unified CM) y Cisco Unified Communications Manager Session Management Edition (Unified CM SME) podría permitir que un atacante remoto no autenticado inicie sesión en un dispositivo afectado utilizando la cuenta raíz, que tiene credenciales estáticas predeterminadas que no se pueden modificar ni eliminar. Esta vulnerabilidad se debe a la presencia de credenciales de usuario estáticas para la cuenta raíz, reservadas para su uso durante el desarrollo. Un atacante podría explotar esta vulnerabilidad utilizando la cuenta para iniciar sesión en un sistema afectado. Una explotación exitosa podría permitir al atacante iniciar sesión en el sistema afectado y ejecutar comandos arbitrarios como usuario raíz."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+                "baseScore": 10.0,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "psirt@cisco.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 6.0
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-798"
+              }
+            ],
+            "source": "psirt@cisco.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:unified_communications_manager:15.0.1.13010-1:*:*:*:-:*:*:*",
+                    "matchCriteriaId": "8985BC01-2355-447B-9454-EDCF26817605"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:unified_communications_manager:15.0.1.13010-1:*:*:*:session_management:*:*:*",
+                    "matchCriteriaId": "2704C9FA-BF67-4776-A1C5-C2FE2D6B79E1"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:unified_communications_manager:15.0.1.13011-1:*:*:*:-:*:*:*",
+                    "matchCriteriaId": "71821C29-B31C-4B7B-8C69-2CE1F9C9EE3A"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:unified_communications_manager:15.0.1.13011-1:*:*:*:session_management:*:*:*",
+                    "matchCriteriaId": "E0C338F5-3710-42B0-8959-73A916638EC5"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:unified_communications_manager:15.0.1.13012-1:*:*:*:-:*:*:*",
+                    "matchCriteriaId": "3E128057-726A-4715-B9EF-2C2AC30EDD17"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:unified_communications_manager:15.0.1.13012-1:*:*:*:session_management:*:*:*",
+                    "matchCriteriaId": "8A05CB62-B48C-4205-8349-8C4F3AFCB9D2"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:unified_communications_manager:15.0.1.13013-1:*:*:*:-:*:*:*",
+                    "matchCriteriaId": "6012779F-6406-4882-B520-3CB71734AAC8"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:unified_communications_manager:15.0.1.13013-1:*:*:*:session_management:*:*:*",
+                    "matchCriteriaId": "3ED47A6A-D9E9-4FC1-846D-E8481194B003"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:unified_communications_manager:15.0.1.13014-1:*:*:*:-:*:*:*",
+                    "matchCriteriaId": "B2BD7E64-746B-46F8-A676-A26B773159CB"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:unified_communications_manager:15.0.1.13014-1:*:*:*:session_management:*:*:*",
+                    "matchCriteriaId": "7EA03C5C-40DF-4AE6-B6B9-7A6D38918B97"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:unified_communications_manager:15.0.1.13015-1:*:*:*:-:*:*:*",
+                    "matchCriteriaId": "B2A4642A-D12B-40A9-B835-3F7303020209"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:unified_communications_manager:15.0.1.13015-1:*:*:*:session_management:*:*:*",
+                    "matchCriteriaId": "429174E3-5F75-43E7-95FF-C2FDE91E7BB7"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:unified_communications_manager:15.0.1.13016-1:*:*:*:-:*:*:*",
+                    "matchCriteriaId": "17D01F03-DA41-4F79-BC20-3F8D2B1BA7F3"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:unified_communications_manager:15.0.1.13016-1:*:*:*:session_management:*:*:*",
+                    "matchCriteriaId": "F645ECD4-D63F-4405-80CD-DF9F0C14DEDF"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:unified_communications_manager:15.0.1.13017-1:*:*:*:-:*:*:*",
+                    "matchCriteriaId": "5ACF28F0-7049-4AB8-8DBF-50FDC65194A5"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:unified_communications_manager:15.0.1.13017-1:*:*:*:session_management:*:*:*",
+                    "matchCriteriaId": "2C88F71F-229C-40BE-82EC-F76347AC5FDA"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-cucm-ssh-m4UBdpE7",
+            "source": "psirt@cisco.com",
+            "tags": [
+              "Patch",
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 5
+    },
+    {
+      "cve_id": "CVE-2025-34067",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-07-02",
+          "previous_max": null,
+          "current_max": 10.0
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-07-02",
+        "description": "An unauthenticated remote command execution vulnerability exists in the applyCT component of the Hikvision Integrated Security Management Platform due to the use of a vulnerable version of the Fastjson library. The endpoint /bic/ssoService/v1/applyCT deserializes untrusted user input, allowing an attacker to trigger Fastjson's auto-type feature to load arbitrary Java classes. By referencing a malicious class via an LDAP URL, an attacker can achieve remote code execution on the underlying system. Exploitation evidence was observed by the Shadowserver Foundation on 2025-02-05 UTC.",
+        "title": "An unauthenticated remote command execution vulnerability exists in the applyCT component of the Hikvision Integrated Security Management...",
+        "attack_type": "unsafe deserialization",
+        "cvss_max": 10.0
+      },
+      "cve": {
+        "id": "CVE-2025-34067",
+        "sourceIdentifier": "disclosure@vulncheck.com",
+        "published": "2025-07-02T14:15:24.250",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "An unauthenticated remote command execution vulnerability exists in the applyCT component of the Hikvision Integrated Security Management Platform due to the use of a vulnerable version of the Fastjson library. The endpoint /bic/ssoService/v1/applyCT deserializes untrusted user input, allowing an attacker to trigger Fastjson's auto-type feature to load arbitrary Java classes. By referencing a malicious class via an LDAP URL, an attacker can achieve remote code execution on the underlying system. Exploitation evidence was observed by the Shadowserver Foundation on 2025-02-05 UTC."
+          },
+          {
+            "lang": "es",
+            "value": "Existe una vulnerabilidad de ejecución remota de comandos no autenticados en el componente applyCT de Hikvision Integrated Security Management Platform debido al uso de una versión vulnerable de la librería Fastjson. El endpoint /bic/ssoService/v1/applyCT deserializa la entrada de usuario no confiable, lo que permite a un atacante activar la función de autotipado de Fastjson para cargar clases Java arbitrarias. Al referenciar una clase maliciosa mediante una URL LDAP, un atacante puede ejecutar código remoto en el sistema subyacente."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 10.0,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-502"
+              }
+            ],
+            "source": "disclosure@vulncheck.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/PeiQi0/PeiQi-WIKI-Book/blob/main/docs/wiki/iot/HIKVISION/HIKVISION%20%E7%BB%BC%E5%90%88%E5%AE%89%E9%98%B2%E7%AE%A1%E7%90%86%E5%B9%B3%E5%8F%B0%20applyCT%20Fastjson%E8%BF%9C%E7%A8%8B%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E.md",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://s4e.io/tools/hikvision-applyct-remote-code-execution",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://vulncheck.com/advisories/hikvision-ismp-rce-applyct",
+            "source": "disclosure@vulncheck.com"
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 6
+    },
+    {
+      "cve_id": "CVE-2025-34069",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-07-02",
+          "previous_max": null,
+          "current_max": 9.5
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-07-02",
+        "description": "An authentication bypass vulnerability exists in GFI Kerio Control 9.4.5 due to insecure default proxy configuration and weak access control in the GFIAgent service. The non-transparent proxy on TCP port 3128 can be used to forward unauthenticated requests to internal services such as GFIAgent, bypassing firewall restrictions and exposing internal management endpoints. This enables unauthenticated attackers to access the GFIAgent service on ports 7995 and 7996, retrieve the appliance UUID, and issue administrative requests via the proxy. Exploitation results in full administrative access to the Kerio Control appliance.",
+        "title": "gfi kerio_control Auth Bypass",
+        "vendor": "gfi",
+        "product": "kerio_control",
+        "attack_type": "Auth Bypass",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-34069",
+        "sourceIdentifier": "disclosure@vulncheck.com",
+        "published": "2025-07-02T14:15:24.390",
+        "lastModified": "2025-09-17T14:01:51.437",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "An authentication bypass vulnerability exists in GFI Kerio Control 9.4.5 due to insecure default proxy configuration and weak access control in the GFIAgent service. The non-transparent proxy on TCP port 3128 can be used to forward unauthenticated requests to internal services such as GFIAgent, bypassing firewall restrictions and exposing internal management endpoints. This enables unauthenticated attackers to access the GFIAgent service on ports 7995 and 7996, retrieve the appliance UUID, and issue administrative requests via the proxy. Exploitation results in full administrative access to the Kerio Control appliance."
+          },
+          {
+            "lang": "es",
+            "value": "Existe una vulnerabilidad de omisión de autenticación en GFI Kerio Control 9.4.5 debido a una configuración de proxy predeterminada insegura y un control de acceso deficiente en el servicio GFIAgent. El proxy no transparente del puerto TCP 3128 puede utilizarse para reenviar solicitudes no autenticadas a servicios internos como GFIAgent, evadiendo las restricciones del firewall y exponiendo los endpoints de administración internos. Esto permite a atacantes no autenticados acceder al servicio GFIAgent en los puertos 7995 y 7996, recuperar el UUID del dispositivo y emitir solicitudes administrativas a través del proxy. Su explotación da como resultado acceso administrativo completo al dispositivo Kerio Control."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.5,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-306"
+              }
+            ],
+            "source": "disclosure@vulncheck.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:gfi:kerio_control:9.4.5:-:*:*:*:*:*:*",
+                    "matchCriteriaId": "4466D8DD-63A6-4BE1-B9CB-3C7529D8AC2C"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://ssd-disclosure.com/ssd-advisory-kerio-control-authentication-bypass-and-rce/",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://vulncheck.com/advisories/gfi-kerio-control-auth-bypass-rce",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 7
+    },
+    {
+      "cve_id": "CVE-2025-34070",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-07-02",
+          "previous_max": null,
+          "current_max": 10.0
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-07-02",
+        "description": "A missing authentication vulnerability in the GFIAgent component of GFI Kerio Control 9.4.5 allows unauthenticated remote attackers to perform privileged operations. The GFIAgent service, responsible for integration with GFI AppManager, exposes HTTP services on ports 7995 and 7996 without proper authentication. The /proxy handler on port 7996 allows arbitrary forwarding to administrative endpoints when provided with an Appliance UUID, which itself can be retrieved from port 7995. This results in a complete authentication bypass, permitting access to sensitive administrative APIs.",
+        "title": "gfi kerio_control privilege escalation",
+        "vendor": "gfi",
+        "product": "kerio_control",
+        "attack_type": "privilege escalation",
+        "cvss_max": 10.0
+      },
+      "cve": {
+        "id": "CVE-2025-34070",
+        "sourceIdentifier": "disclosure@vulncheck.com",
+        "published": "2025-07-02T14:15:24.527",
+        "lastModified": "2025-09-17T13:56:58.470",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A missing authentication vulnerability in the GFIAgent component of GFI Kerio Control 9.4.5 allows unauthenticated remote attackers to perform privileged operations. The GFIAgent service, responsible for integration with GFI AppManager, exposes HTTP services on ports 7995 and 7996 without proper authentication. The /proxy handler on port 7996 allows arbitrary forwarding to administrative endpoints when provided with an Appliance UUID, which itself can be retrieved from port 7995. This results in a complete authentication bypass, permitting access to sensitive administrative APIs."
+          },
+          {
+            "lang": "es",
+            "value": "Una vulnerabilidad de falta de autenticación en el componente GFIAgent de GFI Kerio Control 9.4.5 permite a atacantes remotos no autenticados realizar operaciones privilegiadas. El servicio GFIAgent, responsable de la integración con GFI AppManager, expone servicios HTTP en los puertos 7995 y 7996 sin la autenticación adecuada. El controlador /proxy del puerto 7996 permite el reenvío arbitrario a endpoints administrativos cuando se le proporciona un UUID de dispositivo, que a su vez puede obtenerse del puerto 7995. Esto resulta en una omisión completa de la autenticación, lo que permite el acceso a API administrativas confidenciales."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 10.0,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-306"
+              }
+            ],
+            "source": "disclosure@vulncheck.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:gfi:kerio_control:9.4.5:-:*:*:*:*:*:*",
+                    "matchCriteriaId": "4466D8DD-63A6-4BE1-B9CB-3C7529D8AC2C"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://ssd-disclosure.com/ssd-advisory-kerio-control-authentication-bypass-and-rce/",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://vulncheck.com/advisories/gfi-kerio-control-auth-bypass-rce",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 8
+    },
+    {
+      "cve_id": "CVE-2025-34071",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-07-02",
+          "previous_max": null,
+          "current_max": 9.4
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-07-02",
+        "description": "A remote code execution vulnerability in GFI Kerio Control 9.4.5 allows attackers with administrative access to upload and execute arbitrary code through the firmware upgrade feature. The system upgrade mechanism accepts unsigned .img files, which can be modified to include malicious scripts within the upgrade.sh or disk image components. These modified upgrade images are not validated for authenticity or integrity, and are executed by the system post-upload, enabling root access.",
+        "title": "gfi kerio_control RCE",
+        "vendor": "gfi",
+        "product": "kerio_control",
+        "attack_type": "RCE",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-34071",
+        "sourceIdentifier": "disclosure@vulncheck.com",
+        "published": "2025-07-02T14:15:24.667",
+        "lastModified": "2025-09-17T13:41:43.400",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A remote code execution vulnerability in GFI Kerio Control 9.4.5 allows attackers with administrative access to upload and execute arbitrary code through the firmware upgrade feature. The system upgrade mechanism accepts unsigned .img files, which can be modified to include malicious scripts within the upgrade.sh or disk image components. These modified upgrade images are not validated for authenticity or integrity, and are executed by the system post-upload, enabling root access."
+          },
+          {
+            "lang": "es",
+            "value": "Una vulnerabilidad de ejecución remota de código en GFI Kerio Control 9.4.5 permite a atacantes con acceso administrativo cargar y ejecutar código arbitrario mediante la función de actualización de firmware. El mecanismo de actualización del sistema acepta archivos .img sin firmar, que pueden modificarse para incluir scripts maliciosos en los componentes upgrade.sh o de imagen de disco. Estas imágenes de actualización modificadas no se validan en cuanto a autenticidad ni integridad, y el sistema las ejecuta después de la carga, lo que permite el acceso root."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.4,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-306"
+              }
+            ],
+            "source": "disclosure@vulncheck.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:gfi:kerio_control:9.4.5:-:*:*:*:*:*:*",
+                    "matchCriteriaId": "4466D8DD-63A6-4BE1-B9CB-3C7529D8AC2C"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://ssd-disclosure.com/ssd-advisory-kerio-control-authentication-bypass-and-rce/",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://vulncheck.com/advisories/gfi-kerio-control-auth-bypass-rce",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 9
+    },
+    {
+      "cve_id": "CVE-2025-34072",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-07-02",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-07-02",
+        "description": "A data exfiltration vulnerability exists in Anthropic’s deprecated Slack Model Context Protocol (MCP) Server via automatic link unfurling. When an AI agent using the Slack MCP Server processes untrusted data, it can be manipulated to generate messages containing attacker-crafted hyperlinks embedding sensitive data. Slack’s link preview bots (e.g., Slack-LinkExpanding, Slackbot, Slack-ImgProxy) will then issue outbound requests to the attacker-controlled URL, resulting in zero-click exfiltration of private data.",
+        "title": "A data exfiltration vulnerability exists in Anthropic’s deprecated Slack Model Context Protocol (MCP) Server via automatic link unfurling.",
+        "cvss_max": 9.3
+      },
+      "cve": {
+        "id": "CVE-2025-34072",
+        "sourceIdentifier": "disclosure@vulncheck.com",
+        "published": "2025-07-02T14:15:24.817",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A data exfiltration vulnerability exists in Anthropic’s deprecated Slack Model Context Protocol (MCP) Server via automatic link unfurling. When an AI agent using the Slack MCP Server processes untrusted data, it can be manipulated to generate messages containing attacker-crafted hyperlinks embedding sensitive data. Slack’s link preview bots (e.g., Slack-LinkExpanding, Slackbot, Slack-ImgProxy) will then issue outbound requests to the attacker-controlled URL, resulting in zero-click exfiltration of private data."
+          },
+          {
+            "lang": "es",
+            "value": "Existe una vulnerabilidad de exfiltración de datos en el servidor obsoleto del Protocolo de Contexto de Modelo (MCP) de Slack de Anthropic mediante el despliegue automático de enlaces. Cuando un agente de IA que utiliza el servidor MCP de Slack procesa datos no confiables, estos pueden manipularse para generar mensajes con hipervínculos manipulados por el atacante que integran datos confidenciales. Los bots de previsualización de enlaces de Slack (p. ej., Slack-LinkExpanding, Slackbot, Slack-ImgProxy) emiten solicitudes salientes a la URL controlada por el atacante, lo que resulta en la exfiltración de datos privados sin necesidad de hacer clic."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-20"
+              },
+              {
+                "lang": "en",
+                "value": "CWE-200"
+              }
+            ],
+            "source": "disclosure@vulncheck.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://embracethered.com/blog/posts/2025/security-advisory-anthropic-slack-mcp-server-data-leakage/",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://vulncheck.com/advisories/anthropic-slack-mcp-server-data-exfiltration",
+            "source": "disclosure@vulncheck.com"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 10
+    },
+    {
+      "cve_id": "CVE-2025-34073",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-07-02",
+          "previous_max": null,
+          "current_max": 10.0
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-07-02",
+        "description": "An unauthenticated command injection vulnerability exists in stamparm/maltrail (Maltrail) versions <=0.54. A remote attacker can execute arbitrary operating system commands via the username parameter in a POST request to the /login endpoint. This occurs due to unsafe handling of user-supplied input passed to subprocess.check_output() in core/http.py, allowing injection of shell metacharacters. Exploitation does not require authentication and commands are executed with the privileges of the Maltrail process.",
+        "title": "An unauthenticated command injection vulnerability exists in stamparm/maltrail (Maltrail) versions <=0.54.",
+        "attack_type": "Command Injection",
+        "cvss_max": 10.0
+      },
+      "cve": {
+        "id": "CVE-2025-34073",
+        "sourceIdentifier": "disclosure@vulncheck.com",
+        "published": "2025-07-02T14:15:24.967",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "An unauthenticated command injection vulnerability exists in stamparm/maltrail (Maltrail) versions <=0.54. A remote attacker can execute arbitrary operating system commands via the username parameter in a POST request to the /login endpoint. This occurs due to unsafe handling of user-supplied input passed to subprocess.check_output() in core/http.py, allowing injection of shell metacharacters. Exploitation does not require authentication and commands are executed with the privileges of the Maltrail process."
+          },
+          {
+            "lang": "es",
+            "value": "Existe una vulnerabilidad de inyección de comandos no autenticados en las versiones anteriores a la 0.54 de stamparm/maltrail (Maltrail). Un atacante remoto puede ejecutar comandos arbitrarios del sistema operativo mediante el parámetro \"nombre de usuario\" en una solicitud POST al endpoint /login. Esto se debe a un manejo inseguro de la entrada proporcionada por el usuario y pasada a subprocess.check_output() en core/http.py, lo que permite la inyección de metacaracteres de shell. La explotación no requiere autenticación y los comandos se ejecutan con los privilegios del proceso Maltrail."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 10.0,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-78"
+              },
+              {
+                "lang": "en",
+                "value": "CWE-306"
+              }
+            ],
+            "source": "disclosure@vulncheck.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/stamparm/maltrail",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://github.com/stamparm/maltrail/issues/19146",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://huntr.com/bounties/be3c5204-fbd9-448d-b97c-96a8d2941e87",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://raw.githubusercontent.com/rapid7/metasploit-framework/master/modules/exploits/unix/http/maltrail_rce.rb",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://vulncheck.com/advisories/stamparm-maltrail-rce",
+            "source": "disclosure@vulncheck.com"
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 11
+    },
+    {
+      "cve_id": "CVE-2025-34074",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-07-02",
+          "previous_max": null,
+          "current_max": 9.4
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-07-02",
+        "description": "An authenticated remote code execution vulnerability exists in Lucee’s administrative interface due to insecure design in the scheduled task functionality. An administrator with access to /lucee/admin/web.cfm can configure a scheduled job to retrieve a remote .cfm file from an attacker-controlled server, which is written to the Lucee webroot and executed with the privileges of the Lucee service account. Because Lucee does not enforce integrity checks, path restrictions, or execution controls for scheduled task fetches, this feature can be abused to achieve arbitrary code execution. This issue is distinct from CVE-2024-55354.",
+        "title": "An authenticated remote code execution vulnerability exists in Lucee’s administrative interface due to insecure design in the scheduled t...",
+        "attack_type": "RCE",
+        "cvss_max": 9.4
+      },
+      "cve": {
+        "id": "CVE-2025-34074",
+        "sourceIdentifier": "disclosure@vulncheck.com",
+        "published": "2025-07-02T20:15:29.410",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "An authenticated remote code execution vulnerability exists in Lucee’s administrative interface due to insecure design in the scheduled task functionality. An administrator with access to /lucee/admin/web.cfm can configure a scheduled job to retrieve a remote .cfm file from an attacker-controlled server, which is written to the Lucee webroot and executed with the privileges of the Lucee service account. Because Lucee does not enforce integrity checks, path restrictions, or execution controls for scheduled task fetches, this feature can be abused to achieve arbitrary code execution. This issue is distinct from CVE-2024-55354."
+          },
+          {
+            "lang": "es",
+            "value": "Existe una vulnerabilidad de ejecución remota de código autenticada en la interfaz administrativa de Lucee debido a un diseño inseguro en la funcionalidad de tareas programadas. Un administrador con acceso a /lucee/admin/web.cfm puede configurar una tarea programada para recuperar un archivo .cfm remoto de un servidor controlado por un atacante. Este archivo se escribe en la raíz web de Lucee y se ejecuta con los privilegios de la cuenta de servicio de Lucee. Dado que Lucee no aplica comprobaciones de integridad, restricciones de ruta ni controles de ejecución para la obtención de tareas programadas, esta función puede utilizarse de forma abusiva para ejecutar código arbitrario. Este problema es distinto de CVE-2024-55354."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.4,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-94"
+              },
+              {
+                "lang": "en",
+                "value": "CWE-829"
+              }
+            ],
+            "source": "disclosure@vulncheck.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/lucee/Lucee",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://raw.githubusercontent.com/rapid7/metasploit-framework/master/modules/exploits/multi/http/lucee_scheduled_job.rb",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          },
+          {
+            "url": "https://vulncheck.com/advisories/lucee-admin-interface-rce",
+            "source": "disclosure@vulncheck.com"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 12
+    },
+    {
+      "cve_id": "CVE-2025-45813",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-07-02",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-07-02",
+        "description": "ENENSYS IPGuard v2 2.10.0 was discovered to contain hardcoded credentials.",
+        "title": "enensys ipguardv2_firmware",
+        "vendor": "enensys",
+        "product": "ipguardv2_firmware",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-45813",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2025-07-02T18:15:24.170",
+        "lastModified": "2025-10-10T19:41:51.730",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "ENENSYS IPGuard v2 2.10.0 was discovered to contain hardcoded credentials."
+          },
+          {
+            "lang": "es",
+            "value": "Se descubrió que ENENSYS IPGuard v2 2.10.0 contenía credenciales codificadas."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-798"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:enensys:ipguardv2_firmware:2.10.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "7A5693DB-B571-415A-988C-E5A6BDB7015A"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:enensys:ipguardv2:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "68CBDFA8-048B-4326-8193-5230B62883FC"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/shiky8/my--cve-vulnerability-research/tree/main/CVE-2025-45813",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.enensys.com/",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Product"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 13
+    },
+    {
+      "cve_id": "CVE-2025-45814",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-07-02",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-07-02",
+        "description": "Missing authentication checks in the query.fcgi endpoint of NS3000 v8.1.1.125110 , v7.2.8.124852 , and v7.x and NS2000 v7.02.08 allows attackers to execute a session hijacking attack.",
+        "title": "novelsat ns2000_firmware",
+        "vendor": "novelsat",
+        "product": "ns3000_firmware",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-45814",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2025-07-02T17:15:53.557",
+        "lastModified": "2025-10-10T19:45:37.673",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Missing authentication checks in the query.fcgi endpoint of NS3000 v8.1.1.125110 , v7.2.8.124852 , and v7.x and NS2000 v7.02.08 allows attackers to execute a session hijacking attack."
+          },
+          {
+            "lang": "es",
+            "value": "La falta de comprobaciones de autenticación en el endpoint query.fcgi de NS3000 v8.1.1.125110, v7.2.8.124852 y v7.x y NS2000 v7.02.08 permite a los atacantes ejecutar un ataque de secuestro de sesión."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-306"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:novelsat:ns3000_firmware:7.2.8.124852:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "C2F564ED-DA63-47B2-A532-63E161746625"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:novelsat:ns3000_firmware:8.1.1.125110:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "9C0EA382-6362-4B9E-9004-F2A7F110A740"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:novelsat:ns3000:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "FBAFC817-CD9C-468D-A7CE-712BDF0BB260"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:novelsat:ns2000_firmware:7.02.08:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "084E9B8B-618C-4784-A0FF-8A17D953D20A"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:novelsat:ns2000:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "6BA1FA87-67B1-4859-9430-926EBA752ACD"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/shiky8/my--cve-vulnerability-research/tree/main/CVE-2025-45814",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://novelsat.com/",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Product"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 14
+    },
+    {
+      "cve_id": "CVE-2025-47166",
+      "signal_types": [
+        "EXP"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": {
+          "ref_published": "2025-07-02"
+        },
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-06-10",
+        "description": "Deserialization of untrusted data in Microsoft Office SharePoint allows an authorized attacker to execute code over a network.",
+        "title": "microsoft sharepoint_enterprise_server Deserialization",
+        "vendor": "microsoft",
+        "product": "sharepoint_enterprise_server",
+        "attack_type": "Deserialization",
+        "cvss_max": 8.8
+      },
+      "cve": {
+        "id": "CVE-2025-47166",
+        "sourceIdentifier": "secure@microsoft.com",
+        "published": "2025-06-10T17:23:38.753",
+        "lastModified": "2025-07-09T14:02:40.430",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Deserialization of untrusted data in Microsoft Office SharePoint allows an authorized attacker to execute code over a network."
+          },
+          {
+            "lang": "es",
+            "value": "La deserialización de datos no confiables en Microsoft Office SharePoint permite que un atacante autorizado ejecute código a través de una red."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 8.8,
+                "baseSeverity": "HIGH"
+              },
+              "source": "secure@microsoft.com",
+              "type": "Secondary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-502"
+              }
+            ],
+            "source": "secure@microsoft.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:microsoft:sharepoint_enterprise_server:2016:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "9C082CC4-6128-475D-BC19-B239E348FDB2"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:microsoft:sharepoint_server:*:*:*:*:subscription:*:*:*",
+                    "matchCriteriaId": "C7035301-1B6D-486C-B000-456842F16359",
+                    "versionEndExcluding": "16.0.18526.20396"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:microsoft:sharepoint_server:2019:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "6122D014-5BF1-4AF4-8B4D-80205ED7785E"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-47166",
+            "source": "secure@microsoft.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 78,
+      "rank": 15
+    },
+    {
+      "cve_id": "CVE-2025-47812",
+      "signal_types": [
+        "EXP"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": {
+          "ref_published": "2025-07-02"
+        },
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-07-10",
+        "description": "In Wing FTP Server before 7.4.4. the user and admin web interfaces mishandle '\\0' bytes, ultimately allowing injection of arbitrary Lua code into user session files. This can be used to execute arbitrary system commands with the privileges of the FTP service (root or SYSTEM by default). This is thus a remote code execution vulnerability that guarantees a total server compromise. This is also exploitable via anonymous FTP accounts.",
+        "title": "Wing FTP Server Improper Neutralization of Null Byte or NUL Character Vulnerability",
+        "vendor": "wftpserver",
+        "product": "wing_ftp_server",
+        "attack_type": "RCE",
+        "cvss_max": 10.0
+      },
+      "cve": {
+        "id": "CVE-2025-47812",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2025-07-10T17:15:47.210",
+        "lastModified": "2025-11-05T19:26:31.650",
+        "vulnStatus": "Analyzed",
+        "cisaExploitAdd": "2025-07-14",
+        "cisaActionDue": "2025-08-04",
+        "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+        "cisaVulnerabilityName": "Wing FTP Server Improper Neutralization of Null Byte or NUL Character Vulnerability",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "In Wing FTP Server before 7.4.4. the user and admin web interfaces mishandle '\\0' bytes, ultimately allowing injection of arbitrary Lua code into user session files. This can be used to execute arbitrary system commands with the privileges of the FTP service (root or SYSTEM by default). This is thus a remote code execution vulnerability that guarantees a total server compromise. This is also exploitable via anonymous FTP accounts."
+          },
+          {
+            "lang": "es",
+            "value": "En Wing FTP Server anterior a la versión 7.4.4, las interfaces web de usuario y administrador gestionan incorrectamente los bytes '\\0', lo que permite la inyección de código Lua arbitrario en los archivos de sesión del usuario. Esto puede usarse para ejecutar comandos de sistema arbitrarios con los privilegios del servicio FTP (root o SYSTEM por defecto). Por lo tanto, se trata de una vulnerabilidad de ejecución remota de código que garantiza la vulneración total del servidor. Esto también es explotable mediante cuentas FTP anónimas."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+                "baseScore": 10.0,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "cve@mitre.org",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 6.0
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-158"
+              }
+            ],
+            "source": "cve@mitre.org"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:wftpserver:wing_ftp_server:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "34AF9E83-291C-40B0-AE69-34C9B59A5D03",
+                    "versionEndExcluding": "7.4.4"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://www.rcesecurity.com/2025/06/what-the-null-wing-ftp-server-rce-cve-2025-47812/",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.vicarius.io/vsociety/posts/cve-2025-47812-detection-script-remote-code-execution-vulnerability-in-wing-ftp-server",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.vicarius.io/vsociety/posts/cve-2025-47812-mitigation-script-remote-code-execution-vulnerability-in-wing-ftp-server",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Mitigation",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.wftpserver.com",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Product"
+            ]
+          },
+          {
+            "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2025-47812",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "US Government Resource"
+            ]
+          },
+          {
+            "url": "https://www.huntress.com/blog/wing-ftp-server-remote-code-execution-cve-2025-47812-exploited-in-wild",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 78,
+      "rank": 16
+    }
+  ],
+  "source": "https://www.cvelogic.com/threat-intelligence/2025-07-02"
+}

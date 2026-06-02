@@ -1,0 +1,2222 @@
+{
+  "schema_version": "2.2",
+  "generated_at": "2026-06-02T07:33:08Z",
+  "day": "2025-07-28",
+  "window": {
+    "utc_start": "2025-07-28",
+    "utc_end": "2025-07-28",
+    "days": 1
+  },
+  "summary": {
+    "brief": "Cisco Identity Services Engine: 2 CVEs added to CISA KEV today. · Xwiki: public exploit or PoC linked (SQL injection) · 10 new critical disclosures — review patch status on exposed services.",
+    "bullets": [
+      "Cisco Identity Services Engine: 2 CVEs added to CISA KEV today.",
+      "Xwiki: public exploit or PoC linked (SQL injection)",
+      "10 new critical disclosures — review patch status on exposed services."
+    ],
+    "counts": {
+      "cves": 18,
+      "kev": 3,
+      "exploit": 5,
+      "epss": 0,
+      "cvss": 10,
+      "patch": 0
+    }
+  },
+  "cves": [
+    {
+      "cve_id": "CVE-2023-2533",
+      "signal_types": [
+        "KEV"
+      ],
+      "signals": {
+        "kev": {
+          "date_added": "2025-07-28"
+        },
+        "exploit": null,
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2023-06-20",
+        "description": "A Cross-Site Request Forgery (CSRF) vulnerability has been identified in\nPaperCut NG/MF, which, under specific conditions, could potentially enable\nan attacker to alter security settings or execute arbitrary code. This could\nbe exploited if the target is an admin with a current login session. Exploiting\nthis would typically involve the possibility of deceiving an admin into clicking\na specially crafted malicious link, potentially leading to unauthorized changes.",
+        "title": "PaperCut NG/MF Cross-Site Request Forgery (CSRF) Vulnerability",
+        "vendor": "papercut",
+        "product": "papercut_mf",
+        "attack_type": "CSRF",
+        "cvss_max": 8.8
+      },
+      "cve": {
+        "id": "CVE-2023-2533",
+        "sourceIdentifier": "help@fluidattacks.com",
+        "published": "2023-06-20T15:15:11.560",
+        "lastModified": "2026-02-26T15:03:53.690",
+        "vulnStatus": "Analyzed",
+        "cisaExploitAdd": "2025-07-28",
+        "cisaActionDue": "2025-08-18",
+        "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+        "cisaVulnerabilityName": "PaperCut NG/MF Cross-Site Request Forgery (CSRF) Vulnerability",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A Cross-Site Request Forgery (CSRF) vulnerability has been identified in\nPaperCut NG/MF, which, under specific conditions, could potentially enable\nan attacker to alter security settings or execute arbitrary code. This could\nbe exploited if the target is an admin with a current login session. Exploiting\nthis would typically involve the possibility of deceiving an admin into clicking\na specially crafted malicious link, potentially leading to unauthorized changes."
+          },
+          {
+            "lang": "es",
+            "value": "Se ha identificado una vulnerabilidad de Cross-Site Request Forgery (CSRF) en PaperCut NG/MF que, en determinadas circunstancias, podría permitir a un atacante alterar la configuración de seguridad o ejecutar código arbitrario. Esto podría explotarse si el objetivo es un administrador con una sesión iniciada. Explotar esto normalmente implicaría la posibilidad de engañar a un administrador para que haga clic en un enlace malicioso especialmente manipulado, lo que podría provocar cambios no autorizados."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:C/C:H/I:H/A:H",
+                "baseScore": 8.4,
+                "baseSeverity": "HIGH"
+              },
+              "source": "help@fluidattacks.com",
+              "type": "Secondary",
+              "exploitabilityScore": 1.7,
+              "impactScore": 6.0
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+                "baseScore": 8.8,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-352"
+              }
+            ],
+            "source": "help@fluidattacks.com"
+          },
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-352"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:papercut:papercut_mf:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "C32F194D-D229-4694-B8AD-94BB7B427378",
+                    "versionEndExcluding": "20.1.8"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:papercut:papercut_mf:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "373E06E9-6AAB-45D4-84FE-B12BB48086D7",
+                    "versionStartIncluding": "21.0.0",
+                    "versionEndExcluding": "21.2.12"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:papercut:papercut_mf:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "B94F9EC5-EC1D-47CB-ABDA-90845C4485AA",
+                    "versionStartIncluding": "22.0.0",
+                    "versionEndExcluding": "22.1.1"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:papercut:papercut_ng:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "E79D1429-D66B-4A09-8375-B92D667D54A3",
+                    "versionEndExcluding": "20.1.8"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:papercut:papercut_ng:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "BBE00F06-73FB-4A8D-8C34-54517A08CA7A",
+                    "versionStartIncluding": "21.0.0",
+                    "versionEndExcluding": "21.2.12"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:papercut:papercut_ng:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "BF6B8BA0-F12A-4CD7-8B99-58F7B32ED08E",
+                    "versionStartIncluding": "22.0.0",
+                    "versionEndIncluding": "22.1.1"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://fluidattacks.com/advisories/arcangel/",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.papercut.com/kb/Main/SecurityBulletinJune2023",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2023-2533",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "US Government Resource"
+            ]
+          }
+        ]
+      },
+      "risk_score": 88,
+      "rank": 1
+    },
+    {
+      "cve_id": "CVE-2024-0737",
+      "signal_types": [
+        "EXP"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": {
+          "ref_published": "2025-07-28"
+        },
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2024-01-19",
+        "description": "A vulnerability classified as problematic was found in Xlightftpd Xlight FTP Server 1.1. This vulnerability affects unknown code of the component Login. The manipulation of the argument user leads to denial of service. The attack can be initiated remotely. The exploit has been disclosed to the public and may be used. The identifier of this vulnerability is VDB-251560.",
+        "title": "xlightftpd xlight_ftp_server DoS",
+        "vendor": "xlightftpd",
+        "product": "xlight_ftp_server",
+        "attack_type": "DoS",
+        "cvss_max": 7.5
+      },
+      "cve": {
+        "id": "CVE-2024-0737",
+        "sourceIdentifier": "cna@vuldb.com",
+        "published": "2024-01-19T22:15:07.770",
+        "lastModified": "2024-11-21T08:47:15.143",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A vulnerability classified as problematic was found in Xlightftpd Xlight FTP Server 1.1. This vulnerability affects unknown code of the component Login. The manipulation of the argument user leads to denial of service. The attack can be initiated remotely. The exploit has been disclosed to the public and may be used. The identifier of this vulnerability is VDB-251560."
+          },
+          {
+            "lang": "es",
+            "value": "Una vulnerabilidad fue encontrada en Xlightftpd Xlight FTP Server 1.1 y clasificada como problemática. Esta vulnerabilidad afecta a código desconocido del componente Login. La manipulación del argumento usuario conduce a la denegación de servicio. El ataque se puede iniciar de forma remota. El exploit ha sido divulgado al público y puede utilizarse. El identificador de esta vulnerabilidad es VDB-251560."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV2": [
+            {
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+                "baseScore": 5.0,
+                "baseSeverity": "MEDIUM"
+              },
+              "source": "cna@vuldb.com",
+              "type": "Secondary",
+              "baseSeverity": "MEDIUM",
+              "exploitabilityScore": 10.0,
+              "impactScore": 2.9
+            }
+          ],
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+                "baseScore": 5.3,
+                "baseSeverity": "MEDIUM"
+              },
+              "source": "cna@vuldb.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 1.4
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                "baseScore": 7.5,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 3.6
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-404"
+              }
+            ],
+            "source": "cna@vuldb.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:xlightftpd:xlight_ftp_server:1.1:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "6B63E384-61B3-4819-804C-CD462EA49A4B"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://packetstormsecurity.com/files/176553/LightFTP-1.1-Denial-Of-Service.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory",
+              "VDB Entry"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/?ctiid.251560",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Permissions Required",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://vuldb.com/?id.251560",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 78,
+      "rank": 2
+    },
+    {
+      "cve_id": "CVE-2025-54419",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-07-28",
+          "previous_max": null,
+          "current_max": 10.0
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-07-28",
+        "description": "A SAML library not dependent on any frameworks that runs in Node. In version 5.0.1, Node-SAML loads the assertion from the (unsigned) original response document. This is different than the parts that are verified when checking signature. This allows an attacker to modify authentication details within a valid SAML assertion. For example, in one attack it is possible to remove any character from the SAML assertion username. To conduct the attack an attacker would need a validly signed document from the identity provider (IdP). This is fixed in version 5.1.0.",
+        "title": "A SAML library not dependent on any frameworks that runs in Node.",
+        "cvss_max": 10.0
+      },
+      "cve": {
+        "id": "CVE-2025-54419",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2025-07-28T20:17:48.403",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A SAML library not dependent on any frameworks that runs in Node. In version 5.0.1, Node-SAML loads the assertion from the (unsigned) original response document. This is different than the parts that are verified when checking signature. This allows an attacker to modify authentication details within a valid SAML assertion. For example, in one attack it is possible to remove any character from the SAML assertion username. To conduct the attack an attacker would need a validly signed document from the identity provider (IdP). This is fixed in version 5.1.0."
+          },
+          {
+            "lang": "es",
+            "value": "Una librería SAML independiente de ningún framework que se ejecuta en Node. En la versión 5.0.1, Node-SAML carga la aserción del documento de respuesta original (sin firmar). Esto difiere de las partes que se verifican al comprobar la firma. Esto permite a un atacante modificar los detalles de autenticación dentro de una aserción SAML válida. Por ejemplo, en un ataque es posible eliminar cualquier carácter del nombre de usuario de la aserción SAML. Para llevar a cabo el ataque, un atacante necesitaría un documento firmado válidamente por el proveedor de identidad (IdP). Esto se solucionó en la versión 5.1.0."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:N",
+                "baseScore": 10.0,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.8
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-287"
+              },
+              {
+                "lang": "en",
+                "value": "CWE-347"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/node-saml/node-saml/commit/31ead9411ebc3e2385086fa9149b6c17732bca10",
+            "source": "security-advisories@github.com"
+          },
+          {
+            "url": "https://github.com/node-saml/node-saml/releases/tag/v5.1.0",
+            "source": "security-advisories@github.com"
+          },
+          {
+            "url": "https://github.com/node-saml/node-saml/security/advisories/GHSA-4mxg-3p6v-xgq3",
+            "source": "security-advisories@github.com"
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 3
+    },
+    {
+      "cve_id": "CVE-2024-20767",
+      "signal_types": [
+        "EXP"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": {
+          "ref_published": "2025-07-28"
+        },
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2024-03-18",
+        "description": "ColdFusion versions 2023.6, 2021.12 and earlier are affected by an Improper Access Control vulnerability that could result in arbitrary file system read. An attacker could leverage this vulnerability to access or modify restricted files. Exploitation of this issue does not require user interaction. Exploitation of this issue requires the admin panel be exposed to the internet.",
+        "title": "Adobe ColdFusion Improper Access Control Vulnerability",
+        "vendor": "adobe",
+        "product": "coldfusion",
+        "cvss_max": 7.4
+      },
+      "cve": {
+        "id": "CVE-2024-20767",
+        "sourceIdentifier": "psirt@adobe.com",
+        "published": "2024-03-18T12:15:06.870",
+        "lastModified": "2025-10-23T11:13:22.983",
+        "vulnStatus": "Analyzed",
+        "cisaExploitAdd": "2024-12-16",
+        "cisaActionDue": "2025-01-06",
+        "cisaRequiredAction": "Apply mitigations per vendor instructions or discontinue use of the product if mitigations are unavailable.",
+        "cisaVulnerabilityName": "Adobe ColdFusion Improper Access Control Vulnerability",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "ColdFusion versions 2023.6, 2021.12 and earlier are affected by an Improper Access Control vulnerability that could result in arbitrary file system read. An attacker could leverage this vulnerability to access or modify restricted files. Exploitation of this issue does not require user interaction. Exploitation of this issue requires the admin panel be exposed to the internet."
+          },
+          {
+            "lang": "es",
+            "value": "Las versiones 2023.6, 2021.12 y anteriores de ColdFusion se ven afectadas por una vulnerabilidad de control de acceso inadecuado que podría provocar una lectura arbitraria del sistema de archivos. Un atacante podría aprovechar esta vulnerabilidad para eludir las medidas de seguridad y obtener acceso no autorizado a archivos confidenciales y realizar escrituras arbitrarias en el sistema de archivos. La explotación de este problema no requiere la interacción del usuario."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N",
+                "baseScore": 7.4,
+                "baseSeverity": "HIGH"
+              },
+              "source": "psirt@adobe.com",
+              "type": "Secondary",
+              "exploitabilityScore": 2.2,
+              "impactScore": 5.2
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N",
+                "baseScore": 7.4,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Secondary",
+              "exploitabilityScore": 2.2,
+              "impactScore": 5.2
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-284"
+              }
+            ],
+            "source": "psirt@adobe.com"
+          },
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "NVD-CWE-noinfo"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:coldfusion:2021:-:*:*:*:*:*:*",
+                    "matchCriteriaId": "7A94B406-C011-4673-8C2B-0DD94D46CC4C"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:coldfusion:2021:update1:*:*:*:*:*:*",
+                    "matchCriteriaId": "AFD05E3A-10F9-4C75-9710-BA46B66FF6E6"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:coldfusion:2021:update10:*:*:*:*:*:*",
+                    "matchCriteriaId": "F1FC7D1D-6DD2-48B2-980F-B001B0F24473"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:coldfusion:2021:update11:*:*:*:*:*:*",
+                    "matchCriteriaId": "1FA19E1D-61C2-4640-AF06-4BCFE750BDF3"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:coldfusion:2021:update12:*:*:*:*:*:*",
+                    "matchCriteriaId": "3F331DEA-F3D0-4B13-AB1E-6FE39B2BB55D"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:coldfusion:2021:update2:*:*:*:*:*:*",
+                    "matchCriteriaId": "D57C8681-AC68-47DF-A61E-B5C4B4A47663"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:coldfusion:2021:update3:*:*:*:*:*:*",
+                    "matchCriteriaId": "75608383-B727-48D6-8FFA-D552A338A562"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:coldfusion:2021:update4:*:*:*:*:*:*",
+                    "matchCriteriaId": "7773DB68-414A-4BA9-960F-52471A784379"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:coldfusion:2021:update5:*:*:*:*:*:*",
+                    "matchCriteriaId": "B38B9E86-BCD5-4BCA-8FB7-EC55905184E6"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:coldfusion:2021:update6:*:*:*:*:*:*",
+                    "matchCriteriaId": "5E7BAB80-8455-4570-A2A2-8F40469EE9CC"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:coldfusion:2021:update7:*:*:*:*:*:*",
+                    "matchCriteriaId": "F9D645A2-E02D-4E82-A2BD-0A7DE5B8FBCC"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:coldfusion:2021:update8:*:*:*:*:*:*",
+                    "matchCriteriaId": "6E22D701-B038-4795-AA32-A18BC93C2B6F"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:coldfusion:2021:update9:*:*:*:*:*:*",
+                    "matchCriteriaId": "CAC4A0EC-C3FC-47D8-86CE-0E6A87A7F0B0"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:coldfusion:2023:-:*:*:*:*:*:*",
+                    "matchCriteriaId": "B02A37FE-5D31-4892-A3E6-156A8FE62D28"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:coldfusion:2023:update1:*:*:*:*:*:*",
+                    "matchCriteriaId": "0AA3D302-CFEE-4DFD-AB92-F53C87721BFF"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:coldfusion:2023:update2:*:*:*:*:*:*",
+                    "matchCriteriaId": "EB88D4FE-5496-4639-BAF2-9F29F24ABF29"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:coldfusion:2023:update3:*:*:*:*:*:*",
+                    "matchCriteriaId": "43E0ED98-2C1F-40B8-AF60-FEB1D85619C0"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:coldfusion:2023:update4:*:*:*:*:*:*",
+                    "matchCriteriaId": "76204873-C6E0-4202-8A03-0773270F1802"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:coldfusion:2023:update5:*:*:*:*:*:*",
+                    "matchCriteriaId": "C1A22BE9-0D47-4BA8-8BDB-9B12D7A0F7C7"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:coldfusion:2023:update6:*:*:*:*:*:*",
+                    "matchCriteriaId": "E3A83642-BF14-4C37-BD94-FA76AABE8ADC"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://helpx.adobe.com/security/products/coldfusion/apsb24-14.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2024-20767",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Third Party Advisory",
+              "US Government Resource"
+            ]
+          }
+        ]
+      },
+      "risk_score": 78,
+      "rank": 4
+    },
+    {
+      "cve_id": "CVE-2025-20281",
+      "signal_types": [
+        "KEV"
+      ],
+      "signals": {
+        "kev": {
+          "date_added": "2025-07-28"
+        },
+        "exploit": null,
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-06-25",
+        "description": "A vulnerability in a specific API of Cisco ISE and Cisco ISE-PIC could allow an unauthenticated, remote attacker to execute arbitrary code on the underlying operating system as root. The attacker does not require any valid credentials to exploit this vulnerability.\r\n\r\nThis vulnerability is due to insufficient validation of user-supplied input. An attacker could exploit this vulnerability by submitting a crafted API request. A successful exploit could allow the attacker to obtain root privileges on an affected device.",
+        "title": "Cisco Identity Services Engine Injection Vulnerability",
+        "vendor": "cisco",
+        "product": "identity_services_engine",
+        "cvss_max": 10.0
+      },
+      "cve": {
+        "id": "CVE-2025-20281",
+        "sourceIdentifier": "psirt@cisco.com",
+        "published": "2025-06-25T16:15:26.017",
+        "lastModified": "2025-10-28T13:59:08.700",
+        "vulnStatus": "Analyzed",
+        "cisaExploitAdd": "2025-07-28",
+        "cisaActionDue": "2025-08-18",
+        "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+        "cisaVulnerabilityName": "Cisco Identity Services Engine Injection Vulnerability",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A vulnerability in a specific API of Cisco ISE and Cisco ISE-PIC could allow an unauthenticated, remote attacker to execute arbitrary code on the underlying operating system as root. The attacker does not require any valid credentials to exploit this vulnerability.\r\n\r\nThis vulnerability is due to insufficient validation of user-supplied input. An attacker could exploit this vulnerability by submitting a crafted API request. A successful exploit could allow the attacker to obtain root privileges on an affected device."
+          },
+          {
+            "lang": "es",
+            "value": "Una vulnerabilidad en una API específica de Cisco ISE y Cisco ISE-PIC podría permitir que un atacante remoto no autenticado ejecute código arbitrario en el sistema operativo subyacente como root. El atacante no necesita credenciales válidas para explotar esta vulnerabilidad. Esta vulnerabilidad se debe a una validación insuficiente de la información proporcionada por el usuario. Un atacante podría explotar esta vulnerabilidad enviando una solicitud de API manipulada. Una explotación exitosa podría permitirle obtener privilegios de root en un dispositivo afectado."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+                "baseScore": 10.0,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "psirt@cisco.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 6.0
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-74"
+              }
+            ],
+            "source": "psirt@cisco.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:identity_services_engine:3.3.0:-:*:*:*:*:*:*",
+                    "matchCriteriaId": "F1B9C2C1-59A4-49A0-9B74-83CCB063E55D"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:identity_services_engine:3.3.0:patch1:*:*:*:*:*:*",
+                    "matchCriteriaId": "DFD29A0B-0D75-4EAB-BCE0-79450EC75DD0"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:identity_services_engine:3.3.0:patch2:*:*:*:*:*:*",
+                    "matchCriteriaId": "E6C94CC4-CC08-4DAF-A606-FDAFC92720A9"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:identity_services_engine:3.3.0:patch3:*:*:*:*:*:*",
+                    "matchCriteriaId": "BB069EA3-7B8C-42B5-8035-2EE5ED3F56E4"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:identity_services_engine:3.3.0:patch4:*:*:*:*:*:*",
+                    "matchCriteriaId": "FF8B81A6-BF44-4E5F-B167-39F61DDCA026"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:identity_services_engine:3.3.0:patch5:*:*:*:*:*:*",
+                    "matchCriteriaId": "56E0F0EC-3E66-4866-89F5-89B331F3F517"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:identity_services_engine:3.3.0:patch6:*:*:*:*:*:*",
+                    "matchCriteriaId": "2E3E8937-2859-4A2A-91C0-05F674EF0466"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:identity_services_engine:3.4.0:-:*:*:*:*:*:*",
+                    "matchCriteriaId": "D23905E0-E525-49B1-8E5F-4EB42D186768"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:identity_services_engine:3.4.0:patch1:*:*:*:*:*:*",
+                    "matchCriteriaId": "74509498-38EF-4345-9583-CEF5C26CA1D8"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:identity_services_engine_passive_identity_connector:3.3.0:-:*:*:*:*:*:*",
+                    "matchCriteriaId": "3CA3315D-8A45-43F4-A0F0-094D325F285B"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:identity_services_engine_passive_identity_connector:3.3.0:patch1:*:*:*:*:*:*",
+                    "matchCriteriaId": "B3736136-9FD8-4B12-B119-EA15201224D9"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:identity_services_engine_passive_identity_connector:3.3.0:patch2:*:*:*:*:*:*",
+                    "matchCriteriaId": "654ED77E-22D3-4E76-9E6D-B1581F5982F0"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:identity_services_engine_passive_identity_connector:3.3.0:patch3:*:*:*:*:*:*",
+                    "matchCriteriaId": "A0648EE9-F042-479F-9AAB-C6B5DBC46511"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:identity_services_engine_passive_identity_connector:3.3.0:patch4:*:*:*:*:*:*",
+                    "matchCriteriaId": "83F3BA58-4F38-41C8-956F-38A2F44EECE4"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:identity_services_engine_passive_identity_connector:3.3.0:patch5:*:*:*:*:*:*",
+                    "matchCriteriaId": "6C30FA1D-91E2-48C5-B181-A88FDF668278"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:identity_services_engine_passive_identity_connector:3.3.0:patch6:*:*:*:*:*:*",
+                    "matchCriteriaId": "768215B1-80B7-40FF-8772-BA4C0B3913F5"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:identity_services_engine_passive_identity_connector:3.4.0:-:*:*:*:*:*:*",
+                    "matchCriteriaId": "CC0525FD-C4D7-4B48-BF35-1791391AB148"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:identity_services_engine_passive_identity_connector:3.4.0:patch1:*:*:*:*:*:*",
+                    "matchCriteriaId": "68C96F6B-51EE-4D03-9598-CBFD16DA22EF"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ise-unauth-rce-ZAd2GnJ6",
+            "source": "psirt@cisco.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2025-20281",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "US Government Resource"
+            ]
+          },
+          {
+            "url": "https://www.zerodayinitiative.com/blog/2025/7/24/cve-2025-20281-cisco-ise-api-unauthenticated-remote-code-execution-vulnerability",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 88,
+      "rank": 5
+    },
+    {
+      "cve_id": "CVE-2025-20337",
+      "signal_types": [
+        "KEV"
+      ],
+      "signals": {
+        "kev": {
+          "date_added": "2025-07-28"
+        },
+        "exploit": null,
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-07-16",
+        "description": "A vulnerability in a specific API of Cisco ISE and Cisco ISE-PIC could allow an unauthenticated, remote attacker to execute arbitrary code on the underlying operating system as root. The attacker does not require any valid credentials to exploit this vulnerability.\r\n\r\nThis vulnerability is due to insufficient validation of user-supplied input. An attacker could exploit this vulnerability by submitting a crafted API request. A successful exploit could allow the attacker to obtain root privileges on an affected device.",
+        "title": "Cisco Identity Services Engine Injection Vulnerability",
+        "vendor": "cisco",
+        "product": "identity_services_engine",
+        "cvss_max": 10.0
+      },
+      "cve": {
+        "id": "CVE-2025-20337",
+        "sourceIdentifier": "psirt@cisco.com",
+        "published": "2025-07-16T17:15:30.573",
+        "lastModified": "2025-10-28T13:58:55.447",
+        "vulnStatus": "Analyzed",
+        "cisaExploitAdd": "2025-07-28",
+        "cisaActionDue": "2025-08-18",
+        "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+        "cisaVulnerabilityName": "Cisco Identity Services Engine Injection Vulnerability",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A vulnerability in a specific API of Cisco ISE and Cisco ISE-PIC could allow an unauthenticated, remote attacker to execute arbitrary code on the underlying operating system as root. The attacker does not require any valid credentials to exploit this vulnerability.\r\n\r\nThis vulnerability is due to insufficient validation of user-supplied input. An attacker could exploit this vulnerability by submitting a crafted API request. A successful exploit could allow the attacker to obtain root privileges on an affected device."
+          },
+          {
+            "lang": "es",
+            "value": "Una vulnerabilidad en una API específica de Cisco ISE y Cisco ISE-PIC podría permitir que un atacante remoto no autenticado ejecute código arbitrario en el sistema operativo subyacente como root. El atacante no necesita credenciales válidas para explotar esta vulnerabilidad. Esta vulnerabilidad se debe a una validación insuficiente de la información proporcionada por el usuario. Un atacante podría explotar esta vulnerabilidad enviando una solicitud de API manipulada. Una explotación exitosa podría permitirle obtener privilegios de root en un dispositivo afectado."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+                "baseScore": 10.0,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "psirt@cisco.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 6.0
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-74"
+              }
+            ],
+            "source": "psirt@cisco.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:identity_services_engine:3.3.0:-:*:*:*:*:*:*",
+                    "matchCriteriaId": "F1B9C2C1-59A4-49A0-9B74-83CCB063E55D"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:identity_services_engine:3.3.0:patch1:*:*:*:*:*:*",
+                    "matchCriteriaId": "DFD29A0B-0D75-4EAB-BCE0-79450EC75DD0"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:identity_services_engine:3.3.0:patch2:*:*:*:*:*:*",
+                    "matchCriteriaId": "E6C94CC4-CC08-4DAF-A606-FDAFC92720A9"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:identity_services_engine:3.3.0:patch3:*:*:*:*:*:*",
+                    "matchCriteriaId": "BB069EA3-7B8C-42B5-8035-2EE5ED3F56E4"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:identity_services_engine:3.3.0:patch4:*:*:*:*:*:*",
+                    "matchCriteriaId": "FF8B81A6-BF44-4E5F-B167-39F61DDCA026"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:identity_services_engine:3.3.0:patch5:*:*:*:*:*:*",
+                    "matchCriteriaId": "56E0F0EC-3E66-4866-89F5-89B331F3F517"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:identity_services_engine:3.3.0:patch6:*:*:*:*:*:*",
+                    "matchCriteriaId": "2E3E8937-2859-4A2A-91C0-05F674EF0466"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:identity_services_engine:3.4.0:-:*:*:*:*:*:*",
+                    "matchCriteriaId": "D23905E0-E525-49B1-8E5F-4EB42D186768"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:identity_services_engine:3.4.0:patch1:*:*:*:*:*:*",
+                    "matchCriteriaId": "74509498-38EF-4345-9583-CEF5C26CA1D8"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:identity_services_engine_passive_identity_connector:3.3.0:-:*:*:*:*:*:*",
+                    "matchCriteriaId": "3CA3315D-8A45-43F4-A0F0-094D325F285B"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:identity_services_engine_passive_identity_connector:3.3.0:patch1:*:*:*:*:*:*",
+                    "matchCriteriaId": "B3736136-9FD8-4B12-B119-EA15201224D9"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:identity_services_engine_passive_identity_connector:3.3.0:patch2:*:*:*:*:*:*",
+                    "matchCriteriaId": "654ED77E-22D3-4E76-9E6D-B1581F5982F0"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:identity_services_engine_passive_identity_connector:3.3.0:patch3:*:*:*:*:*:*",
+                    "matchCriteriaId": "A0648EE9-F042-479F-9AAB-C6B5DBC46511"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:identity_services_engine_passive_identity_connector:3.3.0:patch4:*:*:*:*:*:*",
+                    "matchCriteriaId": "83F3BA58-4F38-41C8-956F-38A2F44EECE4"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:identity_services_engine_passive_identity_connector:3.3.0:patch5:*:*:*:*:*:*",
+                    "matchCriteriaId": "6C30FA1D-91E2-48C5-B181-A88FDF668278"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:identity_services_engine_passive_identity_connector:3.3.0:patch6:*:*:*:*:*:*",
+                    "matchCriteriaId": "768215B1-80B7-40FF-8772-BA4C0B3913F5"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:identity_services_engine_passive_identity_connector:3.4.0:-:*:*:*:*:*:*",
+                    "matchCriteriaId": "CC0525FD-C4D7-4B48-BF35-1791391AB148"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:identity_services_engine_passive_identity_connector:3.4.0:patch1:*:*:*:*:*:*",
+                    "matchCriteriaId": "68C96F6B-51EE-4D03-9598-CBFD16DA22EF"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ise-unauth-rce-ZAd2GnJ6",
+            "source": "psirt@cisco.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2025-20337",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "US Government Resource"
+            ]
+          }
+        ]
+      },
+      "risk_score": 88,
+      "rank": 6
+    },
+    {
+      "cve_id": "CVE-2025-30125",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-07-28",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-07-28",
+        "description": "An issue was discovered on Marbella KR8s Dashcam FF 2.0.8 devices. All dashcams were shipped with the same default credentials of 12345678, which creates an insecure-by-default condition. For users who change their passwords, it's limited to 8 characters. These short passwords can be cracked in 8 hours via low-end commercial cloud resources.",
+        "title": "An issue was discovered on Marbella KR8s Dashcam FF 2.0.8 devices.",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-30125",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2025-07-28T15:15:26.337",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "An issue was discovered on Marbella KR8s Dashcam FF 2.0.8 devices. All dashcams were shipped with the same default credentials of 12345678, which creates an insecure-by-default condition. For users who change their passwords, it's limited to 8 characters. These short passwords can be cracked in 8 hours via low-end commercial cloud resources."
+          },
+          {
+            "lang": "es",
+            "value": "Se detectó un problema en Marbella KR8s Dashcam FF 2.0.8 devices. Todas las cámaras de salpicadero se entregaron con las mismas credenciales predeterminadas, 12345678, lo que genera una condición de inseguridad predeterminada. Para los usuarios que cambian sus contraseñas, esta está limitada a 8 caracteres. Estas contraseñas cortas se pueden descifrar en 8 horas mediante recursos comerciales de bajo coste en la nube."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-798"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://geochen.medium.com/marbella-dashcam-ab40ca41ade",
+            "source": "cve@mitre.org"
+          },
+          {
+            "url": "https://github.com/geo-chen/Marbella/",
+            "source": "cve@mitre.org"
+          },
+          {
+            "url": "https://github.com/geo-chen/Marbella/blob/main/README.md#finding-1---cve-2025-30125-same-default-credentials-and-limited-password-combinations",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          },
+          {
+            "url": "https://makagps.com/",
+            "source": "cve@mitre.org"
+          },
+          {
+            "url": "https://www.protiviti.com/sg-en/blogs/6259-8-character-password-still-dead",
+            "source": "cve@mitre.org"
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 7
+    },
+    {
+      "cve_id": "CVE-2025-30133",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-07-28",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-07-28",
+        "description": "An issue was discovered on IROAD Dashcam FX2 devices. Bypass of Device Pairing/Registration can occur. It requires device registration via the \"IROAD X View\" app for authentication, but its HTTP server lacks this restriction. Once connected to the dashcam's Wi-Fi network via the default password (\"qwertyuiop\"), an attacker can directly access the HTTP server at http://192.168.10.1 without undergoing the pairing process. Additionally, no alert is triggered on the device when an attacker connects, making this intrusion completely silent.",
+        "title": "iroadau fx2_firmware",
+        "vendor": "iroadau",
+        "product": "fx2_firmware",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-30133",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2025-07-28T14:15:26.830",
+        "lastModified": "2025-11-06T20:07:15.797",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "An issue was discovered on IROAD Dashcam FX2 devices. Bypass of Device Pairing/Registration can occur. It requires device registration via the \"IROAD X View\" app for authentication, but its HTTP server lacks this restriction. Once connected to the dashcam's Wi-Fi network via the default password (\"qwertyuiop\"), an attacker can directly access the HTTP server at http://192.168.10.1 without undergoing the pairing process. Additionally, no alert is triggered on the device when an attacker connects, making this intrusion completely silent."
+          },
+          {
+            "lang": "es",
+            "value": "Se detectó un problema en IROAD Dashcam FX2 devices. Es posible que se omita el emparejamiento/registro del dispositivo. Requiere el registro del dispositivo mediante la aplicación \"IROAD X View\" para la autenticación, pero su servidor HTTP no tiene esta restricción. Una vez conectado a la red Wi-Fi de la cámara de salpicadero con la contraseña predeterminada (\"qwertyuiop\"), un atacante puede acceder directamente al servidor HTTP en http://192.168.10.1 sin realizar el proceso de emparejamiento. Además, no se activa ninguna alerta en el dispositivo cuando un atacante se conecta, lo que hace que esta intrusión sea completamente silenciosa."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-284"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:iroadau:fx2_firmware:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "A1C21728-4D54-42DB-98C8-B0B7C7A38B2C"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:iroadau:fx2:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "8E62E438-2D69-401D-B5A8-B54565CE049E"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/geo-chen/IROAD/blob/main/README.md#finding-12---cve-2025-30133-unprotected-url-shortcut",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/geo-chen/IROAD?tab=readme-ov-file#finding-7-bypass-of-device-pairingregistration-for-iroad-fx2",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.iroadau.com.au/downloads/",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Product"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 8
+    },
+    {
+      "cve_id": "CVE-2025-32429",
+      "signal_types": [
+        "EXP"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": {
+          "ref_published": "2025-07-28"
+        },
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-07-24",
+        "description": "XWiki Platform is a generic wiki platform offering runtime services for applications built on top of it. In versions 9.4-rc-1 through 16.10.5 and 17.0.0-rc-1 through 17.2.2, it's possible for anyone to inject SQL using the parameter sort of the getdeleteddocuments.vm. It's injected as is as an ORDER BY value. This is fixed in versions 16.10.6 and 17.3.0-rc-1.",
+        "title": "xwiki xwiki SQL injection",
+        "vendor": "xwiki",
+        "product": "xwiki",
+        "attack_type": "SQL injection",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-32429",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2025-07-24T23:15:26.283",
+        "lastModified": "2025-09-03T17:43:28.937",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "XWiki Platform is a generic wiki platform offering runtime services for applications built on top of it. In versions 9.4-rc-1 through 16.10.5 and 17.0.0-rc-1 through 17.2.2, it's possible for anyone to inject SQL using the parameter sort of the getdeleteddocuments.vm. It's injected as is as an ORDER BY value. This is fixed in versions 16.10.6 and 17.3.0-rc-1."
+          },
+          {
+            "lang": "es",
+            "value": "La plataforma XWiki es una plataforma wiki genérica que ofrece servicios de ejecución para aplicaciones desarrolladas sobre ella. En las versiones 9.4-rc-1 a 16.10.5 y 17.0.0-rc-1 a 17.2.2, cualquiera puede inyectar SQL mediante el parámetro sort de getdeleteddocuments.vm. Se inyecta tal cual como un valor ORDER BY. Esto se solucionó en las versiones 16.10.6 y 17.3.0-rc-1."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-89"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:xwiki:xwiki:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "D5EC45F9-9CC2-46A8-835F-C0C03E22FEF2",
+                    "versionStartIncluding": "9.4",
+                    "versionEndExcluding": "16.10.6"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:xwiki:xwiki:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "AAB2B86E-1053-4B68-8553-B73C003453E9",
+                    "versionStartIncluding": "17.0.0",
+                    "versionEndIncluding": "17.2.2"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/xwiki/xwiki-platform/commit/dfd0744e9c18d24ac66a0d261dc6cafd1c209101",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://github.com/xwiki/xwiki-platform/commit/f502b5d5fd36284a50890ad26d168b7d8dc80bd3",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://github.com/xwiki/xwiki-platform/security/advisories/GHSA-vr59-gm53-v7cq",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://jira.xwiki.org/browse/XWIKI-23093",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Issue Tracking",
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 78,
+      "rank": 9
+    },
+    {
+      "cve_id": "CVE-2025-50481",
+      "signal_types": [
+        "EXP"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": {
+          "ref_published": "2025-07-28"
+        },
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-07-23",
+        "description": "A cross-site scripting (XSS) vulnerability in the component /blog/blogpost/add of Mezzanine CMS v6.1.0 allows attackers to execute arbitrary web scripts or HTML via injecting a crafted payload into a blog post.",
+        "title": "jupo mezzanine XSS",
+        "vendor": "jupo",
+        "product": "mezzanine",
+        "attack_type": "XSS",
+        "cvss_max": 4.8
+      },
+      "cve": {
+        "id": "CVE-2025-50481",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2025-07-23T16:15:26.723",
+        "lastModified": "2025-07-28T16:59:28.710",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A cross-site scripting (XSS) vulnerability in the component /blog/blogpost/add of Mezzanine CMS v6.1.0 allows attackers to execute arbitrary web scripts or HTML via injecting a crafted payload into a blog post."
+          },
+          {
+            "lang": "es",
+            "value": "Una vulnerabilidad de cross-site scripting (XSS) en el componente /blog/blogpost/add de Mezzanine CMS v6.1.0 permite a los atacantes ejecutar scripts web arbitrarios en las páginas mediante la inyección de un payload manipulado en una publicación de blog."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:C/C:L/I:L/A:N",
+                "baseScore": 4.8,
+                "baseSeverity": "MEDIUM"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 1.7,
+              "impactScore": 2.7
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-79"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:jupo:mezzanine:6.1.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "09C41624-CBB1-40B8-AB25-21AB0B21F1B0"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/kevinpdicks/Mezzanine-CMS-6.1.0-XSS",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/stephenmcd/mezzanine",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Product"
+            ]
+          }
+        ]
+      },
+      "risk_score": 78,
+      "rank": 10
+    },
+    {
+      "cve_id": "CVE-2025-53695",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-07-28",
+          "previous_max": null,
+          "current_max": 9.4
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-07-28",
+        "description": "OS Command Injection in iSTAR Ultra products web application allows an authenticated attacker to gain even more privileged access ('root' user) to the device firmware.",
+        "title": "OS Command Injection in iSTAR Ultra products web application allows an authenticated attacker to gain even more privileged access ('root'...",
+        "attack_type": "Command Injection",
+        "cvss_max": 9.4
+      },
+      "cve": {
+        "id": "CVE-2025-53695",
+        "sourceIdentifier": "ot-cert@dragos.com",
+        "published": "2025-07-28T14:15:28.153",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "OS Command Injection in iSTAR Ultra products web application allows an authenticated attacker to gain even more privileged access ('root' user) to the device firmware."
+          },
+          {
+            "lang": "es",
+            "value": "La inyección de comandos del sistema operativo en la aplicación web de los productos iSTAR Ultra permite que un atacante autenticado obtenga acceso aún más privilegiado (usuario \"root\") al firmware del dispositivo."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.4,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "ot-cert@dragos.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-78"
+              }
+            ],
+            "source": "ot-cert@dragos.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://raw.githubusercontent.com/reidmefirst/vuln-disclosure/refs/heads/main/2025-03.txt",
+            "source": "ot-cert@dragos.com"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 11
+    },
+    {
+      "cve_id": "CVE-2025-53696",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-07-28",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-07-28",
+        "description": "iSTAR Ultra performs a firmware verification on boot, however the verification does not inspect certain portions of the firmware. These firmware parts may contain malicious code. Tested up to firmware 6.9.2, later firmwares are also possibly affected.",
+        "title": "iSTAR Ultra performs a firmware verification on boot, however the verification does not inspect certain portions of the firmware.",
+        "cvss_max": 9.3
+      },
+      "cve": {
+        "id": "CVE-2025-53696",
+        "sourceIdentifier": "ot-cert@dragos.com",
+        "published": "2025-07-28T15:15:26.670",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "iSTAR Ultra performs a firmware verification on boot, however the verification does not inspect certain portions of the firmware. These firmware parts may contain malicious code. Tested up to firmware 6.9.2, later firmwares are also possibly affected."
+          },
+          {
+            "lang": "es",
+            "value": "iSTAR Ultra realiza una verificación de firmware al arrancar; sin embargo, esta verificación no inspecciona ciertas partes del firmware. Estas partes podrían contener código malicioso. Se probó hasta la versión 6.9.2; las versiones posteriores también podrían verse afectadas."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:L/AC:L/AT:N/PR:H/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "ot-cert@dragos.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-494"
+              }
+            ],
+            "source": "ot-cert@dragos.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://raw.githubusercontent.com/reidmefirst/vuln-disclosure/refs/heads/main/2025-03.txt",
+            "source": "ot-cert@dragos.com"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 12
+    },
+    {
+      "cve_id": "CVE-2025-54298",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-07-28",
+          "previous_max": null,
+          "current_max": 9.4
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-07-28",
+        "description": "A stored XSS vulnerability in CommentBox component 1.0.0-1.1.0 for Joomla was discovered.",
+        "title": "A stored XSS vulnerability in CommentBox component 1.0.0-1.1.0 for Joomla was discovered.",
+        "attack_type": "cross-site scripting",
+        "cvss_max": 9.4
+      },
+      "cve": {
+        "id": "CVE-2025-54298",
+        "sourceIdentifier": "security@joomla.org",
+        "published": "2025-07-28T18:15:26.913",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A stored XSS vulnerability in CommentBox component 1.0.0-1.1.0 for Joomla was discovered."
+          },
+          {
+            "lang": "es",
+            "value": "Se descubrió una vulnerabilidad XSS almacenado en el componente CommentBox 1.0.0-1.1.0 para Joomla."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:H/VI:H/VA:N/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.4,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security@joomla.org",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-79"
+              }
+            ],
+            "source": "security@joomla.org"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://firecoders.com/",
+            "source": "security@joomla.org"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 13
+    },
+    {
+      "cve_id": "CVE-2025-54299",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-07-28",
+          "previous_max": null,
+          "current_max": 9.4
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-07-28",
+        "description": "A stored XSS vulnerability in No Boss Testimonials component 1.0.0-3.0.0 and 4.0.0-4.0.2 for Joomla was discovered.",
+        "title": "A stored XSS vulnerability in No Boss Testimonials component 1.0.0-3.0.0 and 4.0.0-4.0.2 for Joomla was discovered.",
+        "attack_type": "cross-site scripting",
+        "cvss_max": 9.4
+      },
+      "cve": {
+        "id": "CVE-2025-54299",
+        "sourceIdentifier": "security@joomla.org",
+        "published": "2025-07-28T18:15:27.113",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A stored XSS vulnerability in No Boss Testimonials component 1.0.0-3.0.0 and 4.0.0-4.0.2 for Joomla was discovered."
+          },
+          {
+            "lang": "es",
+            "value": "Se descubrió una vulnerabilidad XSS almacenado en el componente No Boss Testimonials 1.0.0-3.0.0 y 4.0.0-4.0.2 para Joomla."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:H/VI:H/VA:N/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.4,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security@joomla.org",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-79"
+              }
+            ],
+            "source": "security@joomla.org"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://nobossextensions.com/",
+            "source": "security@joomla.org"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 14
+    },
+    {
+      "cve_id": "CVE-2025-54418",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-07-28",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-07-28",
+        "description": "CodeIgniter is a PHP full-stack web framework. A command injection vulnerability present in versions prior to 4.6.2 affects applications that use the ImageMagick handler for image processing (`imagick` as the image library) and either allow file uploads with user-controlled filenames and process uploaded images using the `resize()` method or use the `text()` method with user-controlled text content or options. An attacker can upload a file with a malicious filename containing shell metacharacters that get executed when the image is processed or provide malicious text content or options that get executed when adding text to images Users should upgrade to v4.6.2 or later to receive a patch. As a workaround, switch to the GD image handler (`gd`, the default handler), which is not affected by either vulnerability. For file upload scenarios, instead of using user-provided filenames, generate random names to eliminate the attack vector with `getRandomName()` when using the `move()` method, or use the `store()` method, which automatically generates safe filenames. For text operations, if one must use ImageMagick with user-controlled text, sanitize the input to only allow safe characters and validate/restrict text options.",
+        "title": "codeigniter codeigniter Command Injection",
+        "vendor": "codeigniter",
+        "product": "codeigniter",
+        "attack_type": "Command Injection",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-54418",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2025-07-28T15:15:26.957",
+        "lastModified": "2025-08-05T15:46:02.750",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "CodeIgniter is a PHP full-stack web framework. A command injection vulnerability present in versions prior to 4.6.2 affects applications that use the ImageMagick handler for image processing (`imagick` as the image library) and either allow file uploads with user-controlled filenames and process uploaded images using the `resize()` method or use the `text()` method with user-controlled text content or options. An attacker can upload a file with a malicious filename containing shell metacharacters that get executed when the image is processed or provide malicious text content or options that get executed when adding text to images Users should upgrade to v4.6.2 or later to receive a patch. As a workaround, switch to the GD image handler (`gd`, the default handler), which is not affected by either vulnerability. For file upload scenarios, instead of using user-provided filenames, generate random names to eliminate the attack vector with `getRandomName()` when using the `move()` method, or use the `store()` method, which automatically generates safe filenames. For text operations, if one must use ImageMagick with user-controlled text, sanitize the input to only allow safe characters and validate/restrict text options."
+          },
+          {
+            "lang": "es",
+            "value": "CodeIgniter es un framework web PHP full-stack. Una vulnerabilidad de inyección de comandos presente en versiones anteriores a la 4.6.2 afecta a las aplicaciones que usan el manejador ImageMagick para el procesamiento de imágenes (`imagick` como librería de imágenes) y que permiten la carga de archivos con nombres controlados por el usuario y procesan las imágenes cargadas usando el método `resize()` o usan el método `text()` con contenido de texto u opciones controlados por el usuario. Un atacante puede cargar un archivo con un nombre malicioso que contenga metacaracteres de shell que se ejecuten cuando se procese la imagen o proporcionar contenido de texto malicioso u opciones que se ejecuten al agregar texto a las imágenes. Los usuarios deben actualizar a la v4.6.2 o posterior para recibir un parche. Como solución alternativa, cambie al manejador de imágenes GD (`gd`, el manejador predeterminado), que no se ve afectado por ninguna de las vulnerabilidades. Para la carga de archivos, en lugar de usar nombres de archivo proporcionados por el usuario, genere nombres aleatorios para eliminar el vector de ataque con `getRandomName()` al usar el método `move()`, o use el método `store()`, que genera automáticamente nombres de archivo seguros. Para operaciones de texto, si es necesario usar ImageMagick con texto controlado por el usuario, depure la entrada para permitir solo caracteres seguros y valide/restringa las opciones de texto."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-78"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:codeigniter:codeigniter:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "0646754C-2BA8-40F6-8838-5491EF4FDAA4",
+                    "versionStartIncluding": "4.0.0",
+                    "versionEndExcluding": "4.6.2"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://cwe.mitre.org/data/definitions/78.html",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Not Applicable"
+            ]
+          },
+          {
+            "url": "https://github.com/codeigniter4/CodeIgniter4/commit/e18120bff1da691e1d15ffc1bf553ae7411762c0",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://github.com/codeigniter4/CodeIgniter4/security/advisories/GHSA-9952-gv64-x94c",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Mitigation",
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://owasp.org/www-community/attacks/Command_Injection",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Not Applicable"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 15
+    },
+    {
+      "cve_id": "CVE-2025-54426",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-07-28",
+          "previous_max": null,
+          "current_max": 9.9
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-07-28",
+        "description": "Polkadot Frontier is an Ethereum and EVM compatibility layer for Polkadot and Substrate. In versions prior to commit 36f70d1, the Curve25519Add and Curve25519ScalarMul precompiles incorrectly handle invalid Ristretto point representations. Instead of returning an error, they silently treat invalid input bytes as the Ristretto identity element, leading to potentially incorrect cryptographic results. This is fixed in commit 36f70d1.",
+        "title": "Polkadot Frontier is an Ethereum and EVM compatibility layer for Polkadot and Substrate.",
+        "cvss_max": 9.9
+      },
+      "cve": {
+        "id": "CVE-2025-54426",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2025-07-28T21:15:26.887",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Polkadot Frontier is an Ethereum and EVM compatibility layer for Polkadot and Substrate. In versions prior to commit 36f70d1, the Curve25519Add and Curve25519ScalarMul precompiles incorrectly handle invalid Ristretto point representations. Instead of returning an error, they silently treat invalid input bytes as the Ristretto identity element, leading to potentially incorrect cryptographic results. This is fixed in commit 36f70d1."
+          },
+          {
+            "lang": "es",
+            "value": "Polkadot Frontier es una capa de compatibilidad con Ethereum y EVM para Polkadot y Substrate. En versiones anteriores al commit 36f70d1, las precompilaciones Curve25519Add y Curve25519ScalarMul gestionaban incorrectamente las representaciones de puntos de Ristretto no válidas. En lugar de devolver un error, trataban silenciosamente los bytes de entrada no válidos como el elemento de identidad de Ristretto, lo que podía generar resultados criptográficos incorrectos. Esto se corrigió en el commit 36f70d1."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:N/SC:N/SI:H/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.9,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-327"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://dotpal.io/assets/files/frontier-srlabs-2505-718c3bfa5df9fed1862fed05de506859.pdf",
+            "source": "security-advisories@github.com"
+          },
+          {
+            "url": "https://github.com/polkadot-evm/frontier/commit/36f70d1defcaeaed5a453015f6c98c21bb5b121b",
+            "source": "security-advisories@github.com"
+          },
+          {
+            "url": "https://github.com/polkadot-evm/frontier/pull/1720/commits/8ed6053fb868495477ba2409f7e64f439df76f96",
+            "source": "security-advisories@github.com"
+          },
+          {
+            "url": "https://github.com/polkadot-evm/frontier/security/advisories/GHSA-v4q3-23rh-w5mw",
+            "source": "security-advisories@github.com"
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 16
+    },
+    {
+      "cve_id": "CVE-2025-54428",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-07-28",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-07-28",
+        "description": "RevelaCode is an AI-powered faith-tech project that decodes biblical verses, prophecies and global events into accessible language. In versions below 1.0.1, a valid MongoDB Atlas URI with embedded username and password was accidentally committed to the public repository. This could allow unauthorized access to production or staging databases, potentially leading to data exfiltration, modification, or deletion. This is fixed in version 1.0.1. Workarounds include: immediately rotating credentials for the exposed database user, using a secret manager (like Vault, Doppler, AWS Secrets Manager, etc.) instead of storing secrets directly in code, or auditing recent access logs for suspicious activity.",
+        "title": "RevelaCode is an AI-powered faith-tech project that decodes biblical verses, prophecies and global events into accessible language.",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-54428",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2025-07-28T21:15:27.327",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "RevelaCode is an AI-powered faith-tech project that decodes biblical verses, prophecies and global events into accessible language. In versions below 1.0.1, a valid MongoDB Atlas URI with embedded username and password was accidentally committed to the public repository. This could allow unauthorized access to production or staging databases, potentially leading to data exfiltration, modification, or deletion. This is fixed in version 1.0.1. Workarounds include: immediately rotating credentials for the exposed database user, using a secret manager (like Vault, Doppler, AWS Secrets Manager, etc.) instead of storing secrets directly in code, or auditing recent access logs for suspicious activity."
+          },
+          {
+            "lang": "es",
+            "value": "RevelaCode es un proyecto de tecnología religiosa basado en IA que decodifica versículos bíblicos, profecías y eventos globales en un lenguaje accesible. En versiones anteriores a la 1.0.1, una URI válida de MongoDB Atlas con nombre de usuario y contraseña integrados se envió accidentalmente al repositorio público. Esto podría permitir el acceso no autorizado a bases de datos de producción o de prueba, lo que podría provocar la exfiltración, modificación o eliminación de datos. Esto se solucionó en la versión 1.0.1. Las soluciones alternativas incluyen la rotación inmediata de las credenciales del usuario de la base de datos expuesta, el uso de un gestor de secretos (como Vault, Doppler, AWS Secrets Manager, etc.) en lugar de almacenar los secretos directamente en el código, o la auditoría de los registros de acceso recientes para detectar actividad sospechosa."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-522"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/musombi123/RevelaCode-Backend/commit/95005cf4bacf1b005aef9d4b8e85237c98492d83",
+            "source": "security-advisories@github.com"
+          },
+          {
+            "url": "https://github.com/musombi123/RevelaCode-Backend/security/advisories/GHSA-m253-qvcr-cr48",
+            "source": "security-advisories@github.com"
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 17
+    },
+    {
+      "cve_id": "CVE-2025-6018",
+      "signal_types": [
+        "EXP"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": {
+          "ref_published": "2025-07-28"
+        },
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-07-23",
+        "description": "A Local Privilege Escalation (LPE) vulnerability has been discovered in pam-config within Linux Pluggable Authentication Modules (PAM). This flaw allows an unprivileged local attacker (for example, a user logged in via SSH) to obtain the elevated privileges normally reserved for a physically present, \"allow_active\" user. The highest risk is that the attacker can then perform all allow_active yes Polkit actions, which are typically restricted to console users, potentially gaining unauthorized control over system configurations, services, or other sensitive operations.",
+        "title": "suse pam-config Privilege Escalation",
+        "vendor": "suse",
+        "product": "pam-config",
+        "attack_type": "Privilege Escalation",
+        "cvss_max": 7.8
+      },
+      "cve": {
+        "id": "CVE-2025-6018",
+        "sourceIdentifier": "secalert@redhat.com",
+        "published": "2025-07-23T15:15:34.810",
+        "lastModified": "2025-11-04T22:16:42.873",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A Local Privilege Escalation (LPE) vulnerability has been discovered in pam-config within Linux Pluggable Authentication Modules (PAM). This flaw allows an unprivileged local attacker (for example, a user logged in via SSH) to obtain the elevated privileges normally reserved for a physically present, \"allow_active\" user. The highest risk is that the attacker can then perform all allow_active yes Polkit actions, which are typically restricted to console users, potentially gaining unauthorized control over system configurations, services, or other sensitive operations."
+          },
+          {
+            "lang": "es",
+            "value": "Se ha descubierto una vulnerabilidad de Escalada de Privilegios Locales (LPE) en pam-config, dentro de los Módulos de Autenticación Conectables (PAM) de Linux. Esta falla permite a un atacante local sin privilegios (por ejemplo, un usuario conectado por SSH) obtener los privilegios elevados normalmente reservados para un usuario \"allow_active\" físicamente presente. El mayor riesgo es que el atacante pueda entonces realizar todas las acciones \"allow_active yes\" de Polkit, que normalmente están restringidas a los usuarios de consola, lo que podría permitirle obtener control no autorizado sobre las configuraciones del sistema, los servicios u otras operaciones sensibles."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 7.8,
+                "baseSeverity": "HIGH"
+              },
+              "source": "secalert@redhat.com",
+              "type": "Secondary",
+              "exploitabilityScore": 1.8,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-863"
+              }
+            ],
+            "source": "secalert@redhat.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:suse:pam-config:1.1.8-24.71.1:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "8C0DA836-1013-4F7C-BEA7-00657996C0EE"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://access.redhat.com/security/cve/CVE-2025-6018",
+            "source": "secalert@redhat.com",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2372693",
+            "source": "secalert@redhat.com",
+            "tags": [
+              "Issue Tracking",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://bugzilla.suse.com/show_bug.cgi?id=1243226",
+            "source": "secalert@redhat.com",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://cdn2.qualys.com/2025/06/17/suse15-pam-udisks-lpe.txt",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Exploit",
+              "Issue Tracking",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "http://www.openwall.com/lists/oss-security/2025/08/28/4",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          }
+        ]
+      },
+      "risk_score": 78,
+      "rank": 18
+    }
+  ],
+  "source": "https://www.cvelogic.com/threat-intelligence/2025-07-28"
+}

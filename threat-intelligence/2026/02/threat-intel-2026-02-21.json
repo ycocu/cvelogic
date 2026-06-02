@@ -1,0 +1,1144 @@
+{
+  "schema_version": "2.2",
+  "generated_at": "2026-06-02T07:34:29Z",
+  "day": "2026-02-21",
+  "window": {
+    "utc_start": "2026-02-21",
+    "utc_end": "2026-02-21",
+    "days": 1
+  },
+  "summary": {
+    "brief": "Metersphere — exploitation likelihood rose sharply (EPSS 8.0% → 24% · rising (+16%)). · 6 new critical disclosures — review patch status on exposed services.",
+    "bullets": [
+      "Metersphere — exploitation likelihood rose sharply (EPSS 8.0% → 24% · rising (+16%)).",
+      "6 new critical disclosures — review patch status on exposed services."
+    ],
+    "counts": {
+      "cves": 9,
+      "kev": 0,
+      "exploit": 0,
+      "epss": 3,
+      "cvss": 6,
+      "patch": 0
+    }
+  },
+  "cves": [
+    {
+      "cve_id": "CVE-2022-23544",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 0.07972,
+            "score_date": "2026-01-27"
+          },
+          "current": {
+            "score": 0.23569,
+            "score_date": "2026-02-21"
+          },
+          "delta": 0.15597
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2022-12-28",
+        "description": "MeterSphere is a one-stop open source continuous testing platform, covering test management, interface testing, UI testing and performance testing. Versions prior to 2.5.0 are subject to a Server-Side Request Forgery that leads to Cross-Site Scripting. A Server-Side request forgery in `IssueProxyResourceService::getMdImageByUrl` allows an attacker to access internal resources, as well as executing JavaScript code in the context of Metersphere's origin by a victim of a reflected XSS. This vulnerability has been fixed in v2.5.0. There are no known workarounds.",
+        "title": "metersphere metersphere XSS",
+        "vendor": "metersphere",
+        "product": "metersphere",
+        "attack_type": "XSS",
+        "cvss_max": 7.2
+      },
+      "cve": {
+        "id": "CVE-2022-23544",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2022-12-28T00:15:13.567",
+        "lastModified": "2024-11-21T06:48:47.020",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "MeterSphere is a one-stop open source continuous testing platform, covering test management, interface testing, UI testing and performance testing. Versions prior to 2.5.0 are subject to a Server-Side Request Forgery that leads to Cross-Site Scripting. A Server-Side request forgery in `IssueProxyResourceService::getMdImageByUrl` allows an attacker to access internal resources, as well as executing JavaScript code in the context of Metersphere's origin by a victim of a reflected XSS. This vulnerability has been fixed in v2.5.0. There are no known workarounds."
+          },
+          {
+            "lang": "es",
+            "value": "MeterSphere es una plataforma integral de pruebas continuas de código abierto que cubre gestión de pruebas, pruebas de interfaz, pruebas de UI y pruebas de rendimiento. Las versiones anteriores a la 2.5.0 están sujetas a Server-Side Request Forgery que conduce a cross site scripting. El Server-Side request forgery en `IssueProxyResourceService::getMdImageByUrl` permite a un atacante acceder a recursos internos, así como ejecutar código JavaScript en el contexto del origen de Metersphere por parte de una víctima de XSS reflejado. Esta vulnerabilidad se ha solucionado en v2.5.0. No se conocen soluciones alternativas."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N",
+                "baseScore": 7.2,
+                "baseSeverity": "HIGH"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 2.7
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+                "baseScore": 6.1,
+                "baseSeverity": "MEDIUM"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 2.7
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-79"
+              },
+              {
+                "lang": "en",
+                "value": "CWE-918"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          },
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-918"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:metersphere:metersphere:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "218B4FEB-FDBE-46DB-A728-3CB89E37D5BA",
+                    "versionEndExcluding": "2.5.0"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/metersphere/metersphere/commit/d0f95b50737c941b29d507a4cc3545f2dc6ab121",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Patch",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/metersphere/metersphere/security/advisories/GHSA-vrv6-cg45-rmjj",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit",
+              "Patch",
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 82,
+      "rank": 1
+    },
+    {
+      "cve_id": "CVE-2005-1110",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 0.05161,
+            "score_date": "2025-03-30"
+          },
+          "current": {
+            "score": 0.17328,
+            "score_date": "2026-02-21"
+          },
+          "delta": 0.12167
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2005-05-02",
+        "description": "Stack-based buffer overflow in the RespondeHTTPPendiente function in the HTTP server for SUMUS 0.2.2 allows remote attackers to execute arbitrary code via a large packet sent to TCP port 81.",
+        "title": "sumus sumus Buffer Overflow",
+        "vendor": "sumus",
+        "product": "sumus",
+        "attack_type": "Buffer Overflow",
+        "cvss_max": 7.5
+      },
+      "cve": {
+        "id": "CVE-2005-1110",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2005-05-02T04:00:00.000",
+        "lastModified": "2026-04-16T00:27:16.627",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Stack-based buffer overflow in the RespondeHTTPPendiente function in the HTTP server for SUMUS 0.2.2 allows remote attackers to execute arbitrary code via a large packet sent to TCP port 81."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV2": [
+            {
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+                "baseScore": 7.5,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "baseSeverity": "HIGH",
+              "exploitabilityScore": 10.0,
+              "impactScore": 6.4
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "NVD-CWE-Other"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:sumus:sumus:0.2.2:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "07102557-A837-426C-818C-FFD847019CF4"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "http://marc.info/?l=bugtraq&m=111350491800089&w=2",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://securitytracker.com/id?1013717",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "https://exchange.xforce.ibmcloud.com/vulnerabilities/20110",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          }
+        ]
+      },
+      "risk_score": 82,
+      "rank": 2
+    },
+    {
+      "cve_id": "CVE-2026-27574",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-02-21",
+          "previous_max": null,
+          "current_max": 9.9
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-02-21",
+        "description": "OneUptime is a solution for monitoring and managing online services. In versions 9.5.13 and below, custom JavaScript monitor feature uses Node.js's node:vm module (explicitly documented as not a security mechanism) to execute user-supplied code, allowing trivial sandbox escape via a well-known one-liner that grants full access to the underlying process. Because the probe runs with host networking and holds all cluster credentials (ONEUPTIME_SECRET, DATABASE_PASSWORD, REDIS_PASSWORD, CLICKHOUSE_PASSWORD) in its environment variables, and monitor creation is available to the lowest role (ProjectMember) with open registration enabled by default, any anonymous user can achieve full cluster compromise in about 30 seconds. This issue has been fixed in version 10.0.5.",
+        "title": "hackerbay oneuptime",
+        "vendor": "hackerbay",
+        "product": "oneuptime",
+        "cvss_max": 9.9
+      },
+      "cve": {
+        "id": "CVE-2026-27574",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2026-02-21T11:15:57.443",
+        "lastModified": "2026-02-23T20:36:09.117",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "OneUptime is a solution for monitoring and managing online services. In versions 9.5.13 and below, custom JavaScript monitor feature uses Node.js's node:vm module (explicitly documented as not a security mechanism) to execute user-supplied code, allowing trivial sandbox escape via a well-known one-liner that grants full access to the underlying process. Because the probe runs with host networking and holds all cluster credentials (ONEUPTIME_SECRET, DATABASE_PASSWORD, REDIS_PASSWORD, CLICKHOUSE_PASSWORD) in its environment variables, and monitor creation is available to the lowest role (ProjectMember) with open registration enabled by default, any anonymous user can achieve full cluster compromise in about 30 seconds. This issue has been fixed in version 10.0.5."
+          },
+          {
+            "lang": "es",
+            "value": "OneUptime es una solución para monitorear y gestionar servicios en línea. En las versiones 9.5.13 e inferiores, la función de monitor JavaScript personalizado utiliza el módulo node:vm de Node.js (documentado explícitamente como no un mecanismo de seguridad) para ejecutar código proporcionado por el usuario, permitiendo un escape trivial de la sandbox a través de una línea de código bien conocida que otorga acceso completo al proceso subyacente. Debido a que la sonda se ejecuta con red de host y guarda todas las credenciales del clúster (ONEUPTIME_SECRET, DATABASE_PASSWORD, REDIS_PASSWORD, CLICKHOUSE_PASSWORD) en sus variables de entorno, y la creación de monitores está disponible para el rol más bajo (ProjectMember) con el registro abierto habilitado por defecto, cualquier usuario anónimo puede lograr un compromiso completo del clúster en aproximadamente 30 segundos. Este problema ha sido solucionado en la versión 10.0.5."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+                "baseScore": 9.9,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.1,
+              "impactScore": 6.0
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-94"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:hackerbay:oneuptime:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "06EDB4AF-54CB-4AF9-B070-9AB3C45CCDC8",
+                    "versionEndExcluding": "10.0.5"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/OneUptime/oneuptime/commit/7f9ed4d43945574702a26b7c206e38cc344fe427",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://github.com/OneUptime/oneuptime/security/advisories/GHSA-v264-xqh4-9xmm",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Exploit",
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 3
+    },
+    {
+      "cve_id": "CVE-2023-43323",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 0.68741,
+            "score_date": "2025-11-30"
+          },
+          "current": {
+            "score": 0.80804,
+            "score_date": "2026-02-21"
+          },
+          "delta": 0.12063
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2023-09-28",
+        "description": "mooSocial 3.1.8 is vulnerable to external service interaction on post function. When executed, the server sends a HTTP and DNS request to external server. The Parameters effected are multiple - messageText, data[wall_photo], data[userShareVideo] and data[userShareLink].",
+        "title": "moosocial moosocial",
+        "vendor": "moosocial",
+        "product": "moosocial",
+        "cvss_max": 6.5
+      },
+      "cve": {
+        "id": "CVE-2023-43323",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2023-09-28T20:15:11.107",
+        "lastModified": "2024-11-21T08:23:59.837",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "mooSocial 3.1.8 is vulnerable to external service interaction on post function. When executed, the server sends a HTTP and DNS request to external server. The Parameters effected are multiple - messageText, data[wall_photo], data[userShareVideo] and data[userShareLink]."
+          },
+          {
+            "lang": "es",
+            "value": "mooSocial 3.1.8 es vulnerable a la interacción de servicios externos en la función posterior. Cuando se ejecuta, el servidor envía una solicitud HTTP y DNS al servidor externo. Los parámetros afectados son múltiples: messageText, data[wall_photo], data[userShareVideo] and data[userShareLink]."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N",
+                "baseScore": 6.5,
+                "baseSeverity": "MEDIUM"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 2.5
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "NVD-CWE-noinfo"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          },
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-15"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:moosocial:moosocial:3.1.8:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "4DFC6658-3CF4-4FDA-B119-2A0687F3F5A2"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/ahrixia/CVE-2023-43323",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 80,
+      "rank": 4
+    },
+    {
+      "cve_id": "CVE-2026-27197",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-02-21",
+          "previous_max": null,
+          "current_max": 9.1
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-02-21",
+        "description": "Sentry is a developer-first error tracking and performance monitoring tool. Versions 21.12.0 through 26.1.0 have a critical vulnerability in its SAML SSO implementation  which allows an attacker to take over any user account by using a malicious SAML Identity Provider and another organization on the same Sentry instance. Self-hosted users are only at risk if the following criteria is met: ore than one organizations are configured (SENTRY_SINGLE_ORGANIZATION = True), or malicious user has existing access and permissions to modify SSO settings for another organization in a multo-organization instance. This issue has been fixed in version 26.2.0. To workaround this issue, implement user account-based two-factor authentication to prevent an attacker from being able to complete authentication with a victim's user account. Organization administrators cannot do this on a user's behalf, this requires individual users to ensure 2FA has been enabled for their account.",
+        "title": "sentry sentry",
+        "vendor": "sentry",
+        "product": "sentry",
+        "cvss_max": 9.1
+      },
+      "cve": {
+        "id": "CVE-2026-27197",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2026-02-21T05:17:29.510",
+        "lastModified": "2026-02-23T20:45:01.957",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Sentry is a developer-first error tracking and performance monitoring tool. Versions 21.12.0 through 26.1.0 have a critical vulnerability in its SAML SSO implementation  which allows an attacker to take over any user account by using a malicious SAML Identity Provider and another organization on the same Sentry instance. Self-hosted users are only at risk if the following criteria is met: ore than one organizations are configured (SENTRY_SINGLE_ORGANIZATION = True), or malicious user has existing access and permissions to modify SSO settings for another organization in a multo-organization instance. This issue has been fixed in version 26.2.0. To workaround this issue, implement user account-based two-factor authentication to prevent an attacker from being able to complete authentication with a victim's user account. Organization administrators cannot do this on a user's behalf, this requires individual users to ensure 2FA has been enabled for their account."
+          },
+          {
+            "lang": "es",
+            "value": "Sentry es una herramienta de seguimiento de errores y monitoreo de rendimiento diseñada para desarrolladores. Las versiones 21.12.0 a la 26.1.0 tienen una vulnerabilidad crítica en su implementación de SAML SSO que permite a un atacante tomar el control de cualquier cuenta de usuario mediante el uso de un proveedor de identidad SAML malicioso y otra organización en la misma instancia de Sentry. Los usuarios autoalojados solo están en riesgo si se cumplen los siguientes criterios: más de una organización está configurada (SENTRY_SINGLE_ORGANIZATION = True), o un usuario malicioso tiene acceso y permisos existentes para modificar la configuración de SSO para otra organización en una instancia multi-organización. Este problema ha sido solucionado en la versión 26.2.0. Como solución alternativa a este problema, implemente la autenticación de dos factores basada en la cuenta de usuario para evitar que un atacante pueda completar la autenticación con la cuenta de usuario de una víctima. Los administradores de la organización no pueden hacer esto en nombre de un usuario; esto requiere que los usuarios individuales se aseguren de que la 2FA ha sido habilitada para su cuenta."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+                "baseScore": 9.1,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.2
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-287"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:sentry:sentry:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "53B1BCE6-47BF-4AF1-AD95-22981FDC92A0",
+                    "versionStartIncluding": "21.12.0",
+                    "versionEndExcluding": "26.2.0"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/getsentry/sentry/security/advisories/GHSA-ggmg-cqg6-j45g",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Mitigation",
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 5
+    },
+    {
+      "cve_id": "CVE-2026-27211",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-02-21",
+          "previous_max": null,
+          "current_max": 9.1
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-02-21",
+        "description": "Cloud Hypervisor is a Virtual Machine Monitor for Cloud workloads. Versions 34.0 through 50.0 arevulnerable to arbitrary host file exfiltration (constrained by process privileges) when using virtio-block devices backed by raw images. A malicious guest can overwrite its disk header with a crafted QCOW2 structure pointing to a sensitive host path. Upon the next VM boot or disk scan, the image format auto-detection parses this header and serves the host file's contents to the guest. Guest-initiated VM reboots are sufficient to trigger a disk scan and do not cause the Cloud Hypervisor process to exit. Therefore, a single VM can perform this attack without needing interaction from the management stack. Successful exploitation requires the backing image to be either writable by the guest or sourced from an untrusted origin. Deployments utilizing only trusted, read-only images are not affected. This issue has been fixed in version 50.1. To workaround, enable land lock sandboxing and restrict process privileges and access.",
+        "title": "cloudhypervisor cloud_hypervisor privilege escalation",
+        "vendor": "cloudhypervisor",
+        "product": "cloud_hypervisor",
+        "attack_type": "privilege escalation",
+        "cvss_max": 10.0
+      },
+      "cve": {
+        "id": "CVE-2026-27211",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2026-02-21T06:17:01.253",
+        "lastModified": "2026-02-24T17:08:14.463",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Cloud Hypervisor is a Virtual Machine Monitor for Cloud workloads. Versions 34.0 through 50.0 arevulnerable to arbitrary host file exfiltration (constrained by process privileges) when using virtio-block devices backed by raw images. A malicious guest can overwrite its disk header with a crafted QCOW2 structure pointing to a sensitive host path. Upon the next VM boot or disk scan, the image format auto-detection parses this header and serves the host file's contents to the guest. Guest-initiated VM reboots are sufficient to trigger a disk scan and do not cause the Cloud Hypervisor process to exit. Therefore, a single VM can perform this attack without needing interaction from the management stack. Successful exploitation requires the backing image to be either writable by the guest or sourced from an untrusted origin. Deployments utilizing only trusted, read-only images are not affected. This issue has been fixed in version 50.1. To workaround, enable land lock sandboxing and restrict process privileges and access."
+          },
+          {
+            "lang": "es",
+            "value": "Cloud Hypervisor es un Monitor de Máquina Virtual para cargas de trabajo en la nube. Las versiones 34.0 a 50.0 son vulnerables a la exfiltración arbitraria de archivos del host (limitada por los privilegios del proceso) al usar dispositivos virtio-block respaldados por imágenes raw. Un invitado malicioso puede sobrescribir su encabezado de disco con una estructura QCOW2 manipulada que apunta a una ruta sensible del host. Tras el siguiente arranque de la máquina virtual o escaneo de disco, la autodetección del formato de imagen analiza este encabezado y entrega el contenido del archivo del host al invitado. Los reinicios de la máquina virtual iniciados por el invitado son suficientes para activar un escaneo de disco y no provocan la salida del proceso de Cloud Hypervisor. Por lo tanto, una única máquina virtual puede realizar este ataque sin necesidad de interacción de la pila de gestión. La explotación exitosa requiere que la imagen de respaldo sea escribible por el invitado o que provenga de un origen no confiable. Las implementaciones que utilizan solo imágenes de confianza y de solo lectura no se ven afectadas. Este problema ha sido solucionado en la versión 50.1. Para una solución alternativa, habilite el sandboxing de land lock y restrinja los privilegios y el acceso del proceso."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:N",
+                "baseScore": 10.0,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.8
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:N/VA:N/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.1,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-73"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cloudhypervisor:cloud_hypervisor:*:*:*:*:*:rust:*:*",
+                    "matchCriteriaId": "DE7082B0-CAF7-4360-9514-D81B0372765D",
+                    "versionStartIncluding": "34.0",
+                    "versionEndExcluding": "50.1"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/cloud-hypervisor/cloud-hypervisor/commit/081a6ebb5184228ff348601502258f3f72bd8b43",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://github.com/cloud-hypervisor/cloud-hypervisor/commit/509832298b6865365b00bda88722e76e41ce7f41",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://github.com/cloud-hypervisor/cloud-hypervisor/commit/a63315df54e06f6ec867f17b63076c266e2d8648",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://github.com/cloud-hypervisor/cloud-hypervisor/commit/cb495959a8bea1b56e8fc82d15ba527a0e7fcf3c",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://github.com/cloud-hypervisor/cloud-hypervisor/releases/tag/v50.1",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Product",
+              "Release Notes"
+            ]
+          },
+          {
+            "url": "https://github.com/cloud-hypervisor/cloud-hypervisor/releases/tag/v51.0",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Product",
+              "Release Notes"
+            ]
+          },
+          {
+            "url": "https://github.com/cloud-hypervisor/cloud-hypervisor/security/advisories/GHSA-jmr4-g2hv-mjj6",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Mitigation",
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 6
+    },
+    {
+      "cve_id": "CVE-2026-27212",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-02-21",
+          "previous_max": null,
+          "current_max": 9.4
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-02-21",
+        "description": "Swiper is a free and mobile touch slider with hardware accelerated transitions and native behavior. Versions 6.5.1 through 12.1.1 have a Prototype pollution vulnerability. The vulnerability resides in line 94 of shared/utils.mjs, where the indexOf() function is used to check whether user provided input contain forbidden strings. Despite a previous fix that attempted to mitigate prototype pollution by checking whether user input contained a forbidden key, it is still possible to pollute Object.prototype via a crafted input using Array.prototype. The exploit works across Windows and Linux and on Node and Bun runtimes.  Any application that processes attacker-controlled input using this package may be affected  by the following: Authentication Bypass, Denial of Service and RCE. This issue is fixed in version 12.1.2.",
+        "title": "swiperjs swiper",
+        "vendor": "swiperjs",
+        "product": "swiper",
+        "cvss_max": 9.4
+      },
+      "cve": {
+        "id": "CVE-2026-27212",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2026-02-21T06:17:01.443",
+        "lastModified": "2026-02-24T15:16:56.670",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Swiper is a free and mobile touch slider with hardware accelerated transitions and native behavior. Versions 6.5.1 through 12.1.1 have a Prototype pollution vulnerability. The vulnerability resides in line 94 of shared/utils.mjs, where the indexOf() function is used to check whether user provided input contain forbidden strings. Despite a previous fix that attempted to mitigate prototype pollution by checking whether user input contained a forbidden key, it is still possible to pollute Object.prototype via a crafted input using Array.prototype. The exploit works across Windows and Linux and on Node and Bun runtimes.  Any application that processes attacker-controlled input using this package may be affected  by the following: Authentication Bypass, Denial of Service and RCE. This issue is fixed in version 12.1.2."
+          },
+          {
+            "lang": "es",
+            "value": "Swiper es un deslizador táctil móvil y gratuito con transiciones aceleradas por hardware y comportamiento nativo. Las versiones 6.5.1 hasta 12.1.1 tienen una vulnerabilidad de contaminación de prototipos. La vulnerabilidad reside en la línea 94 de shared/utils.mjs, donde la función indexOf() se utiliza para verificar si la entrada proporcionada por el usuario contiene cadenas prohibidas. A pesar de una corrección anterior que intentó mitigar la contaminación de prototipos verificando si la entrada del usuario contenía una clave prohibida, todavía es posible contaminar Object.prototype a través de una entrada manipulada usando Array.prototype. El exploit funciona en Windows y Linux y en los entornos de ejecución de Node y Bun. Cualquier aplicación que procese entrada controlada por el atacante usando este paquete puede verse afectada por lo siguiente: Omisión de Autenticación, Denegación de Servicio y RCE. Este problema está solucionado en la versión 12.1.2."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 7.8,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 1.8,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.4,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-1321"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:swiperjs:swiper:*:*:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "649D66EB-A502-4668-92D9-0534432DBFF0",
+                    "versionStartIncluding": "6.5.1",
+                    "versionEndExcluding": "12.1.2"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/nolimits4web/swiper/commit/d3e663322a13043ca63aaba235d8cf3900e0c8cf",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://github.com/nolimits4web/swiper/releases/tag/v12.1.2",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Product"
+            ]
+          },
+          {
+            "url": "https://github.com/nolimits4web/swiper/security/advisories/GHSA-hmx5-qpq5-p643",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Exploit",
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 7
+    },
+    {
+      "cve_id": "CVE-2026-27452",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-02-21",
+          "previous_max": null,
+          "current_max": 9.2
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-02-21",
+        "description": "ASN.1 TypeScript ESM library, including codecs for Basic Encoding Rules (BER) and Distinguished Encoding Rules (DER). In versions 11.0.5 and below, in some cases, decoding an INTEGER could leak the underlying ArrayBuffer. This issue is expected to be fixed in version 11.0.6.",
+        "title": "jonathanwilbur asn1-ts",
+        "vendor": "jonathanwilbur",
+        "product": "asn1-ts",
+        "cvss_max": 9.2
+      },
+      "cve": {
+        "id": "CVE-2026-27452",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2026-02-21T07:16:13.210",
+        "lastModified": "2026-03-03T17:28:50.777",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "ASN.1 TypeScript ESM library, including codecs for Basic Encoding Rules (BER) and Distinguished Encoding Rules (DER). In versions 11.0.5 and below, in some cases, decoding an INTEGER could leak the underlying ArrayBuffer. This issue is expected to be fixed in version 11.0.6."
+          },
+          {
+            "lang": "es",
+            "value": "Biblioteca ESM de TypeScript para ASN.1, incluyendo códecs para las Reglas Básicas de Codificación (BER) y las Reglas de Codificación Distinguida (DER). En las versiones 11.0.5 e inferiores, en algunos casos, la decodificación de un INTEGER podría filtrar el ArrayBuffer subyacente. Se espera que este problema se solucione en la versión 11.0.6."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+                "baseScore": 5.3,
+                "baseSeverity": "MEDIUM"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 1.4
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:H/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.2,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-200"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:jonathanwilbur:asn1-ts:*:*:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "7E273ECF-B5F7-4CF5-AF6C-ECFDBD2FA39C",
+                    "versionEndExcluding": "11.0.6"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/JonathanWilbur/asn1-ts/security/advisories/GHSA-h5rw-vxjr-8q79",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 8
+    },
+    {
+      "cve_id": "CVE-2026-27471",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-02-21",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-02-21",
+        "description": "ERP is a free and open source Enterprise Resource Planning tool. In versions up to 15.98.0 and 16.0.0-rc.1 and through 16.6.0, certain endpoints lacked access validation which allowed for unauthorized document access. This issue has been fixed in versions 15.98.1 and 16.6.1.",
+        "title": "frappe erpnext",
+        "vendor": "frappe",
+        "product": "erpnext",
+        "cvss_max": 9.3
+      },
+      "cve": {
+        "id": "CVE-2026-27471",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2026-02-21T07:16:13.580",
+        "lastModified": "2026-02-24T14:52:50.073",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "ERP is a free and open source Enterprise Resource Planning tool. In versions up to 15.98.0 and 16.0.0-rc.1 and through 16.6.0, certain endpoints lacked access validation which allowed for unauthorized document access. This issue has been fixed in versions 15.98.1 and 16.6.1."
+          },
+          {
+            "lang": "es",
+            "value": "ERP es una herramienta de Planificación de Recursos Empresariales de código abierto y gratuita. En las versiones hasta la 15.98.0 y la 16.0.0-rc.1, y hasta la 16.6.0, ciertos endpoints carecían de validación de acceso, lo que permitía el acceso no autorizado a documentos. Este problema ha sido solucionado en las versiones 15.98.1 y 16.6.1."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+                "baseScore": 9.1,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.2
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-284"
+              },
+              {
+                "lang": "en",
+                "value": "CWE-306"
+              },
+              {
+                "lang": "en",
+                "value": "CWE-862"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:frappe:erpnext:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "99EC5DF8-E503-44E3-AFA0-01913369E5A2",
+                    "versionEndExcluding": "15.98.1"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:frappe:erpnext:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "54586AAF-3E56-40F6-A451-BCA6612337EA",
+                    "versionStartExcluding": "16.0.0",
+                    "versionEndExcluding": "16.6.1"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:frappe:erpnext:16.0.0:-:*:*:*:*:*:*",
+                    "matchCriteriaId": "A4A2EFB2-1819-4F8B-86C7-020B2FB75C01"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:frappe:erpnext:16.0.0:rc1:*:*:*:*:*:*",
+                    "matchCriteriaId": "8F985625-91A3-4CA3-A962-48CF64D3F49E"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:frappe:erpnext:16.0.0:rc2:*:*:*:*:*:*",
+                    "matchCriteriaId": "665B5B9E-4A38-4716-B71C-2CD10E293226"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/frappe/erpnext/commit/78fc9424d9085c2eafe1211931e22d7044f85fc7",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://github.com/frappe/erpnext/security/advisories/GHSA-wpfx-jw7g-7f83",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 9
+    }
+  ],
+  "source": "https://www.cvelogic.com/threat-intelligence/2026-02-21"
+}

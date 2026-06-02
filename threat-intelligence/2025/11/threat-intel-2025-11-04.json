@@ -1,0 +1,1397 @@
+{
+  "schema_version": "2.2",
+  "generated_at": "2026-06-02T07:33:43Z",
+  "day": "2025-11-04",
+  "window": {
+    "utc_start": "2025-11-04",
+    "utc_end": "2025-11-04",
+    "days": 1
+  },
+  "summary": {
+    "brief": "Gladinet CentreStack And Triofox added to CISA KEV — confirmed in-the-wild exploitation. · WordPress plugin RCE/exploit activity: 4 CVEs flagged today. · 10 new critical disclosures — review patch status on exposed services.",
+    "bullets": [
+      "Gladinet CentreStack And Triofox added to CISA KEV — confirmed in-the-wild exploitation.",
+      "WordPress plugin RCE/exploit activity: 4 CVEs flagged today.",
+      "10 new critical disclosures — review patch status on exposed services."
+    ],
+    "counts": {
+      "cves": 12,
+      "kev": 2,
+      "exploit": 0,
+      "epss": 0,
+      "cvss": 10,
+      "patch": 0
+    }
+  },
+  "cves": [
+    {
+      "cve_id": "CVE-2025-48703",
+      "signal_types": [
+        "KEV"
+      ],
+      "signals": {
+        "kev": {
+          "date_added": "2025-11-04"
+        },
+        "exploit": null,
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-09-19",
+        "description": "CWP (aka Control Web Panel or CentOS Web Panel) before 0.9.8.1205 allows unauthenticated remote code execution via shell metacharacters in the t_total parameter in a filemanager changePerm request. A valid non-root username must be known.",
+        "title": "CWP Control Web Panel OS Command Injection Vulnerability",
+        "vendor": "control-webpanel",
+        "product": "webpanel",
+        "attack_type": "RCE",
+        "cvss_max": 9.0
+      },
+      "cve": {
+        "id": "CVE-2025-48703",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2025-09-19T18:15:36.620",
+        "lastModified": "2025-11-05T14:07:33.610",
+        "vulnStatus": "Analyzed",
+        "cisaExploitAdd": "2025-11-04",
+        "cisaActionDue": "2025-11-25",
+        "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+        "cisaVulnerabilityName": "CWP Control Web Panel OS Command Injection Vulnerability",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "CWP (aka Control Web Panel or CentOS Web Panel) before 0.9.8.1205 allows unauthenticated remote code execution via shell metacharacters in the t_total parameter in a filemanager changePerm request. A valid non-root username must be known."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:H/A:H",
+                "baseScore": 9.0,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "cve@mitre.org",
+              "type": "Secondary",
+              "exploitabilityScore": 2.2,
+              "impactScore": 6.0
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-78"
+              }
+            ],
+            "source": "cve@mitre.org"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:control-webpanel:webpanel:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "345C6B1A-2B79-4105-A61C-B65D0AA4A33B",
+                    "versionEndExcluding": "0.9.8.1205"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://fenrisk.com/rce-centos-webpanel",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://control-webpanel.com/changelog",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Release Notes"
+            ]
+          },
+          {
+            "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2025-48703",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "US Government Resource"
+            ]
+          }
+        ]
+      },
+      "risk_score": 88,
+      "rank": 1
+    },
+    {
+      "cve_id": "CVE-2025-54863",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-11-04",
+          "previous_max": null,
+          "current_max": 10.0
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-11-04",
+        "description": "Radiometrics VizAir is vulnerable to exposure of the system's REST API key through a publicly accessible configuration file. This allows attackers to remotely alter weather data and configurations, automate attacks against multiple instances, and extract sensitive meteorological data, which could potentially compromise airport operations. Additionally, attackers could flood the system with false alerts, leading to a denial-of-service condition and significant disruption to airport operations. Unauthorized remote control over aviation weather monitoring and data manipulation could result in incorrect flight planning and hazardous takeoff and landing conditions.",
+        "title": "radiometrics vizair",
+        "vendor": "radiometrics",
+        "product": "vizair",
+        "cvss_max": 10.0
+      },
+      "cve": {
+        "id": "CVE-2025-54863",
+        "sourceIdentifier": "ics-cert@hq.dhs.gov",
+        "published": "2025-11-04T17:16:22.967",
+        "lastModified": "2025-11-12T14:13:17.967",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Radiometrics VizAir is vulnerable to exposure of the system's REST API key through a publicly accessible configuration file. This allows attackers to remotely alter weather data and configurations, automate attacks against multiple instances, and extract sensitive meteorological data, which could potentially compromise airport operations. Additionally, attackers could flood the system with false alerts, leading to a denial-of-service condition and significant disruption to airport operations. Unauthorized remote control over aviation weather monitoring and data manipulation could result in incorrect flight planning and hazardous takeoff and landing conditions."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+                "baseScore": 10.0,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "ics-cert@hq.dhs.gov",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 6.0
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 10.0,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "ics-cert@hq.dhs.gov",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-522"
+              }
+            ],
+            "source": "ics-cert@hq.dhs.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:radiometrics:vizair:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "C403D079-7E0F-420C-8312-90466CB0EF5B",
+                    "versionEndExcluding": "2025-08"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/cisagov/CSAF/blob/develop/csaf_files/OT/white/2025/icsa-25-308-04.json",
+            "source": "ics-cert@hq.dhs.gov",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-25-308-04",
+            "source": "ics-cert@hq.dhs.gov",
+            "tags": [
+              "Mitigation",
+              "Third Party Advisory",
+              "US Government Resource"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 2
+    },
+    {
+      "cve_id": "CVE-2025-61945",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-11-04",
+          "previous_max": null,
+          "current_max": 10.0
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-11-04",
+        "description": "Radiometrics VizAir is vulnerable to any remote attacker via access to the admin panel of the VizAir system without authentication. Once inside, the attacker can modify critical weather parameters such as wind shear alerts, inversion depth, and CAPE values, which are essential for accurate weather forecasting and flight safety. This unauthorized access could result in the disabling of vital alerts, causing hazardous conditions for aircraft, and manipulating runway assignments, which could result in mid-air conflicts or runway incursions.",
+        "title": "radiometrics vizair",
+        "vendor": "radiometrics",
+        "product": "vizair",
+        "cvss_max": 10.0
+      },
+      "cve": {
+        "id": "CVE-2025-61945",
+        "sourceIdentifier": "ics-cert@hq.dhs.gov",
+        "published": "2025-11-04T17:16:23.320",
+        "lastModified": "2025-11-12T13:43:42.207",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Radiometrics VizAir is vulnerable to any remote attacker via access to the admin panel of the VizAir system without authentication. Once inside, the attacker can modify critical weather parameters such as wind shear alerts, inversion depth, and CAPE values, which are essential for accurate weather forecasting and flight safety. This unauthorized access could result in the disabling of vital alerts, causing hazardous conditions for aircraft, and manipulating runway assignments, which could result in mid-air conflicts or runway incursions."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+                "baseScore": 10.0,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "ics-cert@hq.dhs.gov",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 6.0
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 10.0,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "ics-cert@hq.dhs.gov",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-306"
+              }
+            ],
+            "source": "ics-cert@hq.dhs.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:radiometrics:vizair:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "C403D079-7E0F-420C-8312-90466CB0EF5B",
+                    "versionEndExcluding": "2025-08"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/cisagov/CSAF/blob/develop/csaf_files/OT/white/2025/icsa-25-308-04.json",
+            "source": "ics-cert@hq.dhs.gov",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-25-308-04",
+            "source": "ics-cert@hq.dhs.gov",
+            "tags": [
+              "Mitigation",
+              "Third Party Advisory",
+              "US Government Resource"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 3
+    },
+    {
+      "cve_id": "CVE-2025-11007",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-11-04",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-11-04",
+        "description": "The CE21 Suite plugin for WordPress is vulnerable to unauthorized plugin settings update due to a missing capability check on the wp_ajax_nopriv_ce21_single_sign_on_save_api_settings AJAX action in versions 2.2.1 to 2.3.1. This makes it possible for unauthenticated attackers to update the plugin's API settings including a secret key used for authentication. This allows unauthenticated attackers to create new admin accounts on an affected site.",
+        "title": "The CE21 Suite plugin for WordPress is vulnerable to unauthorized plugin settings update due to a missing capability check on the wp_ajax...",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-11007",
+        "sourceIdentifier": "security@wordfence.com",
+        "published": "2025-11-04T04:15:36.903",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The CE21 Suite plugin for WordPress is vulnerable to unauthorized plugin settings update due to a missing capability check on the wp_ajax_nopriv_ce21_single_sign_on_save_api_settings AJAX action in versions 2.2.1 to 2.3.1. This makes it possible for unauthenticated attackers to update the plugin's API settings including a secret key used for authentication. This allows unauthenticated attackers to create new admin accounts on an affected site."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security@wordfence.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-306"
+              }
+            ],
+            "source": "security@wordfence.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://wordpress.org/plugins/ce21-suite/",
+            "source": "security@wordfence.com"
+          },
+          {
+            "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/5e24feac-1812-45d7-b3c3-27787eed1cf1?source=cve",
+            "source": "security@wordfence.com"
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 4
+    },
+    {
+      "cve_id": "CVE-2025-11008",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-11-04",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-11-04",
+        "description": "The CE21 Suite plugin for WordPress is vulnerable to Sensitive Information Exposure in all versions up to, and including, 2.3.1 via the log file. This makes it possible for unauthenticated attackers to extract sensitive data including authentication credentials, which can be used to log in as other users as long as they have used the plugin's custom authentication feature before. This may include administrators, which makes a complete site takeover possible.",
+        "title": "The CE21 Suite plugin for WordPress is vulnerable to Sensitive Information Exposure in all versions up to, and including, 2.3.1 via the l...",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-11008",
+        "sourceIdentifier": "security@wordfence.com",
+        "published": "2025-11-04T04:15:37.113",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The CE21 Suite plugin for WordPress is vulnerable to Sensitive Information Exposure in all versions up to, and including, 2.3.1 via the log file. This makes it possible for unauthenticated attackers to extract sensitive data including authentication credentials, which can be used to log in as other users as long as they have used the plugin's custom authentication feature before. This may include administrators, which makes a complete site takeover possible."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security@wordfence.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-532"
+              }
+            ],
+            "source": "security@wordfence.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://wordpress.org/plugins/ce21-suite/",
+            "source": "security@wordfence.com"
+          },
+          {
+            "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/91aa86d9-8e42-4deb-b6ca-c3b388fefcb1?source=cve",
+            "source": "security@wordfence.com"
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 5
+    },
+    {
+      "cve_id": "CVE-2025-11371",
+      "signal_types": [
+        "KEV"
+      ],
+      "signals": {
+        "kev": {
+          "date_added": "2025-11-04"
+        },
+        "exploit": null,
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-10-09",
+        "description": "In the default installation and configuration of Gladinet CentreStack and TrioFox, there is an unauthenticated Local File Inclusion Flaw that allows unintended disclosure of system files. Exploitation of this vulnerability has been observed in the wild. \n\nThis issue impacts Gladinet CentreStack and Triofox: All versions prior to and including 16.7.10368.56560",
+        "title": "Gladinet CentreStack and Triofox Files or Directories Accessible to External Parties Vulnerability",
+        "vendor": "gladinet",
+        "product": "centrestack",
+        "cvss_max": 7.5
+      },
+      "cve": {
+        "id": "CVE-2025-11371",
+        "sourceIdentifier": "5dacb0b8-2277-4717-899c-254586fe4912",
+        "published": "2025-10-09T17:15:58.507",
+        "lastModified": "2025-11-05T14:32:00.610",
+        "vulnStatus": "Analyzed",
+        "cisaExploitAdd": "2025-11-04",
+        "cisaActionDue": "2025-11-25",
+        "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+        "cisaVulnerabilityName": "Gladinet CentreStack and Triofox Files or Directories Accessible to External Parties Vulnerability",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "In the default installation and configuration of Gladinet CentreStack and TrioFox, there is an unauthenticated Local File Inclusion Flaw that allows unintended disclosure of system files. Exploitation of this vulnerability has been observed in the wild. \n\nThis issue impacts Gladinet CentreStack and Triofox: All versions prior to and including 16.7.10368.56560"
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+                "baseScore": 7.5,
+                "baseSeverity": "HIGH"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 3.6
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-552"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:gladinet:centrestack:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "E558139A-6A80-4BAA-8786-15E5AFCA9C37",
+                    "versionEndExcluding": "16.10.10408.56683"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:gladinet:triofox:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "A8D9B616-FF33-4FF0-A97C-4C0B134E7B40",
+                    "versionEndIncluding": "16.7.10368.56560"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://www.huntress.com/blog/gladinet-centrestack-triofox-local-file-inclusion-flaw",
+            "source": "5dacb0b8-2277-4717-899c-254586fe4912",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.centrestack.com/p/gce_latest_release.html",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Release Notes"
+            ]
+          },
+          {
+            "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2025-11371",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "US Government Resource"
+            ]
+          }
+        ]
+      },
+      "risk_score": 88,
+      "rank": 6
+    },
+    {
+      "cve_id": "CVE-2025-12108",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-11-04",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-11-04",
+        "description": "The Survision LPR Camera system does not enforce password protection by default. This allows access to the configuration wizard immediately without a login prompt or credentials check.",
+        "title": "The Survision LPR Camera system does not enforce password protection by default.",
+        "cvss_max": 9.3
+      },
+      "cve": {
+        "id": "CVE-2025-12108",
+        "sourceIdentifier": "ics-cert@hq.dhs.gov",
+        "published": "2025-11-04T19:17:09.740",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The Survision LPR Camera system does not enforce password protection by default. This allows access to the configuration wizard immediately without a login prompt or credentials check."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "ics-cert@hq.dhs.gov",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-306"
+              }
+            ],
+            "source": "ics-cert@hq.dhs.gov"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-25-308-02",
+            "source": "ics-cert@hq.dhs.gov"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 7
+    },
+    {
+      "cve_id": "CVE-2025-12158",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-11-04",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-11-04",
+        "description": "The Simple User Capabilities plugin for WordPress is vulnerable to Privilege Escalation due to a missing capability check on the suc_submit_capabilities() function in all versions up to, and including, 1.0. This makes it possible for unauthenticated attackers to elevate the role of any user account to administrator.",
+        "title": "The Simple User Capabilities plugin for WordPress is vulnerable to Privilege Escalation due to a missing capability check on the suc_subm...",
+        "attack_type": "Privilege Escalation",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-12158",
+        "sourceIdentifier": "security@wordfence.com",
+        "published": "2025-11-04T05:16:10.083",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The Simple User Capabilities plugin for WordPress is vulnerable to Privilege Escalation due to a missing capability check on the suc_submit_capabilities() function in all versions up to, and including, 1.0. This makes it possible for unauthenticated attackers to elevate the role of any user account to administrator."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security@wordfence.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-862"
+              }
+            ],
+            "source": "security@wordfence.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://plugins.svn.wordpress.org/simple-user-capabilities/tags/1.0/user_access.php",
+            "source": "security@wordfence.com"
+          },
+          {
+            "url": "https://wordpress.org/plugins/simple-user-capabilities/",
+            "source": "security@wordfence.com"
+          },
+          {
+            "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/dd75b8ec-1961-4a7a-92e6-1517e638974b?source=cve",
+            "source": "security@wordfence.com"
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 8
+    },
+    {
+      "cve_id": "CVE-2025-12493",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-11-04",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-11-04",
+        "description": "The ShopLentor – WooCommerce Builder for Elementor & Gutenberg +21 Modules – All in One Solution (formerly WooLentor) plugin for WordPress is vulnerable to Local File Inclusion in all versions up to, and including, 3.2.5 via the 'load_template' function. This makes it possible for unauthenticated attackers to include and execute arbitrary .php files on the server, allowing the execution of any PHP code in those files. This can be used to bypass access controls, obtain sensitive data, or achieve code execution in cases where .php file types can be uploaded and included.",
+        "title": "hasthemes shoplentor",
+        "vendor": "hasthemes",
+        "product": "shoplentor",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-12493",
+        "sourceIdentifier": "security@wordfence.com",
+        "published": "2025-11-04T12:15:36.957",
+        "lastModified": "2025-11-26T14:41:39.887",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The ShopLentor – WooCommerce Builder for Elementor & Gutenberg +21 Modules – All in One Solution (formerly WooLentor) plugin for WordPress is vulnerable to Local File Inclusion in all versions up to, and including, 3.2.5 via the 'load_template' function. This makes it possible for unauthenticated attackers to include and execute arbitrary .php files on the server, allowing the execution of any PHP code in those files. This can be used to bypass access controls, obtain sensitive data, or achieve code execution in cases where .php file types can be uploaded and included."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security@wordfence.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-22"
+              }
+            ],
+            "source": "security@wordfence.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:hasthemes:shoplentor:*:*:*:*:*:wordpress:*:*",
+                    "matchCriteriaId": "933798AC-CE46-4823-80D4-4E91DA26FCA8",
+                    "versionEndExcluding": "3.2.6"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/woolentor-addons/trunk/classes/class.ajax_actions.php#L213",
+            "source": "security@wordfence.com",
+            "tags": [
+              "Product"
+            ]
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/woolentor-addons/trunk/classes/class.ajax_actions.php#L241",
+            "source": "security@wordfence.com",
+            "tags": [
+              "Product"
+            ]
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/woolentor-addons/trunk/classes/class.ajax_actions.php#L42",
+            "source": "security@wordfence.com",
+            "tags": [
+              "Product"
+            ]
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/woolentor-addons/trunk/includes/addons/product-grid/base/class.product-grid-base.php#L378",
+            "source": "security@wordfence.com",
+            "tags": [
+              "Product"
+            ]
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/changeset/3388234/",
+            "source": "security@wordfence.com",
+            "tags": [
+              "Product"
+            ]
+          },
+          {
+            "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/12bb4bb9-e908-43ad-8fb1-59418580f5e1?source=cve",
+            "source": "security@wordfence.com",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 9
+    },
+    {
+      "cve_id": "CVE-2025-12682",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-11-04",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-11-04",
+        "description": "The Easy Upload Files During Checkout plugin for WordPress is vulnerable to arbitrary JavaScript file uploads due to missing file type validation in the 'file_during_checkout' function in all versions up to, and including, 2.9.8. This makes it possible for unauthenticated attackers to upload arbitrary JavaScript files on the affected site's server which may make remote code execution possible.",
+        "title": "The Easy Upload Files During Checkout plugin for WordPress is vulnerable to arbitrary JavaScript file uploads due to missing file type va...",
+        "attack_type": "RCE",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-12682",
+        "sourceIdentifier": "security@wordfence.com",
+        "published": "2025-11-04T14:15:33.377",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The Easy Upload Files During Checkout plugin for WordPress is vulnerable to arbitrary JavaScript file uploads due to missing file type validation in the 'file_during_checkout' function in all versions up to, and including, 2.9.8. This makes it possible for unauthenticated attackers to upload arbitrary JavaScript files on the affected site's server which may make remote code execution possible."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security@wordfence.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-434"
+              }
+            ],
+            "source": "security@wordfence.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://plugins.trac.wordpress.org/changeset/3384711/",
+            "source": "security@wordfence.com"
+          },
+          {
+            "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/6a050764-0ba6-49a4-bd71-f79e3129fc4c?source=cve",
+            "source": "security@wordfence.com"
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 10
+    },
+    {
+      "cve_id": "CVE-2025-52910",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-11-04",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-11-04",
+        "description": "An issue was discovered in the GPU in Samsung Mobile Processor and Wearable Processor Exynos 1280, 2200, 1330, 1380, 1480, 2400. A Use-After-Free leads to privilege escalation.",
+        "title": "samsung exynos_1280_firmware Privilege Escalation",
+        "vendor": "samsung",
+        "product": "exynos_1280_firmware",
+        "attack_type": "Privilege Escalation",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-52910",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2025-11-04T21:15:37.970",
+        "lastModified": "2025-11-07T13:00:22.963",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "An issue was discovered in the GPU in Samsung Mobile Processor and Wearable Processor Exynos 1280, 2200, 1330, 1380, 1480, 2400. A Use-After-Free leads to privilege escalation."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-416"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:samsung:exynos_1280_firmware:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "BD1A7B09-9031-4E54-A24F-3237C054166B"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:samsung:exynos_1280:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "DFC68046-2F08-40D1-B158-89D8D9263541"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:samsung:exynos_1330_firmware:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "C2635646-DD6A-4735-8E01-F45445584832"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:samsung:exynos_1330:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "AA0F8A58-71B7-4503-A03A-6FB4282D75BD"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:samsung:exynos_1380_firmware:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "D381478B-C638-4663-BD71-144BE4B02E46"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:samsung:exynos_1380:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "61E72146-72FE-4B54-AB79-3C665E7F016C"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:samsung:exynos_1480_firmware:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "64897B0D-EBF6-4BEB-BF54-ABCDBFAB45E0"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:samsung:exynos_1480:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "F3F328B4-0442-4748-B5EE-DD1CEE50D6CF"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:samsung:exynos_2200_firmware:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "63C0D9AC-BD23-48C9-83E7-301DEC06E583"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:samsung:exynos_2200:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "A72ADEBB-ED72-4A5B-BB27-95EDE43F8116"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:samsung:exynos_2400_firmware:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "16D9272E-1794-48FF-B6A4-8F48395BA38E"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:samsung:exynos_2400:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "932F5FB3-5527-44D7-9DD9-EF03963E3CA3"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://semiconductor.samsung.com/support/quality-support/product-security-updates/",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://semiconductor.samsung.com/support/quality-support/product-security-updates/cve-2025-52910/",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 11
+    },
+    {
+      "cve_id": "CVE-2025-61956",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-11-04",
+          "previous_max": null,
+          "current_max": 10.0
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-11-04",
+        "description": "Radiometrics VizAir is vulnerable to a lack of authentication mechanisms for critical functions, such as admin access and API requests. Attackers can modify configurations without authentication, potentially manipulating active runway settings and misleading air traffic control (ATC) and pilots. Additionally, manipulated meteorological data could mislead forecasters and ATC, causing inaccurate flight planning.",
+        "title": "radiometrics vizair",
+        "vendor": "radiometrics",
+        "product": "vizair",
+        "cvss_max": 10.0
+      },
+      "cve": {
+        "id": "CVE-2025-61956",
+        "sourceIdentifier": "ics-cert@hq.dhs.gov",
+        "published": "2025-11-04T17:16:23.490",
+        "lastModified": "2025-11-12T17:22:11.577",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Radiometrics VizAir is vulnerable to a lack of authentication mechanisms for critical functions, such as admin access and API requests. Attackers can modify configurations without authentication, potentially manipulating active runway settings and misleading air traffic control (ATC) and pilots. Additionally, manipulated meteorological data could mislead forecasters and ATC, causing inaccurate flight planning."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+                "baseScore": 10.0,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "ics-cert@hq.dhs.gov",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 6.0
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 10.0,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "ics-cert@hq.dhs.gov",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-306"
+              }
+            ],
+            "source": "ics-cert@hq.dhs.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:radiometrics:vizair:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "C403D079-7E0F-420C-8312-90466CB0EF5B",
+                    "versionEndExcluding": "2025-08"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/cisagov/CSAF/blob/develop/csaf_files/OT/white/2025/icsa-25-308-04.json",
+            "source": "ics-cert@hq.dhs.gov",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-25-308-04",
+            "source": "ics-cert@hq.dhs.gov",
+            "tags": [
+              "Mitigation",
+              "Third Party Advisory",
+              "US Government Resource"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 12
+    }
+  ],
+  "source": "https://www.cvelogic.com/threat-intelligence/2025-11-04"
+}

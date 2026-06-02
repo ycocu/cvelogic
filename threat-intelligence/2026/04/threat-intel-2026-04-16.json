@@ -1,0 +1,1219 @@
+{
+  "schema_version": "2.2",
+  "generated_at": "2026-06-02T07:34:56Z",
+  "day": "2026-04-16",
+  "window": {
+    "utc_start": "2026-04-16",
+    "utc_end": "2026-04-16",
+    "days": 1
+  },
+  "summary": {
+    "brief": "Apache ActiveMQ added to CISA KEV — confirmed in-the-wild exploitation. · Minidvblinux — exploitation likelihood rose sharply (EPSS 18% → 29% · rising (+12%)). · 10 new critical disclosures — review patch status on exposed services.",
+    "bullets": [
+      "Apache ActiveMQ added to CISA KEV — confirmed in-the-wild exploitation.",
+      "Minidvblinux — exploitation likelihood rose sharply (EPSS 18% → 29% · rising (+12%)).",
+      "10 new critical disclosures — review patch status on exposed services."
+    ],
+    "counts": {
+      "cves": 12,
+      "kev": 1,
+      "exploit": 0,
+      "epss": 1,
+      "cvss": 10,
+      "patch": 0
+    }
+  },
+  "cves": [
+    {
+      "cve_id": "CVE-2026-34197",
+      "signal_types": [
+        "KEV"
+      ],
+      "signals": {
+        "kev": {
+          "date_added": "2026-04-16"
+        },
+        "exploit": null,
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-04-07",
+        "description": "Improper Input Validation, Improper Control of Generation of Code ('Code Injection') vulnerability in Apache ActiveMQ Broker, Apache ActiveMQ.\n\nApache ActiveMQ Classic exposes the Jolokia JMX-HTTP bridge at /api/jolokia/ on the web console. The default Jolokia access policy permits exec operations on all ActiveMQ MBeans (org.apache.activemq:*), including\nBrokerService.addNetworkConnector(String) and BrokerService.addConnector(String).\n\nAn authenticated attacker can invoke these operations with a crafted discovery URI that triggers the VM transport's brokerConfig parameter to load a remote Spring XML application context using ResourceXmlApplicationContext.\nBecause Spring's ResourceXmlApplicationContext instantiates all singleton beans before the BrokerService validates the configuration, arbitrary code execution occurs on the broker's JVM through bean factory methods such as Runtime.exec().\n\n\n\nThis issue affects Apache ActiveMQ Broker: before 5.19.4, from 6.0.0 before 6.2.3; Apache ActiveMQ All: before 5.19.4, from 6.0.0 before 6.2.3; Apache ActiveMQ: before 5.19.4, from 6.0.0 before 6.2.3.\n\n\n\nUsers are recommended to upgrade to version 5.19.4 or 6.2.3, which fixes the issue",
+        "title": "Apache ActiveMQ Improper Input Validation Vulnerability",
+        "vendor": "apache",
+        "product": "activemq",
+        "cvss_max": 8.8
+      },
+      "cve": {
+        "id": "CVE-2026-34197",
+        "sourceIdentifier": "security@apache.org",
+        "published": "2026-04-07T09:16:20.967",
+        "lastModified": "2026-04-16T19:59:38.107",
+        "vulnStatus": "Analyzed",
+        "cisaExploitAdd": "2026-04-16",
+        "cisaActionDue": "2026-04-30",
+        "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+        "cisaVulnerabilityName": "Apache ActiveMQ Improper Input Validation Vulnerability",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Improper Input Validation, Improper Control of Generation of Code ('Code Injection') vulnerability in Apache ActiveMQ Broker, Apache ActiveMQ.\n\nApache ActiveMQ Classic exposes the Jolokia JMX-HTTP bridge at /api/jolokia/ on the web console. The default Jolokia access policy permits exec operations on all ActiveMQ MBeans (org.apache.activemq:*), including\nBrokerService.addNetworkConnector(String) and BrokerService.addConnector(String).\n\nAn authenticated attacker can invoke these operations with a crafted discovery URI that triggers the VM transport's brokerConfig parameter to load a remote Spring XML application context using ResourceXmlApplicationContext.\nBecause Spring's ResourceXmlApplicationContext instantiates all singleton beans before the BrokerService validates the configuration, arbitrary code execution occurs on the broker's JVM through bean factory methods such as Runtime.exec().\n\n\n\nThis issue affects Apache ActiveMQ Broker: before 5.19.4, from 6.0.0 before 6.2.3; Apache ActiveMQ All: before 5.19.4, from 6.0.0 before 6.2.3; Apache ActiveMQ: before 5.19.4, from 6.0.0 before 6.2.3.\n\n\n\nUsers are recommended to upgrade to version 5.19.4 or 6.2.3, which fixes the issue"
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 8.8,
+                "baseSeverity": "HIGH"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-20"
+              },
+              {
+                "lang": "en",
+                "value": "CWE-94"
+              }
+            ],
+            "source": "security@apache.org"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:apache:activemq:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "83EF7DD6-C3A9-4561-ADC0-1E6ED5429307",
+                    "versionEndExcluding": "5.19.4"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:apache:activemq:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "4C156202-D239-4ECD-B409-2C22E063F030",
+                    "versionStartIncluding": "6.0.0",
+                    "versionEndExcluding": "6.2.3"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:apache:activemq_broker:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "ECEF15DD-10E8-40A4-897B-3DA7F12E2C07",
+                    "versionEndExcluding": "5.19.4"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:apache:activemq_broker:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "1623B4ED-853E-4562-AD04-804AAF87D937",
+                    "versionStartIncluding": "6.0.0",
+                    "versionEndExcluding": "6.2.3"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://activemq.apache.org/security-advisories.data/CVE-2026-34197-announcement.txt",
+            "source": "security@apache.org",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "http://www.openwall.com/lists/oss-security/2026/04/06/3",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Mailing List",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-34197",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "US Government Resource"
+            ]
+          }
+        ]
+      },
+      "risk_score": 88,
+      "rank": 1
+    },
+    {
+      "cve_id": "CVE-2025-25038",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 0.17688,
+            "score_date": "2026-03-06"
+          },
+          "current": {
+            "score": 0.29206,
+            "score_date": "2026-04-16"
+          },
+          "delta": 0.11518
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-06-20",
+        "description": "An OS command injection vulnerability exists in MiniDVBLinux version 5.4 and earlier. The system’s web-based management interface fails to properly sanitize user-supplied input before passing it to operating system commands. A remote unauthenticated attacker can exploit this vulnerability to execute arbitrary commands as the root user, potentially compromising the entire device. Exploitation evidence was observed by the Shadowserver Foundation on 2024-04-10 UTC.",
+        "title": "minidvblinux minidvblinux Command Injection",
+        "vendor": "minidvblinux",
+        "product": "minidvblinux",
+        "attack_type": "Command Injection",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-25038",
+        "sourceIdentifier": "disclosure@vulncheck.com",
+        "published": "2025-06-20T19:15:36.050",
+        "lastModified": "2025-12-22T17:46:41.027",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "An OS command injection vulnerability exists in MiniDVBLinux version 5.4 and earlier. The system’s web-based management interface fails to properly sanitize user-supplied input before passing it to operating system commands. A remote unauthenticated attacker can exploit this vulnerability to execute arbitrary commands as the root user, potentially compromising the entire device. Exploitation evidence was observed by the Shadowserver Foundation on 2024-04-10 UTC."
+          },
+          {
+            "lang": "es",
+            "value": "Existe una vulnerabilidad de inyección de comandos en el sistema operativo MiniDVBLinux versión 5.4 y anteriores. La interfaz de administración web del sistema no depura correctamente la entrada del usuario antes de pasarla a los comandos del sistema operativo. Un atacante remoto no autenticado puede explotar esta vulnerabilidad para ejecutar comandos arbitrarios como usuario root, lo que podría comprometer todo el dispositivo."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-78"
+              }
+            ],
+            "source": "disclosure@vulncheck.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:minidvblinux:minidvblinux:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "2D9CAD03-85CC-41CC-B745-371250902E61",
+                    "versionEndIncluding": "5.4"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://cxsecurity.com/issue/WLB-2022100039",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://packetstormsecurity.com/files/168744/",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://vulncheck.com/advisories/minidvblinux-command-injection",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.exploit-db.com/exploits/51096",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory",
+              "VDB Entry"
+            ]
+          },
+          {
+            "url": "https://www.fortiguard.com/encyclopedia/ips/52454",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.minidvblinux.de",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Product"
+            ]
+          },
+          {
+            "url": "https://www.zeroscience.mk/en/vulnerabilities/ZSL-2022-5717.php",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 84,
+      "rank": 2
+    },
+    {
+      "cve_id": "CVE-2026-31843",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-04-16",
+          "previous_max": null,
+          "current_max": 10.0
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-04-16",
+        "description": "The goodoneuz/pay-uz Laravel package (<= 2.2.24) contains a critical vulnerability in the /payment/api/editable/update endpoint that allows unauthenticated attackers to overwrite existing PHP payment hook files. The endpoint is exposed via Route::any() without authentication middleware, enabling remote access without credentials. User-controlled input is directly written into executable PHP files using file_put_contents(). These files are later executed via require() during normal payment processing workflows, resulting in remote code execution under default application behavior. The payment secret token mentioned by the vendor is unrelated to this endpoint and does not mitigate the vulnerability.",
+        "title": "The goodoneuz/pay-uz Laravel package (<= 2.2.24) contains a critical vulnerability in the /payment/api/editable/update endpoint that allo...",
+        "cvss_max": 10.0
+      },
+      "cve": {
+        "id": "CVE-2026-31843",
+        "sourceIdentifier": "309f9ea4-e3e9-4c6c-b79d-e8eb01244f2c",
+        "published": "2026-04-16T13:16:48.473",
+        "lastModified": "2026-05-19T15:50:41.340",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The goodoneuz/pay-uz Laravel package (<= 2.2.24) contains a critical vulnerability in the /payment/api/editable/update endpoint that allows unauthenticated attackers to overwrite existing PHP payment hook files. The endpoint is exposed via Route::any() without authentication middleware, enabling remote access without credentials. User-controlled input is directly written into executable PHP files using file_put_contents(). These files are later executed via require() during normal payment processing workflows, resulting in remote code execution under default application behavior. The payment secret token mentioned by the vendor is unrelated to this endpoint and does not mitigate the vulnerability."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV2": [
+            {
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+                "baseScore": 10.0,
+                "baseSeverity": "HIGH"
+              },
+              "source": "309f9ea4-e3e9-4c6c-b79d-e8eb01244f2c",
+              "type": "Secondary",
+              "baseSeverity": "HIGH",
+              "exploitabilityScore": 10.0,
+              "impactScore": 10.0
+            }
+          ],
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "309f9ea4-e3e9-4c6c-b79d-e8eb01244f2c",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 10.0,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "309f9ea4-e3e9-4c6c-b79d-e8eb01244f2c",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-284"
+              }
+            ],
+            "source": "309f9ea4-e3e9-4c6c-b79d-e8eb01244f2c"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/goodoneuz/pay-uz/blob/master/src/Http/Controllers/ApiController.php",
+            "source": "309f9ea4-e3e9-4c6c-b79d-e8eb01244f2c"
+          },
+          {
+            "url": "https://github.com/goodoneuz/pay-uz/blob/master/src/routes/web.php",
+            "source": "309f9ea4-e3e9-4c6c-b79d-e8eb01244f2c"
+          },
+          {
+            "url": "https://github.com/shaxzodbek-uzb/pay-uz",
+            "source": "309f9ea4-e3e9-4c6c-b79d-e8eb01244f2c"
+          },
+          {
+            "url": "https://packagist.org/packages/goodoneuz/pay-uz",
+            "source": "309f9ea4-e3e9-4c6c-b79d-e8eb01244f2c"
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 3
+    },
+    {
+      "cve_id": "CVE-2026-3596",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-04-16",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-04-16",
+        "description": "The Riaxe Product Customizer plugin for WordPress is vulnerable to Privilege Escalation in all versions up to, and including, 2.1.2. The plugin registers an unauthenticated AJAX action ('wp_ajax_nopriv_install-imprint') that maps to the ink_pd_add_option() function. This function reads 'option' and 'opt_value' from $_POST, then calls delete_option() followed by add_option() using these attacker-controlled values without any nonce verification, capability checks, or option name allowlist. This makes it possible for unauthenticated attackers to update arbitrary WordPress options, which can be leveraged for privilege escalation by enabling user registration and setting the default user role to administrator.",
+        "title": "The Riaxe Product Customizer plugin for WordPress is vulnerable to Privilege Escalation in all versions up to, and including, 2.1.2.",
+        "attack_type": "Privilege Escalation",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2026-3596",
+        "sourceIdentifier": "security@wordfence.com",
+        "published": "2026-04-16T06:16:15.667",
+        "lastModified": "2026-04-22T20:22:50.570",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The Riaxe Product Customizer plugin for WordPress is vulnerable to Privilege Escalation in all versions up to, and including, 2.1.2. The plugin registers an unauthenticated AJAX action ('wp_ajax_nopriv_install-imprint') that maps to the ink_pd_add_option() function. This function reads 'option' and 'opt_value' from $_POST, then calls delete_option() followed by add_option() using these attacker-controlled values without any nonce verification, capability checks, or option name allowlist. This makes it possible for unauthenticated attackers to update arbitrary WordPress options, which can be leveraged for privilege escalation by enabling user registration and setting the default user role to administrator."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security@wordfence.com",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-862"
+              }
+            ],
+            "source": "security@wordfence.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/riaxe-product-customizer/tags/2.1.2/riaxe-product-designer.php#L183",
+            "source": "security@wordfence.com"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/riaxe-product-customizer/tags/2.1.2/riaxe-product-designer.php#L5045",
+            "source": "security@wordfence.com"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/riaxe-product-customizer/tags/2.1.2/riaxe-product-designer.php#L5046",
+            "source": "security@wordfence.com"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/riaxe-product-customizer/tags/2.1.2/riaxe-product-designer.php#L5047",
+            "source": "security@wordfence.com"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/riaxe-product-customizer/tags/2.1.2/riaxe-product-designer.php#L5058",
+            "source": "security@wordfence.com"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/riaxe-product-customizer/trunk/riaxe-product-designer.php#L183",
+            "source": "security@wordfence.com"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/riaxe-product-customizer/trunk/riaxe-product-designer.php#L5045",
+            "source": "security@wordfence.com"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/riaxe-product-customizer/trunk/riaxe-product-designer.php#L5046",
+            "source": "security@wordfence.com"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/riaxe-product-customizer/trunk/riaxe-product-designer.php#L5047",
+            "source": "security@wordfence.com"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/riaxe-product-customizer/trunk/riaxe-product-designer.php#L5058",
+            "source": "security@wordfence.com"
+          },
+          {
+            "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/271a35fb-56b7-4d6b-bccc-fea1227d0913?source=cve",
+            "source": "security@wordfence.com"
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 4
+    },
+    {
+      "cve_id": "CVE-2026-37338",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-04-16",
+          "previous_max": null,
+          "current_max": 9.4
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-04-16",
+        "description": "SourceCodester Simple Music Cloud Community System v1.0 is vulnerable to SQL Injection in the file /music/view_user.php.",
+        "title": "SourceCodester Simple Music Cloud Community System v1.0 is vulnerable to SQL Injection in the file /music/view_user.php.",
+        "attack_type": "SQL Injection",
+        "cvss_max": 9.4
+      },
+      "cve": {
+        "id": "CVE-2026-37338",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2026-04-16T15:17:36.680",
+        "lastModified": "2026-04-17T15:15:09.790",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "SourceCodester Simple Music Cloud Community System v1.0 is vulnerable to SQL Injection in the file /music/view_user.php."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:L",
+                "baseScore": 9.4,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.5
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-89"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/mt-0505/cve-report/blob/main/sourcecodester/simple-music-cloud-community-system/SQL-4.md",
+            "source": "cve@mitre.org"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 5
+    },
+    {
+      "cve_id": "CVE-2026-37339",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-04-16",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-04-16",
+        "description": "SourceCodester Simple Music Cloud Community System v1.0 is vulnerable to SQL Injection in the file /music/view_genre.php.",
+        "title": "SourceCodester Simple Music Cloud Community System v1.0 is vulnerable to SQL Injection in the file /music/view_genre.php.",
+        "attack_type": "SQL Injection",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2026-37339",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2026-04-16T15:17:36.790",
+        "lastModified": "2026-04-18T03:16:12.280",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "SourceCodester Simple Music Cloud Community System v1.0 is vulnerable to SQL Injection in the file /music/view_genre.php."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-89"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/mt-0505/cve-report/blob/main/sourcecodester/simple-music-cloud-community-system/SQL-3.md",
+            "source": "cve@mitre.org"
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 6
+    },
+    {
+      "cve_id": "CVE-2026-37340",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-04-16",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-04-16",
+        "description": "SourceCodester Simple Music Cloud Community System v1.0 is vulnerable to SQL Injection in the file /music/edit_music.php.",
+        "title": "SourceCodester Simple Music Cloud Community System v1.0 is vulnerable to SQL Injection in the file /music/edit_music.php.",
+        "attack_type": "SQL Injection",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2026-37340",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2026-04-16T15:17:36.900",
+        "lastModified": "2026-04-18T03:16:12.437",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "SourceCodester Simple Music Cloud Community System v1.0 is vulnerable to SQL Injection in the file /music/edit_music.php."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-89"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/mt-0505/cve-report/blob/main/sourcecodester/simple-music-cloud-community-system/SQL-5.md",
+            "source": "cve@mitre.org"
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 7
+    },
+    {
+      "cve_id": "CVE-2026-37345",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-04-16",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-04-16",
+        "description": "SourceCodester Vehicle Parking Area Management System v1.0 is vulnerable to SQL Injection in the file /parking/manage_park.php.",
+        "title": "SourceCodester Vehicle Parking Area Management System v1.0 is vulnerable to SQL Injection in the file /parking/manage_park.php.",
+        "attack_type": "SQL Injection",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2026-37345",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2026-04-16T15:17:37.447",
+        "lastModified": "2026-04-17T15:15:09.790",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "SourceCodester Vehicle Parking Area Management System v1.0 is vulnerable to SQL Injection in the file /parking/manage_park.php."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-89"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/mt-0505/cve-report/blob/main/sourcecodester/vehicle-parking-area-management-system/SQL-5.md",
+            "source": "cve@mitre.org"
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 8
+    },
+    {
+      "cve_id": "CVE-2026-37347",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-04-16",
+          "previous_max": null,
+          "current_max": 9.1
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-04-16",
+        "description": "SourceCodester Payroll Management and Information System v1.0 is vulnerable to SQL Injection in the file /payroll/view_employee.php.",
+        "title": "SourceCodester Payroll Management and Information System v1.0 is vulnerable to SQL Injection in the file /payroll/view_employee.php.",
+        "attack_type": "SQL Injection",
+        "cvss_max": 9.1
+      },
+      "cve": {
+        "id": "CVE-2026-37347",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2026-04-16T15:17:37.670",
+        "lastModified": "2026-04-17T15:15:09.790",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "SourceCodester Payroll Management and Information System v1.0 is vulnerable to SQL Injection in the file /payroll/view_employee.php."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+                "baseScore": 9.1,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.2
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-89"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/mt-0505/cve-report/blob/main/sourcecodester/payroll-management-and-information-system/SQL-2.md",
+            "source": "cve@mitre.org"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 9
+    },
+    {
+      "cve_id": "CVE-2026-40322",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-04-16",
+          "previous_max": null,
+          "current_max": 9.0
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-04-16",
+        "description": "SiYuan is an open-source personal knowledge management system. In versions 3.6.3 and below, Mermaid diagrams are rendered with securityLevel set to \"loose\", and the resulting SVG is injected into the DOM via innerHTML. This allows attacker-controlled javascript: URLs in Mermaid code blocks to survive into the rendered output. On desktop builds using Electron, windows are created with nodeIntegration enabled and contextIsolation disabled, escalating the stored XSS to arbitrary code execution when a victim opens a note containing a malicious Mermaid block and clicks the rendered diagram node. This issue has been fixed in version 3.6.4.",
+        "title": "b3log siyuan",
+        "vendor": "b3log",
+        "product": "siyuan",
+        "cvss_max": 9.0
+      },
+      "cve": {
+        "id": "CVE-2026-40322",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2026-04-16T23:16:33.733",
+        "lastModified": "2026-04-20T14:51:24.213",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "SiYuan is an open-source personal knowledge management system. In versions 3.6.3 and below, Mermaid diagrams are rendered with securityLevel set to \"loose\", and the resulting SVG is injected into the DOM via innerHTML. This allows attacker-controlled javascript: URLs in Mermaid code blocks to survive into the rendered output. On desktop builds using Electron, windows are created with nodeIntegration enabled and contextIsolation disabled, escalating the stored XSS to arbitrary code execution when a victim opens a note containing a malicious Mermaid block and clicks the rendered diagram node. This issue has been fixed in version 3.6.4."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:H",
+                "baseScore": 9.0,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary",
+              "exploitabilityScore": 2.3,
+              "impactScore": 6.0
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-79"
+              },
+              {
+                "lang": "en",
+                "value": "CWE-94"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:b3log:siyuan:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "3951F8B9-C26F-4A2E-98FB-F744EB1F67B8",
+                    "versionEndExcluding": "3.6.4"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/siyuan-note/siyuan/releases/tag/v3.6.4",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Release Notes"
+            ]
+          },
+          {
+            "url": "https://github.com/siyuan-note/siyuan/security/advisories/GHSA-x63q-3rcj-hhp5",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 10
+    },
+    {
+      "cve_id": "CVE-2026-5426",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-04-16",
+          "previous_max": null,
+          "current_max": 9.1
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-04-16",
+        "description": "Hard-coded ASP.NET/IIS machineKey value in Digital Knowledge KnowledgeDeliver deployments prior to February 24, 2026 allows adversaries to circumvent ViewState validation mechanisms and achieve remote code execution via malicious ViewState deserialization attacks",
+        "title": "Hard-coded ASP.NET/IIS machineKey value in Digital Knowledge KnowledgeDeliver deployments prior to February 24, 2026 allows adversaries t...",
+        "attack_type": "RCE",
+        "cvss_max": 9.1
+      },
+      "cve": {
+        "id": "CVE-2026-5426",
+        "sourceIdentifier": "mandiant-cve@google.com",
+        "published": "2026-04-16T16:16:17.693",
+        "lastModified": "2026-05-26T19:16:29.123",
+        "vulnStatus": "Awaiting Analysis",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Hard-coded ASP.NET/IIS machineKey value in Digital Knowledge KnowledgeDeliver deployments prior to February 24, 2026 allows adversaries to circumvent ViewState validation mechanisms and achieve remote code execution via malicious ViewState deserialization attacks"
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+                "baseScore": 9.1,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.2
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-321"
+              },
+              {
+                "lang": "en",
+                "value": "CWE-502"
+              }
+            ],
+            "source": "mandiant-cve@google.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://cloud.google.com/blog/topics/threat-intelligence/knowledgedeliver-viewstate-deserialization-vulnerability",
+            "source": "mandiant-cve@google.com"
+          },
+          {
+            "url": "https://github.com/mandiant/Vulnerability-Disclosures/blob/master/2026/MNDT-2026-0009.md",
+            "source": "mandiant-cve@google.com"
+          },
+          {
+            "url": "https://www.digital-knowledge.co.jp/product/kd/",
+            "source": "mandiant-cve@google.com"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 11
+    },
+    {
+      "cve_id": "CVE-2026-6270",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-04-16",
+          "previous_max": null,
+          "current_max": 9.1
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-04-16",
+        "description": "@fastify/middie versions 9.3.1 and earlier do not register inherited middleware directly on child plugin engine instances. When a Fastify application registers authentication middleware in a parent scope and then registers child plugins with @fastify/middie, the child scope does not inherit the parent middleware. This allows unauthenticated requests to reach routes defined in child plugin scopes, bypassing authentication and authorization checks. Upgrade to @fastify/middie 9.3.2 to fix this issue. There are no workarounds.",
+        "title": "fastify fastify\\/middie",
+        "vendor": "fastify",
+        "product": "fastify\\/middie",
+        "cvss_max": 9.1
+      },
+      "cve": {
+        "id": "CVE-2026-6270",
+        "sourceIdentifier": "ce714d77-add3-4f53-aff5-83d477b104bb",
+        "published": "2026-04-16T14:16:19.433",
+        "lastModified": "2026-05-14T15:41:44.877",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "@fastify/middie versions 9.3.1 and earlier do not register inherited middleware directly on child plugin engine instances. When a Fastify application registers authentication middleware in a parent scope and then registers child plugins with @fastify/middie, the child scope does not inherit the parent middleware. This allows unauthenticated requests to reach routes defined in child plugin scopes, bypassing authentication and authorization checks. Upgrade to @fastify/middie 9.3.2 to fix this issue. There are no workarounds."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+                "baseScore": 9.1,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "ce714d77-add3-4f53-aff5-83d477b104bb",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.2
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-436"
+              }
+            ],
+            "source": "ce714d77-add3-4f53-aff5-83d477b104bb"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:fastify:fastify\\/middie:*:*:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "6082AC25-04AD-4888-B763-7D5C2493AF6E",
+                    "versionEndExcluding": "9.3.2"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://cna.openjsf.org/security-advisories.html",
+            "source": "ce714d77-add3-4f53-aff5-83d477b104bb",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/fastify/fastify-express/security/advisories/GHSA-hrwm-hgmj-7p9c",
+            "source": "ce714d77-add3-4f53-aff5-83d477b104bb",
+            "tags": [
+              "Exploit",
+              "Mitigation",
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/fastify/middie/security/advisories/GHSA-72c6-fx6q-fr5w",
+            "source": "ce714d77-add3-4f53-aff5-83d477b104bb",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 12
+    }
+  ],
+  "source": "https://www.cvelogic.com/threat-intelligence/2026-04-16"
+}

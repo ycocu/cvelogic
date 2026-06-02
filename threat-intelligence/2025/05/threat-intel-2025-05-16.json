@@ -1,0 +1,443 @@
+{
+  "schema_version": "2.2",
+  "generated_at": "2026-06-02T07:32:43Z",
+  "day": "2025-05-16",
+  "window": {
+    "utc_start": "2025-05-16",
+    "utc_end": "2025-05-16",
+    "days": 1
+  },
+  "summary": {
+    "brief": "4 new critical disclosures — review patch status on exposed services.",
+    "bullets": [
+      "4 new critical disclosures — review patch status on exposed services."
+    ],
+    "counts": {
+      "cves": 4,
+      "kev": 0,
+      "exploit": 0,
+      "epss": 0,
+      "cvss": 4,
+      "patch": 0
+    }
+  },
+  "cves": [
+    {
+      "cve_id": "CVE-2025-47916",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-05-16",
+          "previous_max": null,
+          "current_max": 10.0
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-05-16",
+        "description": "Invision Community 5.0.0 before 5.0.7 allows remote code execution via crafted template strings to themeeditor.php. The issue lies within the themeeditor controller (file: /applications/core/modules/front/system/themeeditor.php), where a protected method named customCss can be invoked by unauthenticated users. This method passes the value of the content parameter to the Theme::makeProcessFunction() method; hence it is evaluated by the template engine. Accordingly, this can be exploited by unauthenticated attackers to inject and execute arbitrary PHP code by providing crafted template strings.",
+        "title": "invisioncommunity invisioncommunity RCE",
+        "vendor": "invisioncommunity",
+        "product": "invisioncommunity",
+        "attack_type": "RCE",
+        "cvss_max": 10.0
+      },
+      "cve": {
+        "id": "CVE-2025-47916",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2025-05-16T15:15:48.357",
+        "lastModified": "2025-06-20T17:42:15.083",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Invision Community 5.0.0 before 5.0.7 allows remote code execution via crafted template strings to themeeditor.php. The issue lies within the themeeditor controller (file: /applications/core/modules/front/system/themeeditor.php), where a protected method named customCss can be invoked by unauthenticated users. This method passes the value of the content parameter to the Theme::makeProcessFunction() method; hence it is evaluated by the template engine. Accordingly, this can be exploited by unauthenticated attackers to inject and execute arbitrary PHP code by providing crafted template strings."
+          },
+          {
+            "lang": "es",
+            "value": "Invision Community 5.0.0 anterior a 5.0.7 permite la ejecución remota de código mediante cadenas de plantillas manipuladas en themeeditor.php. El problema reside en el controlador themeeditor (archivo: /applications/core/modules/front/system/themeeditor.php), donde usuarios no autenticados pueden invocar un método protegido llamado customCss. Este método pasa el valor del parámetro content al método Theme::makeProcessFunction(); por lo tanto, lo evalúa el motor de plantillas. Por lo tanto, atacantes no autenticados pueden aprovechar esto para inyectar y ejecutar código PHP arbitrario mediante cadenas de plantillas manipuladas."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+                "baseScore": 10.0,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "cve@mitre.org",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 6.0
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-1336"
+              }
+            ],
+            "source": "cve@mitre.org"
+          },
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-94"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:invisioncommunity:invisioncommunity:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "0CF893DE-7FA8-4350-B815-4AB6E82C0172",
+                    "versionStartIncluding": "5.0.0",
+                    "versionEndExcluding": "5.0.7"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://invisioncommunity.com/release-notes-v5/507-r41/",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Release Notes"
+            ]
+          },
+          {
+            "url": "https://karmainsecurity.com/KIS-2025-02",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "http://seclists.org/fulldisclosure/2025/May/4",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Mailing List",
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 1
+    },
+    {
+      "cve_id": "CVE-2025-40906",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-05-16",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-05-16",
+        "description": "BSON::XS versions 0.8.4 and earlier for Perl includes a bundled libbson 1.1.7, which has several vulnerabilities.\n\nThose include CVE-2017-14227, CVE-2018-16790, CVE-2023-0437, CVE-2024-6381, CVE-2024-6383, and CVE-2025-0755. \n\nBSON-XS was the official Perl XS implementation of MongoDB's BSON serialization, but this distribution has reached its end of life as of August 13, 2020 and is no longer supported.",
+        "title": "BSON::XS versions 0.8.4 and earlier for Perl includes a bundled libbson 1.1.7, which has several vulnerabilities.",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-40906",
+        "sourceIdentifier": "9b29abf9-4ab0-4765-b253-1875cd9b441e",
+        "published": "2025-05-16T16:15:41.493",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "BSON::XS versions 0.8.4 and earlier for Perl includes a bundled libbson 1.1.7, which has several vulnerabilities.\n\nThose include CVE-2017-14227, CVE-2018-16790, CVE-2023-0437, CVE-2024-6381, CVE-2024-6383, and CVE-2025-0755. \n\nBSON-XS was the official Perl XS implementation of MongoDB's BSON serialization, but this distribution has reached its end of life as of August 13, 2020 and is no longer supported."
+          },
+          {
+            "lang": "es",
+            "value": "Las versiones 0.8.4 y anteriores de BSON::XS para Perl incluyen libbson 1.1.7, que presenta varias vulnerabilidades, entre ellas CVE-2017-14227, CVE-2018-16790, CVE-2023-0437, CVE-2024-6381, CVE-2024-6383 y CVE-2025-0755. BSON-XS era la implementación oficial de Perl XS para la serialización BSON de MongoDB, pero esta distribución llegó al final de su ciclo de vida el 13 de agosto de 2020 y ya no recibe soporte."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-122"
+              },
+              {
+                "lang": "en",
+                "value": "CWE-190"
+              },
+              {
+                "lang": "en",
+                "value": "CWE-1104"
+              }
+            ],
+            "source": "9b29abf9-4ab0-4765-b253-1875cd9b441e"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://lists.debian.org/debian-lts-announce/2025/05/msg00012.html",
+            "source": "9b29abf9-4ab0-4765-b253-1875cd9b441e"
+          },
+          {
+            "url": "https://www.mongodb.com/community/forums/t/mongodb-perl-driver-end-of-life/7890",
+            "source": "9b29abf9-4ab0-4765-b253-1875cd9b441e"
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 2
+    },
+    {
+      "cve_id": "CVE-2025-39481",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-05-16",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-05-16",
+        "description": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in imithemes Eventer eventer allows Blind SQL Injection.This issue affects Eventer: from n/a through < 3.11.4.",
+        "title": "imithemes eventer SQL Injection",
+        "vendor": "imithemes",
+        "product": "eventer",
+        "attack_type": "SQL Injection",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-39481",
+        "sourceIdentifier": "audit@patchstack.com",
+        "published": "2025-05-16T16:15:40.290",
+        "lastModified": "2026-04-23T15:29:38.647",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in imithemes Eventer eventer allows Blind SQL Injection.This issue affects Eventer: from n/a through < 3.11.4."
+          },
+          {
+            "lang": "es",
+            "value": "La vulnerabilidad de neutralización incorrecta de elementos especiales utilizados en un comando SQL ('Inyección SQL') en imithemes Eventer permite la inyección SQL ciega. Este problema afecta a Eventer desde n/d hasta la versión 3.9.6."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:L",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "audit@patchstack.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 4.7
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-89"
+              }
+            ],
+            "source": "audit@patchstack.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:imithemes:eventer:*:*:*:*:*:wordpress:*:*",
+                    "matchCriteriaId": "9AD1FEFC-4519-42DC-B76E-5183BFD86C2B",
+                    "versionEndIncluding": "3.9.6"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://patchstack.com/database/Wordpress/Plugin/eventer/vulnerability/wordpress-eventer-wordpress-event-booking-manager-plugin-plugin-3-9-6-sql-injection-vulnerability?_s_id=cve",
+            "source": "audit@patchstack.com",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 3
+    },
+    {
+      "cve_id": "CVE-2025-32643",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-05-16",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-05-16",
+        "description": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in mojoomla WPGYM allows Blind SQL Injection. This issue affects WPGYM: from n/a through 65.0.",
+        "title": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in mojoomla WPGYM allows Blind SQL Inj...",
+        "attack_type": "SQL Injection",
+        "cvss_max": 9.3
+      },
+      "cve": {
+        "id": "CVE-2025-32643",
+        "sourceIdentifier": "audit@patchstack.com",
+        "published": "2025-05-16T16:15:40.057",
+        "lastModified": "2026-04-28T19:31:47.600",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in mojoomla WPGYM allows Blind SQL Injection. This issue affects WPGYM: from n/a through 65.0."
+          },
+          {
+            "lang": "es",
+            "value": "Vulnerabilidad de neutralización incorrecta de elementos especiales utilizados en un comando SQL ('Inyección SQL') en mojoomla WPGYM que permite la inyección SQL ciega. Este problema afecta a WPGYM desde n/d hasta la versión 65.0."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:L",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "audit@patchstack.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 4.7
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-89"
+              }
+            ],
+            "source": "audit@patchstack.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://patchstack.com/database/wordpress/plugin/gym-management/vulnerability/wordpress-wpgym-plugin-65-0-sql-injection-vulnerability?_s_id=cve",
+            "source": "audit@patchstack.com"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 4
+    }
+  ],
+  "source": "https://www.cvelogic.com/threat-intelligence/2025-05-16"
+}

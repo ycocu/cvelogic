@@ -1,0 +1,3774 @@
+{
+  "schema_version": "2.2",
+  "generated_at": "2026-06-02T07:34:34Z",
+  "day": "2026-03-05",
+  "window": {
+    "utc_start": "2026-03-05",
+    "utc_end": "2026-03-05",
+    "days": 1
+  },
+  "summary": {
+    "brief": "Apple Multiple Products: 3 CVEs added to CISA KEV today. · Upredsun Isharer File Sharing Wizard — exploitation likelihood rose sharply (EPSS 18% → 34% · rising (+16%)). · 10 new critical disclosures — review patch status on exposed services.",
+    "bullets": [
+      "Apple Multiple Products: 3 CVEs added to CISA KEV today.",
+      "Upredsun Isharer File Sharing Wizard — exploitation likelihood rose sharply (EPSS 18% → 34% · rising (+16%)).",
+      "10 new critical disclosures — review patch status on exposed services."
+    ],
+    "counts": {
+      "cves": 20,
+      "kev": 5,
+      "exploit": 0,
+      "epss": 5,
+      "cvss": 10,
+      "patch": 0
+    }
+  },
+  "cves": [
+    {
+      "cve_id": "CVE-2021-30952",
+      "signal_types": [
+        "KEV"
+      ],
+      "signals": {
+        "kev": {
+          "date_added": "2026-03-05"
+        },
+        "exploit": null,
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2021-08-24",
+        "description": "An integer overflow was addressed with improved input validation. This issue is fixed in tvOS 15.2, macOS Monterey 12.1, Safari 15.2, iOS 15.2 and iPadOS 15.2, watchOS 8.3. Processing maliciously crafted web content may lead to arbitrary code execution.",
+        "title": "Apple Multiple Products Integer Overflow or Wraparound Vulnerability",
+        "vendor": "apple",
+        "product": "safari",
+        "attack_type": "RCE",
+        "cvss_max": 8.8
+      },
+      "cve": {
+        "id": "CVE-2021-30952",
+        "sourceIdentifier": "product-security@apple.com",
+        "published": "2021-08-24T19:15:21.777",
+        "lastModified": "2026-03-06T13:44:17.940",
+        "vulnStatus": "Analyzed",
+        "cisaExploitAdd": "2026-03-05",
+        "cisaActionDue": "2026-03-26",
+        "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+        "cisaVulnerabilityName": "Apple Multiple Products Integer Overflow or Wraparound Vulnerability",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "An integer overflow was addressed with improved input validation. This issue is fixed in tvOS 15.2, macOS Monterey 12.1, Safari 15.2, iOS 15.2 and iPadOS 15.2, watchOS 8.3. Processing maliciously crafted web content may lead to arbitrary code execution."
+          },
+          {
+            "lang": "es",
+            "value": "Se abordó un desbordamiento de enteros con una comprobación de entrada mejorada.&#xa0;Este problema es corregido en tvOS versión 15.2, macOS Monterey versión 12.1, Safari versión 15.2, iOS versión 15.2 e iPadOS versión 15.2, watchOS versión 8.3.&#xa0;El procesamiento de contenido web creado con fines maliciosos puede conllevar a una ejecución de código arbitrario"
+          }
+        ],
+        "metrics": {
+          "cvssMetricV2": [
+            {
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+                "baseScore": 6.8,
+                "baseSeverity": "MEDIUM"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "baseSeverity": "MEDIUM",
+              "exploitabilityScore": 8.6,
+              "impactScore": 6.4
+            }
+          ],
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+                "baseScore": 7.8,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 1.8,
+              "impactScore": 5.9
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+                "baseScore": 8.8,
+                "baseSeverity": "HIGH"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-190"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          },
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-190"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:apple:safari:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "7B60AA98-68B6-4770-884B-36AE7826E729",
+                    "versionEndExcluding": "15.2"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:ipados:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "CCE4E546-A0DD-4E9E-A6B9-C19B04D77466",
+                    "versionEndExcluding": "15.2"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:iphone_os:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "7FB904C1-43D1-4583-8729-5D1B1746A54C",
+                    "versionEndExcluding": "15.2"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:macos:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "CA118623-E817-42AA-AB39-6239B1284192",
+                    "versionStartIncluding": "12.0",
+                    "versionEndExcluding": "12.1"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:tvos:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "16CAE2FB-FADC-4BF4-9115-D20D365051BF",
+                    "versionEndExcluding": "15.2"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:watchos:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "7A7245FB-6FBE-4C09-80F5-18504CA623B3",
+                    "versionEndExcluding": "8.3"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:fedoraproject:fedora:34:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "A930E247-0B43-43CB-98FF-6CE7B8189835"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:fedoraproject:fedora:35:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "80E516C0-98A4-4ADE-B69F-66A772E2BAAA"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:debian:debian_linux:10.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "07B237A9-69A3-4A9C-9DA0-4E06BD37AE73"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:debian:debian_linux:11.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "FA6FEEC2-9F11-4643-8827-749718254FED"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:webkitgtk:webkitgtk:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "0529EBF6-4F6C-47D5-AD9A-C91C0B4EBC2F",
+                    "versionEndExcluding": "2.34.4"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:wpewebkit:wpe_webkit:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "7FBA5321-1F37-45EF-8DB4-DAE5D1C874B9",
+                    "versionEndExcluding": "2.34.4"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "http://www.openwall.com/lists/oss-security/2022/01/21/2",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Mailing List",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/7EQVZ3CEMTINLBZ7PBC7WRXVEVCRHNSM/",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Broken Link"
+            ]
+          },
+          {
+            "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/HQKWD4BXRDD2YGR5AVU7H5J5PIQIEU6V/",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Broken Link"
+            ]
+          },
+          {
+            "url": "https://support.apple.com/en-us/HT212975",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Release Notes",
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://support.apple.com/en-us/HT212976",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Release Notes",
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://support.apple.com/en-us/HT212978",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Release Notes",
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://support.apple.com/en-us/HT212980",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Release Notes",
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://support.apple.com/en-us/HT212982",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Release Notes",
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://www.debian.org/security/2022/dsa-5060",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Mailing List",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.debian.org/security/2022/dsa-5061",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Mailing List",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://cloud.google.com/blog/topics/threat-intelligence/coruna-powerful-ios-exploit-kit",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2021-30952",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "US Government Resource"
+            ]
+          }
+        ]
+      },
+      "risk_score": 88,
+      "rank": 1
+    },
+    {
+      "cve_id": "CVE-2010-2330",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 0.17558,
+            "score_date": "2025-11-09"
+          },
+          "current": {
+            "score": 0.33709,
+            "score_date": "2026-03-05"
+          },
+          "delta": 0.16151
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2010-06-18",
+        "description": "Stack-based buffer overflow in iSharer File Sharing Wizard 1.5.0 allows remote attackers to cause a denial of service (crash) and possibly execute arbitrary code via a long Content-Length header.",
+        "title": "upredsun isharer_file_sharing_wizard Buffer Overflow",
+        "vendor": "upredsun",
+        "product": "isharer_file_sharing_wizard",
+        "attack_type": "Buffer Overflow",
+        "cvss_max": 9.3
+      },
+      "cve": {
+        "id": "CVE-2010-2330",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2010-06-18T20:30:01.267",
+        "lastModified": "2026-04-29T01:13:23.040",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Stack-based buffer overflow in iSharer File Sharing Wizard 1.5.0 allows remote attackers to cause a denial of service (crash) and possibly execute arbitrary code via a long Content-Length header."
+          },
+          {
+            "lang": "es",
+            "value": "Desbordamiento de búfer basado en pila en iSharer File Sharing Wizard v1.5.0, permite a atacantes remotos provocar una denegación de servicio (caída) y posiblemente ejecución de código de su elección a través de una cabecera Content-Length larga."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV2": [
+            {
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:M/Au:N/C:C/I:C/A:C",
+                "baseScore": 9.3,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "baseSeverity": "HIGH",
+              "exploitabilityScore": 8.6,
+              "impactScore": 10.0
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-119"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:upredsun:isharer_file_sharing_wizard:1.5.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "79A2CB7F-EF19-492D-A2E0-FE8034A48515"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "http://osvdb.org/65570",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://secunia.com/advisories/40197",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "http://www.exploit-db.com/exploits/13876",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://www.s3cur1ty.de/filesharingwizard-advisory-poc-eax",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit"
+            ]
+          },
+          {
+            "url": "http://www.securityfocus.com/bid/40866",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://www.vupen.com/english/advisories/2010/1487",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://exchange.xforce.ibmcloud.com/vulnerabilities/59434",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          }
+        ]
+      },
+      "risk_score": 85,
+      "rank": 2
+    },
+    {
+      "cve_id": "CVE-2026-0848",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-03-05",
+          "previous_max": null,
+          "current_max": 10.0
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-03-05",
+        "description": "NLTK versions <=3.9.2 are vulnerable to arbitrary code execution due to improper input validation in the StanfordSegmenter module. The module dynamically loads external Java .jar files without verification or sandboxing. An attacker can supply or replace the JAR file, enabling the execution of arbitrary Java bytecode at import time. This vulnerability can be exploited through methods such as model poisoning, MITM attacks, or dependency poisoning, leading to remote code execution. The issue arises from the direct execution of the JAR file via subprocess with unvalidated classpath input, allowing malicious classes to execute when loaded by the JVM.",
+        "title": "nltk nltk RCE",
+        "vendor": "nltk",
+        "product": "nltk",
+        "attack_type": "RCE",
+        "cvss_max": 10.0
+      },
+      "cve": {
+        "id": "CVE-2026-0848",
+        "sourceIdentifier": "security@huntr.dev",
+        "published": "2026-03-05T21:16:14.263",
+        "lastModified": "2026-04-21T14:56:46.883",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "NLTK versions <=3.9.2 are vulnerable to arbitrary code execution due to improper input validation in the StanfordSegmenter module. The module dynamically loads external Java .jar files without verification or sandboxing. An attacker can supply or replace the JAR file, enabling the execution of arbitrary Java bytecode at import time. This vulnerability can be exploited through methods such as model poisoning, MITM attacks, or dependency poisoning, leading to remote code execution. The issue arises from the direct execution of the JAR file via subprocess with unvalidated classpath input, allowing malicious classes to execute when loaded by the JVM."
+          },
+          {
+            "lang": "es",
+            "value": "Las versiones de NLTK &lt;=3.9.2 son vulnerables a ejecución de código arbitrario debido a una validación de entrada inadecuada en el módulo StanfordSegmenter. El módulo carga dinámicamente archivos .jar de Java externos sin verificación ni sandboxing. Un atacante puede suministrar o reemplazar el archivo JAR, permitiendo la ejecución de bytecode Java arbitrario en el momento de la importación. Esta vulnerabilidad puede ser explotada a través de métodos como el envenenamiento de modelos, ataques MitM o el envenenamiento de dependencias, lo que lleva a ejecución remota de código. El problema surge de la ejecución directa del archivo JAR a través de un subproceso con entrada de classpath no validada, permitiendo que clases maliciosas se ejecuten cuando son cargadas por la JVM."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV30": [
+            {
+              "cvssData": {
+                "version": "3.0",
+                "vectorString": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+                "baseScore": 10.0,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security@huntr.dev",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 6.0
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-20"
+              }
+            ],
+            "source": "security@huntr.dev"
+          },
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "NVD-CWE-noinfo"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nltk:nltk:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "D07FBCBF-3A88-4B1B-AF47-76DF3B7B13B6",
+                    "versionEndIncluding": "3.9.2"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://huntr.com/bounties/08b109bb-ac24-403f-9422-1c246ce60202",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Exploit",
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 3
+    },
+    {
+      "cve_id": "CVE-2007-0059",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 0.11866,
+            "score_date": "2025-08-24"
+          },
+          "current": {
+            "score": 0.25792,
+            "score_date": "2026-03-05"
+          },
+          "delta": 0.13926
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2007-01-05",
+        "description": "Cross-zone scripting vulnerability in Apple Quicktime 3 to 7.1.3 allows remote user-assisted attackers to execute arbitrary code and list filesystem contents via a QuickTime movie (.MOV) with an HREF Track (HREFTrack) that contains an automatic action tag with a local URI, which is executed in a local zone during preview, as exploited by a MySpace worm.",
+        "title": "apple quicktime",
+        "vendor": "apple",
+        "product": "quicktime",
+        "cvss_max": 6.8
+      },
+      "cve": {
+        "id": "CVE-2007-0059",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2007-01-05T00:28:00.000",
+        "lastModified": "2026-04-23T00:35:47.467",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Cross-zone scripting vulnerability in Apple Quicktime 3 to 7.1.3 allows remote user-assisted attackers to execute arbitrary code and list filesystem contents via a QuickTime movie (.MOV) with an HREF Track (HREFTrack) that contains an automatic action tag with a local URI, which is executed in a local zone during preview, as exploited by a MySpace worm."
+          },
+          {
+            "lang": "es",
+            "value": "Vulnerabilidad de secuencias de comandos en zonas cruzadas en Apple Quicktime 3 hasta 7.1.3 permite a atacantes remotos con la ayuda del usuario ejecutar código de su elección y listar contenidos del sistema de ficheros mediante un película QuickTime (.MOV) con una pista HREF (HREFTrack) que contiene una etiqueta de acción automática con una URI local, que se ejecuta en una zona local durante la previsualización, tal y como se explota por un gusano MySpace."
+          }
+        ],
+        "vendorComments": [
+          {
+            "organization": "Apple",
+            "comment": "This issue is addressed in QuickTime 7.1.5, which was released on March 5.  Information on the security fixes provided in QuickTime 7.1.5, and links to obtain the update are provided in:\nhttp://docs.info.apple.com/article.html?artnum=305149",
+            "lastModified": "2007-03-19T00:00:00"
+          }
+        ],
+        "metrics": {
+          "cvssMetricV2": [
+            {
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+                "baseScore": 6.8,
+                "baseSeverity": "MEDIUM"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "baseSeverity": "MEDIUM",
+              "exploitabilityScore": 8.6,
+              "impactScore": 6.4
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "NVD-CWE-Other"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:apple:quicktime:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "B57D423B-5763-45AA-899F-09A553E962BD",
+                    "versionEndIncluding": "7.1.3"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:apple:quicktime:3.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "D8F310A8-F760-4059-987D-42369F360DE4"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "http://docs.info.apple.com/article.html?artnum=305149",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://lists.apple.com/archives/Security-announce/2007/Mar/msg00000.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://osvdb.org/31164",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://projects.info-pull.com/moab/MOAB-03-01-2007.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit"
+            ]
+          },
+          {
+            "url": "http://www.gnucitizen.org/blog/backdooring-quicktime-movies/",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "http://www.kb.cert.org/vuls/id/304064",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "US Government Resource"
+            ]
+          }
+        ]
+      },
+      "risk_score": 81,
+      "rank": 4
+    },
+    {
+      "cve_id": "CVE-2008-0100",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 0.15084,
+            "score_date": "2025-10-27"
+          },
+          "current": {
+            "score": 0.29015,
+            "score_date": "2026-03-05"
+          },
+          "delta": 0.13931
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2008-01-08",
+        "description": "Stack-based buffer overflow in the Scene::errorf function in Scene.cpp in White_Dune 0.29 beta791 and earlier allows remote attackers to execute arbitrary code via a long string in a .WRL file.",
+        "title": "white_dune white_dune Buffer Overflow",
+        "vendor": "white_dune",
+        "product": "white_dune",
+        "attack_type": "Buffer Overflow",
+        "cvss_max": 7.5
+      },
+      "cve": {
+        "id": "CVE-2008-0100",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2008-01-08T02:46:00.000",
+        "lastModified": "2026-04-23T00:35:47.467",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Stack-based buffer overflow in the Scene::errorf function in Scene.cpp in White_Dune 0.29 beta791 and earlier allows remote attackers to execute arbitrary code via a long string in a .WRL file."
+          },
+          {
+            "lang": "es",
+            "value": "Desbordamiento de búfer basado en pila en la función Scene::errorf de Scene.cpp de White_Dune 0.29 beta791 y versiones anteriores permite a atacantes remotos ejecutar código de su elección mediante una cadena larga en un fichero .WRL."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV2": [
+            {
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+                "baseScore": 7.5,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "baseSeverity": "HIGH",
+              "exploitabilityScore": 10.0,
+              "impactScore": 6.4
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-119"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:white_dune:white_dune:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "E6B0B9DC-3F04-40D3-81A6-16A19AA2C030",
+                    "versionEndIncluding": "0.29beta791"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "http://aluigi.altervista.org/adv/whitedunboffs-adv.txt",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit"
+            ]
+          },
+          {
+            "url": "http://secunia.com/advisories/28287",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Patch",
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "http://securityreason.com/securityalert/3516",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://vrml.cip.ica.uni-stuttgart.de/dune/news.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://www.securityfocus.com/archive/1/485724/100/0/threaded",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://www.securityfocus.com/bid/27102",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://exchange.xforce.ibmcloud.com/vulnerabilities/39385",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          }
+        ]
+      },
+      "risk_score": 82,
+      "rank": 5
+    },
+    {
+      "cve_id": "CVE-2010-2311",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 0.07999,
+            "score_date": "2025-11-07"
+          },
+          "current": {
+            "score": 0.23155,
+            "score_date": "2026-03-05"
+          },
+          "delta": 0.15156
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2010-06-16",
+        "description": "Stack-based buffer overflow in Power Tab Editor 1.7 build 80 allows user-assisted remote attackers to execute arbitrary code via a .ptb file with a long font name.",
+        "title": "power-tab power_tab_editor Buffer Overflow",
+        "vendor": "power-tab",
+        "product": "power_tab_editor",
+        "attack_type": "Buffer Overflow",
+        "cvss_max": 9.3
+      },
+      "cve": {
+        "id": "CVE-2010-2311",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2010-06-16T20:30:02.840",
+        "lastModified": "2026-04-29T01:13:23.040",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Stack-based buffer overflow in Power Tab Editor 1.7 build 80 allows user-assisted remote attackers to execute arbitrary code via a .ptb file with a long font name."
+          },
+          {
+            "lang": "es",
+            "value": "Vulnerabilidad de desbordamiento de búfer basado en pila en Power Tab Editor v1.7 build 80, permite a atacantes remotos asistidos por el usuario ejecutar código de su elección a través de un archivo .ptb con un nombre de fuente largo."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV2": [
+            {
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:M/Au:N/C:C/I:C/A:C",
+                "baseScore": 9.3,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "baseSeverity": "HIGH",
+              "exploitabilityScore": 8.6,
+              "impactScore": 10.0
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-119"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:power-tab:power_tab_editor:1.7.0.80:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "D316622A-FB6F-4AFD-B135-9619C3DA97BD"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "http://osvdb.org/65482",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://secunia.com/advisories/40216",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "http://www.corelan.be:8800/index.php/forum/security-advisories/corelan-10-049-power-tab-editor-v1-7-build-80-buffer-overflow/",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit"
+            ]
+          },
+          {
+            "url": "http://www.exploit-db.com/exploits/13820",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit"
+            ]
+          },
+          {
+            "url": "https://exchange.xforce.ibmcloud.com/vulnerabilities/59377",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          }
+        ]
+      },
+      "risk_score": 85,
+      "rank": 6
+    },
+    {
+      "cve_id": "CVE-2010-2329",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 0.10324,
+            "score_date": "2025-11-09"
+          },
+          "current": {
+            "score": 0.23027,
+            "score_date": "2026-03-05"
+          },
+          "delta": 0.12703
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2010-06-18",
+        "description": "Buffer overflow in Rosoft Audio Converter 4.4.4 allows remote attackers to execute arbitrary code via a long playlist entry in a .m3u file.",
+        "title": "rosoftengineering rosoft_audio_converter Buffer Overflow",
+        "vendor": "rosoftengineering",
+        "product": "rosoft_audio_converter",
+        "attack_type": "Buffer Overflow",
+        "cvss_max": 9.3
+      },
+      "cve": {
+        "id": "CVE-2010-2329",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2010-06-18T20:30:01.233",
+        "lastModified": "2026-04-29T01:13:23.040",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Buffer overflow in Rosoft Audio Converter 4.4.4 allows remote attackers to execute arbitrary code via a long playlist entry in a .m3u file."
+          },
+          {
+            "lang": "es",
+            "value": "Desbordamiento de búfer en Rosoft Audio Converter v4.4.4, permite a atacantes dependientes de contexto remotos asistidos por un usuario local, ejecutar código de su elección mediante una entrada en la lista de reproducción larga, en un fichero m3u."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV2": [
+            {
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:M/Au:N/C:C/I:C/A:C",
+                "baseScore": 9.3,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "baseSeverity": "HIGH",
+              "exploitabilityScore": 8.6,
+              "impactScore": 10.0
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-119"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:rosoftengineering:rosoft_audio_converter:4.4.4:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "0454E889-A63A-46B4-9B0B-4662866104A4"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "http://osvdb.org/65542",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://packetstormsecurity.org/1006-exploits/rosoft444-overflow.txt",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit"
+            ]
+          },
+          {
+            "url": "http://secunia.com/advisories/40195",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "http://www.exploit-db.com/exploits/13895",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit"
+            ]
+          },
+          {
+            "url": "http://www.securityfocus.com/bid/40878",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit"
+            ]
+          },
+          {
+            "url": "https://exchange.xforce.ibmcloud.com/vulnerabilities/59483",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          }
+        ]
+      },
+      "risk_score": 85,
+      "rank": 7
+    },
+    {
+      "cve_id": "CVE-2017-7921",
+      "signal_types": [
+        "KEV"
+      ],
+      "signals": {
+        "kev": {
+          "date_added": "2026-03-05"
+        },
+        "exploit": null,
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2017-05-06",
+        "description": "An Improper Authentication issue was discovered in Hikvision DS-2CD2xx2F-I Series V5.2.0 build 140721 to V5.4.0 build 160530, DS-2CD2xx0F-I Series V5.2.0 build 140721 to V5.4.0 Build 160401, DS-2CD2xx2FWD Series V5.3.1 build 150410 to V5.4.4 Build 161125, DS-2CD4x2xFWD Series V5.2.0 build 140721 to V5.4.0 Build 160414, DS-2CD4xx5 Series V5.2.0 build 140721 to V5.4.0 Build 160421, DS-2DFx Series V5.2.0 build 140805 to V5.4.5 Build 160928, and DS-2CD63xx Series V5.0.9 build 140305 to V5.3.5 Build 160106 devices. The improper authentication vulnerability occurs when an application does not adequately or correctly authenticate users. This may allow a malicious user to escalate his or her privileges on the system and gain access to sensitive information.",
+        "title": "Hikvision Multiple Products Improper Authentication Vulnerability",
+        "vendor": "hikvision",
+        "product": "ds-2cd2032-i_firmware",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2017-7921",
+        "sourceIdentifier": "ics-cert@hq.dhs.gov",
+        "published": "2017-05-06T00:29:00.350",
+        "lastModified": "2026-04-22T16:06:58.603",
+        "vulnStatus": "Analyzed",
+        "cisaExploitAdd": "2026-03-05",
+        "cisaActionDue": "2026-03-26",
+        "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+        "cisaVulnerabilityName": "Hikvision Multiple Products Improper Authentication Vulnerability",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "An Improper Authentication issue was discovered in Hikvision DS-2CD2xx2F-I Series V5.2.0 build 140721 to V5.4.0 build 160530, DS-2CD2xx0F-I Series V5.2.0 build 140721 to V5.4.0 Build 160401, DS-2CD2xx2FWD Series V5.3.1 build 150410 to V5.4.4 Build 161125, DS-2CD4x2xFWD Series V5.2.0 build 140721 to V5.4.0 Build 160414, DS-2CD4xx5 Series V5.2.0 build 140721 to V5.4.0 Build 160421, DS-2DFx Series V5.2.0 build 140805 to V5.4.5 Build 160928, and DS-2CD63xx Series V5.0.9 build 140305 to V5.3.5 Build 160106 devices. The improper authentication vulnerability occurs when an application does not adequately or correctly authenticate users. This may allow a malicious user to escalate his or her privileges on the system and gain access to sensitive information."
+          },
+          {
+            "lang": "es",
+            "value": "Se detectó un problema de autenticación inapropiada en dispositivos DS-2CD2xx2F-I Series versiones V5.2.0 build 140721 hasta V5.4.0 build 160530, DS-2CD2xx0F-I Series versiones V5.2.0 build 140721 hasta V5.4.0 build 160530, DS-2CD2xx0F-I Series versiones V5.2.0 build 140721 hasta V5.4.0 build 160530, DS-2CD2xx0F-I Series versiones V5.2.0 build 140721 hasta V5.4.0 Build 160401, DS-2CD2xx2FWD Series versiones V5.3.1 build 150410 hasta V5.4.4 Build 161125, DS-2CD4x2xFWD Series versiones 5.2.0 build 140721 hasta V5.4.0 Build 160414, DS-2CD4xx5 Series versiones 5.2.0 build 140721 hasta V5.4.0 Build 160421, DS-2DFx Series versiones 5.2.0 build 140805 hasta V5.4.5 Build 160928 y Serie DS-2CD63xx versión 5.0.9 build 140305 hasta versión V5.3.5 Build 160106 de Hikvision. La vulnerabilidad de autenticación inapropiada ocurre cuando una aplicación no autentica adecuada o apropiadamente a los usuarios. Esto puede permitir a un usuario malicioso escalar sus privilegios en el sistema y conseguir acceso a información confidencial."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV2": [
+            {
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+                "baseScore": 7.5,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "baseSeverity": "HIGH",
+              "exploitabilityScore": 10.0,
+              "impactScore": 6.4
+            }
+          ],
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-287"
+              }
+            ],
+            "source": "ics-cert@hq.dhs.gov"
+          },
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-287"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:hikvision:ds-2cd2032-i_firmware:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "67F14B55-3F24-4C2F-9CBD-8495F1640E1C"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:hikvision:ds-2cd2112-i_firmware:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "E4EFB5D7-C047-4B2F-A9F8-DDF2943A9355"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:hikvision:ds-2cd2132-i_firmware:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "2AAC7FBC-CB10-4A93-94E7-28770C95C0D2"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:hikvision:ds-2cd2212-i5_firmware:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "1BCA1960-8910-474F-A030-8D16ABF983F8"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:hikvision:ds-2cd2232-i5_firmware:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "B2A0DE65-CFBA-4A93-BDFF-67EA07E18797"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:hikvision:ds-2cd2312-i_firmware:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "031D3A40-218C-4E40-BB08-55D59B299D55"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:hikvision:ds-2cd2332-i_firmware:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "5030CE6D-C9FD-4B51-8FDC-D114E4A495FD"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:hikvision:ds-2cd2412f-i\\(w\\)_firmware:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "506744C5-C9C0-43E9-84E3-D028EBA4812E"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:hikvision:ds-2cd2432f-i\\(w\\)_firmware:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "970AAE72-240C-4C6C-9B64-8724BB14179E"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:hikvision:ds-2cd2512f-i\\(s\\)_firmware:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "4B5F2930-FA07-4646-A566-50BF5772B56A"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:hikvision:ds-2cd2532f-i\\(s\\)_firmware:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "4A51D79A-F96A-4B94-A1E2-29C5269ACC75"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:hikvision:ds-2cd2612f-i\\(s\\)_firmware:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "5A05C12A-BD0E-426C-8C6B-BE8D79265C31"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:hikvision:ds-2cd2632f-i\\(s\\)_firmware:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "BF2DCFAB-6786-46C6-BB96-94DCAC21DEEB"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:hikvision:ds-2cd2712f-i\\(s\\)_firmware:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "47F59EBD-EED0-4AA6-A932-CE2A69A00F06"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:hikvision:ds-2cd2732f-i\\(s\\)_firmware:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "1A40C87A-D15E-43F8-B1A7-F8781FD7E648"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:hikvision:ds-2cd2t32-i3_firmware:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "1E3156D3-49BD-48E8-A3D6-9755DC76424A"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:hikvision:ds-2cd2t32-i5_firmware:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "367B2539-33D9-493C-881E-A87B308EE7C1"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:hikvision:ds-2cd2t32-i8_firmware:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "5DEB0AB7-5508-4934-9689-B366C82A2555"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:hikvision:ds-2cd4012f-\\(a\\)_firmware:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "971300D6-7689-4AEE-A5FA-41B4FC9DE661"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:hikvision:ds-2cd4012f-\\(p\\)_firmware:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "682B9E12-DAE6-4E9C-B298-A089B3B06AD0"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:hikvision:ds-2cd4012f-\\(w\\)_firmware:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "27CF62B8-0F56-4FF1-9F2C-EF08B9486046"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:hikvision:ds-2cd4012fwd-\\(a\\)_firmware:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "94AAA544-EA97-4428-BBDF-F4EB3E7C06C3"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:hikvision:ds-2cd4012fwd-\\(p\\)_firmware:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "B8D5C288-D578-4C2D-9C81-05DCDF3128AD"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:hikvision:ds-2cd4012fwd-\\(w\\)_firmware:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "94E472B6-C7BF-45C4-806E-DD792179B344"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:hikvision:ds-2cd4024f-\\(a\\)_firmware:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "07E7465C-A767-4C89-A503-D17A6D99594C"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:hikvision:ds-2cd4024f-\\(p\\)_firmware:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "7D695E95-B05A-433A-8267-ED5E508E2611"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:hikvision:ds-2cd4024f-\\(w\\)_firmware:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "A566A5DD-3835-45EE-8B0D-23976F1A6ADA"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:hikvision:ds-2cd4032fwd-\\(a\\)_firmware:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "026E59E0-4EA1-4BEC-8256-29500202A45A"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:hikvision:ds-2cd4032fwd-\\(p\\)_firmware:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "FDEAE9D6-F808-407D-A4ED-190D3EB76922"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:hikvision:ds-2cd4032fwd-\\(w\\)_firmware:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "C89FB18C-0FCB-45C6-BD46-B49E05F84A62"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:hikvision:ds-2cd4112f-i\\(z\\)_firmware:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "D1C06838-5D0D-4EA5-AF30-D416ED2CA72B"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:hikvision:ds-2cd4112fwd-i\\(z\\)_firmware:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "EF568306-8596-4C98-B802-A867135DE168"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:hikvision:ds-2cd4124f-i\\(z\\)_firmware:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "D28421C3-3635-492B-93B0-EB2C7D2FE319"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:hikvision:ds-2cd4132fwd-i\\(z\\)_firmware:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "2922DD79-113F-4DBA-B66B-F301CD852AB5"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:hikvision:ds-2cd4212f-i\\(h\\)_firmware:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "3D02A599-7269-4C8C-9B0B-EB031CEB3C58"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:hikvision:ds-2cd4212f-i\\(s\\)_firmware:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "4CD5B437-09AB-4185-BED1-418F24FA12BF"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:hikvision:ds-2cd4212f-i\\(z\\)_firmware:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "5F8389E4-286F-44E8-B734-A56C61381B3B"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:hikvision:ds-2cd4212fwd-i\\(h\\)_firmware:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "495D790B-D5EC-47FE-9831-D9EC5FF0E370"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:hikvision:ds-2cd4212fwd-i\\(s\\)_firmware:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "8EC36C0A-F90F-4FCB-973C-A1522BA050BC"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:hikvision:ds-2cd4212fwd-i\\(z\\)_firmware:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "1C0CACC7-C115-42C7-A6A5-87682EDD1F30"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:hikvision:ds-2cd4224f-i\\(h\\)_firmware:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "878155AC-BA46-470C-81F9-8735683B0099"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:hikvision:ds-2cd4224f-i\\(s\\)_firmware:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "A04CAE37-D7CA-47E0-83E6-1DA546A96A41"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:hikvision:ds-2cd4224f-i\\(z\\)_firmware:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "D59474C9-BD7E-4B6D-AECE-2E6AF0E1AAB7"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:hikvision:ds-2cd4232fwd-i\\(h\\)_firmware:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "E3ACA746-787F-4356-B3B0-6C994C862215"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:hikvision:ds-2cd4232fwd-i\\(s\\)_firmware:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "D28B3AFC-EEE1-4591-8AB4-3D702691CB83"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:hikvision:ds-2cd4232fwd-i\\(z\\)_firmware:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "A6AB3880-355D-4E59-A3C1-907A0F1FB190"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:hikvision:ds-2cd4312f-i\\(h\\)_firmware:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "FE31A803-0305-43DA-B14C-D32ECDA8C8FB"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:hikvision:ds-2cd4312f-i\\(s\\)_firmware:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "6588501E-A1EB-44CF-AB20-8B0041611F53"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:hikvision:ds-2cd4312f-i\\(z\\)_firmware:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "E30F5534-18CA-41B2-80D5-B4957652D7C6"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:hikvision:ds-2cd4324f-i\\(h\\)_firmware:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "AED0E4DE-4365-47A5-B622-097E9B772273"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:hikvision:ds-2cd4324f-i\\(s\\)_firmware:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "C8A1924B-EFE8-41B3-9BCC-D3EDA17DEBAA"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:hikvision:ds-2cd4324f-i\\(z\\)_firmware:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "C3A1866F-ED55-4F52-8495-E9DEAEDFB818"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:hikvision:ds-2cd4332fwd-i\\(h\\)_firmware:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "ED00F753-1F27-4242-BCA8-E9ECEB55ABA5"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:hikvision:ds-2cd4332fwd-i\\(s\\)_firmware:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "D8153FD2-CB04-4B1D-99B5-E0FA95143651"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:hikvision:ds-2cd4332fwd-i\\(z\\)_firmware:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "CD6451D9-F339-469F-BDB7-6B6ED2B23B65"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:hikvision:ds-2cd6412fwd_firmware:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "EB6A93A8-2433-4F8F-95AC-1C851373E8B8"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:hikvision:ds-2cd2032-i:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "440EC1B2-A353-4198-ADAA-0D1900C66334"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:hikvision:ds-2cd2112-i:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "70A3B528-F3FC-4509-B27C-6DFFB88E2812"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:hikvision:ds-2cd2132-i:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "2474C609-FCEF-4552-8FFB-8E1134ABBE05"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:hikvision:ds-2cd2212-i5:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "A90A26C5-46EF-471D-9E6B-08B567FA418D"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:hikvision:ds-2cd2232-i5:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "479518FE-D18C-4E0E-8FBF-3C16EA9C09EF"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:hikvision:ds-2cd2312-i:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "54096AF6-18EE-4E6D-AC4A-EAAC9DA0CFBB"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:hikvision:ds-2cd2332-i:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "F19E6984-C1F2-4852-AA9C-83B8D51E8377"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:hikvision:ds-2cd2412f-i\\(w\\):-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "88FEC246-85D6-42D0-98CD-894ACB716DA2"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:hikvision:ds-2cd2432f-i\\(w\\):-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "F8EFA20F-20D5-4397-AB57-3CF8D47C9DE1"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:hikvision:ds-2cd2512f-i\\(s\\):-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "1977B7E0-2770-45E8-9DB9-92DDD562F9E0"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:hikvision:ds-2cd2532f-i\\(s\\):-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "C1748AC1-D576-481E-A1C1-6CC1B66CC662"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:hikvision:ds-2cd2612f-i\\(s\\):-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "F8B63F4F-A734-419C-B463-037307C7D0B4"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:hikvision:ds-2cd2632f-i\\(s\\):-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "E9400E06-3563-49B9-A842-21849B4575B1"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:hikvision:ds-2cd2712f-i\\(s\\):-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "A14B25FD-DE45-4D2F-94FF-36440B590730"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:hikvision:ds-2cd2732f-i\\(s\\):-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "91752D15-CE11-4AB9-A277-3994C2392A9E"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:hikvision:ds-2cd2t32-i3:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "5D47AE1D-7857-404A-B5E5-E630C5C5FB19"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:hikvision:ds-2cd2t32-i5:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "B1DBD6D3-0CC7-45AB-80EC-04A81F1D867D"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:hikvision:ds-2cd2t32-i8:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "4FE3401A-62EC-4FE5-B572-86BAC673E6FB"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:hikvision:ds-2cd4012f-\\(a\\):-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "B3ED1E98-001D-4094-9EDE-8EC63F48AC03"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:hikvision:ds-2cd4012f-\\(p\\):-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "C721FD35-5D0A-4B13-92E3-F1865809EB82"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:hikvision:ds-2cd4012f-\\(w\\):-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "43FEE9A8-5F9F-4B77-9CFF-264C8120397D"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:hikvision:ds-2cd4012fwd-\\(a\\):-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "8163EE38-3951-4372-AF98-9B1ECFD75F6D"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:hikvision:ds-2cd4012fwd-\\(p\\):-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "E37A894E-8797-4233-B5E3-B69544081995"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:hikvision:ds-2cd4012fwd-\\(w\\):-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "EB077885-F3F0-4374-8CBD-518465281E72"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:hikvision:ds-2cd4024f-\\(a\\):-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "F44BC3CE-B84A-4677-93A2-FAF1243F7B4A"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:hikvision:ds-2cd4024f-\\(p\\):-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "3A50BB0F-EBE6-4059-B281-21FB6AE895CC"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:hikvision:ds-2cd4024f-\\(w\\):-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "8B2CADD4-D0F1-46B6-9872-0FBC30AB583B"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:hikvision:ds-2cd4032fwd-\\(a\\):-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "315803F3-D65C-43FA-BD9C-F542CF595BE9"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:hikvision:ds-2cd4032fwd-\\(p\\):-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "EAFAE869-B4A3-4649-B7C1-270F3DDA7541"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:hikvision:ds-2cd4032fwd-\\(w\\):-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "682A97CE-52A7-4828-8712-1C553A3643CF"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:hikvision:ds-2cd4112f-i\\(z\\):-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "DF50EB52-8C52-460C-B910-3B01C59B5A44"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:hikvision:ds-2cd4112fwd-i\\(z\\):-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "D8190727-5AD8-4698-98DC-8FD8CD6A3F5E"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:hikvision:ds-2cd4124f-i\\(z\\):-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "2B565D09-2E78-49A9-BD20-0C14E9AF992A"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:hikvision:ds-2cd4132fwd-i\\(z\\):-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "06C3BDBE-8E7D-4340-8079-19CDF52BF4A4"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:hikvision:ds-2cd4212f-i\\(h\\):-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "751E7398-4A35-400F-B796-3AECE33C33F0"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:hikvision:ds-2cd4212f-i\\(s\\):-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "F54C780D-A2A5-4B12-81B3-C2ACA8F04765"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:hikvision:ds-2cd4212f-i\\(z\\):-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "227D1047-CA29-4A1D-9DC3-9F2711A07665"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:hikvision:ds-2cd4212fwd-i\\(h\\):-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "D07ED71B-6878-4411-BB0F-75A55BE9CDA6"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:hikvision:ds-2cd4212fwd-i\\(s\\):-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "7A51D501-8703-4091-968D-397AC6042172"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:hikvision:ds-2cd4212fwd-i\\(z\\):-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "4E7DE24C-1AB2-4B8A-A123-98F9B16470F3"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:hikvision:ds-2cd4224f-i\\(h\\):-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "AAD6E358-832E-4D6E-A7FF-2E2402FB8042"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:hikvision:ds-2cd4224f-i\\(s\\):-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "F3FCB7FD-F5F7-430A-8EEC-796A09ABAF1C"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:hikvision:ds-2cd4224f-i\\(z\\):-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "376A793E-B715-40DB-A452-B8A7665C852C"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:hikvision:ds-2cd4232fwd-i\\(h\\):-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "DAA73C7D-A6CE-4899-BF22-EE8A01124E9D"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:hikvision:ds-2cd4232fwd-i\\(s\\):-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "D59BFCC5-2248-496D-BEF3-5BBF06298C56"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:hikvision:ds-2cd4232fwd-i\\(z\\):-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "932C1F8F-2E03-49D2-97B2-C9802D227458"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:hikvision:ds-2cd4312f-i\\(h\\):-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "9B6EA131-5852-4FBD-BDDB-777CA21C4E66"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:hikvision:ds-2cd4312f-i\\(s\\):-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "1DB8C4E7-5FEB-4234-975B-F40C068EAC1C"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:hikvision:ds-2cd4312f-i\\(z\\):-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "7F90C69B-E195-4A94-B596-46B7B0DB7A25"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:hikvision:ds-2cd4324f-i\\(h\\):-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "B7663F94-4C81-45DA-A560-9DE21A23462C"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:hikvision:ds-2cd4324f-i\\(s\\):-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "51F51E2E-B441-49CB-86E1-C009C5E5353E"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:hikvision:ds-2cd4324f-i\\(z\\):-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "E39824D3-EFD5-49A8-8B3C-3130F83513FB"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:hikvision:ds-2cd4332fwd-i\\(h\\):-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "F7453F60-107B-4244-A14E-F85F05E483EC"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:hikvision:ds-2cd4332fwd-i\\(s\\):-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "8A359284-1983-4311-B5BC-EC7FA51F842C"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:hikvision:ds-2cd4332fwd-i\\(z\\):-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "69936A56-CE23-4C9C-A4E7-AF27BD2ED2FA"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:hikvision:ds-2cd6412fwd:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "F631E8D1-3080-4E5F-9199-03224E01D6CD"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:hikvision:ds-2dfx_series_firmware:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "C1D40D18-52D0-4227-9510-8CB90AE922CD"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:hikvision:ds-2dfx_series:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "3DC3C1BE-7E94-46C1-9338-96E1F0129121"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:hikvision:ds-2cd63xx_series_firmware:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "0422A46B-C773-4483-9446-5253C44C4AAF"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:hikvision:ds-2cd63xx_series:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "41C00A09-4C10-47E8-BD18-592C454EB8DD"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "http://www.hikvision.com/us/about_10805.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Patch",
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "http://www.securityfocus.com/bid/98313",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory",
+              "VDB Entry",
+              "Broken Link"
+            ]
+          },
+          {
+            "url": "https://ghostbin.com/paste/q2vq2",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Broken Link"
+            ]
+          },
+          {
+            "url": "https://ics-cert.us-cert.gov/advisories/ICSA-17-124-01",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory",
+              "US Government Resource"
+            ]
+          },
+          {
+            "url": "https://www.hikvision.com/cn/support/CybersecurityCenter/SecurityNotices/20170314/",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.hikvision.com/en/support/cybersecurity/security-advisory/security-notification--privilege-escalating-vulnerability-in-cer/",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.hikvision.com/us-en/support/document-center/special-notices/privilege-escalating-vulnerability-in-certain-hikvision-ip-cameras/",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2017-7921",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "US Government Resource"
+            ]
+          }
+        ]
+      },
+      "risk_score": 88,
+      "rank": 8
+    },
+    {
+      "cve_id": "CVE-2021-22681",
+      "signal_types": [
+        "KEV"
+      ],
+      "signals": {
+        "kev": {
+          "date_added": "2026-03-05"
+        },
+        "exploit": null,
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2021-03-03",
+        "description": "Rockwell Automation Studio 5000 Logix Designer Versions 21 and later, and RSLogix 5000 Versions 16 through 20 use a key to verify Logix controllers are communicating with Rockwell Automation CompactLogix 1768, 1769, 5370, 5380, 5480: ControlLogix 5550, 5560, 5570, 5580; DriveLogix 5560, 5730, 1794-L34; Compact GuardLogix 5370, 5380; GuardLogix 5570, 5580; SoftLogix 5800. Rockwell Automation Studio 5000 Logix Designer Versions 21 and later and RSLogix 5000: Versions 16 through 20 are vulnerable because an unauthenticated attacker could bypass this verification mechanism and authenticate with Rockwell Automation CompactLogix 1768, 1769, 5370, 5380, 5480: ControlLogix 5550, 5560, 5570, 5580; DriveLogix 5560, 5730, 1794-L34; Compact GuardLogix 5370, 5380; GuardLogix 5570, 5580; SoftLogix 5800.",
+        "title": "Rockwell Multiple Products Insufficient Protected Credentials Vulnerability",
+        "vendor": "rockwellautomation",
+        "product": "factorytalk_services_platform",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2021-22681",
+        "sourceIdentifier": "ics-cert@hq.dhs.gov",
+        "published": "2021-03-03T18:15:14.643",
+        "lastModified": "2026-03-06T13:44:06.370",
+        "vulnStatus": "Analyzed",
+        "cisaExploitAdd": "2026-03-05",
+        "cisaActionDue": "2026-03-26",
+        "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+        "cisaVulnerabilityName": "Rockwell Multiple Products Insufficient Protected Credentials Vulnerability",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Rockwell Automation Studio 5000 Logix Designer Versions 21 and later, and RSLogix 5000 Versions 16 through 20 use a key to verify Logix controllers are communicating with Rockwell Automation CompactLogix 1768, 1769, 5370, 5380, 5480: ControlLogix 5550, 5560, 5570, 5580; DriveLogix 5560, 5730, 1794-L34; Compact GuardLogix 5370, 5380; GuardLogix 5570, 5580; SoftLogix 5800. Rockwell Automation Studio 5000 Logix Designer Versions 21 and later and RSLogix 5000: Versions 16 through 20 are vulnerable because an unauthenticated attacker could bypass this verification mechanism and authenticate with Rockwell Automation CompactLogix 1768, 1769, 5370, 5380, 5480: ControlLogix 5550, 5560, 5570, 5580; DriveLogix 5560, 5730, 1794-L34; Compact GuardLogix 5370, 5380; GuardLogix 5570, 5580; SoftLogix 5800."
+          },
+          {
+            "lang": "es",
+            "value": "Rockwell Automation Studio 5000 Logix Designer versiones 21 y posteriores, y RSLogix 5000 versiones 16 hasta 20, usan una clave para verificar que los controladores Logix se estén comunicando con Rockwell Automation CompactLogix 1768, 1769, 5370, 5380, 5480: ControlLogix 5550, 5560, 5570, 5580;&#xa0;DriveLogix 5560, 5730, 1794-L34;&#xa0;Compact GuardLogix 5370, 5380;&#xa0;GuardLogix 5570, 5580;&#xa0;SoftLogix 5800. Rockwell Automation Studio 5000 Logix Designer versiones 21 y posteriores y RSLogix 5000: Versiones 16 hasta 20, son vulnerables porque un atacante no autenticado podría pasar por alto este mecanismo de comprobación y autenticarse con Rockwell Automation CompactLogix 1768, 1769, 5370, 5380, 5480: ControlLogix 5550 , 5560, 5570, 5580;&#xa0;DriveLogix 5560, 5730, 1794-L34;&#xa0;Compact GuardLogix 5370, 5380;&#xa0;GuardLogix 5570, 5580;&#xa0;SoftLogix 5800"
+          }
+        ],
+        "metrics": {
+          "cvssMetricV2": [
+            {
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+                "baseScore": 7.5,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "baseSeverity": "HIGH",
+              "exploitabilityScore": 10.0,
+              "impactScore": 6.4
+            }
+          ],
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-522"
+              }
+            ],
+            "source": "ics-cert@hq.dhs.gov"
+          },
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-522"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:rockwellautomation:factorytalk_services_platform:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "6755FCF6-4A0C-478A-AEFF-54E35C45149D",
+                    "versionStartIncluding": "2.10"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:rockwellautomation:rslogix_5000:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "04C30129-3F03-4486-B181-EBDE29751372",
+                    "versionStartIncluding": "16",
+                    "versionEndIncluding": "20"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:rockwellautomation:studio_5000_logix_designer:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "9C840463-A11F-43A0-AA45-1AC810713AB6",
+                    "versionStartIncluding": "21.0"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:rockwellautomation:compact_guardlogix_5370:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "6F951670-AF4D-4429-8BC1-79BDEF83B2C3"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:rockwellautomation:compact_guardlogix_5380:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "62414E65-73C7-4172-B7BF-F40A66AFBB90"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:rockwellautomation:compactlogix_1768:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "2E5F100A-C8A3-49F2-B1D2-411432472B6B"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:rockwellautomation:compactlogix_1769:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "F8A690BC-4D7C-4B83-A9F6-F860445028A2"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:rockwellautomation:compactlogix_5370:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "E12ADAE3-97B1-48BC-BE69-ED75667C1886"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:rockwellautomation:compactlogix_5380:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "EDD040ED-B44C-47D0-B4D4-729C378C4F68"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:rockwellautomation:compactlogix_5480:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "80F4F5BE-07DF-402A-BF98-34FBA6A11968"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:rockwellautomation:controllogix_5550:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "13EE2216-F25F-44AB-A167-4EEA153C8F8D"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:rockwellautomation:controllogix_5560:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "EA25FF8D-51C5-4928-9B90-E4BD1476F50B"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:rockwellautomation:controllogix_5570:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "482E2CD6-D484-486C-92F4-18432D107E30"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:rockwellautomation:controllogix_5580:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "51BB883B-B863-4D57-B1C0-FC7B3EBD1EA0"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:rockwellautomation:drivelogix_1794-l34:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "4A75A0FD-C337-4264-B1E4-96701851D6FA"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:rockwellautomation:drivelogix_5560:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "DFDAAA77-6964-44FC-9FFB-ECDF71665965"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:rockwellautomation:drivelogix_5730:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "03E185C3-17CA-4E3F-863B-9F906C5C59EA"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:rockwellautomation:guardlogix_5570:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "321AE938-192A-4342-8608-ADC81F0B6582"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:rockwellautomation:guardlogix_5580:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "006B7683-9FDF-4748-BA28-2EA22613E092"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:rockwellautomation:softlogix_5800:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "BDAB7B6D-CCAC-460B-8A88-3397A2397078"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://us-cert.cisa.gov/ics/advisories/icsa-21-056-03",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory",
+              "US Government Resource"
+            ]
+          },
+          {
+            "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2021-22681",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "US Government Resource"
+            ]
+          }
+        ]
+      },
+      "risk_score": 88,
+      "rank": 9
+    },
+    {
+      "cve_id": "CVE-2023-41974",
+      "signal_types": [
+        "KEV"
+      ],
+      "signals": {
+        "kev": {
+          "date_added": "2026-03-05"
+        },
+        "exploit": null,
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2024-01-10",
+        "description": "A use-after-free issue was addressed with improved memory management. This issue is fixed in iOS 17 and iPadOS 17, iOS 15.8.7 and iPadOS 15.8.7. An app may be able to execute arbitrary code with kernel privileges.",
+        "title": "Apple iOS and iPadOS Use-After-Free Vulnerability",
+        "vendor": "apple",
+        "product": "ipados",
+        "attack_type": "Use-After-Free",
+        "cvss_max": 7.8
+      },
+      "cve": {
+        "id": "CVE-2023-41974",
+        "sourceIdentifier": "product-security@apple.com",
+        "published": "2024-01-10T22:15:49.240",
+        "lastModified": "2026-03-12T13:25:14.333",
+        "vulnStatus": "Analyzed",
+        "cisaExploitAdd": "2026-03-05",
+        "cisaActionDue": "2026-03-26",
+        "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+        "cisaVulnerabilityName": "Apple iOS and iPadOS Use-After-Free Vulnerability",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A use-after-free issue was addressed with improved memory management. This issue is fixed in iOS 17 and iPadOS 17, iOS 15.8.7 and iPadOS 15.8.7. An app may be able to execute arbitrary code with kernel privileges."
+          },
+          {
+            "lang": "es",
+            "value": "Se solucionó un problema de use after free con una gestión de memoria mejorada. Este problema se solucionó en iOS 17 y iPadOS 17. Es posible que una aplicación pueda ejecutar código arbitrario con privilegios del kernel."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+                "baseScore": 7.8,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 1.8,
+              "impactScore": 5.9
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+                "baseScore": 7.8,
+                "baseSeverity": "HIGH"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 1.8,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-416"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          },
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-416"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:ipados:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "1E574928-4E49-45B0-AE6E-DF4D38897F67",
+                    "versionEndExcluding": "15.8.7"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:ipados:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "96A83F37-8992-449C-BD92-5BF28788CB6E",
+                    "versionStartIncluding": "16.0",
+                    "versionEndExcluding": "17.0"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:iphone_os:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "D1E9DC1A-618A-4CAF-96C7-EC5BA2C1F617",
+                    "versionEndExcluding": "15.8.7"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:iphone_os:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "95DD2B66-EF25-4E37-94CE-8324CF4A40AB",
+                    "versionStartIncluding": "16.0",
+                    "versionEndExcluding": "17.0"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://support.apple.com/en-us/120949",
+            "source": "product-security@apple.com",
+            "tags": [
+              "Release Notes",
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://support.apple.com/en-us/126632",
+            "source": "product-security@apple.com",
+            "tags": [
+              "Release Notes",
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://support.apple.com/en-us/HT213938",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Release Notes",
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://support.apple.com/kb/HT213938",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Release Notes",
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://cloud.google.com/blog/topics/threat-intelligence/coruna-powerful-ios-exploit-kit",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2023-41974",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "US Government Resource"
+            ]
+          }
+        ]
+      },
+      "risk_score": 88,
+      "rank": 10
+    },
+    {
+      "cve_id": "CVE-2023-43000",
+      "signal_types": [
+        "KEV"
+      ],
+      "signals": {
+        "kev": {
+          "date_added": "2026-03-05"
+        },
+        "exploit": null,
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-11-05",
+        "description": "A use-after-free issue was addressed with improved memory management. This issue is fixed in macOS Ventura 13.5, iOS 16.6 and iPadOS 16.6, Safari 16.6, iOS 15.8.7 and iPadOS 15.8.7. Processing maliciously crafted web content may lead to memory corruption.",
+        "title": "Apple Multiple products Use-After-Free Vulnerability",
+        "vendor": "apple",
+        "product": "safari",
+        "attack_type": "Memory Corruption",
+        "cvss_max": 8.8
+      },
+      "cve": {
+        "id": "CVE-2023-43000",
+        "sourceIdentifier": "product-security@apple.com",
+        "published": "2025-11-05T19:15:47.937",
+        "lastModified": "2026-03-12T13:25:11.910",
+        "vulnStatus": "Analyzed",
+        "cisaExploitAdd": "2026-03-05",
+        "cisaActionDue": "2026-03-26",
+        "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+        "cisaVulnerabilityName": "Apple Multiple products Use-After-Free Vulnerability",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A use-after-free issue was addressed with improved memory management. This issue is fixed in macOS Ventura 13.5, iOS 16.6 and iPadOS 16.6, Safari 16.6, iOS 15.8.7 and iPadOS 15.8.7. Processing maliciously crafted web content may lead to memory corruption."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+                "baseScore": 8.8,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 5.9
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+                "baseScore": 8.8,
+                "baseSeverity": "HIGH"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-416"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          },
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-416"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:apple:safari:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "DB91291B-DB98-4E2A-BDA6-F9B5C48CDC6F",
+                    "versionEndExcluding": "16.6"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:ipados:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "1E574928-4E49-45B0-AE6E-DF4D38897F67",
+                    "versionEndExcluding": "15.8.7"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:ipados:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "33013784-1828-4402-81CF-2794D94A7C48",
+                    "versionStartIncluding": "16.0",
+                    "versionEndExcluding": "16.6"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:iphone_os:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "D1E9DC1A-618A-4CAF-96C7-EC5BA2C1F617",
+                    "versionEndExcluding": "15.8.7"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:iphone_os:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "4C67BFEB-764A-4C07-A02A-117C6AFAAC6A",
+                    "versionStartIncluding": "16.0",
+                    "versionEndExcluding": "16.6"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:macos:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "7FB2CB0B-A635-4057-98B8-AF71F9CB0171",
+                    "versionEndExcluding": "13.5"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://support.apple.com/en-us/120324",
+            "source": "product-security@apple.com",
+            "tags": [
+              "Release Notes",
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://support.apple.com/en-us/120331",
+            "source": "product-security@apple.com",
+            "tags": [
+              "Release Notes",
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://support.apple.com/en-us/120338",
+            "source": "product-security@apple.com",
+            "tags": [
+              "Release Notes",
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://support.apple.com/en-us/126632",
+            "source": "product-security@apple.com",
+            "tags": [
+              "Release Notes",
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://cloud.google.com/blog/topics/threat-intelligence/coruna-powerful-ios-exploit-kit",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2023-43000",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "US Government Resource"
+            ]
+          }
+        ]
+      },
+      "risk_score": 88,
+      "rank": 11
+    },
+    {
+      "cve_id": "CVE-2026-21536",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-03-05",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-03-05",
+        "description": "Microsoft Devices Pricing Program Remote Code Execution Vulnerability",
+        "title": "microsoft devices_pricing_program RCE",
+        "vendor": "microsoft",
+        "product": "devices_pricing_program",
+        "attack_type": "RCE",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2026-21536",
+        "sourceIdentifier": "secure@microsoft.com",
+        "published": "2026-03-05T23:16:18.447",
+        "lastModified": "2026-03-16T15:40:44.357",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Microsoft Devices Pricing Program Remote Code Execution Vulnerability"
+          },
+          {
+            "lang": "es",
+            "value": "Vulnerabilidad de ejecución remota de código del Programa de Precios de Dispositivos de Microsoft"
+          }
+        ],
+        "cveTags": [
+          {
+            "sourceIdentifier": "secure@microsoft.com",
+            "tags": [
+              "exclusively-hosted-service"
+            ]
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "secure@microsoft.com",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-434"
+              }
+            ],
+            "source": "secure@microsoft.com"
+          },
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "NVD-CWE-noinfo"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:microsoft:devices_pricing_program:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "84F2AB08-B106-4F38-9F40-78E968C304E0"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-21536",
+            "source": "secure@microsoft.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 12
+    },
+    {
+      "cve_id": "CVE-2026-21622",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-03-05",
+          "previous_max": null,
+          "current_max": 9.5
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-03-05",
+        "description": "Insufficient Session Expiration vulnerability in hexpm hexpm/hexpm ('Elixir.Hexpm.Accounts.PasswordReset' module) allows Account Takeover.\n\nPassword reset tokens generated via the \"Reset your password\" flow do not expire. When a user requests a password reset, Hex sends an email containing a reset link with a token. This token remains valid indefinitely until used. There is no time-based expiration enforced.\n\nIf a user's historical emails are exposed through a data breach (e.g., a leaked mailbox archive), any unused password reset email contained in that dataset could be used by an attacker to reset the victim's password. The attacker does not need current access to the victim's email account, only access to a previously leaked copy of the reset email.\n\nThis vulnerability is associated with program files lib/hexpm/accounts/password_reset.ex and program routines 'Elixir.Hexpm.Accounts.PasswordReset':can_reset?/3.\n\nThis issue affects hexpm: from 617e44c71f1dd9043870205f371d375c5c4d886d before bb0e42091995945deef10556f58d046a52eb7884.",
+        "title": "hex hexpm",
+        "vendor": "hex",
+        "product": "hexpm",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2026-21622",
+        "sourceIdentifier": "6b3ad84c-e1a6-4bf7-a703-f496b71e49db",
+        "published": "2026-03-05T22:16:12.963",
+        "lastModified": "2026-04-06T17:17:07.780",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Insufficient Session Expiration vulnerability in hexpm hexpm/hexpm ('Elixir.Hexpm.Accounts.PasswordReset' module) allows Account Takeover.\n\nPassword reset tokens generated via the \"Reset your password\" flow do not expire. When a user requests a password reset, Hex sends an email containing a reset link with a token. This token remains valid indefinitely until used. There is no time-based expiration enforced.\n\nIf a user's historical emails are exposed through a data breach (e.g., a leaked mailbox archive), any unused password reset email contained in that dataset could be used by an attacker to reset the victim's password. The attacker does not need current access to the victim's email account, only access to a previously leaked copy of the reset email.\n\nThis vulnerability is associated with program files lib/hexpm/accounts/password_reset.ex and program routines 'Elixir.Hexpm.Accounts.PasswordReset':can_reset?/3.\n\nThis issue affects hexpm: from 617e44c71f1dd9043870205f371d375c5c4d886d before bb0e42091995945deef10556f58d046a52eb7884."
+          },
+          {
+            "lang": "es",
+            "value": "Vulnerabilidad de expiración de sesión insuficiente en hexpm hexpm/hexpm (módulo 'Elixir.Hexpm.Accounts.PasswordReset') permite la toma de control de cuentas.\n\nLos tokens de restablecimiento de contraseña generados a través del flujo 'Restablecer su contraseña' no expiran. Cuando un usuario solicita un restablecimiento de contraseña, Hex envía un correo electrónico que contiene un enlace de restablecimiento con un token. Este token permanece válido indefinidamente hasta que se usa. No se aplica ninguna expiración basada en el tiempo.\n\nSi los correos electrónicos históricos de un usuario se exponen a través de una violación de datos (por ejemplo, un archivo de buzón de correo filtrado), cualquier correo electrónico de restablecimiento de contraseña no utilizado contenido en ese conjunto de datos podría ser utilizado por un atacante para restablecer la contraseña de la víctima. El atacante no necesita acceso actual a la cuenta de correo electrónico de la víctima, solo acceso a una copia previamente filtrada del correo electrónico de restablecimiento.\n\nEsta vulnerabilidad está asociada con los archivos de programa lib/hexpm/accounts/password_reset.ex y las rutinas de programa 'Elixir.Hexpm.Accounts.PasswordReset':can_reset?/3.\n\nEste problema afecta a hexpm: desde 617e44c71f1dd9043870205f371d375c5c4d886d antes de bb0e42091995945deef10556f58d046a52eb7884."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:L/SC:H/SI:H/SA:L/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.5,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "6b3ad84c-e1a6-4bf7-a703-f496b71e49db",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-613"
+              }
+            ],
+            "source": "6b3ad84c-e1a6-4bf7-a703-f496b71e49db"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:hex:hexpm:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "E5DC5702-17C0-4603-9900-660221EBDD23",
+                    "versionStartIncluding": "2025-10-01",
+                    "versionEndExcluding": "2026-03-05"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://cna.erlef.org/cves/CVE-2026-21622.html",
+            "source": "6b3ad84c-e1a6-4bf7-a703-f496b71e49db"
+          },
+          {
+            "url": "https://github.com/hexpm/hexpm/commit/bb0e42091995945deef10556f58d046a52eb7884",
+            "source": "6b3ad84c-e1a6-4bf7-a703-f496b71e49db",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://github.com/hexpm/hexpm/security/advisories/GHSA-6r94-pvwf-mxqm",
+            "source": "6b3ad84c-e1a6-4bf7-a703-f496b71e49db",
+            "tags": [
+              "Patch",
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://osv.dev/vulnerability/EEF-CVE-2026-21622",
+            "source": "6b3ad84c-e1a6-4bf7-a703-f496b71e49db"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 13
+    },
+    {
+      "cve_id": "CVE-2026-28391",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-03-05",
+          "previous_max": null,
+          "current_max": 9.2
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-03-05",
+        "description": "OpenClaw versions prior to 2026.2.2 fail to properly validate Windows cmd.exe metacharacters in allowlist-gated exec requests (non-default configuration), allowing attackers to bypass command approval restrictions. Remote attackers can craft command strings with shell metacharacters like & or %...% to execute unapproved commands beyond the allowlisted operations.",
+        "title": "openclaw openclaw",
+        "vendor": "openclaw",
+        "product": "openclaw",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2026-28391",
+        "sourceIdentifier": "disclosure@vulncheck.com",
+        "published": "2026-03-05T22:16:15.360",
+        "lastModified": "2026-03-10T18:18:45.970",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "OpenClaw versions prior to 2026.2.2 fail to properly validate Windows cmd.exe metacharacters in allowlist-gated exec requests (non-default configuration), allowing attackers to bypass command approval restrictions. Remote attackers can craft command strings with shell metacharacters like & or %...% to execute unapproved commands beyond the allowlisted operations."
+          },
+          {
+            "lang": "es",
+            "value": "Las versiones de OpenClaw anteriores a 2026.2.2 no validan correctamente los metacaracteres de cmd.exe de Windows en solicitudes de ejecución controladas por una lista de permitidos, lo que permite a los atacantes eludir las restricciones de aprobación de comandos. Los atacantes remotos pueden diseñar cadenas de comandos con metacaracteres de shell como &amp; o %...% para ejecutar comandos no aprobados más allá de las operaciones permitidas."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.2,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-78"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          },
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-78"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:openclaw:openclaw:*:*:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "CC7879A3-C51B-446A-AA4B-F1BAF8C2E88B",
+                    "versionEndExcluding": "2026.2.2"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/openclaw/openclaw/commit/a7f4a53ce80c98ba1452eb90802d447fca9bf3d6",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-qj77-c3c8-9c3q",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://www.vulncheck.com/advisories/openclaw-command-injection-via-cmdexe-parsing-bypass-in-allowlist-enforcement",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Broken Link",
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 14
+    },
+    {
+      "cve_id": "CVE-2026-28446",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-03-05",
+          "previous_max": null,
+          "current_max": 9.2
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-03-05",
+        "description": "OpenClaw versions prior to 2026.2.1 with the voice-call extension installed and enabled contain an authentication bypass vulnerability in inbound allowlist policy validation that accepts empty caller IDs and uses suffix-based matching instead of strict equality. Remote attackers can bypass inbound access controls by placing calls with missing caller IDs or numbers ending with allowlisted digits to reach the voice-call agent and execute tools.",
+        "title": "openclaw openclaw Auth Bypass",
+        "vendor": "openclaw",
+        "product": "openclaw",
+        "attack_type": "Auth Bypass",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2026-28446",
+        "sourceIdentifier": "disclosure@vulncheck.com",
+        "published": "2026-03-05T22:16:16.390",
+        "lastModified": "2026-03-11T14:16:26.753",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "OpenClaw versions prior to 2026.2.1 with the voice-call extension installed and enabled contain an authentication bypass vulnerability in inbound allowlist policy validation that accepts empty caller IDs and uses suffix-based matching instead of strict equality. Remote attackers can bypass inbound access controls by placing calls with missing caller IDs or numbers ending with allowlisted digits to reach the voice-call agent and execute tools."
+          },
+          {
+            "lang": "es",
+            "value": "Las versiones de OpenClaw anteriores a la 2026.2.1 con la extensión de llamada de voz instalada y habilitada contienen una vulnerabilidad de omisión de autenticación en la validación de la política de lista de permitidos de entrada que acepta identificadores de llamadas vacíos y utiliza la coincidencia basada en sufijos en lugar de la igualdad estricta. Los atacantes remotos pueden omitir los controles de acceso de entrada realizando llamadas con identificadores de llamadas faltantes o números que terminan con dígitos en la lista de permitidos para alcanzar al agente de llamada de voz y ejecutar herramientas."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:L",
+                "baseScore": 9.4,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.5
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.2,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "NVD-CWE-noinfo"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          },
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-303"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:openclaw:openclaw:*:*:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "CC7879A3-C51B-446A-AA4B-F1BAF8C2E88B",
+                    "versionEndExcluding": "2026.2.2"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/openclaw/openclaw/commit/f8dfd034f5d9235c5485f492a9e4ccc114e97fdb",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-4rj2-gpmh-qq5x",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Exploit",
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://www.vulncheck.com/advisories/openclaw-inbound-allowlist-policy-bypass-in-voice-call-extension-via-empty-caller-id",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 15
+    },
+    {
+      "cve_id": "CVE-2026-28466",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-03-05",
+          "previous_max": null,
+          "current_max": 9.4
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-03-05",
+        "description": "OpenClaw versions prior to 2026.2.14 contain a vulnerability in the gateway in which it fails to sanitize internal approval fields in node.invoke parameters, allowing authenticated clients to bypass exec approval gating for system.run commands. Attackers with valid gateway credentials can inject approval control fields to execute arbitrary commands on connected node hosts, potentially compromising developer workstations and CI runners.",
+        "title": "openclaw openclaw",
+        "vendor": "openclaw",
+        "product": "openclaw",
+        "cvss_max": 9.9
+      },
+      "cve": {
+        "id": "CVE-2026-28466",
+        "sourceIdentifier": "disclosure@vulncheck.com",
+        "published": "2026-03-05T22:16:19.790",
+        "lastModified": "2026-03-09T15:30:16.490",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "OpenClaw versions prior to 2026.2.14 contain a vulnerability in the gateway in which it fails to sanitize internal approval fields in node.invoke parameters, allowing authenticated clients to bypass exec approval gating for system.run commands. Attackers with valid gateway credentials can inject approval control fields to execute arbitrary commands on connected node hosts, potentially compromising developer workstations and CI runners."
+          },
+          {
+            "lang": "es",
+            "value": "OpenClaw versiones anteriores a 2026.2.14 contienen una vulnerabilidad en el gateway en la que no logra sanear campos de aprobación internos en los parámetros de node.invoke, permitiendo a clientes autenticados eludir el control de aprobación de ejecución para comandos system.run. Atacantes con credenciales de gateway válidas pueden inyectar campos de control de aprobación para ejecutar comandos arbitrarios en hosts de nodo conectados, comprometiendo potencialmente estaciones de trabajo de desarrolladores y CI runners."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+                "baseScore": 9.9,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Primary",
+              "exploitabilityScore": 3.1,
+              "impactScore": 6.0
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.4,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-863"
+              }
+            ],
+            "source": "disclosure@vulncheck.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:openclaw:openclaw:*:*:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "0F3079A3-9FBD-4E87-821D-5CAF0622C555",
+                    "versionEndExcluding": "2026.2.14"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/openclaw/openclaw/commit/0af76f5f0e93540efbdf054895216c398692afcd",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://github.com/openclaw/openclaw/commit/318379cdb8d045da0009b0051bd0e712e5c65e2d",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Broken Link"
+            ]
+          },
+          {
+            "url": "https://github.com/openclaw/openclaw/commit/a7af646fdab124a7536998db6bd6ad567d2b06b0",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Broken Link"
+            ]
+          },
+          {
+            "url": "https://github.com/openclaw/openclaw/commit/c1594627421f95b6bc4ad7c606657dc75b5ad0ce",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Broken Link"
+            ]
+          },
+          {
+            "url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-gv46-4xfq-jv58",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Mitigation",
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://www.vulncheck.com/advisories/openclaw-remote-code-execution-via-node-invoke-approval-bypass",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 16
+    },
+    {
+      "cve_id": "CVE-2026-28470",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-03-05",
+          "previous_max": null,
+          "current_max": 9.2
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-03-05",
+        "description": "OpenClaw versions prior to 2026.2.2 contain an exec approvals (must be enabled) allowlist bypass vulnerability that allows attackers to execute arbitrary commands by injecting command substitution syntax. Attackers can bypass the allowlist protection by embedding unescaped $() or backticks inside double-quoted strings to execute unauthorized commands.",
+        "title": "openclaw openclaw",
+        "vendor": "openclaw",
+        "product": "openclaw",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2026-28470",
+        "sourceIdentifier": "disclosure@vulncheck.com",
+        "published": "2026-03-05T22:16:20.607",
+        "lastModified": "2026-03-25T15:16:40.070",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "OpenClaw versions prior to 2026.2.2 contain an exec approvals (must be enabled) allowlist bypass vulnerability that allows attackers to execute arbitrary commands by injecting command substitution syntax. Attackers can bypass the allowlist protection by embedding unescaped $() or backticks inside double-quoted strings to execute unauthorized commands."
+          },
+          {
+            "lang": "es",
+            "value": "Las versiones de OpenClaw anteriores a 2026.2.2 contienen una vulnerabilidad de omisión de la lista de permitidos (allowlist) de las aprobaciones de ejecución (que deben estar habilitadas) que permite a los atacantes ejecutar comandos arbitrarios inyectando sintaxis de sustitución de comandos. Los atacantes pueden omitir la protección de la lista de permitidos (allowlist) incrustando $() o comillas invertidas sin escapar dentro de cadenas entre comillas dobles para ejecutar comandos no autorizados."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.2,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-78"
+              }
+            ],
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-78"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:openclaw:openclaw:*:*:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "CC7879A3-C51B-446A-AA4B-F1BAF8C2E88B",
+                    "versionEndExcluding": "2026.2.2"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/openclaw/openclaw/commit/d1ecb46076145deb188abcba8f0699709ea17198",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-3hcm-ggvf-rch5",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://www.vulncheck.com/advisories/openclaw-exec-allowlist-bypass-via-command-substitution-in-double-quotes",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 17
+    },
+    {
+      "cve_id": "CVE-2026-28472",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-03-05",
+          "previous_max": null,
+          "current_max": 9.2
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-03-05",
+        "description": "OpenClaw versions prior to 2026.2.2 contain a vulnerability in the gateway WebSocket connect handshake in which it allows skipping device identity checks when auth.token is present but not validated. Attackers can connect to the gateway without providing device identity or pairing by exploiting the presence check instead of validation, potentially gaining operator access in vulnerable deployments.",
+        "title": "openclaw openclaw",
+        "vendor": "openclaw",
+        "product": "openclaw",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2026-28472",
+        "sourceIdentifier": "disclosure@vulncheck.com",
+        "published": "2026-03-05T22:16:21.017",
+        "lastModified": "2026-03-09T20:40:40.920",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "OpenClaw versions prior to 2026.2.2 contain a vulnerability in the gateway WebSocket connect handshake in which it allows skipping device identity checks when auth.token is present but not validated. Attackers can connect to the gateway without providing device identity or pairing by exploiting the presence check instead of validation, potentially gaining operator access in vulnerable deployments."
+          },
+          {
+            "lang": "es",
+            "value": "Versiones de OpenClaw anteriores a 2026.2.2 contienen una vulnerabilidad en el handshake de conexión WebSocket del gateway en la que permite omitir las comprobaciones de identidad del dispositivo cuando auth.token está presente pero no validado. Los atacantes pueden conectarse al gateway sin proporcionar identidad del dispositivo o emparejamiento explotando la comprobación de presencia en lugar de la validación, obteniendo potencialmente acceso de operador en implementaciones vulnerables."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 8.1,
+                "baseSeverity": "HIGH"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary",
+              "exploitabilityScore": 2.2,
+              "impactScore": 5.9
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:H/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.2,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-306"
+              }
+            ],
+            "source": "disclosure@vulncheck.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:openclaw:openclaw:*:*:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "CC7879A3-C51B-446A-AA4B-F1BAF8C2E88B",
+                    "versionEndExcluding": "2026.2.2"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/openclaw/openclaw/commit/fe81b1d7125a014b8280da461f34efbf5f761575",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-rv39-79c4-7459",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://www.vulncheck.com/advisories/openclaw-device-identity-check-bypass-in-gateway-websocket-connect-handshake",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 18
+    },
+    {
+      "cve_id": "CVE-2026-28474",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-03-05",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-03-05",
+        "description": "OpenClaw's Nextcloud Talk plugin versions prior to 2026.2.6 accept equality matching on the mutable actor.name display name field for allowlist validation, allowing attackers to bypass DM and room allowlists. An attacker can change their Nextcloud display name to match an allowlisted user ID and gain unauthorized access to restricted conversations.",
+        "title": "openclaw openclaw",
+        "vendor": "openclaw",
+        "product": "openclaw",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2026-28474",
+        "sourceIdentifier": "disclosure@vulncheck.com",
+        "published": "2026-03-05T22:16:21.423",
+        "lastModified": "2026-05-06T14:49:59.807",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "OpenClaw's Nextcloud Talk plugin versions prior to 2026.2.6 accept equality matching on the mutable actor.name display name field for allowlist validation, allowing attackers to bypass DM and room allowlists. An attacker can change their Nextcloud display name to match an allowlisted user ID and gain unauthorized access to restricted conversations."
+          },
+          {
+            "lang": "es",
+            "value": "Las versiones del plugin Nextcloud Talk de OpenClaw anteriores a la 2026.2.6 aceptan la coincidencia de igualdad en el campo mutable del nombre de visualización actor.name para la validación de listas de permitidos, lo que permite a los atacantes eludir las listas de permitidos de MD y salas. Un atacante puede cambiar su nombre de visualización de Nextcloud para que coincida con un ID de usuario en la lista de permitidos y obtener acceso no autorizado a conversaciones restringidas."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-863"
+              }
+            ],
+            "source": "disclosure@vulncheck.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:openclaw:openclaw:*:*:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "71D19426-2A6D-4B2B-8F12-C201CBAFF5C3",
+                    "versionEndExcluding": "2026.2.6"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/openclaw/openclaw/commit/6b4b6049b47c3329a7014509594647826669892d",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-r5h9-vjqc-hq3r",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Patch",
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://www.vulncheck.com/advisories/openclaw-nextcloud-talk-allowlist-bypass-via-actorname-display-name-spoofing",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Third Party Advisory",
+              "Broken Link"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 19
+    },
+    {
+      "cve_id": "CVE-2026-29188",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-03-05",
+          "previous_max": null,
+          "current_max": 9.1
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-03-05",
+        "description": "File Browser provides a file managing interface within a specified directory and it can be used to upload, delete, preview, rename and edit files. Prior to version 2.61.1, a broken access control vulnerability in the TUS protocol DELETE endpoint allows authenticated users with only Create permission to delete arbitrary files and directories within their scope, bypassing the intended Delete permission restriction. Any multi-user deployment where administrators explicitly restrict file deletion for certain users is affected. This issue has been patched in version 2.61.1.",
+        "title": "filebrowser filebrowser",
+        "vendor": "filebrowser",
+        "product": "filebrowser",
+        "cvss_max": 9.1
+      },
+      "cve": {
+        "id": "CVE-2026-29188",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2026-03-05T21:16:23.097",
+        "lastModified": "2026-03-10T19:42:36.507",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "File Browser provides a file managing interface within a specified directory and it can be used to upload, delete, preview, rename and edit files. Prior to version 2.61.1, a broken access control vulnerability in the TUS protocol DELETE endpoint allows authenticated users with only Create permission to delete arbitrary files and directories within their scope, bypassing the intended Delete permission restriction. Any multi-user deployment where administrators explicitly restrict file deletion for certain users is affected. This issue has been patched in version 2.61.1."
+          },
+          {
+            "lang": "es",
+            "value": "File Browser proporciona una interfaz de gestión de archivos dentro de un directorio especificado y puede utilizarse para subir, eliminar, previsualizar, renombrar y editar archivos. Antes de la versión 2.61.1, una vulnerabilidad de control de acceso roto en el endpoint DELETE del protocolo TUS permite a usuarios autenticados con solo permiso de Creación eliminar archivos y directorios arbitrarios dentro de su alcance, eludiendo la restricción de permiso de Eliminación prevista. Cualquier despliegue multiusuario donde los administradores restringen explícitamente la eliminación de archivos para ciertos usuarios se ve afectado. Este problema ha sido parcheado en la versión 2.61.1."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:H",
+                "baseScore": 9.1,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.2
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:H",
+                "baseScore": 8.1,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 5.2
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-284"
+              },
+              {
+                "lang": "en",
+                "value": "CWE-732"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:filebrowser:filebrowser:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "C933E37A-6BEC-42C8-88CC-D8FD69116058",
+                    "versionEndExcluding": "2.61.1"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/filebrowser/filebrowser/commit/7ed1425115be602c2b23236c410098ea2d74b42f",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://github.com/filebrowser/filebrowser/releases/tag/v2.61.1",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Release Notes"
+            ]
+          },
+          {
+            "url": "https://github.com/filebrowser/filebrowser/security/advisories/GHSA-79pf-vx4x-7jmm",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Exploit",
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 20
+    }
+  ],
+  "source": "https://www.cvelogic.com/threat-intelligence/2026-03-05"
+}

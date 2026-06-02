@@ -1,0 +1,904 @@
+{
+  "schema_version": "2.2",
+  "generated_at": "2026-06-02T07:33:31Z",
+  "day": "2025-10-03",
+  "window": {
+    "utc_start": "2025-10-03",
+    "utc_end": "2025-10-03",
+    "days": 1
+  },
+  "summary": {
+    "brief": "WordPress plugin RCE/exploit activity: 5 CVEs flagged today. · 10 new critical disclosures — review patch status on exposed services.",
+    "bullets": [
+      "WordPress plugin RCE/exploit activity: 5 CVEs flagged today.",
+      "10 new critical disclosures — review patch status on exposed services."
+    ],
+    "counts": {
+      "cves": 10,
+      "kev": 0,
+      "exploit": 0,
+      "epss": 0,
+      "cvss": 10,
+      "patch": 0
+    }
+  },
+  "cves": [
+    {
+      "cve_id": "CVE-2025-49844",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-10-03",
+          "previous_max": null,
+          "current_max": 9.9
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-10-03",
+        "description": "Redis is an open source, in-memory database that persists on disk. Versions 8.2.1 and below allow an authenticated user to use a specially crafted Lua script to manipulate the garbage collector, trigger a use-after-free and potentially lead to remote code execution. The problem exists in all versions of Redis with Lua scripting. This issue is fixed in version 8.2.2. To workaround this issue without patching the redis-server executable is to prevent users from executing Lua scripts. This can be done using ACL to restrict EVAL and EVALSHA commands.",
+        "title": "lfprojects redis RCE",
+        "vendor": "redis",
+        "product": "redis",
+        "attack_type": "RCE",
+        "cvss_max": 9.9
+      },
+      "cve": {
+        "id": "CVE-2025-49844",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2025-10-03T20:15:32.823",
+        "lastModified": "2026-03-20T14:16:14.130",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Redis is an open source, in-memory database that persists on disk. Versions 8.2.1 and below allow an authenticated user to use a specially crafted Lua script to manipulate the garbage collector, trigger a use-after-free and potentially lead to remote code execution. The problem exists in all versions of Redis with Lua scripting. This issue is fixed in version 8.2.2. To workaround this issue without patching the redis-server executable is to prevent users from executing Lua scripts. This can be done using ACL to restrict EVAL and EVALSHA commands."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+                "baseScore": 9.9,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.1,
+              "impactScore": 6.0
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+                "baseScore": 9.9,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.1,
+              "impactScore": 6.0
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-416"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:redis:redis:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "C2F4D4F6-6F7C-46BC-B37C-DFAC34B097AC",
+                    "versionEndExcluding": "6.2.20"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:redis:redis:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "4F82BD2A-473F-4F3F-9C80-C6448D07C45D",
+                    "versionStartIncluding": "7.0",
+                    "versionEndExcluding": "7.2.11"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:redis:redis:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "F6E336B8-E000-4EFA-95F8-F2B74A4913F0",
+                    "versionStartIncluding": "7.4.0",
+                    "versionEndExcluding": "7.4.6"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:redis:redis:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "459EBC07-D37A-44E5-95DB-4C3FD9F008FF",
+                    "versionStartIncluding": "8.0.0",
+                    "versionEndExcluding": "8.0.4"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:redis:redis:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "CBF13EC1-FE0A-4242-B8D3-2681485DDDF2",
+                    "versionStartIncluding": "8.2.0",
+                    "versionEndExcluding": "8.2.2"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:lfprojects:valkey:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "8CAF97D0-BE35-43AE-B820-3A88D1F49050",
+                    "versionEndExcluding": "7.2.11"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:lfprojects:valkey:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "F0285AE3-BBEA-4D0E-A8AD-957EC3E78870",
+                    "versionStartIncluding": "8.0.0",
+                    "versionEndExcluding": "8.0.6"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:lfprojects:valkey:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "725746C6-025D-4364-9D97-E1315D670DF6",
+                    "versionStartIncluding": "8.1.0",
+                    "versionEndExcluding": "8.1.4"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/redis/redis/commit/d5728cb5795c966c5b5b1e0f0ac576a7e69af539",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://github.com/redis/redis/releases/tag/8.2.2",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Release Notes"
+            ]
+          },
+          {
+            "url": "https://github.com/redis/redis/security/advisories/GHSA-4789-qfc9-5f9q",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "http://www.openwall.com/lists/oss-security/2025/10/07/2",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Mailing List",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/lastvocher/redis-CVE-2025-49844",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 1
+    },
+    {
+      "cve_id": "CVE-2025-10547",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-10-03",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-10-03",
+        "description": "An uninitialized variable in the HTTP CGI request arguments processing component of Vigor Routers running DrayOS may allow an attacker the ability to perform RCE on the appliance through memory corruption.",
+        "title": "An uninitialized variable in the HTTP CGI request arguments processing component of Vigor Routers running DrayOS may allow an attacker th...",
+        "attack_type": "Memory Corruption",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-10547",
+        "sourceIdentifier": "cret@cert.org",
+        "published": "2025-10-03T12:15:42.993",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "An uninitialized variable in the HTTP CGI request arguments processing component of Vigor Routers running DrayOS may allow an attacker the ability to perform RCE on the appliance through memory corruption."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "references": [
+          {
+            "url": "https://www.draytek.com/about/security-advisory/use-of-uninitialized-variable-vulnerabilities/",
+            "source": "cret@cert.org"
+          },
+          {
+            "url": "https://www.kb.cert.org/vuls/id/294418",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 2
+    },
+    {
+      "cve_id": "CVE-2025-6388",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-10-03",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-10-03",
+        "description": "The Spirit Framework plugin for WordPress is vulnerable to authentication bypass in all versions up to, and including, 1.2.14. This is due to the custom_actions() function not properly validating a user's identity prior to authenticating them to the site. This makes it possible for unauthenticated attackers to log in as any user, including administrators, granted they have access to the administrator's username.",
+        "title": "The Spirit Framework plugin for WordPress is vulnerable to authentication bypass in all versions up to, and including, 1.2.14.",
+        "attack_type": "Auth Bypass",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-6388",
+        "sourceIdentifier": "security@wordfence.com",
+        "published": "2025-10-03T09:15:38.300",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The Spirit Framework plugin for WordPress is vulnerable to authentication bypass in all versions up to, and including, 1.2.14. This is due to the custom_actions() function not properly validating a user's identity prior to authenticating them to the site. This makes it possible for unauthenticated attackers to log in as any user, including administrators, granted they have access to the administrator's username."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security@wordfence.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-288"
+              }
+            ],
+            "source": "security@wordfence.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://themespirit.com/talemy-changelog/",
+            "source": "security@wordfence.com"
+          },
+          {
+            "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/a4cbc0e7-4328-451f-a595-1ce17e9d0031?source=cve",
+            "source": "security@wordfence.com"
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 3
+    },
+    {
+      "cve_id": "CVE-2025-10726",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-10-03",
+          "previous_max": null,
+          "current_max": 9.1
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-10-03",
+        "description": "The WPRecovery plugin for WordPress is vulnerable to SQL Injection via the 'data[id]' parameter in all versions up to, and including, 2.0. This is due to insufficient escaping on the user supplied parameter and lack of sufficient preparation on the existing SQL query. This makes it possible for unauthenticated attackers to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database. Additionally, the result of this SQL injection is passed directly to PHP's unlink() function, allowing attackers to delete arbitrary files on the server by injecting file paths through the SQL query.",
+        "title": "The WPRecovery plugin for WordPress is vulnerable to SQL Injection via the 'data[id]' parameter in all versions up to, and including, 2.0.",
+        "attack_type": "SQL Injection",
+        "cvss_max": 9.1
+      },
+      "cve": {
+        "id": "CVE-2025-10726",
+        "sourceIdentifier": "security@wordfence.com",
+        "published": "2025-10-03T12:15:43.417",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The WPRecovery plugin for WordPress is vulnerable to SQL Injection via the 'data[id]' parameter in all versions up to, and including, 2.0. This is due to insufficient escaping on the user supplied parameter and lack of sufficient preparation on the existing SQL query. This makes it possible for unauthenticated attackers to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database. Additionally, the result of this SQL injection is passed directly to PHP's unlink() function, allowing attackers to delete arbitrary files on the server by injecting file paths through the SQL query."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:H",
+                "baseScore": 9.1,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security@wordfence.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.2
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-89"
+              }
+            ],
+            "source": "security@wordfence.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://plugins.svn.wordpress.org/wprecovery/trunk/delete_backup.php",
+            "source": "security@wordfence.com"
+          },
+          {
+            "url": "https://plugins.svn.wordpress.org/wprecovery/trunk/index.php",
+            "source": "security@wordfence.com"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/wprecovery/tags/2.0/delete_backup.php#L5",
+            "source": "security@wordfence.com"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/wprecovery/tags/2.0/index.php#L166",
+            "source": "security@wordfence.com"
+          },
+          {
+            "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/15880d3b-87de-4b59-878c-e36e73c45e8a?source=cve",
+            "source": "security@wordfence.com"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 4
+    },
+    {
+      "cve_id": "CVE-2025-10728",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-10-03",
+          "previous_max": null,
+          "current_max": 9.4
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-10-03",
+        "description": "When the module renders a Svg file that contains a <pattern> element, it might end up rendering it recursively leading to stack overflow DoS",
+        "title": "When the module renders a Svg file that contains a <pattern> element, it might end up rendering it recursively leading to stack overflow DoS",
+        "cvss_max": 9.4
+      },
+      "cve": {
+        "id": "CVE-2025-10728",
+        "sourceIdentifier": "a59d8014-47c4-4630-ab43-e1b13cbe58e3",
+        "published": "2025-10-03T16:16:16.603",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "When the module renders a Svg file that contains a <pattern> element, it might end up rendering it recursively leading to stack overflow DoS"
+          }
+        ],
+        "metrics": {
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:P/AU:X/R:X/V:X/RE:H/U:Red",
+                "baseScore": 9.4,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "a59d8014-47c4-4630-ab43-e1b13cbe58e3",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-674"
+              }
+            ],
+            "source": "a59d8014-47c4-4630-ab43-e1b13cbe58e3"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://codereview.qt-project.org/c/qt/qtsvg/+/654200",
+            "source": "a59d8014-47c4-4630-ab43-e1b13cbe58e3"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 5
+    },
+    {
+      "cve_id": "CVE-2025-10729",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-10-03",
+          "previous_max": null,
+          "current_max": 9.4
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-10-03",
+        "description": "The module will parse a <pattern> node which is not a child of a structural node. The node will be deleted after creation but might be accessed later leading to a use after free.",
+        "title": "The module will parse a <pattern> node which is not a child of a structural node.",
+        "cvss_max": 9.4
+      },
+      "cve": {
+        "id": "CVE-2025-10729",
+        "sourceIdentifier": "a59d8014-47c4-4630-ab43-e1b13cbe58e3",
+        "published": "2025-10-03T16:16:16.777",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The module will parse a <pattern> node which is not a child of a structural node. The node will be deleted after creation but might be accessed later leading to a use after free."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:P/AU:X/R:X/V:X/RE:H/U:Red",
+                "baseScore": 9.4,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "a59d8014-47c4-4630-ab43-e1b13cbe58e3",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-416"
+              }
+            ],
+            "source": "a59d8014-47c4-4630-ab43-e1b13cbe58e3"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://codereview.qt-project.org/c/qt/qtsvg/+/676473",
+            "source": "a59d8014-47c4-4630-ab43-e1b13cbe58e3"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 6
+    },
+    {
+      "cve_id": "CVE-2025-40636",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-10-03",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-10-03",
+        "description": "SQL injection vulnerability in Joomla module mod_vvisit_counter v2.0.4j3. This vulnerability allows an attacker to retrieve database content via the ‘cip_vvisitcounter’ cookie at all endpoints where the plugin counts visits.",
+        "title": "SQL injection vulnerability in Joomla module mod_vvisit_counter v2.0.4j3.",
+        "attack_type": "SQL Injection",
+        "cvss_max": 9.3
+      },
+      "cve": {
+        "id": "CVE-2025-40636",
+        "sourceIdentifier": "cve-coordination@incibe.es",
+        "published": "2025-10-03T12:15:44.200",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "SQL injection vulnerability in Joomla module mod_vvisit_counter v2.0.4j3. This vulnerability allows an attacker to retrieve database content via the ‘cip_vvisitcounter’ cookie at all endpoints where the plugin counts visits."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "cve-coordination@incibe.es",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-89"
+              }
+            ],
+            "source": "cve-coordination@incibe.es"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://www.incibe.es/en/incibe-cert/notices/aviso/sql-injection-modvvisitcounter-module",
+            "source": "cve-coordination@incibe.es"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 7
+    },
+    {
+      "cve_id": "CVE-2025-7721",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-10-03",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-10-03",
+        "description": "The JoomSport – for Sports: Team & League, Football, Hockey & more plugin for WordPress is vulnerable to Local File Inclusion in all versions up to, and including, 5.7.3 via the task parameter. This makes it possible for unauthenticated attackers to include and execute arbitrary .php files on the server, allowing the execution of any PHP code in those files. This can be used to bypass access controls, obtain sensitive data, or achieve code execution in cases where .php file types can be uploaded and included.",
+        "title": "The JoomSport – for Sports: Team & League, Football, Hockey & more plugin for WordPress is vulnerable to Local File Inclusion in all vers...",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-7721",
+        "sourceIdentifier": "security@wordfence.com",
+        "published": "2025-10-03T12:15:44.640",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The JoomSport – for Sports: Team & League, Football, Hockey & more plugin for WordPress is vulnerable to Local File Inclusion in all versions up to, and including, 5.7.3 via the task parameter. This makes it possible for unauthenticated attackers to include and execute arbitrary .php files on the server, allowing the execution of any PHP code in those files. This can be used to bypass access controls, obtain sensitive data, or achieve code execution in cases where .php file types can be uploaded and included."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security@wordfence.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-98"
+              }
+            ],
+            "source": "security@wordfence.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/joomsport-sports-league-results-management/trunk/sportleague/base/wordpress/classes/class-jsport-controller.php#L74",
+            "source": "security@wordfence.com"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/changeset/3371353/",
+            "source": "security@wordfence.com"
+          },
+          {
+            "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/4f3900c7-2acb-4031-9854-b0b13e172e1f?source=cve",
+            "source": "security@wordfence.com"
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 8
+    },
+    {
+      "cve_id": "CVE-2025-9209",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-10-03",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-10-03",
+        "description": "The RestroPress – Online Food Ordering System plugin for WordPress is vulnerable to Authentication Bypass in versions 3.0.0 to 3.1.9.2. This is due to the plugin exposing user private tokens and API data via the /wp-json/wp/v2/users REST API endpoint. This makes it possible for unauthenticated attackers to forge JWT tokens for other users, including administrators, and authenticate as them.",
+        "title": "The RestroPress – Online Food Ordering System plugin for WordPress is vulnerable to Authentication Bypass in versions 3.0.0 to 3.1.9.2.",
+        "attack_type": "Auth Bypass",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-9209",
+        "sourceIdentifier": "security@wordfence.com",
+        "published": "2025-10-03T12:15:47.240",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The RestroPress – Online Food Ordering System plugin for WordPress is vulnerable to Authentication Bypass in versions 3.0.0 to 3.1.9.2. This is due to the plugin exposing user private tokens and API data via the /wp-json/wp/v2/users REST API endpoint. This makes it possible for unauthenticated attackers to forge JWT tokens for other users, including administrators, and authenticate as them."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security@wordfence.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-200"
+              }
+            ],
+            "source": "security@wordfence.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://wordpress.org/plugins/restropress/",
+            "source": "security@wordfence.com"
+          },
+          {
+            "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/359833dd-de3c-48ea-8eef-06588a590da2?source=cve",
+            "source": "security@wordfence.com"
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 9
+    },
+    {
+      "cve_id": "CVE-2025-9286",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-10-03",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-10-03",
+        "description": "The Appy Pie Connect for WooCommerce plugin for WordPress is vulnerable to Privilege Escalation due to missing authorization within the reset_user_password() REST handler in all versions up to, and including, 1.1.2. This makes it possible for unauthenticated attackers to to reset the password of arbitrary users, including administrators, thereby gaining administrative access.",
+        "title": "The Appy Pie Connect for WooCommerce plugin for WordPress is vulnerable to Privilege Escalation due to missing authorization within the r...",
+        "attack_type": "Privilege Escalation",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-9286",
+        "sourceIdentifier": "security@wordfence.com",
+        "published": "2025-10-03T12:15:47.757",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The Appy Pie Connect for WooCommerce plugin for WordPress is vulnerable to Privilege Escalation due to missing authorization within the reset_user_password() REST handler in all versions up to, and including, 1.1.2. This makes it possible for unauthenticated attackers to to reset the password of arbitrary users, including administrators, thereby gaining administrative access."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security@wordfence.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-620"
+              }
+            ],
+            "source": "security@wordfence.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/appy-pie-connect-for-woocommerce/trunk/connect-woocommerce-rest-api.php",
+            "source": "security@wordfence.com"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/changeset/3385150/",
+            "source": "security@wordfence.com"
+          },
+          {
+            "url": "https://wordpress.org/plugins/appy-pie-connect-for-woocommerce/",
+            "source": "security@wordfence.com"
+          },
+          {
+            "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/36fb5b8d-1ea4-45c2-8639-b229efdb57db?source=cve",
+            "source": "security@wordfence.com"
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 10
+    }
+  ],
+  "source": "https://www.cvelogic.com/threat-intelligence/2025-10-03"
+}

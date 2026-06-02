@@ -1,0 +1,1575 @@
+{
+  "schema_version": "2.2",
+  "generated_at": "2026-06-02T07:34:10Z",
+  "day": "2026-01-12",
+  "window": {
+    "utc_start": "2026-01-12",
+    "utc_end": "2026-01-12",
+    "days": 1
+  },
+  "summary": {
+    "brief": "Gogs added to CISA KEV — confirmed in-the-wild exploitation. · Assistanttools Music Tag Editor — exploitation likelihood rose sharply (EPSS 8.0% → 23% · rising (+15%)). · 10 new critical disclosures — review patch status on exposed services.",
+    "bullets": [
+      "Gogs added to CISA KEV — confirmed in-the-wild exploitation.",
+      "Assistanttools Music Tag Editor — exploitation likelihood rose sharply (EPSS 8.0% → 23% · rising (+15%)).",
+      "10 new critical disclosures — review patch status on exposed services."
+    ],
+    "counts": {
+      "cves": 13,
+      "kev": 1,
+      "exploit": 0,
+      "epss": 2,
+      "cvss": 10,
+      "patch": 0
+    }
+  },
+  "cves": [
+    {
+      "cve_id": "CVE-2025-8110",
+      "signal_types": [
+        "KEV"
+      ],
+      "signals": {
+        "kev": {
+          "date_added": "2026-01-12"
+        },
+        "exploit": null,
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-12-10",
+        "description": "Improper Symbolic link handling in the PutContents API in Gogs allows Local Execution of Code.",
+        "title": "Gogs Path Traversal Vulnerability",
+        "vendor": "gogs",
+        "product": "gogs",
+        "attack_type": "Path Traversal",
+        "cvss_max": 8.8
+      },
+      "cve": {
+        "id": "CVE-2025-8110",
+        "sourceIdentifier": "9947ef80-c5d5-474a-bbab-97341a59000e",
+        "published": "2025-12-10T14:16:19.847",
+        "lastModified": "2026-01-20T13:47:34.450",
+        "vulnStatus": "Analyzed",
+        "cisaExploitAdd": "2026-01-12",
+        "cisaActionDue": "2026-02-02",
+        "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+        "cisaVulnerabilityName": "Gogs Path Traversal Vulnerability",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Improper Symbolic link handling in the PutContents API in Gogs allows Local Execution of Code."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 8.8,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:A/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:Y/R:U/V:C/RE:X/U:X",
+                "baseScore": 8.7,
+                "baseSeverity": "HIGH"
+              },
+              "source": "9947ef80-c5d5-474a-bbab-97341a59000e",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-22"
+              }
+            ],
+            "source": "9947ef80-c5d5-474a-bbab-97341a59000e"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:gogs:gogs:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "CC3C1E01-690F-4BEB-8969-16883D7F12A5",
+                    "versionEndIncluding": "0.13.3"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "http://wiz.io/blog/wiz-research-gogs-cve-2025-8110-rce-exploit",
+            "source": "9947ef80-c5d5-474a-bbab-97341a59000e",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "http://www.openwall.com/lists/oss-security/2025/12/11/3",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Mailing List"
+            ]
+          },
+          {
+            "url": "http://www.openwall.com/lists/oss-security/2025/12/11/4",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Mailing List"
+            ]
+          },
+          {
+            "url": "http://www.openwall.com/lists/oss-security/2026/01/17/4",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Mailing List"
+            ]
+          },
+          {
+            "url": "http://www.openwall.com/lists/oss-security/2026/01/18/1",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Mailing List"
+            ]
+          },
+          {
+            "url": "http://www.openwall.com/lists/oss-security/2026/01/18/2",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Mailing List"
+            ]
+          },
+          {
+            "url": "https://github.com/gogs/gogs/commit/553707f3fd5f68f47f531cfcff56aa3ec294c6f6",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://github.com/gogs/gogs/pull/8078",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Exploit",
+              "Issue Tracking",
+              "Patch",
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2025-8110",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Third Party Advisory",
+              "US Government Resource"
+            ]
+          }
+        ]
+      },
+      "risk_score": 88,
+      "rank": 1
+    },
+    {
+      "cve_id": "CVE-2009-3811",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 0.07999,
+            "score_date": "2025-03-30"
+          },
+          "current": {
+            "score": 0.23155,
+            "score_date": "2026-01-12"
+          },
+          "delta": 0.15156
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2009-10-27",
+        "description": "Stack-based buffer overflow in Music Tag Editor 1.61 build 212 allows remote attackers to execute arbitrary code via an MP3 file with a long ID3 tag.  NOTE: some of these details are obtained from third party information.",
+        "title": "assistanttools music_tag_editor Buffer Overflow",
+        "vendor": "assistanttools",
+        "product": "music_tag_editor",
+        "attack_type": "Buffer Overflow",
+        "cvss_max": 9.3
+      },
+      "cve": {
+        "id": "CVE-2009-3811",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2009-10-27T16:30:00.547",
+        "lastModified": "2026-04-23T00:35:47.467",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Stack-based buffer overflow in Music Tag Editor 1.61 build 212 allows remote attackers to execute arbitrary code via an MP3 file with a long ID3 tag.  NOTE: some of these details are obtained from third party information."
+          },
+          {
+            "lang": "es",
+            "value": "Desbordamiento de búfer basado en pila en Music Tag Editor v1.61 build 212 permite a atacantes remotos ejecutar código de su elección mediante un fichero MP3 con una etiqueta ID3 larga. NOTA: algunos de estos detalles se han obtenido de información de terceros."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV2": [
+            {
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:M/Au:N/C:C/I:C/A:C",
+                "baseScore": 9.3,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "baseSeverity": "HIGH",
+              "exploitabilityScore": 8.6,
+              "impactScore": 10.0
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-119"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:assistanttools:music_tag_editor:1.61:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "4B58A1C4-906F-4C42-8DD6-1A1FD15C42B0"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "http://liquidworm.blogspot.com/2009/07/music-tag-editor-161-build-212-remote.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit"
+            ]
+          },
+          {
+            "url": "http://osvdb.org/55861",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://secunia.com/advisories/35828",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "http://www.exploit-db.com/exploits/9167",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "https://exchange.xforce.ibmcloud.com/vulnerabilities/51724",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          }
+        ]
+      },
+      "risk_score": 85,
+      "rank": 2
+    },
+    {
+      "cve_id": "CVE-2025-29329",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-01-12",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-01-12",
+        "description": "Buffer Overflow in the ippprint (Internet Printing Protocol) service in Sagemcom F@st 3686 MAGYAR_4.121.0 allows remote attacker to execute arbitrary code by sending a crafted HTTP request.",
+        "title": "sagemcom f\\@st_3686_firmware Buffer Overflow",
+        "vendor": "sagemcom",
+        "product": "f\\@st_3686_firmware",
+        "attack_type": "Buffer Overflow",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-29329",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2026-01-12T22:16:07.660",
+        "lastModified": "2026-01-22T18:46:41.067",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Buffer Overflow in the ippprint (Internet Printing Protocol) service in Sagemcom F@st 3686 MAGYAR_4.121.0 allows remote attacker to execute arbitrary code by sending a crafted HTTP request."
+          },
+          {
+            "lang": "es",
+            "value": "Desbordamiento de búfer en el servicio ippprint (Internet Printing Protocol) en Sagemcom F@st 3686 MAGYAR_4.121.0 permite a un atacante remoto ejecutar código arbitrario mediante el envío de una solicitud HTTP manipulada."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-120"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:sagemcom:f\\@st_3686_firmware:4.121.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "94060A56-9AEB-4DB4-9BDD-E7BFAFAA57EB"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:sagemcom:f\\@st_3686:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "3466ACB1-D6DA-4CB7-A176-F16A47000AC1"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "http://fst.com",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Not Applicable"
+            ]
+          },
+          {
+            "url": "http://sagemcom.com",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Product"
+            ]
+          },
+          {
+            "url": "https://github.com/SilverS3c/Sagemcom-fast-3686-ippprint",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 3
+    },
+    {
+      "cve_id": "CVE-2022-31269",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 0.6816,
+            "score_date": "2025-11-21"
+          },
+          "current": {
+            "score": 0.81013,
+            "score_date": "2026-01-12"
+          },
+          "delta": 0.12853
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2022-08-25",
+        "description": "Nortek Linear eMerge E3-Series devices through 0.32-09c place admin credentials in /test.txt that allow an attacker to open a building's doors. (This occurs in situations where the CVE-2019-7271 default credentials have been changed.)",
+        "title": "nortekcontrol emerge_e3_firmware",
+        "vendor": "nortekcontrol",
+        "product": "emerge_e3_firmware",
+        "cvss_max": 8.2
+      },
+      "cve": {
+        "id": "CVE-2022-31269",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2022-08-25T22:15:08.547",
+        "lastModified": "2024-11-21T07:04:16.123",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Nortek Linear eMerge E3-Series devices through 0.32-09c place admin credentials in /test.txt that allow an attacker to open a building's doors. (This occurs in situations where the CVE-2019-7271 default credentials have been changed.)"
+          },
+          {
+            "lang": "es",
+            "value": "Los dispositivos Nortek Linear eMerge E3-Series versiones hasta 0.32-09c, colocan credenciales de administrador en /test.txt que permiten a un atacante abrir las puertas de un edificio. (Esto ocurre en situaciones en las que han sido cambiadas las credenciales predeterminadas CVE-2019-7271)."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:H/A:N",
+                "baseScore": 8.2,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 4.2
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-798"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:nortekcontrol:emerge_e3_firmware:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "A18BCC2A-E3CC-436E-BC4A-3374BB11B222",
+                    "versionEndIncluding": "0.32-09c"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:nortekcontrol:emerge_e3:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "B8EA5F43-A9AF-42F5-A6B8-018975D2FC2E"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "http://packetstormsecurity.com/files/167990/Nortek-Linear-eMerge-E3-Series-Credential-Disclosure.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory",
+              "VDB Entry"
+            ]
+          },
+          {
+            "url": "https://eg.linkedin.com/in/omar-1-hashem",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Not Applicable"
+            ]
+          },
+          {
+            "url": "https://gist.github.com/omarhashem123/71ec9223e90ea76a76096d777d9b945c",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.nortekcontrol.com/access-control/",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Product"
+            ]
+          }
+        ]
+      },
+      "risk_score": 83,
+      "rank": 4
+    },
+    {
+      "cve_id": "CVE-2025-12420",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-01-12",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-01-12",
+        "description": "A vulnerability has been identified in the ServiceNow AI Platform that could enable an unauthenticated user to impersonate another user and perform the operations that the impersonated user is entitled to perform.\n\nServiceNow has addressed this vulnerability by deploying a relevant security update to  hosted instances in October 2025. Security updates have also been provided to ServiceNow self-hosted customers, partners, and hosted customers with unique configurations. Additionally, the vulnerability is addressed in the listed Store App versions. We recommend that customers promptly apply an appropriate security update or upgrade if they have not already done so.",
+        "title": "servicenow now_assist_ai_agents",
+        "vendor": "servicenow",
+        "product": "now_assist_ai_agents",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-12420",
+        "sourceIdentifier": "psirt@servicenow.com",
+        "published": "2026-01-12T22:16:07.470",
+        "lastModified": "2026-01-27T20:25:54.110",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A vulnerability has been identified in the ServiceNow AI Platform that could enable an unauthenticated user to impersonate another user and perform the operations that the impersonated user is entitled to perform.\n\nServiceNow has addressed this vulnerability by deploying a relevant security update to  hosted instances in October 2025. Security updates have also been provided to ServiceNow self-hosted customers, partners, and hosted customers with unique configurations. Additionally, the vulnerability is addressed in the listed Store App versions. We recommend that customers promptly apply an appropriate security update or upgrade if they have not already done so."
+          },
+          {
+            "lang": "es",
+            "value": "Se ha identificado una vulnerabilidad en la Plataforma de IA de ServiceNow que podría permitir a un usuario no autenticado suplantar a otro usuario y realizar las operaciones a las que el usuario suplantado tiene derecho a realizar.\n\nServiceNow ha abordado esta vulnerabilidad mediante el despliegue de una actualización de seguridad relevante en las instancias alojadas en octubre de 2025. También se han proporcionado actualizaciones de seguridad a los clientes autoalojados de ServiceNow, socios y clientes alojados con configuraciones únicas. Además, la vulnerabilidad se aborda en las versiones de la aplicación de la tienda enumeradas. Recomendamos que los clientes apliquen rápidamente una actualización de seguridad o una actualización de versión apropiada si aún no lo han hecho."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:P/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:N/AU:Y/R:U/V:C/RE:H/U:Amber",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "psirt@servicenow.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-250"
+              }
+            ],
+            "source": "psirt@servicenow.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:servicenow:now_assist_ai_agents:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "981D4C38-EC4B-42F1-96D2-83B02403ABD2",
+                    "versionEndExcluding": "5.1.18"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:servicenow:now_assist_ai_agents:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "160208ED-E032-4B34-BC89-0AC7B2C0808A",
+                    "versionStartIncluding": "5.2.0",
+                    "versionEndExcluding": "5.2.19"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:servicenow:virtual_agent_api:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "B619348E-A16D-4A69-9CB6-58A2FFC0BAED",
+                    "versionEndExcluding": "3.15.2"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:servicenow:virtual_agent_api:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "0F8C6775-D097-491A-9246-0C691EB680E3",
+                    "versionStartIncluding": "4.0.0",
+                    "versionEndExcluding": "4.0.4"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://support.servicenow.com/kb?id=kb_article_view&sysparm_article=KB2587329",
+            "source": "psirt@servicenow.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 5
+    },
+    {
+      "cve_id": "CVE-2025-51567",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-01-12",
+          "previous_max": null,
+          "current_max": 9.1
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-01-12",
+        "description": "A SQL Injection was found in the /exam/user/profile.php page of kashipara Online Exam System V1.0, which allows remote attackers to execute arbitrary SQL command to get unauthorized database access via the rname, rcollage, rnumber, rgender and rpassword parameters in a POST HTTP request.",
+        "title": "jayesh online_exam_system SQL Injection",
+        "vendor": "jayesh",
+        "product": "online_exam_system",
+        "attack_type": "SQL Injection",
+        "cvss_max": 9.1
+      },
+      "cve": {
+        "id": "CVE-2025-51567",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2026-01-12T20:15:52.763",
+        "lastModified": "2026-01-16T17:31:06.853",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A SQL Injection was found in the /exam/user/profile.php page of kashipara Online Exam System V1.0, which allows remote attackers to execute arbitrary SQL command to get unauthorized database access via the rname, rcollage, rnumber, rgender and rpassword parameters in a POST HTTP request."
+          },
+          {
+            "lang": "es",
+            "value": "Se encontró una inyección SQL en la página /exam/user/profile.php de kashipara Online Exam System V1.0, lo que permite a atacantes remotos ejecutar comando SQL arbitrario para obtener acceso no autorizado a la base de datos a través de los parámetros rname, rcollage, rnumber, rgender y rpassword en una solicitud HTTP POST."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+                "baseScore": 9.1,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.2
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-89"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:jayesh:online_exam_system:1.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "2CABE8E7-7159-40FF-9FF7-6608FB08D0D5"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/0xBhushan/Writeups/blob/main/CVE/Kashipara/Online%20Exam%20System/SQL%20Injection-Profile%20Update.pdf",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 6
+    },
+    {
+      "cve_id": "CVE-2025-66802",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-01-12",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-01-12",
+        "description": "Sourcecodester Covid-19 Contact Tracing System 1.0 is vulnerable to RCE (Remote Code Execution). The application receives a reverse shell (php) into imagem of the user enabling RCE.",
+        "title": "covid-19_contact_tracing_system_project covid-19_contact_tracing_system RCE",
+        "vendor": "covid-19_contact_tracing_system_project",
+        "product": "covid-19_contact_tracing_system",
+        "attack_type": "RCE",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-66802",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2026-01-12T20:15:53.060",
+        "lastModified": "2026-01-22T15:56:20.700",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Sourcecodester Covid-19 Contact Tracing System 1.0 is vulnerable to RCE (Remote Code Execution). The application receives a reverse shell (php) into imagem of the user enabling RCE."
+          },
+          {
+            "lang": "es",
+            "value": "Sourcecodester Covid-19 Contact Tracing System 1.0 es vulnerable a RCE (ejecución remota de código). La aplicación recibe una shell inversa (PHP) en la imagen del usuario, lo que permite la RCE."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-434"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:covid-19_contact_tracing_system_project:covid-19_contact_tracing_system:1.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "52A814D0-E671-4216-A115-E3E3766D01B3"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://feedly.com/cve/CVE-2022-2746",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Not Applicable"
+            ]
+          },
+          {
+            "url": "https://github.com/mtgsjr/CVE-2025-66802",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Exploit",
+              "Mitigation",
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 7
+    },
+    {
+      "cve_id": "CVE-2025-67146",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-01-12",
+          "previous_max": null,
+          "current_max": 9.4
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-01-12",
+        "description": "Multiple SQL Injection vulnerabilities exist in AbhishekMali21 GYM-MANAGEMENT-SYSTEM 1.0 via the 'name' parameter in (1) member_search.php, (2) trainer_search.php, and (3) gym_search.php, and via the 'id' parameter in (4) payment_search.php. An unauthenticated remote attacker can exploit these issues to inject malicious SQL commands, leading to unauthorized data extraction, authentication bypass, or modification of database contents.",
+        "title": "abhishekmali21 gym_management_system Auth Bypass",
+        "vendor": "abhishekmali21",
+        "product": "gym_management_system",
+        "attack_type": "Auth Bypass",
+        "cvss_max": 9.4
+      },
+      "cve": {
+        "id": "CVE-2025-67146",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2026-01-12T22:16:07.797",
+        "lastModified": "2026-01-27T20:22:14.793",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Multiple SQL Injection vulnerabilities exist in AbhishekMali21 GYM-MANAGEMENT-SYSTEM 1.0 via the 'name' parameter in (1) member_search.php, (2) trainer_search.php, and (3) gym_search.php, and via the 'id' parameter in (4) payment_search.php. An unauthenticated remote attacker can exploit these issues to inject malicious SQL commands, leading to unauthorized data extraction, authentication bypass, or modification of database contents."
+          },
+          {
+            "lang": "es",
+            "value": "Múltiples vulnerabilidades de inyección SQL existen en AbhishekMali21 GYM-MANAGEMENT-SYSTEM 1.0 a través del parámetro 'name' en (1) member_search.php, (2) trainer_search.php y (3) gym_search.php, y a través del parámetro 'id' en (4) payment_search.php. Un atacante remoto no autenticado puede explotar estos problemas para inyectar comandos SQL maliciosos, lo que lleva a la extracción no autorizada de datos, omisión de autenticación o la modificación del contenido de la base de datos."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:L",
+                "baseScore": 9.4,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.5
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-89"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:abhishekmali21:gym_management_system:1.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "8DE6DCE3-2E0F-4E03-BA74-F6C333DF4968"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/AbhishekMali21/GYM-MANAGEMENT-SYSTEM/issues/4",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 8
+    },
+    {
+      "cve_id": "CVE-2025-67147",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-01-12",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-01-12",
+        "description": "Multiple SQL Injection vulnerabilities exist in amansuryawanshi Gym-Management-System-PHP 1.0 via the 'name', 'email', and 'comment' parameters in (1) submit_contact.php, the 'username' and 'pass_key' parameters in (2) secure_login.php, and the 'login_id', 'pwfield', and 'login_key' parameters in (3) change_s_pwd.php. An unauthenticated or authenticated attacker can exploit these issues to bypass authentication, execute arbitrary SQL commands, modify database records, delete data, or escalate privileges to administrator level.",
+        "title": "Multiple SQL Injection vulnerabilities exist in amansuryawanshi Gym-Management-System-PHP 1.0 via the 'name', 'email', and 'comment' para...",
+        "attack_type": "SQL Injection",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-67147",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2026-01-12T21:15:59.133",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Multiple SQL Injection vulnerabilities exist in amansuryawanshi Gym-Management-System-PHP 1.0 via the 'name', 'email', and 'comment' parameters in (1) submit_contact.php, the 'username' and 'pass_key' parameters in (2) secure_login.php, and the 'login_id', 'pwfield', and 'login_key' parameters in (3) change_s_pwd.php. An unauthenticated or authenticated attacker can exploit these issues to bypass authentication, execute arbitrary SQL commands, modify database records, delete data, or escalate privileges to administrator level."
+          },
+          {
+            "lang": "es",
+            "value": "Existen múltiples vulnerabilidades de inyección SQL en amansuryawanshi Gym-Management-System-PHP 1.0 a través de los parámetros 'name', 'email' y 'comment' en (1) submit_contact.php, los parámetros 'username' y 'pass_key' en (2) secure_login.php, y los parámetros 'login_id', 'pwfield' y 'login_key' en (3) change_s_pwd.php. Un atacante no autenticado o autenticado puede explotar estos problemas para omitir la autenticación, ejecutar comandos SQL arbitrarios, modificar registros de la base de datos, eliminar datos o escalar privilegios a nivel de administrador."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-89"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/amansuryawanshi/Gym-Management-System-PHP/issues/3",
+            "source": "cve@mitre.org"
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 9
+    },
+    {
+      "cve_id": "CVE-2026-22785",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-01-12",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-01-12",
+        "description": "orval generates type-safe JS clients (TypeScript) from any valid OpenAPI v3 or Swagger v2 specification. Prior to 7.18.0, the MCP server generation logic relies on string manipulation that incorporates the summary field from the OpenAPI specification without proper validation or escaping. This allows an attacker to \"break out\" of the string literal and inject arbitrary code. This vulnerability is fixed in 7.18.0.",
+        "title": "orval orval",
+        "vendor": "orval",
+        "product": "orval",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2026-22785",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2026-01-12T19:16:04.287",
+        "lastModified": "2026-02-26T20:00:15.910",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "orval generates type-safe JS clients (TypeScript) from any valid OpenAPI v3 or Swagger v2 specification. Prior to 7.18.0, the MCP server generation logic relies on string manipulation that incorporates the summary field from the OpenAPI specification without proper validation or escaping. This allows an attacker to \"break out\" of the string literal and inject arbitrary code. This vulnerability is fixed in 7.18.0."
+          },
+          {
+            "lang": "es",
+            "value": "orval genera clientes JS con seguridad de tipos (TypeScript) a partir de cualquier especificación OpenAPI v3 o Swagger v2 válida. Antes de la versión 7.18.0, la lógica de generación del servidor MCP se basa en la manipulación de cadenas que incorpora el campo 'summary' de la especificación OpenAPI sin una validación o escape adecuados. Esto permite a un atacante 'escapar' del literal de cadena e inyectar código arbitrario. Esta vulnerabilidad está corregida en la versión 7.18.0."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-77"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:orval:orval:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "0CE41D63-5D8F-40BA-A27D-11AD851BE739",
+                    "versionEndExcluding": "7.18.0"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/orval-labs/orval/commit/80b5fe73b94f120a3a5561952d6d4b0f8d7e928d",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://github.com/orval-labs/orval/security/advisories/GHSA-mwr6-3gp8-9jmj",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Exploit",
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 10
+    },
+    {
+      "cve_id": "CVE-2026-22794",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-01-12",
+          "previous_max": null,
+          "current_max": 9.6
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-01-12",
+        "description": "Appsmith is a platform to build admin panels, internal tools, and dashboards. Prior to 1.93, the server uses the Origin value from the request headers as the email link baseUrl without validation. If an attacker controls the Origin, password reset / email verification links in emails can be generated pointing to the attacker’s domain, causing authentication tokens to be exposed and potentially leading to account takeover. This vulnerability is fixed in 1.93.",
+        "title": "appsmith appsmith",
+        "vendor": "appsmith",
+        "product": "appsmith",
+        "cvss_max": 9.6
+      },
+      "cve": {
+        "id": "CVE-2026-22794",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2026-01-12T22:16:08.633",
+        "lastModified": "2026-01-21T19:14:17.880",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Appsmith is a platform to build admin panels, internal tools, and dashboards. Prior to 1.93, the server uses the Origin value from the request headers as the email link baseUrl without validation. If an attacker controls the Origin, password reset / email verification links in emails can be generated pointing to the attacker’s domain, causing authentication tokens to be exposed and potentially leading to account takeover. This vulnerability is fixed in 1.93."
+          },
+          {
+            "lang": "es",
+            "value": "Appsmith es una plataforma para construir paneles de administración, herramientas internas y cuadros de mando. Antes de la versión 1.93, el servidor utiliza el valor Origin de los encabezados de solicitud como la baseUrl de los enlaces de correo electrónico sin validación. Si un atacante controla el Origin, se pueden generar enlaces de restablecimiento de contraseña / verificación de correo electrónico en los correos electrónicos que apunten al dominio del atacante, causando que los tokens de autenticación queden expuestos y potencialmente llevando a la toma de control de la cuenta. Esta vulnerabilidad se corrige en la versión 1.93."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H",
+                "baseScore": 9.6,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 6.0
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+                "baseScore": 8.8,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-346"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:appsmith:appsmith:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "5D0E0C12-CE13-4165-8647-F27EE6E03D0F",
+                    "versionEndExcluding": "1.93"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/appsmithorg/appsmith/commit/6f9ee6226bac13fb4b836940b557913fff78b633",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://github.com/appsmithorg/appsmith/security/advisories/GHSA-7hf5-mc28-xmcv",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Exploit",
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 11
+    },
+    {
+      "cve_id": "CVE-2026-22799",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-01-12",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-01-12",
+        "description": "Emlog is an open source website building system. emlog v2.6.1 and earlier exposes a REST API endpoint (/index.php?rest-api=upload) for media file uploads. The endpoint fails to implement proper validation of file types, extensions, and content, allowing authenticated attackers (with a valid API key or admin session cookie) to upload arbitrary files (including malicious PHP scripts) to the server. An attacker can obtain the API key either by gaining administrator access to enable the REST API setting, or via information disclosure vulnerabilities in the application. Once uploaded, the malicious PHP file can be executed to gain remote code execution (RCE) on the target server, leading to full server compromise.",
+        "title": "emlog emlog",
+        "vendor": "emlog",
+        "product": "emlog",
+        "cvss_max": 9.3
+      },
+      "cve": {
+        "id": "CVE-2026-22799",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2026-01-12T22:16:08.930",
+        "lastModified": "2026-01-21T19:13:49.570",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Emlog is an open source website building system. emlog v2.6.1 and earlier exposes a REST API endpoint (/index.php?rest-api=upload) for media file uploads. The endpoint fails to implement proper validation of file types, extensions, and content, allowing authenticated attackers (with a valid API key or admin session cookie) to upload arbitrary files (including malicious PHP scripts) to the server. An attacker can obtain the API key either by gaining administrator access to enable the REST API setting, or via information disclosure vulnerabilities in the application. Once uploaded, the malicious PHP file can be executed to gain remote code execution (RCE) on the target server, leading to full server compromise."
+          },
+          {
+            "lang": "es",
+            "value": "Emlog es un sistema de creación de sitios web de código abierto. emlog v2.6.1 y versiones anteriores expone un endpoint de API REST (/index.php?rest-api=upload) para la carga de archivos multimedia. El endpoint no implementa una validación adecuada de tipos de archivo, extensiones y contenido, permitiendo a atacantes autenticados (con una clave API válida o una cookie de sesión de administrador) cargar archivos arbitrarios (incluidos scripts PHP maliciosos) al servidor. Un atacante puede obtener la clave API ya sea obteniendo acceso de administrador para habilitar la configuración de la API REST, o a través de vulnerabilidades de revelación de información en la aplicación. Una vez cargado, el archivo PHP malicioso puede ser ejecutado para obtener ejecución remota de código (RCE) en el servidor objetivo, lo que lleva a un compromiso total del servidor."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 8.8,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-434"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:emlog:emlog:*:*:*:*:pro:*:*:*",
+                    "matchCriteriaId": "690F5B09-FDEA-46BF-B0FB-09CA94511539",
+                    "versionEndExcluding": "2.6.1"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/emlog/emlog/commit/429b02fda842254b9b9b39303e9161999c180560",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://github.com/emlog/emlog/security/advisories/GHSA-p837-mrw9-5x5j",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Exploit",
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 12
+    },
+    {
+      "cve_id": "CVE-2026-22813",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-01-12",
+          "previous_max": null,
+          "current_max": 9.4
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-01-12",
+        "description": "OpenCode is an open source AI coding agent. The markdown renderer used for LLM responses will insert arbitrary HTML into the DOM. There is no sanitization with DOMPurify or even a CSP on the web interface to prevent JavaScript execution via HTML injection. This means controlling the LLM response for a chat session gets JavaScript execution on the http://localhost:4096 origin. This vulnerability is fixed in 1.1.10.",
+        "title": "anoma opencode",
+        "vendor": "anoma",
+        "product": "opencode",
+        "cvss_max": 9.4
+      },
+      "cve": {
+        "id": "CVE-2026-22813",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2026-01-12T23:15:53.523",
+        "lastModified": "2026-01-21T15:15:35.597",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "OpenCode is an open source AI coding agent. The markdown renderer used for LLM responses will insert arbitrary HTML into the DOM. There is no sanitization with DOMPurify or even a CSP on the web interface to prevent JavaScript execution via HTML injection. This means controlling the LLM response for a chat session gets JavaScript execution on the http://localhost:4096 origin. This vulnerability is fixed in 1.1.10."
+          },
+          {
+            "lang": "es",
+            "value": "OpenCode es un agente de codificación de IA de código abierto. El renderizador de markdown utilizado para las respuestas del LLM insertará HTML arbitrario en el DOM. No hay sanitización con DOMPurify ni siquiera una CSP en la interfaz web para evitar la ejecución de JavaScript a través de la inyección de HTML. Esto significa que controlar la respuesta del LLM para una sesión de chat obtiene la ejecución de JavaScript en el origen http://localhost:4096. Esta vulnerabilidad está corregida en 1.1.10."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+                "baseScore": 6.1,
+                "baseSeverity": "MEDIUM"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 2.7
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.4,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-79"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:anoma:opencode:*:*:*:*:*:-:*:*",
+                    "matchCriteriaId": "521FFCAB-C7CA-4867-9674-B8AF2637091E",
+                    "versionEndExcluding": "1.1.10"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/anomalyco/opencode/security/advisories/GHSA-c83v-7274-4vgp",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Vendor Advisory",
+              "Exploit"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 13
+    }
+  ],
+  "source": "https://www.cvelogic.com/threat-intelligence/2026-01-12"
+}

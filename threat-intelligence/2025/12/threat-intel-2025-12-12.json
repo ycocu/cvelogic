@@ -1,0 +1,1835 @@
+{
+  "schema_version": "2.2",
+  "generated_at": "2026-06-02T07:33:58Z",
+  "day": "2025-12-12",
+  "window": {
+    "utc_start": "2025-12-12",
+    "utc_end": "2025-12-12",
+    "days": 1
+  },
+  "summary": {
+    "brief": "Google Chromium added to CISA KEV — confirmed in-the-wild exploitation. · WordPress plugin RCE/exploit activity: 2 CVEs flagged today. · Sonicwall Sma 200 Firmware — exploitation likelihood rose sharply (EPSS 58% → 82% · rising (+25%)). · 8 new critical disclosures — review patch status on exposed services.",
+    "bullets": [
+      "Google Chromium added to CISA KEV — confirmed in-the-wild exploitation.",
+      "WordPress plugin RCE/exploit activity: 2 CVEs flagged today.",
+      "Sonicwall Sma 200 Firmware — exploitation likelihood rose sharply (EPSS 58% → 82% · rising (+25%)).",
+      "8 new critical disclosures — review patch status on exposed services."
+    ],
+    "counts": {
+      "cves": 12,
+      "kev": 2,
+      "exploit": 0,
+      "epss": 2,
+      "cvss": 8,
+      "patch": 0
+    }
+  },
+  "cves": [
+    {
+      "cve_id": "CVE-2018-4063",
+      "signal_types": [
+        "KEV"
+      ],
+      "signals": {
+        "kev": {
+          "date_added": "2025-12-12"
+        },
+        "exploit": null,
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2019-05-06",
+        "description": "An exploitable remote code execution vulnerability exists in the upload.cgi functionality of Sierra Wireless AirLink ES450 FW 4.9.3. A specially crafted HTTP request can upload a file, resulting in executable code being uploaded, and routable, to the webserver. An attacker can make an authenticated HTTP request to trigger this vulnerability.",
+        "title": "Sierra Wireless AirLink ALEOS Unrestricted Upload of File with Dangerous Type Vulnerability",
+        "vendor": "sierrawireless",
+        "product": "aleos",
+        "attack_type": "RCE",
+        "cvss_max": 9.0
+      },
+      "cve": {
+        "id": "CVE-2018-4063",
+        "sourceIdentifier": "talos-cna@cisco.com",
+        "published": "2019-05-06T19:29:00.637",
+        "lastModified": "2025-12-15T15:18:49.987",
+        "vulnStatus": "Analyzed",
+        "cisaExploitAdd": "2025-12-12",
+        "cisaActionDue": "2026-01-02",
+        "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+        "cisaVulnerabilityName": "Sierra Wireless AirLink ALEOS Unrestricted Upload of File with Dangerous Type Vulnerability",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "An exploitable remote code execution vulnerability exists in the upload.cgi functionality of Sierra Wireless AirLink ES450 FW 4.9.3. A specially crafted HTTP request can upload a file, resulting in executable code being uploaded, and routable, to the webserver. An attacker can make an authenticated HTTP request to trigger this vulnerability."
+          },
+          {
+            "lang": "es",
+            "value": "Existe una vulnerabilidad explotable de ejecución remota de código en la funcionalidad upload.cgi de Sierra Wireless AirLink ES450 FW 4.9.3. Una petición HTTP especialmente diseñada puede permitir cargar un archivo, que daría como resultado que el código ejecutable se cargue y se pueda enrutar en el servidor web. Un atacante puede realizar una petición HTTP autenticada para desencadenar esta vulnerabilidad."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV2": [
+            {
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:L/Au:S/C:C/I:C/A:C",
+                "baseScore": 9.0,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "baseSeverity": "HIGH",
+              "exploitabilityScore": 8.0,
+              "impactScore": 10.0
+            }
+          ],
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 8.8,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 5.9
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 8.8,
+                "baseSeverity": "HIGH"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-434"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          },
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-434"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:sierrawireless:aleos:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "E9B26ADF-46F0-42E9-B434-B1BDD3B3FA51",
+                    "versionEndExcluding": "4.4.9"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:sierrawireless:airlink_es440:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "A539809A-2F36-49E5-B6E1-7D13057CB5CC"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:sierrawireless:airlink_gx400:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "3ED4507B-D487-40BB-8F0C-DDE252844BF7"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:sierrawireless:airlink_gx440:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "2F6861FB-F310-4B6D-BEDD-0B1611E5CE2D"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:sierrawireless:airlink_ls300:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "06302D92-3C19-414A-B976-779FE9B01915"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:sierrawireless:aleos:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "22BF7599-D3BB-4273-847E-28E84AF19C07",
+                    "versionEndExcluding": "4.11.0"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:sierrawireless:airlink_lx40:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "C4CEDB07-37C9-444F-9670-1807E7C3E734"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:sierrawireless:airlink_lx60:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "631F6248-DA94-4BF8-9F78-3636CBD67F2E"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:sierrawireless:airlink_mp70:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "3D40D05C-2C06-40D7-A060-AB695909E559"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:sierrawireless:airlink_mp70e:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "AD91027A-EFC8-4A29-B880-CE39D00DF86F"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:sierrawireless:airlink_rv50:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "282D04AE-5657-42C6-9EF1-89FA8388D746"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:sierrawireless:airlink_rv50x:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "AA1C2197-E412-4FE2-8DE8-3048A3727A58"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:sierrawireless:aleos:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "5BA6B3FE-7242-44A0-8DFE-0835A06BB61A",
+                    "versionEndExcluding": "4.9.4"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:sierrawireless:airlink_es450:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "3E042BE5-9B2E-42B9-B455-FDB35251B0A6"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:sierrawireless:airlink_gx450:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "F20FC147-11AF-4E39-978A-0BC270B3CF01"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "http://packetstormsecurity.com/files/152648/Sierra-Wireless-AirLink-ES450-ACEManager-upload.cgi-Remote-Code-Execution.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit",
+              "VDB Entry"
+            ]
+          },
+          {
+            "url": "http://www.securityfocus.com/bid/108147",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Broken Link"
+            ]
+          },
+          {
+            "url": "https://ics-cert.us-cert.gov/advisories/ICSA-19-122-03",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory",
+              "US Government Resource"
+            ]
+          },
+          {
+            "url": "https://talosintelligence.com/vulnerability_reports/TALOS-2018-0748",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2018-4063",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "US Government Resource"
+            ]
+          },
+          {
+            "url": "https://www.forescout.com/blog/ot-network-security-threats-industrial-routers-under-attack/",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 88,
+      "rank": 1
+    },
+    {
+      "cve_id": "CVE-2021-20039",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 0.57822,
+            "score_date": "2025-11-21"
+          },
+          "current": {
+            "score": 0.82461,
+            "score_date": "2025-12-12"
+          },
+          "delta": 0.24639
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2021-12-08",
+        "description": "Improper neutralization of special elements in the SMA100 management interface '/cgi-bin/viewcert' POST http method allows a remote authenticated attacker to inject arbitrary commands as a 'nobody' user. This vulnerability affected SMA 200, 210, 400, 410 and 500v appliances.",
+        "title": "sonicwall sma_200_firmware",
+        "vendor": "sonicwall",
+        "product": "sma_200_firmware",
+        "cvss_max": 9.0
+      },
+      "cve": {
+        "id": "CVE-2021-20039",
+        "sourceIdentifier": "PSIRT@sonicwall.com",
+        "published": "2021-12-08T10:15:07.903",
+        "lastModified": "2025-09-05T18:15:35.313",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Improper neutralization of special elements in the SMA100 management interface '/cgi-bin/viewcert' POST http method allows a remote authenticated attacker to inject arbitrary commands as a 'nobody' user. This vulnerability affected SMA 200, 210, 400, 410 and 500v appliances."
+          },
+          {
+            "lang": "es",
+            "value": "Una neutralización inapropiada de elementos especiales en el método http POST de la interfaz de administración de SMA100 \"/cgi-bin/viewcert\" permite a un atacante remoto autenticado inyectar comandos arbitrarios como usuario \"nobody\". Esta vulnerabilidad afecta a los dispositivos SMA 200, 210, 400, 410 y 500v"
+          }
+        ],
+        "metrics": {
+          "cvssMetricV2": [
+            {
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:L/Au:S/C:C/I:C/A:C",
+                "baseScore": 9.0,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "baseSeverity": "HIGH",
+              "exploitabilityScore": 8.0,
+              "impactScore": 10.0
+            }
+          ],
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 8.8,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 5.9
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 8.8,
+                "baseSeverity": "HIGH"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-78"
+              }
+            ],
+            "source": "PSIRT@sonicwall.com"
+          },
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-78"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:sonicwall:sma_200_firmware:9.0.0.11-31sv:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "4D9E19F4-7FF4-426C-8B08-BCC802F653E0"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:sonicwall:sma_200_firmware:10.2.0.8-37sv:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "4185C028-6A07-4A92-8380-9AA3953D2CFD"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:sonicwall:sma_200_firmware:10.2.1.1-19sv:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "33233A45-6667-4CE9-A21C-6A6C725689F8"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:sonicwall:sma_200:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "0B190266-AD6F-401B-9B2E-061CDD539236"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:sonicwall:sma_210_firmware:9.0.0.11-31sv:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "C14BCE5E-887B-41D4-9845-34E3A7CCDE58"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:sonicwall:sma_210_firmware:10.2.0.8-37sv:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "E62EEC93-6F52-4DDB-95F0-D5736391D64C"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:sonicwall:sma_210_firmware:10.2.1.1-19sv:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "E4F1C135-A182-4233-B7FC-D08C754ECE13"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:sonicwall:sma_210:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "51587338-4A5F-41FC-9497-743F061947C2"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:sonicwall:sma_410_firmware:9.0.0.11-31sv:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "9464A061-4218-472A-B981-8E6A653C5D53"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:sonicwall:sma_410_firmware:10.2.0.8-37sv:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "53698BD3-43B6-4EC4-8847-E6ED9A3CB6F6"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:sonicwall:sma_410_firmware:10.2.1.1-19sv:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "8EC74D70-C04B-481F-A706-6C86751996FB"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:sonicwall:sma_410:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "9DFB8FBC-FFA4-4526-B306-D5692A43DC9E"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:sonicwall:sma_400_firmware:9.0.0.11-31sv:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "C842AFF6-C556-4187-957B-548E5649D949"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:sonicwall:sma_400_firmware:10.2.0.8-37sv:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "9BE21589-3BEC-4245-9939-CF50DE70B12A"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:sonicwall:sma_400_firmware:10.2.1.1-19sv:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "BEB82F42-A5DF-42CC-86F9-B06B39BBC202"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:sonicwall:sma_400:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "9D728332-10C9-4508-B720-569D44E99543"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:sonicwall:sma_500v_firmware:9.0.0.11-31sv:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "0E00827E-3007-4EA4-B22A-3BDFC246EA65"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:sonicwall:sma_500v_firmware:10.2.0.8-37sv:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "379F7CA2-8914-4710-AE6B-D2833605D4B8"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:sonicwall:sma_500v_firmware:10.2.1.1-19sv:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "AC429F62-366B-4B68-B378-FB741F9F7FEF"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:sonicwall:sma_500v:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "A6AD8A33-7CE4-4C66-9E23-F0C9C9638770"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "http://packetstormsecurity.com/files/165563/SonicWall-SMA-100-Series-Authenticated-Command-Injection.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory",
+              "VDB Entry"
+            ]
+          },
+          {
+            "url": "https://psirt.global.sonicwall.com/vuln-detail/SNWLID-2021-0026",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://attackerkb.com/topics/9szJhq46lw/cve-2021-20039/rapid7-analysis",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ]
+      },
+      "risk_score": 84,
+      "rank": 2
+    },
+    {
+      "cve_id": "CVE-2025-67728",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-12-12",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-12-12",
+        "description": "Fireshare facilitates self-hosted media and link sharing. Versions 1.2.30 and below allow an authenticated user, or unauthenticated user if the Public Uploads setting is enabled, to craft a malicious filename when uploading a video file. The malicious filename is then concatenated directly into a shell command, which can be used for uploading files to arbitrary directories via path traversal, or executing system commands for Remote Code Execution (RCE). This issue is fixed in version 1.3.0.",
+        "title": "shaneisrael fireshare Path Traversal",
+        "vendor": "shaneisrael",
+        "product": "fireshare",
+        "attack_type": "Path Traversal",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-67728",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2025-12-12T07:15:45.250",
+        "lastModified": "2025-12-22T19:05:45.840",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Fireshare facilitates self-hosted media and link sharing. Versions 1.2.30 and below allow an authenticated user, or unauthenticated user if the Public Uploads setting is enabled, to craft a malicious filename when uploading a video file. The malicious filename is then concatenated directly into a shell command, which can be used for uploading files to arbitrary directories via path traversal, or executing system commands for Remote Code Execution (RCE). This issue is fixed in version 1.3.0."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-77"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:shaneisrael:fireshare:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "30E24CA7-FC23-4509-8F87-ACEE1ADD5BDB",
+                    "versionEndExcluding": "1.3.0"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/ShaneIsrael/fireshare/commit/157386c85f6683f89192dae52115069b435b6d34",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://github.com/ShaneIsrael/fireshare/security/advisories/GHSA-c4f5-g622-q72m",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 3
+    },
+    {
+      "cve_id": "CVE-2008-3733",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 0.18718,
+            "score_date": "2025-10-10"
+          },
+          "current": {
+            "score": 0.43029,
+            "score_date": "2025-12-12"
+          },
+          "delta": 0.24311
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2008-08-20",
+        "description": "Stack-based buffer overflow in EO Video (eo-video) 1.36 allows remote attackers to cause a denial of service (application crash) or execute arbitrary code via a .eop (aka playlist) file with a ProjectElement element that contains a long Name element.",
+        "title": "eo-video eo-video Buffer Overflow",
+        "vendor": "eo-video",
+        "product": "eo-video",
+        "attack_type": "Buffer Overflow",
+        "cvss_max": 9.3
+      },
+      "cve": {
+        "id": "CVE-2008-3733",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2008-08-20T16:41:00.000",
+        "lastModified": "2026-04-23T00:35:47.467",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Stack-based buffer overflow in EO Video (eo-video) 1.36 allows remote attackers to cause a denial of service (application crash) or execute arbitrary code via a .eop (aka playlist) file with a ProjectElement element that contains a long Name element."
+          },
+          {
+            "lang": "es",
+            "value": "Desbordamiento de búfer basado en pila en EO Video (eo-video) 1.36, permite a atacantes remotos provocar una denegación de servicio (caída de la aplicación) o ejecutar código de su elección mediante un fichero .eop (también conocido como playlist) con un elemento ProjectElement que contiene un elemento Name largo."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV2": [
+            {
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:M/Au:N/C:C/I:C/A:C",
+                "baseScore": 9.3,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "baseSeverity": "HIGH",
+              "exploitabilityScore": 8.6,
+              "impactScore": 10.0
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-119"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:eo-video:eo-video:1.36:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "8CDC0950-6A4A-4DF1-8C54-FFC22DF6A855"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "http://secunia.com/advisories/31511",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "http://securityreason.com/securityalert/4171",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://www.securityfocus.com/bid/30717",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit"
+            ]
+          },
+          {
+            "url": "https://exchange.xforce.ibmcloud.com/vulnerabilities/44508",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "https://www.exploit-db.com/exploits/6253",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          }
+        ]
+      },
+      "risk_score": 85,
+      "rank": 4
+    },
+    {
+      "cve_id": "CVE-2024-58299",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-12-12",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-12-12",
+        "description": "PCMan FTP Server 2.0 contains a buffer overflow vulnerability in the 'pwd' command that allows remote attackers to execute arbitrary code. Attackers can send a specially crafted payload during the FTP login process to overwrite memory and potentially gain system access.",
+        "title": "PCMan FTP Server 2.0 contains a buffer overflow vulnerability in the 'pwd' command that allows remote attackers to execute arbitrary code.",
+        "attack_type": "Buffer Overflow",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2024-58299",
+        "sourceIdentifier": "disclosure@vulncheck.com",
+        "published": "2025-12-12T20:15:38.707",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "PCMan FTP Server 2.0 contains a buffer overflow vulnerability in the 'pwd' command that allows remote attackers to execute arbitrary code. Attackers can send a specially crafted payload during the FTP login process to overwrite memory and potentially gain system access."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-121"
+              }
+            ],
+            "source": "disclosure@vulncheck.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://sourceforge.net/projects/pcmanftpd/",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://www.exploit-db.com/exploits/51767",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://www.vulncheck.com/advisories/pcman-ftp-server-remote-buffer-overflow-via-pwd-command",
+            "source": "disclosure@vulncheck.com"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 5
+    },
+    {
+      "cve_id": "CVE-2025-12963",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-12-12",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-12-12",
+        "description": "The LazyTasks – Project & Task Management with Collaboration, Kanban and Gantt Chart plugin for WordPress is vulnerable to privilege escalation via account takeover in all versions up to, and including, 1.2.29. This is due to the plugin not properly validating a user's identity via the 'wp-json/lazytasks/api/v1/user/role/edit/' REST API endpoint prior to updating their details like email address. This makes it possible for unauthenticated attackers to change arbitrary user's email addresses, including administrators, and leverage that to reset the user's password and gain access to their account. It is also possible for attackers to abuse this endpoint to grant users with access to additional roles within the plugin",
+        "title": "The LazyTasks – Project & Task Management with Collaboration, Kanban and Gantt Chart plugin for WordPress is vulnerable to privilege esca...",
+        "attack_type": "Privilege Escalation",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-12963",
+        "sourceIdentifier": "security@wordfence.com",
+        "published": "2025-12-12T04:15:40.647",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The LazyTasks – Project & Task Management with Collaboration, Kanban and Gantt Chart plugin for WordPress is vulnerable to privilege escalation via account takeover in all versions up to, and including, 1.2.29. This is due to the plugin not properly validating a user's identity via the 'wp-json/lazytasks/api/v1/user/role/edit/' REST API endpoint prior to updating their details like email address. This makes it possible for unauthenticated attackers to change arbitrary user's email addresses, including administrators, and leverage that to reset the user's password and gain access to their account. It is also possible for attackers to abuse this endpoint to grant users with access to additional roles within the plugin"
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security@wordfence.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-862"
+              }
+            ],
+            "source": "security@wordfence.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://wordpress.org/plugins/lazytasks-project-task-management/",
+            "source": "security@wordfence.com"
+          },
+          {
+            "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/c6998185-0f9b-48ab-9dca-05adf5ae603a?source=cve",
+            "source": "security@wordfence.com"
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 6
+    },
+    {
+      "cve_id": "CVE-2025-14174",
+      "signal_types": [
+        "KEV"
+      ],
+      "signals": {
+        "kev": {
+          "date_added": "2025-12-12"
+        },
+        "exploit": null,
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-12-12",
+        "description": "Out of bounds memory access in ANGLE in Google Chrome on Mac prior to 143.0.7499.110 allowed a remote attacker to perform out of bounds memory access via a crafted HTML page. (Chromium security severity: High)",
+        "title": "Google Chromium Out of Bounds Memory Access Vulnerability",
+        "vendor": "google",
+        "product": "chrome",
+        "attack_type": "memory safety",
+        "cvss_max": 8.8
+      },
+      "cve": {
+        "id": "CVE-2025-14174",
+        "sourceIdentifier": "chrome-cve-admin@google.com",
+        "published": "2025-12-12T20:15:39.663",
+        "lastModified": "2025-12-15T15:16:08.650",
+        "vulnStatus": "Analyzed",
+        "cisaExploitAdd": "2025-12-12",
+        "cisaActionDue": "2026-01-02",
+        "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+        "cisaVulnerabilityName": "Google Chromium Out of Bounds Memory Access Vulnerability",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Out of bounds memory access in ANGLE in Google Chrome on Mac prior to 143.0.7499.110 allowed a remote attacker to perform out of bounds memory access via a crafted HTML page. (Chromium security severity: High)"
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+                "baseScore": 8.8,
+                "baseSeverity": "HIGH"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-787"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          },
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-119"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:google:chrome:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "FDA5B0F4-9057-4518-B466-6BCF98CD1D77",
+                    "versionStartIncluding": "143.0.7499.41",
+                    "versionEndExcluding": "143.0.7499.110"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:macos:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "387021A0-AF36-463C-A605-32EA7DAC172E"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:google:chrome:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "D1F4C45F-9F9C-4619-82A6-AAE4CD7E99AE",
+                    "versionStartIncluding": "143.0.7499.40",
+                    "versionEndExcluding": "143.0.7499.109"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "703AF700-7A70-47E2-BC3A-7FD03B3CA9C1"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "A2572D17-1DE6-457B-99CC-64AFD54487EA"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:google:chrome:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "0B58E8B8-70DB-4AA7-A44D-C161EF179863",
+                    "versionEndIncluding": "143.0.7499.40"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:apple:safari:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "3ECBF838-536C-47F9-9876-C526B8ED32EC",
+                    "versionEndExcluding": "26.2"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:ipados:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "6547722A-1226-4E23-B3AE-8692B07C2657",
+                    "versionEndExcluding": "18.7.3"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:ipados:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "8B71D919-1AA2-4F17-A834-4B703E36F7E2",
+                    "versionStartIncluding": "26.0",
+                    "versionEndExcluding": "26.2"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:iphone_os:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "8928A377-93BD-49AD-B4FE-5B2328EBDB70",
+                    "versionEndExcluding": "18.7.3"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:iphone_os:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "10FD01C3-D77F-4FE4-8195-F2C59FB1321C",
+                    "versionStartIncluding": "26.0",
+                    "versionEndExcluding": "26.2"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:macos:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "FBA92B6D-E36C-432B-A041-94D81427CD75",
+                    "versionEndExcluding": "26.2"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:tvos:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "E0BBFB45-21F3-4B72-8DB1-BE72AFE0D2AB",
+                    "versionEndExcluding": "26.2"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:visionos:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "EB10D901-4800-4DF9-AB35-48017C178161",
+                    "versionEndExcluding": "26.2"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:watchos:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "15574823-ECE0-4394-99BC-6AFA34E599CC",
+                    "versionEndExcluding": "26.2"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:microsoft:edge_chromium:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "3AB5F00F-BB8F-41E6-A03A-299FD2D48926",
+                    "versionEndExcluding": "143.0.3650.80"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://chromereleases.googleblog.com/2025/12/stable-channel-update-for-desktop_10.html",
+            "source": "chrome-cve-admin@google.com",
+            "tags": [
+              "Release Notes"
+            ]
+          },
+          {
+            "url": "https://issues.chromium.org/issues/466192044",
+            "source": "chrome-cve-admin@google.com",
+            "tags": [
+              "Permissions Required"
+            ]
+          },
+          {
+            "url": "https://learn.microsoft.com/en-us/deployedge/microsoft-edge-relnotes-security",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2025-14174",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 88,
+      "rank": 7
+    },
+    {
+      "cve_id": "CVE-2025-14344",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-12-12",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-12-12",
+        "description": "The Multi Uploader for Gravity Forms plugin for WordPress is vulnerable to arbitrary file deletion due to insufficient file path validation in the 'plupload_ajax_delete_file' function in all versions up to, and including, 1.1.7. This makes it possible for unauthenticated attackers to delete arbitrary files on the server.",
+        "title": "The Multi Uploader for Gravity Forms plugin for WordPress is vulnerable to arbitrary file deletion due to insufficient file path validati...",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-14344",
+        "sourceIdentifier": "security@wordfence.com",
+        "published": "2025-12-12T04:15:49.590",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The Multi Uploader for Gravity Forms plugin for WordPress is vulnerable to arbitrary file deletion due to insufficient file path validation in the 'plupload_ajax_delete_file' function in all versions up to, and including, 1.1.7. This makes it possible for unauthenticated attackers to delete arbitrary files on the server."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security@wordfence.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-22"
+              }
+            ],
+            "source": "security@wordfence.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/gf-multi-uploader/tags/1.1.7/inc/GFMUHandlePluploader.class.php?marks=41-43#L41",
+            "source": "security@wordfence.com"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/changeset/3421317/",
+            "source": "security@wordfence.com"
+          },
+          {
+            "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/346af237-0411-4cc4-9544-eab697385a2f?source=cve",
+            "source": "security@wordfence.com"
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 8
+    },
+    {
+      "cve_id": "CVE-2025-54947",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-12-12",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-12-12",
+        "description": "In Apache StreamPark versions 2.0.0 through 2.1.7, a security vulnerability involving a hard-coded encryption key exists. This vulnerability occurs because the system uses a fixed, immutable key for encryption instead of dynamically generating or securely configuring the key. Attackers may obtain this key through reverse engineering or code analysis, potentially decrypting sensitive data or forging encrypted information, leading to information disclosure or unauthorized system access.\n\nThis issue affects Apache StreamPark: from 2.0.0 before 2.1.7.\n\nUsers are recommended to upgrade to version 2.1.7, which fixes the issue.",
+        "title": "apache streampark",
+        "vendor": "apache",
+        "product": "streampark",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-54947",
+        "sourceIdentifier": "security@apache.org",
+        "published": "2025-12-12T15:15:53.577",
+        "lastModified": "2025-12-15T17:20:46.757",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "In Apache StreamPark versions 2.0.0 through 2.1.7, a security vulnerability involving a hard-coded encryption key exists. This vulnerability occurs because the system uses a fixed, immutable key for encryption instead of dynamically generating or securely configuring the key. Attackers may obtain this key through reverse engineering or code analysis, potentially decrypting sensitive data or forging encrypted information, leading to information disclosure or unauthorized system access.\n\nThis issue affects Apache StreamPark: from 2.0.0 before 2.1.7.\n\nUsers are recommended to upgrade to version 2.1.7, which fixes the issue."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+                "baseScore": 5.3,
+                "baseSeverity": "MEDIUM"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 1.4
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-321"
+              }
+            ],
+            "source": "security@apache.org"
+          },
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-798"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:apache:streampark:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "18BD3C9F-61F6-4D68-B0E7-333A94F827ED",
+                    "versionStartIncluding": "2.0.0",
+                    "versionEndExcluding": "2.1.7"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://lists.apache.org/thread/kdntmzyzrco75x9q6mc6s8lty1fxmog1",
+            "source": "security@apache.org",
+            "tags": [
+              "Mailing List"
+            ]
+          },
+          {
+            "url": "http://www.openwall.com/lists/oss-security/2025/12/12/3",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Mailing List"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 9
+    },
+    {
+      "cve_id": "CVE-2025-58130",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-12-12",
+          "previous_max": null,
+          "current_max": 9.1
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-12-12",
+        "description": "Insufficiently Protected Credentials vulnerability in Apache Fineract.\n\nThis issue affects Apache Fineract: through 1.11.0. The issue is fixed in version 1.12.1.\n\nUsers are encouraged to upgrade to version 1.13.0, the latest release.",
+        "title": "apache fineract",
+        "vendor": "apache",
+        "product": "fineract",
+        "cvss_max": 9.1
+      },
+      "cve": {
+        "id": "CVE-2025-58130",
+        "sourceIdentifier": "security@apache.org",
+        "published": "2025-12-12T10:15:49.223",
+        "lastModified": "2025-12-18T14:54:40.857",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Insufficiently Protected Credentials vulnerability in Apache Fineract.\n\nThis issue affects Apache Fineract: through 1.11.0. The issue is fixed in version 1.12.1.\n\nUsers are encouraged to upgrade to version 1.13.0, the latest release."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+                "baseScore": 9.1,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.2
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-522"
+              }
+            ],
+            "source": "security@apache.org"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:apache:fineract:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "D0E0C1ED-CEE5-4A99-956F-B85A27C3E51E",
+                    "versionEndExcluding": "1.12.1"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://lists.apache.org/thread/d9zpkc86zk265523tfvbr8w7gyr6onoy",
+            "source": "security@apache.org",
+            "tags": [
+              "Issue Tracking",
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "http://www.openwall.com/lists/oss-security/2025/12/11/6",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Mailing List",
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 10
+    },
+    {
+      "cve_id": "CVE-2025-65854",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-12-12",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-12-12",
+        "description": "Insecure permissions in the scheduled tasks feature of MineAdmin v3.x allows attackers to execute arbitrary commands and execute a full account takeover.",
+        "title": "mineadmin mineadmin",
+        "vendor": "mineadmin",
+        "product": "mineadmin",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-65854",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2025-12-12T16:15:44.843",
+        "lastModified": "2025-12-19T20:02:23.077",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Insecure permissions in the scheduled tasks feature of MineAdmin v3.x allows attackers to execute arbitrary commands and execute a full account takeover."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-94"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:mineadmin:mineadmin:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "499B15B5-70D9-4FC8-9D84-9E945F06B666",
+                    "versionEndExcluding": "3.0"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "http://mineadmin.com",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Product"
+            ]
+          },
+          {
+            "url": "https://gist.github.com/SourByte05/1a6c6b08ac47c5d58eb7dd4422cc23b7",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.mineadmin.com/",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Product"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 11
+    },
+    {
+      "cve_id": "CVE-2025-66430",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-12-12",
+          "previous_max": null,
+          "current_max": 9.1
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-12-12",
+        "description": "Plesk 18.0 has Incorrect Access Control.",
+        "title": "plesk plesk",
+        "vendor": "plesk",
+        "product": "plesk",
+        "cvss_max": 9.1
+      },
+      "cve": {
+        "id": "CVE-2025-66430",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2025-12-12T16:15:44.980",
+        "lastModified": "2026-01-06T14:59:12.427",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Plesk 18.0 has Incorrect Access Control."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+                "baseScore": 9.1,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.2
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-284"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:plesk:plesk:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "FC8197AF-D516-4B11-9348-ED1E7A707C40",
+                    "versionStartIncluding": "18.0.70",
+                    "versionEndExcluding": "18.0.73.5"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:plesk:plesk:*:-:*:*:*:*:*:*",
+                    "matchCriteriaId": "314C9CDF-22D8-418A-8BBB-504794C0680A",
+                    "versionStartIncluding": "18.0.74",
+                    "versionEndExcluding": "18.0.74.2"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://docs.plesk.com/release-notes/obsidian/whats-new/",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Product"
+            ]
+          },
+          {
+            "url": "https://support.plesk.com/hc/en-us/articles/36261922405015--CVE-2025-66430-Security-vulnerability-in-Password-Protected-Directories-allows-Plesk-users-to-gain-root-level-access-to-a-Plesk-server",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 12
+    }
+  ],
+  "source": "https://www.cvelogic.com/threat-intelligence/2025-12-12"
+}

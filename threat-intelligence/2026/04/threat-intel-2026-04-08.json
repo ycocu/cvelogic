@@ -1,0 +1,3281 @@
+{
+  "schema_version": "2.2",
+  "generated_at": "2026-06-02T07:34:52Z",
+  "day": "2026-04-08",
+  "window": {
+    "utc_start": "2026-04-08",
+    "utc_end": "2026-04-08",
+    "days": 1
+  },
+  "summary": {
+    "brief": "Ivanti Endpoint Manager Mobile (EPMM) added to CISA KEV — confirmed in-the-wild exploitation. · 7-zip: public exploit or PoC linked (RCE) · Microsoft Windows 10 — exploitation likelihood rose sharply (EPSS 63% → 76% · rising (+13%)). · 10 new critical disclosures — review patch status on exposed services.",
+    "bullets": [
+      "Ivanti Endpoint Manager Mobile (EPMM) added to CISA KEV — confirmed in-the-wild exploitation.",
+      "7-zip: public exploit or PoC linked (RCE)",
+      "Microsoft Windows 10 — exploitation likelihood rose sharply (EPSS 63% → 76% · rising (+13%)).",
+      "10 new critical disclosures — review patch status on exposed services."
+    ],
+    "counts": {
+      "cves": 19,
+      "kev": 1,
+      "exploit": 6,
+      "epss": 2,
+      "cvss": 10,
+      "patch": 0
+    }
+  },
+  "cves": [
+    {
+      "cve_id": "CVE-2026-1340",
+      "signal_types": [
+        "KEV"
+      ],
+      "signals": {
+        "kev": {
+          "date_added": "2026-04-08"
+        },
+        "exploit": null,
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-01-29",
+        "description": "A code injection in Ivanti Endpoint Manager Mobile allowing attackers to achieve unauthenticated remote code execution.",
+        "title": "Ivanti Endpoint Manager Mobile (EPMM) Code Injection Vulnerability",
+        "vendor": "ivanti",
+        "product": "endpoint_manager_mobile",
+        "attack_type": "RCE",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2026-1340",
+        "sourceIdentifier": "3c1d8aa1-5a33-4ea4-8992-aadd6440af75",
+        "published": "2026-01-29T22:15:53.313",
+        "lastModified": "2026-04-09T14:03:31.767",
+        "vulnStatus": "Analyzed",
+        "cisaExploitAdd": "2026-04-08",
+        "cisaActionDue": "2026-04-11",
+        "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+        "cisaVulnerabilityName": "Ivanti Endpoint Manager Mobile (EPMM) Code Injection Vulnerability",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A code injection in Ivanti Endpoint Manager Mobile allowing attackers to achieve unauthenticated remote code execution."
+          },
+          {
+            "lang": "es",
+            "value": "Una inyección de código en Ivanti Endpoint Manager Mobile que permite a los atacantes lograr ejecución remota de código no autenticada."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "3c1d8aa1-5a33-4ea4-8992-aadd6440af75",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-94"
+              }
+            ],
+            "source": "3c1d8aa1-5a33-4ea4-8992-aadd6440af75"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:ivanti:endpoint_manager_mobile:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "C6499D2A-3DC7-4120-ADBB-36DA63D9C95C",
+                    "versionEndIncluding": "12.7.0.0"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://forums.ivanti.com/s/article/Security-Advisory-Ivanti-Endpoint-Manager-Mobile-EPMM-CVE-2026-1281-CVE-2026-1340",
+            "source": "3c1d8aa1-5a33-4ea4-8992-aadd6440af75",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-1340",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Third Party Advisory",
+              "US Government Resource"
+            ]
+          }
+        ]
+      },
+      "risk_score": 88,
+      "rank": 1
+    },
+    {
+      "cve_id": "CVE-2023-33177",
+      "signal_types": [
+        "EXP"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": {
+          "ref_published": "2026-04-08"
+        },
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2023-05-30",
+        "description": "Xibo is a content management system (CMS). A path traversal vulnerability exists in the Xibo CMS whereby a specially crafted zip file can be uploaded to the CMS via the layout import function by an authenticated user which would allow creation of files outside of the CMS library directory as the webserver user. This can be used to upload a PHP webshell inside the web root directory and achieve remote code execution as the webserver user. Users should upgrade to version 2.3.17 or 3.3.5, which fix this issue. Customers who host their CMS with Xibo Signage have already received an upgrade or patch to resolve this issue regardless of the CMS version that they are running.",
+        "title": "xibosignage xibo Path Traversal",
+        "vendor": "xibosignage",
+        "product": "xibo",
+        "attack_type": "Path Traversal",
+        "cvss_max": 8.8
+      },
+      "cve": {
+        "id": "CVE-2023-33177",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2023-05-30T20:15:10.837",
+        "lastModified": "2024-11-21T08:05:03.337",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Xibo is a content management system (CMS). A path traversal vulnerability exists in the Xibo CMS whereby a specially crafted zip file can be uploaded to the CMS via the layout import function by an authenticated user which would allow creation of files outside of the CMS library directory as the webserver user. This can be used to upload a PHP webshell inside the web root directory and achieve remote code execution as the webserver user. Users should upgrade to version 2.3.17 or 3.3.5, which fix this issue. Customers who host their CMS with Xibo Signage have already received an upgrade or patch to resolve this issue regardless of the CMS version that they are running."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 8.8,
+                "baseSeverity": "HIGH"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 5.9
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 8.8,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-22"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          },
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-22"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:xibosignage:xibo:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "8C5BA7B5-A641-4549-A091-5FD03BB571B7",
+                    "versionStartIncluding": "1.8.0",
+                    "versionEndExcluding": "2.3.17"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:xibosignage:xibo:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "A9A69FAF-8979-43F9-AA38-10568026EFE4",
+                    "versionStartIncluding": "3.0.0",
+                    "versionEndExcluding": "3.3.5"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://claroty.com/team82/disclosure-dashboard",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/xibosignage/xibo-cms/commit/1cbba380fa751a00756e70d7b08b5c6646092658",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://github.com/xibosignage/xibo-cms/commit/45c6b53c3978639db03b63270a56f4397f49b2c9",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://github.com/xibosignage/xibo-cms/security/advisories/GHSA-jj27-x85q-crqv",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Patch",
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://xibosignage.com/blog/security-advisory-2023-05/",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 78,
+      "rank": 2
+    },
+    {
+      "cve_id": "CVE-2021-1678",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 0.63432,
+            "score_date": "2025-12-28"
+          },
+          "current": {
+            "score": 0.75972,
+            "score_date": "2026-04-08"
+          },
+          "delta": 0.1254
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2021-01-12",
+        "description": "Windows Print Spooler Spoofing Vulnerability",
+        "title": "microsoft windows_10",
+        "vendor": "microsoft",
+        "product": "windows_10",
+        "cvss_max": 8.8
+      },
+      "cve": {
+        "id": "CVE-2021-1678",
+        "sourceIdentifier": "secure@microsoft.com",
+        "published": "2021-01-12T20:15:32.510",
+        "lastModified": "2024-11-21T05:44:52.620",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Windows Print Spooler Spoofing Vulnerability"
+          },
+          {
+            "lang": "es",
+            "value": "Una Vulnerabilidad de Omisión de la Funcionalidad de NTLM Security"
+          }
+        ],
+        "metrics": {
+          "cvssMetricV2": [
+            {
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:L/Au:N/C:P/I:N/A:N",
+                "baseScore": 5.0,
+                "baseSeverity": "MEDIUM"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "baseSeverity": "MEDIUM",
+              "exploitabilityScore": 10.0,
+              "impactScore": 2.9
+            }
+          ],
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+                "baseScore": 8.8,
+                "baseSeverity": "HIGH"
+              },
+              "source": "secure@microsoft.com",
+              "type": "Secondary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 5.9
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+                "baseScore": 7.5,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 3.6
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "NVD-CWE-noinfo"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_10:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "21540673-614A-4D40-8BD7-3F07723803B0"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_10:20h2:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "9E2C378B-1507-4C81-82F6-9F599616845A"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_10:1607:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "E01A4CCA-4C43-46E0-90E6-3E4DBFBACD64"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_10:1803:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "7CB85C75-4D35-480E-843D-60579EC75FCB"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_10:1809:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "6B8F3DD2-A145-4AF1-8545-CC42892DA3D1"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_10:1909:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "E9273B95-20ED-4547-B0A8-95AD15B30372"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_10:2004:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "AAE74AF3-C559-4645-A6C0-25C3D647AAC8"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_7:-:sp1:*:*:*:*:*:*",
+                    "matchCriteriaId": "C2B1C231-DE19-4B8F-A4AA-5B3A65276E46"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_8.1:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "E93068DB-549B-45AB-8E5C-00EB5D8B5CF8"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_rt_8.1:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "C6CE5198-C498-4672-AF4C-77AB4BE06C5C"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_server_2008:-:sp2:*:*:*:*:*:*",
+                    "matchCriteriaId": "5F422A8C-2C4E-42C8-B420-E0728037E15C"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_server_2008:r2:sp1:*:*:*:*:x64:*",
+                    "matchCriteriaId": "AF07A81D-12E5-4B1D-BFF9-C8D08C32FF4F"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_server_2012:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "A7DF96F8-BA6A-4780-9CA3-F719B3F81074"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_server_2012:r2:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "DB18C4CE-5917-401E-ACF7-2747084FD36E"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_server_2016:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "041FF8BA-0B12-4A1F-B4BF-9C4F33B7C1E7"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_server_2016:20h2:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "4A190388-AA82-4504-9D5A-624F23268C9F"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_server_2016:1909:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "C253A63F-03AB-41CB-A03A-B2674DEA98AA"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_server_2016:2004:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "0B60D940-80C7-49F0-8F4E-3F99AC15FA82"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_server_2019:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "DB79EE26-FC32-417D-A49C-A1A63165A968"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-1678",
+            "source": "secure@microsoft.com"
+          },
+          {
+            "url": "https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2021-1678",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          }
+        ]
+      },
+      "risk_score": 84,
+      "rank": 3
+    },
+    {
+      "cve_id": "CVE-2013-0984",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 0.15757,
+            "score_date": "2026-03-25"
+          },
+          "current": {
+            "score": 0.26118,
+            "score_date": "2026-04-08"
+          },
+          "delta": 0.10361
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2013-06-05",
+        "description": "Directory Service in Apple Mac OS X through 10.6.8 allows remote attackers to execute arbitrary code or cause a denial of service (daemon crash) via a crafted message.",
+        "title": "apple mac_os_x DoS",
+        "vendor": "apple",
+        "product": "mac_os_x",
+        "attack_type": "DoS",
+        "cvss_max": 9.3
+      },
+      "cve": {
+        "id": "CVE-2013-0984",
+        "sourceIdentifier": "product-security@apple.com",
+        "published": "2013-06-05T14:39:55.487",
+        "lastModified": "2026-04-29T01:13:23.040",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Directory Service in Apple Mac OS X through 10.6.8 allows remote attackers to execute arbitrary code or cause a denial of service (daemon crash) via a crafted message."
+          },
+          {
+            "lang": "es",
+            "value": "Servicio de directorio de Apple Mac OS X hasta v10.6.8 permite a atacantes remotos ejecutar código arbitrario o causar una denegación de servicio (caída del demonio) a través de un mensaje elaborado."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV2": [
+            {
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:M/Au:N/C:C/I:C/A:C",
+                "baseScore": 9.3,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "baseSeverity": "HIGH",
+              "exploitabilityScore": 8.6,
+              "impactScore": 10.0
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-119"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:mac_os_x:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "D1A0EBC0-73C1-4640-90AD-4371D1C0D09F",
+                    "versionEndIncluding": "10.6.8"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:mac_os_x:10.0.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "399A8984-AADE-4281-A62F-A066D8F450A4"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:mac_os_x:10.0.1:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "0BC31B69-3DE1-4CF3-ADC9-CA0BF1714CBF"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:mac_os_x:10.0.2:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "77CC671C-6D89-4279-86F7-DDE1D4D9A0CA"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:mac_os_x:10.0.3:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "8E4B77F6-E71C-45ED-96CC-7872AD2FCBF8"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:mac_os_x:10.0.4:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "066ABC3B-B395-42D2-95C0-5B810F91A6F0"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:mac_os_x:10.1.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "734BE71B-82F5-49C6-AB43-F662105D8746"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:mac_os_x:10.1.1:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "421FC2DD-0CF7-44A2-A63C-5221689E2363"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:mac_os_x:10.1.2:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "0F8B70BC-42B7-453A-B506-7BE69D49A4B5"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:mac_os_x:10.1.3:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "FAAC6EA5-DCB2-4A50-A8BC-25CC43FAEF9B"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:mac_os_x:10.1.4:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "CA32F7D8-02F8-4CFE-B193-2888807BC4D6"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:mac_os_x:10.1.5:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "A9DCDE70-07DA-4F0B-805F-6BA03D410CD6"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:mac_os_x:10.2.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "BB7F7799-33A1-4A8E-915A-B0D503A3DFFE"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:mac_os_x:10.2.1:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "AE52A344-8B07-480D-A57F-B1F6E6574F3B"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:mac_os_x:10.2.2:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "56CC0444-570C-4BB5-B53A-C5CA0BD87935"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:mac_os_x:10.2.3:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "62E3EED7-FE30-4620-B40B-9CC49B77408A"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:mac_os_x:10.2.4:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "5AFD8BC6-4893-4D9D-A26E-27AAC864F94B"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:mac_os_x:10.2.5:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "9BD1F9A1-5ADB-451D-9525-D545E42D2B8F"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:mac_os_x:10.2.6:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "D7A24978-2891-425C-ACF6-E8F5C839C54A"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:mac_os_x:10.2.7:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "9B20E130-6078-4336-B614-273C27142B46"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:mac_os_x:10.2.8:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "AB461678-560D-436E-A3AE-9E1E16DB0412"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:mac_os_x:10.3.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "F0DD3165-E6C3-49D4-B1F8-8E0915CC8BF4"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:mac_os_x:10.3.1:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "ED9BE602-A740-4CF7-9CAF-59061B16AB31"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:mac_os_x:10.3.2:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "33E698C1-C313-40E6-BAF9-7C8F9CF02484"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:mac_os_x:10.3.3:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "BF2D00AC-FA2A-4C39-B796-DC19072862CF"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:mac_os_x:10.3.4:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "421079DA-B605-4E05-9454-C30CF7631CF4"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:mac_os_x:10.3.5:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "93B734BA-3435-40A9-B22B-5D56CEB865A7"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:mac_os_x:10.3.6:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "C4B57B3E-B1B2-4F13-99D3-4F9DB3C07B5E"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:mac_os_x:10.3.7:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "30897327-44DD-4D6C-B8B6-2D66C44EA55D"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:mac_os_x:10.3.8:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "B79D8F73-2E78-4A67-96BB-21AD9BCB0094"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:mac_os_x:10.3.9:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "DC6931D5-DE7E-41F6-ADDC-AB5A8A167F69"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:mac_os_x:10.4.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "6B8B16DB-4D1F-41B7-A7A2-2A443596E1AE"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:mac_os_x:10.4.1:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "AFD4DE58-46C7-4E69-BF36-C5FD768B8248"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:mac_os_x:10.4.2:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "CF824694-52DE-44E3-ACAD-60B2A84CD3CE"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:mac_os_x:10.4.3:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "B73A0891-A37A-4E0D-AA73-B18BFD6B1447"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:mac_os_x:10.4.4:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "26AC38AB-D689-4B2B-9DAE-F03F4DFD15BE"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:mac_os_x:10.4.5:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "0C580935-0091-4163-B747-750FB7686973"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:mac_os_x:10.4.6:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "BB0F2132-8431-4CEF-9A3D-A69425E3834E"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:mac_os_x:10.4.7:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "8719F3C4-F1DE-49B5-9301-22414A2B6F9C"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:mac_os_x:10.4.8:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "09ED46A8-1739-411C-8807-2A416BDB6DFE"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:mac_os_x:10.4.9:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "786BB737-EA99-4EC6-B742-0C35BF2453F9"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:mac_os_x:10.4.10:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "8D089858-3AF9-4B82-912D-AA33F25E3715"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:mac_os_x:10.4.11:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "6EE39585-CF3B-4493-96D8-B394544C7643"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:mac_os_x:10.5.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "DC90AA12-DD17-4607-90CB-E342E83F20BB"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:mac_os_x:10.5.1:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "3F3E721C-00CA-4D51-B542-F2BC5C0D65BF"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:mac_os_x:10.5.2:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "B3267A41-1AE0-48B8-BD1F-DEC8A212851A"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:mac_os_x:10.5.3:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "855288F1-0242-4951-AB3F-B7AF13E21CF6"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:mac_os_x:10.5.4:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "10082781-B93E-4B84-94F2-FA9749B4D92B"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:mac_os_x:10.5.5:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "AE1EBF04-C440-4A6B-93F2-DC3A812728C2"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:mac_os_x:10.5.6:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "DFB077A2-927B-43AF-BFD5-0E78648C9394"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:mac_os_x:10.5.7:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "2398ADC8-A106-462E-B9AE-F8AF800D0A3C"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:mac_os_x:10.5.8:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "1335E35A-D381-4056-9E78-37BC6DF8AD98"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:mac_os_x:10.6.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "3C69DEE9-3FA5-408E-AD27-F5E7043F852A"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:mac_os_x:10.6.1:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "D25D1FD3-C291-492C-83A7-0AFAFAADC98D"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:mac_os_x:10.6.2:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "5B565F77-C310-4B83-B098-22F9489C226C"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:mac_os_x:10.6.3:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "546EBFC8-79F0-42C2-9B9A-A76CA3F19470"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:mac_os_x:10.6.4:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "119C8089-8C98-472E-9E9C-1741AA21DD35"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:mac_os_x:10.6.5:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "831C5105-6409-4743-8FB5-A91D8956202F"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:mac_os_x:10.6.6:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "0B63D169-E2AA-4315-891F-B4AF99F2753C"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:mac_os_x:10.6.7:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "1E715DFC-ADB8-43D0-9941-76BB0BE7BCF5"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:mac_os_x_server:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "D2077409-796A-46B0-9968-DD7F441B89D4",
+                    "versionEndIncluding": "10.6.8"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:mac_os_x_server:10.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "DB279593-17D1-4A65-BF54-969B38B74B23"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:mac_os_x_server:10.0.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "90383DA6-C449-462B-84AD-8DC567D367ED"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:mac_os_x_server:10.0.1:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "4D846700-3355-42CA-B15E-7F08F935F2B9"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:mac_os_x_server:10.0.2:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "3891C974-DBDE-42AD-ADBA-C8689D0D055D"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:mac_os_x_server:10.0.3:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "6A6CE48E-FB74-4F49-911D-936B09677753"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:mac_os_x_server:10.0.4:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "ADAB244E-0391-49E9-B36B-A7CB34CF7152"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:mac_os_x_server:10.1:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "80F5B731-D5A7-4694-9B27-CEE1DCC810EC"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:mac_os_x_server:10.1.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "DA38FB0C-3959-4C5A-B06D-39B2A340A173"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:mac_os_x_server:10.1.1:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "8D5DB7BE-FC71-4ADE-8B9F-7EA401C8CA88"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:mac_os_x_server:10.1.2:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "D3E2571E-D9EB-43CD-82DD-8C813FF8D5E5"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:mac_os_x_server:10.1.3:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "36F4618C-1408-4097-B97D-5F32DE6D01DF"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:mac_os_x_server:10.1.4:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "5F558C40-D0DA-4700-95DA-DF1322C020E6"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:mac_os_x_server:10.1.5:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "64F8F30B-E4B8-4745-AFFA-8FD620E61994"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:mac_os_x_server:10.2:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "00AE033B-5F16-4262-A397-02D7450189B8"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:mac_os_x_server:10.2.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "02B8266D-69BB-417D-A776-DB9CF58A4C67"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:mac_os_x_server:10.2.1:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "2E831F3E-A980-47AF-BD05-2DB1A14689B4"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:mac_os_x_server:10.2.2:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "36991737-904F-4B26-AEE2-7B30411279E8"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:mac_os_x_server:10.2.3:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "F7EE6036-1A18-43F1-8A92-7DF39E1516E3"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:mac_os_x_server:10.2.4:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "620ECFC8-293D-4C2B-9698-67185BB6E2EF"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:mac_os_x_server:10.2.5:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "C1F14A45-BDDB-4C12-9370-D5241975A928"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:mac_os_x_server:10.2.6:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "46BC34D4-A1E8-4E01-982D-EAF03A0EB886"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:mac_os_x_server:10.2.7:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "35932546-B614-47C0-98E6-8EF1EFE06725"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:mac_os_x_server:10.2.8:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "38F17066-C090-4DD7-A1AC-D8FF70D268CE"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:mac_os_x_server:10.3:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "1E997653-C744-4F1F-9948-47579AB3BED3"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:mac_os_x_server:10.3.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "81F060C7-AC9E-4844-A430-14B3DFC90E3A"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:mac_os_x_server:10.3.1:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "DF5A416A-F198-4B9C-8221-D36CC8A7FE5C"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:mac_os_x_server:10.3.2:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "384C130F-D1A9-4482-AF20-FC81933473A3"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:mac_os_x_server:10.3.3:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "E8BCD1C5-1AFC-4287-9AFD-81FB3F4F9E54"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:mac_os_x_server:10.3.4:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "3CA6BD2A-3022-408D-8E4F-50865996E965"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:mac_os_x_server:10.3.5:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "463D5628-7536-4029-99D6-5E525050059E"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:mac_os_x_server:10.3.6:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "69A39B11-1C23-4A6C-B4C5-AEC40836F173"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:mac_os_x_server:10.3.7:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "78D48FD1-CB91-4310-9432-A4365FA67B11"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:mac_os_x_server:10.3.8:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "750C6C37-8460-4ED8-83AD-ACAF993E4A6E"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:mac_os_x_server:10.3.9:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "8923EE1A-DD48-4EC8-8698-A33093FD709C"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:mac_os_x_server:10.4:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "D24D5FA5-95DD-4ECC-B99A-8CB33156A6D0"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:mac_os_x_server:10.4.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "F60BF582-F700-4E26-A4AF-5BF657803525"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:mac_os_x_server:10.4.1:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "29644501-54BD-45E9-A6C1-618892CD354F"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:mac_os_x_server:10.4.2:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "8A132487-E89F-4D0D-8366-14AFC904811F"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:mac_os_x_server:10.4.3:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "FD231103-D7C7-4697-BE90-D67558D6115C"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:mac_os_x_server:10.4.4:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "BCADAAA0-C885-466C-A122-A94E73EAF817"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:mac_os_x_server:10.4.5:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "448DB1C7-7B0C-4076-9B9F-1CDCD5EB6930"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:mac_os_x_server:10.4.6:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "2BE429EF-24D4-453A-8B43-8CCEF5D72773"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:mac_os_x_server:10.4.7:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "8AC9692A-CE81-446D-B136-449662C4B9A2"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:mac_os_x_server:10.4.8:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "504D78AB-5374-48C9-B357-DB6BD2267D2D"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:mac_os_x_server:10.4.9:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "3029892E-1375-4F40-83D3-A51BDC4E9840"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:mac_os_x_server:10.4.10:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "81F8DA6D-2258-4138-8FB2-90BE3C68B230"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:mac_os_x_server:10.4.11:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "D09D5933-A7D9-4A61-B863-CD8E7D5E67D8"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:mac_os_x_server:10.5:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "20E8648C-5469-4280-A581-D4A9A41B7213"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:mac_os_x_server:10.5.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "C7817232-BE3E-4655-8282-A979E5D40D3D"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:mac_os_x_server:10.5.1:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "77E8D614-E1EE-42F1-9E55-EA54FB500621"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:mac_os_x_server:10.5.2:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "C73BED9E-29FB-4965-B38F-013FFE5A9170"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:mac_os_x_server:10.5.3:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "D3B7DEC3-1C0B-4D13-98CD-CB7FAE7933B0"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:mac_os_x_server:10.5.4:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "7723A9E8-1DE2-4C7D-81E6-4F79DCB09324"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:mac_os_x_server:10.5.5:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "C147E866-B80F-4FFA-BBE8-19E84A46DB1C"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:mac_os_x_server:10.5.6:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "8EC681A4-6F58-4C7D-B4E0-FCC1BCBC534E"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:mac_os_x_server:10.5.7:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "ADF94705-562C-4EC8-993E-1AD88F01549C"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:mac_os_x_server:10.5.8:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "82B4CD59-9F37-4EF0-BA43-427CFD6E1329"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:mac_os_x_server:10.6.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "26E34E35-CCE9-42BE-9AFF-561D8AA90E25"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:mac_os_x_server:10.6.1:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "A04FF6EE-D4DA-4D70-B0CE-154292828531"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:mac_os_x_server:10.6.2:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "9425320F-D119-49EB-9265-3159070DFE93"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:mac_os_x_server:10.6.3:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "F6BE138D-619B-4E44-BFB2-8DFE5F0D1E12"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:mac_os_x_server:10.6.4:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "EF0D1051-F850-4A02-ABA0-968E1336A518"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:mac_os_x_server:10.6.5:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "A1C9705A-74D4-43BA-A119-C667678F9A15"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:mac_os_x_server:10.6.6:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "4BBF5FE5-4B25-47BE-8D9D-F228746408EC"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:mac_os_x_server:10.6.7:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "8CE84A25-CEFB-4165-9498-2E4BF60E2C0E"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "http://lists.apple.com/archives/security-announce/2013/Jun/msg00000.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "http://support.apple.com/kb/HT5784",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 82,
+      "rank": 4
+    },
+    {
+      "cve_id": "CVE-2025-11001",
+      "signal_types": [
+        "EXP"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": {
+          "ref_published": "2026-04-08"
+        },
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-11-19",
+        "description": "7-Zip ZIP File Parsing Directory Traversal Remote Code Execution Vulnerability. This vulnerability allows remote attackers to execute arbitrary code on affected installations of 7-Zip. Interaction with this product is required to exploit this vulnerability but attack vectors may vary depending on the implementation.\n\nThe specific flaw exists within the handling of symbolic links in ZIP files. Crafted data in a ZIP file can cause the process to traverse to unintended directories. An attacker can leverage this vulnerability to execute code in the context of a service account. Was ZDI-CAN-26753.",
+        "title": "7-zip 7-zip RCE",
+        "vendor": "7-zip",
+        "product": "7-zip",
+        "attack_type": "RCE",
+        "cvss_max": 7.8
+      },
+      "cve": {
+        "id": "CVE-2025-11001",
+        "sourceIdentifier": "zdi-disclosures@trendmicro.com",
+        "published": "2025-11-19T22:16:02.457",
+        "lastModified": "2025-11-24T15:07:32.807",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "7-Zip ZIP File Parsing Directory Traversal Remote Code Execution Vulnerability. This vulnerability allows remote attackers to execute arbitrary code on affected installations of 7-Zip. Interaction with this product is required to exploit this vulnerability but attack vectors may vary depending on the implementation.\n\nThe specific flaw exists within the handling of symbolic links in ZIP files. Crafted data in a ZIP file can cause the process to traverse to unintended directories. An attacker can leverage this vulnerability to execute code in the context of a service account. Was ZDI-CAN-26753."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV30": [
+            {
+              "cvssData": {
+                "version": "3.0",
+                "vectorString": "CVSS:3.0/AV:L/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H",
+                "baseScore": 7.0,
+                "baseSeverity": "HIGH"
+              },
+              "source": "zdi-disclosures@trendmicro.com",
+              "type": "Secondary",
+              "exploitabilityScore": 1.0,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+                "baseScore": 7.8,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 1.8,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-22"
+              }
+            ],
+            "source": "zdi-disclosures@trendmicro.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:7-zip:7-zip:24.09:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "B0CE235C-0238-4BFD-A447-9B83469F6598"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows:-:*:*:*:*:*:x64:*",
+                    "matchCriteriaId": "82132539-3C34-4B63-BE2A-F51077D8BC5A"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://www.zerodayinitiative.com/advisories/ZDI-25-949/",
+            "source": "zdi-disclosures@trendmicro.com",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 78,
+      "rank": 5
+    },
+    {
+      "cve_id": "CVE-2025-26633",
+      "signal_types": [
+        "EXP"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": {
+          "ref_published": "2026-04-08"
+        },
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-03-11",
+        "description": "Improper neutralization in Microsoft Management Console allows an unauthorized attacker to bypass a security feature locally.",
+        "title": "Microsoft Windows Management Console (MMC) Improper Neutralization Vulnerability",
+        "vendor": "microsoft",
+        "product": "windows_10_1507",
+        "cvss_max": 7.0
+      },
+      "cve": {
+        "id": "CVE-2025-26633",
+        "sourceIdentifier": "secure@microsoft.com",
+        "published": "2025-03-11T17:16:43.390",
+        "lastModified": "2025-10-27T17:13:29.327",
+        "vulnStatus": "Analyzed",
+        "cisaExploitAdd": "2025-03-11",
+        "cisaActionDue": "2025-04-01",
+        "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+        "cisaVulnerabilityName": "Microsoft Windows Management Console (MMC) Improper Neutralization Vulnerability",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Improper neutralization in Microsoft Management Console allows an unauthorized attacker to bypass a security feature locally."
+          },
+          {
+            "lang": "es",
+            "value": "La neutralización incorrecta en Microsoft Management Console permite que un atacante no autorizado eluda una función de seguridad localmente."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:L/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H",
+                "baseScore": 7.0,
+                "baseSeverity": "HIGH"
+              },
+              "source": "secure@microsoft.com",
+              "type": "Secondary",
+              "exploitabilityScore": 1.0,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-707"
+              }
+            ],
+            "source": "secure@microsoft.com"
+          },
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "NVD-CWE-noinfo"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_10_1507:*:*:*:*:*:*:x64:*",
+                    "matchCriteriaId": "6997DE6E-CBAD-4690-A68C-8F10E477DCC2",
+                    "versionEndExcluding": "10.0.10240.20947"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_10_1507:*:*:*:*:*:*:x86:*",
+                    "matchCriteriaId": "3CBCF6D9-5085-473C-82F5-98BC246A9C4C",
+                    "versionEndExcluding": "10.0.10240.20947"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_10_1607:*:*:*:*:*:*:x64:*",
+                    "matchCriteriaId": "0CF0E174-4692-4AA3-B72E-12E73A1BDBE5",
+                    "versionEndExcluding": "10.0.14393.7876"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_10_1607:*:*:*:*:*:*:x86:*",
+                    "matchCriteriaId": "340EF5F8-D4F5-4AD8-9D80-1DEC2F376BE5",
+                    "versionEndExcluding": "10.0.14393.7876"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_10_1809:*:*:*:*:*:*:x64:*",
+                    "matchCriteriaId": "67C8DCD7-90C4-431F-BD03-FDFDE170E748",
+                    "versionEndExcluding": "10.0.17763.7009"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_10_1809:*:*:*:*:*:*:x86:*",
+                    "matchCriteriaId": "05169574-28AB-4E42-B3DE-710574BB1AD3",
+                    "versionEndExcluding": "10.0.17763.7009"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_10_21h2:*:*:*:*:*:*:arm64:*",
+                    "matchCriteriaId": "714C0D5E-BE31-45AB-A729-FF55DE59F593",
+                    "versionEndExcluding": "10.0.19044.5608"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_10_21h2:*:*:*:*:*:*:x64:*",
+                    "matchCriteriaId": "0C8B2D45-7059-4FA0-A46C-64A171D287DA",
+                    "versionEndExcluding": "10.0.19044.5608"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_10_21h2:*:*:*:*:*:*:x86:*",
+                    "matchCriteriaId": "5569800D-B907-47CC-86D2-EC0118157916",
+                    "versionEndExcluding": "10.0.19044.5608"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_10_22h2:*:*:*:*:*:*:arm64:*",
+                    "matchCriteriaId": "A84E706C-3A65-4920-8F80-2A684D3CB110",
+                    "versionEndExcluding": "10.0.19045.5608"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_10_22h2:*:*:*:*:*:*:x64:*",
+                    "matchCriteriaId": "ED157557-37C1-4802-8746-B87120BA16FA",
+                    "versionEndExcluding": "10.0.19045.5608"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_10_22h2:*:*:*:*:*:*:x86:*",
+                    "matchCriteriaId": "BE8F0EF2-EED3-4791-AE26-D24D97B673D6",
+                    "versionEndExcluding": "10.0.19045.5608"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_11_22h2:*:*:*:*:*:*:arm64:*",
+                    "matchCriteriaId": "C8949B3E-5847-42F8-A15A-D7515F0EE305",
+                    "versionEndExcluding": "10.0.22621.5039"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_11_22h2:*:*:*:*:*:*:x64:*",
+                    "matchCriteriaId": "84D4F97D-3BA2-4B7A-B650-5772DE49CE97",
+                    "versionEndExcluding": "10.0.22621.5039"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_11_23h2:*:*:*:*:*:*:arm64:*",
+                    "matchCriteriaId": "82807292-1736-4453-B805-3D471BF94A35",
+                    "versionEndExcluding": "10.0.22631.5039"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_11_23h2:*:*:*:*:*:*:x64:*",
+                    "matchCriteriaId": "E19130AD-ECD6-4FC4-B2C8-AB058BDEF928",
+                    "versionEndExcluding": "10.0.22631.5039"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_11_24h2:*:*:*:*:*:*:arm64:*",
+                    "matchCriteriaId": "B7ADF37E-1DD3-4539-8922-1E059955FEF1",
+                    "versionEndExcluding": "10.0.26100.3403"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_11_24h2:*:*:*:*:*:*:x64:*",
+                    "matchCriteriaId": "E0A74D52-ABC0-4733-B892-F8688B6AEBA7",
+                    "versionEndExcluding": "10.0.26100.3403"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_server_2008:-:sp2:*:*:*:*:x64:*",
+                    "matchCriteriaId": "2127D10C-B6F3-4C1D-B9AA-5D78513CC996"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_server_2008:-:sp2:*:*:*:*:x86:*",
+                    "matchCriteriaId": "AB425562-C0A0-452E-AABE-F70522F15E1A"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_server_2008:r2:sp1:*:*:*:*:x64:*",
+                    "matchCriteriaId": "AF07A81D-12E5-4B1D-BFF9-C8D08C32FF4F"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_server_2012:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "A7DF96F8-BA6A-4780-9CA3-F719B3F81074"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_server_2012:r2:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "DB18C4CE-5917-401E-ACF7-2747084FD36E"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_server_2016:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "C7610CDB-A02B-4C62-B17F-6DCE2B3DE4F0",
+                    "versionEndExcluding": "10.0.14393.7876"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_server_2019:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "D271422D-A29F-4DBF-BF72-BCD90E393A5A",
+                    "versionEndExcluding": "10.0.17763.7009"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_server_2022:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "AAACC9C4-DDC5-4059-AFE3-A49DB2347A86",
+                    "versionEndExcluding": "10.0.20348.3270"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_server_2022_23h2:*:*:*:*:*:*:x64:*",
+                    "matchCriteriaId": "96046A7B-76A1-4DCF-AEA5-25344D37E492",
+                    "versionEndExcluding": "10.0.25398.1486"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_server_2025:*:*:*:*:*:*:x64:*",
+                    "matchCriteriaId": "CE542697-31D8-4EC2-8135-F0468431FD19",
+                    "versionEndExcluding": "10.0.26100.3403"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-26633",
+            "source": "secure@microsoft.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://www.vicarius.io/vsociety/posts/cve-2025-26633-security-feature-bypass-in-microsoft-management-console-detection-script",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.vicarius.io/vsociety/posts/cve-2025-26633-security-feature-bypass-in-microsoft-management-console-mitigation-script",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2025-26633",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "US Government Resource"
+            ]
+          }
+        ]
+      },
+      "risk_score": 78,
+      "rank": 6
+    },
+    {
+      "cve_id": "CVE-2025-48868",
+      "signal_types": [
+        "EXP"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": {
+          "ref_published": "2026-04-08"
+        },
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-09-24",
+        "description": "Horilla is a free and open source Human Resource Management System (HRMS). An authenticated Remote Code Execution (RCE) vulnerability exists in Horilla 1.3.0 due to the unsafe use of Python’s eval() function on a user-controlled query parameter in the project_bulk_archive view. This allows privileged users (e.g., administrators) to execute arbitrary system commands on the server. While having Django’s DEBUG=True makes exploitation visibly easier by returning command output in the HTTP response, this is not required. The vulnerability can still be exploited in DEBUG=False mode by using blind payloads such as a reverse shell, leading to full remote code execution. This issue has been patched in version 1.3.1.",
+        "title": "horilla horilla RCE",
+        "vendor": "horilla",
+        "product": "horilla",
+        "attack_type": "RCE",
+        "cvss_max": 7.2
+      },
+      "cve": {
+        "id": "CVE-2025-48868",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2025-09-24T14:15:49.593",
+        "lastModified": "2025-09-29T14:06:57.020",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Horilla is a free and open source Human Resource Management System (HRMS). An authenticated Remote Code Execution (RCE) vulnerability exists in Horilla 1.3.0 due to the unsafe use of Python’s eval() function on a user-controlled query parameter in the project_bulk_archive view. This allows privileged users (e.g., administrators) to execute arbitrary system commands on the server. While having Django’s DEBUG=True makes exploitation visibly easier by returning command output in the HTTP response, this is not required. The vulnerability can still be exploited in DEBUG=False mode by using blind payloads such as a reverse shell, leading to full remote code execution. This issue has been patched in version 1.3.1."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 7.2,
+                "baseSeverity": "HIGH"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary",
+              "exploitabilityScore": 1.2,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-95"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:horilla:horilla:1.3:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "FB689BA6-40B8-4E5F-AEB4-6DCB6C76A651"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://drive.google.com/file/d/1XQAJilt77QxkjGEa94CsZRqZIZXa3ET9/view?usp=sharing",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Exploit"
+            ]
+          },
+          {
+            "url": "https://drive.google.com/file/d/1hnI9AK3fnpVrTlTRF7aRJsKhZCDIm2Ve/view?usp=sharing",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Exploit"
+            ]
+          },
+          {
+            "url": "https://github.com/horilla-opensource/horilla/commit/b0aab62b3a5fe6b7114b5c58db129b3744b4d8cc",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://github.com/horilla-opensource/horilla/security/advisories/GHSA-h6qj-pwmx-wjhw",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Exploit",
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 78,
+      "rank": 7
+    },
+    {
+      "cve_id": "CVE-2025-52221",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-04-08",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-04-08",
+        "description": "Tenda AC6 15.03.05.16_multi is vulnerable to Buffer Overflow in the formSetCfm function via the funcname, funcpara1, and funcpara2 parameters.",
+        "title": "tenda ac6_firmware Buffer Overflow",
+        "vendor": "tenda",
+        "product": "ac6_firmware",
+        "attack_type": "Buffer Overflow",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-52221",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2026-04-08T18:24:51.257",
+        "lastModified": "2026-04-13T11:36:50.943",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Tenda AC6 15.03.05.16_multi is vulnerable to Buffer Overflow in the formSetCfm function via the funcname, funcpara1, and funcpara2 parameters."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                "baseScore": 7.5,
+                "baseSeverity": "HIGH"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 3.6
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-787"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          },
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-120"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:tenda:ac6_firmware:15.03.05.16_multi:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "D0E5BB82-F2E3-4BB9-AE3C-267D3462CA96"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:tenda:ac6:1.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "B622BF6D-85E6-475A-B7FB-11BA1A641191"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/faqiadegege/IoTVuln/blob/main/tendaAc6_formSetCfm_funcname_overflow/detail.md",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/xiaotea/iot-vulnerability-collection/blob/main/README.md",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 8
+    },
+    {
+      "cve_id": "CVE-2025-64446",
+      "signal_types": [
+        "EXP"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": {
+          "ref_published": "2026-04-08"
+        },
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-11-14",
+        "description": "A relative path traversal vulnerability in Fortinet FortiWeb 8.0.0 through 8.0.1, FortiWeb 7.6.0 through 7.6.4, FortiWeb 7.4.0 through 7.4.9, FortiWeb 7.2.0 through 7.2.11, FortiWeb 7.0.0 through 7.0.11 may allow an attacker to execute administrative commands on the system via crafted HTTP or HTTPS requests.",
+        "title": "Fortinet FortiWeb Path Traversal Vulnerability",
+        "vendor": "fortinet",
+        "product": "fortiweb",
+        "attack_type": "Path Traversal",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-64446",
+        "sourceIdentifier": "psirt@fortinet.com",
+        "published": "2025-11-14T16:15:58.567",
+        "lastModified": "2025-11-21T18:27:33.730",
+        "vulnStatus": "Analyzed",
+        "cisaExploitAdd": "2025-11-14",
+        "cisaActionDue": "2025-11-21",
+        "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+        "cisaVulnerabilityName": "Fortinet FortiWeb Path Traversal Vulnerability",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A relative path traversal vulnerability in Fortinet FortiWeb 8.0.0 through 8.0.1, FortiWeb 7.6.0 through 7.6.4, FortiWeb 7.4.0 through 7.4.9, FortiWeb 7.2.0 through 7.2.11, FortiWeb 7.0.0 through 7.0.11 may allow an attacker to execute administrative commands on the system via crafted HTTP or HTTPS requests."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "psirt@fortinet.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-23"
+              }
+            ],
+            "source": "psirt@fortinet.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:fortinet:fortiweb:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "CDE13E2A-CEC3-4FC7-98AD-11CA1EAEC0C0",
+                    "versionStartIncluding": "7.0.0",
+                    "versionEndExcluding": "7.0.12"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:fortinet:fortiweb:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "551127B2-DCE9-403D-8073-ACD717CD0B19",
+                    "versionStartIncluding": "7.2.0",
+                    "versionEndExcluding": "7.2.12"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:fortinet:fortiweb:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "83212B0A-5EEF-4FA7-89C5-5E4D687CBB07",
+                    "versionStartIncluding": "7.4.0",
+                    "versionEndExcluding": "7.4.10"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:fortinet:fortiweb:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "D358CE92-A30D-4058-8D12-00376E4B9074",
+                    "versionStartIncluding": "7.6.0",
+                    "versionEndExcluding": "7.6.5"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:fortinet:fortiweb:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "F1DD8ABA-9BB5-4ED8-9E34-1CB0752651DF",
+                    "versionStartIncluding": "8.0.0",
+                    "versionEndExcluding": "8.0.2"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://fortiguard.fortinet.com/psirt/FG-IR-25-910",
+            "source": "psirt@fortinet.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/watchtowrlabs/watchTowr-vs-Fortiweb-AuthBypass",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2025-64446",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "US Government Resource"
+            ]
+          }
+        ]
+      },
+      "risk_score": 78,
+      "rank": 9
+    },
+    {
+      "cve_id": "CVE-2025-6965",
+      "signal_types": [
+        "EXP"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": {
+          "ref_published": "2026-04-08"
+        },
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-07-15",
+        "description": "There exists a vulnerability in SQLite versions before 3.50.2 where the number of aggregate terms could exceed the number of columns available. This could lead to a memory corruption issue. We recommend upgrading to version 3.50.2 or above.",
+        "title": "sqlite sqlite Memory Corruption",
+        "vendor": "sqlite",
+        "product": "sqlite",
+        "attack_type": "Memory Corruption",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-6965",
+        "sourceIdentifier": "cve-coordination@google.com",
+        "published": "2025-07-15T14:15:31.080",
+        "lastModified": "2026-04-14T10:16:29.853",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "There exists a vulnerability in SQLite versions before 3.50.2 where the number of aggregate terms could exceed the number of columns available. This could lead to a memory corruption issue. We recommend upgrading to version 3.50.2 or above."
+          },
+          {
+            "lang": "es",
+            "value": "Existe una vulnerabilidad en las versiones de SQLite anteriores a la 3.50.2 donde el número de términos agregados podría exceder el número de columnas disponibles. Esto podría causar un problema de corrupción de memoria. Recomendamos actualizar a la versión 3.50.2 o superior."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:H/AT:P/PR:L/UI:N/VC:L/VI:H/VA:L/SC:L/SI:H/SA:L/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:N/AU:N/R:U/V:D/RE:L/U:Green",
+                "baseScore": 7.2,
+                "baseSeverity": "HIGH"
+              },
+              "source": "cve-coordination@google.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-197"
+              }
+            ],
+            "source": "cve-coordination@google.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:sqlite:sqlite:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "C1739DFA-8AEF-4CDE-9CB8-A1B601EA6FDB",
+                    "versionEndExcluding": "3.50.2"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://www.sqlite.org/src/info/5508b56fd24016c13981ec280ecdd833007c9d8dd595edb295b984c2b487b5c8",
+            "source": "cve-coordination@google.com",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "http://seclists.org/fulldisclosure/2025/Sep/49",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://seclists.org/fulldisclosure/2025/Sep/53",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://seclists.org/fulldisclosure/2025/Sep/56",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://seclists.org/fulldisclosure/2025/Sep/57",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://seclists.org/fulldisclosure/2025/Sep/58",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://www.openwall.com/lists/oss-security/2025/09/06/1",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "https://cert-portal.siemens.com/productcert/html/ssa-225816.html",
+            "source": "0b142b55-0307-4c5a-b3c9-f314f3fb7c5e"
+          },
+          {
+            "url": "https://cert-portal.siemens.com/productcert/html/ssa-485750.html",
+            "source": "0b142b55-0307-4c5a-b3c9-f314f3fb7c5e"
+          }
+        ]
+      },
+      "risk_score": 78,
+      "rank": 10
+    },
+    {
+      "cve_id": "CVE-2026-2942",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-04-08",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-04-08",
+        "description": "The ProSolution WP Client plugin for WordPress is vulnerable to arbitrary file uploads due to missing file type validation in the 'proSol_fileUploadProcess' function in all versions up to, and including, 1.9.9. This makes it possible for unauthenticated attackers to upload arbitrary files on the affected site's server which may make remote code execution possible.",
+        "title": "The ProSolution WP Client plugin for WordPress is vulnerable to arbitrary file uploads due to missing file type validation in the 'proSol...",
+        "attack_type": "RCE",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2026-2942",
+        "sourceIdentifier": "security@wordfence.com",
+        "published": "2026-04-08T19:25:19.820",
+        "lastModified": "2026-04-24T18:05:09.240",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The ProSolution WP Client plugin for WordPress is vulnerable to arbitrary file uploads due to missing file type validation in the 'proSol_fileUploadProcess' function in all versions up to, and including, 1.9.9. This makes it possible for unauthenticated attackers to upload arbitrary files on the affected site's server which may make remote code execution possible."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security@wordfence.com",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-434"
+              }
+            ],
+            "source": "security@wordfence.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/prosolution-wp-client/trunk/public/class-prosolwpclient-public.php?rev=3331282#L993",
+            "source": "security@wordfence.com"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/changeset/3484577/prosolution-wp-client",
+            "source": "security@wordfence.com"
+          },
+          {
+            "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/3852aef6-42e7-4b71-a1ba-dd41284fd07b?source=cve",
+            "source": "security@wordfence.com"
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 11
+    },
+    {
+      "cve_id": "CVE-2026-31017",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-04-08",
+          "previous_max": null,
+          "current_max": 9.1
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-04-08",
+        "description": "A Server-Side Request Forgery (SSRF) vulnerability exists in the Print Format functionality of ERPNext v16.0.1 and Frappe Framework v16.1.1, where user-supplied HTML is insufficiently sanitized before being rendered into PDF. When generating PDFs from user-controlled HTML content, the application allows the inclusion of HTML elements such as <iframe> that reference external resources. The PDF rendering engine automatically fetches these resources on the server side. An attacker can abuse this behavior to force the server to make arbitrary HTTP requests to internal services, including cloud metadata endpoints, potentially leading to sensitive information disclosure.",
+        "title": "frappe erpnext SSRF",
+        "vendor": "frappe",
+        "product": "erpnext",
+        "attack_type": "SSRF",
+        "cvss_max": 9.1
+      },
+      "cve": {
+        "id": "CVE-2026-31017",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2026-04-08T17:21:18.737",
+        "lastModified": "2026-04-14T15:46:59.460",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A Server-Side Request Forgery (SSRF) vulnerability exists in the Print Format functionality of ERPNext v16.0.1 and Frappe Framework v16.1.1, where user-supplied HTML is insufficiently sanitized before being rendered into PDF. When generating PDFs from user-controlled HTML content, the application allows the inclusion of HTML elements such as <iframe> that reference external resources. The PDF rendering engine automatically fetches these resources on the server side. An attacker can abuse this behavior to force the server to make arbitrary HTTP requests to internal services, including cloud metadata endpoints, potentially leading to sensitive information disclosure."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+                "baseScore": 9.1,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.2
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+                "baseScore": 9.1,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.2
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-918"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:frappe:erpnext:16.0.1:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "3B49FE4D-85A8-44E2-9BF2-E60B7FFBAC81"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:frappe:frappe:16.1.1:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "461D4C6F-5E45-43CA-A47F-D5DDDD083786"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "http://frappe.com",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Product"
+            ]
+          },
+          {
+            "url": "https://github.com/PhDg1410/CVE/tree/main/CVE-2026-31017",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 12
+    },
+    {
+      "cve_id": "CVE-2026-3199",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-04-08",
+          "previous_max": null,
+          "current_max": 9.4
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-04-08",
+        "description": "A vulnerability in the task management component of Sonatype Nexus Repository versions 3.22.1 through 3.90.2 allows an authenticated attacker with task creation permissions to execute arbitrary code, bypassing the nexus.scripts.allowCreation security control.",
+        "cvss_max": 9.4
+      },
+      "cve": {
+        "id": "CVE-2026-3199",
+        "sourceIdentifier": "103e4ec9-0a87-450b-af77-479448ddef11",
+        "published": "2026-04-08T23:16:59.160",
+        "lastModified": "2026-04-13T15:02:47.353",
+        "vulnStatus": "Awaiting Analysis",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A vulnerability in the task management component of Sonatype Nexus Repository versions 3.22.1 through 3.90.2 allows an authenticated attacker with task creation permissions to execute arbitrary code, bypassing the nexus.scripts.allowCreation security control."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:L/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.4,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "103e4ec9-0a87-450b-af77-479448ddef11",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-502"
+              }
+            ],
+            "source": "103e4ec9-0a87-450b-af77-479448ddef11"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://help.sonatype.com/en/sonatype-nexus-repository-3-91-0-release-notes.html",
+            "source": "103e4ec9-0a87-450b-af77-479448ddef11"
+          },
+          {
+            "url": "https://support.sonatype.com/hc/en-us/articles/50615414548499",
+            "source": "103e4ec9-0a87-450b-af77-479448ddef11"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 13
+    },
+    {
+      "cve_id": "CVE-2026-39860",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-04-08",
+          "previous_max": null,
+          "current_max": 9.0
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-04-08",
+        "description": "Nix is a package manager for Linux and other Unix systems. A bug in the fix for CVE-2024-27297 allowed for arbitrary overwrites of files writable by the Nix process orchestrating the builds (typically the Nix daemon running as root in multi-user installations) by following symlinks during fixed-output derivation output registration. This affects sandboxed Linux builds - sandboxed macOS builds are unaffected. The location of the temporary output used for the output copy was located inside the build chroot. A symlink, pointing to an arbitrary location in the filesystem, could be created by the derivation builder at that path. During output registration, the Nix process (running in the host mount namespace) would follow that symlink and overwrite the destination with the derivation's output contents. In multi-user installations, this allows all users able to submit builds to the Nix daemon (allowed-users - defaulting to all users) to gain root privileges by modifying sensitive files. This vulnerability is fixed in 2.34.5, 2.33.4, 2.32.7, 2.31.4, 2.30.4, 2.29.3, and 2.28.6.",
+        "title": "nixos nix",
+        "vendor": "nixos",
+        "product": "nix",
+        "cvss_max": 9.0
+      },
+      "cve": {
+        "id": "CVE-2026-39860",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2026-04-08T21:17:00.157",
+        "lastModified": "2026-04-15T16:12:21.480",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Nix is a package manager for Linux and other Unix systems. A bug in the fix for CVE-2024-27297 allowed for arbitrary overwrites of files writable by the Nix process orchestrating the builds (typically the Nix daemon running as root in multi-user installations) by following symlinks during fixed-output derivation output registration. This affects sandboxed Linux builds - sandboxed macOS builds are unaffected. The location of the temporary output used for the output copy was located inside the build chroot. A symlink, pointing to an arbitrary location in the filesystem, could be created by the derivation builder at that path. During output registration, the Nix process (running in the host mount namespace) would follow that symlink and overwrite the destination with the derivation's output contents. In multi-user installations, this allows all users able to submit builds to the Nix daemon (allowed-users - defaulting to all users) to gain root privileges by modifying sensitive files. This vulnerability is fixed in 2.34.5, 2.33.4, 2.32.7, 2.31.4, 2.30.4, 2.29.3, and 2.28.6."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:N",
+                "baseScore": 9.0,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary",
+              "exploitabilityScore": 2.5,
+              "impactScore": 5.8
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:N",
+                "baseScore": 8.4,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 2.0,
+              "impactScore": 5.8
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-61"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nixos:nix:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "88A1E0DB-FA70-449D-B872-6C8051A7A8A2",
+                    "versionStartIncluding": "2.18.2",
+                    "versionEndIncluding": "2.18.9"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nixos:nix:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "F6D346F6-DF4F-4DFA-A5C8-16D620B5573C",
+                    "versionStartIncluding": "2.19.4",
+                    "versionEndIncluding": "2.19.7"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nixos:nix:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "57A0A4D2-47CF-4E82-85D0-504EF978279F",
+                    "versionStartIncluding": "2.20.5",
+                    "versionEndIncluding": "2.20.9"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nixos:nix:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "169A0D33-C7A8-4D02-A560-3F6ED2DF29D9",
+                    "versionStartIncluding": "2.21.0",
+                    "versionEndExcluding": "2.28.6"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nixos:nix:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "48408418-40B9-4657-836F-37C964B9F5B5",
+                    "versionStartIncluding": "2.29.0",
+                    "versionEndExcluding": "2.29.3"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nixos:nix:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "C475C811-04D0-48E3-B302-A6980376BEF8",
+                    "versionStartIncluding": "2.30.0",
+                    "versionEndExcluding": "2.30.4"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nixos:nix:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "25E84672-263F-4C99-8698-EC5BC3FF4AC3",
+                    "versionStartIncluding": "2.31.0",
+                    "versionEndExcluding": "2.31.4"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nixos:nix:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "C9E39F02-7238-4B3C-8DDD-EED01C4C9664",
+                    "versionStartIncluding": "2.32.0",
+                    "versionEndExcluding": "2.32.7"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nixos:nix:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "5BD5E589-D0F6-4C4F-8831-E9B29C842B04",
+                    "versionStartIncluding": "2.33.0",
+                    "versionEndExcluding": "2.33.4"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nixos:nix:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "FC7B6CF8-F460-4C0E-9526-E3C3BEE613EA",
+                    "versionStartIncluding": "2.34.0",
+                    "versionEndExcluding": "2.34.5"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "703AF700-7A70-47E2-BC3A-7FD03B3CA9C1"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/NixOS/nix/commit/244f3eee0bbc7f11e9b383a15ed7368e2c4becc9",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://github.com/NixOS/nix/commit/4bc5a3510fa3735798f9ed3a2a30a3ea7b32343a",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://github.com/NixOS/nix/commit/7794354a982449927ee7401cdeb573ddd16c4688",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://github.com/NixOS/nix/commit/a3163b9eabb952b4aa96e376dea95ebcca97b31a",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://github.com/NixOS/nix/pull/10178",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Issue Tracking",
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://github.com/NixOS/nix/security/advisories/GHSA-g3g9-5vj6-r3gj",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Mitigation",
+              "Patch",
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 14
+    },
+    {
+      "cve_id": "CVE-2026-39888",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-04-08",
+          "previous_max": null,
+          "current_max": 9.9
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-04-08",
+        "description": "PraisonAI is a multi-agent teams system. Prior to 1.5.115, execute_code() in praisonaiagents.tools.python_tools defaults to sandbox_mode=\"sandbox\", which runs user code in a subprocess wrapped with a restricted __builtins__ dict and an AST-based blocklist. The AST blocklist embedded inside the subprocess wrapper (blocked_attrs of python_tools.py) contains only 11 attribute names — a strict subset of the 30+ names blocked in the direct-execution path. The four attributes that form a frame-traversal chain out of the sandbox are all absent from the subprocess list (__traceback__, tb_frame, f_back, and f_builtins). Chaining these attributes through a caught exception exposes the real Python builtins dict of the subprocess wrapper frame, from which exec can be retrieved and called under a non-blocked variable name — bypassing every remaining security layer. This vulnerability is fixed in 1.5.115.",
+        "title": "praison praisonai",
+        "vendor": "praison",
+        "product": "praisonai",
+        "cvss_max": 9.9
+      },
+      "cve": {
+        "id": "CVE-2026-39888",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2026-04-08T21:17:00.990",
+        "lastModified": "2026-04-15T18:02:58.940",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "PraisonAI is a multi-agent teams system. Prior to 1.5.115, execute_code() in praisonaiagents.tools.python_tools defaults to sandbox_mode=\"sandbox\", which runs user code in a subprocess wrapped with a restricted __builtins__ dict and an AST-based blocklist. The AST blocklist embedded inside the subprocess wrapper (blocked_attrs of python_tools.py) contains only 11 attribute names — a strict subset of the 30+ names blocked in the direct-execution path. The four attributes that form a frame-traversal chain out of the sandbox are all absent from the subprocess list (__traceback__, tb_frame, f_back, and f_builtins). Chaining these attributes through a caught exception exposes the real Python builtins dict of the subprocess wrapper frame, from which exec can be retrieved and called under a non-blocked variable name — bypassing every remaining security layer. This vulnerability is fixed in 1.5.115."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+                "baseScore": 9.9,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.1,
+              "impactScore": 6.0
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-657"
+              },
+              {
+                "lang": "en",
+                "value": "CWE-693"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:praison:praisonai:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "34CC1B67-7607-48E7-BDB4-18F2E011807B",
+                    "versionEndExcluding": "1.5.115"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/MervinPraison/PraisonAI/security/advisories/GHSA-qf73-2hrx-xprp",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 15
+    },
+    {
+      "cve_id": "CVE-2026-39890",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-04-08",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-04-08",
+        "description": "PraisonAI is a multi-agent teams system. Prior to 4.5.115, the AgentService.loadAgentFromFile method uses the js-yaml library to parse YAML files without disabling dangerous tags (such as !!js/function and !!js/undefined). This allows an attacker to craft a malicious YAML file that, when parsed, executes arbitrary JavaScript code. An attacker can exploit this vulnerability by uploading a malicious agent definition file via the API endpoint, leading to remote code execution (RCE) on the server. This vulnerability is fixed in 4.5.115.",
+        "title": "praison praisonai",
+        "vendor": "praison",
+        "product": "praisonai",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2026-39890",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2026-04-08T21:17:01.267",
+        "lastModified": "2026-04-15T17:56:13.590",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "PraisonAI is a multi-agent teams system. Prior to 4.5.115, the AgentService.loadAgentFromFile method uses the js-yaml library to parse YAML files without disabling dangerous tags (such as !!js/function and !!js/undefined). This allows an attacker to craft a malicious YAML file that, when parsed, executes arbitrary JavaScript code. An attacker can exploit this vulnerability by uploading a malicious agent definition file via the API endpoint, leading to remote code execution (RCE) on the server. This vulnerability is fixed in 4.5.115."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-502"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:praison:praisonai:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "B0754891-B47D-441D-A0E6-710A49389AE4",
+                    "versionEndIncluding": "4.5.114"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/MervinPraison/PraisonAI/security/advisories/GHSA-32vr-5gcf-3pw2",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 16
+    },
+    {
+      "cve_id": "CVE-2026-40035",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-04-08",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-04-08",
+        "description": "Unfurl through 2025.08 contains an improper input validation vulnerability in config parsing that enables Flask debug mode by default. The debug configuration value is read as a string and passed directly to app.run(), causing any non-empty string to evaluate truthy, allowing attackers to access the Werkzeug debugger and disclose sensitive information or achieve remote code execution.",
+        "title": "ryandfir unfurl RCE",
+        "vendor": "ryandfir",
+        "product": "unfurl",
+        "attack_type": "RCE",
+        "cvss_max": 9.3
+      },
+      "cve": {
+        "id": "CVE-2026-40035",
+        "sourceIdentifier": "disclosure@vulncheck.com",
+        "published": "2026-04-08T22:16:24.010",
+        "lastModified": "2026-04-17T16:03:26.810",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Unfurl through 2025.08 contains an improper input validation vulnerability in config parsing that enables Flask debug mode by default. The debug configuration value is read as a string and passed directly to app.run(), causing any non-empty string to evaluate truthy, allowing attackers to access the Werkzeug debugger and disclose sensitive information or achieve remote code execution."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+                "baseScore": 9.1,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.2
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-489"
+              }
+            ],
+            "source": "disclosure@vulncheck.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:ryandfir:unfurl:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "54B64397-E0C5-46EF-85C7-3EC88FFB9B50",
+                    "versionEndIncluding": "2025.08"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/obsidianforensics/unfurl/security/advisories/GHSA-vg9h-jx4v-cwx2",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Exploit",
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://www.vulncheck.com/advisories/dfir-unfurl-werkzeug-debugger-exposure-via-string-config-parsing",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 17
+    },
+    {
+      "cve_id": "CVE-2026-5874",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-04-08",
+          "previous_max": null,
+          "current_max": 9.6
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-04-08",
+        "description": "Use after free in PrivateAI in Google Chrome prior to 147.0.7727.55 allowed a remote attacker who convinced a user to engage in specific UI gestures to potentially perform a sandbox escape via a crafted HTML page. (Chromium security severity: Medium)",
+        "title": "google chrome",
+        "vendor": "google",
+        "product": "chrome",
+        "cvss_max": 9.6
+      },
+      "cve": {
+        "id": "CVE-2026-5874",
+        "sourceIdentifier": "chrome-cve-admin@google.com",
+        "published": "2026-04-08T22:16:27.003",
+        "lastModified": "2026-04-13T17:57:38.287",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Use after free in PrivateAI in Google Chrome prior to 147.0.7727.55 allowed a remote attacker who convinced a user to engage in specific UI gestures to potentially perform a sandbox escape via a crafted HTML page. (Chromium security severity: Medium)"
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H",
+                "baseScore": 9.6,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 6.0
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-416"
+              }
+            ],
+            "source": "chrome-cve-admin@google.com"
+          },
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-416"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:google:chrome:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "9A68673A-1331-48AF-8860-53064F0AF310",
+                    "versionEndExcluding": "147.0.7727.55"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:macos:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "387021A0-AF36-463C-A605-32EA7DAC172E"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "703AF700-7A70-47E2-BC3A-7FD03B3CA9C1"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "A2572D17-1DE6-457B-99CC-64AFD54487EA"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://chromereleases.googleblog.com/2026/04/stable-channel-update-for-desktop.html",
+            "source": "chrome-cve-admin@google.com",
+            "tags": [
+              "Release Notes",
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://issues.chromium.org/issues/485397279",
+            "source": "chrome-cve-admin@google.com",
+            "tags": [
+              "Permissions Required"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 18
+    },
+    {
+      "cve_id": "CVE-2026-5902",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-04-08",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-04-08",
+        "description": "Race in Media in Google Chrome on Android prior to 147.0.7727.55 allowed a remote attacker who had compromised the renderer process to corrupt media stream metadata via a crafted HTML page. (Chromium security severity: Low)",
+        "title": "google chrome",
+        "vendor": "google",
+        "product": "chrome",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2026-5902",
+        "sourceIdentifier": "chrome-cve-admin@google.com",
+        "published": "2026-04-08T22:16:30.080",
+        "lastModified": "2026-04-13T21:14:13.800",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Race in Media in Google Chrome on Android prior to 147.0.7727.55 allowed a remote attacker who had compromised the renderer process to corrupt media stream metadata via a crafted HTML page. (Chromium security severity: Low)"
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-362"
+              }
+            ],
+            "source": "chrome-cve-admin@google.com"
+          },
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-362"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:google:chrome:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "9A68673A-1331-48AF-8860-53064F0AF310",
+                    "versionEndExcluding": "147.0.7727.55"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:macos:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "387021A0-AF36-463C-A605-32EA7DAC172E"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:linux:linux_kernel:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "703AF700-7A70-47E2-BC3A-7FD03B3CA9C1"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "A2572D17-1DE6-457B-99CC-64AFD54487EA"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://chromereleases.googleblog.com/2026/04/stable-channel-update-for-desktop.html",
+            "source": "chrome-cve-admin@google.com",
+            "tags": [
+              "Release Notes",
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://issues.chromium.org/issues/483109205",
+            "source": "chrome-cve-admin@google.com",
+            "tags": [
+              "Issue Tracking",
+              "Permissions Required"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 19
+    }
+  ],
+  "source": "https://www.cvelogic.com/threat-intelligence/2026-04-08"
+}

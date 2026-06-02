@@ -1,0 +1,2723 @@
+{
+  "schema_version": "2.2",
+  "generated_at": "2026-06-02T07:04:05Z",
+  "day": "2026-05-21",
+  "window": {
+    "utc_start": "2026-05-21",
+    "utc_end": "2026-05-21",
+    "days": 1
+  },
+  "summary": {
+    "brief": "Trend Micro Apex One added to CISA KEV — confirmed in-the-wild exploitation. · Frangoteam Fuxa: public exploit or PoC linked (Path Traversal) · WordPress plugin RCE/exploit activity: 2 CVEs flagged today. · Exploitation likelihood rose sharply (EPSS 47% → 67% · rising (+19%)).",
+    "bullets": [
+      "Trend Micro Apex One added to CISA KEV — confirmed in-the-wild exploitation.",
+      "Frangoteam Fuxa: public exploit or PoC linked (Path Traversal)",
+      "WordPress plugin RCE/exploit activity: 2 CVEs flagged today.",
+      "Exploitation likelihood rose sharply (EPSS 47% → 67% · rising (+19%)).",
+      "10 new critical disclosures — review patch status on exposed services."
+    ],
+    "counts": {
+      "cves": 24,
+      "kev": 2,
+      "exploit": 2,
+      "epss": 10,
+      "cvss": 10,
+      "patch": 0
+    }
+  },
+  "cves": [
+    {
+      "cve_id": "CVE-2025-34291",
+      "signal_types": [
+        "KEV"
+      ],
+      "signals": {
+        "kev": {
+          "date_added": "2026-05-21"
+        },
+        "exploit": null,
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-12-05",
+        "description": "Langflow versions up to and including 1.6.9 contain a chained vulnerability that enables account takeover and remote code execution. An overly permissive CORS configuration (allow_origins='*' with allow_credentials=True) combined with a refresh token cookie configured as SameSite=None allows a malicious webpage to perform cross-origin requests that include credentials and successfully call the refresh endpoint. An attacker-controlled origin can therefore obtain fresh access_token / refresh_token pairs for a victim session. Obtained tokens permit access to authenticated endpoints — including built-in code-execution functionality — allowing the attacker to execute arbitrary code and achieve full system compromise.",
+        "title": "Langflow Origin Validation Error Vulnerability",
+        "vendor": "langflow",
+        "product": "langflow",
+        "attack_type": "RCE",
+        "cvss_max": 9.4
+      },
+      "cve": {
+        "id": "CVE-2025-34291",
+        "sourceIdentifier": "disclosure@vulncheck.com",
+        "published": "2025-12-05T23:15:47.433",
+        "lastModified": "2026-05-21T20:16:13.520",
+        "vulnStatus": "Modified",
+        "cisaExploitAdd": "2026-05-21",
+        "cisaActionDue": "2026-06-04",
+        "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+        "cisaVulnerabilityName": "Langflow Origin Validation Error Vulnerability",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Langflow versions up to and including 1.6.9 contain a chained vulnerability that enables account takeover and remote code execution. An overly permissive CORS configuration (allow_origins='*' with allow_credentials=True) combined with a refresh token cookie configured as SameSite=None allows a malicious webpage to perform cross-origin requests that include credentials and successfully call the refresh endpoint. An attacker-controlled origin can therefore obtain fresh access_token / refresh_token pairs for a victim session. Obtained tokens permit access to authenticated endpoints — including built-in code-execution functionality — allowing the attacker to execute arbitrary code and achieve full system compromise."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 8.8,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.4,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-346"
+              }
+            ],
+            "source": "disclosure@vulncheck.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:langflow:langflow:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "1D74DC53-9772-4172-822E-3E29E5A4DDC9",
+                    "versionEndIncluding": "1.6.9"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/langflow-ai/langflow",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Product"
+            ]
+          },
+          {
+            "url": "https://www.obsidiansecurity.com/blog/cve-2025-34291-critical-account-takeover-and-rce-vulnerability-in-the-langflow-ai-agent-workflow-platform",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Exploit",
+              "Mitigation",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.vulncheck.com/advisories/langflow-cors-misconfiguration-to-token-hijack-and-rce",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2025-34291",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          },
+          {
+            "url": "https://www.crowdsec.net/vulntracking-report/cve-2025-34291",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ]
+      },
+      "risk_score": 88,
+      "rank": 1
+    },
+    {
+      "cve_id": "CVE-2026-25895",
+      "signal_types": [
+        "EXP"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": {
+          "ref_published": "2026-05-21"
+        },
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-02-09",
+        "description": "FUXA is a web-based Process Visualization (SCADA/HMI/Dashboard) software. A path traversal vulnerability in FUXA allows an unauthenticated, remote attacker to write arbitrary files to arbitrary locations on the server filesystem. This affects FUXA through version 1.2.9. This issue has been patched in FUXA version 1.2.10.",
+        "title": "frangoteam fuxa Path Traversal",
+        "vendor": "frangoteam",
+        "product": "fuxa",
+        "attack_type": "Path Traversal",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2026-25895",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2026-02-09T23:16:05.617",
+        "lastModified": "2026-02-13T20:32:48.753",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "FUXA is a web-based Process Visualization (SCADA/HMI/Dashboard) software. A path traversal vulnerability in FUXA allows an unauthenticated, remote attacker to write arbitrary files to arbitrary locations on the server filesystem. This affects FUXA through version 1.2.9. This issue has been patched in FUXA version 1.2.10."
+          },
+          {
+            "lang": "es",
+            "value": "FUXA es un software de visualización de procesos basado en web (SCADA/HMI/Dashboard). Una vulnerabilidad de salto de ruta en FUXA permite a un atacante remoto no autenticado escribir archivos arbitrarios en ubicaciones arbitrarias en el sistema de archivos del servidor. Esto afecta a FUXA hasta la versión 1.2.9. Este problema ha sido parcheado en la versión 1.2.10 de FUXA."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.5,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-22"
+              },
+              {
+                "lang": "en",
+                "value": "CWE-306"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:frangoteam:fuxa:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "5811902D-CD7C-4D52-BD99-66EACBBB88FC",
+                    "versionEndExcluding": "1.2.10"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/frangoteam/FUXA/commit/22c2192f5d9beef8a787c45eff3a14c24dbb5f96",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://github.com/frangoteam/FUXA/releases/tag/v1.2.10",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Release Notes"
+            ]
+          },
+          {
+            "url": "https://github.com/frangoteam/FUXA/security/advisories/GHSA-88qh-cphv-996c",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 78,
+      "rank": 2
+    },
+    {
+      "cve_id": "CVE-2014-125118",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 0.47238,
+            "score_date": "2026-04-10"
+          },
+          "current": {
+            "score": 0.66705,
+            "score_date": "2026-05-21"
+          },
+          "delta": 0.19467
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-07-25",
+        "description": "A command injection vulnerability exists in the eScan Web Management Console version 5.5-2. The application fails to properly sanitize the 'pass' parameter when processing login requests to login.php, allowing an authenticated attacker with a valid username to inject arbitrary commands via a specially crafted password value. Successful exploitation results in remote code execution. Privilege escalation to root is possible by abusing the runasroot utility with mwconf-level privileges.",
+        "title": "RCE · EPSS dynamics",
+        "attack_type": "RCE",
+        "cvss_max": 9.4
+      },
+      "cve": {
+        "id": "CVE-2014-125118",
+        "sourceIdentifier": "disclosure@vulncheck.com",
+        "published": "2025-07-25T16:15:26.360",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A command injection vulnerability exists in the eScan Web Management Console version 5.5-2. The application fails to properly sanitize the 'pass' parameter when processing login requests to login.php, allowing an authenticated attacker with a valid username to inject arbitrary commands via a specially crafted password value. Successful exploitation results in remote code execution. Privilege escalation to root is possible by abusing the runasroot utility with mwconf-level privileges."
+          },
+          {
+            "lang": "es",
+            "value": "Existe una vulnerabilidad de inyección de comandos en eScan Web Management Console version 5.5-2. La aplicación no depura correctamente el parámetro \"pass\" al procesar solicitudes de inicio de sesión en login.php, lo que permite a un atacante autenticado con un nombre de usuario válido inyectar comandos arbitrarios mediante una contraseña especialmente manipulada. Una explotación exitosa resulta en la ejecución remota de código. Es posible escalar privilegios a root mediante el uso abusivo de la utilidad runasroot con privilegios de nivel mwconf."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.4,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-78"
+              },
+              {
+                "lang": "en",
+                "value": "CWE-306"
+              }
+            ],
+            "source": "disclosure@vulncheck.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://raw.githubusercontent.com/rapid7/metasploit-framework/master/modules/exploits/linux/antivirus/escan_password_exec.rb",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://www.exploit-db.com/exploits/32869",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://www.vulncheck.com/advisories/escan-web-management-console-command-injection",
+            "source": "disclosure@vulncheck.com"
+          }
+        ]
+      },
+      "risk_score": 85,
+      "rank": 3
+    },
+    {
+      "cve_id": "CVE-2013-10032",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 0.6065,
+            "score_date": "2026-04-10"
+          },
+          "current": {
+            "score": 0.76192,
+            "score_date": "2026-05-21"
+          },
+          "delta": 0.15542
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-07-25",
+        "description": "An authenticated remote code execution vulnerability exists in GetSimpleCMS version 3.2.1. The application’s upload.php endpoint allows authenticated users to upload arbitrary files without proper validation of MIME types or extensions. By uploading a .pht file containing PHP code, an attacker can bypass blacklist-based restrictions and place executable code within the web root. A crafted request using a polyglot or disguised extension allows the attacker to execute the payload by accessing the file directly via the web server. This vulnerability exists due to the use of a blacklist for filtering file types instead of a whitelist.",
+        "title": "get-simple getsimplecms RCE",
+        "vendor": "get-simple",
+        "product": "getsimplecms",
+        "attack_type": "RCE",
+        "cvss_max": 8.8
+      },
+      "cve": {
+        "id": "CVE-2013-10032",
+        "sourceIdentifier": "disclosure@vulncheck.com",
+        "published": "2025-07-25T16:15:24.550",
+        "lastModified": "2025-09-23T23:44:07.920",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "An authenticated remote code execution vulnerability exists in GetSimpleCMS version 3.2.1. The application’s upload.php endpoint allows authenticated users to upload arbitrary files without proper validation of MIME types or extensions. By uploading a .pht file containing PHP code, an attacker can bypass blacklist-based restrictions and place executable code within the web root. A crafted request using a polyglot or disguised extension allows the attacker to execute the payload by accessing the file directly via the web server. This vulnerability exists due to the use of a blacklist for filtering file types instead of a whitelist."
+          },
+          {
+            "lang": "es",
+            "value": "Existe una vulnerabilidad de ejecución remota de código autenticado en GetSimpleCMS versión 3.2.1. El endpoint upload.php de la aplicación permite a los usuarios autenticados subir archivos arbitrarios sin la validación adecuada de los tipos MIME o extensiones. Al subir un archivo .pht con código PHP, un atacante puede eludir las restricciones de la lista negra y colocar el código ejecutable en la raíz web. Una solicitud manipulada con una extensión políglota o disfrazada permite al atacante ejecutar un payload accediendo al archivo directamente a través del servidor web. Esta vulnerabilidad se debe al uso de una lista negra para filtrar los tipos de archivo en lugar de una lista blanca."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 8.8,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 8.7,
+                "baseSeverity": "HIGH"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-306"
+              },
+              {
+                "lang": "en",
+                "value": "CWE-434"
+              }
+            ],
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-434"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:get-simple:getsimplecms:3.2.1:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "29446EF3-5DFC-40F1-9FFE-2CB956C5B7B4"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://get-simple.info",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Product"
+            ]
+          },
+          {
+            "url": "https://raw.githubusercontent.com/rapid7/metasploit-framework/master/modules/exploits/unix/webapp/get_simple_cms_upload_exec.rb",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.broadcom.com/support/security-center/attacksignatures/detail?asid=27895",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.exploit-db.com/exploits/25405",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Exploit",
+              "VDB Entry"
+            ]
+          },
+          {
+            "url": "https://www.fortiguard.com/encyclopedia/ips/39295",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.vulncheck.com/advisories/getsimple-cms-auth-rce-via-arbitrary-php-file-upload",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 84,
+      "rank": 4
+    },
+    {
+      "cve_id": "CVE-2014-125114",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 0.22789,
+            "score_date": "2026-04-10"
+          },
+          "current": {
+            "score": 0.42113,
+            "score_date": "2026-05-21"
+          },
+          "delta": 0.19324
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-07-25",
+        "description": "A stack-based buffer overflow vulnerability exists in i-Ftp version 2.20 due to improper handling of the Time attribute within Schedule.xml. By placing a specially crafted Schedule.xml file in the i-Ftp application directory, a remote attacker can trigger a buffer overflow during scheduled download parsing, potentially leading to arbitrary code execution or a crash.",
+        "title": "RCE · EPSS dynamics",
+        "attack_type": "RCE",
+        "cvss_max": 8.4
+      },
+      "cve": {
+        "id": "CVE-2014-125114",
+        "sourceIdentifier": "disclosure@vulncheck.com",
+        "published": "2025-07-25T16:15:25.693",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A stack-based buffer overflow vulnerability exists in i-Ftp version 2.20 due to improper handling of the Time attribute within Schedule.xml. By placing a specially crafted Schedule.xml file in the i-Ftp application directory, a remote attacker can trigger a buffer overflow during scheduled download parsing, potentially leading to arbitrary code execution or a crash."
+          },
+          {
+            "lang": "es",
+            "value": "Existe una vulnerabilidad de desbordamiento de búfer en la pila en i-Ftp versión 2.20 debido al manejo incorrecto del atributo Time en Schedule.xml. Al colocar un archivo Schedule.xml especialmente manipulado en el directorio de la aplicación i-Ftp, un atacante remoto puede provocar un desbordamiento de búfer durante el análisis de descargas programadas, lo que podría provocar la ejecución de código arbitrario o un bloqueo."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:A/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 8.4,
+                "baseSeverity": "HIGH"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-20"
+              },
+              {
+                "lang": "en",
+                "value": "CWE-121"
+              }
+            ],
+            "source": "disclosure@vulncheck.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://raw.githubusercontent.com/rapid7/metasploit-framework/master/modules/exploits/windows/fileformat/iftp_schedule_bof.rb",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://www.exploit-db.com/exploits/35177",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          },
+          {
+            "url": "https://www.exploit-db.com/exploits/35671",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          },
+          {
+            "url": "https://www.vulncheck.com/advisories/iftp-schedule-stack-based-buffer-overflow",
+            "source": "disclosure@vulncheck.com"
+          }
+        ]
+      },
+      "risk_score": 84,
+      "rank": 5
+    },
+    {
+      "cve_id": "CVE-2014-125115",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 0.6504,
+            "score_date": "2025-12-22"
+          },
+          "current": {
+            "score": 0.76834,
+            "score_date": "2026-05-21"
+          },
+          "delta": 0.11794
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-07-25",
+        "description": "An unauthenticated SQL injection vulnerability exists in Pandora FMS version 5.0 SP2 and earlier. The mobile/index.php endpoint fails to properly sanitize user input in the loginhash_data parameter, allowing attackers to extract administrator credentials or active session tokens via crafted requests. This occurs because input is directly concatenated into an SQL query without adequate validation, enabling SQL injection. After authentication is bypassed, a second vulnerability in the File Manager component permits arbitrary PHP file uploads. The file upload functionality does not enforce MIME-type or file extension restrictions, allowing authenticated users to upload web shells into a publicly accessible directory and achieve remote code execution.",
+        "title": "SQL Injection · EPSS dynamics",
+        "attack_type": "SQL Injection",
+        "cvss_max": 10.0
+      },
+      "cve": {
+        "id": "CVE-2014-125115",
+        "sourceIdentifier": "disclosure@vulncheck.com",
+        "published": "2025-07-25T16:15:25.870",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "An unauthenticated SQL injection vulnerability exists in Pandora FMS version 5.0 SP2 and earlier. The mobile/index.php endpoint fails to properly sanitize user input in the loginhash_data parameter, allowing attackers to extract administrator credentials or active session tokens via crafted requests. This occurs because input is directly concatenated into an SQL query without adequate validation, enabling SQL injection. After authentication is bypassed, a second vulnerability in the File Manager component permits arbitrary PHP file uploads. The file upload functionality does not enforce MIME-type or file extension restrictions, allowing authenticated users to upload web shells into a publicly accessible directory and achieve remote code execution."
+          },
+          {
+            "lang": "es",
+            "value": "Existe una vulnerabilidad de inyección SQL no autenticada en Pandora FMS versión 5.0 SP2 y anteriores. El endpoint mobile/index.php no depura correctamente la entrada del usuario en el parámetro loginhash_data, lo que permite a los atacantes extraer credenciales de administrador o tokens de sesión activa mediante solicitudes manipuladas. Esto se debe a que la entrada se concatena directamente en una consulta SQL sin la validación adecuada, lo que permite la inyección SQL. Tras eludir la autenticación, una segunda vulnerabilidad en el componente Administrador de Archivos permite la carga arbitraria de archivos PHP. La función de carga de archivos no aplica restricciones de tipo MIME ni de extensión de archivo, lo que permite a los usuarios autenticados cargar shells web en un directorio de acceso público y ejecutar código remoto."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 10.0,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-89"
+              },
+              {
+                "lang": "en",
+                "value": "CWE-798"
+              }
+            ],
+            "source": "disclosure@vulncheck.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://raw.githubusercontent.com/rapid7/metasploit-framework/master/modules/exploits/linux/http/pandora_fms_sqli.rb",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://web.archive.org/web/20140304121149/http://blog.pandorafms.org/?p=2041",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://web.archive.org/web/20140331231237/http://pandorafms.com/downloads/whats_new_5-SP3.pdf",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://www.exploit-db.com/exploits/35380",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://www.vulncheck.com/advisories/pandora-fms-default-creds-sqli-rce",
+            "source": "disclosure@vulncheck.com"
+          }
+        ]
+      },
+      "risk_score": 85,
+      "rank": 6
+    },
+    {
+      "cve_id": "CVE-2014-125116",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 0.54454,
+            "score_date": "2026-04-10"
+          },
+          "current": {
+            "score": 0.6751,
+            "score_date": "2026-05-21"
+          },
+          "delta": 0.13056
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-07-25",
+        "description": "A remote code execution vulnerability exists in HybridAuth versions 2.0.9 through 2.2.2 due to insecure use of the install.php installation script. The script remains accessible after deployment and fails to sanitize input before writing to the application’s config.php file. An unauthenticated attacker can inject arbitrary PHP code into config.php, which is later executed when the file is loaded. This allows attackers to achieve remote code execution on the server. Exploitation of this issue will overwrite the existing configuration, rendering the application non-functional.",
+        "title": "RCE · EPSS dynamics",
+        "attack_type": "RCE",
+        "cvss_max": 9.3
+      },
+      "cve": {
+        "id": "CVE-2014-125116",
+        "sourceIdentifier": "disclosure@vulncheck.com",
+        "published": "2025-07-25T16:15:26.053",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A remote code execution vulnerability exists in HybridAuth versions 2.0.9 through 2.2.2 due to insecure use of the install.php installation script. The script remains accessible after deployment and fails to sanitize input before writing to the application’s config.php file. An unauthenticated attacker can inject arbitrary PHP code into config.php, which is later executed when the file is loaded. This allows attackers to achieve remote code execution on the server. Exploitation of this issue will overwrite the existing configuration, rendering the application non-functional."
+          },
+          {
+            "lang": "es",
+            "value": "Existe una vulnerabilidad de ejecución remota de código en las versiones 2.0.9 a 2.2.2 de HybridAuth debido al uso inseguro del script de instalación install.php. El script permanece accesible después de la implementación y no depura la entrada antes de escribir en el archivo config.php de la aplicación. Un atacante no autenticado puede inyectar código PHP arbitrario en config.php, que se ejecuta posteriormente al cargar el archivo. Esto permite a los atacantes ejecutar código remoto en el servidor. Aprovechar este problema sobrescribirá la configuración existente, dejando la aplicación inoperativa."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-306"
+              },
+              {
+                "lang": "en",
+                "value": "CWE-434"
+              }
+            ],
+            "source": "disclosure@vulncheck.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://hybridauth.github.io/",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://raw.githubusercontent.com/rapid7/metasploit-framework/master/modules/exploits/unix/webapp/hybridauth_install_php_exec.rb",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          },
+          {
+            "url": "https://vulners.com/metasploit/MSF:EXPLOIT-UNIX-WEBAPP-HYBRIDAUTH_INSTALL_PHP_EXEC-",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          },
+          {
+            "url": "https://www.exploit-db.com/exploits/34273",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          },
+          {
+            "url": "https://www.exploit-db.com/exploits/34390",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://www.vulncheck.com/advisories/hybridauth-unauth-rce-via-config-injection",
+            "source": "disclosure@vulncheck.com"
+          }
+        ]
+      },
+      "risk_score": 85,
+      "rank": 7
+    },
+    {
+      "cve_id": "CVE-2014-125117",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 0.48485,
+            "score_date": "2025-12-22"
+          },
+          "current": {
+            "score": 0.62546,
+            "score_date": "2026-05-21"
+          },
+          "delta": 0.14061
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-07-25",
+        "description": "A stack-based buffer overflow vulnerability in the my_cgi.cgi component of certain D-Link devices, including the DSP-W215 version 1.02, can be exploited via a specially crafted HTTP POST request to the /common/info.cgi endpoint. This flaw enables an unauthenticated attacker to achieve remote code execution with system-level privileges.",
+        "title": "dlink dsp-w215_firmware RCE",
+        "vendor": "dlink",
+        "product": "dsp-w215_firmware",
+        "attack_type": "RCE",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2014-125117",
+        "sourceIdentifier": "disclosure@vulncheck.com",
+        "published": "2025-07-25T16:15:26.213",
+        "lastModified": "2025-09-23T18:03:59.860",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A stack-based buffer overflow vulnerability in the my_cgi.cgi component of certain D-Link devices, including the DSP-W215 version 1.02, can be exploited via a specially crafted HTTP POST request to the /common/info.cgi endpoint. This flaw enables an unauthenticated attacker to achieve remote code execution with system-level privileges."
+          },
+          {
+            "lang": "es",
+            "value": "Una vulnerabilidad de desbordamiento de búfer basada en pila en el componente my_cgi.cgi de ciertos dispositivos D-Link, incluido el DSP-W215 versión 1.02, puede explotarse mediante una solicitud HTTP POST especialmente manipulada al endpoint /common/info.cgi. Esta falla permite a un atacante no autentica Ddo ejecutar código remoto con privilegios de sistema."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-20"
+              },
+              {
+                "lang": "en",
+                "value": "CWE-121"
+              }
+            ],
+            "source": "disclosure@vulncheck.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:dlink:dsp-w215_firmware:1.02:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "C962848D-6F5D-44EC-8EC2-3DB13F9E9418"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:dlink:dsp-w215:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "8CD35CED-7040-4E39-B6B1-CFA497A3BB95"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://raw.githubusercontent.com/rapid7/metasploit-framework/master/modules/exploits/linux/http/dlink_dspw215_info_cgi_bof.rb",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Exploit"
+            ]
+          },
+          {
+            "url": "https://web.archive.org/web/20140525215526/http://www.devttys0.com/2014/05/hacking-the-dspw215-again/",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.exploit-db.com/exploits/34063",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Exploit"
+            ]
+          },
+          {
+            "url": "https://www.fortiguard.com/encyclopedia/ips/38932/d-link-info-cgi-post-request-buffer-overflow",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.vulncheck.com/advisories/dlink-stack-based-buffer-overflow-rce",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 85,
+      "rank": 8
+    },
+    {
+      "cve_id": "CVE-2014-125119",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 0.16128,
+            "score_date": "2026-04-10"
+          },
+          "current": {
+            "score": 0.32666,
+            "score_date": "2026-05-21"
+          },
+          "delta": 0.16538
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-07-25",
+        "description": "A filename spoofing vulnerability exists in WinRAR when opening specially crafted ZIP archives. The issue arises due to inconsistencies between the Central Directory and Local File Header entries in ZIP files. When viewed in WinRAR, the file name from the Central Directory is displayed to the user, while the file from the Local File Header is extracted and executed. An attacker can leverage this flaw to spoof filenames and trick users into executing malicious payloads under the guise of harmless files, potentially leading to remote code execution.",
+        "title": "EPSS dynamics",
+        "cvss_max": 8.4
+      },
+      "cve": {
+        "id": "CVE-2014-125119",
+        "sourceIdentifier": "disclosure@vulncheck.com",
+        "published": "2025-07-25T16:15:26.507",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A filename spoofing vulnerability exists in WinRAR when opening specially crafted ZIP archives. The issue arises due to inconsistencies between the Central Directory and Local File Header entries in ZIP files. When viewed in WinRAR, the file name from the Central Directory is displayed to the user, while the file from the Local File Header is extracted and executed. An attacker can leverage this flaw to spoof filenames and trick users into executing malicious payloads under the guise of harmless files, potentially leading to remote code execution."
+          },
+          {
+            "lang": "es",
+            "value": "Existe una vulnerabilidad de suplantación de nombre de archivo en WinRAR al abrir archivos ZIP especialmente manipulados. El problema surge debido a inconsistencias entre las entradas del Directorio Central y la Encabezado de Archivo Local en los archivos ZIP. Al visualizarse en WinRAR, se muestra al usuario el nombre del archivo del Directorio Central, mientras que el archivo de la Encabezado de Archivo Local se extrae y se ejecuta. Un atacante puede aprovechar esta vulnerabilidad para suplantar nombres de archivo y engañar a los usuarios para que ejecuten payloads bajo la apariencia de archivos inofensivos, lo que podría provocar la ejecución remota de código."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:A/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 8.4,
+                "baseSeverity": "HIGH"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-20"
+              },
+              {
+                "lang": "en",
+                "value": "CWE-434"
+              }
+            ],
+            "source": "disclosure@vulncheck.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://an7isec.blogspot.com/2014/03/winrar-file-extension-spoofing-0day.html",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://raw.githubusercontent.com/rapid7/metasploit-framework/master/modules/exploits/windows/fileformat/winrar_name_spoofing.rb",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://web.archive.org/web/20140625054244/http://intelcrawler.com/news-15",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://web.archive.org/web/20141111142204/https://www.intelcrawler.com/report_2603.pdf",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://www.rarlab.com/vuln_zip_spoofing_4.20.html",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://www.vulncheck.com/advisories/winrar-filename-spoofing-rce",
+            "source": "disclosure@vulncheck.com"
+          }
+        ]
+      },
+      "risk_score": 84,
+      "rank": 9
+    },
+    {
+      "cve_id": "CVE-2015-0291",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 0.14593,
+            "score_date": "2026-04-21"
+          },
+          "current": {
+            "score": 0.28029,
+            "score_date": "2026-05-21"
+          },
+          "delta": 0.13436
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2015-03-19",
+        "description": "The sigalgs implementation in t1_lib.c in OpenSSL 1.0.2 before 1.0.2a allows remote attackers to cause a denial of service (NULL pointer dereference and daemon crash) by using an invalid signature_algorithms extension in the ClientHello message during a renegotiation.",
+        "title": "openssl openssl DoS",
+        "vendor": "openssl",
+        "product": "openssl",
+        "attack_type": "DoS",
+        "cvss_max": 5.0
+      },
+      "cve": {
+        "id": "CVE-2015-0291",
+        "sourceIdentifier": "secalert@redhat.com",
+        "published": "2015-03-19T22:59:09.660",
+        "lastModified": "2026-05-06T22:30:45.220",
+        "vulnStatus": "Modified",
+        "evaluatorComment": "<a href=\"http://cwe.mitre.org/data/definitions/476.html\" rel=\"nofollow\">CWE-476: NULL Pointer Dereference</a>",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The sigalgs implementation in t1_lib.c in OpenSSL 1.0.2 before 1.0.2a allows remote attackers to cause a denial of service (NULL pointer dereference and daemon crash) by using an invalid signature_algorithms extension in the ClientHello message during a renegotiation."
+          },
+          {
+            "lang": "es",
+            "value": "La implementación sigalgs en t1_lib.c en OpenSSL 1.0.2 anterior a 1.0.2a permite a atacantes remotos causar una denegación de servicio (referencia a puntero nulo y caída del demonio) mediante el uso de una extensión signature_algorithms inválida en el mensaje ClientHello durante una renegociación."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV2": [
+            {
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+                "baseScore": 5.0,
+                "baseSeverity": "MEDIUM"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "baseSeverity": "MEDIUM",
+              "exploitabilityScore": 10.0,
+              "impactScore": 2.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "NVD-CWE-Other"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:openssl:openssl:1.0.2:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "AD3E5C1B-EC63-4214-A0BD-0B8681CE6C8B"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:openssl:openssl:1.0.2:beta1:*:*:*:*:*:*",
+                    "matchCriteriaId": "18797BEE-417D-4959-9AAD-C5A7C051B524"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:openssl:openssl:1.0.2:beta2:*:*:*:*:*:*",
+                    "matchCriteriaId": "6FAA3C31-BD9D-45A9-A502-837FECA6D479"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:openssl:openssl:1.0.2:beta3:*:*:*:*:*:*",
+                    "matchCriteriaId": "6455A421-9956-4846-AC7C-3431E0D37D23"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "http://marc.info/?l=bugtraq&m=143748090628601&w=2",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Mailing List",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "http://marc.info/?l=bugtraq&m=144050155601375&w=2",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Mailing List",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "http://marc.info/?l=bugtraq&m=144050297101809&w=2",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Mailing List",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "http://www.fortiguard.com/advisory/2015-03-24-openssl-vulnerabilities-march-2015",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "http://www.oracle.com/technetwork/security-advisory/cpuoct2017-3236626.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Patch",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "http://www.oracle.com/technetwork/topics/security/bulletinapr2015-2511959.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "http://www.oracle.com/technetwork/topics/security/cpujan2016-2367955.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "http://www.oracle.com/technetwork/topics/security/cpujul2015-2367936.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "http://www.oracle.com/technetwork/topics/security/cpuoct2015-2367953.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "http://www.securityfocus.com/bid/73235",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory",
+              "VDB Entry"
+            ]
+          },
+          {
+            "url": "http://www.securitytracker.com/id/1031929",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory",
+              "VDB Entry"
+            ]
+          },
+          {
+            "url": "https://bto.bluecoat.com/security-advisory/sa92",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1202338",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Issue Tracking"
+            ]
+          },
+          {
+            "url": "https://cert-portal.siemens.com/productcert/pdf/ssa-412672.pdf",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "https://git.openssl.org/?p=openssl.git%3Ba=commit%3Bh=76343947ada960b6269090638f5391068daee88d",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "https://kc.mcafee.com/corporate/index?page=content&id=SB10110",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://security.gentoo.org/glsa/201503-11",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.openssl.org/news/secadv_20150319.txt",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 78,
+      "rank": 10
+    },
+    {
+      "cve_id": "CVE-2016-0128",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 0.60274,
+            "score_date": "2026-01-11"
+          },
+          "current": {
+            "score": 0.77043,
+            "score_date": "2026-05-21"
+          },
+          "delta": 0.16769
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2016-04-12",
+        "description": "The SAM and LSAD protocol implementations in Microsoft Windows Vista SP2, Windows Server 2008 SP2 and R2 SP1, Windows 7 SP1, Windows 8.1, Windows Server 2012 Gold and R2, Windows RT 8.1, and Windows 10 Gold and 1511 do not properly establish an RPC channel, which allows man-in-the-middle attackers to perform protocol-downgrade attacks and impersonate users by modifying the client-server data stream, aka \"Windows SAM and LSAD Downgrade Vulnerability\" or \"BADLOCK.\"",
+        "title": "microsoft windows_10",
+        "vendor": "microsoft",
+        "product": "windows_10",
+        "cvss_max": 6.8
+      },
+      "cve": {
+        "id": "CVE-2016-0128",
+        "sourceIdentifier": "secure@microsoft.com",
+        "published": "2016-04-12T23:59:06.587",
+        "lastModified": "2026-05-06T22:30:45.220",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The SAM and LSAD protocol implementations in Microsoft Windows Vista SP2, Windows Server 2008 SP2 and R2 SP1, Windows 7 SP1, Windows 8.1, Windows Server 2012 Gold and R2, Windows RT 8.1, and Windows 10 Gold and 1511 do not properly establish an RPC channel, which allows man-in-the-middle attackers to perform protocol-downgrade attacks and impersonate users by modifying the client-server data stream, aka \"Windows SAM and LSAD Downgrade Vulnerability\" or \"BADLOCK.\""
+          },
+          {
+            "lang": "es",
+            "value": "Las implementaciones de protocolo SAM y LSAD en Microsoft Windows Vista SP2, Windows Server 2008 SP2 y R2 SP1, Windows 7 SP1, Windows 8.1, Windows Server 2012 Gold y R2, Windows RT 8.1 y Windows 10 Gold y 1511 no establecen correctamente un canal RPC, lo que permite a atacantes man-in-the-middle llevar a cabo ataques de desactualización de protocolo y hacerse pasar por usuarios modificando el flujo de datos cliente-servidor, también conocida como \"Windows SAM y LSAD Downgrade Vulnerability\" or \"BADLOCK\"."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV2": [
+            {
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:M/Au:N/C:P/I:P/A:N",
+                "baseScore": 5.8,
+                "baseSeverity": "MEDIUM"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "baseSeverity": "MEDIUM",
+              "exploitabilityScore": 8.6,
+              "impactScore": 4.9
+            }
+          ],
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:N",
+                "baseScore": 6.8,
+                "baseSeverity": "MEDIUM"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 1.6,
+              "impactScore": 5.2
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-254"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_10:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "21540673-614A-4D40-8BD7-3F07723803B0"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_10:1511:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "232581CC-130A-4C62-A7E9-2EC9A9364D53"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_7:*:sp1:*:*:*:*:*:*",
+                    "matchCriteriaId": "7519928D-0FF2-4584-8058-4C7764CD5671"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_8.1:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "A7F51B5F-AA19-4D31-89FA-6DFAC4BA8F0F"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_rt_8.1:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "C6CE5198-C498-4672-AF4C-77AB4BE06C5C"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_server_2008:*:sp2:*:*:*:*:*:*",
+                    "matchCriteriaId": "0C28897B-044A-447B-AD76-6397F8190177"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_server_2008:r2:sp1:*:*:*:*:*:*",
+                    "matchCriteriaId": "2ACA9287-B475-4AF7-A4DA-A7143CEF9E57"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_server_2012:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "A7DF96F8-BA6A-4780-9CA3-F719B3F81074"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_server_2012:r2:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "DB18C4CE-5917-401E-ACF7-2747084FD36E"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_vista:*:sp2:*:*:*:*:*:*",
+                    "matchCriteriaId": "0A0D2704-C058-420B-B368-372D1129E914"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "http://badlock.org/",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "http://www.securitytracker.com/id/1035534",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory",
+              "VDB Entry"
+            ]
+          },
+          {
+            "url": "https://bto.bluecoat.com/security-advisory/sa122",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://docs.microsoft.com/en-us/security-updates/securitybulletins/2016/ms16-047",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Patch",
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://www.kb.cert.org/vuls/id/813296",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory",
+              "US Government Resource"
+            ]
+          },
+          {
+            "url": "https://www.samba.org/samba/security/CVE-2016-2118.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 81,
+      "rank": 11
+    },
+    {
+      "cve_id": "CVE-2021-22122",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 0.55636,
+            "score_date": "2026-04-07"
+          },
+          "current": {
+            "score": 0.70027,
+            "score_date": "2026-05-21"
+          },
+          "delta": 0.14391
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2021-02-08",
+        "description": "An improper neutralization of input during web page generation in FortiWeb GUI interface 6.3.0 through 6.3.7 and version before 6.2.4 may allow an unauthenticated, remote attacker to perform a reflected cross site scripting attack (XSS) by injecting malicious payload in different vulnerable API end-points.",
+        "title": "fortinet fortiweb cross-site scripting",
+        "vendor": "fortinet",
+        "product": "fortiweb",
+        "attack_type": "cross-site scripting",
+        "cvss_max": 6.1
+      },
+      "cve": {
+        "id": "CVE-2021-22122",
+        "sourceIdentifier": "psirt@fortinet.com",
+        "published": "2021-02-08T16:15:12.080",
+        "lastModified": "2024-11-21T05:49:32.910",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "An improper neutralization of input during web page generation in FortiWeb GUI interface 6.3.0 through 6.3.7 and version before 6.2.4 may allow an unauthenticated, remote attacker to perform a reflected cross site scripting attack (XSS) by injecting malicious payload in different vulnerable API end-points."
+          },
+          {
+            "lang": "es",
+            "value": "Una neutralización inapropiada de la entrada durante la generación de la página web en la interfaz GUI de FortiWeb versiones 6.3.0 hasta 6.3.7 y la versiones anteriores a 6.2.4, puede permitir a un atacante remoto no autenticado llevar a cabo un ataque de tipo cross site scripting (XSS) reflejado al inyectar una carga útil maliciosa en diferentes endpoints de  la API vulnerable"
+          }
+        ],
+        "metrics": {
+          "cvssMetricV2": [
+            {
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:M/Au:N/C:N/I:P/A:N",
+                "baseScore": 4.3,
+                "baseSeverity": "MEDIUM"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "baseSeverity": "MEDIUM",
+              "exploitabilityScore": 8.6,
+              "impactScore": 2.9
+            }
+          ],
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+                "baseScore": 6.1,
+                "baseSeverity": "MEDIUM"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 2.7
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-79"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:fortinet:fortiweb:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "536B766C-A599-460F-811D-911D8B929BEE",
+                    "versionEndIncluding": "6.2.3"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:fortinet:fortiweb:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "1007BA52-D565-4ACC-A6D5-EC559316A679",
+                    "versionStartIncluding": "6.3.0",
+                    "versionEndIncluding": "6.3.7"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://fortiguard.com/advisory/FG-IR-20-122",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 80,
+      "rank": 12
+    },
+    {
+      "cve_id": "CVE-2025-71210",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-05-21",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-05-21",
+        "description": "A vulnerability in the Trend Micro Apex One management console could allow a remote attacker to upload malicious code and execute commands on affected installations.\r\n\r\nPlease note: although this vulnerability carries a technical critical CVSS rating, this was reported via responsible disclosure via a researcher through the Zero Day Initiative. The SaaS versions of the product have already been mitigated and no customer action required.\r\n\r\nFor this particular vulnerability, an attacker must have access to the Trend Micro Apex One Management Console, so customers that have their console�s IP address exposed externally should consider mitigating factors such as source restrictions if not already applied.",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-71210",
+        "sourceIdentifier": "security@trendmicro.com",
+        "published": "2026-05-21T14:16:43.540",
+        "lastModified": "2026-05-21T15:05:28.023",
+        "vulnStatus": "Undergoing Analysis",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A vulnerability in the Trend Micro Apex One management console could allow a remote attacker to upload malicious code and execute commands on affected installations.\r\n\r\nPlease note: although this vulnerability carries a technical critical CVSS rating, this was reported via responsible disclosure via a researcher through the Zero Day Initiative. The SaaS versions of the product have already been mitigated and no customer action required.\r\n\r\nFor this particular vulnerability, an attacker must have access to the Trend Micro Apex One Management Console, so customers that have their console�s IP address exposed externally should consider mitigating factors such as source restrictions if not already applied."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security@trendmicro.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-22"
+              }
+            ],
+            "source": "security@trendmicro.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://success.trendmicro.com/en-US/solution/KA-0022458",
+            "source": "security@trendmicro.com"
+          },
+          {
+            "url": "https://www.zerodayinitiative.com/advisories/ZDI-26-136/",
+            "source": "security@trendmicro.com"
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 13
+    },
+    {
+      "cve_id": "CVE-2025-71211",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-05-21",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-05-21",
+        "description": "A vulnerability in the Trend Micro Apex One management console could allow a remote attacker to upload malicious code and execute commands on affected installations. This vulnerability is similar in scope to CVE-2025-71210 but affects a different executable. \r\n\r\nPlease note: although this vulnerability carries a technical critical CVSS rating, this was reported via responsible disclosure via a researcher through the Zero Day Initiative. The SaaS versions of the product have already been mitigated and no customer action required.\r\n\r\nFor this particular vulnerability, an attacker must have access to the Trend Micro Apex One Management Console, so customers that have their console�s IP address exposed externally should consider mitigating factors such as source restrictions if not already applied.",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-71211",
+        "sourceIdentifier": "security@trendmicro.com",
+        "published": "2026-05-21T14:16:43.663",
+        "lastModified": "2026-05-21T15:05:28.023",
+        "vulnStatus": "Undergoing Analysis",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A vulnerability in the Trend Micro Apex One management console could allow a remote attacker to upload malicious code and execute commands on affected installations. This vulnerability is similar in scope to CVE-2025-71210 but affects a different executable. \r\n\r\nPlease note: although this vulnerability carries a technical critical CVSS rating, this was reported via responsible disclosure via a researcher through the Zero Day Initiative. The SaaS versions of the product have already been mitigated and no customer action required.\r\n\r\nFor this particular vulnerability, an attacker must have access to the Trend Micro Apex One Management Console, so customers that have their console�s IP address exposed externally should consider mitigating factors such as source restrictions if not already applied."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security@trendmicro.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-22"
+              }
+            ],
+            "source": "security@trendmicro.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://success.trendmicro.com/en-US/solution/KA-0022458",
+            "source": "security@trendmicro.com"
+          },
+          {
+            "url": "https://www.zerodayinitiative.com/advisories/ZDI-26-137/",
+            "source": "security@trendmicro.com"
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 14
+    },
+    {
+      "cve_id": "CVE-2026-34926",
+      "signal_types": [
+        "KEV"
+      ],
+      "signals": {
+        "kev": {
+          "date_added": "2026-05-21"
+        },
+        "exploit": null,
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-05-21",
+        "description": "A directory traversal vulnerability in the Apex One (on-premise) server could allow a pre-authenticated local attacker to modify a key table on the server to inject malicious code to deploy to agents on affected installations.\n\n\r\nThis vulnerability is only exploitable on the on-premise version of Apex One and a potential attacker must have access to the Apex One Server and already obtained administrative credentials to the server via some other method to exploit this vulnerability.",
+        "title": "Trend Micro Apex One (On-Premise) Directory Traversal Vulnerability",
+        "vendor": "Trend Micro",
+        "product": "Apex One",
+        "attack_type": "Directory Traversal",
+        "cvss_max": 6.7
+      },
+      "cve": {
+        "id": "CVE-2026-34926",
+        "sourceIdentifier": "security@trendmicro.com",
+        "published": "2026-05-21T14:16:45.213",
+        "lastModified": "2026-05-21T20:16:14.027",
+        "vulnStatus": "Undergoing Analysis",
+        "cisaExploitAdd": "2026-05-21",
+        "cisaActionDue": "2026-06-04",
+        "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+        "cisaVulnerabilityName": "Trend Micro Apex One (On-Premise) Directory Traversal Vulnerability",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A directory traversal vulnerability in the Apex One (on-premise) server could allow a pre-authenticated local attacker to modify a key table on the server to inject malicious code to deploy to agents on affected installations.\n\n\r\nThis vulnerability is only exploitable on the on-premise version of Apex One and a potential attacker must have access to the Apex One Server and already obtained administrative credentials to the server via some other method to exploit this vulnerability."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:L/AC:H/PR:H/UI:N/S:C/C:H/I:L/A:L",
+                "baseScore": 6.7,
+                "baseSeverity": "MEDIUM"
+              },
+              "source": "security@trendmicro.com",
+              "type": "Secondary",
+              "exploitabilityScore": 0.8,
+              "impactScore": 5.3
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-23"
+              }
+            ],
+            "source": "security@trendmicro.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://jvn.jp/en/vu/JVNVU90583059/",
+            "source": "security@trendmicro.com"
+          },
+          {
+            "url": "https://success.trendmicro.com/en-US/solution/KA-0023430",
+            "source": "security@trendmicro.com"
+          },
+          {
+            "url": "https://success.trendmicro.com/ja-JP/solution/KA-0022974",
+            "source": "security@trendmicro.com"
+          },
+          {
+            "url": "https://www.jpcert.or.jp/english/at/2026/at260014.html",
+            "source": "security@trendmicro.com"
+          },
+          {
+            "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-34926",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ]
+      },
+      "risk_score": 88,
+      "rank": 15
+    },
+    {
+      "cve_id": "CVE-2026-39531",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-05-21",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-05-21",
+        "description": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in Wp Directory Kit WP Directory Kit allows Blind SQL Injection.\n\nThis issue affects WP Directory Kit: from n/a through 1.5.0.",
+        "title": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in Wp Directory Kit WP Directory Kit a...",
+        "attack_type": "SQL Injection",
+        "cvss_max": 9.3
+      },
+      "cve": {
+        "id": "CVE-2026-39531",
+        "sourceIdentifier": "audit@patchstack.com",
+        "published": "2026-05-21T16:16:23.030",
+        "lastModified": "2026-05-21T19:10:36.607",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in Wp Directory Kit WP Directory Kit allows Blind SQL Injection.\n\nThis issue affects WP Directory Kit: from n/a through 1.5.0."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:L",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "audit@patchstack.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 4.7
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-89"
+              }
+            ],
+            "source": "audit@patchstack.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://patchstack.com/database/wordpress/plugin/wpdirectorykit/vulnerability/wordpress-wp-directory-kit-plugin-1-5-0-sql-injection-vulnerability?_s_id=cve",
+            "source": "audit@patchstack.com"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 16
+    },
+    {
+      "cve_id": "CVE-2026-43501",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-05-21",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-05-21",
+        "description": "In the Linux kernel, the following vulnerability has been resolved:\n\nipv6: rpl: reserve mac_len headroom when recompressed SRH grows\n\nipv6_rpl_srh_rcv() decompresses an RFC 6554 Source Routing Header, swaps\nthe next segment into ipv6_hdr->daddr, recompresses, then pulls the old\nheader and pushes the new one plus the IPv6 header back.  The\nrecompressed header can be larger than the received one when the swap\nreduces the common-prefix length the segments share with daddr (CmprI=0,\nCmprE>0, seg[0][0] != daddr[0] gives the maximum +8 bytes).\n\npskb_expand_head() was gated on segments_left == 0, so on earlier\nsegments the push consumed unchecked headroom.  Once skb_push() leaves\nfewer than skb->mac_len bytes in front of data,\nskb_mac_header_rebuild()'s call to:\n\n\tskb_set_mac_header(skb, -skb->mac_len);\n\nwill store (data - head) - mac_len into the u16 mac_header field, which\nwraps to ~65530, and the following memmove() writes mac_len bytes ~64KiB\npast skb->head.\n\nA single AF_INET6/SOCK_RAW/IPV6_HDRINCL packet over lo with a two\nsegment type-3 SRH (CmprI=0, CmprE=15) reaches headroom 8 after one\npass; KASAN reports a 14-byte OOB write in ipv6_rthdr_rcv.\n\nFix this by expanding the head whenever the remaining room is less than\nthe push size plus mac_len, and request that much extra so the rebuilt\nMAC header fits afterwards.",
+        "title": "In the Linux kernel, the following vulnerability has been resolved: ipv6: rpl: reserve mac_len headroom when recompressed SRH grows ipv6_...",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2026-43501",
+        "sourceIdentifier": "416baaa9-dc9f-4396-8d5f-8c081fb06d67",
+        "published": "2026-05-21T13:16:19.410",
+        "lastModified": "2026-06-01T17:17:07.350",
+        "vulnStatus": "Awaiting Analysis",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "In the Linux kernel, the following vulnerability has been resolved:\n\nipv6: rpl: reserve mac_len headroom when recompressed SRH grows\n\nipv6_rpl_srh_rcv() decompresses an RFC 6554 Source Routing Header, swaps\nthe next segment into ipv6_hdr->daddr, recompresses, then pulls the old\nheader and pushes the new one plus the IPv6 header back.  The\nrecompressed header can be larger than the received one when the swap\nreduces the common-prefix length the segments share with daddr (CmprI=0,\nCmprE>0, seg[0][0] != daddr[0] gives the maximum +8 bytes).\n\npskb_expand_head() was gated on segments_left == 0, so on earlier\nsegments the push consumed unchecked headroom.  Once skb_push() leaves\nfewer than skb->mac_len bytes in front of data,\nskb_mac_header_rebuild()'s call to:\n\n\tskb_set_mac_header(skb, -skb->mac_len);\n\nwill store (data - head) - mac_len into the u16 mac_header field, which\nwraps to ~65530, and the following memmove() writes mac_len bytes ~64KiB\npast skb->head.\n\nA single AF_INET6/SOCK_RAW/IPV6_HDRINCL packet over lo with a two\nsegment type-3 SRH (CmprI=0, CmprE=15) reaches headroom 8 after one\npass; KASAN reports a 14-byte OOB write in ipv6_rthdr_rcv.\n\nFix this by expanding the head whenever the remaining room is less than\nthe push size plus mac_len, and request that much extra so the rebuilt\nMAC header fits afterwards."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "416baaa9-dc9f-4396-8d5f-8c081fb06d67",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "references": [
+          {
+            "url": "https://git.kernel.org/stable/c/0a9e8053f1f8a8e1bfc1dd61ffe67be6c1180402",
+            "source": "416baaa9-dc9f-4396-8d5f-8c081fb06d67"
+          },
+          {
+            "url": "https://git.kernel.org/stable/c/4babc2d9fda2df43823b85d08a0180b68f1b0854",
+            "source": "416baaa9-dc9f-4396-8d5f-8c081fb06d67"
+          },
+          {
+            "url": "https://git.kernel.org/stable/c/7398ebefbfd4f8a31d4f665a4213302fa995494b",
+            "source": "416baaa9-dc9f-4396-8d5f-8c081fb06d67"
+          },
+          {
+            "url": "https://git.kernel.org/stable/c/8e8be63465a5e80394c70324603dfea1bfdad48f",
+            "source": "416baaa9-dc9f-4396-8d5f-8c081fb06d67"
+          },
+          {
+            "url": "https://git.kernel.org/stable/c/9e6bf146b55999a095bb14f73a843942456d1adc",
+            "source": "416baaa9-dc9f-4396-8d5f-8c081fb06d67"
+          },
+          {
+            "url": "https://git.kernel.org/stable/c/bde199c72d319a4e207f88daabc888317504e2fb",
+            "source": "416baaa9-dc9f-4396-8d5f-8c081fb06d67"
+          },
+          {
+            "url": "https://git.kernel.org/stable/c/be1fa0aa9b4fdd5a8b7a61ba520a690a68391e6e",
+            "source": "416baaa9-dc9f-4396-8d5f-8c081fb06d67"
+          },
+          {
+            "url": "https://git.kernel.org/stable/c/c261d07a80576dc8ccf394ef8f074f8c67a06b37",
+            "source": "416baaa9-dc9f-4396-8d5f-8c081fb06d67"
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 17
+    },
+    {
+      "cve_id": "CVE-2026-4631",
+      "signal_types": [
+        "EXP"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": {
+          "ref_published": "2026-05-21"
+        },
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-04-07",
+        "description": "Cockpit's remote login feature passes user-supplied hostnames and usernames from the web interface to the SSH client without validation or sanitization. An attacker with network access to the Cockpit web service can craft a single HTTP request to the login endpoint that injects malicious SSH options or shell commands, achieving code execution on the Cockpit host without valid credentials. The injection occurs during the authentication flow before any credential verification takes place, meaning no login is required to exploit the vulnerability.",
+        "title": "Cockpit's remote login feature passes user-supplied hostnames and usernames from the web interface to the SSH client without validation o...",
+        "attack_type": "Code Execution",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2026-4631",
+        "sourceIdentifier": "secalert@redhat.com",
+        "published": "2026-04-07T17:16:38.010",
+        "lastModified": "2026-04-10T21:16:28.053",
+        "vulnStatus": "Awaiting Analysis",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Cockpit's remote login feature passes user-supplied hostnames and usernames from the web interface to the SSH client without validation or sanitization. An attacker with network access to the Cockpit web service can craft a single HTTP request to the login endpoint that injects malicious SSH options or shell commands, achieving code execution on the Cockpit host without valid credentials. The injection occurs during the authentication flow before any credential verification takes place, meaning no login is required to exploit the vulnerability."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "secalert@redhat.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-78"
+              }
+            ],
+            "source": "secalert@redhat.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://access.redhat.com/errata/RHSA-2026:7381",
+            "source": "secalert@redhat.com"
+          },
+          {
+            "url": "https://access.redhat.com/errata/RHSA-2026:7382",
+            "source": "secalert@redhat.com"
+          },
+          {
+            "url": "https://access.redhat.com/errata/RHSA-2026:7383",
+            "source": "secalert@redhat.com"
+          },
+          {
+            "url": "https://access.redhat.com/errata/RHSA-2026:7384",
+            "source": "secalert@redhat.com"
+          },
+          {
+            "url": "https://access.redhat.com/security/cve/CVE-2026-4631",
+            "source": "secalert@redhat.com"
+          },
+          {
+            "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2450246",
+            "source": "secalert@redhat.com"
+          },
+          {
+            "url": "http://www.openwall.com/lists/oss-security/2026/04/10/5",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          }
+        ]
+      },
+      "risk_score": 78,
+      "rank": 18
+    },
+    {
+      "cve_id": "CVE-2026-48207",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-05-21",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-05-21",
+        "description": "Deserialization of untrusted data in Apache Fory PyFory. PyFory's ReduceSerializer could bypass documented DeserializationPolicy validation hooks during reduce-state restoration and global-name resolution. An application is vulnerable if it deserializes attacker-controlled data using PyFory Python-native mode with strict mode disabled and relies on DeserializationPolicy to restrict unsafe classes, functions, or module attributes.\n\nThis issue affects Apache Fory: from before 1.0.0.\n\nMitigation: Users of Apache Fory are recommended to upgrade to version 1.0.0 or later, which enforces DeserializationPolicy validation for the affected ReduceSerializer paths and thus fixes this issue.",
+        "title": "Deserialization of untrusted data in Apache Fory PyFory.",
+        "attack_type": "Deserialization",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2026-48207",
+        "sourceIdentifier": "security@apache.org",
+        "published": "2026-05-21T17:16:21.857",
+        "lastModified": "2026-05-21T19:16:53.700",
+        "vulnStatus": "Undergoing Analysis",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Deserialization of untrusted data in Apache Fory PyFory. PyFory's ReduceSerializer could bypass documented DeserializationPolicy validation hooks during reduce-state restoration and global-name resolution. An application is vulnerable if it deserializes attacker-controlled data using PyFory Python-native mode with strict mode disabled and relies on DeserializationPolicy to restrict unsafe classes, functions, or module attributes.\n\nThis issue affects Apache Fory: from before 1.0.0.\n\nMitigation: Users of Apache Fory are recommended to upgrade to version 1.0.0 or later, which enforces DeserializationPolicy validation for the affected ReduceSerializer paths and thus fixes this issue."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-502"
+              }
+            ],
+            "source": "security@apache.org"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://fory.apache.org/security/#cve-2026-48207-pyfory-reduceserializer-deserializationpolicy-bypass",
+            "source": "security@apache.org"
+          },
+          {
+            "url": "http://www.openwall.com/lists/oss-security/2026/05/21/10",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 19
+    },
+    {
+      "cve_id": "CVE-2026-48241",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-05-21",
+          "previous_max": null,
+          "current_max": 9.2
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-05-21",
+        "description": "Open ISES Tickets before 3.44.2 contains hardcoded MySQL database credentials in loader.php (a public-facing database utility) that are committed to the source repository. Any actor with access to the public source tree (or an unauthenticated attacker with read access to the file on a deployed installation) can read the username, password, and database name and use them to connect to the database if it is reachable from their network.",
+        "title": "Open ISES Tickets before 3.44.2 contains hardcoded MySQL database credentials in loader.php (a public-facing database utility) that are c...",
+        "cvss_max": 9.2
+      },
+      "cve": {
+        "id": "CVE-2026-48241",
+        "sourceIdentifier": "disclosure@vulncheck.com",
+        "published": "2026-05-21T18:16:21.070",
+        "lastModified": "2026-05-21T19:10:12.323",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Open ISES Tickets before 3.44.2 contains hardcoded MySQL database credentials in loader.php (a public-facing database utility) that are committed to the source repository. Any actor with access to the public source tree (or an unauthenticated attacker with read access to the file on a deployed installation) can read the username, password, and database name and use them to connect to the database if it is reachable from their network."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 8.1,
+                "baseSeverity": "HIGH"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Primary",
+              "exploitabilityScore": 2.2,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:H/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.2,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-798"
+              }
+            ],
+            "source": "disclosure@vulncheck.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/openises/tickets/commit/ecfeb406a016766cae81c749e14b5145a9f2dbff",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://github.com/openises/tickets/releases/tag/v3.44.2",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://www.vulncheck.com/advisories/open-ises-tickets-hardcoded-mysql-credentials-in-loader-php",
+            "source": "disclosure@vulncheck.com"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 20
+    },
+    {
+      "cve_id": "CVE-2026-48242",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-05-21",
+          "previous_max": null,
+          "current_max": 9.2
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-05-21",
+        "description": "Open ISES Tickets before 3.44.2 contains hardcoded MySQL database connection credentials (host, username, password, database name) in import_mdb.php. The credentials are embedded in source code committed to the public repository, allowing any reader of the source to obtain valid configuration values that may match deployed installations.",
+        "title": "Open ISES Tickets before 3.44.2 contains hardcoded MySQL database connection credentials (host, username, password, database name) in imp...",
+        "cvss_max": 9.2
+      },
+      "cve": {
+        "id": "CVE-2026-48242",
+        "sourceIdentifier": "disclosure@vulncheck.com",
+        "published": "2026-05-21T18:16:21.220",
+        "lastModified": "2026-05-21T19:10:12.323",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Open ISES Tickets before 3.44.2 contains hardcoded MySQL database connection credentials (host, username, password, database name) in import_mdb.php. The credentials are embedded in source code committed to the public repository, allowing any reader of the source to obtain valid configuration values that may match deployed installations."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 8.1,
+                "baseSeverity": "HIGH"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Primary",
+              "exploitabilityScore": 2.2,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:H/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.2,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-798"
+              }
+            ],
+            "source": "disclosure@vulncheck.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/openises/tickets/commit/ecfeb406a016766cae81c749e14b5145a9f2dbff",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://github.com/openises/tickets/releases/tag/v3.44.2",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://www.vulncheck.com/advisories/open-ises-tickets-hardcoded-mysql-credentials-in-import-mdb-php",
+            "source": "disclosure@vulncheck.com"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 21
+    },
+    {
+      "cve_id": "CVE-2026-5118",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-05-21",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-05-21",
+        "description": "The Divi Form Builder plugin for WordPress is vulnerable to privilege escalation in versions up to, and including, 5.1.2. This is due to the plugin accepting a user-controlled 'role' parameter from POST data during user registration without validating it against the form's configured default_user_role setting. This makes it possible for unauthenticated attackers to create administrator accounts by tampering with the role parameter during registration.",
+        "title": "The Divi Form Builder plugin for WordPress is vulnerable to privilege escalation in versions up to, and including, 5.1.2.",
+        "attack_type": "Privilege Escalation",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2026-5118",
+        "sourceIdentifier": "security@wordfence.com",
+        "published": "2026-05-21T13:16:20.013",
+        "lastModified": "2026-05-21T15:19:30.540",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The Divi Form Builder plugin for WordPress is vulnerable to privilege escalation in versions up to, and including, 5.1.2. This is due to the plugin accepting a user-controlled 'role' parameter from POST data during user registration without validating it against the form's configured default_user_role setting. This makes it possible for unauthenticated attackers to create administrator accounts by tampering with the role parameter during registration."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security@wordfence.com",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-269"
+              }
+            ],
+            "source": "security@wordfence.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://diviengine.com/divi-form-builder-changelog/",
+            "source": "security@wordfence.com"
+          },
+          {
+            "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/72154404-f956-4ea2-96ec-166ade87885f?source=cve",
+            "source": "security@wordfence.com"
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 22
+    },
+    {
+      "cve_id": "CVE-2026-6960",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-05-21",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-05-21",
+        "description": "The BookingPress Pro plugin for WordPress is vulnerable to arbitrary file uploads due to missing file type validation in the 'bookingpress_validate_submitted_booking_form_func' function in all versions up to, and including, 5.6. This makes it possible for unauthenticated attackers to upload arbitrary files on the affected site's server which may make remote code execution possible. Note: The vulnerability can only be exploited if a signature custom field is added to the booking form.",
+        "title": "The BookingPress Pro plugin for WordPress is vulnerable to arbitrary file uploads due to missing file type validation in the 'bookingpres...",
+        "attack_type": "RCE",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2026-6960",
+        "sourceIdentifier": "security@wordfence.com",
+        "published": "2026-05-21T22:16:48.643",
+        "lastModified": "2026-05-21T22:16:48.643",
+        "vulnStatus": "Received",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The BookingPress Pro plugin for WordPress is vulnerable to arbitrary file uploads due to missing file type validation in the 'bookingpress_validate_submitted_booking_form_func' function in all versions up to, and including, 5.6. This makes it possible for unauthenticated attackers to upload arbitrary files on the affected site's server which may make remote code execution possible. Note: The vulnerability can only be exploited if a signature custom field is added to the booking form."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security@wordfence.com",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-434"
+              }
+            ],
+            "source": "security@wordfence.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://www.bookingpressplugin.com/",
+            "source": "security@wordfence.com"
+          },
+          {
+            "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/ed738dc5-7848-4b04-a3fd-317cc366acfa?source=cve",
+            "source": "security@wordfence.com"
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 23
+    },
+    {
+      "cve_id": "CVE-2026-8134",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-05-21",
+          "previous_max": null,
+          "current_max": 9.4
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-05-21",
+        "description": "Concrete CMS 9.5.0 and below fails to sanitize path traversal sequences in the ptComposerFormLayoutSetControlCustomTemplate field when saving page type composer form layouts. An authenticated rogue administrator with composer form editing rights can exploit this to include arbitrary readable files on the server. Combined with the file uploader's extension-only validation (which permits PHP code in files saved with image extensions like .png), this can result in authenticated remote code execution. The Concrete CMS security team gave this vulnerability a CVSS v.4.0 score of 9.4 with vector CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H   Thanks Yonatan Drori (Tenzai) for reporting.",
+        "title": "concretecms concrete_cms Path Traversal",
+        "vendor": "concretecms",
+        "product": "concrete_cms",
+        "attack_type": "Path Traversal",
+        "cvss_max": 9.4
+      },
+      "cve": {
+        "id": "CVE-2026-8134",
+        "sourceIdentifier": "ff5b8ace-8b95-4078-9743-eac1ca5451de",
+        "published": "2026-05-21T21:16:32.837",
+        "lastModified": "2026-05-26T19:02:40.553",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Concrete CMS 9.5.0 and below fails to sanitize path traversal sequences in the ptComposerFormLayoutSetControlCustomTemplate field when saving page type composer form layouts. An authenticated rogue administrator with composer form editing rights can exploit this to include arbitrary readable files on the server. Combined with the file uploader's extension-only validation (which permits PHP code in files saved with image extensions like .png), this can result in authenticated remote code execution. The Concrete CMS security team gave this vulnerability a CVSS v.4.0 score of 9.4 with vector CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H   Thanks Yonatan Drori (Tenzai) for reporting."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 7.2,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 1.2,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.4,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "ff5b8ace-8b95-4078-9743-eac1ca5451de",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-23"
+              },
+              {
+                "lang": "en",
+                "value": "CWE-98"
+              },
+              {
+                "lang": "en",
+                "value": "CWE-434"
+              }
+            ],
+            "source": "ff5b8ace-8b95-4078-9743-eac1ca5451de"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:concretecms:concrete_cms:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "435732F0-BA4B-4432-97EA-B730EBD44D4D",
+                    "versionEndIncluding": "9.5.0"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://documentation.concretecms.org/9-x/developers/introduction/version-history/951-release-notes",
+            "source": "ff5b8ace-8b95-4078-9743-eac1ca5451de",
+            "tags": [
+              "Release Notes"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 24
+    }
+  ],
+  "source": "https://www.cvelogic.com/threat-intelligence/2026-05-21"
+}

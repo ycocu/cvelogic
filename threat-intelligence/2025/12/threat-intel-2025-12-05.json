@@ -1,0 +1,1725 @@
+{
+  "schema_version": "2.2",
+  "generated_at": "2026-06-02T07:33:55Z",
+  "day": "2025-12-05",
+  "window": {
+    "utc_start": "2025-12-05",
+    "utc_end": "2025-12-05",
+    "days": 1
+  },
+  "summary": {
+    "brief": "Meta React Server Components added to CISA KEV — confirmed in-the-wild exploitation. · WordPress plugin RCE/exploit activity: 2 CVEs flagged today. · Browsercrm — exploitation likelihood rose sharply (EPSS 21% → 68% · rising (+47%)). · 7 new critical disclosures — review patch status on exposed services.",
+    "bullets": [
+      "Meta React Server Components added to CISA KEV — confirmed in-the-wild exploitation.",
+      "WordPress plugin RCE/exploit activity: 2 CVEs flagged today.",
+      "Browsercrm — exploitation likelihood rose sharply (EPSS 21% → 68% · rising (+47%)).",
+      "7 new critical disclosures — review patch status on exposed services."
+    ],
+    "counts": {
+      "cves": 11,
+      "kev": 1,
+      "exploit": 0,
+      "epss": 3,
+      "cvss": 7,
+      "patch": 0
+    }
+  },
+  "cves": [
+    {
+      "cve_id": "CVE-2025-55182",
+      "signal_types": [
+        "KEV"
+      ],
+      "signals": {
+        "kev": {
+          "date_added": "2025-12-05"
+        },
+        "exploit": null,
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-12-03",
+        "description": "A pre-authentication remote code execution vulnerability exists in React Server Components versions 19.0.0, 19.1.0, 19.1.1, and 19.2.0 including the following packages: react-server-dom-parcel, react-server-dom-turbopack, and react-server-dom-webpack. The vulnerable code unsafely deserializes payloads from HTTP requests to Server Function endpoints.",
+        "title": "Meta React Server Components Remote Code Execution Vulnerability",
+        "vendor": "facebook",
+        "product": "react",
+        "attack_type": "RCE",
+        "cvss_max": 10.0
+      },
+      "cve": {
+        "id": "CVE-2025-55182",
+        "sourceIdentifier": "cve-assign@fb.com",
+        "published": "2025-12-03T16:15:56.463",
+        "lastModified": "2025-12-10T02:00:02.557",
+        "vulnStatus": "Analyzed",
+        "cisaExploitAdd": "2025-12-05",
+        "cisaActionDue": "2025-12-12",
+        "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+        "cisaVulnerabilityName": "Meta React Server Components Remote Code Execution Vulnerability",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A pre-authentication remote code execution vulnerability exists in React Server Components versions 19.0.0, 19.1.0, 19.1.1, and 19.2.0 including the following packages: react-server-dom-parcel, react-server-dom-turbopack, and react-server-dom-webpack. The vulnerable code unsafely deserializes payloads from HTTP requests to Server Function endpoints."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+                "baseScore": 10.0,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "cve-assign@fb.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 6.0
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-502"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:facebook:react:19.0.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "C66E1B0F-8C3F-4D27-9F46-B6EC78D8C60B"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:facebook:react:19.1.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "C6C1C3E2-542D-4001-BFA9-6CF5A038971D"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:facebook:react:19.1.1:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "A0907E1C-E2D2-44A4-AA46-CE80BCA4E015"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:facebook:react:19.2.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "0030B5E1-E79E-4C48-B500-91747FE2751D"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:*:*:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "FC2BCD83-CC87-4CDC-AD9B-2055912A8463",
+                    "versionStartIncluding": "15.0.0",
+                    "versionEndExcluding": "15.0.5"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:*:*:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "C5E767D4-E46F-4CA6-A22F-4D0671B9B102",
+                    "versionStartIncluding": "15.1.0",
+                    "versionEndExcluding": "15.1.9"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:*:*:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "5EFB6CB7-4A4F-464A-A1D8-62B50DF0B4BA",
+                    "versionStartIncluding": "15.2.0",
+                    "versionEndExcluding": "15.2.6"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:*:*:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "83AF54D7-410D-42B4-853A-8A1973636542",
+                    "versionStartIncluding": "15.3.0",
+                    "versionEndExcluding": "15.3.6"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:*:*:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "3D666EA7-BDAE-4E67-A331-B7403C3AA482",
+                    "versionStartIncluding": "15.4.0",
+                    "versionEndExcluding": "15.4.8"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:*:*:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "E666ECDA-7A29-4D3D-AC40-357F044AD595",
+                    "versionStartIncluding": "15.5.0",
+                    "versionEndExcluding": "15.5.7"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:*:*:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "CF65554E-4BF0-4344-AE7F-9E09E34E084F",
+                    "versionStartIncluding": "16.0.0",
+                    "versionEndExcluding": "16.0.7"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:14.3.0:canary77:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "B209A306-CE1A-448D-8653-7627302399B7"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:14.3.0:canary78:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "D1DCAC23-7ED0-456B-8AE2-57689199F708"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:14.3.0:canary79:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "8B35D612-AC2A-4697-934F-372E4D5EE3F4"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:14.3.0:canary80:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "A06D2291-5D89-4B76-99E0-52505634A63B"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:14.3.0:canary81:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "8F01F07A-79F7-4F4B-8E3A-9C7D93C83A63"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:14.3.0:canary82:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "9EDA2864-F94B-48EB-98F3-FDBFCECCC4A8"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:14.3.0:canary83:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "4828BEE0-E891-491B-903D-A50B0E37273C"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:14.3.0:canary84:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "55723BB4-E62B-4034-A434-485FE0E6BAF5"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:14.3.0:canary85:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "19F55784-CC11-4024-9A42-EFEEF7B2366F"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:14.3.0:canary86:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "1D694B0A-9BCF-49C8-A787-B0AFE51C7DC5"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:14.3.0:canary87:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "C91F9508-E18D-4928-9DF5-DE2DDBEC56D3"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:15.6.0:-:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "3ED7F693-8012-4F88-BC71-CF108E20664A"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:15.6.0:canary0:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "40EE98AC-754A-4FD9-B51A-9E2674584FD9"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:15.6.0:canary1:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "13B41C54-AF21-4637-A852-F997635B4E83"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:15.6.0:canary10:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "91B41697-2D70-488D-A5C3-CB9D435560CA"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:15.6.0:canary11:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "7D43DB84-7BCF-429B-849A-7189EC1922D0"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:15.6.0:canary12:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "CEC2346B-8DBD-4D53-9866-CFBDD3AACEF2"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:15.6.0:canary13:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "2BC95097-8CA6-42FE-98D7-F968E37C11B7"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:15.6.0:canary14:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "4F8FA85C-1200-4FD2-B5D7-906300748BD4"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:15.6.0:canary15:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "5D0B177B-2A31-48E9-81C7-1024E2452486"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:15.6.0:canary16:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "7CCA01F3-3A14-4450-8A68-B1DA22C685B7"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:15.6.0:canary17:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "1AB351AE-8C29-4E67-8699-0AAC6B3383E2"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:15.6.0:canary18:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "14A34D9D-5FA2-434B-836E-3CE63D716CCB"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:15.6.0:canary19:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "E8440F05-F32B-4D40-90B7-04BF22107D86"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:15.6.0:canary2:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "FB6C6F6D-1EC0-4BD9-97A4-CFDE70DF0C43"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:15.6.0:canary20:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "6189BD4C-A3E2-451B-96B2-FF01250E946D"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:15.6.0:canary21:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "389EE453-8B07-45DD-BE9C-277C9C5CB156"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:15.6.0:canary22:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "BA4D4638-4734-4B16-87AA-EF4B5D2DDD7A"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:15.6.0:canary23:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "D54A2E63-6E0C-4E17-86A8-459B0A7EE00B"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:15.6.0:canary24:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "E6136F0A-3010-4BAD-811B-D047CF5E6F64"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:15.6.0:canary25:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "525EFA40-B14B-47E9-8FBD-45721A802DB6"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:15.6.0:canary26:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "69142944-1EC0-4F94-862E-FA7F2E101101"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:15.6.0:canary27:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "30016C06-372D-4F98-84A8-0732CA054970"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:15.6.0:canary28:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "E1536E2B-84EC-46A3-9B6F-026364A9D927"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:15.6.0:canary29:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "5E6F1F60-30E2-407C-8152-EEEB7EFE24CB"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:15.6.0:canary3:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "3C907301-2C8F-465B-8134-94130E29F5DB"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:15.6.0:canary30:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "E81C89FD-40CB-471E-9967-90ACDCF79373"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:15.6.0:canary31:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "55E8AEEC-A686-49D6-B298-AEE4E838E769"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:15.6.0:canary32:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "CB0618EC-6A0B-4AC3-BF6D-E51AC84C4E15"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:15.6.0:canary33:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "7B27F133-8EB4-4761-A706-DF42D4EB55F6"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:15.6.0:canary34:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "BF975472-B7E7-4AC8-B834-DA19897A4894"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:15.6.0:canary35:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "48A82613-F3FD-4E89-8E4A-F3F05A616171"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:15.6.0:canary36:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "0D42CA1F-7C21-47C1-8A9C-1015286FCBE2"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:15.6.0:canary37:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "7C83A4EF-B96F-40EC-BA1F-FE1370AF78AC"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:15.6.0:canary38:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "C151FDAB-DE34-4A7E-9762-6E99386798BF"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:15.6.0:canary39:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "53025212-05F0-41FE-81F8-023B1784BB8C"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:15.6.0:canary4:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "68EAC2B9-32A5-4721-BB35-16D519CD1BBC"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:15.6.0:canary40:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "7411EF71-CBEB-4127-935F-3C732A1E22AC"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:15.6.0:canary41:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "0C4B8930-1B65-4894-AFA8-C323AA7A8292"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:15.6.0:canary42:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "B4977345-BD8C-41C7-9DD7-1E41D6CC6438"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:15.6.0:canary43:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "EFE030A4-5B14-4C2D-B953-E80C98FB26EE"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:15.6.0:canary44:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "9F616FD4-83BF-4A9A-AFFD-0D3E2544DC7E"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:15.6.0:canary45:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "00512630-8B88-43B0-9ED3-2B33C64CC9A9"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:15.6.0:canary46:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "A88EEF11-C7DA-4E2D-A030-FC177E696557"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:15.6.0:canary47:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "BE8453D9-7275-4A5F-8732-F05662FFF2E8"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:15.6.0:canary48:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "E306B896-9BBB-424B-8D99-7A1A79AEFE9D"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:15.6.0:canary49:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "ACA87B86-33D5-4BEA-A13D-EEB4922D511E"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:15.6.0:canary5:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "77AA0D23-B101-445C-A260-ED3152A93D17"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:15.6.0:canary50:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "7D7DCCF7-FC83-4767-A0C2-C84A8B14F93B"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:15.6.0:canary51:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "FD397568-7F1F-4153-AF08-B22D4D3B45F9"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:15.6.0:canary52:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "984416EF-B121-40CE-B3AD-E22A06BB5844"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:15.6.0:canary53:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "C4B58652-EE24-43CF-8ABE-4A01B2C9938C"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:15.6.0:canary54:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "8090CF73-AEA7-43FC-A960-321BED3B1682"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:15.6.0:canary55:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "823164E5-609D-4F24-86A5-E25618FE86A7"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:15.6.0:canary56:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "E13CD688-63C3-4FFA-9D13-696005F0C155"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:15.6.0:canary57:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "B397B18C-8A7A-4766-9A68-98B26E190A4A"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:15.6.0:canary6:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "2DB345E3-BAD0-497E-93AE-5E4DC669C192"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:15.6.0:canary7:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "840FEB19-2C66-4004-A488-B90219F8AC05"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:15.6.0:canary8:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "C260F966-73D7-43F3-A329-8C558A695821"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:15.6.0:canary9:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "28130A79-39B5-43E8-A690-C8E9C62483F8"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:vercel:next.js:16.0.0:-:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "5E8548AB-D9E8-4E65-AF24-9F9021F99834"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://react.dev/blog/2025/12/03/critical-security-vulnerability-in-react-server-components",
+            "source": "cve-assign@fb.com",
+            "tags": [
+              "Patch",
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://www.facebook.com/security/advisories/cve-2025-55182",
+            "source": "cve-assign@fb.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "http://www.openwall.com/lists/oss-security/2025/12/03/4",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Mailing List",
+              "Patch",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://news.ycombinator.com/item?id=46136026",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Issue Tracking"
+            ]
+          },
+          {
+            "url": "https://aws.amazon.com/blogs/security/china-nexus-cyber-threat-groups-rapidly-exploit-react2shell-vulnerability-cve-2025-55182/",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2025-55182",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "US Government Resource"
+            ]
+          }
+        ]
+      },
+      "risk_score": 88,
+      "rank": 1
+    },
+    {
+      "cve_id": "CVE-2008-2689",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 0.21236,
+            "score_date": "2025-11-07"
+          },
+          "current": {
+            "score": 0.6804,
+            "score_date": "2025-12-05"
+          },
+          "delta": 0.46804
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2008-06-13",
+        "description": "PHP remote file inclusion vulnerability in pub/clients.php in BrowserCRM 5.002.00 allows remote attackers to execute arbitrary PHP code via a URL in the bcrm_pub_root parameter.",
+        "title": "browsercrm browsercrm",
+        "vendor": "browsercrm",
+        "product": "browsercrm",
+        "cvss_max": 10.0
+      },
+      "cve": {
+        "id": "CVE-2008-2689",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2008-06-13T19:41:00.000",
+        "lastModified": "2026-04-23T00:35:47.467",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "PHP remote file inclusion vulnerability in pub/clients.php in BrowserCRM 5.002.00 allows remote attackers to execute arbitrary PHP code via a URL in the bcrm_pub_root parameter."
+          },
+          {
+            "lang": "es",
+            "value": "Vulnerabilidad de inclusión remota de archivos en PHP en pub/clients.php en BrowserCRM 5.002.00 permite a atacantes remotos ejecutar código PHP de su elección a través de un URL en el parámetro bcrm_pub_root."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV2": [
+            {
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+                "baseScore": 10.0,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "baseSeverity": "HIGH",
+              "exploitabilityScore": 10.0,
+              "impactScore": 10.0
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-94"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:browsercrm:browsercrm:5.002.00:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "B0D6FCD9-0850-4656-87B0-C73999BFF775"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "http://secunia.com/advisories/30290",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "http://www.securityfocus.com/bid/29598",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit"
+            ]
+          },
+          {
+            "url": "https://exchange.xforce.ibmcloud.com/vulnerabilities/42922",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "https://www.exploit-db.com/exploits/5757",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          }
+        ]
+      },
+      "risk_score": 86,
+      "rank": 2
+    },
+    {
+      "cve_id": "CVE-2025-66570",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-12-05",
+          "previous_max": null,
+          "current_max": 10.0
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-12-05",
+        "description": "cpp-httplib is a C++11 single-file header-only cross platform HTTP/HTTPS library. Prior to 0.27.0, a vulnerability allows attacker-controlled HTTP headers to influence server-visible metadata, logging, and authorization decisions. An attacker can inject headers named REMOTE_ADDR, REMOTE_PORT, LOCAL_ADDR, LOCAL_PORT that are parsed into the request header multimap via read_headers() in httplib.h (headers.emplace), then the server later appends its own internal metadata using the same header names in Server::process_request without erasing duplicates. Because Request::get_header_value returns the first entry for a header key (id == 0) and the client-supplied headers are parsed before server-inserted headers, downstream code that uses these header names may inadvertently use attacker-controlled values. Affected files/locations: cpp-httplib/httplib.h (read_headers, Server::process_request, Request::get_header_value, get_header_value_u64) and cpp-httplib/docker/main.cc (get_client_ip, nginx_access_logger, nginx_error_logger). Attack surface: attacker-controlled HTTP headers in incoming requests flow into the Request.headers multimap and into logging code that reads forwarded headers, enabling IP spoofing, log poisoning, and authorization bypass via header shadowing. This vulnerability is fixed in 0.27.0.",
+        "title": "yhirose cpp-httplib privilege escalation",
+        "vendor": "yhirose",
+        "product": "cpp-httplib",
+        "attack_type": "privilege escalation",
+        "cvss_max": 10.0
+      },
+      "cve": {
+        "id": "CVE-2025-66570",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2025-12-05T19:15:51.923",
+        "lastModified": "2025-12-10T15:02:46.533",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "cpp-httplib is a C++11 single-file header-only cross platform HTTP/HTTPS library. Prior to 0.27.0, a vulnerability allows attacker-controlled HTTP headers to influence server-visible metadata, logging, and authorization decisions. An attacker can inject headers named REMOTE_ADDR, REMOTE_PORT, LOCAL_ADDR, LOCAL_PORT that are parsed into the request header multimap via read_headers() in httplib.h (headers.emplace), then the server later appends its own internal metadata using the same header names in Server::process_request without erasing duplicates. Because Request::get_header_value returns the first entry for a header key (id == 0) and the client-supplied headers are parsed before server-inserted headers, downstream code that uses these header names may inadvertently use attacker-controlled values. Affected files/locations: cpp-httplib/httplib.h (read_headers, Server::process_request, Request::get_header_value, get_header_value_u64) and cpp-httplib/docker/main.cc (get_client_ip, nginx_access_logger, nginx_error_logger). Attack surface: attacker-controlled HTTP headers in incoming requests flow into the Request.headers multimap and into logging code that reads forwarded headers, enabling IP spoofing, log poisoning, and authorization bypass via header shadowing. This vulnerability is fixed in 0.27.0."
+          },
+          {
+            "lang": "es",
+            "value": "cpp-httplib es una biblioteca HTTP/HTTPS multiplataforma de un solo archivo de cabecera única para C++11. Versiones anteriores a 0.27.0, una vulnerabilidad permite que los encabezados HTTP controlados por el atacante influyan en los metadatos visibles para el servidor, el registro y las decisiones de autorización. Un atacante puede inyectar encabezados llamados REMOTE_ADDR, REMOTE_PORT, LOCAL_ADDR, LOCAL_PORT que se analizan en el multimapa de encabezados de solicitud a través de read_headers() en httplib.h (headers.emplace), luego el servidor posteriormente añade sus propios metadatos internos usando los mismos nombres de encabezado en Server::process_request sin borrar duplicados. Debido a que Request::get_header_value devuelve la primera entrada para una clave de encabezado (id == 0) y los encabezados proporcionados por el cliente se analizan antes que los encabezados insertados por el servidor, el código descendente que utiliza estos nombres de encabezado puede usar inadvertidamente valores controlados por el atacante. Archivos/ubicaciones afectados: cpp-httplib/httplib.h (read_headers, Server::process_request, Request::get_header_value, get_header_value_u64) y cpp-httplib/docker/main.cc (get_client_ip, nginx_access_logger, nginx_error_logger). Superficie de ataque: los encabezados HTTP controlados por el atacante en las solicitudes entrantes fluyen hacia el multimapa Request.headers y hacia el código de registro que lee los encabezados reenviados, lo que permite la suplantación de IP, el envenenamiento de registros y la omisión de autorización a través del sombreado de encabezados. Esta vulnerabilidad se corrige en 0.27.0."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:N",
+                "baseScore": 10.0,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.8
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-290"
+              },
+              {
+                "lang": "en",
+                "value": "CWE-345"
+              },
+              {
+                "lang": "en",
+                "value": "CWE-807"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:yhirose:cpp-httplib:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "833767D4-2EB6-44EB-AF07-8942AF6F6075",
+                    "versionEndExcluding": "0.27.0"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/yhirose/cpp-httplib/commit/ac9ebb0ee333ce8bf13523f487bdfad9518a2aff",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://github.com/yhirose/cpp-httplib/security/advisories/GHSA-xm2j-vfr9-mg9m",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Exploit",
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 3
+    },
+    {
+      "cve_id": "CVE-2002-1452",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 0.05579,
+            "score_date": "2025-03-30"
+          },
+          "current": {
+            "score": 0.16275,
+            "score_date": "2025-12-05"
+          },
+          "delta": 0.10696
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2002-08-14",
+        "description": "Buffer overflow in the search capability for MyWebServer 1.0.2 allows remote attackers to execute arbitrary code via a long searchTarget parameter.",
+        "title": "mywebserver mywebserver Buffer Overflow",
+        "vendor": "mywebserver",
+        "product": "mywebserver",
+        "attack_type": "Buffer Overflow",
+        "cvss_max": 7.5
+      },
+      "cve": {
+        "id": "CVE-2002-1452",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2002-08-14T04:00:00.000",
+        "lastModified": "2026-04-16T00:27:16.627",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Buffer overflow in the search capability for MyWebServer 1.0.2 allows remote attackers to execute arbitrary code via a long searchTarget parameter."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV2": [
+            {
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+                "baseScore": 7.5,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "baseSeverity": "HIGH",
+              "exploitabilityScore": 10.0,
+              "impactScore": 6.4
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "NVD-CWE-Other"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:mywebserver:mywebserver:1.0.2:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "4DBC53A0-8994-470A-ACD0-A06DE4BBE8BF"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "http://archives.neohapsis.com/archives/vulnwatch/2002-q3/0077.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit"
+            ]
+          },
+          {
+            "url": "http://marc.info/?l=bugtraq&m=102935720109934&w=2",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://www.iss.net/security_center/static/9859.php",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://www.securityfocus.com/bid/5469",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit"
+            ]
+          }
+        ]
+      },
+      "risk_score": 80,
+      "rank": 4
+    },
+    {
+      "cve_id": "CVE-2020-36877",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-12-05",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-12-05",
+        "description": "ReQuest Serious Play F3 Media Server 7.0.3 contains an unauthenticated remote code execution vulnerability that allows attackers to execute arbitrary commands as the web server user. Attackers can upload PHP executable files via the Quick File Uploader page, resulting in remote code execution on the server.",
+        "title": "ReQuest Serious Play F3 Media Server 7.0.3 contains an unauthenticated remote code execution vulnerability that allows attackers to execu...",
+        "attack_type": "RCE",
+        "cvss_max": 9.3
+      },
+      "cve": {
+        "id": "CVE-2020-36877",
+        "sourceIdentifier": "disclosure@vulncheck.com",
+        "published": "2025-12-05T18:15:53.403",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "ReQuest Serious Play F3 Media Server 7.0.3 contains an unauthenticated remote code execution vulnerability that allows attackers to execute arbitrary commands as the web server user. Attackers can upload PHP executable files via the Quick File Uploader page, resulting in remote code execution on the server."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-78"
+              }
+            ],
+            "source": "disclosure@vulncheck.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "http://request.com/",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://www.exploit-db.com/exploits/48952",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://www.vulncheck.com/advisories/request-serious-play-f-media-server-unauthenticated-rce",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://www.zeroscience.mk/en/vulnerabilities/ZSL-2020-5602.php",
+            "source": "disclosure@vulncheck.com"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 5
+    },
+    {
+      "cve_id": "CVE-2020-9425",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 0.31599,
+            "score_date": "2025-11-25"
+          },
+          "current": {
+            "score": 0.49449,
+            "score_date": "2025-12-05"
+          },
+          "delta": 0.1785
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2020-03-20",
+        "description": "An issue was discovered in includes/head.inc.php in rConfig before 3.9.4. An unauthenticated attacker can retrieve saved cleartext credentials via a GET request to settings.php. Because the application was not exiting after a redirect is applied, the rest of the page still executed, resulting in the disclosure of cleartext credentials in the response.",
+        "title": "rconfig rconfig",
+        "vendor": "rconfig",
+        "product": "rconfig",
+        "cvss_max": 7.5
+      },
+      "cve": {
+        "id": "CVE-2020-9425",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2020-03-20T18:15:14.107",
+        "lastModified": "2024-11-21T05:40:36.720",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "An issue was discovered in includes/head.inc.php in rConfig before 3.9.4. An unauthenticated attacker can retrieve saved cleartext credentials via a GET request to settings.php. Because the application was not exiting after a redirect is applied, the rest of the page still executed, resulting in the disclosure of cleartext credentials in the response."
+          },
+          {
+            "lang": "es",
+            "value": "Se detectó un problema en el archivo include/head.inc.php en rConfig versiones anteriores a 3.9.4. Un atacante no autenticado puede recuperar credenciales de texto sin cifrar guardadas por medio de una petición GET al archivo settings.php. Porque la aplicación no salía después de que se aplicaba un redireccionamiento, el resto de la página aún se ejecutaba, resultando en la divulgación de credenciales de texto sin cifrar en la respuesta."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV2": [
+            {
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:L/Au:N/C:P/I:N/A:N",
+                "baseScore": 5.0,
+                "baseSeverity": "MEDIUM"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "baseSeverity": "MEDIUM",
+              "exploitabilityScore": 10.0,
+              "impactScore": 2.9
+            }
+          ],
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+                "baseScore": 7.5,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 3.6
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-670"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:rconfig:rconfig:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "AD27E07A-DF1B-4646-872A-F8B94C7D8056",
+                    "versionEndExcluding": "3.9.4"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://blog.hivint.com/rconfig-3-9-3-unauthenticated-sensitive-information-disclosure-ead4ed88f153",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/rconfig/rconfig/commit/20f4e3d87e84663d922b937842fddd9af1b68dd9",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Patch",
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 82,
+      "rank": 6
+    },
+    {
+      "cve_id": "CVE-2025-12374",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-12-05",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-12-05",
+        "description": "The Email Verification, Email OTP, Block Spam Email, Passwordless login, Hide Login, Magic Login – User Verification plugin for WordPress is vulnerable to authentication bypass in all versions up to, and including, 2.0.44. This is due to the plugin not properly validating that an OTP was generated before comparing it to user input in the \"user_verification_form_wrap_process_otpLogin\" function. This makes it possible for unauthenticated attackers to log in as any user with a verified email address, such as an administrator, by submitting an empty OTP value.",
+        "title": "The Email Verification, Email OTP, Block Spam Email, Passwordless login, Hide Login, Magic Login – User Verification plugin for WordPress...",
+        "attack_type": "Auth Bypass",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-12374",
+        "sourceIdentifier": "security@wordfence.com",
+        "published": "2025-12-05T07:16:11.117",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The Email Verification, Email OTP, Block Spam Email, Passwordless login, Hide Login, Magic Login – User Verification plugin for WordPress is vulnerable to authentication bypass in all versions up to, and including, 2.0.44. This is due to the plugin not properly validating that an OTP was generated before comparing it to user input in the \"user_verification_form_wrap_process_otpLogin\" function. This makes it possible for unauthenticated attackers to log in as any user with a verified email address, such as an administrator, by submitting an empty OTP value."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security@wordfence.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-287"
+              }
+            ],
+            "source": "security@wordfence.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/user-verification/trunk/templates/email-otp-login-form/hook.php#L141",
+            "source": "security@wordfence.com"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/changeset?sfp_email=&sfph_mail=&reponame=&old=3442150%40user-verification&new=3442150%40user-verification&sfp_email=&sfph_mail=",
+            "source": "security@wordfence.com"
+          },
+          {
+            "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/8ccb1304-326e-43af-b75d-23874f92ba8b?source=cve",
+            "source": "security@wordfence.com"
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 7
+    },
+    {
+      "cve_id": "CVE-2025-13313",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-12-05",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-12-05",
+        "description": "The CRM Memberships plugin for WordPress is vulnerable to privilege escalation via password reset in all versions up to, and including, 2.6. This is due to missing authorization and authentication checks on the `ntzcrm_changepassword` AJAX action. This makes it possible for unauthenticated attackers to reset arbitrary user passwords and gain unauthorized access to user accounts via the `ntzcrm_changepassword` endpoint, granted they can obtain or enumerate a target user's email address. The plugin also exposes the `ntzcrm_get_users` endpoint without authentication, allowing attackers to enumerate subscriber email addresses, facilitating the exploitation of the password reset vulnerability.",
+        "title": "The CRM Memberships plugin for WordPress is vulnerable to privilege escalation via password reset in all versions up to, and including, 2.6.",
+        "attack_type": "Privilege Escalation",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-13313",
+        "sourceIdentifier": "security@wordfence.com",
+        "published": "2025-12-05T05:16:57.780",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The CRM Memberships plugin for WordPress is vulnerable to privilege escalation via password reset in all versions up to, and including, 2.6. This is due to missing authorization and authentication checks on the `ntzcrm_changepassword` AJAX action. This makes it possible for unauthenticated attackers to reset arbitrary user passwords and gain unauthorized access to user accounts via the `ntzcrm_changepassword` endpoint, granted they can obtain or enumerate a target user's email address. The plugin also exposes the `ntzcrm_get_users` endpoint without authentication, allowing attackers to enumerate subscriber email addresses, facilitating the exploitation of the password reset vulnerability."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security@wordfence.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-862"
+              }
+            ],
+            "source": "security@wordfence.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/crm-memberships/tags/2.5/includes/class/class-ntzcrm-api.php#L12",
+            "source": "security@wordfence.com"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/crm-memberships/tags/2.5/includes/class/class-ntzcrm-api.php#L63",
+            "source": "security@wordfence.com"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/crm-memberships/tags/2.5/includes/class/class-ntzcrm-api.php#L795",
+            "source": "security@wordfence.com"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/crm-memberships/tags/2.5/includes/class/class-ntzcrm-dbquery.php#L287",
+            "source": "security@wordfence.com"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/crm-memberships/tags/2.5/ntzcrm-memberships.php#L42",
+            "source": "security@wordfence.com"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/changeset/3464130/",
+            "source": "security@wordfence.com"
+          },
+          {
+            "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/e2837399-c44f-494e-bdc6-f9c6e4e2dc11?source=cve",
+            "source": "security@wordfence.com"
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 8
+    },
+    {
+      "cve_id": "CVE-2025-34256",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-12-05",
+          "previous_max": null,
+          "current_max": 10.0
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-12-05",
+        "description": "Advantech WISE-DeviceOn Server versions prior to 5.4 contain a hard-coded cryptographic key vulnerability. The product uses a static HS512 HMAC secret for signing EIRMMToken JWTs across all installations. The server accepts forged JWTs that need only contain a valid email claim, allowing a remote unauthenticated attacker to generate arbitrary tokens and impersonate any DeviceOn account, including the root super admin. Successful exploitation permits full administrative control of the DeviceOn instance and can be leveraged to execute code on managed agents through DeviceOn’s remote management features.",
+        "title": "advantech wise-deviceon_server",
+        "vendor": "advantech",
+        "product": "wise-deviceon_server",
+        "cvss_max": 10.0
+      },
+      "cve": {
+        "id": "CVE-2025-34256",
+        "sourceIdentifier": "disclosure@vulncheck.com",
+        "published": "2025-12-05T18:15:55.053",
+        "lastModified": "2026-04-15T19:16:32.673",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Advantech WISE-DeviceOn Server versions prior to 5.4 contain a hard-coded cryptographic key vulnerability. The product uses a static HS512 HMAC secret for signing EIRMMToken JWTs across all installations. The server accepts forged JWTs that need only contain a valid email claim, allowing a remote unauthenticated attacker to generate arbitrary tokens and impersonate any DeviceOn account, including the root super admin. Successful exploitation permits full administrative control of the DeviceOn instance and can be leveraged to execute code on managed agents through DeviceOn’s remote management features."
+          },
+          {
+            "lang": "es",
+            "value": "Advantech WISE-DeviceOn Server versiones anteriores a 5.4 tienen una vulnerabilidad de clave criptográfica almacenada en el código. El producto utiliza un secreto HMAC HS512 estático para firmar los JWT de EIRMMToken en todas las instalaciones. El servidor acepta JWT falsificados que solo necesitan contener un email claim válido, lo que permite a un atacante remoto no autenticado generar tokens arbitrarios y suplantar cualquier cuenta de DeviceOn, incluyendo la cuenta de superadministrador raíz. La explotación exitosa permite el control total como administrador de la instancia de DeviceOn y puede ser aprovechada para ejecutar código en agentes gestionados a través de las funciones de gestión remota de DeviceOn."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 10.0,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-321"
+              }
+            ],
+            "source": "disclosure@vulncheck.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:advantech:wise-deviceon_server:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "BFB1F2C4-C260-473E-A6E1-EE7DFC3EF083",
+                    "versionEndExcluding": "5.4"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://advcloudfiles.advantech.com/cms/2ca1b071-fd78-4d7f-8a2a-7b4537a95d19/Security%20Advisory%20PDF%20File/SECURITY-ADVISORY----DeviceOn-20251208-2.pdf",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://docs.deviceon.advantech.com/docs/resource/",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Product"
+            ]
+          },
+          {
+            "url": "https://pellera.com/blog/advantech-wise-deviceon-cve-2025-34256-vulnerability/",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://www.vulncheck.com/advisories/advantech-wise-deviceon-server-hardcoded-jwt-key-authentication-bypass",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 9
+    },
+    {
+      "cve_id": "CVE-2025-34291",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-12-05",
+          "previous_max": null,
+          "current_max": 9.4
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-12-05",
+        "description": "Langflow versions up to and including 1.6.9 contain a chained vulnerability that enables account takeover and remote code execution. An overly permissive CORS configuration (allow_origins='*' with allow_credentials=True) combined with a refresh token cookie configured as SameSite=None allows a malicious webpage to perform cross-origin requests that include credentials and successfully call the refresh endpoint. An attacker-controlled origin can therefore obtain fresh access_token / refresh_token pairs for a victim session. Obtained tokens permit access to authenticated endpoints — including built-in code-execution functionality — allowing the attacker to execute arbitrary code and achieve full system compromise.",
+        "title": "Langflow Origin Validation Error Vulnerability",
+        "vendor": "langflow",
+        "product": "langflow",
+        "attack_type": "RCE",
+        "cvss_max": 9.4
+      },
+      "cve": {
+        "id": "CVE-2025-34291",
+        "sourceIdentifier": "disclosure@vulncheck.com",
+        "published": "2025-12-05T23:15:47.433",
+        "lastModified": "2026-05-21T20:16:13.520",
+        "vulnStatus": "Modified",
+        "cisaExploitAdd": "2026-05-21",
+        "cisaActionDue": "2026-06-04",
+        "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+        "cisaVulnerabilityName": "Langflow Origin Validation Error Vulnerability",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Langflow versions up to and including 1.6.9 contain a chained vulnerability that enables account takeover and remote code execution. An overly permissive CORS configuration (allow_origins='*' with allow_credentials=True) combined with a refresh token cookie configured as SameSite=None allows a malicious webpage to perform cross-origin requests that include credentials and successfully call the refresh endpoint. An attacker-controlled origin can therefore obtain fresh access_token / refresh_token pairs for a victim session. Obtained tokens permit access to authenticated endpoints — including built-in code-execution functionality — allowing the attacker to execute arbitrary code and achieve full system compromise."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 8.8,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.4,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-346"
+              }
+            ],
+            "source": "disclosure@vulncheck.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:langflow:langflow:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "1D74DC53-9772-4172-822E-3E29E5A4DDC9",
+                    "versionEndIncluding": "1.6.9"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/langflow-ai/langflow",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Product"
+            ]
+          },
+          {
+            "url": "https://www.obsidiansecurity.com/blog/cve-2025-34291-critical-account-takeover-and-rce-vulnerability-in-the-langflow-ai-agent-workflow-platform",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Exploit",
+              "Mitigation",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.vulncheck.com/advisories/langflow-cors-misconfiguration-to-token-hijack-and-rce",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2025-34291",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          },
+          {
+            "url": "https://www.crowdsec.net/vulntracking-report/cve-2025-34291",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 10
+    },
+    {
+      "cve_id": "CVE-2025-64054",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2025-12-05",
+          "previous_max": null,
+          "current_max": 9.6
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-12-05",
+        "description": "A reflected Cross Site Scripting (XSS) vulnerability on Fanvil x210 2.12.20 devices allows attackers to cause a denial of service or potentially execute arbitrary commands via crafted POST request to the /cgi-bin/webconfig?page=upload&action=submit endpoint.",
+        "title": "fanvil x210_firmware DoS",
+        "vendor": "fanvil",
+        "product": "x210_firmware",
+        "attack_type": "DoS",
+        "cvss_max": 9.6
+      },
+      "cve": {
+        "id": "CVE-2025-64054",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2025-12-05T16:15:50.330",
+        "lastModified": "2026-01-09T02:17:20.193",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A reflected Cross Site Scripting (XSS) vulnerability on Fanvil x210 2.12.20 devices allows attackers to cause a denial of service or potentially execute arbitrary commands via crafted POST request to the /cgi-bin/webconfig?page=upload&action=submit endpoint."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H",
+                "baseScore": 9.6,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 6.0
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-79"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:fanvil:x210_firmware:2.12.20:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "B5339CEB-DD13-43D9-9DBB-F58EA2EDC47D"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:fanvil:x210:2.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "826351F9-626E-4EA9-9634-9E04B462AF4A"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "http://fanvil.com",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Product"
+            ]
+          },
+          {
+            "url": "https://github.com/SpikeReply/advisories/blob/main/cve/fanvil/cve-2025-64054.md",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 11
+    }
+  ],
+  "source": "https://www.cvelogic.com/threat-intelligence/2025-12-05"
+}
