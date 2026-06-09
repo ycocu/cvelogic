@@ -1,0 +1,3065 @@
+{
+  "schema_version": "2.2",
+  "generated_at": "2026-06-09T12:39:22Z",
+  "day": "2026-06-08",
+  "window": {
+    "utc_start": "2026-06-08",
+    "utc_end": "2026-06-08",
+    "days": 1
+  },
+  "summary": {
+    "brief": "Check Point Security Gateway added to CISA KEV — confirmed in-the-wild exploitation. · Open-emr Openemr: public exploit or PoC linked (privilege escalation) · Adobe Photoshop — exploitation likelihood rose sharply (EPSS 5.8% → 22% · rising (+17%)). · 10 new critical disclosures — review patch status on exposed services.",
+    "bullets": [
+      "Check Point Security Gateway added to CISA KEV — confirmed in-the-wild exploitation.",
+      "Open-emr Openemr: public exploit or PoC linked (privilege escalation)",
+      "Adobe Photoshop — exploitation likelihood rose sharply (EPSS 5.8% → 22% · rising (+17%)).",
+      "10 new critical disclosures — review patch status on exposed services."
+    ],
+    "counts": {
+      "cves": 22,
+      "kev": 2,
+      "exploit": 1,
+      "epss": 10,
+      "cvss": 10,
+      "patch": 0
+    }
+  },
+  "cves": [
+    {
+      "cve_id": "CVE-2026-50751",
+      "signal_types": [
+        "KEV",
+        "CVSS"
+      ],
+      "signals": {
+        "kev": {
+          "date_added": "2026-06-08"
+        },
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-06-08",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-06-08",
+        "description": "A logic flow weakness in Remote Access and Mobile Access certificate validation in deprecated IKEv1 key exchange allows an unauthenticated remote attacker to bypass user authentication and establish a remote access VPN connection without a valid user password.",
+        "title": "Check Point Security Gateway Improper Authentication Vulnerability",
+        "vendor": "Check Point",
+        "product": "Security Gateway",
+        "cvss_max": 9.3
+      },
+      "cve": {
+        "id": "CVE-2026-50751",
+        "sourceIdentifier": "cve@checkpoint.com",
+        "published": "2026-06-08T12:16:32.367",
+        "lastModified": "2026-06-08T21:16:49.373",
+        "vulnStatus": "Awaiting Analysis",
+        "cisaExploitAdd": "2026-06-08",
+        "cisaActionDue": "2026-06-11",
+        "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+        "cisaVulnerabilityName": "Check Point Security Gateway Improper Authentication Vulnerability",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A logic flow weakness in Remote Access and Mobile Access certificate validation in deprecated IKEv1 key exchange allows an unauthenticated remote attacker to bypass user authentication and establish a remote access VPN connection without a valid user password."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:L/A:N",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 4.7
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-287"
+              }
+            ],
+            "source": "cve@checkpoint.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://support.checkpoint.com/results/sk/sk185033",
+            "source": "cve@checkpoint.com"
+          },
+          {
+            "url": "https://blog.checkpoint.com/security/check-point-releases-important-hotfix-for-vulnerabilities-in-deprecated-ikev1-vpn-protocol/",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          },
+          {
+            "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-50751",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ]
+      },
+      "risk_score": 96,
+      "rank": 1
+    },
+    {
+      "cve_id": "CVE-2026-24849",
+      "signal_types": [
+        "EXP"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": {
+          "ref_published": "2026-06-08"
+        },
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-02-25",
+        "description": "OpenEMR is a free and open source electronic health records and medical practice management application. Prior to version 7.0.4, the `disposeDocument()` method in `EtherFaxActions.php` allows authenticated users to read arbitrary files from the server filesystem. Any authenticated user (regardless of privilege level) can exploit this vulnerability to read sensitive files. Version 7.0.4 patches the issue.",
+        "title": "open-emr openemr privilege escalation",
+        "vendor": "open-emr",
+        "product": "openemr",
+        "attack_type": "privilege escalation",
+        "cvss_max": 9.9
+      },
+      "cve": {
+        "id": "CVE-2026-24849",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2026-02-25T02:16:22.197",
+        "lastModified": "2026-02-25T16:56:53.200",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "OpenEMR is a free and open source electronic health records and medical practice management application. Prior to version 7.0.4, the `disposeDocument()` method in `EtherFaxActions.php` allows authenticated users to read arbitrary files from the server filesystem. Any authenticated user (regardless of privilege level) can exploit this vulnerability to read sensitive files. Version 7.0.4 patches the issue."
+          },
+          {
+            "lang": "es",
+            "value": "OpenEMR es una aplicación de gestión de registros médicos electrónicos y práctica médica de código abierto y gratuita. Antes de la versión 7.0.4, el método `disposeDocument()` en `EtherFaxActions.php` permite a los usuarios autenticados leer archivos arbitrarios del sistema de archivos del servidor. Cualquier usuario autenticado (independientemente del nivel de privilegio) puede explotar esta vulnerabilidad para leer archivos sensibles. La versión 7.0.4 corrige el problema."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+                "baseScore": 9.9,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.1,
+              "impactScore": 6.0
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+                "baseScore": 6.5,
+                "baseSeverity": "MEDIUM"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 3.6
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-22"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:open-emr:openemr:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "197634CE-D050-4392-BF3C-EA0198DEEFA9",
+                    "versionEndExcluding": "7.0.4"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/openemr/openemr/commit/22f8e53e5769a88b7a16cb223bd197d044c84e5a",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://github.com/openemr/openemr/security/advisories/GHSA-w6vc-hx2x-48pc",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Exploit",
+              "Mitigation",
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 78,
+      "rank": 2
+    },
+    {
+      "cve_id": "CVE-2021-28549",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 0.05782,
+            "score_date": "2026-05-03"
+          },
+          "current": {
+            "score": 0.22478,
+            "score_date": "2026-06-08"
+          },
+          "delta": 0.16696
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2021-04-15",
+        "description": "Adobe Photoshop versions 21.2.6 (and earlier) and 22.3 (and earlier) are affected by a Buffer Overflow vulnerability when parsing a specially crafted JSX file. An unauthenticated attacker could leverage this vulnerability to achieve arbitrary code execution in the context of the current user. Exploitation of this issue requires user interaction in that a victim must open a malicious file.",
+        "title": "adobe photoshop RCE",
+        "vendor": "adobe",
+        "product": "photoshop",
+        "attack_type": "RCE",
+        "cvss_max": 7.8
+      },
+      "cve": {
+        "id": "CVE-2021-28549",
+        "sourceIdentifier": "psirt@adobe.com",
+        "published": "2021-04-15T14:15:17.137",
+        "lastModified": "2024-11-21T05:59:49.730",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Adobe Photoshop versions 21.2.6 (and earlier) and 22.3 (and earlier) are affected by a Buffer Overflow vulnerability when parsing a specially crafted JSX file. An unauthenticated attacker could leverage this vulnerability to achieve arbitrary code execution in the context of the current user. Exploitation of this issue requires user interaction in that a victim must open a malicious file."
+          },
+          {
+            "lang": "es",
+            "value": "Adobe Photoshop versiones 21.2.6 (y anteriores) y versiones 22.3 (y anteriores) están afectadas por una vulnerabilidad de desbordamiento de búfer cuando analiza un archivo JSX especialmente diseñado.&#xa0;Un atacante no autenticado podría aprovechar esta vulnerabilidad para lograr una ejecución de código arbitraria en el contexto del usuario actual.&#xa0;Es requerida una interacción del usuario para explotar este problema, ya que la víctima debe abrir un archivo malicioso"
+          }
+        ],
+        "metrics": {
+          "cvssMetricV2": [
+            {
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+                "baseScore": 6.8,
+                "baseSeverity": "MEDIUM"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "baseSeverity": "MEDIUM",
+              "exploitabilityScore": 8.6,
+              "impactScore": 6.4
+            }
+          ],
+          "cvssMetricV30": [
+            {
+              "cvssData": {
+                "version": "3.0",
+                "vectorString": "CVSS:3.0/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+                "baseScore": 7.8,
+                "baseSeverity": "HIGH"
+              },
+              "source": "psirt@adobe.com",
+              "type": "Secondary",
+              "exploitabilityScore": 1.8,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+                "baseScore": 7.8,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 1.8,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-120"
+              }
+            ],
+            "source": "psirt@adobe.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:photoshop:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "1C7C1C09-9D8F-4E5E-839A-F0EF3FF3AB30",
+                    "versionEndIncluding": "21.2.6"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:adobe:photoshop:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "B91074BE-7694-46A0-A107-0972E4D6B640",
+                    "versionStartIncluding": "22.0",
+                    "versionEndIncluding": "22.3"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:apple:macos:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "387021A0-AF36-463C-A605-32EA7DAC172E"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "A2572D17-1DE6-457B-99CC-64AFD54487EA"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://helpx.adobe.com/security/products/photoshop/apsb21-28.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 83,
+      "rank": 3
+    },
+    {
+      "cve_id": "CVE-2007-5355",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 0.27439,
+            "score_date": "2026-04-12"
+          },
+          "current": {
+            "score": 0.39823,
+            "score_date": "2026-06-08"
+          },
+          "delta": 0.12384
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2007-12-05",
+        "description": "The Web Proxy Auto-Discovery (WPAD) feature in Microsoft Internet Explorer 6 and 7, when a primary DNS suffix with three or more components is configured, resolves an unqualified wpad hostname in a second-level domain outside this configured DNS domain, which allows remote WPAD servers to conduct man-in-the-middle (MITM) attacks.",
+        "title": "microsoft internet_explorer",
+        "vendor": "microsoft",
+        "product": "windows_2000",
+        "cvss_max": 5.8
+      },
+      "cve": {
+        "id": "CVE-2007-5355",
+        "sourceIdentifier": "secure@microsoft.com",
+        "published": "2007-12-05T11:46:00.000",
+        "lastModified": "2026-04-23T00:35:47.467",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The Web Proxy Auto-Discovery (WPAD) feature in Microsoft Internet Explorer 6 and 7, when a primary DNS suffix with three or more components is configured, resolves an unqualified wpad hostname in a second-level domain outside this configured DNS domain, which allows remote WPAD servers to conduct man-in-the-middle (MITM) attacks."
+          },
+          {
+            "lang": "es",
+            "value": "La característica Web Proxy Auto-Discovery en Microsoft Internet Explorer 6 y 7, cuando un sufijo de DNS primario con tres o más componentes es configurado, resuelve nombre de host wpad no cualificado en un dominio de segundo nivel fuera de este dominio configurado en el DNS, lo cual permite a servidores WPAD llevar a cabo ataques de hombre en el medio (MITM, man-in-the-middle)."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV2": [
+            {
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:M/Au:N/C:P/I:P/A:N",
+                "baseScore": 5.8,
+                "baseSeverity": "MEDIUM"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "baseSeverity": "MEDIUM",
+              "exploitabilityScore": 8.6,
+              "impactScore": 4.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "NVD-CWE-Other"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_2000:*:sp4:*:*:*:*:*:*",
+                    "matchCriteriaId": "83E7C4A0-78CF-4B56-82BF-EC932BDD8ADF"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:microsoft:internet_explorer:5.01:sp4:*:*:*:*:*:*",
+                    "matchCriteriaId": "F3F2A51E-2675-4993-B9C2-F2D176A92857"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_2000:*:sp4:*:*:*:*:*:*",
+                    "matchCriteriaId": "83E7C4A0-78CF-4B56-82BF-EC932BDD8ADF"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:microsoft:internet_explorer:6:sp1:*:*:*:*:*:*",
+                    "matchCriteriaId": "D47247A3-7CD7-4D67-9D9B-A94A504DA1BE"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_2003_server:64-bit:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "D2CA1674-A8A0-479A-9D80-344D3C563A24"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_2003_server:64-bit_sp2:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "98F2C39B-9FF1-461C-9B74-8D3B2BF4F00B"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_2003_server:itanium_sp1:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "6B0F30F1-729F-471C-995F-55879ECE5D19"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_2003_server:itanium_sp2:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "2447A9D1-4050-430B-B0B1-9994C381A182"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_2003_server:sp1:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "644E2E89-F3E3-4383-B460-424D724EE62F"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_2003_server:sp2:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "377F7D0C-6B44-4B90-BF90-DAF959880C6D"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_xp:*:sp2:*:*:*:*:*:*",
+                    "matchCriteriaId": "9B339C33-8896-4896-88FF-88E74FDBC543"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:microsoft:internet_explorer:6:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "693D3C1C-E3E4-49DB-9A13-44ADDFF82507"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_2003_server:64-bit:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "D2CA1674-A8A0-479A-9D80-344D3C563A24"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_2003_server:64-bit_sp2:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "98F2C39B-9FF1-461C-9B74-8D3B2BF4F00B"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_2003_server:itanium_sp1:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "6B0F30F1-729F-471C-995F-55879ECE5D19"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_2003_server:itanium_sp2:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "2447A9D1-4050-430B-B0B1-9994C381A182"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_2003_server:sp1:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "644E2E89-F3E3-4383-B460-424D724EE62F"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_2003_server:sp2:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "377F7D0C-6B44-4B90-BF90-DAF959880C6D"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_vista:*:*:x64:*:*:*:*:*",
+                    "matchCriteriaId": "1DD1D5ED-FE7C-4ADF-B3AF-1F13E51B4FB5"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_xp:*:sp2:*:*:*:*:*:*",
+                    "matchCriteriaId": "9B339C33-8896-4896-88FF-88E74FDBC543"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:microsoft:internet_explorer:7:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "1A33FA7F-BB2A-4C66-B608-72997A2BD1DB"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "http://secunia.com/advisories/27901",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "http://support.microsoft.com/kb/945713",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://www.microsoft.com/technet/security/advisory/945713.mspx",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://www.securityfocus.com/bid/26686",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://www.securitytracker.com/id?1019033",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://www.vupen.com/english/advisories/2007/4064",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          }
+        ]
+      },
+      "risk_score": 80,
+      "rank": 4
+    },
+    {
+      "cve_id": "CVE-2008-2292",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 0.15213,
+            "score_date": "2026-03-07"
+          },
+          "current": {
+            "score": 0.26552,
+            "score_date": "2026-06-08"
+          },
+          "delta": 0.11339
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2008-05-18",
+        "description": "Buffer overflow in the __snprint_value function in snmp_get in Net-SNMP 5.1.4, 5.2.4, and 5.4.1, as used in SNMP.xs for Perl, allows remote attackers to cause a denial of service (crash) and possibly execute arbitrary code via a large OCTETSTRING in an attribute value pair (AVP).",
+        "title": "net-snmp net-snmp Buffer Overflow",
+        "vendor": "net-snmp",
+        "product": "net-snmp",
+        "attack_type": "Buffer Overflow",
+        "cvss_max": 6.8
+      },
+      "cve": {
+        "id": "CVE-2008-2292",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2008-05-18T14:20:00.000",
+        "lastModified": "2026-04-23T00:35:47.467",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Buffer overflow in the __snprint_value function in snmp_get in Net-SNMP 5.1.4, 5.2.4, and 5.4.1, as used in SNMP.xs for Perl, allows remote attackers to cause a denial of service (crash) and possibly execute arbitrary code via a large OCTETSTRING in an attribute value pair (AVP)."
+          },
+          {
+            "lang": "es",
+            "value": "Desbordamiento de búfer en la función __snprint_value de snmp_get en Net-SNMP 5.1.4, 5.2.4 y 5.4.1, como se usa en SNMP.xs para Perl, permite a atacantes remotos provocar una denegación de servicio (caída) y posiblemente ejecutar código de su elección mediante un OCTETSTRING grande en un par atributo valor (AVP)."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV2": [
+            {
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+                "baseScore": 6.8,
+                "baseSeverity": "MEDIUM"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "baseSeverity": "MEDIUM",
+              "exploitabilityScore": 8.6,
+              "impactScore": 6.4
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-119"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:net-snmp:net-snmp:5.1.4:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "E5DDCC25-3B6A-4051-BE2A-5B8553B2D904"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:net-snmp:net-snmp:5.2.4:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "7537C748-FACE-421C-95E0-3841EA1F87CE"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:net-snmp:net-snmp:5.4.1:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "282A2385-57A4-477D-BA0F-6C76751E945C"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "http://lists.opensuse.org/opensuse-security-announce/2008-08/msg00000.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://secunia.com/advisories/30187",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "http://secunia.com/advisories/30615",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://secunia.com/advisories/30647",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://secunia.com/advisories/31155",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://secunia.com/advisories/31334",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://secunia.com/advisories/31351",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://secunia.com/advisories/31467",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://secunia.com/advisories/31568",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://secunia.com/advisories/32664",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://secunia.com/advisories/33003",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://security.gentoo.org/glsa/glsa-200808-02.xml",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://sourceforge.net/tracker/index.php?func=detail&aid=1826174&group_id=12694&atid=112694",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://sunsolve.sun.com/search/document.do?assetkey=1-26-239785-1",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://support.avaya.com/elmodocs2/security/ASA-2008-282.htm",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://www.debian.org/security/2008/dsa-1663",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://www.mandriva.com/security/advisories?name=MDVSA-2008:118",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://www.redhat.com/support/errata/RHSA-2008-0529.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://www.securityfocus.com/bid/29212",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://www.securitytracker.com/id?1020527",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://www.ubuntu.com/usn/usn-685-1",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://www.vmware.com/security/advisories/VMSA-2008-0013.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://www.vupen.com/english/advisories/2008/1528/references",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://www.vupen.com/english/advisories/2008/2141/references",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://www.vupen.com/english/advisories/2008/2361",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "https://exchange.xforce.ibmcloud.com/vulnerabilities/42430",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "https://oval.cisecurity.org/repository/search/definition/oval%3Aorg.mitre.oval%3Adef%3A11261",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "https://www.redhat.com/archives/fedora-package-announce/2008-June/msg00363.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "https://www.redhat.com/archives/fedora-package-announce/2008-June/msg00380.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "https://www.redhat.com/archives/fedora-package-announce/2008-June/msg00459.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          }
+        ]
+      },
+      "risk_score": 80,
+      "rank": 5
+    },
+    {
+      "cve_id": "CVE-2016-0749",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 0.15975,
+            "score_date": "2026-03-03"
+          },
+          "current": {
+            "score": 0.29426,
+            "score_date": "2026-06-08"
+          },
+          "delta": 0.13451
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2016-06-09",
+        "description": "The smartcard interaction in SPICE allows remote attackers to cause a denial of service (QEMU-KVM process crash) or possibly execute arbitrary code via vectors related to connecting to a guest VM, which triggers a heap-based buffer overflow.",
+        "title": "debian debian_linux Buffer Overflow",
+        "vendor": "opensuse",
+        "product": "leap",
+        "attack_type": "Buffer Overflow",
+        "cvss_max": 10.0
+      },
+      "cve": {
+        "id": "CVE-2016-0749",
+        "sourceIdentifier": "secalert@redhat.com",
+        "published": "2016-06-09T16:59:00.127",
+        "lastModified": "2026-05-06T22:30:45.220",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The smartcard interaction in SPICE allows remote attackers to cause a denial of service (QEMU-KVM process crash) or possibly execute arbitrary code via vectors related to connecting to a guest VM, which triggers a heap-based buffer overflow."
+          },
+          {
+            "lang": "es",
+            "value": "La interacción smartcard en SPICE permite a atacantes remotos provocar un denegación de servicio (caída del proceso QEMU-KVM) o ejecutar, posiblemente, un código arbitrario a través de véctores relacionados con conectarse con un invitado VM, lo que ejecuta un desbordamiento de bufer basado en memoria dinámica."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV2": [
+            {
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+                "baseScore": 10.0,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "baseSeverity": "HIGH",
+              "exploitabilityScore": 10.0,
+              "impactScore": 10.0
+            }
+          ],
+          "cvssMetricV30": [
+            {
+              "cvssData": {
+                "version": "3.0",
+                "vectorString": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-119"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:opensuse:leap:42.1:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "4863BE36-D16A-4D75-90D9-FD76DB5B48B7"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:opensuse:opensuse:13.2:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "03117DF1-3BEC-4B8D-AD63-DBBDB2126081"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:debian:debian_linux:8.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "C11E6FB0-C8C0-4527-9AA0-CB9B316F8F43"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:redhat:enterprise_linux:6.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "2F6AB192-9D7D-4A9A-8995-E53A9DE9EAFC"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:redhat:enterprise_linux:6.0:*:*:*:scientific_computing:*:*:*",
+                    "matchCriteriaId": "EE7A63D3-B604-436A-8BB3-DBD820FEFAD7"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:redhat:enterprise_linux_desktop:6.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "EE249E1B-A1FD-4E08-AA71-A0E1F10FFE97"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:redhat:enterprise_linux_server:6.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "9BBCD86A-E6C7-4444-9D74-F861084090F0"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:redhat:enterprise_linux_workstation:6.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "E5ED5807-55B7-47C5-97A6-03233F4FBC3A"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "2CF61F35-5905-4BA9-AD7E-7DB261D2F256"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:redhat:enterprise_linux:7.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "142AD0DD-4CF3-4D74-9442-459CE3347E3A"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:redhat:enterprise_linux:7.0:*:*:*:scientific_computing:*:*:*",
+                    "matchCriteriaId": "3613D314-10A7-45B2-A43B-9052E9901F3B"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:redhat:enterprise_linux_desktop:7.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "33C068A4-3780-4EAB-A937-6082DF847564"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:redhat:enterprise_linux_hpc_node_eus:7.2:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "39A901D6-0874-46A4-92A8-5F72C7A89E85"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:redhat:enterprise_linux_server:7.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "51EF4996-72F4-4FA4-814F-F5991E7A8318"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:redhat:enterprise_linux_server_aus:7.2:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "1C8D871B-AEA1-4407-AEE3-47EC782250FF"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:redhat:enterprise_linux_server_eus:7.2:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "44B067C7-735E-43C9-9188-7E1522A02491"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:redhat:enterprise_linux_workstation:7.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "825ECE2D-E232-46E0-A047-074B34DB1E97"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "2CF61F35-5905-4BA9-AD7E-7DB261D2F256"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:spice_project:spice:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "2285AB1B-2918-4DC6-B9E6-30BD9A52ADD4"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "http://lists.opensuse.org/opensuse-updates/2016-07/msg00003.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://lists.opensuse.org/opensuse-updates/2016-07/msg00004.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://www.debian.org/security/2016/dsa-3596",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://www.oracle.com/technetwork/topics/security/linuxbulletinapr2016-2952096.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://www.ubuntu.com/usn/USN-3014-1",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "https://access.redhat.com/errata/RHSA-2016:1204",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "https://access.redhat.com/errata/RHSA-2016:1205",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "https://security.gentoo.org/glsa/201606-05",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          }
+        ]
+      },
+      "risk_score": 86,
+      "rank": 6
+    },
+    {
+      "cve_id": "CVE-2019-25141",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 0.6286,
+            "score_date": "2026-02-15"
+          },
+          "current": {
+            "score": 0.77905,
+            "score_date": "2026-06-08"
+          },
+          "delta": 0.15045
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2023-06-07",
+        "description": "The Easy WP SMTP plugin for WordPress is vulnerable to authorization bypass in versions up to, and including, 1.3.9. This is due to missing capability checks on the admin_init() function, in addition to insufficient input validation. This makes it possible for unauthenticated attackers to modify the plugins settings and arbitrary options on the site that can be used to inject new administrative user accounts.",
+        "title": "wp-ecommerce easy_wp_smtp privilege escalation",
+        "vendor": "wp-ecommerce",
+        "product": "easy_wp_smtp",
+        "attack_type": "privilege escalation",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2019-25141",
+        "sourceIdentifier": "security@wordfence.com",
+        "published": "2023-06-07T02:15:10.180",
+        "lastModified": "2026-04-08T18:17:03.533",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The Easy WP SMTP plugin for WordPress is vulnerable to authorization bypass in versions up to, and including, 1.3.9. This is due to missing capability checks on the admin_init() function, in addition to insufficient input validation. This makes it possible for unauthenticated attackers to modify the plugins settings and arbitrary options on the site that can be used to inject new administrative user accounts."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security@wordfence.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-862"
+              }
+            ],
+            "source": "security@wordfence.com"
+          },
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-862"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:wp-ecommerce:easy_wp_smtp:*:*:*:*:*:wordpress:*:*",
+                    "matchCriteriaId": "0E14E7D0-7A98-4B40-9310-5998AF46E499",
+                    "versionEndIncluding": "1.3.9"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://blog.nintechnet.com/critical-0day-vulnerability-fixed-in-wordpress-easy-wp-smtp-plugin/",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit"
+            ]
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/changeset?old_path=%2Feasy-wp-smtp&old=2052057&new_path=%2Feasy-wp-smtp&new=2052058&sfp_email=&sfph_mail=",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://wordpress.org/support/topic/vulnerability-26/",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit",
+              "Issue Tracking",
+              "Mitigation"
+            ]
+          },
+          {
+            "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/84b75f7d-7258-46f6-aee6-b96d70bee264?source=cve",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Broken Link",
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 86,
+      "rank": 7
+    },
+    {
+      "cve_id": "CVE-2021-46319",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 0.20958,
+            "score_date": "2026-02-28"
+          },
+          "current": {
+            "score": 0.32463,
+            "score_date": "2026-06-08"
+          },
+          "delta": 0.11505
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2022-02-17",
+        "description": "Remote Code Execution (RCE) vulnerability exists in D-Link Router DIR-846 DIR846A1_FW100A43.bin and DIR846enFW100A53DLA-Retail.bin. Malicious users can use this vulnerability to use \"\\ \" or backticks to bypass the shell metacharacters in the ssid0 or ssid1 parameters to execute arbitrary commands.This vulnerability is due to the fact that CVE-2019-17509 is not fully patched and can be bypassed by using line breaks or backticks on its basis.",
+        "title": "dlink dir-846_firmware RCE",
+        "vendor": "dlink",
+        "product": "dir-846_firmware",
+        "attack_type": "RCE",
+        "cvss_max": 10.0
+      },
+      "cve": {
+        "id": "CVE-2021-46319",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2022-02-17T22:15:07.830",
+        "lastModified": "2024-11-21T06:33:52.443",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Remote Code Execution (RCE) vulnerability exists in D-Link Router DIR-846 DIR846A1_FW100A43.bin and DIR846enFW100A53DLA-Retail.bin. Malicious users can use this vulnerability to use \"\\ \" or backticks to bypass the shell metacharacters in the ssid0 or ssid1 parameters to execute arbitrary commands.This vulnerability is due to the fact that CVE-2019-17509 is not fully patched and can be bypassed by using line breaks or backticks on its basis."
+          },
+          {
+            "lang": "es",
+            "value": "Se presenta una vulnerabilidad de Ejecución de Código Remota (RCE) en el router D-Link DIR-846 DIR846A1_FW100A43.bin y DIR846enFW100A53DLA-Retail.bin. Los usuarios maliciosos pueden usar esta vulnerabilidad para usar \"\\ ~\" o backticks para omitir los metacaracteres de shell en los parámetros ssid0 o ssid1 para ejecutar comandos arbitrarios.Esta vulnerabilidad es debido a que CVE-2019-17509 no está completamente parcheado y puede ser omitido mediante el uso de saltos de línea o backticks en su base"
+          }
+        ],
+        "metrics": {
+          "cvssMetricV2": [
+            {
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+                "baseScore": 10.0,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "baseSeverity": "HIGH",
+              "exploitabilityScore": 10.0,
+              "impactScore": 10.0
+            }
+          ],
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-78"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:dlink:dir-846_firmware:100a43:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "3294C98A-8C06-4E84-BB77-5D539360FEFB"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:dlink:dir-846:a1:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "463CF40F-BF42-4440-A62D-F32E162E8852"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:dlink:dir-846_firmware:100a53dla:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "43DB2C54-7976-400B-A2C7-24F986E1303B"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:dlink:dir-846:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "77723994-0E2A-4A90-B2C6-5B262CBBAFA1"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/doudoudedi/DIR-846_Command_Injection/blob/main/DIR-846_Command_Injection1.md",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.dlink.com/en/security-bulletin/",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 85,
+      "rank": 8
+    },
+    {
+      "cve_id": "CVE-2024-53900",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 0.52176,
+            "score_date": "2026-05-21"
+          },
+          "current": {
+            "score": 0.64154,
+            "score_date": "2026-06-08"
+          },
+          "delta": 0.11978
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2024-12-02",
+        "description": "Mongoose before 8.8.3 can improperly use $where in match, leading to search injection.",
+        "title": "mongoosejs mongoose",
+        "vendor": "mongoosejs",
+        "product": "mongoose",
+        "cvss_max": 9.1
+      },
+      "cve": {
+        "id": "CVE-2024-53900",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2024-12-02T20:15:08.347",
+        "lastModified": "2025-10-01T18:24:19.460",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Mongoose before 8.8.3 can improperly use $where in match, leading to search injection."
+          },
+          {
+            "lang": "es",
+            "value": "Mongoose anterior a 8.8.3 puede usar $where incorrectamente en la coincidencia."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+                "baseScore": 9.1,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.2
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-89"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:mongoosejs:mongoose:*:*:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "525F34C9-D734-4D8C-8A77-3412A97CC751",
+                    "versionEndExcluding": "6.13.5"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:mongoosejs:mongoose:*:*:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "6E4A301E-1524-4004-A4E4-1D6BB32F4E38",
+                    "versionStartIncluding": "7.0.1",
+                    "versionEndExcluding": "7.8.3"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:mongoosejs:mongoose:*:*:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "7A1303EF-BD3B-42E5-8C58-6D3CB187012C",
+                    "versionStartIncluding": "8.0.1",
+                    "versionEndExcluding": "8.8.3"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:mongoosejs:mongoose:7.0.0:rc0:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "C1525AA4-AC58-4A54-BC7D-EC5847434E50"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:mongoosejs:mongoose:8.0.0:rc0:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "BE2D0C65-C25B-4FFF-8202-6EBBCBA98823"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/Automattic/mongoose/blob/master/CHANGELOG.md",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Release Notes"
+            ]
+          },
+          {
+            "url": "https://github.com/Automattic/mongoose/commit/c9e86bff7eef477da75a29af62a06d41a835a156",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://github.com/Automattic/mongoose/releases",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Release Notes"
+            ]
+          },
+          {
+            "url": "https://github.com/advisories/GHSA-m7xq-9374-9rvx",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://www.npmjs.com/package/mongoose?activeTab=versions",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Product"
+            ]
+          }
+        ]
+      },
+      "risk_score": 84,
+      "rank": 9
+    },
+    {
+      "cve_id": "CVE-2024-58349",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-06-08",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-06-08",
+        "description": "WordPress Theme Travelscape 1.0.3 contains an arbitrary file upload vulnerability that allows unauthenticated attackers to upload malicious files by exploiting insufficient validation in the theme's upload functionality. Attackers can upload arbitrary files to the theme directory and execute them to achieve remote code execution on the affected WordPress installation.",
+        "title": "WordPress Theme Travelscape 1.0.3 contains an arbitrary file upload vulnerability that allows unauthenticated attackers to upload malicio...",
+        "attack_type": "RCE",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2024-58349",
+        "sourceIdentifier": "disclosure@vulncheck.com",
+        "published": "2026-06-08T02:16:23.403",
+        "lastModified": "2026-06-08T14:59:44.750",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "WordPress Theme Travelscape 1.0.3 contains an arbitrary file upload vulnerability that allows unauthenticated attackers to upload malicious files by exploiting insufficient validation in the theme's upload functionality. Attackers can upload arbitrary files to the theme directory and execute them to achieve remote code execution on the affected WordPress installation."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-434"
+              }
+            ],
+            "source": "disclosure@vulncheck.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://www.exploit-db.com/exploits/51969",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://www.vulncheck.com/advisories/wordpress-theme-travelscape-arbitrary-file-upload",
+            "source": "disclosure@vulncheck.com"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 10
+    },
+    {
+      "cve_id": "CVE-2025-25256",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 0.39021,
+            "score_date": "2026-05-31"
+          },
+          "current": {
+            "score": 0.51322,
+            "score_date": "2026-06-08"
+          },
+          "delta": 0.12301
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-08-12",
+        "description": "An improper neutralization of special elements used in an OS command ('OS Command Injection') vulnerability [CWE-78] in Fortinet FortiSIEM version 7.3.0 through 7.3.1, 7.2.0 through 7.2.5, 7.1.0 through 7.1.7, 7.0.0 through 7.0.3 and before 6.7.9 allows an unauthenticated attacker to execute unauthorized code or commands via crafted CLI requests.",
+        "title": "fortinet fortisiem Command Injection",
+        "vendor": "fortinet",
+        "product": "fortisiem",
+        "attack_type": "Command Injection",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-25256",
+        "sourceIdentifier": "psirt@fortinet.com",
+        "published": "2025-08-12T19:15:28.683",
+        "lastModified": "2025-08-15T18:15:27.583",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "An improper neutralization of special elements used in an OS command ('OS Command Injection') vulnerability [CWE-78] in Fortinet FortiSIEM version 7.3.0 through 7.3.1, 7.2.0 through 7.2.5, 7.1.0 through 7.1.7, 7.0.0 through 7.0.3 and before 6.7.9 allows an unauthenticated attacker to execute unauthorized code or commands via crafted CLI requests."
+          },
+          {
+            "lang": "es",
+            "value": "Una vulnerabilidad de neutralización incorrecta de elementos especiales utilizados en un comando del SO ('OS Command Injection') [CWE-78] en Fortinet FortiSIEM versión 7.3.0 a 7.3.1, 7.2.0 a 7.2.5, 7.1.0 a 7.1.7, 7.0.0 a 7.0.3 y anteriores a 6.7.9 permite que un atacante no autenticado ejecute código o comandos no autorizados a través de solicitudes CLI manipuladas."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "psirt@fortinet.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-78"
+              }
+            ],
+            "source": "psirt@fortinet.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:fortinet:fortisiem:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "AE219A7C-15F6-42F1-8A2E-2D9C2D182F47",
+                    "versionStartIncluding": "5.4.0",
+                    "versionEndExcluding": "6.7.10"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:fortinet:fortisiem:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "C19909A4-227B-460D-B1EF-5115B8DB0CF9",
+                    "versionStartIncluding": "7.0.0",
+                    "versionEndExcluding": "7.0.4"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:fortinet:fortisiem:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "119827CE-B8BF-4418-830F-B87CA0305265",
+                    "versionStartIncluding": "7.1.0",
+                    "versionEndExcluding": "7.1.8"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:fortinet:fortisiem:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "8DBF861B-B200-40BA-86A3-51E90F3DCF04",
+                    "versionStartIncluding": "7.2.0",
+                    "versionEndExcluding": "7.2.6"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:fortinet:fortisiem:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "0A631305-1FA5-4CE8-B180-DC4BD6467A2F",
+                    "versionStartIncluding": "7.3.0",
+                    "versionEndExcluding": "7.3.2"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://fortiguard.fortinet.com/psirt/FG-IR-25-152",
+            "source": "psirt@fortinet.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://www.theregister.com/2025/08/13/fortinet_discloses_critical_bug/",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/watchtowrlabs/watchTowr-vs-FortiSIEM-CVE-2025-25256",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          },
+          {
+            "url": "https://labs.watchtowr.com/should-security-solutions-be-secure-maybe-were-all-wrong-fortinet-fortisiem-pre-auth-command-injection-cve-2025-25256/",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ]
+      },
+      "risk_score": 85,
+      "rank": 11
+    },
+    {
+      "cve_id": "CVE-2025-50165",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 0.11243,
+            "score_date": "2026-05-29"
+          },
+          "current": {
+            "score": 0.23528,
+            "score_date": "2026-06-08"
+          },
+          "delta": 0.12285
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-08-12",
+        "description": "Untrusted pointer dereference in Microsoft Graphics Component allows an unauthorized attacker to execute code over a network.",
+        "title": "microsoft windows_11_24h2",
+        "vendor": "microsoft",
+        "product": "windows_11_24h2",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-50165",
+        "sourceIdentifier": "secure@microsoft.com",
+        "published": "2025-08-12T18:15:34.053",
+        "lastModified": "2025-08-14T17:05:02.893",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Untrusted pointer dereference in Microsoft Graphics Component allows an unauthorized attacker to execute code over a network."
+          },
+          {
+            "lang": "es",
+            "value": "La desreferencia de puntero no confiable en el componente de gráficos de Microsoft permite que un atacante no autorizado ejecute código a través de una red."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "secure@microsoft.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-822"
+              },
+              {
+                "lang": "en",
+                "value": "CWE-908"
+              }
+            ],
+            "source": "secure@microsoft.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_11_24h2:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "6376F067-CC36-4A7B-914B-0A60EFF1AC48",
+                    "versionEndExcluding": "10.0.26100.4851"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_server_2025:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "B75BE97E-C12D-4DFB-B5F2-B8BF90C3E64E",
+                    "versionEndExcluding": "10.0.26100.4851"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-50165",
+            "source": "secure@microsoft.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 85,
+      "rank": 12
+    },
+    {
+      "cve_id": "CVE-2025-53722",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 0.2255,
+            "score_date": "2026-05-29"
+          },
+          "current": {
+            "score": 0.37319,
+            "score_date": "2026-06-08"
+          },
+          "delta": 0.14769
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2025-08-12",
+        "description": "Uncontrolled resource consumption in Windows Remote Desktop Services allows an unauthorized attacker to deny service over a network.",
+        "title": "microsoft windows_10_1507",
+        "vendor": "microsoft",
+        "product": "windows_10_1507",
+        "cvss_max": 7.5
+      },
+      "cve": {
+        "id": "CVE-2025-53722",
+        "sourceIdentifier": "secure@microsoft.com",
+        "published": "2025-08-12T18:15:41.363",
+        "lastModified": "2025-08-18T16:57:34.573",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Uncontrolled resource consumption in Windows Remote Desktop Services allows an unauthorized attacker to deny service over a network."
+          },
+          {
+            "lang": "es",
+            "value": "El consumo descontrolado de recursos en los Servicios de Escritorio remoto de Windows permite que un atacante no autorizado deniegue el servicio a través de una red."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                "baseScore": 7.5,
+                "baseSeverity": "HIGH"
+              },
+              "source": "secure@microsoft.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 3.6
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-400"
+              }
+            ],
+            "source": "secure@microsoft.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_10_1507:*:*:*:*:*:*:x64:*",
+                    "matchCriteriaId": "29F441C0-F0F8-463F-B141-6A33EBA06B1D",
+                    "versionEndExcluding": "10.0.10240.21100"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_10_1507:*:*:*:*:*:*:x86:*",
+                    "matchCriteriaId": "5C7C5886-496D-4CBA-956A-A097AC7535D4",
+                    "versionEndExcluding": "10.0.10240.21100"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_10_1607:*:*:*:*:*:*:x64:*",
+                    "matchCriteriaId": "4E2D87DA-8EFF-4BB0-B025-A13C3F523BD1",
+                    "versionEndExcluding": "10.0.14393.8330"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_10_1607:*:*:*:*:*:*:x86:*",
+                    "matchCriteriaId": "C28DF998-E700-4675-9737-40A53288F54C",
+                    "versionEndExcluding": "10.0.14393.8330"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_10_1809:*:*:*:*:*:*:x64:*",
+                    "matchCriteriaId": "3A513AB8-ED03-4BCF-8077-09A117254263",
+                    "versionEndExcluding": "10.0.17763.7678"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_10_1809:*:*:*:*:*:*:x86:*",
+                    "matchCriteriaId": "47A8837D-AB4B-465B-8D1C-B89B4EDDBDD4",
+                    "versionEndExcluding": "10.0.17763.7678"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_10_21h2:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "77A19D12-C137-4E01-AF99-E1E7BBC9F0C3",
+                    "versionEndExcluding": "10.0.19044.6216"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_10_22h2:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "44D27317-F93F-418E-8EC6-9BD1256677C9",
+                    "versionEndExcluding": "10.0.19045.6216"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_11_22h2:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "B07546D0-ED2A-4B93-83E7-EA808DC39724",
+                    "versionEndExcluding": "10.0.22621.5768"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_11_23h2:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "49E4DFC9-7EB4-4577-83C0-D1E94C2A8D97",
+                    "versionEndExcluding": "10.0.22631.5768"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_11_24h2:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "6376F067-CC36-4A7B-914B-0A60EFF1AC48",
+                    "versionEndExcluding": "10.0.26100.4851"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_server_2008:r2:sp1:*:*:*:*:x64:*",
+                    "matchCriteriaId": "AF07A81D-12E5-4B1D-BFF9-C8D08C32FF4F"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_server_2012:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "A7DF96F8-BA6A-4780-9CA3-F719B3F81074"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_server_2012:r2:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "DB18C4CE-5917-401E-ACF7-2747084FD36E"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_server_2016:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "CD31CC61-6C1C-4232-87D7-E5B4FEBB1276",
+                    "versionEndExcluding": "10.0.14393.8330"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_server_2019:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "D224ABEA-CCE3-4D7D-86B5-5BEDBF83303B",
+                    "versionEndExcluding": "10.0.17763.7678"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_server_2022:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "F752199D-6C01-4D8E-BD6C-3031E5CAED20",
+                    "versionEndExcluding": "10.0.20348.3989"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_server_2022_23h2:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "94E45649-92F4-4D4C-9D94-275506530222",
+                    "versionEndExcluding": "10.0.25398.1791"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:microsoft:windows_server_2025:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "B75BE97E-C12D-4DFB-B5F2-B8BF90C3E64E",
+                    "versionEndExcluding": "10.0.26100.4851"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-53722",
+            "source": "secure@microsoft.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 82,
+      "rank": 13
+    },
+    {
+      "cve_id": "CVE-2026-11499",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-06-08",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-06-08",
+        "description": "A vulnerability was determined in Tenda HG7HG9 and HG10 300001138_en_xpon. This affects the function formDOMAINBLK of the file /boaform/formDOMAINBLK. Executing a manipulation of the argument blkDomain can lead to stack-based buffer overflow. The attack may be performed from remote.",
+        "title": "A vulnerability was determined in Tenda HG7HG9 and HG10 300001138_en_xpon.",
+        "attack_type": "Buffer Overflow",
+        "cvss_max": 10.0
+      },
+      "cve": {
+        "id": "CVE-2026-11499",
+        "sourceIdentifier": "cna@vuldb.com",
+        "published": "2026-06-08T09:16:29.957",
+        "lastModified": "2026-06-08T14:57:14.757",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A vulnerability was determined in Tenda HG7HG9 and HG10 300001138_en_xpon. This affects the function formDOMAINBLK of the file /boaform/formDOMAINBLK. Executing a manipulation of the argument blkDomain can lead to stack-based buffer overflow. The attack may be performed from remote."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV2": [
+            {
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+                "baseScore": 10.0,
+                "baseSeverity": "HIGH"
+              },
+              "source": "cna@vuldb.com",
+              "type": "Secondary",
+              "baseSeverity": "HIGH",
+              "exploitabilityScore": 10.0,
+              "impactScore": 10.0
+            }
+          ],
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "cna@vuldb.com",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "cna@vuldb.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-119"
+              },
+              {
+                "lang": "en",
+                "value": "CWE-121"
+              }
+            ],
+            "source": "cna@vuldb.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/ssaaaa1234/Tenda-HG10-formDOMAINBLK-stack-overflow-2",
+            "source": "cna@vuldb.com"
+          },
+          {
+            "url": "https://vuldb.com/cve/CVE-2026-11499",
+            "source": "cna@vuldb.com"
+          },
+          {
+            "url": "https://vuldb.com/submit/834888",
+            "source": "cna@vuldb.com"
+          },
+          {
+            "url": "https://vuldb.com/vuln/369119",
+            "source": "cna@vuldb.com"
+          },
+          {
+            "url": "https://vuldb.com/vuln/369119/cti",
+            "source": "cna@vuldb.com"
+          },
+          {
+            "url": "https://www.tenda.com.cn/",
+            "source": "cna@vuldb.com"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 14
+    },
+    {
+      "cve_id": "CVE-2026-25555",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-06-08",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-06-08",
+        "description": "OpenBullet2 through version 0.3.2 contains an authentication bypass vulnerability in the API key authentication middleware that allows unauthenticated attackers to gain admin access by supplying an empty X-Api-Key header value. Attackers can exploit the middleware's comparison of the supplied header against an empty AdminApiKey default string to access the admin console and all API endpoints without valid credentials.",
+        "title": "OpenBullet2 through version 0.3.2 contains an authentication bypass vulnerability in the API key authentication middleware that allows un...",
+        "attack_type": "Auth Bypass",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2026-25555",
+        "sourceIdentifier": "disclosure@vulncheck.com",
+        "published": "2026-06-08T17:16:41.080",
+        "lastModified": "2026-06-08T17:16:41.080",
+        "vulnStatus": "Received",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "OpenBullet2 through version 0.3.2 contains an authentication bypass vulnerability in the API key authentication middleware that allows unauthenticated attackers to gain admin access by supplying an empty X-Api-Key header value. Attackers can exploit the middleware's comparison of the supplied header against an empty AdminApiKey default string to access the admin console and all API endpoints without valid credentials."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-305"
+              }
+            ],
+            "source": "disclosure@vulncheck.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://hackernoon.com/one-empty-header-to-admin-how-an-auth-bypass-breaks-openbullet2",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://www.vulncheck.com/advisories/openbullet2-authentication-bypass-via-x-api-key-header",
+            "source": "disclosure@vulncheck.com"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 15
+    },
+    {
+      "cve_id": "CVE-2026-39910",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-06-08",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-06-08",
+        "description": "STACKIT IaaS API contains a missing authorization check vulnerability that allows authenticated, low-privileged attackers to escalate privileges to full organization compromise by attaching arbitrary service accounts to virtual machines they control. Attackers can exploit the unvalidated PUT servers service-accounts endpoint to attach high-privileged service accounts and query the Instance Metadata Service to retrieve OAuth2 tokens, bypassing tenant boundaries and gaining unauthorized control over the entire organization environment.",
+        "title": "STACKIT IaaS API contains a missing authorization check vulnerability that allows authenticated, low-privileged attackers to escalate pri...",
+        "attack_type": "privilege escalation",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2026-39910",
+        "sourceIdentifier": "disclosure@vulncheck.com",
+        "published": "2026-06-08T17:16:42.613",
+        "lastModified": "2026-06-08T17:16:42.613",
+        "vulnStatus": "Received",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "STACKIT IaaS API contains a missing authorization check vulnerability that allows authenticated, low-privileged attackers to escalate privileges to full organization compromise by attaching arbitrary service accounts to virtual machines they control. Attackers can exploit the unvalidated PUT servers service-accounts endpoint to attach high-privileged service accounts and query the Instance Metadata Service to retrieve OAuth2 tokens, bypassing tenant boundaries and gaining unauthorized control over the entire organization environment."
+          }
+        ],
+        "cveTags": [
+          {
+            "sourceIdentifier": "disclosure@vulncheck.com",
+            "tags": [
+              "exclusively-hosted-service"
+            ]
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-862"
+              }
+            ],
+            "source": "disclosure@vulncheck.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://status.stackit.cloud",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://www.vulncheck.com/advisories/stackit-iaas-api-privilege-escalation-via-service-account-attachment",
+            "source": "disclosure@vulncheck.com"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 16
+    },
+    {
+      "cve_id": "CVE-2026-41448",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-06-08",
+          "previous_max": null,
+          "current_max": 9.2
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-06-08",
+        "description": "AdGuard Home, when started with the --glinet flag, contains an authentication bypass vulnerability that allows unauthenticated attackers to gain full admin access by supplying a path traversal sequence in the Admin-Token cookie, exploiting unsanitized string concatenation in the token file path construction within the authglinet middleware. Attackers can craft a request with a traversal payload in the Admin-Token header to redirect file reads to arbitrary paths.",
+        "title": "AdGuard Home, when started with the --glinet flag, contains an authentication bypass vulnerability that allows unauthenticated attackers...",
+        "attack_type": "Path Traversal",
+        "cvss_max": 9.4
+      },
+      "cve": {
+        "id": "CVE-2026-41448",
+        "sourceIdentifier": "disclosure@vulncheck.com",
+        "published": "2026-06-08T17:16:42.847",
+        "lastModified": "2026-06-08T17:16:42.847",
+        "vulnStatus": "Received",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "AdGuard Home, when started with the --glinet flag, contains an authentication bypass vulnerability that allows unauthenticated attackers to gain full admin access by supplying a path traversal sequence in the Admin-Token cookie, exploiting unsanitized string concatenation in the token file path construction within the authglinet middleware. Attackers can craft a request with a traversal payload in the Admin-Token header to redirect file reads to arbitrary paths."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:L",
+                "baseScore": 9.4,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.5
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.2,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-22"
+              }
+            ],
+            "source": "disclosure@vulncheck.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/AdguardTeam/AdGuardHome/releases/tag/v0.107.77",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://www.vulncheck.com/advisories/adguard-home-authentication-bypass-via-path-traversal-in-admin-token-cookie",
+            "source": "disclosure@vulncheck.com"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 17
+    },
+    {
+      "cve_id": "CVE-2026-42271",
+      "signal_types": [
+        "KEV"
+      ],
+      "signals": {
+        "kev": {
+          "date_added": "2026-06-08"
+        },
+        "exploit": null,
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-05-08",
+        "description": "LiteLLM is a proxy server (AI Gateway) to call LLM APIs in OpenAI (or native) format. From version 1.74.2 to before version 1.83.7, two endpoints used to preview an MCP server before saving it — POST /mcp-rest/test/connection and POST /mcp-rest/test/tools/list — accepted a full server configuration in the request body, including the command, args, and env fields used by the stdio transport. When called with a stdio configuration, the endpoints attempted to connect, which spawned the supplied command as a subprocess on the proxy host with the privileges of the proxy process. The endpoints were gated only by a valid proxy API key, with no role check. Any authenticated user — including holders of low-privilege internal-user keys — could therefore run arbitrary commands on the host. This issue has been patched in version 1.83.7.",
+        "title": "BerriAI LiteLLM Command Injection Vulnerability",
+        "vendor": "litellm",
+        "product": "litellm",
+        "attack_type": "Command Injection",
+        "cvss_max": 8.8
+      },
+      "cve": {
+        "id": "CVE-2026-42271",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2026-05-08T04:16:21.820",
+        "lastModified": "2026-06-08T18:16:33.407",
+        "vulnStatus": "Undergoing Analysis",
+        "cisaExploitAdd": "2026-06-08",
+        "cisaActionDue": "2026-06-22",
+        "cisaRequiredAction": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+        "cisaVulnerabilityName": "BerriAI LiteLLM Command Injection Vulnerability",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "LiteLLM is a proxy server (AI Gateway) to call LLM APIs in OpenAI (or native) format. From version 1.74.2 to before version 1.83.7, two endpoints used to preview an MCP server before saving it — POST /mcp-rest/test/connection and POST /mcp-rest/test/tools/list — accepted a full server configuration in the request body, including the command, args, and env fields used by the stdio transport. When called with a stdio configuration, the endpoints attempted to connect, which spawned the supplied command as a subprocess on the proxy host with the privileges of the proxy process. The endpoints were gated only by a valid proxy API key, with no role check. Any authenticated user — including holders of low-privilege internal-user keys — could therefore run arbitrary commands on the host. This issue has been patched in version 1.83.7."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 8.8,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:N/VC:H/VI:H/VA:H/SC:H/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 8.7,
+                "baseSeverity": "HIGH"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-77"
+              },
+              {
+                "lang": "en",
+                "value": "CWE-78"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:litellm:litellm:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "D249DFDB-5D0D-4053-A997-0900F77F9A13",
+                    "versionStartIncluding": "1.74.2",
+                    "versionEndExcluding": "1.83.7"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/BerriAI/litellm/releases/tag/v1.83.7-stable",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Product",
+              "Release Notes"
+            ]
+          },
+          {
+            "url": "https://github.com/BerriAI/litellm/security/advisories/GHSA-v4p8-mg3p-g94g",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Mitigation",
+              "Patch",
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-42271",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ]
+      },
+      "risk_score": 88,
+      "rank": 18
+    },
+    {
+      "cve_id": "CVE-2026-44631",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-06-08",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-06-08",
+        "description": "Buffer Underwrite vulnerability in Apache HTTP Server on crafted regular expressions in the configuration.\n\nThis issue affects Apache HTTP Server: from 2.4.0 through 2.4.67.\n\nUsers are recommended to upgrade to version 2.4.68, which fixes the issue.",
+        "title": "Buffer Underwrite vulnerability in Apache HTTP Server on crafted regular expressions in the configuration.",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2026-44631",
+        "sourceIdentifier": "security@apache.org",
+        "published": "2026-06-08T16:16:40.583",
+        "lastModified": "2026-06-08T23:17:24.763",
+        "vulnStatus": "Received",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Buffer Underwrite vulnerability in Apache HTTP Server on crafted regular expressions in the configuration.\n\nThis issue affects Apache HTTP Server: from 2.4.0 through 2.4.67.\n\nUsers are recommended to upgrade to version 2.4.68, which fixes the issue."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-124"
+              }
+            ],
+            "source": "security@apache.org"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://httpd.apache.org/security/vulnerabilities_24.html",
+            "source": "security@apache.org"
+          },
+          {
+            "url": "http://www.openwall.com/lists/oss-security/2026/06/08/14",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 19
+    },
+    {
+      "cve_id": "CVE-2026-46442",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-06-08",
+          "previous_max": null,
+          "current_max": 9.4
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-06-08",
+        "description": "Flowise is a drag & drop user interface to build a customized large language model flow. Prior to version 3.1.2, POST /api/v1/node-custom-function lacks route-level authorization, allowing any authenticated user or API key to submit arbitrary JavaScript to the Custom JS Function node. When E2B_APIKEY is not configured — the common deployment case — Flowise executes this code inside a NodeVM sandbox. This sandbox can be escaped, allowing an attacker to reach the host process object and execute system commands via child_process. The result is authenticated remote code execution on the Flowise server host. This issue has been patched in version 3.1.2.",
+        "title": "Flowise is a drag & drop user interface to build a customized large language model flow.",
+        "attack_type": "privilege escalation",
+        "cvss_max": 9.4
+      },
+      "cve": {
+        "id": "CVE-2026-46442",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2026-06-08T16:16:41.347",
+        "lastModified": "2026-06-08T16:16:41.347",
+        "vulnStatus": "Received",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Flowise is a drag & drop user interface to build a customized large language model flow. Prior to version 3.1.2, POST /api/v1/node-custom-function lacks route-level authorization, allowing any authenticated user or API key to submit arbitrary JavaScript to the Custom JS Function node. When E2B_APIKEY is not configured — the common deployment case — Flowise executes this code inside a NodeVM sandbox. This sandbox can be escaped, allowing an attacker to reach the host process object and execute system commands via child_process. The result is authenticated remote code execution on the Flowise server host. This issue has been patched in version 3.1.2."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.4,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-94"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/FlowiseAI/Flowise/releases/tag/flowise%403.1.2",
+            "source": "security-advisories@github.com"
+          },
+          {
+            "url": "https://github.com/FlowiseAI/Flowise/security/advisories/GHSA-9rvc-vf7m-pgm2",
+            "source": "security-advisories@github.com"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 20
+    },
+    {
+      "cve_id": "CVE-2026-47430",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-06-08",
+          "previous_max": null,
+          "current_max": 9.5
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-06-08",
+        "description": "## Summary\n\nThe iOS implementation of `cordova-plugin-inappbrowser` passes the `id` field from a `WKScriptMessage` body to `commandDelegate sendPluginResult:callbackId:` with no format validation (`CDVWKInAppBrowser.m:560–574`). Any web content loaded inside the InAppBrowser can fire any pending Cordova callback in the host app by posting a message whose `id` field is a guessable or enumerated callback identifier. An attack abusing this weakness must be tailored to the specific plugins and callback IDs the host app uses. Though an attacker with knowledge of common Cordova plugin configurations could craft reusable payloads targeting widely-adopted plugins.\n\n\n## Impact\n\nAn unauthenticated remote attacker who controls content displayed in the InAppBrowser — via a URL the app opens (OAuth redirect, marketing link, deep-link target) or a network interception — can call `window.webkit.messageHandlers.cordova_iab.postMessage({id: '<victim-callback-id>', d: '...'})` to fire callbacks belonging to any other installed Cordova plugin (Camera, Contacts, File, Geolocation). Cordova callback IDs follow the predictable format `<PluginName><sequential-integer>`, making enumeration feasible. Successful exploitation allows the attacker to spoof plugin results across trust boundaries — for example, injecting a forged camera approval, a fabricated contacts list, or a crafted file-read response.\n\nThis issue affects Cordova Plugin InAppBrowser: from 3.1.0 through 6.0.0.\n\nUsers are recommended to upgrade to version 6.0.1, which fixes the issue.",
+        "title": "## Summary The iOS implementation of `cordova-plugin-inappbrowser` passes the `id` field from a `WKScriptMessage` body to `commandDelegat...",
+        "cvss_max": 9.5
+      },
+      "cve": {
+        "id": "CVE-2026-47430",
+        "sourceIdentifier": "security@apache.org",
+        "published": "2026-06-08T12:16:32.193",
+        "lastModified": "2026-06-08T14:57:49.490",
+        "vulnStatus": "Awaiting Analysis",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "## Summary\n\nThe iOS implementation of `cordova-plugin-inappbrowser` passes the `id` field from a `WKScriptMessage` body to `commandDelegate sendPluginResult:callbackId:` with no format validation (`CDVWKInAppBrowser.m:560–574`). Any web content loaded inside the InAppBrowser can fire any pending Cordova callback in the host app by posting a message whose `id` field is a guessable or enumerated callback identifier. An attack abusing this weakness must be tailored to the specific plugins and callback IDs the host app uses. Though an attacker with knowledge of common Cordova plugin configurations could craft reusable payloads targeting widely-adopted plugins.\n\n\n## Impact\n\nAn unauthenticated remote attacker who controls content displayed in the InAppBrowser — via a URL the app opens (OAuth redirect, marketing link, deep-link target) or a network interception — can call `window.webkit.messageHandlers.cordova_iab.postMessage({id: '<victim-callback-id>', d: '...'})` to fire callbacks belonging to any other installed Cordova plugin (Camera, Contacts, File, Geolocation). Cordova callback IDs follow the predictable format `<PluginName><sequential-integer>`, making enumeration feasible. Successful exploitation allows the attacker to spoof plugin results across trust boundaries — for example, injecting a forged camera approval, a fabricated contacts list, or a crafted file-read response.\n\nThis issue affects Cordova Plugin InAppBrowser: from 3.1.0 through 6.0.0.\n\nUsers are recommended to upgrade to version 6.0.1, which fixes the issue."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:H/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.5,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security@apache.org",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-20"
+              }
+            ],
+            "source": "security@apache.org"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://lists.apache.org/thread/sb539nss3b0545wnyt1pbh7zgwjvz2qq",
+            "source": "security@apache.org"
+          },
+          {
+            "url": "http://www.openwall.com/lists/oss-security/2026/06/07/1",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 21
+    },
+    {
+      "cve_id": "CVE-2026-52778",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-06-08",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-06-08",
+        "description": "YesWiki is a wiki system written in PHP. Prior to version 4.6.6, an unsafe execution vulnerability exists in the Bazar form field calculator (CalcField.php) of YesWiki. The application attempts to sanitize user-defined mathematical formulas using a complex recursive regular expression before passing them to the PHP eval() function. This implementation is inherently flawed: it is vulnerable to Regular Expression Denial of Service (ReDoS / Stack Overflow) which can crash the server, and it creates a high-risk architecture where any logic bypass directly results in arbitrary PHP code execution. Version 4.6.6 patches the issue.",
+        "title": "YesWiki is a wiki system written in PHP.",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2026-52778",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2026-06-08T19:16:46.683",
+        "lastModified": "2026-06-08T19:16:46.683",
+        "vulnStatus": "Received",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "YesWiki is a wiki system written in PHP. Prior to version 4.6.6, an unsafe execution vulnerability exists in the Bazar form field calculator (CalcField.php) of YesWiki. The application attempts to sanitize user-defined mathematical formulas using a complex recursive regular expression before passing them to the PHP eval() function. This implementation is inherently flawed: it is vulnerable to Regular Expression Denial of Service (ReDoS / Stack Overflow) which can crash the server, and it creates a high-risk architecture where any logic bypass directly results in arbitrary PHP code execution. Version 4.6.6 patches the issue."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-94"
+              },
+              {
+                "lang": "en",
+                "value": "CWE-1333"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/YesWiki/yeswiki/commit/dd2bd8fb099de0d21504bda8a810693b3fcb8e52",
+            "source": "security-advisories@github.com"
+          },
+          {
+            "url": "https://github.com/YesWiki/yeswiki/releases/tag/v4.6.6",
+            "source": "security-advisories@github.com"
+          },
+          {
+            "url": "https://github.com/YesWiki/yeswiki/security/advisories/GHSA-px5m-h76g-p7p8",
+            "source": "security-advisories@github.com"
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 22
+    }
+  ],
+  "source": "https://www.cvelogic.com/threat-intelligence/2026-06-08"
+}
