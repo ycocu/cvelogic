@@ -1,0 +1,873 @@
+{
+  "schema_version": "2.2",
+  "generated_at": "2026-06-21T09:42:47Z",
+  "day": "2026-06-19",
+  "window": {
+    "utc_start": "2026-06-19",
+    "utc_end": "2026-06-19",
+    "days": 1,
+    "calendar": "America/New_York"
+  },
+  "summary": {
+    "brief": "10 new critical disclosures — review patch status on exposed services.",
+    "bullets": [
+      "10 new critical disclosures — review patch status on exposed services."
+    ],
+    "counts": {
+      "cves": 10,
+      "kev": 0,
+      "exploit": 0,
+      "epss": 0,
+      "cvss": 10,
+      "patch": 0
+    }
+  },
+  "cves": [
+    {
+      "cve_id": "CVE-2026-45480",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-06-19",
+          "previous_max": null,
+          "current_max": 10.0
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-06-19",
+        "last_modified": "2026-06-19",
+        "description": "Improper authentication in Azure Active Directory allows an unauthorized attacker to elevate privileges over a network.",
+        "title": "Improper authentication in Azure Active Directory allows an unauthorized attacker to elevate privileges over a network.",
+        "attack_type": "privilege escalation",
+        "cvss_max": 10.0
+      },
+      "cve": {
+        "id": "CVE-2026-45480",
+        "sourceIdentifier": "secure@microsoft.com",
+        "published": "2026-06-19T21:16:51.970",
+        "lastModified": "2026-06-19T21:16:51.970",
+        "vulnStatus": "Received",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Improper authentication in Azure Active Directory allows an unauthorized attacker to elevate privileges over a network."
+          }
+        ],
+        "cveTags": [
+          {
+            "sourceIdentifier": "secure@microsoft.com",
+            "tags": [
+              "exclusively-hosted-service"
+            ]
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+                "baseScore": 10.0,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "secure@microsoft.com",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 6.0
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-287"
+              }
+            ],
+            "source": "secure@microsoft.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-45480",
+            "source": "secure@microsoft.com"
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 1
+    },
+    {
+      "cve_id": "CVE-2026-48772",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-06-19",
+          "previous_max": null,
+          "current_max": 10.0
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-06-19",
+        "last_modified": "2026-06-19",
+        "description": "ProxySQL is a proxy for MySQL and its forks, as well as PostgreSQL. In versions 2.0.0 through 3.0.8, the ProxySQL MySQL frontend accepts the `PROXY UNKNOWN <addr> <addr> <port> <port>\\r\\n` PP1 frame as a well-formed PROXY protocol header. The HAProxy PROXY protocol v1 specification says that when the protocol token is `UNKNOWN`, the receiver MUST ignore any address fields that follow it, because the proxy has declared it cannot determine the client identity. ProxySQL parses those address fields anyway via `sscanf` and writes the spoofed source address into the session's `addr.addr` field. From there it flows directly into the query-rule matcher, where the `client_addr` predicate decides routing and ACL. When `mysql-proxy_protocol_networks = '*'` (the default), any TCP peer can send a PP1 frame and choose any source IP claim. With that, any `mysql_query_rules` row pinned to a `client_addr` value is forgeable: the attacker writes the address they want to match into the PP1 line, and ProxySQL routes their query as if it came from that address. In practice this is a routing and ACL bypass. Real deployments use `client_addr` for read-write splitting (internal apps go to the primary, public traffic to read replicas), per-app schema pinning, and query-filter rules (DDL allowed only from admin CIDR, public queries blocked from dangerous patterns). An attacker that can reach the frontend port can forge their way into any of those routes. Version 3.0.9 patches this issue.",
+        "title": "ProxySQL is a proxy for MySQL and its forks, as well as PostgreSQL.",
+        "cvss_max": 10.0
+      },
+      "cve": {
+        "id": "CVE-2026-48772",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2026-06-19T20:16:17.803",
+        "lastModified": "2026-06-19T20:16:17.803",
+        "vulnStatus": "Received",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "ProxySQL is a proxy for MySQL and its forks, as well as PostgreSQL. In versions 2.0.0 through 3.0.8, the ProxySQL MySQL frontend accepts the `PROXY UNKNOWN <addr> <addr> <port> <port>\\r\\n` PP1 frame as a well-formed PROXY protocol header. The HAProxy PROXY protocol v1 specification says that when the protocol token is `UNKNOWN`, the receiver MUST ignore any address fields that follow it, because the proxy has declared it cannot determine the client identity. ProxySQL parses those address fields anyway via `sscanf` and writes the spoofed source address into the session's `addr.addr` field. From there it flows directly into the query-rule matcher, where the `client_addr` predicate decides routing and ACL. When `mysql-proxy_protocol_networks = '*'` (the default), any TCP peer can send a PP1 frame and choose any source IP claim. With that, any `mysql_query_rules` row pinned to a `client_addr` value is forgeable: the attacker writes the address they want to match into the PP1 line, and ProxySQL routes their query as if it came from that address. In practice this is a routing and ACL bypass. Real deployments use `client_addr` for read-write splitting (internal apps go to the primary, public traffic to read replicas), per-app schema pinning, and query-filter rules (DDL allowed only from admin CIDR, public queries blocked from dangerous patterns). An attacker that can reach the frontend port can forge their way into any of those routes. Version 3.0.9 patches this issue."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:N",
+                "baseScore": 10.0,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.8
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-348"
+              },
+              {
+                "lang": "en",
+                "value": "CWE-863"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/sysown/proxysql/releases/tag/v3.0.9",
+            "source": "security-advisories@github.com"
+          },
+          {
+            "url": "https://github.com/sysown/proxysql/security/advisories/GHSA-gw94-85m2-x8v2",
+            "source": "security-advisories@github.com"
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 2
+    },
+    {
+      "cve_id": "CVE-2026-48584",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-06-19",
+          "previous_max": null,
+          "current_max": 9.9
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-06-19",
+        "last_modified": "2026-06-19",
+        "description": "Execution with unnecessary privileges in Azure Synapse allows an authorized attacker to elevate privileges over a network.",
+        "title": "Execution with unnecessary privileges in Azure Synapse allows an authorized attacker to elevate privileges over a network.",
+        "attack_type": "privilege escalation",
+        "cvss_max": 9.9
+      },
+      "cve": {
+        "id": "CVE-2026-48584",
+        "sourceIdentifier": "secure@microsoft.com",
+        "published": "2026-06-19T21:17:01.060",
+        "lastModified": "2026-06-19T21:17:01.060",
+        "vulnStatus": "Received",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Execution with unnecessary privileges in Azure Synapse allows an authorized attacker to elevate privileges over a network."
+          }
+        ],
+        "cveTags": [
+          {
+            "sourceIdentifier": "secure@microsoft.com",
+            "tags": [
+              "exclusively-hosted-service"
+            ]
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+                "baseScore": 9.9,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "secure@microsoft.com",
+              "type": "Primary",
+              "exploitabilityScore": 3.1,
+              "impactScore": 6.0
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-250"
+              }
+            ],
+            "source": "secure@microsoft.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-48584",
+            "source": "secure@microsoft.com"
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 3
+    },
+    {
+      "cve_id": "CVE-2026-11551",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-06-19",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-06-19",
+        "last_modified": "2026-06-19",
+        "description": "The Branda plugin for WordPress is vulnerable to privilege escalation via account takeover in all versions up to, and including, 3.4.29. This is due to the plugin not properly validating a user's identity prior to updating their password. This makes it possible for unauthenticated attackers to change arbitrary user's passwords, including administrators, and leverage that to gain access to their account.",
+        "title": "The Branda plugin for WordPress is vulnerable to privilege escalation via account takeover in all versions up to, and including, 3.4.29.",
+        "attack_type": "Privilege Escalation",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2026-11551",
+        "sourceIdentifier": "security@wordfence.com",
+        "published": "2026-06-20T00:16:15.580",
+        "lastModified": "2026-06-20T00:16:15.580",
+        "vulnStatus": "Received",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The Branda plugin for WordPress is vulnerable to privilege escalation via account takeover in all versions up to, and including, 3.4.29. This is due to the plugin not properly validating a user's identity prior to updating their password. This makes it possible for unauthenticated attackers to change arbitrary user's passwords, including administrators, and leverage that to gain access to their account."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security@wordfence.com",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-640"
+              }
+            ],
+            "source": "security@wordfence.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://plugins.trac.wordpress.org/browser/branda-white-labeling/tags/3.4.29/inc/modules/login-screen/signup-password.php#L232",
+            "source": "security@wordfence.com"
+          },
+          {
+            "url": "https://plugins.trac.wordpress.org/changeset/3568291/branda-white-labeling/trunk/inc/modules/login-screen/signup-password.php",
+            "source": "security@wordfence.com"
+          },
+          {
+            "url": "https://www.wordfence.com/threat-intel/vulnerabilities/id/56f13af3-71b6-42d4-9fda-a75778f32091?source=cve",
+            "source": "security@wordfence.com"
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 4
+    },
+    {
+      "cve_id": "CVE-2026-48137",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-06-19",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-06-19",
+        "last_modified": "2026-06-19",
+        "description": "There is an untrusted pointer dereference vulnerability in the NI grpc-device sideband streaming API that may allow an attacker to cause an arbitrary memory dereference, potentially resulting in remote code execution.  Successful exploitation requires an attacker  to supply a specially crafted Moniker protobuf message.  This affects NI grpc-device 2.17.0 and prior versions.",
+        "title": "There is an untrusted pointer dereference vulnerability in the NI grpc-device sideband streaming API that may allow an attacker to cause...",
+        "attack_type": "RCE",
+        "cvss_max": 9.3
+      },
+      "cve": {
+        "id": "CVE-2026-48137",
+        "sourceIdentifier": "security@ni.com",
+        "published": "2026-06-19T14:16:22.680",
+        "lastModified": "2026-06-19T14:16:22.680",
+        "vulnStatus": "Received",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "There is an untrusted pointer dereference vulnerability in the NI grpc-device sideband streaming API that may allow an attacker to cause an arbitrary memory dereference, potentially resulting in remote code execution.  Successful exploitation requires an attacker  to supply a specially crafted Moniker protobuf message.  This affects NI grpc-device 2.17.0 and prior versions."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+                "baseScore": 9.1,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security@ni.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.2
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security@ni.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-822"
+              }
+            ],
+            "source": "security@ni.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/ni/grpc-device/security/advisories/GHSA-ww59-ghm9-mm63",
+            "source": "security@ni.com"
+          },
+          {
+            "url": "https://www.ni.com/en/support/security/available-critical-and-security-updates-for-ni-software/2026/multiple-vulnerabilities-in-ni-grpc-device-server.html",
+            "source": "security@ni.com"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 5
+    },
+    {
+      "cve_id": "CVE-2026-48582",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-06-19",
+          "previous_max": null,
+          "current_max": 9.6
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-06-19",
+        "last_modified": "2026-06-19",
+        "description": "Missing authorization in Microsoft Exchange Online allows an authorized attacker to elevate privileges over a network.",
+        "title": "Missing authorization in Microsoft Exchange Online allows an authorized attacker to elevate privileges over a network.",
+        "attack_type": "privilege escalation",
+        "cvss_max": 9.6
+      },
+      "cve": {
+        "id": "CVE-2026-48582",
+        "sourceIdentifier": "secure@microsoft.com",
+        "published": "2026-06-19T21:17:00.787",
+        "lastModified": "2026-06-19T21:17:00.787",
+        "vulnStatus": "Received",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Missing authorization in Microsoft Exchange Online allows an authorized attacker to elevate privileges over a network."
+          }
+        ],
+        "cveTags": [
+          {
+            "sourceIdentifier": "secure@microsoft.com",
+            "tags": [
+              "exclusively-hosted-service"
+            ]
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:N",
+                "baseScore": 9.6,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "secure@microsoft.com",
+              "type": "Primary",
+              "exploitabilityScore": 3.1,
+              "impactScore": 5.8
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-862"
+              }
+            ],
+            "source": "secure@microsoft.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-48582",
+            "source": "secure@microsoft.com"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 6
+    },
+    {
+      "cve_id": "CVE-2026-48773",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-06-19",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-06-19",
+        "last_modified": "2026-06-19",
+        "description": "ProxySQL is a proxy for MySQL and its forks, as well as PostgreSQL. Versions 2.0.18 through 3.0.8 have a pre-authentication heap memory corruption vulnerability in the MySQL and PostgreSQL protocol first-read paths. A remote unauthenticated client can declare an oversized first packet length, and ProxySQL passes that attacker-controlled length directly to `recv()` while writing into a fixed 32 KB input queue. Version 3.0.9 patches the issue.",
+        "title": "ProxySQL is a proxy for MySQL and its forks, as well as PostgreSQL.",
+        "attack_type": "Memory Corruption",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2026-48773",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2026-06-19T20:16:17.947",
+        "lastModified": "2026-06-19T20:16:17.947",
+        "vulnStatus": "Received",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "ProxySQL is a proxy for MySQL and its forks, as well as PostgreSQL. Versions 2.0.18 through 3.0.8 have a pre-authentication heap memory corruption vulnerability in the MySQL and PostgreSQL protocol first-read paths. A remote unauthenticated client can declare an oversized first packet length, and ProxySQL passes that attacker-controlled length directly to `recv()` while writing into a fixed 32 KB input queue. Version 3.0.9 patches the issue."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-787"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/sysown/proxysql/releases/tag/v3.0.9",
+            "source": "security-advisories@github.com"
+          },
+          {
+            "url": "https://github.com/sysown/proxysql/security/advisories/GHSA-58ww-865x-grpr",
+            "source": "security-advisories@github.com"
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 7
+    },
+    {
+      "cve_id": "CVE-2026-56073",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-06-19",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-06-19",
+        "last_modified": "2026-06-19",
+        "description": "Cap-go before 12.128.2 contains an authentication bypass vulnerability in OTP verification that allows attackers to bypass email verification by modifying server responses. Attackers can intercept OTP verification requests and manipulate HTTP responses to falsely mark verification successful, enabling unauthorized 2FA enablement and account takeover.",
+        "title": "Cap-go before 12.128.2 contains an authentication bypass vulnerability in OTP verification that allows attackers to bypass email verifica...",
+        "attack_type": "Auth Bypass",
+        "cvss_max": 9.4
+      },
+      "cve": {
+        "id": "CVE-2026-56073",
+        "sourceIdentifier": "disclosure@vulncheck.com",
+        "published": "2026-06-19T22:16:17.623",
+        "lastModified": "2026-06-19T22:16:17.623",
+        "vulnStatus": "Received",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Cap-go before 12.128.2 contains an authentication bypass vulnerability in OTP verification that allows attackers to bypass email verification by modifying server responses. Attackers can intercept OTP verification requests and manipulate HTTP responses to falsely mark verification successful, enabling unauthorized 2FA enablement and account takeover."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:L",
+                "baseScore": 9.4,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.5
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-345"
+              }
+            ],
+            "source": "disclosure@vulncheck.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/Cap-go/capgo/security/advisories/GHSA-x2gq-85v8-j9v4",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://www.vulncheck.com/advisories/cap-go-otp-bypass-via-response-manipulation-in-email-verification",
+            "source": "disclosure@vulncheck.com"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 8
+    },
+    {
+      "cve_id": "CVE-2026-56081",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-06-19",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-06-19",
+        "last_modified": "2026-06-19",
+        "description": "Cap-go before 12.128.2 contains an authentication logic flaw that lets an attacker register and control an account bound to a victim's email address before that email is verified. By enabling two-factor authentication on the pre-registered account, the attacker gains control over the account claimed under the victim's identity, allowing them to read and modify its state and enforce organization-level policies, while the legitimate user is denied access to the account tied to their own email.",
+        "title": "Cap-go before 12.128.2 contains an authentication logic flaw that lets an attacker register and control an account bound to a victim's em...",
+        "cvss_max": 9.3
+      },
+      "cve": {
+        "id": "CVE-2026-56081",
+        "sourceIdentifier": "disclosure@vulncheck.com",
+        "published": "2026-06-19T22:16:18.017",
+        "lastModified": "2026-06-19T22:16:18.017",
+        "vulnStatus": "Received",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Cap-go before 12.128.2 contains an authentication logic flaw that lets an attacker register and control an account bound to a victim's email address before that email is verified. By enabling two-factor authentication on the pre-registered account, the attacker gains control over the account claimed under the victim's identity, allowing them to read and modify its state and enforce organization-level policies, while the legitimate user is denied access to the account tied to their own email."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+                "baseScore": 9.1,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.2
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-640"
+              }
+            ],
+            "source": "disclosure@vulncheck.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/Cap-go/capgo/security/advisories/GHSA-j4cx-5pw6-5v5j",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://www.vulncheck.com/advisories/cap-go-account-lockout-via-2fa-misconfiguration-on-unverified-email",
+            "source": "disclosure@vulncheck.com"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 9
+    },
+    {
+      "cve_id": "CVE-2026-9142",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-06-19",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-06-19",
+        "last_modified": "2026-06-19",
+        "description": "There is an insecure default credentials vulnerability in NI grpc-device when TLS configuration is not present and the server is bound beyond loopback.  This may allow an unauthenticated user access to the server on the local network.  This affects NI grpc-device 2.17.0 and prior versions.",
+        "title": "There is an insecure default credentials vulnerability in NI grpc-device when TLS configuration is not present and the server is bound be...",
+        "cvss_max": 9.3
+      },
+      "cve": {
+        "id": "CVE-2026-9142",
+        "sourceIdentifier": "security@ni.com",
+        "published": "2026-06-19T14:16:24.423",
+        "lastModified": "2026-06-19T14:16:24.423",
+        "vulnStatus": "Received",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "There is an insecure default credentials vulnerability in NI grpc-device when TLS configuration is not present and the server is bound beyond loopback.  This may allow an unauthenticated user access to the server on the local network.  This affects NI grpc-device 2.17.0 and prior versions."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+                "baseScore": 9.1,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security@ni.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.2
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security@ni.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-306"
+              }
+            ],
+            "source": "security@ni.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/ni/grpc-device/security/advisories/GHSA-fhhw-37q8-6562",
+            "source": "security@ni.com"
+          },
+          {
+            "url": "https://www.ni.com/en/support/security/available-critical-and-security-updates-for-ni-software/2026/multiple-vulnerabilities-in-ni-grpc-device-server.html",
+            "source": "security@ni.com"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 10
+    }
+  ],
+  "source": "https://www.cvelogic.com/threat-intelligence/2026-06-19"
+}

@@ -1,0 +1,4273 @@
+{
+  "schema_version": "2.2",
+  "generated_at": "2026-06-21T09:42:45Z",
+  "day": "2026-06-15",
+  "window": {
+    "utc_start": "2026-06-15",
+    "utc_end": "2026-06-15",
+    "days": 1,
+    "calendar": "America/New_York"
+  },
+  "summary": {
+    "brief": "Cisco Catalyst SD-WAN Manager added to CISA KEV — confirmed in-the-wild exploitation. · Ivanti Endpoint Manager — exploitation likelihood rose sharply (EPSS 2.4% → 100% · rising (+97%)). · 10 new critical disclosures — review patch status on exposed services.",
+    "bullets": [
+      "Cisco Catalyst SD-WAN Manager added to CISA KEV — confirmed in-the-wild exploitation.",
+      "Ivanti Endpoint Manager — exploitation likelihood rose sharply (EPSS 2.4% → 100% · rising (+97%)).",
+      "10 new critical disclosures — review patch status on exposed services."
+    ],
+    "counts": {
+      "cves": 22,
+      "kev": 2,
+      "exploit": 0,
+      "epss": 10,
+      "cvss": 10,
+      "patch": 0
+    }
+  },
+  "cves": [
+    {
+      "cve_id": "CVE-2026-20262",
+      "signal_types": [
+        "KEV"
+      ],
+      "signals": {
+        "kev": {
+          "date_added": "2026-06-15"
+        },
+        "exploit": null,
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-06-15",
+        "last_modified": "2026-06-17",
+        "description": "A vulnerability in the web UI of Cisco Catalyst SD-WAN Manager, formerly SD-WAN vManage, could allow an authenticated, remote attacker to create a file or overwrite any file on the filesystem of an affected system.\r\n\r\nThis vulnerability exists because the affected software does not properly validate user-supplied input during a file upload process. An attacker could exploit this vulnerability by sending a crafted HTTP request to an affected API endpoint of the affected system. A successful exploit could allow the attacker to create or overwrite any file on the underlying operating system. This file could later be used to elevate to root. To exploit this vulnerability, the attacker must have valid credentials with at least a lower-privileged, single-task user account.",
+        "title": "Cisco Catalyst SD-WAN Manager Directory or Path Traversal Vulnerability",
+        "vendor": "cisco",
+        "product": "catalyst_sd-wan_manager",
+        "attack_type": "Path Traversal",
+        "cvss_max": 6.5
+      },
+      "cve": {
+        "id": "CVE-2026-20262",
+        "sourceIdentifier": "psirt@cisco.com",
+        "published": "2026-06-15T18:16:34.820",
+        "lastModified": "2026-06-17T13:20:04.900",
+        "vulnStatus": "Analyzed",
+        "cisaExploitAdd": "2026-06-15",
+        "cisaActionDue": "2026-06-29",
+        "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+        "cisaVulnerabilityName": "Cisco Catalyst SD-WAN Manager Directory or Path Traversal Vulnerability",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A vulnerability in the web UI of Cisco Catalyst SD-WAN Manager, formerly SD-WAN vManage, could allow an authenticated, remote attacker to create a file or overwrite any file on the filesystem of an affected system.\r\n\r\nThis vulnerability exists because the affected software does not properly validate user-supplied input during a file upload process. An attacker could exploit this vulnerability by sending a crafted HTTP request to an affected API endpoint of the affected system. A successful exploit could allow the attacker to create or overwrite any file on the underlying operating system. This file could later be used to elevate to root. To exploit this vulnerability, the attacker must have valid credentials with at least a lower-privileged, single-task user account."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N",
+                "baseScore": 6.5,
+                "baseSeverity": "MEDIUM"
+              },
+              "source": "psirt@cisco.com",
+              "type": "Secondary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 3.6
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-22"
+              }
+            ],
+            "source": "psirt@cisco.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:catalyst_sd-wan_manager:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "FF1A1919-D28E-4742-BB03-D3F215A0274D",
+                    "versionEndExcluding": "20.9.9.2"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:catalyst_sd-wan_manager:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "07958878-5A93-4EE9-91C8-C8271A40CF09",
+                    "versionStartIncluding": "20.10",
+                    "versionEndExcluding": "20.12.7.2"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:catalyst_sd-wan_manager:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "8834BCEE-821C-4ADD-903E-F285D862F8A0",
+                    "versionStartIncluding": "20.13",
+                    "versionEndExcluding": "20.15.4.5"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:catalyst_sd-wan_manager:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "931728D6-C3F9-4305-84A5-F3910B4D0A24",
+                    "versionStartIncluding": "20.15.5",
+                    "versionEndExcluding": "20.15.5.3"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:catalyst_sd-wan_manager:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "65C69D4B-69CF-4001-82EB-10B12BF4A5EB",
+                    "versionStartIncluding": "20.16",
+                    "versionEndExcluding": "20.18.3.1"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:catalyst_sd-wan_manager:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "5BB1F997-DD81-45C8-B9FE-208A06259D72",
+                    "versionStartIncluding": "26.1",
+                    "versionEndExcluding": "26.1.1.2"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-sdwan-arbfw-c2rZvQ",
+            "source": "psirt@cisco.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-20262",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "US Government Resource"
+            ]
+          }
+        ]
+      },
+      "risk_score": 88,
+      "rank": 1
+    },
+    {
+      "cve_id": "CVE-2024-29823",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 0.02383,
+            "score_date": "2026-02-24"
+          },
+          "current": {
+            "score": 0.99877,
+            "score_date": "2026-06-15"
+          },
+          "delta": 0.97494
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2024-05-31",
+        "last_modified": "2026-06-17",
+        "description": "An unspecified SQL Injection vulnerability in Core server of Ivanti EPM 2022 SU5 and prior allows an unauthenticated attacker within the same network to execute arbitrary code.",
+        "title": "ivanti endpoint_manager SQL Injection",
+        "vendor": "ivanti",
+        "product": "endpoint_manager",
+        "attack_type": "SQL Injection",
+        "cvss_max": 9.6
+      },
+      "cve": {
+        "id": "CVE-2024-29823",
+        "sourceIdentifier": "support@hackerone.com",
+        "published": "2024-05-31T18:15:11.017",
+        "lastModified": "2026-06-17T07:23:11.217",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "An unspecified SQL Injection vulnerability in Core server of Ivanti EPM 2022 SU5 and prior allows an unauthenticated attacker within the same network to execute arbitrary code."
+          },
+          {
+            "lang": "es",
+            "value": "Una vulnerabilidad de inyección SQL no especificada en el servidor central de Ivanti EPM 2022 SU5 y anteriores permite que un atacante no autenticado dentro de la misma red ejecute código arbitrario."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV30": [
+            {
+              "cvssData": {
+                "version": "3.0",
+                "vectorString": "CVSS:3.0/AV:A/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+                "baseScore": 9.6,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "support@hackerone.com",
+              "type": "Secondary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 6.0
+            }
+          ],
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 8.8,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-89"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          },
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-89"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:ivanti:endpoint_manager:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "B1F6549B-CF5D-4607-B67D-5489905A1705",
+                    "versionEndExcluding": "2022"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:ivanti:endpoint_manager:2022:-:*:*:*:*:*:*",
+                    "matchCriteriaId": "46580865-5177-4E55-BDAC-73DA4B472B35"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:ivanti:endpoint_manager:2022:su1:*:*:*:*:*:*",
+                    "matchCriteriaId": "E57E12B5-B789-450C-9476-6C4C151E6993"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:ivanti:endpoint_manager:2022:su2:*:*:*:*:*:*",
+                    "matchCriteriaId": "E47C65B3-56DD-4D65-8B4B-6AFFE28E94F2"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:ivanti:endpoint_manager:2022:su3:*:*:*:*:*:*",
+                    "matchCriteriaId": "10D6EAB7-B14B-45E9-92B9-4FADFBBB08AF"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:ivanti:endpoint_manager:2022:su4:*:*:*:*:*:*",
+                    "matchCriteriaId": "1877FB55-76BA-4714-ABB8-47258132F537"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:ivanti:endpoint_manager:2022:su5:*:*:*:*:*:*",
+                    "matchCriteriaId": "4F9E8D45-5F12-4D45-A74E-C314FA3618A3"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://forums.ivanti.com/s/article/Security-Advisory-May-2024",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 84,
+      "rank": 2
+    },
+    {
+      "cve_id": "CVE-2026-49781",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-06-15",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-06-15",
+        "last_modified": "2026-06-17",
+        "description": "Unauthenticated PHP Object Injection in OttoKit <= 1.1.27 versions.",
+        "title": "Unauthenticated PHP Object Injection in OttoKit <= 1.1.27 versions.",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2026-49781",
+        "sourceIdentifier": "audit@patchstack.com",
+        "published": "2026-06-15T21:17:22.640",
+        "lastModified": "2026-06-17T10:55:46.243",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Unauthenticated PHP Object Injection in OttoKit <= 1.1.27 versions."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "audit@patchstack.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-502"
+              }
+            ],
+            "source": "audit@patchstack.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://patchstack.com/database/wordpress/plugin/suretriggers/vulnerability/wordpress-ottokit-plugin-1-1-27-php-object-injection-vulnerability?_s_id=cve",
+            "source": "audit@patchstack.com"
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 3
+    },
+    {
+      "cve_id": "CVE-2012-1422",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 0.00202,
+            "score_date": "2025-06-03"
+          },
+          "current": {
+            "score": 0.94176,
+            "score_date": "2026-06-15"
+          },
+          "delta": 0.93974
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2012-03-21",
+        "last_modified": "2026-06-16",
+        "description": "The TAR file parser in Quick Heal (aka Cat QuickHeal) 11.00, NOD32 Antivirus 5795, Norman Antivirus 6.06.12, and Rising Antivirus 22.83.00.03 allows remote attackers to bypass malware detection via a POSIX TAR file with an initial ITSF character sequence.  NOTE: this may later be SPLIT into multiple CVEs if additional information is published showing that the error occurred independently in different TAR parser implementations.",
+        "title": "cat nod32_antivirus",
+        "vendor": "cat",
+        "product": "quick_heal",
+        "cvss_max": 4.3
+      },
+      "cve": {
+        "id": "CVE-2012-1422",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2012-03-21T10:11:47.253",
+        "lastModified": "2026-06-16T23:39:29.980",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The TAR file parser in Quick Heal (aka Cat QuickHeal) 11.00, NOD32 Antivirus 5795, Norman Antivirus 6.06.12, and Rising Antivirus 22.83.00.03 allows remote attackers to bypass malware detection via a POSIX TAR file with an initial ITSF character sequence.  NOTE: this may later be SPLIT into multiple CVEs if additional information is published showing that the error occurred independently in different TAR parser implementations."
+          },
+          {
+            "lang": "es",
+            "value": "El analizador de archivos TAR en Quick Heal (también conocido como Cat QuickHeal) 11.00, NOD32 Antivirus 5795, Norman Antivirus 6.6.12, y Rising Antivirus 22.83.00.03 permite a atacantes remotos evitar la detección de malware a través de un archivo TAR POSIX con una secuencia de carácter inicial ITSF. NOTA: esto más adelante se puede dividir en varios CVEs si la información adicional que se publica muestra que el error se produjo de forma independiente en diferentes implementaciones del analizador TAR."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV2": [
+            {
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:M/Au:N/C:N/I:P/A:N",
+                "baseScore": 4.3,
+                "baseSeverity": "MEDIUM"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "baseSeverity": "MEDIUM",
+              "exploitabilityScore": 8.6,
+              "impactScore": 2.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-264"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cat:quick_heal:11.00:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "343D3F40-E028-4AEE-82A4-0A17C1D1ED13"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:eset:nod32_antivirus:5795:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "673B999A-11D2-4AFF-9930-0C06E8BBAA7F"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:norman:norman_antivirus_\\&_antispyware:6.06.12:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "81D01633-1000-425D-9026-59C50734956A"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:rising-global:rising_antivirus:22.83.00.03:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "EF8ADA91-4042-4E1B-9F14-78023F24B137"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "http://osvdb.org/80409",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://www.ieee-security.org/TC/SP2012/program.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://www.securityfocus.com/archive/1/522005",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://www.securityfocus.com/bid/52583",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          }
+        ]
+      },
+      "risk_score": 77,
+      "rank": 4
+    },
+    {
+      "cve_id": "CVE-2012-1430",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 0.00521,
+            "score_date": "2025-06-03"
+          },
+          "current": {
+            "score": 0.96091,
+            "score_date": "2026-06-15"
+          },
+          "delta": 0.9557
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2012-03-21",
+        "last_modified": "2026-06-16",
+        "description": "The ELF file parser in Bitdefender 7.2, Comodo Antivirus 7424, eSafe 7.0.17.0, F-Secure Anti-Virus 9.0.16160.0, McAfee Anti-Virus Scanning Engine 5.400.0.1158, McAfee Gateway (formerly Webwasher) 2010.1C, nProtect Anti-Virus 2011-01-17.01, Sophos Anti-Virus 4.61.0, and Rising Antivirus 22.83.00.03 allows remote attackers to bypass malware detection via an ELF file with a \\19\\04\\00\\10 character sequence at a certain location.  NOTE: this may later be SPLIT into multiple CVEs if additional information is published showing that the error occurred independently in different ELF parser implementations.",
+        "title": "aladdin anti-virus",
+        "vendor": "aladdin",
+        "product": "esafe",
+        "cvss_max": 4.3
+      },
+      "cve": {
+        "id": "CVE-2012-1430",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2012-03-21T10:11:47.583",
+        "lastModified": "2026-06-16T23:39:30.950",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The ELF file parser in Bitdefender 7.2, Comodo Antivirus 7424, eSafe 7.0.17.0, F-Secure Anti-Virus 9.0.16160.0, McAfee Anti-Virus Scanning Engine 5.400.0.1158, McAfee Gateway (formerly Webwasher) 2010.1C, nProtect Anti-Virus 2011-01-17.01, Sophos Anti-Virus 4.61.0, and Rising Antivirus 22.83.00.03 allows remote attackers to bypass malware detection via an ELF file with a \\19\\04\\00\\10 character sequence at a certain location.  NOTE: this may later be SPLIT into multiple CVEs if additional information is published showing that the error occurred independently in different ELF parser implementations."
+          },
+          {
+            "lang": "es",
+            "value": "El analizador de archivos ELF en BitDefender 7.2, Comodo Antivirus 7424, eSafe 7.0.17.0, F-Secure Anti-Virus 9.0.16160.0, McAfee Anti-Virus Scanning Engine 5.400.0.1158, McAfee Gateway (anteriormente Webwasher) 2010.1C, nProtect Anti-Virus 2011-01-17.01, Sophos Anti-Virus 4.61.0, y Rising Antivirus 22.83.00.03 permite a atacantes remotos evitar la detección de malware a través de un archivo ELF con una secuencia de caracteres \\19\\04\\00\\10 en un lugar determinado. NOTA: esto más adelante se puede dividir en varios CVEs si la información adicional que se publica muestra que el error se produjo de forma independiente en diferentes implementaciones del analizador ELF."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV2": [
+            {
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:M/Au:N/C:N/I:P/A:N",
+                "baseScore": 4.3,
+                "baseSeverity": "MEDIUM"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "baseSeverity": "MEDIUM",
+              "exploitabilityScore": 8.6,
+              "impactScore": 2.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-264"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:aladdin:esafe:7.0.17.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "5C6590DF-9164-4A76-ADEE-9110C5E3588E"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:bitdefender:bitdefender:7.2:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "24D7D7FA-20E9-4560-ABC6-154CD918E307"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:comodo:comodo_antivirus:7424:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "803A9A92-A984-43A8-8D27-C9A6FDB19A9D"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:f-secure:anti-virus:9.0.16160.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "8D00BACD-15D1-49B9-B4CA-514AE7EC5500"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:mcafee:gateway:2010.1c:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "18FC30B1-4FB3-4891-93FE-63A93E686EB3"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:mcafee:scan_engine:5.400.0.1158:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "0BCE1228-61BE-4C10-898A-B8BDC5A71156"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nprotect:nprotect_antivirus:2011-01-17.01:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "D386C31F-6114-4A15-B0D5-15686D7EF8B8"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:rising-global:rising_antivirus:22.83.00.03:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "EF8ADA91-4042-4E1B-9F14-78023F24B137"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:sophos:sophos_anti-virus:4.61.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "0912E21E-1EEB-4ADD-958F-F8AEBBF7C5E6"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "http://www.ieee-security.org/TC/SP2012/program.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://www.securityfocus.com/archive/1/522005",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          }
+        ]
+      },
+      "risk_score": 77,
+      "rank": 5
+    },
+    {
+      "cve_id": "CVE-2012-1431",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 0.00521,
+            "score_date": "2025-06-03"
+          },
+          "current": {
+            "score": 0.96091,
+            "score_date": "2026-06-15"
+          },
+          "delta": 0.9557
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2012-03-21",
+        "last_modified": "2026-06-16",
+        "description": "The ELF file parser in Bitdefender 7.2, Command Antivirus 5.2.11.5, Comodo Antivirus 7424, eSafe 7.0.17.0, F-Prot Antivirus 4.6.2.117, F-Secure Anti-Virus 9.0.16160.0, McAfee Gateway (formerly Webwasher) 2010.1C, nProtect Anti-Virus 2011-01-17.01, Sophos Anti-Virus 4.61.0, and Rising Antivirus 22.83.00.03 allows remote attackers to bypass malware detection via an ELF file with a \\4a\\46\\49\\46 character sequence at a certain location.  NOTE: this may later be SPLIT into multiple CVEs if additional information is published showing that the error occurred independently in different ELF parser implementations.",
+        "title": "aladdin bitdefender",
+        "vendor": "aladdin",
+        "product": "esafe",
+        "cvss_max": 4.3
+      },
+      "cve": {
+        "id": "CVE-2012-1431",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2012-03-21T10:11:47.630",
+        "lastModified": "2026-06-16T23:39:31.060",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The ELF file parser in Bitdefender 7.2, Command Antivirus 5.2.11.5, Comodo Antivirus 7424, eSafe 7.0.17.0, F-Prot Antivirus 4.6.2.117, F-Secure Anti-Virus 9.0.16160.0, McAfee Gateway (formerly Webwasher) 2010.1C, nProtect Anti-Virus 2011-01-17.01, Sophos Anti-Virus 4.61.0, and Rising Antivirus 22.83.00.03 allows remote attackers to bypass malware detection via an ELF file with a \\4a\\46\\49\\46 character sequence at a certain location.  NOTE: this may later be SPLIT into multiple CVEs if additional information is published showing that the error occurred independently in different ELF parser implementations."
+          },
+          {
+            "lang": "es",
+            "value": "El analizador de archivos ELF en BitDefender 7.2, Command Antivirus 5.2.11.5, Comodo Antivirus 7424, eSafe 7.0.17.0, F-Prot Antivirus 4.6.2.117, F-Secure Anti-Virus 9.0.16160.0, McAfee Gateway (anteriormente Webwasher) 2010.1C, nProtect anti-Virus 2011-01-17.01, Sophos Anti-Virus 4.61.0, y Rising Antivirus 22.83.00.03 permite a atacantes remotos evitar la detección de malware a través de un archivo ELF con una secuencia de caracteres \\ 4a \\ 46 \\ 49 \\ 46 en una determinada ubicación. NOTA: esto más adelante se puede dividir en varios CVEs si la información adicional que se publica muestra que el error se produjo de forma independiente en diferentes implementaciones del analizador ELF."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV2": [
+            {
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:M/Au:N/C:N/I:P/A:N",
+                "baseScore": 4.3,
+                "baseSeverity": "MEDIUM"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "baseSeverity": "MEDIUM",
+              "exploitabilityScore": 8.6,
+              "impactScore": 2.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-264"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:aladdin:esafe:7.0.17.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "5C6590DF-9164-4A76-ADEE-9110C5E3588E"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:authentium:command_antivirus:5.2.11.5:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "192DFD98-11AA-4E7A-A1CB-53FC06FEB20F"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:bitdefender:bitdefender:7.2:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "24D7D7FA-20E9-4560-ABC6-154CD918E307"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:comodo:comodo_antivirus:7424:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "803A9A92-A984-43A8-8D27-C9A6FDB19A9D"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:f-prot:f-prot_antivirus:4.6.2.117:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "961708EB-3124-4147-A36D-BAD9241D0C88"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:f-secure:f-secure_anti-virus:9.0.16160.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "BB884937-53F0-4BB5-AA8F-1CCDCD1221D9"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:mcafee:gateway:2010.1c:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "18FC30B1-4FB3-4891-93FE-63A93E686EB3"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nprotect:nprotect_antivirus:2011-01-17.01:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "D386C31F-6114-4A15-B0D5-15686D7EF8B8"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:rising-global:rising_antivirus:22.83.00.03:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "EF8ADA91-4042-4E1B-9F14-78023F24B137"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:sophos:sophos_anti-virus:4.61.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "0912E21E-1EEB-4ADD-958F-F8AEBBF7C5E6"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "http://www.ieee-security.org/TC/SP2012/program.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://www.securityfocus.com/archive/1/522005",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          }
+        ]
+      },
+      "risk_score": 77,
+      "rank": 6
+    },
+    {
+      "cve_id": "CVE-2012-1442",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 0.02838,
+            "score_date": "2025-06-03"
+          },
+          "current": {
+            "score": 0.98952,
+            "score_date": "2026-06-15"
+          },
+          "delta": 0.96114
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2012-03-21",
+        "last_modified": "2026-06-16",
+        "description": "The ELF file parser in Quick Heal (aka Cat QuickHeal) 11.00, McAfee Anti-Virus Scanning Engine 5.400.0.1158, McAfee Gateway (formerly Webwasher) 2010.1C, eSafe 7.0.17.0, Kaspersky Anti-Virus 7.0.0.125, F-Secure Anti-Virus 9.0.16160.0, Sophos Anti-Virus 4.61.0, Antiy Labs AVL SDK 2.0.3.7, Rising Antivirus 22.83.00.03, Fortinet Antivirus 4.2.254.0, and Panda Antivirus 10.0.2.7 allows remote attackers to bypass malware detection via an ELF file with a modified class field. NOTE: this may later be SPLIT into multiple CVEs if additional information is published showing that the error occurred independently in different ELF parser implementations.",
+        "title": "aladdin avl_sdk",
+        "vendor": "aladdin",
+        "product": "esafe",
+        "cvss_max": 4.3
+      },
+      "cve": {
+        "id": "CVE-2012-1442",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2012-03-21T10:11:48.037",
+        "lastModified": "2026-06-16T23:39:32.290",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The ELF file parser in Quick Heal (aka Cat QuickHeal) 11.00, McAfee Anti-Virus Scanning Engine 5.400.0.1158, McAfee Gateway (formerly Webwasher) 2010.1C, eSafe 7.0.17.0, Kaspersky Anti-Virus 7.0.0.125, F-Secure Anti-Virus 9.0.16160.0, Sophos Anti-Virus 4.61.0, Antiy Labs AVL SDK 2.0.3.7, Rising Antivirus 22.83.00.03, Fortinet Antivirus 4.2.254.0, and Panda Antivirus 10.0.2.7 allows remote attackers to bypass malware detection via an ELF file with a modified class field. NOTE: this may later be SPLIT into multiple CVEs if additional information is published showing that the error occurred independently in different ELF parser implementations."
+          },
+          {
+            "lang": "es",
+            "value": "El analizador de archivos ELF en Quick Heal (también conocido como Cat QuickHeal) 11.00, McAfee Anti-Virus Scanning Engine 5.400.0.1158, McAfee Gateway (anteriormente Webwasher) 2010.1C, eSafe 7.0.17.0,, Kaspersky Anti-Virus 7.0.0.125, F-Secure Anti -Virus 9.0.16160.0, Sophos Anti-Virus 4.61.0 Antiy Labs AVL SDK 2.0.3.7, Rising Antivirus 22.83.00.03, Fortinet Antivirus 4.2.254.0, y Panda Antivirus 10.0.2.7 permite a atacantes remotos evitar la detección de malware a través de un ELF archivo con un campo class modificado. NOTA: esto más adelante se puede dividir en varios CVEs si la información adicional que se publica muestra que el error se produjo de forma independiente en diferentes implementaciones del analizador ELF."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV2": [
+            {
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:M/Au:N/C:N/I:P/A:N",
+                "baseScore": 4.3,
+                "baseSeverity": "MEDIUM"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "baseSeverity": "MEDIUM",
+              "exploitabilityScore": 8.6,
+              "impactScore": 2.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-264"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:aladdin:esafe:7.0.17.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "5C6590DF-9164-4A76-ADEE-9110C5E3588E"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:antiy:avl_sdk:2.0.3.7:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "38855431-9C17-41FE-8325-A3304DECAC92"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cat:quick_heal:11.00:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "343D3F40-E028-4AEE-82A4-0A17C1D1ED13"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:f-secure:f-secure_anti-virus:9.0.16160.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "BB884937-53F0-4BB5-AA8F-1CCDCD1221D9"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:fortinet:fortinet_antivirus:4.2.254.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "1C36D1BA-DB17-4FE0-8D6E-BA5649AE3BF0"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:kaspersky:kaspersky_anti-virus:7.0.0.125:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "FD9BCB3B-0FE8-4716-ABC2-1DB89D330F56"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:mcafee:gateway:2010.1c:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "18FC30B1-4FB3-4891-93FE-63A93E686EB3"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:mcafee:scan_engine:5.400.0.1158:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "0BCE1228-61BE-4C10-898A-B8BDC5A71156"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:pandasecurity:panda_antivirus:10.0.2.7:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "D95F8C32-D238-493F-A28D-8A588E8ADD13"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:rising-global:rising_antivirus:22.83.00.03:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "EF8ADA91-4042-4E1B-9F14-78023F24B137"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:sophos:sophos_anti-virus:4.61.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "0912E21E-1EEB-4ADD-958F-F8AEBBF7C5E6"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "http://osvdb.org/80426",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://osvdb.org/80427",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://osvdb.org/80428",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://www.ieee-security.org/TC/SP2012/program.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://www.securityfocus.com/archive/1/522005",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://www.securityfocus.com/bid/52598",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          }
+        ]
+      },
+      "risk_score": 77,
+      "rank": 7
+    },
+    {
+      "cve_id": "CVE-2012-1446",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 0.02536,
+            "score_date": "2025-06-03"
+          },
+          "current": {
+            "score": 0.99734,
+            "score_date": "2026-06-15"
+          },
+          "delta": 0.97198
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2012-03-21",
+        "last_modified": "2026-06-16",
+        "description": "The ELF file parser in Quick Heal (aka Cat QuickHeal) 11.00, McAfee Anti-Virus Scanning Engine 5.400.0.1158, AVEngine 20101.3.0.103 in Symantec Endpoint Protection 11, Norman Antivirus 6.06.12, eSafe 7.0.17.0, Kaspersky Anti-Virus 7.0.0.125, McAfee Gateway (formerly Webwasher) 2010.1C, Sophos Anti-Virus 4.61.0, CA eTrust Vet Antivirus 36.1.8511, Antiy Labs AVL SDK 2.0.3.7, PC Tools AntiVirus 7.0.3.5, Rising Antivirus 22.83.00.03, Fortinet Antivirus 4.2.254.0, and Panda Antivirus 10.0.2.7 allows remote attackers to bypass malware detection via an ELF file with a modified encoding field.  NOTE: this may later be SPLIT into multiple CVEs if additional information is published showing that the error occurred independently in different ELF parser implementations.",
+        "title": "aladdin avl_sdk",
+        "vendor": "aladdin",
+        "product": "esafe",
+        "cvss_max": 4.3
+      },
+      "cve": {
+        "id": "CVE-2012-1446",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2012-03-21T10:11:48.270",
+        "lastModified": "2026-06-16T23:39:32.807",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The ELF file parser in Quick Heal (aka Cat QuickHeal) 11.00, McAfee Anti-Virus Scanning Engine 5.400.0.1158, AVEngine 20101.3.0.103 in Symantec Endpoint Protection 11, Norman Antivirus 6.06.12, eSafe 7.0.17.0, Kaspersky Anti-Virus 7.0.0.125, McAfee Gateway (formerly Webwasher) 2010.1C, Sophos Anti-Virus 4.61.0, CA eTrust Vet Antivirus 36.1.8511, Antiy Labs AVL SDK 2.0.3.7, PC Tools AntiVirus 7.0.3.5, Rising Antivirus 22.83.00.03, Fortinet Antivirus 4.2.254.0, and Panda Antivirus 10.0.2.7 allows remote attackers to bypass malware detection via an ELF file with a modified encoding field.  NOTE: this may later be SPLIT into multiple CVEs if additional information is published showing that the error occurred independently in different ELF parser implementations."
+          },
+          {
+            "lang": "es",
+            "value": "El analizador de archivos ELF en Quick Heal (también conocido como Cat QuickHeal) 11.00, McAfee Anti-Virus Scanning 5.400.0.1158, AVEngine 20101.3.0.103 de Symantec Endpoint Protection 11, Norman Antivirus 6.6.12, eSafe 7.0.17.0, Kaspersky Anti-Virus 7.0 .0.125, McAfee gateway (anteriormente Webwasher) 2010.1C, Sophos Anti-Virus 4.61.0, CA eTrust Antivirus Vet 36.1.8511, Laboratorios Antiy AVL SDK 2.0.3.7, PC Tools AntiVirus 7.0.3.5, Rising Antivirus 22.83.00.03, Fortinet Antivirus 4.2.254.0, y Panda Antivirus 10.0.2.7 permite a atacantes remotos evitar la detección de malware a través de un archivo ELF con un campo encoding modificado. NOTA: esto más adelante se puede dividir en varios CVEs si la información adicional que se publica muestra que el error se produjo de forma independiente en diferentes implementaciones del analizador ELF."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV2": [
+            {
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:M/Au:N/C:N/I:P/A:N",
+                "baseScore": 4.3,
+                "baseSeverity": "MEDIUM"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "baseSeverity": "MEDIUM",
+              "exploitabilityScore": 8.6,
+              "impactScore": 2.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-264"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:aladdin:esafe:7.0.17.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "5C6590DF-9164-4A76-ADEE-9110C5E3588E"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:antiy:avl_sdk:2.0.3.7:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "38855431-9C17-41FE-8325-A3304DECAC92"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:ca:etrust_vet_antivirus:36.1.8511:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "FBFFC7D8-7BA5-4830-9ABD-B56B3BDFC730"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cat:quick_heal:11.00:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "343D3F40-E028-4AEE-82A4-0A17C1D1ED13"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:fortinet:fortinet_antivirus:4.2.254.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "1C36D1BA-DB17-4FE0-8D6E-BA5649AE3BF0"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:kaspersky:kaspersky_anti-virus:7.0.0.125:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "FD9BCB3B-0FE8-4716-ABC2-1DB89D330F56"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:mcafee:gateway:2010.1c:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "18FC30B1-4FB3-4891-93FE-63A93E686EB3"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:mcafee:scan_engine:5.400.0.1158:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "0BCE1228-61BE-4C10-898A-B8BDC5A71156"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:norman:norman_antivirus_\\&_antispyware:6.06.12:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "81D01633-1000-425D-9026-59C50734956A"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:pandasecurity:panda_antivirus:10.0.2.7:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "D95F8C32-D238-493F-A28D-8A588E8ADD13"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:pc_tools:pc_tools_antivirus:7.0.3.5:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "410EEFDA-CFE6-4DDE-B661-BB01009B0E60"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:rising-global:rising_antivirus:22.83.00.03:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "EF8ADA91-4042-4E1B-9F14-78023F24B137"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:sophos:sophos_anti-virus:4.61.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "0912E21E-1EEB-4ADD-958F-F8AEBBF7C5E6"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:symantec:endpoint_protection:11.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "E269D396-3A70-4C4B-9D79-CBBA75C280D8"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "http://osvdb.org/80426",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://osvdb.org/80427",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://osvdb.org/80428",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://osvdb.org/80430",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://osvdb.org/80431",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://www.ieee-security.org/TC/SP2012/program.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://www.securityfocus.com/archive/1/522005",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://www.securityfocus.com/bid/52600",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          }
+        ]
+      },
+      "risk_score": 77,
+      "rank": 8
+    },
+    {
+      "cve_id": "CVE-2012-1460",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 0.00572,
+            "score_date": "2025-06-03"
+          },
+          "current": {
+            "score": 0.94539,
+            "score_date": "2026-06-15"
+          },
+          "delta": 0.93967
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2012-03-21",
+        "last_modified": "2026-06-16",
+        "description": "The Gzip file parser in Antiy Labs AVL SDK 2.0.3.7, Quick Heal (aka Cat QuickHeal) 11.00, Command Antivirus 5.2.11.5, eSafe 7.0.17.0, F-Prot Antivirus 4.6.2.117, Jiangmin Antivirus 13.0.900, K7 AntiVirus 9.77.3565, and VBA32 3.12.14.2 allows remote attackers to bypass malware detection via a .tar.gz file with stray bytes at the end. NOTE: this may later be SPLIT into multiple CVEs if additional information is published showing that the error occurred independently in different Gzip parser implementations.",
+        "title": "aladdin antivirus",
+        "vendor": "aladdin",
+        "product": "esafe",
+        "cvss_max": 4.3
+      },
+      "cve": {
+        "id": "CVE-2012-1460",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2012-03-21T10:11:49.630",
+        "lastModified": "2026-06-16T23:39:34.580",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The Gzip file parser in Antiy Labs AVL SDK 2.0.3.7, Quick Heal (aka Cat QuickHeal) 11.00, Command Antivirus 5.2.11.5, eSafe 7.0.17.0, F-Prot Antivirus 4.6.2.117, Jiangmin Antivirus 13.0.900, K7 AntiVirus 9.77.3565, and VBA32 3.12.14.2 allows remote attackers to bypass malware detection via a .tar.gz file with stray bytes at the end. NOTE: this may later be SPLIT into multiple CVEs if additional information is published showing that the error occurred independently in different Gzip parser implementations."
+          },
+          {
+            "lang": "es",
+            "value": "El analizador de archivos Gzip en Antiy Labs AVL SDK v2.0.3.7, Quick Heal (también conocido como Cat QuickHeal) v11.00, Command Antivirus v5.2.11.5, v7.0.17.0 eSafe, F-Prot Antivirus v4.6.2.117, Jiangmin Antivirus v13.0.900, K7 AntiVirus 9.77.3565, y VBA32 v3.12.14.2 permite a atacantes remotos evitar la detección de malware a través de un archivo. tar.gz con los bytes extraviados al final. NOTA: esto más adelante se puede dividir en varios CVEs si la información adicional que se publica muestra que el error se produjo de forma independiente en diferentes implementaciones del analizador Gzip."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV2": [
+            {
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:M/Au:N/C:N/I:P/A:N",
+                "baseScore": 4.3,
+                "baseSeverity": "MEDIUM"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "baseSeverity": "MEDIUM",
+              "exploitabilityScore": 8.6,
+              "impactScore": 2.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-264"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:aladdin:esafe:7.0.17.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "5C6590DF-9164-4A76-ADEE-9110C5E3588E"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:anti-virus:vba32:3.12.14.2:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "2A0325DA-A137-41E0-BD5E-B892F2166749"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:antiy:avl_sdk:2.0.3.7:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "38855431-9C17-41FE-8325-A3304DECAC92"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:authentium:command_antivirus:5.2.11.5:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "192DFD98-11AA-4E7A-A1CB-53FC06FEB20F"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cat:quick_heal:11.00:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "343D3F40-E028-4AEE-82A4-0A17C1D1ED13"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:f-prot:f-prot_antivirus:4.6.2.117:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "961708EB-3124-4147-A36D-BAD9241D0C88"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:jiangmin:jiangmin_antivirus:13.0.900:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "620DC756-B821-413C-A824-43C221E573AA"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:k7computing:antivirus:9.77.3565:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "B27BD224-CB70-43D2-8B0D-9F229A646B82"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "http://www.ieee-security.org/TC/SP2012/program.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://www.securityfocus.com/archive/1/522005",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "http://www.securityfocus.com/bid/52629",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "https://exchange.xforce.ibmcloud.com/vulnerabilities/74308",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          }
+        ]
+      },
+      "risk_score": 77,
+      "rank": 9
+    },
+    {
+      "cve_id": "CVE-2020-11022",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 0.02391,
+            "score_date": "2026-06-09"
+          },
+          "current": {
+            "score": 0.99019,
+            "score_date": "2026-06-15"
+          },
+          "delta": 0.96628
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2020-04-29",
+        "last_modified": "2026-06-16",
+        "description": "In jQuery starting with 1.12.0 and before 3.5.0, passing HTML from untrusted sources - even after sanitizing it - to one of jQuery's DOM manipulation methods (i.e. .html(), .append(), and others) may execute untrusted code. This problem is patched in jQuery 3.5.0.",
+        "title": "debian agile_product_lifecycle_management_for_process",
+        "vendor": "jquery",
+        "product": "jquery",
+        "cvss_max": 6.9
+      },
+      "cve": {
+        "id": "CVE-2020-11022",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2020-04-29T22:15:11.903",
+        "lastModified": "2026-06-17T02:48:52.607",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "In jQuery starting with 1.12.0 and before 3.5.0, passing HTML from untrusted sources - even after sanitizing it - to one of jQuery's DOM manipulation methods (i.e. .html(), .append(), and others) may execute untrusted code. This problem is patched in jQuery 3.5.0."
+          },
+          {
+            "lang": "es",
+            "value": "En las versiones de jQuery mayores o iguales a 1.2 y anteriores a la versión 3.5.0, se puede ejecutar HTML desde fuentes no seguras, incluso después de desinfectarlo, a uno de los métodos de manipulación DOM de jQuery (es decir .html (), .append () y otros). código no seguro Este problema está corregido en jQuery 3.5.0."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV2": [
+            {
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:M/Au:N/C:N/I:P/A:N",
+                "baseScore": 4.3,
+                "baseSeverity": "MEDIUM"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "baseSeverity": "MEDIUM",
+              "exploitabilityScore": 8.6,
+              "impactScore": 2.9
+            }
+          ],
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:H/I:L/A:N",
+                "baseScore": 6.9,
+                "baseSeverity": "MEDIUM"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary",
+              "exploitabilityScore": 1.6,
+              "impactScore": 4.7
+            },
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+                "baseScore": 6.1,
+                "baseSeverity": "MEDIUM"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 2.7
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-79"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          },
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-79"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:jquery:jquery:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "B5CFA4CA-5296-4B78-8D65-34FC63A09DEF",
+                    "versionStartIncluding": "1.2",
+                    "versionEndExcluding": "3.5.0"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:drupal:drupal:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "70C672EE-2027-4A29-8C14-3450DEF1462A",
+                    "versionStartIncluding": "7.0",
+                    "versionEndExcluding": "7.70"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:drupal:drupal:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "BBFE42E2-6583-4EBE-B320-B8CF9CA0C3BC",
+                    "versionStartIncluding": "8.7.0",
+                    "versionEndExcluding": "8.7.14"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:drupal:drupal:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "7BA49DB0-ECC3-4155-B76C-0CA292600DE6",
+                    "versionStartIncluding": "8.8.0",
+                    "versionEndExcluding": "8.8.6"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:debian:debian_linux:9.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "DEECE5FC-CACF-4496-A3E7-164736409252"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:fedoraproject:fedora:31:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "80F0FA5D-8D3B-4C0E-81E2-87998286AF33"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:fedoraproject:fedora:32:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "36D96259-24BD-44E2-96D9-78CE1D41F956"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:fedoraproject:fedora:33:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "E460AA51-FCDA-46B9-AE97-E6676AA5E194"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:agile_product_lifecycle_management_for_process:6.2.0.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "A079FD6E-3BB0-4997-9A8E-6F8FEC89887A"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:application_testing_suite:13.3.0.1:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "A125E817-F974-4509-872C-B71933F42AD1"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:banking_digital_experience:18.1:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "BBE7BF09-B89C-4590-821E-6C0587E096B5"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:banking_digital_experience:18.2:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "ADAE8A71-0BCD-42D5-B38C-9B2A27CC1E6B"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:banking_digital_experience:18.3:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "E7231D2D-4092-44F3-B60A-D7C9ED78AFDF"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:banking_digital_experience:19.1:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "F7BDFC10-45A0-46D8-AB92-4A5E2C1C76ED"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:banking_digital_experience:19.2:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "18127694-109C-4E7E-AE79-0BA351849291"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:banking_digital_experience:20.1:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "33F68878-BC19-4DB8-8A72-BD9FE3D0ACEC"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:blockchain_platform:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "D0DBC938-A782-433F-8BF1-CA250C332AA7",
+                    "versionEndExcluding": "21.1.2"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:communications_application_session_controller:3.8m0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "B796AC70-A220-48D8-B8CD-97CF57227962"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:communications_billing_and_revenue_management:7.5.0.23.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "790A89FD-6B86-49AE-9B4F-AE7262915E13"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:communications_billing_and_revenue_management:12.0.0.3.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "E39D442D-1997-49AF-8B02-5640BE2A26CC"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:communications_diameter_signaling_router_idih\\::*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "FAFED7F5-03FA-43B5-AD13-1130F0324448",
+                    "versionStartIncluding": "8.0.0",
+                    "versionEndIncluding": "8.2.2"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:communications_eagle_application_processor:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "1A0E3537-CB5A-40BF-B42C-CED9211B8892",
+                    "versionStartIncluding": "16.1.0",
+                    "versionEndIncluding": "16.4.0"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:communications_services_gatekeeper:7.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "062E4E7C-55BB-46F3-8B61-5A663B565891"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:communications_webrtc_session_controller:7.2:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "726DB59B-00C7-444E-83F7-CB31032482AB"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:enterprise_manager_ops_center:12.4.0.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "B095CC03-7077-4A58-AB25-CC5380CDCE5A"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:enterprise_session_border_controller:8.4:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "7015A8CB-8FA6-423E-8307-BD903244F517"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:financial_services_analytical_applications_infrastructure:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "F2BB6A71-6AF6-4C0B-9304-4111E32108D4",
+                    "versionStartIncluding": "8.0.6.0.0",
+                    "versionEndIncluding": "8.1.0.0.0"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:financial_services_analytical_applications_reconciliation_framework:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "AD080793-FC45-4260-8E45-40E228F432FC",
+                    "versionStartIncluding": "8.0.6",
+                    "versionEndIncluding": "8.0.8"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:financial_services_analytical_applications_reconciliation_framework:8.1.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "2ACA29E6-F393-46E5-B2B3-9158077819A9"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:financial_services_asset_liability_management:8.0.6:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "FCD1EC13-CC2F-4668-90D2-D8609066F2DF"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:financial_services_asset_liability_management:8.0.7:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "4D614F76-0AA1-4EA8-A24A-38EFC90EF5DB"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:financial_services_asset_liability_management:8.1.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "39B8DFFF-B037-4F29-8C8E-F4BBC3435199"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:financial_services_balance_sheet_planning:8.0.8:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "4D0D0EAC-300D-44B1-AD4A-93A368D5DBA1"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:financial_services_basel_regulatory_capital_basic:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "C5E0646D-4866-41FB-AE2E-5307B6F4004A",
+                    "versionStartIncluding": "8.0.6",
+                    "versionEndIncluding": "8.0.8"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:financial_services_basel_regulatory_capital_basic:8.1.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "8A566893-8DCF-49E4-93D0-0ACCEFD70D3D"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:financial_services_basel_regulatory_capital_internal_ratings_based_approach:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "B37FC113-4F40-4D29-8712-7AD250373008",
+                    "versionStartIncluding": "8.0.6",
+                    "versionEndIncluding": "8.0.8"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:financial_services_basel_regulatory_capital_internal_ratings_based_approach:8.1.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "00E5D719-249D-48B8-BAFC-1E14D250B3F6"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:financial_services_data_foundation:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "712577A9-04D6-4579-A82B-72200E467399",
+                    "versionStartIncluding": "8.0.6",
+                    "versionEndIncluding": "8.1.0"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:financial_services_data_governance_for_us_regulatory_reporting:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "672949B4-1989-4AA7-806F-EEC07D07F317",
+                    "versionStartIncluding": "8.0.6",
+                    "versionEndIncluding": "8.0.9"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:financial_services_data_integration_hub:8.0.6:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "987A0C35-4C7F-4FFB-B47B-37B69A32F879"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:financial_services_data_integration_hub:8.0.7:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "8B3B6BE3-4C5A-402F-832C-86A0A6234C25"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:financial_services_data_integration_hub:8.1.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "9476D1DA-C8A8-40A0-94DD-9B46C05FD461"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:financial_services_funds_transfer_pricing:8.0.6:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "34070F24-2E53-43EC-9117-E1434B2C4C2B"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:financial_services_funds_transfer_pricing:8.0.7:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "B9B2C2F6-235F-4E78-A299-18C041C05C9A"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:financial_services_funds_transfer_pricing:8.1.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "F727AAC6-6D9F-4B28-B07C-6A93916C43A3"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:financial_services_hedge_management_and_ifrs_valuations:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "6662C783-5B5C-4559-89F5-1A681AA46A3E",
+                    "versionStartIncluding": "8.0.6",
+                    "versionEndIncluding": "8.0.8"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:financial_services_hedge_management_and_ifrs_valuations:8.1.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "51C17460-D326-4525-A7D1-0AED53E75E18"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:financial_services_institutional_performance_analytics:8.0.6:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "37C8EE84-A840-4132-B331-C7D450B1FBBF"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:financial_services_institutional_performance_analytics:8.0.7:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "1D8436A2-9CA3-4C91-B632-9B03368ABC1B"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:financial_services_institutional_performance_analytics:8.1.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "A00142E6-EEB3-44BD-AB0D-0E5C5640557F"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:financial_services_liquidity_risk_management:8.0.6:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "6149C89E-0111-4CF9-90CA-0662D2F75E04"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:financial_services_liquidity_risk_measurement_and_management:8.0.7:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "6CDDF6CA-6441-4606-9D2F-22A67BA46978"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:financial_services_liquidity_risk_measurement_and_management:8.0.8:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "6FA0B592-A216-4320-A4FE-ABCA6B3E7D7A"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:financial_services_liquidity_risk_measurement_and_management:8.1.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "CEA4D6CF-D54A-40DF-9B70-E13392D0BE19"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:financial_services_loan_loss_forecasting_and_provisioning:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "2A333755-4B6E-4A0F-AC48-4CEA70CD5801",
+                    "versionStartIncluding": "8.0.6",
+                    "versionEndIncluding": "8.0.8"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:financial_services_loan_loss_forecasting_and_provisioning:8.1.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "397B1A24-7C95-4A73-8363-4529A7F6CFCC"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:financial_services_market_risk_measurement_and_management:8.0.6:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "EF6D5112-4055-4F89-A5B3-0DCB109481B7"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:financial_services_market_risk_measurement_and_management:8.0.8:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "D262848E-AA24-4057-A747-6221BA22ADF4"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:financial_services_price_creation_and_discovery:8.0.6:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "4A01F8ED-64DA-43BC-9C02-488010BCD0F4"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:financial_services_price_creation_and_discovery:8.0.7:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "75638A6A-88B2-4BC7-84EA-1CF5FC30D555"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:financial_services_profitability_management:8.0.6:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "501B9331-6BB7-44BF-A664-180CAFABF88C"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:financial_services_profitability_management:8.0.7:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "F2A3AE3C-8E24-4FB6-9954-9B50CBD59B21"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:financial_services_profitability_management:8.1.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "F8E565DA-91BE-44FC-A28F-579BE8D2281A"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:financial_services_regulatory_reporting_for_european_banking_authority:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "AED72F90-3B68-45AC-865C-110F7FD30D37",
+                    "versionStartIncluding": "8.0.6",
+                    "versionEndIncluding": "8.1.0"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:financial_services_regulatory_reporting_for_us_federal_reserve:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "4F909C61-1A74-402C-B74F-BAF7297875B0",
+                    "versionStartIncluding": "8.0.6",
+                    "versionEndIncluding": "8.0.9"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:healthcare_foundation:7.1.1:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "26A1F27B-C3AC-4D13-B9B2-2D6CF65D07BC"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:healthcare_foundation:7.2.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "B95E8056-51D8-4390-ADE3-661B7AE1D7CE"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:healthcare_foundation:7.2.1:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "609D6EDF-D4D0-4370-9B8B-CA39D41946C0"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:healthcare_foundation:7.3.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "9059A907-508B-4844-8D7B-0FA68C0DF6A6"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:hospitality_materials_control:18.1:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "2AC63D10-2326-4542-B345-31D45B9A7408"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:hospitality_simphony:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "7BFD7783-BE15-421C-A550-7FE15AB53ABF",
+                    "versionStartIncluding": "19.1.0",
+                    "versionEndIncluding": "19.1.2"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:hospitality_simphony:18.1:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "1F7BF047-03C5-4A60-B718-E222B16DBF41"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:hospitality_simphony:18.2:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "E3A73D81-3E1A-42E6-AB96-835CDD5905F2"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:insurance_accounting_analyzer:8.0.9:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "66136D6D-FC52-40DB-B7B6-BA8B7758CE16"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:insurance_allocation_manager_for_enterprise_profitability:8.0.8:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "06514F46-544B-4404-B45C-C9584EBC3131"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:insurance_allocation_manager_for_enterprise_profitability:8.1.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "3BD4BF9A-BF38-460D-974D-5B3255AAF946"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:insurance_data_foundation:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "B7DB4831-F874-4D9D-AB58-BE4A554891EA",
+                    "versionStartIncluding": "8.0.6",
+                    "versionEndIncluding": "8.1.0"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:insurance_insbridge_rating_and_underwriting:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "B47C73D0-BE89-4D87-8765-12C507F13AFF",
+                    "versionStartIncluding": "5.0.0.0",
+                    "versionEndIncluding": "5.6.0.0"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:insurance_insbridge_rating_and_underwriting:5.6.1.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "5B8AA91A-1880-43CD-938D-48EF58ACF2CF"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:jdeveloper:11.1.1.9.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "A7506589-9B3B-49BA-B826-774BFDCC45B8"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:jdeveloper:12.2.1.3.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "228DA523-4D6D-48C5-BDB0-DB1A60F23F8B"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:jdeveloper:12.2.1.4.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "335AB6A7-3B1F-4FA8-AF08-7D64C16C4B04"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:peoplesoft_enterprise_peopletools:8.56:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "D0A735B4-4F3C-416B-8C08-9CB21BAD2889"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:peoplesoft_enterprise_peopletools:8.57:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "7E1E416B-920B-49A0-9523-382898C2979D"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:peoplesoft_enterprise_peopletools:8.58:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "D9DB4A14-2EF5-4B54-95D2-75E6CF9AA0A9"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:policy_automation:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "15512D27-7BEB-4DDD-9A1B-447FC7156E3D",
+                    "versionStartIncluding": "12.2.0",
+                    "versionEndIncluding": "12.2.20"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:policy_automation_connector_for_siebel:10.4.6:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "0DB5E2C7-9C68-4D3B-95AD-9CBF65DE1E94"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:policy_automation_for_mobile_devices:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "90F0B2AB-453C-4585-8753-74D17BD20C79",
+                    "versionStartIncluding": "12.2.0",
+                    "versionEndIncluding": "12.2.20"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:retail_back_office:14.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "31C7EEA3-AA72-48DA-A112-2923DBB37773"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:retail_back_office:14.1:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "F0735989-13BD-40B3-B954-AC0529C5B53D"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:retail_customer_management_and_segmentation_foundation:19.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "9EFAEA84-E376-40A2-8C9F-3E0676FEC527"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:retail_returns_management:14.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "959316A8-C3AF-4126-A242-3835ED0AD1E8"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:retail_returns_management:14.1:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "BDB925C6-2CBC-4D88-B9EA-F246F4F7A206"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:siebel_ui_framework:20.8:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "98B9198C-11DF-4E80-ACFC-DC719CED8C7E"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:storagetek_acsls:8.5.1:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "6953CFDB-33C0-4B8E-BBBD-E460A17E8ED3"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:weblogic_server:10.3.6.0.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "B40B13B7-68B3-4510-968C-6A730EB46462"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:weblogic_server:12.1.3.0.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "C93CC705-1F8C-4870-99E6-14BF264C3811"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:weblogic_server:12.2.1.3.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "F14A818F-AA16-4438-A3E4-E64C9287AC66"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:weblogic_server:12.2.1.4.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "4A5BB153-68E0-4DDA-87D1-0D9AB7F0A418"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:weblogic_server:14.1.1.0.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "04BCDC24-4A21-473C-8733-0D9CFB38A752"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:netapp:max_data:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "FD1FCB0D-3E19-4461-9330-4D7F02972A35"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:netapp:oncommand_insight:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "F1BE6C1F-2565-4E97-92AA-16563E5660A5"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:netapp:oncommand_system_manager:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "B9273745-6408-4CD3-94E8-9385D4F5FE69",
+                    "versionStartIncluding": "3.0",
+                    "versionEndIncluding": "3.1.3"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:netapp:snap_creator_framework:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "9F4754FB-E3EB-454A-AB1A-AE3835C5350C"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:netapp:snapcenter:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "BDFB1169-41A0-4A86-8E4F-FDA9730B1E94"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:netapp:h300s_firmware:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "6770B6C3-732E-4E22-BF1C-2D2FD610061C"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:netapp:h300s:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "9F9C8C20-42EB-4AB5-BD97-212DEB070C43"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:netapp:h500s_firmware:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "7FFF7106-ED78-49BA-9EC5-B889E3685D53"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:netapp:h500s:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "E63D8B0F-006E-4801-BF9D-1C001BBFB4F9"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:netapp:h700s_firmware:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "56409CEC-5A1E-4450-AA42-641E459CC2AF"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:netapp:h700s:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "B06F4839-D16A-4A61-9BB5-55B13F41E47F"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:netapp:h300e_firmware:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "108A2215-50FB-4074-94CF-C130FA14566D"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:netapp:h300e:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "7AFC73CE-ABB9-42D3-9A71-3F5BC5381E0E"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:netapp:h500e_firmware:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "32F0B6C0-F930-480D-962B-3F4EFDCC13C7"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:netapp:h500e:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "803BC414-B250-4E3A-A478-A3881340D6B8"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:netapp:h700e_firmware:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "0FEB3337-BFDE-462A-908B-176F92053CEC"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:netapp:h700e:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "736AEAE9-782B-4F71-9893-DED53367E102"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:netapp:h410s_firmware:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "D0B4AD8A-F172-4558-AEC6-FF424BA2D912"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:netapp:h410s:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "8497A4C9-8474-4A62-8331-3FE862ED4098"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:netapp:h410c_firmware:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "234DEFE0-5CE5-4B0A-96B8-5D227CB8ED31"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:h:netapp:h410c:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "CDDF61B7-EC5C-467C-B710-B89F502CD04F"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:opensuse:leap:15.1:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "B620311B-34A3-48A6-82DF-6F078D7A4493"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:opensuse:leap:15.2:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "B009C22E-30A4-4288-BCF6-C3E81DEAF45A"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:tenable:log_correlation_engine:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "4ACF85D6-6B45-43DA-9C01-F0208186F014",
+                    "versionEndExcluding": "6.0.9"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:agile_product_supplier_collaboration_for_process:6.2.0.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "CA6F2E4C-C935-40CF-972E-8C3D8A912134"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:banking_digital_experience:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "59830587-A6B0-4642-B566-6FD8792F7716",
+                    "versionStartIncluding": "18.1",
+                    "versionEndIncluding": "20.1"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:communications_application_session_controller:3.8m0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "B796AC70-A220-48D8-B8CD-97CF57227962"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:communications_billing_and_revenue_management:7.5.0.23.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "790A89FD-6B86-49AE-9B4F-AE7262915E13"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:communications_billing_and_revenue_management:12.0.0.3.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "E39D442D-1997-49AF-8B02-5640BE2A26CC"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:communications_diameter_signaling_router_idih\\::*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "FAFED7F5-03FA-43B5-AD13-1130F0324448",
+                    "versionStartIncluding": "8.0.0",
+                    "versionEndIncluding": "8.2.2"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:communications_webrtc_session_controller:7.2:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "726DB59B-00C7-444E-83F7-CB31032482AB"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:enterprise_manager_ops_center:12.4.0.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "B095CC03-7077-4A58-AB25-CC5380CDCE5A"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:enterprise_session_border_controller:8.4:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "7015A8CB-8FA6-423E-8307-BD903244F517"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:financial_services_analytical_applications_infrastructure:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "021014B2-DC51-481C-BCFE-5857EFBDEDDA",
+                    "versionStartIncluding": "8.0.6",
+                    "versionEndIncluding": "8.1.0"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:financial_services_analytical_applications_reconciliation_framework:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "AD080793-FC45-4260-8E45-40E228F432FC",
+                    "versionStartIncluding": "8.0.6",
+                    "versionEndIncluding": "8.0.8"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:financial_services_analytical_applications_reconciliation_framework:8.1.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "2ACA29E6-F393-46E5-B2B3-9158077819A9"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:financial_services_asset_liability_management:8.0.6:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "FCD1EC13-CC2F-4668-90D2-D8609066F2DF"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:financial_services_asset_liability_management:8.0.7:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "4D614F76-0AA1-4EA8-A24A-38EFC90EF5DB"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:financial_services_asset_liability_management:8.1.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "39B8DFFF-B037-4F29-8C8E-F4BBC3435199"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:financial_services_balance_sheet_planning:8.0.8:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "4D0D0EAC-300D-44B1-AD4A-93A368D5DBA1"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:financial_services_basel_regulatory_capital_basic:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "C5E0646D-4866-41FB-AE2E-5307B6F4004A",
+                    "versionStartIncluding": "8.0.6",
+                    "versionEndIncluding": "8.0.8"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:financial_services_basel_regulatory_capital_basic:8.1.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "8A566893-8DCF-49E4-93D0-0ACCEFD70D3D"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:financial_services_basel_regulatory_capital_internal_ratings_based_approach:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "B37FC113-4F40-4D29-8712-7AD250373008",
+                    "versionStartIncluding": "8.0.6",
+                    "versionEndIncluding": "8.0.8"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:financial_services_basel_regulatory_capital_internal_ratings_based_approach:8.1.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "00E5D719-249D-48B8-BAFC-1E14D250B3F6"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:financial_services_data_foundation:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "712577A9-04D6-4579-A82B-72200E467399",
+                    "versionStartIncluding": "8.0.6",
+                    "versionEndIncluding": "8.1.0"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:financial_services_data_governance_for_us_regulatory_reporting:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "672949B4-1989-4AA7-806F-EEC07D07F317",
+                    "versionStartIncluding": "8.0.6",
+                    "versionEndIncluding": "8.0.9"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:financial_services_data_integration_hub:8.0.6:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "987A0C35-4C7F-4FFB-B47B-37B69A32F879"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:financial_services_data_integration_hub:8.0.7:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "8B3B6BE3-4C5A-402F-832C-86A0A6234C25"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:financial_services_data_integration_hub:8.1.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "9476D1DA-C8A8-40A0-94DD-9B46C05FD461"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:financial_services_funds_transfer_pricing:8.0.6:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "34070F24-2E53-43EC-9117-E1434B2C4C2B"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:financial_services_funds_transfer_pricing:8.0.7:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "B9B2C2F6-235F-4E78-A299-18C041C05C9A"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:financial_services_funds_transfer_pricing:8.1.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "F727AAC6-6D9F-4B28-B07C-6A93916C43A3"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:financial_services_hedge_management_and_ifrs_valuations:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "6662C783-5B5C-4559-89F5-1A681AA46A3E",
+                    "versionStartIncluding": "8.0.6",
+                    "versionEndIncluding": "8.0.8"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:financial_services_hedge_management_and_ifrs_valuations:8.1.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "51C17460-D326-4525-A7D1-0AED53E75E18"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:financial_services_institutional_performance_analytics:8.0.6:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "37C8EE84-A840-4132-B331-C7D450B1FBBF"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:financial_services_institutional_performance_analytics:8.0.7:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "1D8436A2-9CA3-4C91-B632-9B03368ABC1B"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:financial_services_institutional_performance_analytics:8.1.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "A00142E6-EEB3-44BD-AB0D-0E5C5640557F"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:financial_services_liquidity_risk_management:8.0.6:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "6149C89E-0111-4CF9-90CA-0662D2F75E04"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:financial_services_liquidity_risk_measurement_and_management:8.0.7:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "6CDDF6CA-6441-4606-9D2F-22A67BA46978"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:financial_services_liquidity_risk_measurement_and_management:8.0.8:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "6FA0B592-A216-4320-A4FE-ABCA6B3E7D7A"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:financial_services_liquidity_risk_measurement_and_management:8.1.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "CEA4D6CF-D54A-40DF-9B70-E13392D0BE19"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:financial_services_loan_loss_forecasting_and_provisioning:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "2A333755-4B6E-4A0F-AC48-4CEA70CD5801",
+                    "versionStartIncluding": "8.0.6",
+                    "versionEndIncluding": "8.0.8"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:financial_services_loan_loss_forecasting_and_provisioning:8.1.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "397B1A24-7C95-4A73-8363-4529A7F6CFCC"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:financial_services_market_risk_measurement_and_management:8.0.6:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "EF6D5112-4055-4F89-A5B3-0DCB109481B7"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:financial_services_market_risk_measurement_and_management:8.0.8:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "D262848E-AA24-4057-A747-6221BA22ADF4"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:financial_services_price_creation_and_discovery:8.0.6:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "4A01F8ED-64DA-43BC-9C02-488010BCD0F4"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:financial_services_price_creation_and_discovery:8.0.7:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "75638A6A-88B2-4BC7-84EA-1CF5FC30D555"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:financial_services_profitability_management:8.0.6:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "501B9331-6BB7-44BF-A664-180CAFABF88C"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:financial_services_profitability_management:8.0.7:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "F2A3AE3C-8E24-4FB6-9954-9B50CBD59B21"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:financial_services_profitability_management:8.1.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "F8E565DA-91BE-44FC-A28F-579BE8D2281A"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:financial_services_regulatory_reporting_for_european_banking_authority:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "AED72F90-3B68-45AC-865C-110F7FD30D37",
+                    "versionStartIncluding": "8.0.6",
+                    "versionEndIncluding": "8.1.0"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:financial_services_regulatory_reporting_for_us_federal_reserve:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "4F909C61-1A74-402C-B74F-BAF7297875B0",
+                    "versionStartIncluding": "8.0.6",
+                    "versionEndIncluding": "8.0.9"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:healthcare_foundation:7.1.1:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "26A1F27B-C3AC-4D13-B9B2-2D6CF65D07BC"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:healthcare_foundation:7.2.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "B95E8056-51D8-4390-ADE3-661B7AE1D7CE"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:healthcare_foundation:7.2.1:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "609D6EDF-D4D0-4370-9B8B-CA39D41946C0"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:healthcare_foundation:7.3.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "9059A907-508B-4844-8D7B-0FA68C0DF6A6"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:hospitality_materials_control:18.1:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "2AC63D10-2326-4542-B345-31D45B9A7408"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:hospitality_simphony:18.1:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "1F7BF047-03C5-4A60-B718-E222B16DBF41"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:hospitality_simphony:18.2:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "E3A73D81-3E1A-42E6-AB96-835CDD5905F2"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:hospitality_simphony:19.1.0-19.1.2:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "351F9DE9-2FCE-4BCA-A098-CDFB07E6E4B9"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:insurance_accounting_analyzer:8.0.9:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "66136D6D-FC52-40DB-B7B6-BA8B7758CE16"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:insurance_allocation_manager_for_enterprise_profitability:8.0.8:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "06514F46-544B-4404-B45C-C9584EBC3131"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:insurance_allocation_manager_for_enterprise_profitability:8.1.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "3BD4BF9A-BF38-460D-974D-5B3255AAF946"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:insurance_data_foundation:8.0.6-8.1.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "D10745C6-2751-4FD0-BDFA-84C7AB8066BC"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:insurance_insbridge_rating_and_underwriting:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "B47C73D0-BE89-4D87-8765-12C507F13AFF",
+                    "versionStartIncluding": "5.0.0.0",
+                    "versionEndIncluding": "5.6.0.0"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:insurance_insbridge_rating_and_underwriting:5.6.1.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "5B8AA91A-1880-43CD-938D-48EF58ACF2CF"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:jdeveloper:11.1.1.9.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "A7506589-9B3B-49BA-B826-774BFDCC45B8"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:jdeveloper:12.2.1.3.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "228DA523-4D6D-48C5-BDB0-DB1A60F23F8B"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:jdeveloper:12.2.1.4.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "335AB6A7-3B1F-4FA8-AF08-7D64C16C4B04"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:peoplesoft_enterprise_peopletools:8.56:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "D0A735B4-4F3C-416B-8C08-9CB21BAD2889"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:peoplesoft_enterprise_peopletools:8.57:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "7E1E416B-920B-49A0-9523-382898C2979D"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:peoplesoft_enterprise_peopletools:8.58:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "D9DB4A14-2EF5-4B54-95D2-75E6CF9AA0A9"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:policy_automation:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "15512D27-7BEB-4DDD-9A1B-447FC7156E3D",
+                    "versionStartIncluding": "12.2.0",
+                    "versionEndIncluding": "12.2.20"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:policy_automation_connector_for_siebel:10.4.6:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "0DB5E2C7-9C68-4D3B-95AD-9CBF65DE1E94"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:policy_automation_for_mobile_devices:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "90F0B2AB-453C-4585-8753-74D17BD20C79",
+                    "versionStartIncluding": "12.2.0",
+                    "versionEndIncluding": "12.2.20"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:retail_back_office:14.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "31C7EEA3-AA72-48DA-A112-2923DBB37773"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:retail_back_office:14.1:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "F0735989-13BD-40B3-B954-AC0529C5B53D"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:retail_customer_management_and_segmentation_foundation:19.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "9EFAEA84-E376-40A2-8C9F-3E0676FEC527"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:retail_returns_management:14.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "959316A8-C3AF-4126-A242-3835ED0AD1E8"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:retail_returns_management:14.1:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "BDB925C6-2CBC-4D88-B9EA-F246F4F7A206"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:siebel_ui_framework:20.8:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "98B9198C-11DF-4E80-ACFC-DC719CED8C7E"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:weblogic_server:10.3.6.0.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "B40B13B7-68B3-4510-968C-6A730EB46462"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:weblogic_server:12.1.3.0.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "C93CC705-1F8C-4870-99E6-14BF264C3811"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:weblogic_server:12.2.1.3.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "F14A818F-AA16-4438-A3E4-E64C9287AC66"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:weblogic_server:12.2.1.4.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "4A5BB153-68E0-4DDA-87D1-0D9AB7F0A418"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:oracle:weblogic_server:14.1.1.0.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "04BCDC24-4A21-473C-8733-0D9CFB38A752"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "http://security.netapp.com/advisory/ntap-20200511-0006",
+            "source": "security-advisories@github.com"
+          },
+          {
+            "url": "https://blog.jquery.com/2020/04/10/jquery-3-5-0-released",
+            "source": "security-advisories@github.com"
+          },
+          {
+            "url": "https://github.com/jquery/jquery/commit/1d61fd9407e6fbe82fe55cb0b938307aa0791f77",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Patch",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/jquery/jquery/releases/tag/3.5.0",
+            "source": "security-advisories@github.com"
+          },
+          {
+            "url": "https://github.com/jquery/jquery/security/advisories/GHSA-gxr4-xjj5-5px2",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Mitigation",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/maximebf/php-debugbar/commit/847216e60544258c881f2733d699bbcfeefac0fc",
+            "source": "security-advisories@github.com"
+          },
+          {
+            "url": "https://github.com/maximebf/php-debugbar/issues/447",
+            "source": "security-advisories@github.com"
+          },
+          {
+            "url": "https://github.com/rubysec/ruby-advisory-db/blob/master/gems/jquery-rails/CVE-2020-11022.yml",
+            "source": "security-advisories@github.com"
+          },
+          {
+            "url": "https://jquery.com/upgrade-guide/3.5",
+            "source": "security-advisories@github.com"
+          },
+          {
+            "url": "https://lists.apache.org/thread.html/r0483ba0072783c2e1bfea613984bfb3c86e73ba8879d780dc1cc7d36@%3Cissues.flink.apache.org%3E",
+            "source": "security-advisories@github.com"
+          },
+          {
+            "url": "https://lists.apache.org/thread.html/r49ce4243b4738dd763caeb27fa8ad6afb426ae3e8c011ff00b8b1f48@%3Cissues.flink.apache.org%3E",
+            "source": "security-advisories@github.com"
+          },
+          {
+            "url": "https://lists.apache.org/thread.html/r54565a8f025c7c4f305355fdfd75b68eca442eebdb5f31c2e7d977ae@%3Cissues.flink.apache.org%3E",
+            "source": "security-advisories@github.com"
+          },
+          {
+            "url": "https://lists.apache.org/thread.html/r564585d97bc069137e64f521e68ba490c7c9c5b342df5d73c49a0760@%3Cissues.flink.apache.org%3E",
+            "source": "security-advisories@github.com"
+          },
+          {
+            "url": "https://lists.apache.org/thread.html/r706cfbc098420f7113968cc377247ec3d1439bce42e679c11c609e2d@%3Cissues.flink.apache.org%3E",
+            "source": "security-advisories@github.com"
+          },
+          {
+            "url": "https://lists.apache.org/thread.html/r8f70b0f65d6bedf316ecd899371fd89e65333bc988f6326d2956735c@%3Cissues.flink.apache.org%3E",
+            "source": "security-advisories@github.com"
+          },
+          {
+            "url": "https://lists.apache.org/thread.html/rbb448222ba62c430e21e13f940be4cb5cfc373cd3bce56b48c0ffa67@%3Cdev.flink.apache.org%3E",
+            "source": "security-advisories@github.com"
+          },
+          {
+            "url": "https://lists.apache.org/thread.html/rdf44341677cf7eec7e9aa96dcf3f37ed709544863d619cca8c36f133@%3Ccommits.airflow.apache.org%3E",
+            "source": "security-advisories@github.com"
+          },
+          {
+            "url": "https://lists.apache.org/thread.html/re4ae96fa5c1a2fe71ccbb7b7ac1538bd0cb677be270a2bf6e2f8d108@%3Cissues.flink.apache.org%3E",
+            "source": "security-advisories@github.com"
+          },
+          {
+            "url": "https://lists.apache.org/thread.html/rede9cfaa756e050a3d83045008f84a62802fc68c17f2b4eabeaae5e4@%3Cissues.flink.apache.org%3E",
+            "source": "security-advisories@github.com"
+          },
+          {
+            "url": "https://lists.apache.org/thread.html/ree3bd8ddb23df5fa4e372d11c226830ea3650056b1059f3965b3fce2@%3Cissues.flink.apache.org%3E",
+            "source": "security-advisories@github.com"
+          },
+          {
+            "url": "https://lists.debian.org/debian-lts-announce/2021/03/msg00033.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Mailing List",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://lists.debian.org/debian-lts-announce/2023/08/msg00040.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/AVKYXLWCLZBV2N7M46KYK4LVA5OXWPBY",
+            "source": "security-advisories@github.com"
+          },
+          {
+            "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/QPN2L2XVQGUA2V5HNQJWHK3APSK3VN7K",
+            "source": "security-advisories@github.com"
+          },
+          {
+            "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/SAPQVX3XDNPGFT26QAQ6AJIXZZBZ4CD4",
+            "source": "security-advisories@github.com"
+          },
+          {
+            "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/SFP4UK4EGP4AFH2MWYJ5A5Z4I7XVFQ6B",
+            "source": "security-advisories@github.com"
+          },
+          {
+            "url": "https://lists.fedoraproject.org/archives/list/package-announce@lists.fedoraproject.org/message/VOE7P7APPRQKD4FGNHBKJPDY6FFCOH3W",
+            "source": "security-advisories@github.com"
+          },
+          {
+            "url": "https://lists.opensuse.org/opensuse-security-announce/2020-07/msg00067.html",
+            "source": "security-advisories@github.com"
+          },
+          {
+            "url": "https://lists.opensuse.org/opensuse-security-announce/2020-07/msg00085.html",
+            "source": "security-advisories@github.com"
+          },
+          {
+            "url": "https://lists.opensuse.org/opensuse-security-announce/2020-11/msg00039.html",
+            "source": "security-advisories@github.com"
+          },
+          {
+            "url": "https://packetstormsecurity.com/files/162159/jQuery-1.2-Cross-Site-Scripting.html",
+            "source": "security-advisories@github.com"
+          },
+          {
+            "url": "https://security.gentoo.org/glsa/202007-03",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.debian.org/security/2020/dsa-4693",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.drupal.org/sa-core-2020-002",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.oracle.com/security-alerts/cpuApr2021.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Patch",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.oracle.com/security-alerts/cpuapr2022.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Patch",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.oracle.com/security-alerts/cpujan2021.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.oracle.com/security-alerts/cpujan2022.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Patch",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.oracle.com/security-alerts/cpujul2020.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.oracle.com/security-alerts/cpujul2021.html",
+            "source": "security-advisories@github.com"
+          },
+          {
+            "url": "https://www.oracle.com/security-alerts/cpujul2022.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "https://www.oracle.com/security-alerts/cpuoct2020.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.oracle.com/security-alerts/cpuoct2021.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Patch",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.tenable.com/security/tns-2020-10",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.tenable.com/security/tns-2020-11",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.tenable.com/security/tns-2021-02",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.tenable.com/security/tns-2021-10",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "http://lists.opensuse.org/opensuse-security-announce/2020-07/msg00067.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Broken Link"
+            ]
+          },
+          {
+            "url": "http://lists.opensuse.org/opensuse-security-announce/2020-07/msg00085.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Broken Link"
+            ]
+          },
+          {
+            "url": "http://lists.opensuse.org/opensuse-security-announce/2020-11/msg00039.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Broken Link"
+            ]
+          }
+        ]
+      },
+      "risk_score": 81,
+      "rank": 10
+    },
+    {
+      "cve_id": "CVE-2024-29825",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 0.02383,
+            "score_date": "2026-02-24"
+          },
+          "current": {
+            "score": 0.99877,
+            "score_date": "2026-06-15"
+          },
+          "delta": 0.97494
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2024-05-31",
+        "last_modified": "2026-06-17",
+        "description": "An unspecified SQL Injection vulnerability in Core server of Ivanti EPM 2022 SU5 and prior allows an unauthenticated attacker within the same network to execute arbitrary code.",
+        "title": "ivanti endpoint_manager SQL Injection",
+        "vendor": "ivanti",
+        "product": "endpoint_manager",
+        "attack_type": "SQL Injection",
+        "cvss_max": 9.6
+      },
+      "cve": {
+        "id": "CVE-2024-29825",
+        "sourceIdentifier": "support@hackerone.com",
+        "published": "2024-05-31T18:15:11.443",
+        "lastModified": "2026-06-17T07:23:11.457",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "An unspecified SQL Injection vulnerability in Core server of Ivanti EPM 2022 SU5 and prior allows an unauthenticated attacker within the same network to execute arbitrary code."
+          },
+          {
+            "lang": "es",
+            "value": "Una vulnerabilidad de inyección SQL no especificada en el servidor central de Ivanti EPM 2022 SU5 y anteriores permite que un atacante no autenticado dentro de la misma red ejecute código arbitrario."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV30": [
+            {
+              "cvssData": {
+                "version": "3.0",
+                "vectorString": "CVSS:3.0/AV:A/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+                "baseScore": 9.6,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "support@hackerone.com",
+              "type": "Secondary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 6.0
+            }
+          ],
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 8.8,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-89"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          },
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-89"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:ivanti:endpoint_manager:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "B1F6549B-CF5D-4607-B67D-5489905A1705",
+                    "versionEndExcluding": "2022"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:ivanti:endpoint_manager:2022:-:*:*:*:*:*:*",
+                    "matchCriteriaId": "46580865-5177-4E55-BDAC-73DA4B472B35"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:ivanti:endpoint_manager:2022:su1:*:*:*:*:*:*",
+                    "matchCriteriaId": "E57E12B5-B789-450C-9476-6C4C151E6993"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:ivanti:endpoint_manager:2022:su2:*:*:*:*:*:*",
+                    "matchCriteriaId": "E47C65B3-56DD-4D65-8B4B-6AFFE28E94F2"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:ivanti:endpoint_manager:2022:su3:*:*:*:*:*:*",
+                    "matchCriteriaId": "10D6EAB7-B14B-45E9-92B9-4FADFBBB08AF"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:ivanti:endpoint_manager:2022:su4:*:*:*:*:*:*",
+                    "matchCriteriaId": "1877FB55-76BA-4714-ABB8-47258132F537"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:ivanti:endpoint_manager:2022:su5:*:*:*:*:*:*",
+                    "matchCriteriaId": "4F9E8D45-5F12-4D45-A74E-C314FA3618A3"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://forums.ivanti.com/s/article/Security-Advisory-May-2024",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 84,
+      "rank": 11
+    },
+    {
+      "cve_id": "CVE-2024-29826",
+      "signal_types": [
+        "EPSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": {
+          "previous": {
+            "score": 0.02383,
+            "score_date": "2026-02-24"
+          },
+          "current": {
+            "score": 0.99877,
+            "score_date": "2026-06-15"
+          },
+          "delta": 0.97494
+        },
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2024-05-31",
+        "last_modified": "2026-06-17",
+        "description": "An unspecified SQL Injection vulnerability in Core server of Ivanti EPM 2022 SU5 and prior allows an unauthenticated attacker within the same network to execute arbitrary code.",
+        "title": "ivanti endpoint_manager SQL Injection",
+        "vendor": "ivanti",
+        "product": "endpoint_manager",
+        "attack_type": "SQL Injection",
+        "cvss_max": 9.6
+      },
+      "cve": {
+        "id": "CVE-2024-29826",
+        "sourceIdentifier": "support@hackerone.com",
+        "published": "2024-05-31T18:15:11.617",
+        "lastModified": "2026-06-17T07:23:11.570",
+        "vulnStatus": "Modified",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "An unspecified SQL Injection vulnerability in Core server of Ivanti EPM 2022 SU5 and prior allows an unauthenticated attacker within the same network to execute arbitrary code."
+          },
+          {
+            "lang": "es",
+            "value": "Una vulnerabilidad de inyección SQL no especificada en el servidor central de Ivanti EPM 2022 SU5 y anteriores permite que un atacante no autenticado dentro de la misma red ejecute código arbitrario."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV30": [
+            {
+              "cvssData": {
+                "version": "3.0",
+                "vectorString": "CVSS:3.0/AV:A/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+                "baseScore": 9.6,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "support@hackerone.com",
+              "type": "Secondary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 6.0
+            }
+          ],
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 8.8,
+                "baseSeverity": "HIGH"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-89"
+              }
+            ],
+            "source": "nvd@nist.gov"
+          },
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-89"
+              }
+            ],
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:ivanti:endpoint_manager:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "B1F6549B-CF5D-4607-B67D-5489905A1705",
+                    "versionEndExcluding": "2022"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:ivanti:endpoint_manager:2022:-:*:*:*:*:*:*",
+                    "matchCriteriaId": "46580865-5177-4E55-BDAC-73DA4B472B35"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:ivanti:endpoint_manager:2022:su1:*:*:*:*:*:*",
+                    "matchCriteriaId": "E57E12B5-B789-450C-9476-6C4C151E6993"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:ivanti:endpoint_manager:2022:su2:*:*:*:*:*:*",
+                    "matchCriteriaId": "E47C65B3-56DD-4D65-8B4B-6AFFE28E94F2"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:ivanti:endpoint_manager:2022:su3:*:*:*:*:*:*",
+                    "matchCriteriaId": "10D6EAB7-B14B-45E9-92B9-4FADFBBB08AF"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:ivanti:endpoint_manager:2022:su4:*:*:*:*:*:*",
+                    "matchCriteriaId": "1877FB55-76BA-4714-ABB8-47258132F537"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:ivanti:endpoint_manager:2022:su5:*:*:*:*:*:*",
+                    "matchCriteriaId": "4F9E8D45-5F12-4D45-A74E-C314FA3618A3"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://forums.ivanti.com/s/article/Security-Advisory-May-2024",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 84,
+      "rank": 12
+    },
+    {
+      "cve_id": "CVE-2026-11832",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-06-15",
+          "previous_max": null,
+          "current_max": 9.1
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-06-15",
+        "last_modified": "2026-06-17",
+        "description": "Dancer2::Plugin::Auth::OAuth versions before 0.22 for Perl default to a predictable nonce.\n\nThe default nonce was generated using an MD5 hash of the epoch time, which is predictable.",
+        "title": "Dancer2::Plugin::Auth::OAuth versions before 0.22 for Perl default to a predictable nonce.",
+        "cvss_max": 9.1
+      },
+      "cve": {
+        "id": "CVE-2026-11832",
+        "sourceIdentifier": "9b29abf9-4ab0-4765-b253-1875cd9b441e",
+        "published": "2026-06-15T22:16:15.400",
+        "lastModified": "2026-06-17T10:14:29.377",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Dancer2::Plugin::Auth::OAuth versions before 0.22 for Perl default to a predictable nonce.\n\nThe default nonce was generated using an MD5 hash of the epoch time, which is predictable."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+                "baseScore": 9.1,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.2
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-338"
+              }
+            ],
+            "source": "9b29abf9-4ab0-4765-b253-1875cd9b441e"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://datatracker.ietf.org/doc/html/rfc5849#section-3.3",
+            "source": "9b29abf9-4ab0-4765-b253-1875cd9b441e"
+          },
+          {
+            "url": "https://datatracker.ietf.org/doc/html/rfc5849#section-4.9",
+            "source": "9b29abf9-4ab0-4765-b253-1875cd9b441e"
+          },
+          {
+            "url": "https://metacpan.org/release/BIAFRA/Dancer2-Plugin-Auth-OAuth-0.22/changes",
+            "source": "9b29abf9-4ab0-4765-b253-1875cd9b441e"
+          },
+          {
+            "url": "https://www.cve.org/CVERecord?id=CVE-2025-22376",
+            "source": "9b29abf9-4ab0-4765-b253-1875cd9b441e"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 13
+    },
+    {
+      "cve_id": "CVE-2026-12087",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-06-15",
+          "previous_max": null,
+          "current_max": 9.1
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-06-15",
+        "last_modified": "2026-06-17",
+        "description": "Socket versions before 2.041 for Perl have an out-of-bounds heap read.\n\nIn Socket.xs, pack_ip_mreq_source() checks the length of its source argument before the argument is read, so the check tests the byte length carried over from the preceding multiaddr argument instead. Both addresses occupy a 4-byte field, so a valid multiaddr lets a source of any length pass the check, and the source is then copied into the 4-byte imr_sourceaddr field with a fixed-size copy. A source shorter than 4 bytes is not rejected, and the copy reads up to 3 bytes past the end of its buffer.\n\nCalling pack_ip_mreq_source() with a source value shorter than 4 bytes copies adjacent heap memory into the returned packed structure.",
+        "title": "Socket versions before 2.041 for Perl have an out-of-bounds heap read.",
+        "attack_type": "Out-of-Bounds Write",
+        "cvss_max": 9.1
+      },
+      "cve": {
+        "id": "CVE-2026-12087",
+        "sourceIdentifier": "9b29abf9-4ab0-4765-b253-1875cd9b441e",
+        "published": "2026-06-15T22:16:16.197",
+        "lastModified": "2026-06-17T10:14:37.383",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Socket versions before 2.041 for Perl have an out-of-bounds heap read.\n\nIn Socket.xs, pack_ip_mreq_source() checks the length of its source argument before the argument is read, so the check tests the byte length carried over from the preceding multiaddr argument instead. Both addresses occupy a 4-byte field, so a valid multiaddr lets a source of any length pass the check, and the source is then copied into the 4-byte imr_sourceaddr field with a fixed-size copy. A source shorter than 4 bytes is not rejected, and the copy reads up to 3 bytes past the end of its buffer.\n\nCalling pack_ip_mreq_source() with a source value shorter than 4 bytes copies adjacent heap memory into the returned packed structure."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:H",
+                "baseScore": 9.1,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.2
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-125"
+              },
+              {
+                "lang": "en",
+                "value": "CWE-805"
+              }
+            ],
+            "source": "9b29abf9-4ab0-4765-b253-1875cd9b441e"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/Perl/perl5/commit/de19a0b0ad1900fef976c5c1400bd8f11ec6c6cb.patch",
+            "source": "9b29abf9-4ab0-4765-b253-1875cd9b441e"
+          },
+          {
+            "url": "https://metacpan.org/release/PEVANS/Socket-2.041/changes",
+            "source": "9b29abf9-4ab0-4765-b253-1875cd9b441e"
+          },
+          {
+            "url": "http://www.openwall.com/lists/oss-security/2026/06/15/10",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 14
+    },
+    {
+      "cve_id": "CVE-2026-12205",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-06-15",
+          "previous_max": null,
+          "current_max": 9.1
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-06-15",
+        "last_modified": "2026-06-17",
+        "description": "Crypt::DSA versions before 1.21 for Perl reused the nonce across signatures, leading to private-key recovery.\n\nCrypt::DSA::sign caches the per-signature nonce material in the Key object without ever clearing it.\n\nThe first sign() on a Key object picks a nonce, and every later sign() on that same object reuses it, producing an identical \"r\".\n\nKeys used to sign more than once with an affected version should be considered compromised.",
+        "title": "Crypt::DSA versions before 1.21 for Perl reused the nonce across signatures, leading to private-key recovery.",
+        "cvss_max": 9.1
+      },
+      "cve": {
+        "id": "CVE-2026-12205",
+        "sourceIdentifier": "9b29abf9-4ab0-4765-b253-1875cd9b441e",
+        "published": "2026-06-15T23:16:43.150",
+        "lastModified": "2026-06-17T10:14:40.940",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Crypt::DSA versions before 1.21 for Perl reused the nonce across signatures, leading to private-key recovery.\n\nCrypt::DSA::sign caches the per-signature nonce material in the Key object without ever clearing it.\n\nThe first sign() on a Key object picks a nonce, and every later sign() on that same object reuses it, producing an identical \"r\".\n\nKeys used to sign more than once with an affected version should be considered compromised."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+                "baseScore": 9.1,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.2
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-323"
+              }
+            ],
+            "source": "9b29abf9-4ab0-4765-b253-1875cd9b441e"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://metacpan.org/release/TIMLEGGE/Crypt-DSA-1.20/source/lib/Crypt/DSA.pm#L47",
+            "source": "9b29abf9-4ab0-4765-b253-1875cd9b441e"
+          },
+          {
+            "url": "https://metacpan.org/release/TIMLEGGE/Crypt-DSA-1.21/changes",
+            "source": "9b29abf9-4ab0-4765-b253-1875cd9b441e"
+          },
+          {
+            "url": "http://www.openwall.com/lists/oss-security/2026/06/15/4",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 15
+    },
+    {
+      "cve_id": "CVE-2026-48713",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-06-15",
+          "previous_max": null,
+          "current_max": 9.1
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-06-15",
+        "last_modified": "2026-06-17",
+        "description": "Versions prior to 2.6.6 are vulnerable to prototype pollution via crafted missing-key strings when used to persist missing translation keys (e.g. via i18next-http-middleware's missingKeyHandler exposed to untrusted input). Backend.writeFile() splits each queued missing-key string on the configured keySeparator (default .) before calling the internal setPath() walker. The walker (getLastOfPath in lib/utils.js) did not guard against unsafe segments, so a key like \"__proto__.polluted\" was split into [\"__proto__\", \"polluted\"] and walked straight into Object.prototype, allowing an attacker to write arbitrary properties onto the global object prototype. Depending on the host application, polluted prototype properties may cause crashes, corrupted translation behaviour, configuration poisoning, or bypasses of property-based security checks. Applications are affected only if the missingKeyHandler (or another route that forwards untrusted request bodies to i18next.t(..., { ... }) with saveMissing: true) is reachable by untrusted users and the default behaviour of splitting missing-key strings on keySeparator is in use (i.e. keySeparator is not false). Apps that do not expose missing-key persistence to untrusted input are not directly affected through this attack path. This issue has been fixed in version 2.6.6. If developers using the library are unable to upgrade immediately, they should take the following precautions: do not expose i18next-http-middleware's missingKeyHandler to untrusted users (mount it behind authentication, or remove the route), disable missing-key persistence (saveMissing: false, or no backend.create implementation) when accepting writes from untrusted input, and set keySeparator: false in their i18next options to disable backend key splitting (note: this also disables nested translation keys).",
+        "title": "i18next i18next-fs-backend",
+        "vendor": "i18next",
+        "product": "i18next-fs-backend",
+        "cvss_max": 9.1
+      },
+      "cve": {
+        "id": "CVE-2026-48713",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2026-06-15T22:16:17.397",
+        "lastModified": "2026-06-17T16:39:45.360",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Versions prior to 2.6.6 are vulnerable to prototype pollution via crafted missing-key strings when used to persist missing translation keys (e.g. via i18next-http-middleware's missingKeyHandler exposed to untrusted input). Backend.writeFile() splits each queued missing-key string on the configured keySeparator (default .) before calling the internal setPath() walker. The walker (getLastOfPath in lib/utils.js) did not guard against unsafe segments, so a key like \"__proto__.polluted\" was split into [\"__proto__\", \"polluted\"] and walked straight into Object.prototype, allowing an attacker to write arbitrary properties onto the global object prototype. Depending on the host application, polluted prototype properties may cause crashes, corrupted translation behaviour, configuration poisoning, or bypasses of property-based security checks. Applications are affected only if the missingKeyHandler (or another route that forwards untrusted request bodies to i18next.t(..., { ... }) with saveMissing: true) is reachable by untrusted users and the default behaviour of splitting missing-key strings on keySeparator is in use (i.e. keySeparator is not false). Apps that do not expose missing-key persistence to untrusted input are not directly affected through this attack path. This issue has been fixed in version 2.6.6. If developers using the library are unable to upgrade immediately, they should take the following precautions: do not expose i18next-http-middleware's missingKeyHandler to untrusted users (mount it behind authentication, or remove the route), disable missing-key persistence (saveMissing: false, or no backend.create implementation) when accepting writes from untrusted input, and set keySeparator: false in their i18next options to disable backend key splitting (note: this also disables nested translation keys)."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:H",
+                "baseScore": 9.1,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.2
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-1321"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:i18next:i18next-fs-backend:*:*:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "231766DC-5AE8-42B2-886B-3536F229B128",
+                    "versionEndExcluding": "2.6.6"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/i18next/i18next-fs-backend/commit/3ab0448087da6935a40117f904b7457281f963f4",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://github.com/i18next/i18next-fs-backend/security/advisories/GHSA-2933-q333-qg83",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Mitigation",
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 16
+    },
+    {
+      "cve_id": "CVE-2026-48714",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-06-15",
+          "previous_max": null,
+          "current_max": 9.1
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-06-15",
+        "last_modified": "2026-06-18",
+        "description": "i18next-http-middleware is a middleware to be used with Node.js web frameworks like express or Fastify and also for Deno. In versions prior to 3.9.7, the missingKeyHandler blocked the literal request-body keys __proto__, constructor, and prototype (added in 3.9.3, see GHSA-5fgg-jcpf-8jjw), but did not reject dotted variants such as \"__proto__.polluted\". Downstream backends that split the missing-key string on a configured keySeparator (notably i18next-fs-backend ≤ 2.6.5) hand these keys to an unguarded setPath() walker that writes to Object.prototype. Applications that expose missingKeyHandler to untrusted input AND use i18next-fs-backend ≤ 2.6.5 are directly exploitable for remote prototype pollution. Other downstream backends that split the missing-key string the same way may be similarly affected. Depending on the host application, polluted prototype properties may cause crashes, corrupted translation behaviour, configuration poisoning, or bypasses of property-based security checks. This issue has been fixed in version 3.9.7.  If developers cannot upgrade immediately, they should do the following: do not expose missingKeyHandler to untrusted users (mount it behind authentication, or remove the route), add a request-body filter ahead of the handler that rejects any top-level key containing __proto__, constructor, or prototype after splitting on their configured keySeparator, and disable missing-key persistence (saveMissing: false) when accepting writes from untrusted input.",
+        "title": "i18next i18next-http-middleware",
+        "vendor": "i18next",
+        "product": "i18next-http-middleware",
+        "cvss_max": 9.1
+      },
+      "cve": {
+        "id": "CVE-2026-48714",
+        "sourceIdentifier": "security-advisories@github.com",
+        "published": "2026-06-15T22:16:17.550",
+        "lastModified": "2026-06-18T15:21:06.997",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "i18next-http-middleware is a middleware to be used with Node.js web frameworks like express or Fastify and also for Deno. In versions prior to 3.9.7, the missingKeyHandler blocked the literal request-body keys __proto__, constructor, and prototype (added in 3.9.3, see GHSA-5fgg-jcpf-8jjw), but did not reject dotted variants such as \"__proto__.polluted\". Downstream backends that split the missing-key string on a configured keySeparator (notably i18next-fs-backend ≤ 2.6.5) hand these keys to an unguarded setPath() walker that writes to Object.prototype. Applications that expose missingKeyHandler to untrusted input AND use i18next-fs-backend ≤ 2.6.5 are directly exploitable for remote prototype pollution. Other downstream backends that split the missing-key string the same way may be similarly affected. Depending on the host application, polluted prototype properties may cause crashes, corrupted translation behaviour, configuration poisoning, or bypasses of property-based security checks. This issue has been fixed in version 3.9.7.  If developers cannot upgrade immediately, they should do the following: do not expose missingKeyHandler to untrusted users (mount it behind authentication, or remove the route), add a request-body filter ahead of the handler that rejects any top-level key containing __proto__, constructor, or prototype after splitting on their configured keySeparator, and disable missing-key persistence (saveMissing: false) when accepting writes from untrusted input."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:H",
+                "baseScore": 9.1,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "security-advisories@github.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.2
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-1321"
+              }
+            ],
+            "source": "security-advisories@github.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:i18next:i18next-http-middleware:*:*:*:*:*:node.js:*:*",
+                    "matchCriteriaId": "F932DB43-4983-4026-A91F-ED2B9FCEC383",
+                    "versionEndExcluding": "3.9.7"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/i18next/i18next-http-middleware/commit/7c6d26f137d3e940b8d229ca148bca38845faf49",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Patch"
+            ]
+          },
+          {
+            "url": "https://github.com/i18next/i18next-http-middleware/security/advisories/GHSA-f49m-vf83-692w",
+            "source": "security-advisories@github.com",
+            "tags": [
+              "Mitigation",
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 17
+    },
+    {
+      "cve_id": "CVE-2026-48853",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-06-15",
+          "previous_max": null,
+          "current_max": 9.2
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-06-15",
+        "last_modified": "2026-06-17",
+        "description": "Deserialization of Untrusted Data and Allocation of Resources Without Limits or Throttling vulnerabilities in elixir-grpc grpc allow unauthenticated attackers to crash the BEAM node via atom table exhaustion and, when a decoded term flows into a call site that invokes it, achieve remote code execution on the server.\n\n'Elixir.GRPC.Codec.Erlpack':decode/2 (lib/grpc/codec/erlpack.ex) calls :erlang.binary_to_term/1 on the raw gRPC message body without the :safe option, no size bound, and no type guard. Any unauthenticated peer that sends a request with Content-Type: application/grpc+erlpack can send a crafted payload that mints arbitrary new atoms (which are never garbage-collected, exhausting the bounded atom table and crashing the VM) or that encodes a fun term which, if applied anywhere downstream, executes attacker-controlled code inside the server process.\n\nThis issue affects grpc from 0.4.0 before 1.0.0.",
+        "title": "Deserialization of Untrusted Data and Allocation of Resources Without Limits or Throttling vulnerabilities in elixir-grpc grpc allow unau...",
+        "attack_type": "RCE",
+        "cvss_max": 9.2
+      },
+      "cve": {
+        "id": "CVE-2026-48853",
+        "sourceIdentifier": "6b3ad84c-e1a6-4bf7-a703-f496b71e49db",
+        "published": "2026-06-15T23:16:45.663",
+        "lastModified": "2026-06-17T10:55:18.207",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Deserialization of Untrusted Data and Allocation of Resources Without Limits or Throttling vulnerabilities in elixir-grpc grpc allow unauthenticated attackers to crash the BEAM node via atom table exhaustion and, when a decoded term flows into a call site that invokes it, achieve remote code execution on the server.\n\n'Elixir.GRPC.Codec.Erlpack':decode/2 (lib/grpc/codec/erlpack.ex) calls :erlang.binary_to_term/1 on the raw gRPC message body without the :safe option, no size bound, and no type guard. Any unauthenticated peer that sends a request with Content-Type: application/grpc+erlpack can send a crafted payload that mints arbitrary new atoms (which are never garbage-collected, exhausting the bounded atom table and crashing the VM) or that encodes a fun term which, if applied anywhere downstream, executes attacker-controlled code inside the server process.\n\nThis issue affects grpc from 0.4.0 before 1.0.0."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.2,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "6b3ad84c-e1a6-4bf7-a703-f496b71e49db",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-502"
+              },
+              {
+                "lang": "en",
+                "value": "CWE-770"
+              }
+            ],
+            "source": "6b3ad84c-e1a6-4bf7-a703-f496b71e49db"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://cna.erlef.org/cves/CVE-2026-48853.html",
+            "source": "6b3ad84c-e1a6-4bf7-a703-f496b71e49db"
+          },
+          {
+            "url": "https://github.com/elixir-grpc/grpc/commit/272a97a5ea1b46af1819f14a831fcf35fc91f992",
+            "source": "6b3ad84c-e1a6-4bf7-a703-f496b71e49db"
+          },
+          {
+            "url": "https://github.com/elixir-grpc/grpc/security/advisories/GHSA-grp7-v8xh-rj7h",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          },
+          {
+            "url": "https://osv.dev/vulnerability/EEF-CVE-2026-48853",
+            "source": "6b3ad84c-e1a6-4bf7-a703-f496b71e49db"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 18
+    },
+    {
+      "cve_id": "CVE-2026-52693",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-06-15",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-06-15",
+        "last_modified": "2026-06-17",
+        "description": "Unauthenticated SQL Injection in eCommerce Product Catalog <= 3.5.5 versions.",
+        "title": "Unauthenticated SQL Injection in eCommerce Product Catalog <= 3.5.5 versions.",
+        "attack_type": "SQL Injection",
+        "cvss_max": 9.3
+      },
+      "cve": {
+        "id": "CVE-2026-52693",
+        "sourceIdentifier": "audit@patchstack.com",
+        "published": "2026-06-15T21:17:23.973",
+        "lastModified": "2026-06-17T10:57:50.290",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Unauthenticated SQL Injection in eCommerce Product Catalog <= 3.5.5 versions."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:L",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "audit@patchstack.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 4.7
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-89"
+              }
+            ],
+            "source": "audit@patchstack.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://patchstack.com/database/wordpress/plugin/ecommerce-product-catalog/vulnerability/wordpress-ecommerce-product-catalog-plugin-3-5-5-sql-injection-vulnerability?_s_id=cve",
+            "source": "audit@patchstack.com"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 19
+    },
+    {
+      "cve_id": "CVE-2026-52703",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-06-15",
+          "previous_max": null,
+          "current_max": 9.6
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-06-15",
+        "last_modified": "2026-06-17",
+        "description": "Unauthenticated Path Traversal in FastDup <= 2.7.2 versions.",
+        "title": "Unauthenticated Path Traversal in FastDup <= 2.7.2 versions.",
+        "attack_type": "Path Traversal",
+        "cvss_max": 9.6
+      },
+      "cve": {
+        "id": "CVE-2026-52703",
+        "sourceIdentifier": "audit@patchstack.com",
+        "published": "2026-06-15T21:17:24.850",
+        "lastModified": "2026-06-17T10:57:50.970",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Unauthenticated Path Traversal in FastDup <= 2.7.2 versions."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H",
+                "baseScore": 9.6,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "audit@patchstack.com",
+              "type": "Secondary",
+              "exploitabilityScore": 2.8,
+              "impactScore": 6.0
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-35"
+              }
+            ],
+            "source": "audit@patchstack.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://patchstack.com/database/wordpress/plugin/fastdup/vulnerability/wordpress-fastdup-plugin-2-7-2-path-traversal-vulnerability?_s_id=cve",
+            "source": "audit@patchstack.com"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 20
+    },
+    {
+      "cve_id": "CVE-2026-54420",
+      "signal_types": [
+        "KEV"
+      ],
+      "signals": {
+        "kev": {
+          "date_added": "2026-06-15"
+        },
+        "exploit": null,
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-06-14",
+        "last_modified": "2026-06-17",
+        "description": "LiteSpeed cPanel plugin before 2.4.8 (as distributed in LiteSpeed WHM PlugIn before 5.3.2.0) mishandles symlinks provided by a user with FTP or web shell access on a shared hosting server running CloudLinux/CageFS, as exploited in the wild in May 2026.",
+        "title": "LiteSpeed cPanel Plugin UNIX Symbolic Link (Symlink) Following Vulnerability",
+        "vendor": "litespeedtech",
+        "product": "litespeed_cpanel_plugin",
+        "cvss_max": 8.5
+      },
+      "cve": {
+        "id": "CVE-2026-54420",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2026-06-14T04:16:28.630",
+        "lastModified": "2026-06-17T10:58:13.830",
+        "vulnStatus": "Analyzed",
+        "cisaExploitAdd": "2026-06-15",
+        "cisaActionDue": "2026-06-18",
+        "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+        "cisaVulnerabilityName": "LiteSpeed cPanel Plugin UNIX Symbolic Link (Symlink) Following Vulnerability",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "LiteSpeed cPanel plugin before 2.4.8 (as distributed in LiteSpeed WHM PlugIn before 5.3.2.0) mishandles symlinks provided by a user with FTP or web shell access on a shared hosting server running CloudLinux/CageFS, as exploited in the wild in May 2026."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:C/C:H/I:H/A:H",
+                "baseScore": 8.5,
+                "baseSeverity": "HIGH"
+              },
+              "source": "cve@mitre.org",
+              "type": "Secondary",
+              "exploitabilityScore": 1.8,
+              "impactScore": 6.0
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-61"
+              }
+            ],
+            "source": "cve@mitre.org"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:litespeedtech:litespeed_cpanel_plugin:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "6B1876E6-E6BF-4D4F-8BF7-5555F32A9787",
+                    "versionEndExcluding": "2.4.8"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:litespeedtech:litespeed_whm_plugin:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "63B844E5-0AFC-4E5B-81AA-AC01FA8FA29C",
+                    "versionEndExcluding": "5.3.2.0"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://blog.litespeedtech.com/2026/06/01/security-update-for-litespeed-cpanel-plugin-2/",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://www.litespeedtech.com/products/litespeed-web-server/control-panel-support/cpanel",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Product"
+            ]
+          },
+          {
+            "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-54420",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "US Government Resource"
+            ]
+          }
+        ]
+      },
+      "risk_score": 88,
+      "rank": 21
+    },
+    {
+      "cve_id": "CVE-2026-9691",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-06-15",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-06-15",
+        "last_modified": "2026-06-17",
+        "description": "Unauthenticated PHP Object Injection in Integration for ActiveCampaign and Contact Form 7, WPForms, Elementor, Ninja Forms <= 1.1.1 versions.",
+        "title": "Unauthenticated PHP Object Injection in Integration for ActiveCampaign and Contact Form 7, WPForms, Elementor, Ninja Forms <= 1.1.1 versi...",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2026-9691",
+        "sourceIdentifier": "audit@patchstack.com",
+        "published": "2026-06-15T21:17:25.997",
+        "lastModified": "2026-06-17T11:05:35.017",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Unauthenticated PHP Object Injection in Integration for ActiveCampaign and Contact Form 7, WPForms, Elementor, Ninja Forms <= 1.1.1 versions."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "audit@patchstack.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-502"
+              }
+            ],
+            "source": "audit@patchstack.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://patchstack.com/database/wordpress/plugin/cf7-active-campaign/vulnerability/wordpress-integration-for-activecampaign-and-contact-form-7-wpforms-elementor-ninja-forms-plugin-1-1-1-php-object-injection-vulnerability?_s_id=cve",
+            "source": "audit@patchstack.com"
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 22
+    }
+  ],
+  "source": "https://www.cvelogic.com/threat-intelligence/2026-06-15"
+}
