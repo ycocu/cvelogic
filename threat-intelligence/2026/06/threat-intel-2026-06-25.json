@@ -1,0 +1,1414 @@
+{
+  "schema_version": "2.2",
+  "generated_at": "2026-06-29T10:33:11Z",
+  "day": "2026-06-25",
+  "window": {
+    "utc_start": "2026-06-25",
+    "utc_end": "2026-06-25",
+    "days": 1,
+    "calendar": "America/New_York"
+  },
+  "summary": {
+    "brief": "PTC Windchill And FlexPLM added to CISA KEV — confirmed in-the-wild exploitation. · 10 new critical disclosures — review patch status on exposed services.",
+    "bullets": [
+      "PTC Windchill And FlexPLM added to CISA KEV — confirmed in-the-wild exploitation.",
+      "10 new critical disclosures — review patch status on exposed services."
+    ],
+    "counts": {
+      "cves": 12,
+      "kev": 2,
+      "exploit": 0,
+      "epss": 0,
+      "cvss": 10,
+      "patch": 0
+    }
+  },
+  "cves": [
+    {
+      "cve_id": "CVE-2026-12569",
+      "signal_types": [
+        "KEV"
+      ],
+      "signals": {
+        "kev": {
+          "date_added": "2026-06-25"
+        },
+        "exploit": null,
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-06-17",
+        "last_modified": "2026-06-26",
+        "description": "A critical remote code execution (RCE) vulnerability has been reported in PTC Windchill PDMlink and PTC FlexPLM. The vulnerability may be exploited through the deserialization of untrusted data.   *  This advisory also applies to all CPS versions\n  *  The identified vulnerability also impacts Windchill and FlexPLM releases prior to 11.0 M030",
+        "title": "PTC Windchill and FlexPLM Improper Input Validation Vulnerability",
+        "vendor": "ptc",
+        "product": "flexplm",
+        "attack_type": "RCE",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2026-12569",
+        "sourceIdentifier": "0b655efc-079c-4cb9-9e8d-164871239f4e",
+        "published": "2026-06-18T01:18:12.040",
+        "lastModified": "2026-06-26T14:35:41.477",
+        "vulnStatus": "Analyzed",
+        "cisaExploitAdd": "2026-06-25",
+        "cisaActionDue": "2026-06-28",
+        "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+        "cisaVulnerabilityName": "PTC Windchill and FlexPLM Improper Input Validation Vulnerability",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A critical remote code execution (RCE) vulnerability has been reported in PTC Windchill PDMlink and PTC FlexPLM. The vulnerability may be exploited through the deserialization of untrusted data.   *  This advisory also applies to all CPS versions\n  *  The identified vulnerability also impacts Windchill and FlexPLM releases prior to 11.0 M030"
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:L/SI:L/SA:L/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:Y/R:U/V:C/RE:X/U:Red",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "0b655efc-079c-4cb9-9e8d-164871239f4e",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-20"
+              },
+              {
+                "lang": "en",
+                "value": "CWE-502"
+              }
+            ],
+            "source": "0b655efc-079c-4cb9-9e8d-164871239f4e"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:ptc:flexplm:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "9645DC27-47FD-4E68-A73F-380DE6AB9265",
+                    "versionEndIncluding": "11.0m030"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:ptc:flexplm:11.1m020:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "1BA9771B-C606-4B0D-ADF1-E0BEA4FD5407"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:ptc:flexplm:11.2.1.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "AF4D5C35-1E36-4A6E-86AA-5E26F5375E84"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:ptc:flexplm:12.0.0.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "2A5BC13C-CBF4-4EA8-B5B7-E680BF7B22DA"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:ptc:flexplm:12.0.2.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "0A7DB804-FA55-456C-8C58-7ACBDA710F45"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:ptc:flexplm:12.1.3.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "AABF3817-5BA7-4604-92D3-468B73EEDA75"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:ptc:flexplm:13.0.2.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "33798622-E630-4F62-B675-01BFC99E73CC"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:ptc:flexplm:13.0.3.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "5D992EFD-F674-4217-9078-FAD2558168D5"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:ptc:windchill_pdmlink:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "A8E8CEE8-BECD-4D33-B14F-BA015EF0E39F",
+                    "versionEndExcluding": "11.0m030"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:ptc:windchill_pdmlink:11.0m030:-:*:*:*:*:*:*",
+                    "matchCriteriaId": "C456B19A-8A53-47AA-8C44-D7E4A99D73D0"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:ptc:windchill_pdmlink:11.1m020:-:*:*:*:*:*:*",
+                    "matchCriteriaId": "6B33DB9C-7883-495B-ACFF-31422ED4A256"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:ptc:windchill_pdmlink:11.2.1.0:-:*:*:*:*:*:*",
+                    "matchCriteriaId": "631EB791-4C82-4A73-8793-465576C47EC2"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:ptc:windchill_pdmlink:12.0.2.0:-:*:*:*:*:*:*",
+                    "matchCriteriaId": "5AAE2484-F8D6-4842-93E3-EAA12469B800"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:ptc:windchill_pdmlink:12.1.2.0:-:*:*:*:*:*:*",
+                    "matchCriteriaId": "FC145374-1ABE-4067-9649-EEE6D031C139"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:ptc:windchill_pdmlink:13.0.2.0:-:*:*:*:*:*:*",
+                    "matchCriteriaId": "925FF6A1-A0A0-4B0F-878A-53CE23ECF2D3"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:ptc:windchill_pdmlink:13.1.0.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "D9658DCC-7527-4BDE-BEC1-D5C43A7C7B83"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:ptc:windchill_pdmlink:13.1.1.0:-:*:*:*:*:*:*",
+                    "matchCriteriaId": "6619674F-DABA-420B-88BC-0CFDF2972309"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:ptc:windchill_pdmlink:13.1.2.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "0FF72930-943F-4A01-BC2A-6AEACBD38908"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:ptc:windchill_pdmlink:13.1.3.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "AD29599D-F30B-4664-A8F7-59C256ABAB61"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://www.ptc.com/en/support/article/CS473270",
+            "source": "0b655efc-079c-4cb9-9e8d-164871239f4e",
+            "tags": [
+              "Permissions Required"
+            ]
+          },
+          {
+            "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-12569",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "US Government Resource"
+            ]
+          }
+        ]
+      },
+      "risk_score": 88,
+      "rank": 1
+    },
+    {
+      "cve_id": "CVE-2025-71338",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-06-25",
+          "previous_max": null,
+          "current_max": 10.0
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-06-25",
+        "last_modified": "2026-06-26",
+        "description": "Flowise contains a path traversal vulnerability in the /api/v1/document-store/loader/process endpoint that allows unauthenticated attackers to write arbitrary files to the filesystem. Attackers can exploit unsanitized fileName parameters with ../ sequences to overwrite critical files like package.json and achieve remote code execution when the application restarts.",
+        "title": "flowiseai flowise RCE",
+        "vendor": "flowiseai",
+        "product": "flowise",
+        "attack_type": "RCE",
+        "cvss_max": 10.0
+      },
+      "cve": {
+        "id": "CVE-2025-71338",
+        "sourceIdentifier": "disclosure@vulncheck.com",
+        "published": "2026-06-25T22:16:59.520",
+        "lastModified": "2026-06-26T16:19:06.243",
+        "vulnStatus": "Undergoing Analysis",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Flowise contains a path traversal vulnerability in the /api/v1/document-store/loader/process endpoint that allows unauthenticated attackers to write arbitrary files to the filesystem. Attackers can exploit unsanitized fileName parameters with ../ sequences to overwrite critical files like package.json and achieve remote code execution when the application restarts."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+                "baseScore": 10.0,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 6.0
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 10.0,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-73"
+              }
+            ],
+            "source": "disclosure@vulncheck.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:flowiseai:flowise:*:*:*:*:*:*:*:*"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/FlowiseAI/Flowise/security/advisories/GHSA-8vvx-qvq9-5948",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          },
+          {
+            "url": "https://www.vulncheck.com/advisories/flowise-arbitrary-file-write-to-remote-code-execution-via-document-store-api",
+            "source": "disclosure@vulncheck.com"
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 2
+    },
+    {
+      "cve_id": "CVE-2026-57700",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-06-25",
+          "previous_max": null,
+          "current_max": 10.0
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-06-25",
+        "last_modified": "2026-06-25",
+        "description": "Unrestricted Upload of File with Dangerous Type vulnerability in Daan.Dev OMGF Pro allows Using Malicious Files.\n\nThis issue affects OMGF Pro: from n/a through 5.2.6.",
+        "title": "Unrestricted Upload of File with Dangerous Type vulnerability in Daan.Dev OMGF Pro allows Using Malicious Files.",
+        "cvss_max": 10.0
+      },
+      "cve": {
+        "id": "CVE-2026-57700",
+        "sourceIdentifier": "audit@patchstack.com",
+        "published": "2026-06-25T19:16:45.973",
+        "lastModified": "2026-06-25T20:11:34.393",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Unrestricted Upload of File with Dangerous Type vulnerability in Daan.Dev OMGF Pro allows Using Malicious Files.\n\nThis issue affects OMGF Pro: from n/a through 5.2.6."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+                "baseScore": 10.0,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "audit@patchstack.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 6.0
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-434"
+              }
+            ],
+            "source": "audit@patchstack.com"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://patchstack.com/database/wordpress/plugin/host-google-fonts-pro/vulnerability/wordpress-omgf-pro-plugin-5-2-6-arbitrary-file-upload-vulnerability?_s_id=cve",
+            "source": "audit@patchstack.com"
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 3
+    },
+    {
+      "cve_id": "CVE-2025-71327",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-06-25",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-06-25",
+        "last_modified": "2026-06-26",
+        "description": "Flowise contains an authentication bypass vulnerability in the unprotected /api/v1/account/register endpoint that allows unauthenticated attackers to create user accounts. Remote attackers can exploit this endpoint to register arbitrary accounts and authenticate to the system, gaining full API access without credentials.",
+        "title": "flowiseai flowise Auth Bypass",
+        "vendor": "flowiseai",
+        "product": "flowise",
+        "attack_type": "Auth Bypass",
+        "cvss_max": 9.3
+      },
+      "cve": {
+        "id": "CVE-2025-71327",
+        "sourceIdentifier": "disclosure@vulncheck.com",
+        "published": "2026-06-25T22:16:58.740",
+        "lastModified": "2026-06-26T16:19:06.243",
+        "vulnStatus": "Undergoing Analysis",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Flowise contains an authentication bypass vulnerability in the unprotected /api/v1/account/register endpoint that allows unauthenticated attackers to create user accounts. Remote attackers can exploit this endpoint to register arbitrary accounts and authenticate to the system, gaining full API access without credentials."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+                "baseScore": 9.1,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.2
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-306"
+              }
+            ],
+            "source": "disclosure@vulncheck.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:flowiseai:flowise:3.0.1:*:*:*:*:*:*:*"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/FlowiseAI/Flowise/security/advisories/GHSA-v5w9-prxf-w882",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          },
+          {
+            "url": "https://www.vulncheck.com/advisories/flowise-authentication-bypass-via-unprotected-registration-endpoint",
+            "source": "disclosure@vulncheck.com"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 4
+    },
+    {
+      "cve_id": "CVE-2025-71333",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-06-25",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-06-25",
+        "last_modified": "2026-06-27",
+        "description": "Flowise through 2.2.4 contains an unauthenticated arbitrary file upload vulnerability in the /api/v1/attachments endpoint when storageType is set to local. Attackers can exploit path traversal in the chatId and chatflowId parameters to upload malicious files to arbitrary directories, potentially enabling remote code execution and server compromise.",
+        "title": "flowiseai flowise RCE",
+        "vendor": "flowiseai",
+        "product": "flowise",
+        "attack_type": "RCE",
+        "cvss_max": 9.3
+      },
+      "cve": {
+        "id": "CVE-2025-71333",
+        "sourceIdentifier": "disclosure@vulncheck.com",
+        "published": "2026-06-25T22:16:59.010",
+        "lastModified": "2026-06-27T04:17:32.310",
+        "vulnStatus": "Undergoing Analysis",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Flowise through 2.2.4 contains an unauthenticated arbitrary file upload vulnerability in the /api/v1/attachments endpoint when storageType is set to local. Attackers can exploit path traversal in the chatId and chatflowId parameters to upload malicious files to arbitrary directories, potentially enabling remote code execution and server compromise."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-73"
+              }
+            ],
+            "source": "disclosure@vulncheck.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:flowiseai:flowise:*:*:*:*:*:*:*:*",
+                    "versionEndIncluding": "2.2.4"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/FlowiseAI/Flowise/security/advisories/GHSA-h42x-xx2q-6v6g",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          },
+          {
+            "url": "https://www.vulncheck.com/advisories/flowise-arbitrary-file-upload-via-unauthenticated-api-v1-attachments-endpoint",
+            "source": "disclosure@vulncheck.com"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 5
+    },
+    {
+      "cve_id": "CVE-2025-71334",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-06-25",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-06-25",
+        "last_modified": "2026-06-26",
+        "description": "Flowise before 3.0.6 (affected versions 2.2.8 and earlier) contains an arbitrary file access vulnerability due to missing validation that the chatflowId and chatId parameters are UUIDs or numbers in file handling operations. By supplying a path-traversal value (e.g., '../../../../../tmp') as the chatflow id, an unauthenticated attacker can use the /api/v1/chatflows endpoint (via addBase64FilesToStorage) to write arbitrary files, and the /api/v1/get-upload-file and /api/v1/openai-assistants-file/download endpoints (via streamStorageFile) to read arbitrary files. Arbitrary file write may lead to remote code execution.",
+        "title": "flowiseai flowise",
+        "vendor": "flowiseai",
+        "product": "flowise",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-71334",
+        "sourceIdentifier": "disclosure@vulncheck.com",
+        "published": "2026-06-25T22:16:59.127",
+        "lastModified": "2026-06-26T16:19:06.243",
+        "vulnStatus": "Undergoing Analysis",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Flowise before 3.0.6 (affected versions 2.2.8 and earlier) contains an arbitrary file access vulnerability due to missing validation that the chatflowId and chatId parameters are UUIDs or numbers in file handling operations. By supplying a path-traversal value (e.g., '../../../../../tmp') as the chatflow id, an unauthenticated attacker can use the /api/v1/chatflows endpoint (via addBase64FilesToStorage) to write arbitrary files, and the /api/v1/get-upload-file and /api/v1/openai-assistants-file/download endpoints (via streamStorageFile) to read arbitrary files. Arbitrary file write may lead to remote code execution."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-73"
+              }
+            ],
+            "source": "disclosure@vulncheck.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:flowiseai:flowise:*:*:*:*:*:*:*:*",
+                    "versionEndExcluding": "3.0.6"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/FlowiseAI/Flowise/commit/8bd3de41533de78e4ef6c980e5704a1f9cb7ae6f",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://github.com/FlowiseAI/Flowise/commit/c2b830f279e454e8b758da441016b2234f220ac7",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://github.com/FlowiseAI/Flowise/security/advisories/GHSA-q67q-549q-p849",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0"
+          },
+          {
+            "url": "https://www.vulncheck.com/advisories/flowise-arbitrary-file-access-via-missing-chat-flow-id-validation",
+            "source": "disclosure@vulncheck.com"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 6
+    },
+    {
+      "cve_id": "CVE-2025-71336",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-06-25",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-06-25",
+        "last_modified": "2026-06-26",
+        "description": "Flowise before 3.0.6 (affected versions 2.2.7-patch.1 and earlier) contains an unsandboxed remote code execution vulnerability in the Custom MCP feature, which is designed to execute OS commands such as launching local MCP servers. Because Flowise's authentication and authorization model is minimal and lacks role-based access control, and the default installation runs without authentication unless FLOWISE_USERNAME and FLOWISE_PASSWORD are set, an attacker can send a crafted JSON payload with the header 'x-request-from: internal' to the /api/v1/node-load-method/customMCP endpoint to execute arbitrary OS commands, resulting in complete compromise of the platform container or server.",
+        "title": "flowiseai flowise RCE",
+        "vendor": "flowiseai",
+        "product": "flowise",
+        "attack_type": "RCE",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2025-71336",
+        "sourceIdentifier": "disclosure@vulncheck.com",
+        "published": "2026-06-25T22:16:59.390",
+        "lastModified": "2026-06-26T16:19:06.243",
+        "vulnStatus": "Undergoing Analysis",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Flowise before 3.0.6 (affected versions 2.2.7-patch.1 and earlier) contains an unsandboxed remote code execution vulnerability in the Custom MCP feature, which is designed to execute OS commands such as launching local MCP servers. Because Flowise's authentication and authorization model is minimal and lacks role-based access control, and the default installation runs without authentication unless FLOWISE_USERNAME and FLOWISE_PASSWORD are set, an attacker can send a crafted JSON payload with the header 'x-request-from: internal' to the /api/v1/node-load-method/customMCP endpoint to execute arbitrary OS commands, resulting in complete compromise of the platform container or server."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-78"
+              }
+            ],
+            "source": "disclosure@vulncheck.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:flowiseai:flowise:*:*:*:*:*:*:*:*",
+                    "versionEndExcluding": "3.0.6"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/FlowiseAI/Flowise/security/advisories/GHSA-6933-jpx5-q87q",
+            "source": "disclosure@vulncheck.com"
+          },
+          {
+            "url": "https://www.vulncheck.com/advisories/flowise-unsandboxed-remote-code-execution-via-custom-mcp",
+            "source": "disclosure@vulncheck.com"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 7
+    },
+    {
+      "cve_id": "CVE-2026-20230",
+      "signal_types": [
+        "KEV"
+      ],
+      "signals": {
+        "kev": {
+          "date_added": "2026-06-25"
+        },
+        "exploit": null,
+        "epss": null,
+        "cvss": null,
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-06-03",
+        "last_modified": "2026-06-26",
+        "description": "A vulnerability in Cisco Unified Communications Manager (Unified CM) and Cisco Unified Communications Manager Session Management Edition (Unified CM SME) could allow an unauthenticated, remote attacker to conduct server-side request forgery (SSRF) attacks through an affected device.\r\n\r This vulnerability is due to improper input validation for specific HTTP requests. An attacker could exploit this vulnerability by sending a crafted HTTP request to an affected device. A successful exploit could allow the attacker to write files to the underlying operating system that could be used later to elevate to root.\r\n\r Note: Cisco has assigned this security advisory a Security Impact Rating (SIR) of Critical rather than High as the score indicates. The reason is that exploitation of this vulnerability could result in an attacker elevating privileges to root.\r\n\r Note: To exploit this vulnerability, the WebDialer service must be enabled. WebDialer is disabled by default.",
+        "title": "Cisco Unified Communications Manager Server-Side Request Forgery (SSRF) Vulnerability",
+        "vendor": "cisco",
+        "product": "unified_communications_manager",
+        "attack_type": "SSRF",
+        "cvss_max": 8.6
+      },
+      "cve": {
+        "id": "CVE-2026-20230",
+        "sourceIdentifier": "psirt@cisco.com",
+        "published": "2026-06-03T18:16:20.160",
+        "lastModified": "2026-06-26T14:58:43.440",
+        "vulnStatus": "Analyzed",
+        "cisaExploitAdd": "2026-06-25",
+        "cisaActionDue": "2026-06-28",
+        "cisaRequiredAction": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA’s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA’s “Forensics Triage Requirements” (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+        "cisaVulnerabilityName": "Cisco Unified Communications Manager Server-Side Request Forgery (SSRF) Vulnerability",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A vulnerability in Cisco Unified Communications Manager (Unified CM) and Cisco Unified Communications Manager Session Management Edition (Unified CM SME) could allow an unauthenticated, remote attacker to conduct server-side request forgery (SSRF) attacks through an affected device.\r\n\r This vulnerability is due to improper input validation for specific HTTP requests. An attacker could exploit this vulnerability by sending a crafted HTTP request to an affected device. A successful exploit could allow the attacker to write files to the underlying operating system that could be used later to elevate to root.\r\n\r Note: Cisco has assigned this security advisory a Security Impact Rating (SIR) of Critical rather than High as the score indicates. The reason is that exploitation of this vulnerability could result in an attacker elevating privileges to root.\r\n\r Note: To exploit this vulnerability, the WebDialer service must be enabled. WebDialer is disabled by default."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:N/I:H/A:N",
+                "baseScore": 8.6,
+                "baseSeverity": "HIGH"
+              },
+              "source": "psirt@cisco.com",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 4.0
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-918"
+              }
+            ],
+            "source": "psirt@cisco.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:unified_communications_manager:*:*:*:*:-:*:*:*",
+                    "matchCriteriaId": "9E708402-3D51-4165-8A97-2B3E68116553",
+                    "versionStartIncluding": "14.0",
+                    "versionEndExcluding": "14su6"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:unified_communications_manager:*:*:*:*:session_management:*:*:*",
+                    "matchCriteriaId": "321D5CC9-ECFC-42FD-AAB4-465E3BC399DA",
+                    "versionStartIncluding": "14.0",
+                    "versionEndExcluding": "14su6"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:unified_communications_manager:*:*:*:*:-:*:*:*",
+                    "matchCriteriaId": "EFBE275E-8043-4F8B-ABE8-48774CF11648",
+                    "versionStartIncluding": "15.0",
+                    "versionEndIncluding": "15su4a"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:cisco:unified_communications_manager:*:*:*:*:session_management:*:*:*",
+                    "matchCriteriaId": "06300542-9590-4FE0-8054-7BD15B2CB3BA",
+                    "versionStartIncluding": "15.0",
+                    "versionEndIncluding": "15su4a"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-cucm-ssrf-cXPnHcW",
+            "source": "psirt@cisco.com",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://denizhalil.com/2026/06/12/cve-2026-20230-cisco-unified-cm-ssrf/",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-20230",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "US Government Resource"
+            ]
+          }
+        ]
+      },
+      "risk_score": 88,
+      "rank": 8
+    },
+    {
+      "cve_id": "CVE-2026-40702",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-06-25",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-06-25",
+        "last_modified": "2026-06-26",
+        "description": "WebSocket endpoints lack proper authentication mechanisms, enabling attackers to impersonate charging stations. As a result, attackers can exploit this weakness to gain unauthorized access to sensitive data or perform unauthorized actions. Given that no authentication is required, this can lead to privilege escalation and potentially compromise the security of the entire system.",
+        "title": "WebSocket endpoints lack proper authentication mechanisms, enabling attackers to impersonate charging stations.",
+        "attack_type": "Privilege Escalation",
+        "cvss_max": 9.4
+      },
+      "cve": {
+        "id": "CVE-2026-40702",
+        "sourceIdentifier": "ics-cert@hq.dhs.gov",
+        "published": "2026-06-25T22:17:01.483",
+        "lastModified": "2026-06-26T20:21:24.967",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "WebSocket endpoints lack proper authentication mechanisms, enabling attackers to impersonate charging stations. As a result, attackers can exploit this weakness to gain unauthorized access to sensitive data or perform unauthorized actions. Given that no authentication is required, this can lead to privilege escalation and potentially compromise the security of the entire system."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:L",
+                "baseScore": 9.4,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "ics-cert@hq.dhs.gov",
+              "type": "Secondary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.5
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "ics-cert@hq.dhs.gov",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-306"
+              }
+            ],
+            "source": "ics-cert@hq.dhs.gov"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://evokesystems.com/contact-us/",
+            "source": "ics-cert@hq.dhs.gov"
+          },
+          {
+            "url": "https://github.com/cisagov/CSAF/blob/develop/csaf_files/OT/white/2026/icsa-26-176-02.json",
+            "source": "ics-cert@hq.dhs.gov"
+          },
+          {
+            "url": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-176-02",
+            "source": "ics-cert@hq.dhs.gov"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 9
+    },
+    {
+      "cve_id": "CVE-2026-48930",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-06-25",
+          "previous_max": null,
+          "current_max": 9.8
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-06-25",
+        "last_modified": "2026-06-26",
+        "description": "A flaw in Node.js TLS hostname handling can cause Embedded-nul hostnames can lead to silent authority rebinding due to c-string truncation in resolver bindings.\r\n\r\nThis vulnerability affects all supported release lines: **Node.js 22**, **Node.js 24**, and **Node.js 26**.",
+        "title": "nodejs node.js",
+        "vendor": "nodejs",
+        "product": "node.js",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2026-48930",
+        "sourceIdentifier": "support@hackerone.com",
+        "published": "2026-06-26T02:16:52.723",
+        "lastModified": "2026-06-26T20:19:14.610",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A flaw in Node.js TLS hostname handling can cause Embedded-nul hostnames can lead to silent authority rebinding due to c-string truncation in resolver bindings.\r\n\r\nThis vulnerability affects all supported release lines: **Node.js 22**, **Node.js 24**, and **Node.js 26**."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV30": [
+            {
+              "cvssData": {
+                "version": "3.0",
+                "vectorString": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:L",
+                "baseScore": 5.6,
+                "baseSeverity": "MEDIUM"
+              },
+              "source": "support@hackerone.com",
+              "type": "Secondary",
+              "exploitabilityScore": 2.2,
+              "impactScore": 3.4
+            }
+          ],
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-284"
+              }
+            ],
+            "source": "support@hackerone.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nodejs:node.js:22.22.3:*:*:*:-:*:*:*",
+                    "matchCriteriaId": "3C0C5080-5F99-4651-9855-2DE03C9070C5"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nodejs:node.js:24.16.0:*:*:*:-:*:*:*",
+                    "matchCriteriaId": "3B912C84-1AA5-4D74-AB1A-64162C80A33B"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:nodejs:node.js:26.3.0:*:*:*:-:*:*:*",
+                    "matchCriteriaId": "8152ACE6-3CAF-4CA0-8B19-D4753811EB44"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://nodejs.org/en/blog/vulnerability/june-2026-security-releases",
+            "source": "support@hackerone.com",
+            "tags": [
+              "Patch",
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 67,
+      "rank": 10
+    },
+    {
+      "cve_id": "CVE-2026-56786",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-06-25",
+          "previous_max": null,
+          "current_max": 9.3
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-06-25",
+        "last_modified": "2026-06-26",
+        "description": "RTKLIB through 2.4.3 contains an out-of-bounds write vulnerability in decode_type1033 function that fails to clamp length counters to destination buffer size, allowing up to 191-byte overflow into fixed 64-byte descriptor fields. An attacker controlling an NTRIP or serial RTCM3 correction stream can craft a valid CRC-bearing type-1033 message to corrupt adjacent rtcm_t object members, potentially achieving arbitrary code execution or denial of service.",
+        "title": "rtklib rtklib Out-of-Bounds Write",
+        "vendor": "rtklib",
+        "product": "rtklib",
+        "attack_type": "Out-of-Bounds Write",
+        "cvss_max": 9.8
+      },
+      "cve": {
+        "id": "CVE-2026-56786",
+        "sourceIdentifier": "disclosure@vulncheck.com",
+        "published": "2026-06-25T19:16:44.997",
+        "lastModified": "2026-06-26T16:52:59.463",
+        "vulnStatus": "Analyzed",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "RTKLIB through 2.4.3 contains an out-of-bounds write vulnerability in decode_type1033 function that fails to clamp length counters to destination buffer size, allowing up to 191-byte overflow into fixed 64-byte descriptor fields. An attacker controlling an NTRIP or serial RTCM3 correction stream can craft a valid CRC-bearing type-1033 message to corrupt adjacent rtcm_t object members, potentially achieving arbitrary code execution or denial of service."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Primary",
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.3,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-787"
+              }
+            ],
+            "source": "disclosure@vulncheck.com"
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:rtklib:rtklib:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "C6DA91F0-A012-4CAC-8BA9-76C773EFB4E1",
+                    "versionEndIncluding": "2.4.3"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/tomojitakasu/RTKLIB/issues/799",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Exploit",
+              "Issue Tracking",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.vulncheck.com/advisories/rtklib-out-of-bounds-write-in-decode-type1033-via-crafted-rtcm3-message",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 11
+    },
+    {
+      "cve_id": "CVE-2026-9222",
+      "signal_types": [
+        "CVSS"
+      ],
+      "signals": {
+        "kev": null,
+        "exploit": null,
+        "epss": null,
+        "cvss": {
+          "signal_date": "2026-06-25",
+          "previous_max": null,
+          "current_max": 9.2
+        },
+        "patch": null
+      },
+      "digest": {
+        "published": "2026-06-25",
+        "last_modified": "2026-06-26",
+        "description": "Setracker2 Android Companion App com.tgelec.setracker versions 3.1.5 and prior only require the password hash when authenticating with backend services from the client. This could allow an attacker, who knows the hash, to authenticate and gain full access.",
+        "title": "Setracker2 Android Companion App com.tgelec.setracker versions 3.1.5 and prior only require the password hash when authenticating with ba...",
+        "cvss_max": 9.2
+      },
+      "cve": {
+        "id": "CVE-2026-9222",
+        "sourceIdentifier": "ics-cert@hq.dhs.gov",
+        "published": "2026-06-26T00:16:55.647",
+        "lastModified": "2026-06-26T20:08:23.053",
+        "vulnStatus": "Deferred",
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Setracker2 Android Companion App com.tgelec.setracker versions 3.1.5 and prior only require the password hash when authenticating with backend services from the client. This could allow an attacker, who knows the hash, to authenticate and gain full access."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 8.1,
+                "baseSeverity": "HIGH"
+              },
+              "source": "ics-cert@hq.dhs.gov",
+              "type": "Secondary",
+              "exploitabilityScore": 2.2,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV40": [
+            {
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 9.2,
+                "baseSeverity": "CRITICAL"
+              },
+              "source": "ics-cert@hq.dhs.gov",
+              "type": "Secondary"
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-836"
+              }
+            ],
+            "source": "ics-cert@hq.dhs.gov"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://raw.githubusercontent.com/cisagov/CSAF/refs/heads/develop/csaf_files/VA/white/2026/va-26-176-01.json",
+            "source": "ics-cert@hq.dhs.gov"
+          }
+        ]
+      },
+      "risk_score": 66,
+      "rank": 12
+    }
+  ],
+  "source": "https://www.cvelogic.com/threat-intelligence/2026-06-25"
+}
